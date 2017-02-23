@@ -1,3 +1,6 @@
 [submodule "rest_crawler"]
 	path = rest_crawler
 	url = https://github.com/caohanyang/rest_crawler.git
+[submodule "predict_page"]
+	path = predict_page
+	url = https://github.com/caohanyang/predict_page.git
