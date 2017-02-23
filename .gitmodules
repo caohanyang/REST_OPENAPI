@@ -4,3 +4,6 @@
 [submodule "predict_page"]
 	path = predict_page
 	url = https://github.com/caohanyang/predict_page.git
+[submodule "gen_spec"]
+	path = gen_spec
+	url = https://github.com/caohanyang/gen_spec.git
