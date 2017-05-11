@@ -1,0 +1,13 @@
+// Mutation Main 
+// Andreas Vlachidis 2015
+
+
+//Postprocess for mutation cases
+MultiPhase:	main
+Phases: 
+
+validatemutation
+revertfalsemutation
+lemmacase
+clean
+

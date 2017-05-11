@@ -1,0 +1,367 @@
+{
+  "basePath": "/",
+  "paths": {
+    "/www.flickr.com/photos/bees/sets/1234": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "1: No title specified",
+            "description": "No title parameter was passed in the request.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2: Photo not found",
+            "description": "The primary photo id passed was not a valid photo id or does not belong to the calling user.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "3: Can't create any more sets",
+            "description": "The user has reached their maximum number of photosets limit.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "95: SSL is required",
+            "description": "SSL is required to access the Flickr API.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "96: Invalid signature",
+            "description": "The passed signature was invalid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "97: Missing signature",
+            "description": "The call required signing but no signature was sent.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "98: Login failed / Invalid auth token",
+            "description": "The login details or auth token passed were invalid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "99: User not logged in / Insufficient permissions",
+            "description": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100: Invalid API Key",
+            "description": "The API key passed was not valid or has expired.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "105: Service currently unavailable",
+            "description": "The requested service is temporarily unavailable.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "106: Write operation failed",
+            "description": "The requested operation failed due to a temporary issue.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "111: Format \"xxx\" not found",
+            "description": "The requested response format was not found.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "112: Method \"xxx\" not found",
+            "description": "The requested method was not found.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "114: Invalid SOAP envelope",
+            "description": "The SOAP envelope send in the request could not be parsed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "115: Invalid XML-RPC Method Call",
+            "description": "The XML-RPC request document could not be parsed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "116: Bad URL found",
+            "description": "One or more arguments contained a URL that has been used for abuse on Flickr.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://www.flickr.com/services/oauth/request_token": {
+      "get": {}
+    },
+    "/farm4.static.flickr.com/3228/shapefiles/3534_20081111_0a8afe03c5.tar.gz": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "1: Required parameter missing",
+            "description": "One or more required parameter is missing from the API call.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2: Not a valid Places ID",
+            "description": "An invalid Places (or WOE) ID was passed with the API call.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "3: Place not found",
+            "description": "No place could be found for the Places (or WOE) ID passed to the API call.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100: Invalid API Key",
+            "description": "The API key passed was not valid or has expired.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "105: Service currently unavailable",
+            "description": "The requested service is temporarily unavailable.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "106: Write operation failed",
+            "description": "The requested operation failed due to a temporary issue.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "111: Format \"xxx\" not found",
+            "description": "The requested response format was not found.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "112: Method \"xxx\" not found",
+            "description": "The requested method was not found.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "114: Invalid SOAP envelope",
+            "description": "The SOAP envelope send in the request could not be parsed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "115: Invalid XML-RPC Method Call",
+            "description": "The XML-RPC request document could not be parsed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "116: Bad URL found",
+            "description": "One or more arguments contained a URL that has been used for abuse on Flickr.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "HTTP": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "group_id (Required)",
+            "description": "The NSID or path alias of the group to add a topic to.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "subject (Required)",
+            "description": "The topic subject.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message (Required)",
+            "description": "The topic message.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/www.flickr.com/photos/kellan/galleries/72157623680420409": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "1: Required parameter missing",
+            "description": "One or more of the required parameters was missing from your API call.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2: Invalid title or description",
+            "description": "The title or the description could not be validated.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "3: Failed to add gallery",
+            "description": "There was a problem creating the gallery.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "95: SSL is required",
+            "description": "SSL is required to access the Flickr API.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "96: Invalid signature",
+            "description": "The passed signature was invalid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "97: Missing signature",
+            "description": "The call required signing but no signature was sent.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "98: Login failed / Invalid auth token",
+            "description": "The login details or auth token passed were invalid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "99: User not logged in / Insufficient permissions",
+            "description": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100: Invalid API Key",
+            "description": "The API key passed was not valid or has expired.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "105: Service currently unavailable",
+            "description": "The requested service is temporarily unavailable.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "106: Write operation failed",
+            "description": "The requested operation failed due to a temporary issue.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "111: Format \"xxx\" not found",
+            "description": "The requested response format was not found.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "112: Method \"xxx\" not found",
+            "description": "The requested method was not found.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "114: Invalid SOAP envelope",
+            "description": "The SOAP envelope send in the request could not be parsed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "115: Invalid XML-RPC Method Call",
+            "description": "The XML-RPC request document could not be parsed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "116: Bad URL found",
+            "description": "One or more arguments contained a URL that has been used for abuse on Flickr.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "host": "",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

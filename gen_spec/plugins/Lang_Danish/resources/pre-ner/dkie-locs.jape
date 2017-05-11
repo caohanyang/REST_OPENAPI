@@ -1,0 +1,33 @@
+Phase: locs
+Input: Token SpaceToken
+Options: control = appelt
+
+Rule: townParts
+(
+  (
+  {Token.category == "NP", Token.normString ==~ ".*gades?"} | 
+  {Token.category == "NP", Token.normString ==~ ".*straedes?"}
+  {Token.category == "NP", Token.normString ==~ ".*bros?"}
+  {Token.category == "NP", Token.normString ==~ ".*centrets?"}
+  {Token.category == "NP", Token.normString ==~ ".*vejs?"}
+  {Token.category == "NP", Token.normString ==~ ".*kvarterets?"}
+  )
+):bydel
+-->
+:bydel.Lookup = {majorType = "location", rule = "townParts"}
+
+Rule: mweTownParts
+(
+  ({Token.category == "NP"}
+  {SpaceToken})+
+  ({Token.string == "Torv"} |
+   {Token.string == "Passage"} |
+   {Token.string == "Vej"} |
+   {Token.string == "Alle"} 
+   {Token.string == "Allé"} 
+   {Token.string == "Gade"} 
+   {Token.string == "Ringgade"} 
+  )
+):bydel
+-->
+:bydel.Lookup = {majorType = "location", rule = "mweTownParts"}

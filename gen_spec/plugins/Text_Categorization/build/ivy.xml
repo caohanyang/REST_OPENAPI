@@ -1,0 +1,18 @@
+<ivy-module version="2.0">
+
+  <info
+    organisation="uk.ac.gate.plugins"
+    module="text-classification"
+    revision="8.3-SNAPSHOT">
+    <description homepage="http://gate.ac.uk/" />
+  </info>
+
+  <configurations>
+    <conf name="default" />
+  </configurations>
+
+  <dependencies defaultconf="*->master(default),runtime(default)" >
+    <dependency org="edu.ucla.sspace" name="sspace" rev="2.0.4"/>
+    <dependency org="de.bwaldvogel" name="liblinear" rev="1.92"/>
+  </dependencies>
+</ivy-module>

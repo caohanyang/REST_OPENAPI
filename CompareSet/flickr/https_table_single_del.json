@@ -1,0 +1,14 @@
+{
+  "basePath": "/services/oauth/request_token",
+  "paths": {
+    "": {
+      "get": {}
+    }
+  },
+  "host": "www.flickr.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

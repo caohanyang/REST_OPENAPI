@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Getting Started with CYMRIE</title>
+<style type="text/css">
+h2 {
+	color: #3e7b00;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: x-large;
+}
+a {
+	color: #FF0000;
+}
+
+h3 {
+	margin-bottom: 2px;
+	color: #336600;
+}
+
+
+</style>
+</head>
+
+<body>
+<p><img src="img/WNLT-Banner.png" width="799" height="148" alt="user guide banner" />
+</p>
+<h2>Getting Started with CYMRIE</h2>
+<p>The getting started with CYMRIE is a step-by-step guide which  will take you through the basic steps of loading the CYMRIE system and processing a small corpus of BBC Cymru Fyw news stories.  The guide is split into three sections. The first section is about loading  WNLT in GATE using the CREOLE plugin manager, the second section is about loading CYMRIE and processing a corpus, and the third section is about creating, populating  and processing a new corpus   in CYMRIE pipeline. </p>
+<h3>1 - Loading WNLT in GATE</h3>
+<p><strong>Step 1:</strong> From the File menu in GATE open the CREOLE Plug-in Manager by choosing the <em>Manage CREOLE Plugins</em> option<br />
+<img src="img/scr01.png" width="317" height="305" alt="Scr01" />  </p>
+<p><strong>Step 2: </strong> From the new window (CREOLE Plug-in Manager) click on the<em> plus sign </em>located at the top-left corner of the window</p>
+<p><strong>Step 3</strong>: A new dialog box appears, click on the<em> Select a Directory</em> button and select the directory <em>WNLT</em> which is located in your local drive to the place where you have downloaded and extracted the WNLT-CYMRIE.zip. </p>
+<p><strong>Step 4:</strong> Once you have selected WNLT from your drive click <em>Open</em> in the dialog box</p>
+<p><strong>Step 5</strong>: The path to <em>WNLT</em> should now appear in the white box of the dialog window, click <em>OK</em> to close the window</p>
+<p><img src="img/scr02.png" width="709" height="415" alt="scr02" /></p>
+<p><strong>Step 6:</strong>The WNLT plugin should now appear in the list of plugins as seen below. Check the <em>Load Now</em> checkbox, click on <em>Apply All </em>button and Close the CREOLE Plug-in Manager window</p>
+<p><img src="img/scr03.png" width="769" height="152" alt="Scr03" /></p>
+<h3>2 - Loading the CYMRIE system in GATE</h3>
+<p><strong>Step 1:</strong> From the File menu in GATE  load CYMRIE by choosing the <em>Restore Application from File</em> option</p>
+<p><img src="img/scr04.png" width="319" height="311" alt="Scr04" /></p>
+<p><strong>Step 2: </strong>Select the file <em>CYMRIE.gapp</em> located in the WNLT folder and click <em>Open</em></p>
+<p><img src="img/scr05.png" width="554" height="353" alt="scr05" /></p>
+<p><strong>Step3 :</strong> Inspect the loaded Processing Resources at the right hand side of GATE . You should see list of processing resources like the one below. Also the corpus <em>BBC Cymru Fyw</em> is loaded under the Language Resources and the <em>wnlt-datastore</em> is loaded under Datastores. </p>
+<p><img src="img/scr06.png" width="250" height="455" alt="scr06" /></p>
+<p><strong>Step 4:</strong> Double click on <em>CYMRIE</em> application and  the pipeline will appearing on screen as seen below</p>
+<p><strong>Step 5: </strong>The <em>BBC Cymru Fyw </em>corpus should be already selected as the corpus for processing as see below if not selected it from the drop-down box</p>
+<p><strong>Step 6</strong>: Click on<em> Run this Application</em> button</p>
+<p><img src="img/scr07.png" width="800" height="452" /></p>
+<p><strong>Step 7</strong>: Double click (or right click and open) on <em>BBC Cymru Fyw </em>corpus located in Language Resources to view the list of documents contained in the corpus.</p>
+<p><strong>Step 8:</strong> Double click (or right click and open) on any of the documents in the corpus to open it</p>
+<p><img src="img/scr08.png" width="752" height="517" alt="scr8" /></p>
+<p><strong>Step 9: </strong>Under the Language Resources double click (or right click and show) a document from the list to view its contents </p>
+<p><strong>Step 10: </strong>Click on <em>Annoation Sets</em> to view  the annotations produced by the pipeline. </p>
+<p><img src="img/scr09.png" width="800" height="435" alt="scr9" /></p>
+<h3>3- Adding a New Coprus in GATE</h3>
+<p><strong>Step 1: </strong> From the File menu create a GATE Corpus by choosing <em>New Language Resource &gt; GATE Corpus</em></p>
+<p><strong>Step 2:</strong> In the pop-up dialog box name the Corpus e.g. <em>MyCorpus</em> and click the <em>OK </em>button</p>
+<p><img src="img/scr10.png" width="499" height="294" alt="SCR10" /></p>
+<p><strong>Step 3:</strong> The new corpus should now appear on the left side panel under Language Resources </p>
+<p><strong>Step 4</strong>: Save the corpus to the <em>wnlt-datastore</em> by right-clicking on the corpus icon and selecting <em>Save to Datastore</em></p>
+<p><strong>Step 5</strong>: From the pop-up dialog box select <em>wnlt-datastore</em> and click the <em>OK</em> button</p>
+<p><img src="img/scr11.png" width="461" height="317" alt="scr11" /><img src="img/scr11_b.png" width="271" height="131" alt="scr11_b" /></p>
+<p><strong>Step 6:</strong> From the File menu create a GATE Document by choosing <em>New Language Resource &gt; GATE Document</em></p>
+<p><strong>Step 7:</strong> In the new dialog box <br />
+<strong>a)</strong> Give a <em>Name</em> to the document , in this example 'Pryder am gynllun'<strong> <br />
+b)</strong> in the <em>encoding</em> field type<em> utf-8</em><br /> 
+<strong>c)</strong> <em>Select</em> the document by typing a web address (URL) in this example 'http://www.bbc.co.uk/cymrufyw/35867934'<br />
+<strong>Alternative c) </strong>Instead of typing a web address you can <em>Open</em> a document from your local drive by clicking the <em>Folder button</em> on the right hand side and selecting a local document of your preference ( list of supported document formats at<a href="https://gate.ac.uk/sale/tao/splitch5.html#x8-940005.5" target="_blank"> https://gate.ac.uk/sale/tao/splitch5.html#x8-940005.5</a>)</p>
+<p><img src="img/scr12.png" width="1023" height="300" alt="scr12" /></p>
+<p><strong>Step 8: </strong>Double click on the <em>Corpus</em> (My Corpus) icon located under the <em>Language Resources </em>to open the <em>Corpus Editor</em></p>
+<p><strong>Step 9: </strong>Click on the <em>Green Cross </em>button (circled in red below) to open the <em>Add document(s) to this corpus</em> dialog box</p>
+<p><strong>Step 10:</strong> Select the document (in this case Pryder am gynllun) and click the <em>OK</em> button</p>
+<p><img src="img/scr13.png" width="606" height="486" alt="scr13" /></p>
+<p><strong>Step 11: </strong>Double click on CYMRIE application (located in Applications) to view the pipeline as seen below.</p>
+<p><strong>Step 12: </strong>Select <em>MyCorpus </em>from the Corpus drop-down box</p>
+<p><strong>Step 13: </strong>Click the <em>Run this Application</em> button to execute the pipeline.</p>
+<p><img src="img/scr14.png" width="800" height="434" alt="scr14" /></p>
+<p><strong>Step 14: </strong>Double click the <em>'Pryder am gynllun'</em> document icon from the <em>Language Resources</em> to view the document</p>
+<p><strong>Step 15: </strong>Click on<em> Annotation Sets</em> button to reveal the  produced annotations </p>
+<p><strong>Step 16</strong>: Toggle the<em> Annotation Types</em> ON and OFF from the left hand side panel by checking - uncheking the relevant boxes. </p>
+<p><img src="img/scr15.png" width="800" height="435" alt="scr15" /><br />
+</p>
+</body>
+</html>

@@ -1,0 +1,440 @@
+{
+  "basePath": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "paths": {
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21201\"": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageSize",
+            "description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://api.twilio.com/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers": {
+      "POST": {}
+    },
+    "/OutgoingCallerIds": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PhoneNumber",
+            "description": "The phone number to verify. Should be formatted with a '+' and country code e.g., +16175551212 ( E.164 format). Twilio will also accept unformatted US numbers e.g., (415) 555-1212, 415-555-1212.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://preview.twilio.com/porting/PortOrders": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "company_name",
+            "description": "Name of the company that owns the porting phone number. Please note that this is the name we will use to populate the “Business Name” field in the LOA associated with this port request.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "billing_phone_number",
+            "description": "The main billing phone number on the account (with your current provider/carrier) that is associated with the porting phone number in this port request. This must be in E.164 format, e.g., +16175551212.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "account_number",
+            "description": "Account number of the account (with your current provider/carrier) that is associated with the porting phone number in this port request. This is mandatory for Wireless numbers but optional for Landline and Toll Free numbers.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "pin_number",
+            "description": "PIN number of the account (with your current provider/carrier) that is associated with the porting phone number in this port request. This is mandatory for Wireless numbers but optional for Landline and Toll Free numbers.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ssn_last_four",
+            "description": "Last four digits of the social security number of the person that owns the porting phone number. Please note that this person must be the one who is authorized to and will sign the LOA. This is mandatory for Wireless numbers but optional for Landline and Toll Free numbers.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "current_carrier",
+            "description": "Name of the current provider/carrier of the porting phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "activation_date",
+            "description": "Desired Firm Order Commitment (FOC) date and time, given as GMT RFC 2822 format – i.e., the date and time at which the number will port. This will be overridden if the earliest possible FOC date is on a later date.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "status_callback",
+            "description": "The URL that Twilio will POST to each time the port request status changes to one of Delivered, Failed, or Completed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "cc_emails",
+            "description": "Array of email address(es) of the person/people whom Twilio should notify each time the port request status changes to one of Delivered, Failed, or Completed.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/SIP/Domains/SD32a3c4970093": {
+      "POST": {}
+    },
+    "/Messages": {
+      "POST": {}
+    },
+    "/Applications": {
+      "put": {
+        "parameters": []
+      }
+    },
+    "http.NameValuePair": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "NearNumber",
+            "description": "Given a phone number, find a geographically close number within Distance miles. Distance defaults to 25 miles.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "NearLatLong",
+            "description": "Given a latitude/longitude pair lat,long find geographically close numbers within Distance miles.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Distance",
+            "description": "Specifies the search radius for a Near- query in miles. If not specified this defaults to 25 miles. Maximum searchable distance is 500 miles.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "InPostalCode",
+            "description": "Limit results to a particular postal code. Given a phone number, search within the same postal code as that number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "InRegion",
+            "description": "Limit results to a particular region (i.e. State/Province). Given a phone number, search within the same Region as that number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "InRateCenter",
+            "description": "Limit results to a specific rate center, or given a phone number search within the same rate center as that number. Requires InLata to be set as well.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "InLata",
+            "description": "Limit results to a specific Local access and transport area ( LATA ). Given a phone number, search within the same LATA as that number.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http:\\/\\/www.google.com\"": {
+      "POST": {}
+    },
+    "HTTP": {
+      "Delete": {
+        "parameters": []
+      },
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "status",
+            "description": "Only retrieve the list of port orders in this state. Possible values: 1. Created, 2. Received, 3. Submitting, 4. Submitted, 5. Delivered, 6. Completed, 7. Canceled, 8. Rejected, 9. Failed",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "activation_date",
+            "description": "Only retrieve the list of port orders comprising phone numbers that are scheduled to become active on a particular date, in GMT RFC 2822 format, e.g., activation_date=2009-07-06. Inequality can also be specified to retrieve the list of port orders comprising phone numbers that are scheduled to become active on or before midnight on a particular date, e.g. activation_date<=2009-07-06, or to retrieve the list of port orders comprising phone numbers that are scheduled to become active on or after midnight on a particular date, e.g. activation_date>=2009-07-06.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "friendly_name",
+            "description": "Only retrieve the list of port orders with this friendly name.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "date_created",
+            "description": "Only retrieve the list of port orders that were created on a particular date, in GMT RFC 2822 format, e.g., date_created=2009-07-06. Inequality can be specified to retrieve the list of port orders that were created before or after a particular date as well.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "number",
+            "description": "Only retrieve the list of port orders that comprise this porting phone number. This must be in E.164 format, e.g., +16175551212.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "before_sid",
+            "description": "Only retrieve port orders before the port order with this SID in the list of all port orders.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "after_sid",
+            "description": "Only retrieve port orders after the port order with this SID in the list of all port orders.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Ttl",
+            "description": "The duration in seconds for which the generated credentials are valid, the default value is 86400 (24 hours).",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AccountSid",
+            "description": "The unique identifier of the Account responsible for this recording.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallSid",
+            "description": "A unique identifier for the call associated with the recording. This will always refer to the parent leg of a two leg call.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingSid",
+            "description": "The unique identifier for the recording.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingUrl",
+            "description": "The URL of the recorded audio.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingStatus",
+            "description": "The status of the recording. Possible values are: completed .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingDuration",
+            "description": "The length of the recording, in seconds.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingChannels",
+            "description": "The number of channels in the final recording file as an integer. Possible values are 1 , 2 .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingSource",
+            "description": "The type of call that created this recording. For recordings initiated when Record=true is set on the REST API, OutboundAPI will be returned..",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "geT": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "TriggerBy",
+            "description": "The field in the UsageRecord that will fire the trigger. One of count , usage , or price as described in the UsageRecords documentation . The default is usage .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Recurring",
+            "description": "To make a recurring trigger that counts over its recurring interval, set this to one of: daily , monthly , or yearly . Omit this to create a non-recurring trigger.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallbackMethod",
+            "description": "Twilio will use this HTTP method when making a request to the CallbackUrl. GET or POST . The default is POST .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "delete": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Only return the Address resources with friendly names that exactly match this name.",
+            "description": "Only return the Address resources with friendly names that exactly match this name.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Only return the Address resources in this country.",
+            "description": "Only return the Address resources in this country.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": []
+      }
+    },
+    "/Calls/FeedbackSummary": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "StartDate",
+            "description": "The first date for which feedback entries are included in this Feedback Summary, formatted as YYYY-MM-DD. All dates are in UTC.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "EndDate",
+            "description": "The last date for which feedback entries are included in this Feedback Summary, formatted as YYYY-MM-DD. All dates are in UTC.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AccountSid",
+            "description": "The Account that reported the feedback entry.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "IncludeSubaccounts",
+            "description": "true if the feedback summary includes subaccounts, false otherwise.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Status",
+            "description": "The status of the feedback summary can be queued, in-progress, completed, or failed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallCount",
+            "description": "The total number of calls.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallFeedbackCount",
+            "description": "The total number of calls with a feedback entry.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreAverage",
+            "description": "The average QualityScore of the feedback entries.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreMedian",
+            "description": "The median QualityScore of the feedback entries.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreStandardDeviation",
+            "description": "The standard deviation of the quality scores.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Issues",
+            "description": "A list of all the issues experienced. The list includes the issue name, the number of occurrences and percentage of calls that experienced this issue.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/SIP/IpAccessControlLists/A": {
+      "POST": {}
+    }
+  },
+  "host": "api.twilio.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

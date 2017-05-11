@@ -1,0 +1,122 @@
+Phase: reducener
+Input: PER LOC ORG PROD SpaceToken
+Options: control = appelt
+
+
+Rule: per
+(
+  {PER} ({SpaceToken} {PER})*
+):match
+-->
+:match{
+
+   long start = matchAnnots.firstNode().getOffset();
+   long end = matchAnnots.lastNode().getOffset();
+
+   FeatureMap feats = Factory.newFeatureMap();
+   feats.put("rule", "per");
+   feats.put("length", (int) end - start);
+   feats.put("majorType", "person_full");
+   feats.put("gender", ""); 
+
+   try {
+    outputAS.add(start, end, "Lookup", feats);
+   }
+   catch (InvalidOffsetException e) {
+    e.printStackTrace();
+   }
+
+   AnnotationSet tokens = gate.Utils.getContainedAnnotations(inputAS, matchAnnots, "PER");
+   inputAS.removeAll(tokens);
+
+
+}
+
+
+Rule: org
+(
+  {ORG} ({SpaceToken} {ORG})*
+):match
+-->
+:match{
+
+   long start = matchAnnots.firstNode().getOffset();
+   long end = matchAnnots.lastNode().getOffset();
+
+   FeatureMap feats = Factory.newFeatureMap();
+   feats.put("rule", "org");
+   feats.put("length", (int) end - start);
+   feats.put("majorType", "organization");
+
+   try {
+    outputAS.add(start, end, "Lookup", feats);
+   }
+   catch (InvalidOffsetException e) {
+    e.printStackTrace();
+   }
+
+   AnnotationSet tokens = gate.Utils.getContainedAnnotations(inputAS, matchAnnots, "ORG");
+   inputAS.removeAll(tokens);
+
+
+}
+
+
+
+Rule: loc
+(
+  {LOC} ({SpaceToken} {LOC})*
+):match
+-->
+:match{
+
+   long start = matchAnnots.firstNode().getOffset();
+   long end = matchAnnots.lastNode().getOffset();
+
+   FeatureMap feats = Factory.newFeatureMap();
+   feats.put("rule", "loc");
+   feats.put("length", (int) end - start);
+   feats.put("majorType", "location");
+
+   try {
+    outputAS.add(start, end, "Lookup", feats);
+   }
+   catch (InvalidOffsetException e) {
+    e.printStackTrace();
+   }
+
+   AnnotationSet tokens = gate.Utils.getContainedAnnotations(inputAS, matchAnnots, "LOC");
+   inputAS.removeAll(tokens);
+
+
+}
+
+
+
+Rule: prod
+(
+  {PROD} ({SpaceToken} {PROD})*
+):match
+-->
+:match{
+
+   long start = matchAnnots.firstNode().getOffset();
+   long end = matchAnnots.lastNode().getOffset();
+
+   FeatureMap feats = Factory.newFeatureMap();
+   feats.put("rule", "prod");
+   feats.put("length", (int) end - start);
+   feats.put("majorType", "product");
+
+   try {
+    outputAS.add(start, end, "Lookup", feats);
+   }
+   catch (InvalidOffsetException e) {
+    e.printStackTrace();
+   }
+
+   AnnotationSet tokens = gate.Utils.getContainedAnnotations(inputAS, matchAnnots, "PROD");
+   inputAS.removeAll(tokens);
+
+
+}

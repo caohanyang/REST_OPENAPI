@@ -1,0 +1,405 @@
+// Andreas Vlachidis 30/08/2015
+// 
+//Rules support the Welsh Tokeniser
+
+
+Phase:postprocess
+Input: Token SpaceToken
+Options: control = appelt
+
+//Adjust the toneniser output
+
+//MACROS//
+//Prefix cases
+Macro: PREFIX
+(
+	{Token.string ==~ "[Aa]"}|
+	{Token.string ==~ "[Aa]d"}|
+	{Token.string ==~ "[Aa]dd"}|
+	{Token.string ==~ "[Aa]ll"}|
+	{Token.string ==~ "[Aa]m"}|
+	{Token.string ==~ "[Aa]n"}|
+	{Token.string ==~ "[Aa]r"}|
+	{Token.string ==~ "[Aa]rch"}|
+	{Token.string ==~ "[Aa]wto"}|
+	{Token.string ==~ "[Cc]an"}|
+	{Token.string ==~ "[Cc]yd"}|
+	{Token.string ==~ "[Cc]yf"}|
+	{Token.string ==~ "[Cc]yfr"}|
+	{Token.string ==~ "[Cc]yn"}|
+	{Token.string ==~ "[Dd]ad"}|
+	{Token.string ==~ "[Dd]ar"}|
+	{Token.string ==~ "[Dd]i"}|
+	{Token.string ==~ "[Dd]ir"}|
+	{Token.string ==~ "[Dd]is"}|
+	{Token.string ==~ "[Dd]o"}|
+	{Token.string ==~ "[Dd]y"}|
+	{Token.string ==~ "[Ee]"}|
+	{Token.string ==~ "[Ee]ch"}|
+	{Token.string ==~ "[Ee]n"}|
+	{Token.string ==~ "[Gg]o"}|
+	{Token.string ==~ "[Gg]or"}|
+	{Token.string ==~ "[Gg]wrth"}|
+	{Token.string ==~ "[Hh]y"}|
+	{Token.string ==~ "[Mm]ewn"}|
+	{Token.string ==~ "[Mm]ono"}|
+	{Token.string ==~ "[Nn]eo"}|
+	{Token.string ==~ "[Pp]oly"}|
+	{Token.string ==~ "[Pp]roto"}|
+	{Token.string ==~ "[Rr]hag"}|
+	{Token.string ==~ "[Rr]hy"}|
+	{Token.string ==~ "[Rr]hyng"}|
+	{Token.string ==~ "[Tt]ra"}|
+	{Token.string ==~ "[Tt]an"}|
+	{Token.string ==~ "[Tt]raf"}|
+	{Token.string ==~ "[Tt]raws"}|
+	{Token.string ==~ "[Tt]ros"}|
+	{Token.string ==~ "[Tt]ry"}|
+	{Token.string ==~ "[Yy]m"}
+	
+)
+// HYPHENATION //
+
+//Cases of possible place name patterns eg Llanarmon-yn-Ial, Llys-faen, Ystrad-ffin
+
+Rule: PlaceNamePattern
+(
+	{Token.orth=="upperInitial"}{Token.subkind=="dashpunct"}{Token.kind=="word"}
+	({Token.subkind=="dashpunct"}{Token.kind=="word"})?
+):match
+-->
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", "upperInitial");
+  features.put("rule", "PlaceNamePattern");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+//Compound cases of common prefix use eg. ad-dala, cyd-ddefnyddir, rhag-glorineiddia etc.  
+
+Rule: CommonPrefix
+(
+	(PREFIX){Token.subkind=="dashpunct"}{Token.kind=="word"}
+):match
+-->
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  String orth = (String)((Annotation)tokens.get(0)).getFeatures().get("orth");
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", orth);
+  features.put("rule", "CommonPrefix");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+
+//Separate constituents  eg.lladd-dy, cybydd-dod, cyd-dyfu, hwynt-hwy
+//Cases: d+d, d+dd, dd+d, dd+dd, ff+f, ng+g, g+g, l+l, ll+l, t+h
+Rule: SeparateConstituents
+(
+	({Token.string ==~ "(\\w)*(dd|d)"}{Token.subkind=="dashpunct"}{Token.string ==~ "(d|dd)(\\w)*"})|
+	({Token.string ==~ "(\\w)*(ff|f)"}{Token.subkind=="dashpunct"}{Token.string ==~ "(f|ff)(\\w)*"})|
+	({Token.string ==~ "(\\w)*(ng|g)"}{Token.subkind=="dashpunct"}{Token.string ==~ "(g)(\\w)*"})|
+	({Token.string ==~ "(\\w)*(ll|l)"}{Token.subkind=="dashpunct"}{Token.string ==~ "(l|ll)(\\w)*"})|
+	({Token.string ==~ "(\\w)*(t)"}{Token.subkind=="dashpunct"}{Token.string ==~ "h(\\w)*"})
+
+):match
+-->
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  String orth = (String)((Annotation)tokens.get(0)).getFeatures().get("orth");
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", orth);
+  features.put("rule", "SeparateConstituents");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+// APOSTROPHE //
+
+//Apostrophe loss of vowel Initialy eg 'Deryn Du mewn derwen dal
+
+Rule: InitialVowelLoss 
+(
+  (
+   (
+    {SpaceToken.string=="\n"}|
+    {SpaceToken.string=="\r"}|
+    ({SpaceToken.string=="\n"}{SpaceToken.string=="\r"})|
+    ({SpaceToken.string=="\r"}{SpaceToken.string=="\n"})
+   )|
+   (({Token.kind=="punctuation"}|{Token.kind=="word"}){SpaceToken})
+  )
+  (({Token.string=="'"}|{Token.string=="’"}){Token.kind=="word"}):match
+)
+-->
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  String orth = (String)((Annotation)tokens.get(1)).getFeatures().get("orth");
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", orth);
+  features.put("rule", "InitialVowelLoss");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+//Apostrophe loss of vowel medially eg. Deunaw oed dy i'engoed teg
+//Post apostrophe escape cases:i,m,n,r,w,ch,th -- Pre apostrophe cases:d,f
+Rule: MediallyVowelLoss
+(
+ ({Token.kind=="word"}({Token.string=="'"}|{Token.string=="’"}){Token.kind=="word", Token.string !=~ "([imnruw]|(ch)|(th))"})|
+ ({Token.kind=="word",Token.string !=~ "[df]" }({Token.string=="'"}|{Token.string=="’"}){Token.kind=="word", Token.string !=~ "([imnruw]|(ch)|(th))"})
+):match
+--> 
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  String orth = (String)((Annotation)tokens.get(0)).getFeatures().get("orth");
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", orth);
+  features.put("rule", "MediallyVowelLoss");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+//Apostrophe loss of final consonant eg cry' for cryf hapusa' for hapusaf
+Rule: FinalConsonantLoss
+(
+ ({Token.kind=="word"}({Token.string=="'"}|{Token.string=="’"})):match
+ {SpaceToken}
+)
+-->
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  String orth = (String)((Annotation)tokens.get(0)).getFeatures().get("orth");
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", orth);
+  features.put("rule", "FinalConsonantLoss");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+//Common uses of contractions - cases:i,m,n,r,w,ch,th
+Rule: Contractions
+Priority: 1000
+( 
+ (({Token.string=="'"}|{Token.string=="’"}){Token.string ==~ "([imnruw]|(ch)|(th))"}):match
+ {SpaceToken}
+)
+-->
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  String orth = (String)((Annotation)tokens.get(0)).getFeatures().get("orth");
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", orth);
+  features.put("rule", "Contractions");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+// OTHER RULES //
+
+//Ordinals 
+
+Rule: Ordinals
+  //1af, 2il, 3ydd, 4ydd, 5ed, 6ed, 7fed, 10fed, 11eg, 20fed, 21ain, 31ain, 40fed, 100fed, 
+  // and the case of 80au('80s, '90s etc)
+  (
+   ({Token.kind=="number"}):number
+   ({Token.string=="af"}|{Token.string=="ail"}|{Token.string=="ydd"}|{Token.string=="ed"}|
+    {Token.string=="fed"}|{Token.string=="eg"}|{Token.string=="ain"}|{Token.string=="au"}):ending
+  ):left
+-->
+{
+  Annotation numberAnn = (Annotation)((AnnotationSet)bindings.get("number")).
+	iterator().next();	
+  Annotation endingAnn = (Annotation)((AnnotationSet)bindings.get("ending")).
+	iterator().next();
+  
+  String numberStr = (String)numberAnn.getFeatures().get("string");
+  String endingStr = (String)endingAnn.getFeatures().get("string");
+    //remove old tokens
+    gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("left");
+    inputAS.removeAll(toRemove);
+    //create the new token
+    FeatureMap features = Factory.newFeatureMap();
+    features.put("kind", "word");
+    features.put("string", numberStr + endingStr);
+    features.put("length", (numberStr + endingStr).length());
+    features.put("orth", "lowercase");
+    features.put("rule", "Ordinals");
+    outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+//Case Ar gyfer , Er mwyn , Yn erbyn
+Rule: ArGyfer
+(
+ ({Token.string ==~ "[Aa]r"}{SpaceToken.kind == "space"}{Token.string == "gyfer"})|
+ ({Token.string ==~ "[Ee]r"}{SpaceToken.kind == "space"}{Token.string == "mwyn"})|
+ ({Token.string ==~ "[Yy]n"}{SpaceToken.kind == "space"}{Token.string == "erbyn"})
+):match
+--> 
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  String orth = (String)((Annotation)tokens.get(0)).getFeatures().get("orth");
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", orth);
+  features.put("rule", "ArGyfer");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+//Case Oddi Oddi ar (off) Oddi wrth (from) Oddi am (off, from) Oddi amgylch (around, surrounding)
+
+Rule: Oddi
+(
+ ({Token.string ==~ "[Oo]ddi"}{SpaceToken.kind == "space"}{Token})
+):match
+--> 
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("match");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  String orth = (String)((Annotation)tokens.get(0)).getFeatures().get("orth");
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "word");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("orth", orth);
+  features.put("rule", "Oddi");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "Token", features);
+}
+
+// CR+LF | CR |LF+CR -> One single SpaceToken
+Rule: NewLine
+ (
+  ({SpaceToken.string=="\n"}) |
+  ({SpaceToken.string=="\r"}) |
+  ({SpaceToken.string=="\n"}{SpaceToken.string=="\r"}) |
+  ({SpaceToken.string=="\r"}{SpaceToken.string=="\n"})
+  ):left
+-->
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("left");
+  outputAS.removeAll(toRemove);
+  //get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  //define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "control");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  features.put("rule", "NewLine");
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "SpaceToken", features);
+}

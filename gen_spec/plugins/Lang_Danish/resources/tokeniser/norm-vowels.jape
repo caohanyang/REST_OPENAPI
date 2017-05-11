@@ -1,0 +1,43 @@
+// Leon Derczynski
+// $id$
+
+
+Phase: normvowels
+Input: Token
+Options: control = appelt
+
+// map ae oe and aa to token strings
+// store origString as well as string
+
+Rule: Normalise
+({Token}):norm
+-->
+{
+  // convert the text to replace Danish vowels with diphthong versions
+  AnnotationSet tok = bindings.get("norm");
+  Annotation tokAnn = tok.iterator().next();
+
+  FeatureMap tokfeats = (FeatureMap)((SimpleFeatureMapImpl)tokAnn.getFeatures()).clone();
+
+  // preserve original string
+  String origString = (String)tokfeats.get("string");
+  tokfeats.put("origString", origString);
+
+
+  String normString = (String)tokfeats.get("string");
+
+  normString = normString.replaceAll("å", "aa");
+  normString = normString.replaceAll("æ", "ae");
+  normString = normString.replaceAll("ø", "oe");
+  normString = normString.replaceAll("Å", "Aa");
+  normString = normString.replaceAll("Æ", "Ae");
+  normString = normString.replaceAll("Ø", "Oe");
+
+  normString = normString.replaceAll("Kj", "K");
+
+  tokfeats.put("normString", normString);
+
+  // save updated feature map
+  tokAnn.setFeatures(tokfeats);
+
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>User Guide Welsh Natural Language Toolkit (WNLT)</title>
+<style type="text/css">
+h2 {
+	color: #3e7b00;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: x-large;
+}
+a {
+	color: #FF0000;
+}
+
+h3 {
+	margin-bottom: 2px;
+	color: #336600;
+}
+
+
+</style>
+</head>
+
+<body>
+<p><img src="img/WNLT-Banner.png" width="799" height="148" alt="user guide banner" />
+</p>
+<h2>Introduction</h2>
+<p>The Welsh Natural Language Toolkit (WNLT) is a Welsh  Government funded project under the <a href="http://gov.wales/topics/welshlanguage/promoting/grants/?lang=en" target="_blank">Welsh-language technology and digital media  grant</a>. The toolkit contains a set of four core Natural Language Processing  (NLP) modules that enable the development of generic computational linguistic  applications and contribute to the Welsh language technology infrastructure a  much needed open source NLP toolkit. The project builds on the <a href="https://gate.ac.uk/" target="_blank">General  Architecture for Text Engineering (GATE)</a> by adapting and expanding existing modules  (plugins) to Welsh. </p>
+<p>The  Toolkit contains the following <strong>four modules</strong> (plugins)</p>
+<ul>
+  <li> Tokenizer</li>
+  <li>Sentence Splitter</li>
+  <li>Part of Speech Tagger</li>
+  <li>Morphological Analyser</li>
+</ul>
+<p>The modules benefit from a combination of glossaries with  algorithmic arrangements that address specific linguistic behaviours of the  Welsh language. </p>
+<h2>Tokenizer</h2>
+<p>The WNLT Tokenizer extends the default GATE Tokenizer and similarly splits the text into very simple tokens such as numbers, symbols and words of different types. The Tokenizer distinguishes words in uppercase, lowercase, and between types of symbols. The module uses a slightly modified version of the original GATE Tokenizer rules file and an extended JAPE post-processing transducer adapting the generic output of the Tokenizer to the requirements of the Welsh part-of-speech tagger.</p>
+<h3>Token Types</h3>
+<p>The WNLT Tokenizer delivers the same types of Tokens and Space Tokens with default  <a href="https://gate.ac.uk/sale/tao/splitch6.html#sec:annie:tokeniser" target="_blank">ANNIE Tokenizer</a> as listed below:<br />
+  - <strong>[Word]</strong> including the attribute 'orth' that takes the values; upperInitial, allCaps, lowerCase, mixedCaps<br />
+  - <strong>[Number]</strong> any combination of consecutive digits. <br />
+  - <strong>[Symbol]</strong> any special character is a symbol<br />
+- <strong>[Space Token]</strong> white spaces which are divided into two types of SpaceToken - space and control</p>
+<h3>Welsh Tokenizer Modifications</h3>
+<p>  The Welsh Tokenizer uses a modified version of the GATE Tokenizer file<em> 'AlternateTokeniser.rules'</em> which originally splits hyphenated and apostrophised cases into separate tokens. This behaviour is desirable due to the extensive and elaborate use of hyphens and apostrophe in Welsh which differs significantly from English, for example use of hyphens in adjectival compounds. A succeeding post-processing transducer joins under a single token several types of hyphenated and apostrophised constructs. The modified version also merges punctuation and symbol under a single Token type named<em> 'symbol'</em>.<br />
+  <br />
+The modified post-processing transducer joins together in a  single token <strong>the following constructs</strong>:</p>
+<ul>
+  <li>Hyphenated placenames e.g. Llanarmon-yn-Ial</li>
+  <li>Compounds of the common prefix e.g. ad-dala,  cyd-ddefnyddir, rhag-glorineiddia</li>
+  <li>Separate constituents hyphenation for the cases d+d,  d+dd, dd+d, dd+dd, ff+f, ng+g, g+g, l+l, ll+l, t+h  e.g. ladd-dy, cybydd-dod, cyd-dyfu, hwynt-hwy</li>
+  <li>Apostrophe loss of vowel initialy e.g. 'Deryn</li>
+  <li>Apostrophe loss of vowel medially eg. i'engoed</li>
+  <li>Apostrophe loss of final consonant e.g. cry' for cryf  hapusa' for hapusaf</li>
+  <li>Apostrophe for common contractions,  cases:i,m,n,r,w,ch,th</li>
+  <li>Ordinals e.g. 1af, 2il, 3ydd, 4ydd</li>
+  <li>Special cases of prepositions:  Ar gyfer , Er mwyn , Yn erbyn, and Oddi  followed by a preposition.</li>
+</ul>
+<h3>Init-time parameters </h3>
+<p><strong>encoding<br />
+</strong>The character encoding to be used for reading the input</p>
+<p><strong>tokenizerRulesURL</strong><br />
+The path to the Tokenizer rules files, the default file is located at<em> /resources/Tokeniser/WelshTokeniser.rule</em></p>
+<p><strong>transducerGrammarURL</strong><br />
+The path to the post-processing tranducer grammar, the default JAPE file is located at<em> /resources/Tokeniser/postprocess.jape</em></p>
+<h3>Run-time parameters </h3>
+<p><strong>annotationSetName</strong><br />
+The name for annotation set where the resulting Token annotations will be created. It is optional, if left blank then the <em>'default'</em> annotation set is assigned.</p>
+<h2>Sentence Splitter</h2>
+<p>  The WNLT sentence splitter segments the text into sentences using the same set of <a href="https://gate.ac.uk/sale/tao/splitch8.html#chap:jape" target="_blank">JAPE</a> grammars used in <a href="https://gate.ac.uk/sale/tao/splitch6.html" target="_blank">ANNIE</a>. Hence, it delivers annotations of type <em>'Sentence' </em>and<em> 'Split'</em>. It also makes available an alternative ruleset (main-single-nl.jape), which considers newlines and carriage returns differently. The alternative ruleset, similarly to ANNIE, should be used when a new line on the page indicates a new sentence. </p>
+<h3>Sentence Splitter Modifications.</h3>
+<p>  The WNLT sentence splitter uses a list of abbreviations adapted to Welsh that help distinguish sentence-marking full stops from other kinds. The abbreviations list contains 330 entries of the following categories: </p>
+<ol>
+  <li> Linguistic e.g. abs (absolute), cfst (synonym)</li>
+  <li>Narrative eg Brth (British) , e.e (for example)</li>
+  <li>Science e.g. Seic (Psychology), Tiwt (Teutonic)</li>
+  <li>Spatial e.g. Morg (Glamorgan)</li>
+  <li>Temporal e.g.  C.C (B.C),  Mer (Wednesday)</li>
+</ol>
+<h3>Init-time parameters </h3>
+<p><strong>encoding</strong><br />
+The character encoding to be used for reading the input</p>
+<p><strong>gazetteerListsURL</strong><br />
+The path to the gazetteer list of abbreviations, the default list is located at <em>/resources/sentenceSplitter/gazetteer/lists.def</em></p>
+<p><strong>transducerURL</strong><br />
+The path to tranducer grammar, the default JAPE file is located at<em> /resources/sentenceSplitter/grammar/main-single-nl.jape</em></p>
+<h3>Run-time parameters</h3>
+<p><strong>inputASName</strong><br />
+The name of the annotation set used for input. It is optional, if left blank then the<em> 'default'</em> annotation set is assigned.</p>
+<p><strong>outputASName</strong><br />
+The name of the output annotation set where the resulting Split and Sentence annotations will be created. It is optional, if left blank then the<em> 'default' </em>annotation set is assigned.</p>
+<h2>Part of Speech Tagger</h2>
+<p>  The WNLT POS tagger is a modified version of the <a href="https://gate.ac.uk/sale/tao/splitch6.html#sec:annie:tokeniser" target="_blank">ANNIE's Hepple tagger</a>. The tagger produces a part-of-speech tag as an annotation on each word or symbol. The list of tags used by the tagger is found below. The tagger uses a default lexicon which is based on the Free (GPL) <a href="http://www.eurfa.org.uk/" target="_blank">Dictionary Eurfa v3.0</a>.</p>
+<h3>List of Taggs</h3>
+<p> CC - coordinating conjunction: e.g.  a, ac, fel, fod<br />
+  CD - cardinal number<br />
+  DT - determiner: e.g. y, yr, 'r<br />
+  IN - preposition: e.g. am, ap, mewn<br />
+  INT - interrogative: e.g. beth, ble, sut etc.<br />
+  JJ -  adjective<br />
+  JJR - adjective comparative<br />
+  JJS - adjective superlative<br />
+  NN - noun singular or mass<br />
+  NNS - noun plural<br />
+  NNP  - proper noun singular<br />
+  NNPS - proper noun plural<br />
+  NNM - noun masculine<br />
+  NNF - noun feminine<br />
+  PDT - pre-determiner: preceding an article or possessive pronoun; e.g. ambell, prif, rhai etc. <br />
+  PP - pronoun<br />
+  RP - particle, such as; gor, mi, na, nac, ni, ni's <br />
+  RB - adverb<br />
+  UH - interjection, such as; eh, huh, nefi, sori etc<br />
+  VB - verb, base form<br />
+  VBD - verb past tens<br />
+  VBDP - verb pluperfect <br />
+  VBDI - verb imperfect<br />
+  VBI - verb infinitive<br />
+  VBF - verb future<br />
+  PN - punctuation, such as ’'[](){}⟨⟩:,،、‒…-!.?‘’“”''&quot;;\\/⁄<br />
+SC - special characters, all other cases such as £$%* etc. </p>
+<h3>  Part of Speech Tagger  Modifications.</h3>
+<p>  The WNLT POS tagger uses a lexicon of 168669 pairs of terms and tags originating from the Eurfa dictionary. A mapping exercise has mapped the original Eurfa tags (http://www.eurfa.org.uk/abbrevs.php) to ANNIE Hepple tagger like tags. Major modifications applied on the original  POSTagger and Lexicon classes for classifying Welsh input. The classes were extended to recognise linguistic evidence that support word classification of unknown words beyond the limits of the Eurfa dictionary. </p>
+<h3>  Init-time parameters </h3>
+<p><strong>encoding</strong><br />
+The character encoding to be used for reading lexicons and rules</p>
+<p><strong>lexiconURL</strong><br />
+The path to the lexicon of terms-tags pairs,  the default lexicon is located at<em> /resources/postag/lexicon</em></p>
+<p><strong>rulesURL</strong><br />
+The path to the ruleset file,  the default ruleset file is located at <em>/resources/postag/ruleset</em></p>
+<h3>Run-time parameters</h3>
+<p>  <strong>inputASName</strong><br />
+The name of the annotation set used for input</p>
+<p>  <strong>outputASName</strong><br />
+The name of the annotation set used for output. This is an optional parameter. If user does not provide any value, new annotations are created under the default annotation set.</p>
+<p><strong>baseTokenAnnotationType</strong><br />
+The name of the annotation type that refers to Tokens in a document (run-time, default = Token)</p>
+<p><strong>baseSentenceAnnotationType</strong><br />
+The name of the annotation type that refers to Sentences in a document (run-time, default = Sentence).</p>
+<p>  <strong>outputAnnotationType</strong><br />
+POS tags are added as category features on the annotations of type ‘outputAnnotationType’ (run-time, default = Token)</p>
+<p>  <strong>posTagAllTokens</strong><br />
+If set to false, only Tokens within each baseSentenceAnnotationType will be POS tagged (run-time, default = true).</p>
+<p>  <strong>FailOnMissingInputAnnotations</strong><br />
+  if set to false, the PR will not fail with an ExecutionException if no input Annotations are found and instead only log a single warning message per session and a debug message per document that has no input annotations (run-time, default = true).<br />
+</p>
+<h2>Morphological Analyser (Lemmatizer)</h2>
+<p>  The Morphological Analyser takes as input a tokenized GATE document. Considering one token and its part of speech tag, one at a time, it identiﬁes its lemma,  mutation form and in some cases an affix. These values are then added as features on the Token annotation.  The WNLT Morphological Analyser has significantly extended the original <a href="https://gate.ac.uk/releases/gate-6.0-build3764-ALL/doc/tao/splitch17.html#x22-45700017.7" target="_blank">GATE Morphological Analyser </a>to address the linguistic behaviour of Welsh with regards to inflection and mutation.  The tool uses regular expression rules, a Lexicon of term-lemma pairs, a Gazetteer and a post-processing JAPE transducer for validating mutation propositions.  The tool allows users to add new rules or modify the existing resources on their requirements. </p>
+<h3>  Morphological Analyser Modifications</h3>
+<p>  The rule file <em>default.rul</em>, which is available under the <em>/resources/morph</em> directory is modified for the Welsh alphabet. The file contains regular expressions that address regular and irregular forms of plural constructs. More information on how to write these rules can be found in GATE user guide at <a href="https://gate.ac.uk/sale/tao/splitch23.html#sec:parsers:morpher:rules" target="_blank">https://gate.ac.uk/sale/tao/splitch23.html#sec:parsers:morpher:rules</a>  The tool uses a Lexicon of 168794 term-lemma pairs for providing known lemmas, a post-processing JAPE transducer for the identification of mutation forms focusing on contact mutations of Soft, Nasal and Aspirate type. The lemmatization process is as follows:</p>
+<ol>
+  <li><strong>Lexicon Lookup</strong>, if is a known word provide lemma from lexicon and exit, else if unknown<strong> proceed to 2</strong></li>
+  <li><strong>Regular Expressions rules</strong>,  resolve lemma using rules and in any case <strong>proceed to 3</strong></li>
+  <li><strong>Post-processing Transducer</strong>, identify cases of contact mutation based on contextual evidence. Propose new lemmas based on the contextual evidence and hard-coded Welsh language rules and <strong>proceed to 4</strong></li>
+  <li><strong>Check the validity of the proposed lemmas </strong>against a gazetteer of 168785 valid Welsh lemmas and 5885 Welsh place names. If lemmas validate set the new lemma and exit, else <strong>proceed to 5</strong></li>
+  <li><strong> Revert invalid lemma</strong> to original non-mutated lemma form.</li>
+</ol>
+<h3>Init-time parameters </h3>
+<p><strong>caseSensitive</strong><br />
+By default, all tokens under consideration are converted into lowercase to identify their lemma and affix. If the user selects caseSensitive to be true, words are no longer converted into lowercase</p>
+<p><strong>encoding</strong><br />
+The character encoding to be used for reading lexicons and rules</p>
+<p><strong>gazetteerListsURL</strong><br />
+The path to the gazetteer list of valid lemmas, the default list is located at<em> /resources/morph/gazetteer/lists.def</em></p>
+<p><em><strong>lexiconURL</strong></em><br />
+The path to the lexicon of terms-lemma pairs,  the default lexicon is located at <em>/resources/morph/lexicon</em></p>
+<p><strong>rulesFile</strong><br />
+The path to the file containing the regular expression patterns,  the default file is located at<em> /resources/morph/default.rul</em></p>
+<p><strong>transducerURL</strong><br />
+The path to post-processing tranducer grammar responsible for identification and proposition of mutations, the default JAPE file is located at <em>/resources/morph/grammar/postprocess.jape</em></p>
+<p>validationTransducerURL<br />
+  The path to tranducer grammar responsible for validating proposed mutations against the gazetteer of valid lemmas, the default JAPE file is located at <em>/resources/morph/grammar/validation-main.jape</em><br />
+</p>
+<h3>Run-time parameters</h3>
+<p><strong>affixFeatureName</strong><br />
+Name of the feature that should hold the affix value. </p>
+<p>  <strong>rootFeatureName</strong><br />
+Name of the feature that should hold the root value. </p>
+<p>  <strong>annotationSetName</strong><br />
+Name of the annotationSet that contains Tokens. </p>
+<p>  <strong>considerPOSTag</strong><br />
+Each rule in the rule ﬁle might have a separate tag, which speciﬁes which rule to consider with what part-of-speech tag. If this option is set to false, all rules are considered and matched with all words. </p>
+<p>  <strong>failOnMissingInputAnnotations</strong><br />
+  If set to true (the default) the PR will terminate with an Exception if none of the required input Annotations are found in a document. If set to false the PR will not terminate and instead log a single warning message per session and a debug message per document that has no input annotations. <br />
+</p>
+<h2>CYMRIE</h2>
+<p>  CYMRIE is an Information Extraction (Named Entity Recognition) system for Welsh. The name CYMRIE is a paraphrasis of GATE's Information Extraction system <a href="https://gate.ac.uk/sale/tao/splitch6.html" target="_blank">ANNIE (A Nearly-New Information Extraction System)</a>. CYMRIE adapts ANNIE to Welsh input using a modified version of the NE Transducer of ANNIE targeted at the requirements of the Welsh language, for example adjective – noun constructs. The system is using a wide range of Welsh gazetteer lists to support the task of Named Entity Recognition while it maintains some of the original lists with focus on person names and place names. CYMRIE does not currently include a co-reference resolution module </p>
+<p>The default annotation types, features and possible values produced by CYMRIE the same used in ANNIE and are based on the original MUC entity types, and are as follows:</p>
+<ul>
+  <li>Person </li>
+  <ul>
+    <li>gender: male, female</li>
+  </ul>
+  <li>Location </li>
+  <ul>
+    <li>locType: region, airport, city, country, county,  province, other</li>
+  </ul>
+  <li>Organization </li>
+  <ul>
+    <li>orgType: company, department, government,  newspaper, team, other</li>
+  </ul>
+  <li>Money </li>
+  <li>Percent </li>
+  <li>Date </li>
+  <ul>
+    <li>kind: date, time, dateTime</li>
+  </ul>
+  <li>Address </li>
+  <ul>
+    <li>kind: email, url, phone, postcode, complete, ip,  other</li>
+  </ul>
+  <li>Identiﬁer </li>
+  <li>Unknown</li>
+</ul>
+<h3> CYMRIE Gazetteer lists</h3>
+<p>  welsh_assembly_members, Major Type:person_full, Minor Type:government<br />
+  welsh_charities, Major Type:organization, Minor Type:charity<br />
+  welsh_coastal, Major Type:location, Minor Type:coastal<br />
+  welsh_counties, Major Type:location, Minor Type:county<br />
+  welsh_countries, Major Type:location, Minor Type:country<br />
+  welsh_country_adj, Major Type:country_adj, Minor Type:COUNTRYADJ<br />
+  welsh_country_denonyms, Major Type:country_adj, Minor Type:<br />
+  welsh_currency_unit, Major Type:currency_unit, Minor Type:post_amount<br />
+  welsh_date_key, Major Type:date_key, Minor Type:<br />
+  welsh_date_unit, Major Type:date_unit, Minor Type:<br />
+  welsh_days, Major Type:date, Minor Type:day<br />
+  welsh_departments, Major Type:organization, Minor Type:government<br />
+  welsh_facility, Major Type:facility, Minor Type:building<br />
+  welsh_facility_key, Major Type:facility_key, Minor Type:<br />
+  welsh_facility_key_ext, Major Type:facility_key_ext, Minor Type:<br />
+  welsh_festival, Major Type:date, Minor Type:festival<br />
+  welsh_goverment, Major Type:organization, Minor Type:government<br />
+  welsh_govern_key, Major Type:govern_key, Minor Type:<br />
+  welsh_greeting, Major Type:greeting, Minor Type:<br />
+  welsh_hour, Major Type:time, Minor Type:hour<br />
+  welsh_ident_prekey, Major Type:ident_key, Minor Type:pre<br />
+  welsh_jobtitles_cap, Major Type:jobtitle, Minor Type:<br />
+  welsh_jobtitles_lower, Major Type:jobtitle, Minor Type:<br />
+  welsh_jobtitles_sen, Major Type:jobtitle, Minor Type:<br />
+  welsh_lakes, Major Type:location, Minor Type:lake<br />
+  welsh_loc_generalkey, Major Type:loc_general_key, Minor Type:<br />
+  welsh_loc_key, Major Type:loc_key, Minor Type:post<br />
+  welsh_loc_prekey, Major Type:loc_key, Minor Type:pre<br />
+  welsh_ministry, Major Type:organization, Minor Type:government<br />
+  welsh_months, Major Type:date, Minor Type:month<br />
+  welsh_mountains, Major Type:location, Minor Type:mountain<br />
+  welsh_number_fold, Major Type:number_fold, Minor Type:<br />
+  welsh_numbers, Major Type:number, Minor Type:<br />
+  welsh_ordinals, Major Type:date, Minor Type:ordinal<br />
+  welsh_org_base, Major Type:org_base, Minor Type:<br />
+  welsh_org_key, Major Type:org_key, Minor Type:<br />
+  welsh_org_pre, Major Type:org_pre, Minor Type:<br />
+  welsh_parishes, Major Type:location, Minor Type:parish<br />
+  welsh_percent, Major Type:percent, Minor Type:<br />
+  welsh_person_female, Major Type:person_first, Minor Type:female<br />
+  welsh_person_female_amb, Major Type:person_first, Minor Type:female<br />
+  welsh_person_female_cap, Major Type:person_first, Minor Type:female<br />
+  welsh_person_male, Major Type:person_first, Minor Type:male<br />
+  welsh_person_male_cap, Major Type:person_first, Minor Type:male<br />
+  welsh_phone_prefix, Major Type:phone_prefix, Minor Type:<br />
+  welsh_placenames, Major Type:location, Minor Type:city<br />
+  welsh_political_parties, Major Type:organization, Minor Type:government<br />
+  welsh_radio_stations, Major Type:organization, Minor Type:<br />
+  welsh_regions, Major Type:location, Minor Type:region<br />
+  welsh_rivers, Major Type:location, Minor Type:river<br />
+  welsh_sport, Major Type:sport, Minor Type:<br />
+  welsh_stop, Major Type:stop, Minor Type:<br />
+  welsh_terranean, Major Type:location, Minor Type:terrain<br />
+  welsh_time, Major Type:time, Minor Type:absolute<br />
+  welsh_time_ampm, Major Type:time, Minor Type:ampm<br />
+  welsh_time_modifier, Major Type:time_modifier, Minor Type:<br />
+  welsh_time_unit, Major Type:time_unit, Minor Type:<br />
+  welsh_timeofday, Major Type:timeofday, Minor Type:<br />
+  welsh_timezone, Major Type:timeofday, Minor Type:<br />
+  welsh_title, Major Type:title, Minor Type:civilian<br />
+  welsh_title_female, Major Type:title, Minor Type:female<br />
+  welsh_title_male, Major Type:title, Minor Type:male<br />
+  welsh_unitary_authorities, Major Type:location, Minor Type:unitary_authority<br />
+  welsh_university_uk, Major Type:organization, Minor Type:university<br />
+  welsh_water, Major Type:location, Minor Type:region</p>
+</body>
+</html>

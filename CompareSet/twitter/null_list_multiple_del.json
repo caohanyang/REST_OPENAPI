@@ -1,0 +1,10 @@
+{
+  "basePath": "/search",
+  "paths": {},
+  "host": "twitter.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

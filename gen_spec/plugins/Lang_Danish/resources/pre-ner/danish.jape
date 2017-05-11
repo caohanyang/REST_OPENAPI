@@ -1,0 +1,10 @@
+
+//A sentence splitter
+MultiPhase:	main
+Phases: 
+
+reduce-ner
+
+np-norm
+dkie-orgs
+dkie-locs

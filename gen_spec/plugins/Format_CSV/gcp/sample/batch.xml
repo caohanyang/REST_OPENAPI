@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<batch id="sample" xmlns="http://gate.ac.uk/ns/cloud/batch/1.0">
+	<application file="application.xgapp" />
+
+	<report file="report.xml" />
+
+	<!--
+		This input handler reads a CSV file in which the first row are labels
+		and builds documents by pulling the text from column 1 (i.e. the
+		second column) and adding the other columns as document features using
+		the labels from the first row
+	-->
+	<input class="gate.cloud.io.csv.CSVStreamingInputHandler"
+ 		srcFile="input.csv"
+ 		encoding="UTF-8"
+ 		separator=","
+ 		quote='"'
+ 		column="1"
+ 		labelledColumns="true" />
+
+	<!--
+		Stores all the processed docs in a single CSV file with columns for
+		the author doc feature (if it starts with a . it's a doc feature),
+		the document content under the first Token annotation, and the
+		category feature of the first Token annotation. You could also specify
+		annotationType separately in order to get one row per annotation 
+		within the document. This is very similar to how the Configurable 
+		Exporter in the Tools plugin works.
+	-->
+	<output
+		dir="output"
+		encoding="UTF-8"
+		separator=","
+ 		quote='"'
+ 		columns=".author,Token,Token.category"
+		annotationSetName=""
+		fileExtension=".csv"
+		class="gate.cloud.io.csv.CSVStreamingOutputHandler" />
+
+	<!--
+		Stores the annotated GATE documents to ease debugging the CSV output
+	-->
+	<output
+		dir="output"
+		encoding="UTF-8"
+		fileExtension=".GATE.xml"
+		class="gate.cloud.io.file.GATEStandOffFileOutputHandler" />
+
+</batch>

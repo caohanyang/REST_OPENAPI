@@ -1,0 +1,7 @@
+<?xml version="1.0"?>  
+<CREOLE-DIRECTORY>  
+  <JAR SCAN="true">twitter.jar</JAR>
+  <JAR>lib/jaspell-0.3.1.jar</JAR>
+  <JAR>lib/opencsv-3.8.jar</JAR>
+  <REQUIRES>../Format_Twitter</REQUIRES>
+</CREOLE-DIRECTORY> 

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>  
+<CREOLE-DIRECTORY ID="DKIE" VERSION="2014.0422" DESCRIPTION="Danish Information Extraction tools" GATE-MIN="7.1">  
+  <JAR SCAN="true">gate-dkie.jar</JAR>
+  <REQUIRES>../ANNIE</REQUIRES>
+</CREOLE-DIRECTORY> 

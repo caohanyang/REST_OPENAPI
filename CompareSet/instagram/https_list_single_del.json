@@ -1,0 +1,35 @@
+{
+  "basePath": "/v1",
+  "paths": {
+    "/tags/puppy/media/recent": {
+      "get": {}
+    },
+    "/locations/search": {
+      "GET": {}
+    },
+    "/users/self": {
+      "GET": {}
+    },
+    "/media/{media-id}/comments/{comment-id}": {
+      "DEL": {}
+    },
+    "/users/self/follows": {
+      "GET": {}
+    },
+    "/media/{media-id}/likes": {
+      "DEL": {}
+    },
+    "/media/search": {
+      "GET": {}
+    },
+    "/tags/search": {
+      "GET": {}
+    }
+  },
+  "host": "api.instagram.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

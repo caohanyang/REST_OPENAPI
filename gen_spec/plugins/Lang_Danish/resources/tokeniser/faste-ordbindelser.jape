@@ -1,0 +1,165 @@
+Phase: fasteordbindelser
+Input: Token SpaceToken
+Options: control = appelt
+
+// From "Vejledning til det danske morfosyntaktisk taggede PAROLE-korpus"
+// flerordsforbindelser (multi-word connections)
+
+// 8.5.3 Faste ordforbindelser
+
+Rule: faste
+(
+ {Token.string == "a"} {SpaceToken} {Token.string == "la"} {SpaceToken} {Token.string == "carte"} |
+ {Token.string == "af"} {SpaceToken} {Token.string == "og"} {SpaceToken} {Token.string == "til"} |
+ {Token.string == "af"} {SpaceToken} {Token.string == "sted"} |
+ {Token.string == "all"} {SpaceToken} {Token.string == "right"} |
+ {Token.string == "alt"} {SpaceToken} {Token.string == "imens"} |
+ {Token.string == "blandt"} {SpaceToken} {Token.string == "andet"} |
+ {Token.string == "blandt"} {SpaceToken} {Token.string == "andre"} |
+ {Token.string == "bortset"} {SpaceToken} {Token.string == "fra"} |
+ {Token.string == "café"} {SpaceToken} {Token.string == "au"} {SpaceToken} {Token.string == "lait"} |
+ {Token.string == "en"} {SpaceToken} {Token.string == "bloc"} |
+ {Token.string == "en"} {SpaceToken} {Token.string == "suite"} |
+ {Token.string == "for"} {SpaceToken} {Token.string == "nylig"} |
+ {Token.string == "for"} {SpaceToken} {Token.string == "tiden"} |
+ {Token.string == "for"} {SpaceToken} {Token.string == "øvrigt"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "aften"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "alt"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "bunkevis"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "dag"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "det"} {SpaceToken} {Token.string == "hele"} {SpaceToken} {Token.string == "taget"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "eftermiddag"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "fjor"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "forkøbet"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "forvejen"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "gang"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "går"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "hvert"} {SpaceToken} {Token.string == "fald"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "læssevis "} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "morgen"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "månedsvis"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "nat"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "timevis"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "tusindvis"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "ugevis"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "øvrigt"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "år"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "årevis"} |
+ {Token.string == "ikke"} {SpaceToken} {Token.string == "desto"} {SpaceToken} {Token.string == "mindre"} |
+ {Token.string == "med"} {SpaceToken} {Token.string == "hensyn"} {SpaceToken} {Token.string == "til"} |
+ {Token.string == "mere"} {SpaceToken} {Token.string == "eller"} {SpaceToken} {Token.string == "mindre"} |
+ {Token.string == "om"} {SpaceToken} {Token.string == "bord"} |
+ {Token.string == "om"} {SpaceToken} {Token.string == "end"} |
+ {Token.string == "om"} {SpaceToken} {Token.string == "muligt"} |
+ {Token.string == "over"} {SpaceToken} {Token.string == "bord"} |
+ {Token.string == "på"} {SpaceToken} {Token.string == "grund"} {SpaceToken} {Token.string == "af"} |
+ {Token.string == "på"} {SpaceToken} {Token.string == "ny"} |
+ {Token.string == "selv"} {SpaceToken} {Token.string == "om"} |
+ {Token.string == "simpelt"} {SpaceToken} {Token.string == "hen"} |
+ {Token.string == "som"} {SpaceToken} {Token.string == "om"} |
+ {Token.string == "stort"} {SpaceToken} {Token.string == "set"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "sidst"}
+):match
+-->
+:match {
+   long start = matchAnnots.firstNode().getOffset();
+   long end = matchAnnots.lastNode().getOffset();
+
+   // add spanning annotation
+   FeatureMap stringfeats = Factory.newFeatureMap();
+   stringfeats.put("rule", "faste");
+   stringfeats.put("length", (int) end - start);
+   String fastestring = gate.Utils.cleanStringFor(doc, matchAnnots);
+   fastestring = fastestring.replace(" ", "_");
+   stringfeats.put("string", fastestring);
+
+   // do removal of old tokens *before* adding its replacement, else we'll remove the new replacement
+
+   AnnotationSet tokens = gate.Utils.getContainedAnnotations(inputAS, matchAnnots, "Token");
+   inputAS.removeAll(tokens);
+   AnnotationSet spacetokens = gate.Utils.getContainedAnnotations(inputAS, matchAnnots, "SpaceToken");
+   inputAS.removeAll(spacetokens);
+
+   try {
+    outputAS.add(start, end, "Token", stringfeats);
+   }
+   catch (InvalidOffsetException e) {
+    e.printStackTrace();
+   }
+
+}
+
+
+// 8.5.4 Fossilerede dativer/genitiver 
+
+Rule: fossil
+(
+ {Token.string == "af"} {SpaceToken} {Token.string == "syne"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "aftes"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "eftermiddags"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "fredags"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "går"} {SpaceToken} {Token.string == "aftes"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "går"} {SpaceToken} {Token.string == "eftermiddags"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "går"} {SpaceToken} {Token.string == "morges"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "hænde"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "live"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "lørdags"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "mandags"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "onsdags"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "sinde"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "søndags"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "tide"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "tirsdags"} |
+ {Token.string == "i"} {SpaceToken} {Token.string == "torsdags"} |
+ {Token.string == "med"} {SpaceToken} {Token.string == "rette"} |
+ {Token.string == "nu"} {SpaceToken} {Token.string == "til"} {SpaceToken} {Token.string == "dags"} |
+ {Token.string == "på"} {SpaceToken} {Token.string == "fode"} |
+ {Token.string == "på"} {SpaceToken} {Token.string == "tide"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "bords"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "bunds"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "døde"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "fods"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "fulde"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "gode"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "huse"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "lands"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "orde"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "rette"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "rors"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "stede"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "tops"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "tåls"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "veje"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "vejrs"} |
+ {Token.string == "til"} {SpaceToken} {Token.string == "vægs"}
+ 
+):match
+-->
+:match {
+   long start = matchAnnots.firstNode().getOffset();
+   long end = matchAnnots.lastNode().getOffset();
+
+   // add spanning annotation
+   FeatureMap stringfeats = Factory.newFeatureMap();
+   stringfeats.put("rule", "fossil");
+   stringfeats.put("length", (int) end - start);
+   String fastestring = gate.Utils.cleanStringFor(doc, matchAnnots);
+   fastestring = fastestring.replace(" ", "_");
+   stringfeats.put("string", fastestring);
+
+   // do removal of old tokens *before* adding its replacement, else we'll remove the new replacement
+
+   AnnotationSet tokens = gate.Utils.getContainedAnnotations(inputAS, matchAnnots, "Token");
+   inputAS.removeAll(tokens);
+   AnnotationSet spacetokens = gate.Utils.getContainedAnnotations(inputAS, matchAnnots, "SpaceToken");
+   inputAS.removeAll(spacetokens);
+
+   try {
+    outputAS.add(start, end, "Token", stringfeats);
+   }
+   catch (InvalidOffsetException e) {
+    e.printStackTrace();
+   }
+
+}
+

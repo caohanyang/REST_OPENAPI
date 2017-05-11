@@ -1,0 +1,26 @@
+// Andreas Vlachidis 15/01/2016
+// 
+//Clean Mutation Validation Lookup
+
+
+Phase: Mutation
+Input: Lookup
+Options: control = All
+
+Rule: 	RemoveInvalidMutation
+( 
+	{Lookup}
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Lookup");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n RemoveInvalidMutation");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}

@@ -1,0 +1,13 @@
+country.lst:location:country
+celebrities.lst:person_full
+cities_dk.lst:location:city
+cities_world.lst:location:city
+football.lst:sport
+music_bands.lst:organization:music
+names_first_m.lst:person_first:male
+names_first_f.lst:person_first:female
+names_last.lst:person_ending
+political.lst:organization:political
+orgs.lst:organization
+region.lst:location:region
+provinces.lst:location:province

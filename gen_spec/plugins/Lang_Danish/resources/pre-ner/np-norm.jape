@@ -1,0 +1,33 @@
+Phase: npnorm
+Input: Token SpaceToken
+Options: control = appelt
+
+// there's no apostrophe in Danish possessives; this makes finding NEs a little tough
+// e.g. "Aarhus Universitet" is the NP, "Aarhus Universitets" is the possessive 
+// (cf. English's Aarhus University's)
+// we have a normString feature in DKIE that the gaz uses for lookup
+// in this case, if we have a proper noun ending "s", strip the "s"
+
+Rule: PossessiveProperNoun
+(
+  ({Token.category == NP, Token.string ==~ ".+s"}) |
+  ({Token.category == NC, Token.normString ==~ "^[A-Z].*s$"})
+):possessive
+-->
+{
+  // convert the text to replace Danish vowels with diphthong versions
+  AnnotationSet tok = bindings.get("possessive");
+  Annotation tokAnn = tok.iterator().next();
+
+  FeatureMap tokfeats = (FeatureMap)((SimpleFeatureMapImpl)tokAnn.getFeatures()).clone();
+
+
+  String normString = (String)tokfeats.get("normString");
+  normString = normString.substring(0, normString.length() - 1);
+  tokfeats.put("normString", normString);
+  tokfeats.put("number", "plural");
+  tokfeats.put("np-norm", "true");
+
+  // save updated feature map
+  tokAnn.setFeatures(tokfeats);
+}

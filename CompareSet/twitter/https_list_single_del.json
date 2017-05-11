@@ -1,0 +1,361 @@
+{
+  "basePath": "/1.1",
+  "paths": {
+    "/lists/members/show": {
+      "GET": {}
+    },
+    "/lists/subscribers/destroy": {
+      "POST": {}
+    },
+    "/lists/ownerships": {
+      "GET": {}
+    },
+    "/friends/list": {
+      "GET": {}
+    },
+    "/collections/entries": {
+      "GET": {}
+    },
+    "/lists/update": {
+      "POST": {}
+    },
+    "/collections/list": {
+      "GET": {}
+    },
+    "/saved_searches/list": {
+      "GET": {}
+    },
+    "/users/suggestions/funny/members": {
+      "GET": {}
+    },
+    "/help/configuration": {
+      "GET": {}
+    },
+    "/mutes/users/list": {
+      "GET": {}
+    },
+    "/blocks/create": {
+      "POST": {}
+    },
+    "/direct_messages/sent": {
+      "GET": {}
+    },
+    "/lists/subscribers/show": {
+      "GET": {}
+    },
+    "/direct_messages/events/list": {
+      "GET": {}
+    },
+    "/statuses/destroy/240854986559455234": {
+      "POST": {}
+    },
+    "https://upload.twitter.com/1.1/media/upload": {
+      "POST": {},
+      "GET": {}
+    },
+    "/geo/id/df51dec6f4ee2b2c": {
+      "GET": {}
+    },
+    "/lists/show": {
+      "GET": {}
+    },
+    "/users/profile_banner": {
+      "GET": {}
+    },
+    "/favorites/destroy": {
+      "POST": {}
+    },
+    "/friendships/update": {
+      "POST": {}
+    },
+    "/account/update_profile_image": {
+      "POST": {}
+    },
+    "/saved_searches/show/9569704": {
+      "GET": {}
+    },
+    "/trends/available": {
+      "GET": {}
+    },
+    "/lists/members/destroy_all": {
+      "POST": {}
+    },
+    "/lists/members/create": {
+      "POST": {}
+    },
+    "/direct_messages/events/new": {
+      "POST": {}
+    },
+    "https://publish.twitter.com/oembed": {
+      "GET": {}
+    },
+    "/collections/entries/curate": {
+      "POST": {}
+    },
+    "/application/rate_limit_status": {
+      "GET": {}
+    },
+    "/friendships/outgoing": {
+      "GET": {}
+    },
+    "/geo/create": {
+      "POST": {}
+    },
+    "/favorites/list": {
+      "GET": {}
+    },
+    "/direct_messages/welcome_messages/rules/list": {
+      "GET": {}
+    },
+    "/account/settings": {
+      "POST": {},
+      "GET": {}
+    },
+    "/trends/closest": {
+      "GET": {}
+    },
+    "/direct_messages/welcome_messages/rules/new": {
+      "POST": {}
+    },
+    "/statuses/retweet/243149503589400576": {
+      "POST": {}
+    },
+    "/lists/members": {
+      "GET": {}
+    },
+    "/mutes/users/create": {
+      "POST": {}
+    },
+    "/saved_searches/create": {
+      "POST": {}
+    },
+    "/direct_messages/destroy": {
+      "POST": {}
+    },
+    "/direct_messages/welcome_messages/show": {
+      "GET": {}
+    },
+    "/statuses/update": {
+      "POST": {}
+    },
+    "/followers/ids": {
+      "GET": {}
+    },
+    "/lists/statuses": {
+      "GET": {}
+    },
+    "/users/lookup": {
+      "GET": {}
+    },
+    "/friendships/lookup": {
+      "GET": {}
+    },
+    "/statuses/user_timeline": {
+      "GET": {}
+    },
+    "/trends/place": {
+      "GET": {}
+    },
+    "/collections/show": {
+      "GET": {}
+    },
+    "/collections/update": {
+      "POST": {}
+    },
+    "/users/suggestions/twitter": {
+      "GET": {}
+    },
+    "/direct_messages/welcome_messages/destroy": {
+      "Del": {}
+    },
+    "/search/tweets": {
+      "GET": {}
+    },
+    "/lists/destroy": {
+      "POST": {}
+    },
+    "/statuses/retweets/509457288717819904": {
+      "GET": {}
+    },
+    "/lists/members/destroy": {
+      "POST": {}
+    },
+    "/direct_messages/events/show": {
+      "GET": {}
+    },
+    "/friendships/no_retweets/ids": {
+      "GET": {}
+    },
+    "/geo/reverse_geocode": {
+      "GET": {}
+    },
+    "/collections/entries/remove": {
+      "POST": {}
+    },
+    "/help/privacy": {
+      "GET": {}
+    },
+    "/saved_searches/destroy/62353170": {
+      "POST": {}
+    },
+    "/users/report_spam": {
+      "POST": {}
+    },
+    "/direct_messages/welcome_messages/rules/show": {
+      "GET": {}
+    },
+    "/favorites/create": {
+      "POST": {}
+    },
+    "https://twitter.com/messages/compose": {
+      "POST": {}
+    },
+    "/users/show": {
+      "GET": {}
+    },
+    "/direct_messages/welcome_messages/rules/destroy": {
+      "Del": {}
+    },
+    "/collections/entries/move": {
+      "POST": {}
+    },
+    "/friendships/destroy": {
+      "POST": {}
+    },
+    "/direct_messages": {
+      "GET": {}
+    },
+    "/followers/list": {
+      "GET": {}
+    },
+    "/statuses/update_with_media": {
+      "POST": {}
+    },
+    "/account/remove_profile_banner": {
+      "POST": {}
+    },
+    "/collections/destroy": {
+      "POST": {}
+    },
+    "/account/update_profile_banner": {
+      "POST": {}
+    },
+    "/help/languages": {
+      "GET": {}
+    },
+    "/blocks/ids": {
+      "GET": {}
+    },
+    "/mutes/users/ids": {
+      "GET": {}
+    },
+    "/statuses/lookup": {
+      "GET": {}
+    },
+    "/lists/subscribers": {
+      "GET": {}
+    },
+    "/friendships/incoming": {
+      "GET": {}
+    },
+    "/lists/members/create_all": {
+      "POST": {}
+    },
+    "/collections/entries/add": {
+      "POST": {}
+    },
+    "https://upload.twitter.com/1.1/media/metadata/create": {
+      "POST": {}
+    },
+    "/statuses/retweeters/ids": {
+      "GET": {}
+    },
+    "/users/suggestions": {
+      "GET": {}
+    },
+    "/mutes/users/destroy": {
+      "POST": {}
+    },
+    "/lists/list": {
+      "GET": {}
+    },
+    "/account/update_profile_background_image": {
+      "POST": {}
+    },
+    "/account/update_profile": {
+      "POST": {}
+    },
+    "/help/tos": {
+      "GET": {}
+    },
+    "/collections/create": {
+      "POST": {}
+    },
+    "/statuses/retweets_of_me": {
+      "GET": {}
+    },
+    "/blocks/list": {
+      "GET": {}
+    },
+    "/friendships/show": {
+      "get": {}
+    },
+    "/friendships/create": {
+      "POST": {}
+    },
+    "/account/verify_credentials": {
+      "GET": {}
+    },
+    "/blocks/destroy": {
+      "POST": {}
+    },
+    "/users/search": {
+      "GET": {}
+    },
+    "/statuses/home_timeline": {
+      "GET": {}
+    },
+    "/statuses/show": {
+      "GET": {}
+    },
+    "/lists/subscribers/create": {
+      "POST": {}
+    },
+    "/direct_messages/new": {
+      "POST": {}
+    },
+    "/direct_messages/show": {
+      "GET": {}
+    },
+    "/statuses/retweet/241259202004267009": {
+      "POST": {}
+    },
+    "/statuses/mentions_timeline": {
+      "GET": {}
+    },
+    "/lists/memberships": {
+      "GET": {}
+    },
+    "/friends/ids": {
+      "GET": {}
+    },
+    "/lists/create": {
+      "POST": {}
+    },
+    "/direct_messages/welcome_messages/list": {
+      "GET": {}
+    },
+    "/lists/subscriptions": {
+      "GET": {}
+    },
+    "/geo/search": {
+      "GET": {}
+    }
+  },
+  "host": "api.twitter.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

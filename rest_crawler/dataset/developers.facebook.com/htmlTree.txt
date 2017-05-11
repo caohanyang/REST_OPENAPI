@@ -1,0 +1,860 @@
+
+                               /-/graph-api
+                              |
+                              |          /-/reference
+                              |         |
+                              |         |          /-/achievement
+                              |         |         |
+                              |         |         |--/achievement_type
+                              |         |         |
+                              |         |         |--/age-range
+                              |         |         |
+                              |         |         |--/album
+                              |         |         |
+                              |         |         |--/android-app-link
+                              |         |         |
+                              |         |         |--/app
+                              |         |         |
+                              |         |         |--/app-link-host
+                              |         |         |
+                              |         |         |--/app-links
+                              |         |         |
+                              |         |         |--/app-request
+                              |         |         |
+                              |         |         |--/app-request-former-recipient
+                              |         |         |
+                              |         |         |--/application
+                              |         |         |
+                              |         |         |--/application-app-ad-debug-info
+                              |         |         |
+                              |         |         |--/application-app-event-type-parameter-values
+                              |         |         |
+                              |         |         |--/application-app-event-type-parameters
+                              |         |         |
+                              |         |         |--/application-app-event-types
+                              |         |         |
+                              |         |         |--/application-context
+                              |         |         |
+                              |         |         |--/application-object-store-urls
+                              |         |         |
+                              |         |         |--/application-permission
+                              |         |         |
+                              |         |         |--/application-restriction-info
+                              |         |         |
+                              |         |         |--/attachment
+                              |         |         |
+                              |         |         |--/audience-insights-rule
+                              |         |         |
+                              |         |         |--/canvas-body-element
+                              |         |         |
+                              |         |         |--/canvas-button
+                              |         |         |
+                              |         |         |--/canvas-carousel
+                              |         |         |
+                              |         |         |--/canvas-footer
+                              |         |         |
+                              |         |         |--/canvas-header
+                              |         |         |
+                              |         |         |--/canvas-inline-style
+                              |         |         |
+                              |         |         |--/canvas-photo
+                              |         |         |
+                              |         |         |--/canvas-product-set
+                              |         |         |
+                              |         |         |--/canvas-rich-text
+                              |         |         |
+                              |         |         |--/canvas-store-locator
+                              |         |         |
+                              |         |         |--/canvas-text
+                              |         |         |
+                              |         |         |--/canvas-video
+                              |         |         |
+                              |         |         |--/comment
+                              |         |         |
+                              |         |         |--/conversation
+                              |         |         |
+                              |         |         |--/cover-photo
+                              |         |         |
+                              |         |         |--/crisis
+                              |         |         |
+                              |         |         |--/crisis-listing
+                              |         |         |
+                              |         |         |--/currency
+                              |         |         |
+                              |         |         |--/debug_token
+                              |         |         |
+                              |         |         |--/doc
+                              |         |         |
+                              |         |         |--/domain
+                              |         |         |
+                              |         |         |--/education-experience
+                              |         |         |
+                              |         |         |--/engagement
+                              |         |         |
+                              |         |         |--/entity-at-text-range
+                              |         |         |
+                              |         |         |--/event
+                              |         |         |
+                              |         |         |--/experience
+                              |         |         |
+                              |         |         |--/friend-list
+                              |         |         |
+                              |         |         |--/group
+                              |         |         |
+                              |         |         |--/groupdoc
+                              |         |         |
+                              |         |         |--/insights
+                              |         |         |
+                              |         |         |--/insights-event-label
+                              |         |         |
+-- /developers.facebook.com/docs        |         |--/insights-query-result
+                              |         |         |
+                              |         |         |--/insights-result
+                              |         |         |
+                              |         |         |--/insights-value
+                              |         |         |
+                              |         |         |--/instagram-carousel
+                              |         |         |
+                              |         |         |--/instagram-comment
+                              |         |         |
+                              |         |         |--/instagram-media
+                              |         |         |
+                              |         |         |--/instagram-user
+                              |         |         |
+                              |         |         |--/instant-articles-insights-aggregated
+                              |         |         |
+                              |         |         |--/ios-app-link
+                              |         |         |
+                              |         |         |--/life-event
+                              |         |         |
+                              |         |         |--/limited-friend
+                              |         |         |
+                              |         |         |--/limited-profile
+                              |         |         |
+                              |         |         |--/link
+                              |         |         |
+                              |         |         |--/live-video
+                              |         |         |
+                              |         |         |--/location
+                              |         |         |
+                              |         |         |--/mailing-address
+                              |         |         |
+                              |         |         |--/media-fingerprint
+                              |         |         |
+                              |         |         |--/message
+                              |         |         |
+                              |         |         |--/milestone
+                              |         |         |
+                              |         |         |--/native-offer
+                              |         |         |
+                              |         |         |--/note
+                              |         |         |
+                              |         |         |--/notification
+                              |         |         |
+                              |         |         |--/open-graph-action--games_achieves
+                              |         |         |
+                              |         |         |--/open-graph-action-image
+                              |         |         |
+                              |         |         |--/open-graph-action-type
+                              |         |         |
+                              |         |         |--/open-graph-context
+                              |         |         |
+                              |         |         |--/open-graph-object--generic
+                              |         |         |
+                              |         |         |--/open-graph-object-audio
+                              |         |         |
+                              |         |         |--/open-graph-object-country
+                              |         |         |
+                              |         |         |--/open-graph-object-image-video
+                              |         |         |
+                              |         |         |--/open-graph-object-locale
+                              |         |         |
+                              |         |         |--/open-graph-object-profile
+                              |         |         |
+                              |         |         |--/open-graph-object-restrictions
+                              |         |         |
+                              |         |         |--/open-graph-object-type
+                              |         |         |
+                              |         |         |--/open-graph-property-config
+                              |         |         |
+                              |         |         |--/open-graph-rating
+                              |         |         |
+                              |         |         |--/open-graph-struct--games_achieves
+                              |         |         |
+                              |         |         |--/page
+                              |         |         |
+                              |         |         |--/page-admin-note
+                              |         |         |
+                              |         |         |--/page-call-to-action
+                              |         |         |
+                              |         |         |--/page-category
+                              |         |         |
+                              |         |         |--/page-label
+                              |         |         |
+                              |         |         |--/page-parking
+                              |         |         |
+                              |         |         |--/page-payment-options
+                              |         |         |
+                              |         |         |--/page-restaurant-services
+                              |         |         |
+                              |         |         |--/page-restaurant-specialties
+                              |         |         |
+                              |         |         |--/page-settings
+                              |         |         |
+                              |         |         |--/page-start-date
+                              |         |         |
+                              |         |         |--/page-start-info
+                              |         |         |
+                              |         |         |--/pages-platform-component-flow-service-config
+                              |         |         |
+                              |         |         |--/payment
+                              |         |         |
+                              |         |         |--/payment-pricepoint
+                              |         |         |
+                              |         |         |--/payment-pricepoints
+                              |         |         |
+                              |         |         |--/permission
+                              |         |         |
+                               \/graph-api        |--/photo
+                                        |         |
+                                        |         |--/place
+                                        |         |
+                                        |         |--/place-tag
+                                        |         |
+                                        |         |--/place-topic
+                                        |         |
+                                        |         |--/platform-image-source
+                                        |         |
+                                        |         |--/post
+                                        |         |
+                                        |         |--/privacy
+                                        |         |
+                                        |         |--/profile
+                                        |         |
+                                        |         |--/profile-picture-source
+                                        |         |
+                                        |         |--/project-experience
+                                        |         |
+                                        |         |--/promotion-info
+                                        |         |
+                                        |         |--/question
+                                        |         |
+                                        |         |--/question_option
+                                        |         |
+                                        |         |--/request
+                                        |         |
+                                        |         |--/request-history
+                                        |         |
+                                        |         |--/rtb-dynamic-post
+                                        |         |
+                                        |         |--/saved-message-response
+                                        |         |
+                                        |         |--/screen-name
+                                        |         |
+                                        |         |--/secure-browsing
+                                        |         |
+                                        |         |--/security-settings
+                                        |         |
+                                        |         |--/status
+                                        |         |
+                                        |         |--/story-attachment
+                                        |         |
+                                        |         |--/story-attachment-media
+                                        |         |
+                                        |         |--/story-attachment-target
+                                        |         |
+                                        |         |--/stream-filter
+                                        |         |
+                                        |         |--/tab
+                                        |         |
+                                        |         |--/taggable-subject
+                                        |         |
+                                        |         |--/targeting
+                                        |         |
+                                        |         |--/test-account
+                                        |         |
+                                        |         |--/test-user
+                                        |         |
+                                        |         |--/thread
+                                        |         |
+                                        |         |--/url
+                                        |         |
+                                        |         |--/user
+                                        |         |
+                                        |         |--/user-context
+                                        |         |
+                                        |         |--/user-device
+                                        |         |
+                                        |         |--/user-id-for-app
+                                        |         |
+                                        |         |--/user-invitable-friend
+                                        |         |
+                                        |         |--/user-taggable-friend
+                                        |         |
+                                        |         |--/video
+                                        |         |
+                                        |         |--/video-caption
+                                        |         |
+                                        |         |--/video-copyright
+                                        |         |
+                                        |         |--/video-copyright-rule
+                                        |         |
+                                        |         |--/video-format
+                                        |         |
+                                        |         |--/video-list
+                                        |         |
+                                        |         |--/video-status
+                                        |         |
+                                        |         |--/video-thumbnail
+                                        |         |
+                                        |         |--/video-upload-limits
+                                        |         |
+                                        |         |--/voip-info
+                                        |         |
+                                        |         |--/web-app-link
+                                        |         |
+                                        |         |--/windows-app-link
+                                        |         |
+                                        |         |--/windows-phone-app-link
+                                        |         |
+                                        |         |--/work-experience
+                                        |         |
+                                        |         |      /-/photos
+                                        |         |-/album
+                                        |         |      \-/picture
+                                        |         |
+                                        |         |    /-/achievements
+                                        |         |   |
+                                        |         |   |--/groups
+                                        |         |   |
+                                        |         |   |--/picture
+                                        |         |   |
+                                        |         |   |--/roles
+                                        |         |   |
+                                        |         |-/app-/scores
+                                        |         |   |
+                                        |         |   |--/staticresources
+                                        |         |   |
+                                        |         |   |--/subscriptions
+                                        |         |   |
+                                        |         |   |--/translations
+                                        |         |   |
+                                        |         |    \/accounts-/test-users
+                                        |         |
+                                        |         |            /-/accounts
+                                        |         |           |
+                                        |         |           |--/activities
+                                        |         |           |
+                                        |         |           |--/ads_app_insights_dimensions
+                                        |         |           |
+                                        |         |           |--/app_event_types
+                                        |         |           |
+                                        |         |           |--/app_insights
+                                        |         |           |
+                                        |         |           |--/app_link_hosts
+                                        |         |           |
+                                        |         |           |--/appassets
+                                        |         |           |
+                                        |         |           |--/apprelease
+                                        |         |           |
+                                        |         |           |--/assets
+                                        |         |           |
+                                        |         |           |--/banned
+                                        |         |           |
+                                        |         |           |--/connections
+                                        |         |           |
+                                        |         |           |--/custom_audience_third_party_id
+                                        |         |           |
+                                        |         |           |--/direct_deals
+                                        |         |-/application
+                                        |         |           |--/events
+                                        |         |           |
+                                        |         |           |--/insights_event_labels
+                                        |         |           |
+                                        |         |           |--/moods_for_application
+                                        |         |           |
+                                        |         |           |--/object_types
+                                        |         |           |
+                                        |         |           |--/objects
+                                        |         |           |
+                                        |         |           |--/ozone_release
+                                        |         |           |
+                                        |         |           |--/payments_test_users
+                                        |         |           |
+                                        |         |           |--/permissions
+                                        |         |           |
+                                        |         |           |--/products
+                                        |         |           |
+                                        |         |           |--/purchases
+                                        |         |           |
+                                        |         |           |--/services
+                                        |         |           |
+                                        |         |           |--/uploads
+                                        |         |           |
+                                        |         |            \-/user_properties
+                                        |         |
+                                        |         |-/application-context-/friends_using_app
+                                        |         |
+                                        |         |-/conversation-/messages
+                                        |         |
+                                        |         |       /-/community_help_categories
+                                        |         |-/crisis
+                                        |         |       \-/community_help_posts
+                                        |         |
+                                        |         |               /-/comments
+                                        |         |              |
+                                        |         |-/crisis-listing-/likes
+                                        |         |              |
+                                        |         |               \-/reactions
+                                        |         |
+                                        |         |      /-/admins
+                                        |         |     |
+                                        |         |     |--/attending
+                                        |         |     |
+                                        |         |     |--/comments
+                                        |         |     |
+                                        |         |     |--/declined
+                                        |         |     |
+                                        |         |     |--/feed
+                                        |         |     |
+                                        |         |     |--/interested
+                                        |         |     |
+                                        |         |-/event-/live_videos
+                                        |         |     |
+                                        |         |     |--/maybe
+                                        |         |     |
+                                        |         |     |--/noreply
+                                        |         |     |
+                                        |         |     |--/photos
+                                        |         |     |
+                                        |         |     |--/picture
+                                        |         |     |
+                                        |         |     |--/roles
+                                         \/reference    |
+                                                  |      \-/videos
+                                                  |
+                                                  |      /-/admins
+                                                  |     |
+                                                  |     |--/albums
+                                                  |     |
+                                                  |     |--/docs
+                                                  |     |
+                                                  |     |--/events
+                                                  |     |
+                                                  |-/group-/feed
+                                                  |     |
+                                                  |     |--/files
+                                                  |     |
+                                                  |     |--/members
+                                                  |     |
+                                                  |     |--/photos
+                                                  |     |
+                                                  |      \-/videos
+                                                  |
+                                                  |                   /-/comments
+                                                  |-/instagram-carousel
+                                                  |                   \-/instagram_comments
+                                                  |
+                                                  |                /-/comments
+                                                  |               |
+                                                  |-/instagram-media-/insights
+                                                  |               |
+                                                  |                \-/instagram_usertags
+                                                  |
+                                                  |               /-/agencies
+                                                  |-/instagram-user
+                                                  |               \-/authorized_adaccounts
+                                                  |
+                                                  |           /-/comments
+                                                  |          |
+                                                  |          |--/likes
+                                                  |-/life-event
+                                                  |          |--/photos
+                                                  |          |
+                                                  |           \-/sharedposts
+                                                  |
+                                                  |-/limited-friend-/picture
+                                                  |
+                                                  |-/limited-profile-/picture
+                                                  |
+                                                  |           /-/comments
+                                                  |          |
+                                                  |-/live-video-/likes
+                                                  |          |
+                                                  |           \-/reactions
+                                                  |
+                                                  |        /-/attachments
+                                                  |-/message
+                                                  |        \-/shares
+                                                  |
+                                                  |-/native-offer-/views
+                                                  |
+                                                  |       /-/comments
+                                                  |      |
+                                                  |      |--/likes
+                                                  |-/object
+                                                  |      |--/private_replies
+                                                  |      |
+                                                  |       \-/sharedposts
+                                                  |
+                                                  |                                  /-/comments
+                                                  |-/open-graph-action--games_achieves
+                                                  |                                  \-/likes
+                                                  |
+                                                  |                   /-/friends_tagged_at
+                                                  |                  |
+                                                  |                  |--/friends_who_like
+                                                  |-/open-graph-context
+                                                  |                  |--/music_listen_friends
+                                                  |                  |
+                                                  |                   \-/video_watch_friends
+                                                  |
+                                                  |                           /-/comments
+                                                  |                          |
+                                                  |                          |--/likes
+                                                  |-/open-graph-object--generic
+                                                  |                          |--/picture
+                                                  |                          |
+                                                  |                           \-/reactions
+                                                  |
+                                                  |     /-/admin_notes
+                                                  |    |
+                                                  |    |--/albums
+                                                  |    |
+                                                  |    |--/blocked
+                                                  |    |
+                                                  |    |--/business_activities
+                                                  |    |
+                                                  |    |--/call_to_actions
+                                                  |    |
+                                                  |    |--/canvas_elements
+                                                  |    |
+                                                  |    |--/conversations
+                                                  |    |
+                                                  |    |--/crosspost_pending_approval_pages
+                                                  |    |
+                                                  |    |--/crosspost_whitelisted_pages
+                                                  |    |
+                                                  |    |--/curated_collections
+                                                  |    |
+                                                  |    |--/events
+                                                  |    |
+                                                  |    |--/featured_videos_collection
+                                                  |    |
+                                                  |    |--/feed
+                                                  |    |
+                                                  |    |--/global_brand_children
+                                                  |    |
+                                                  |    |--/insights
+                                                  |    |
+                                                  |    |--/instagram_accounts
+                                                  |    |
+                                                  |    |--/instant_articles
+                                                  |    |
+                                                  |    |--/instant_articles_publish
+                                                  |    |
+                                                  |    |--/labels
+                                                  |    |
+                                                  |    |--/leadgen_conditional_questions_group
+                                                  |    |
+                                                  |    |--/leadgen_whitelisted_users
+                                                  |    |
+                                                  |    |--/likes
+                                                  |    |
+                                                  |    |--/links
+                                                  |    |
+                                                  |    |--/live_videos
+                                                  |    |
+                                                  |    |--/locations
+                                                  |    |
+                                                  |    |--/media_fingerprints
+                                                  |    |
+                                                  |    |--/milestones
+                                                  |    |
+                                                  |-/page-/nativeoffers
+                                                  |    |
+                                                  |    |--/notifications
+                                                  |    |
+                                                  |    |--/page_backed_instagram_accounts
+                                                  |    |
+                                                  |    |--/photos
+                                                  |    |
+                                                  |    |--/picture
+                                                  |    |
+                                                  |    |--/place_topics
+                                                  |    |
+                                                  |    |--/product_catalogs
+                                                  |    |
+                                                  |    |--/publisher_space
+                                                  |    |
+                                                  |    |--/ratings
+                                                  |    |
+                                                  |    |--/roles
+                                                  |    |
+                                                  |    |--/saved_filters
+                                                  |    |
+                                                  |    |--/saved_message_responses
+                                                  |    |
+                                                  |    |--/screennames
+                                                  |    |
+                                                  |    |--/seasons
+                                                  |    |
+                                                  |    |--/settings
+                                                  |    |
+                                                  |    |--/show_playlists
+                                                  |    |
+                                                  |    |--/statuses
+                                                  |    |
+                                                  |    |--/subscribed_apps
+                                                  |    |
+                                                  |    |--/tabs
+                                                  |    |
+                                                  |    |--/tagged
+                                                  |    |
+                                                  |    |--/thread_settings
+                                                  |    |
+                                                  |    |--/video_broadcasts
+                                                  |    |
+                                                  |    |--/video_copyright_rule
+                                                  |    |
+                                                  |    |--/video_copyright_rules
+                                                  |    |
+                                                  |    |--/video_copyrights
+                                                  |    |
+                                                  |    |--/video_lists
+                                                  |    |
+                                                  |    |--/videos
+                                                  |    |
+                                                  |     \-/videos_you_can_use
+                                                  |
+                                                  |-/page-label-/users
+                                                  |
+                                                  |        /-/dispute
+                                                  |-/payment
+                                                  |        \-/refunds
+                                                  |
+                                                  |      /-/insights
+                                                  |     |
+                                                  |     |--/likes
+                                                  |     |
+                                                  |     |--/reactions
+                                                  |-/photo
+                                                  |     |--/sharedposts
+                                                  |     |
+                                                  |     |--/sponsor_tags
+                                                  |     |
+                                                  |      \-/tags
+                                                  |
+                                                  |-/post-/reactions
+                                                  |
+                                                  |                 /-/comments
+                                                  |                |
+                                                  |-/rtb-dynamic-post-/instagram_comments
+                                                  |                |
+                                                  |                 \-/likes
+                                                  |
+                                                  |-/saved-message-response-/macros
+                                                  |
+                                                  |-/story-attachment-/subattachments
+                                                  |
+                                                  |-/test-user-/friends
+                                                  |
+                                                  |     /-/accounts
+                                                  |    |
+                                                  |    |--/achievements
+                                                  |    |
+                                                  |    |--/ad_studies
+                                                  |    |
+                                                  |    |--/adaccounts
+                                                  |    |
+                                                  |    |--/adcontracts
+                                                  |    |
+                                                  |    |--/adnetworkanalytics
+                                                  |    |
+                                                  |    |--/albums
+                                                  |    |
+                                                  |    |--/apprequestformerrecipients
+                                                  |    |
+                                                  |    |--/apprequests
+                                                  |    |
+                                                  |    |--/books
+                                                  |    |
+                                                  |    |--/business_activities
+                                                  |    |
+                                                  |    |--/checkins
+                                                  |    |
+                                                  |    |--/conversations
+                                                  |    |
+                                                  |    |--/curated_collections
+                                                  |    |
+                                                  |    |--/domains
+                                                  |    |
+                                                  |    |--/events
+                                                  |    |
+                                                  |    |--/family
+                                                  |    |
+                                                  |    |--/favorite_requests
+                                                  |    |
+                                                  |    |--/feed
+                                                  |    |
+                                                  |    |--/friendlists
+                                                  |    |
+                                                  |    |--/friendrequests
+                                                  |    |
+                                                  |    |--/friends
+                                                  |    |
+                                                  |    |--/games
+                                                  |    |
+                                                  |    |--/groups
+                                                  |    |
+                                                  |    |--/home
+                                                  |    |
+                                                  |    |--/ids_for_apps
+                                                  |    |
+                                                  |    |--/ids_for_business
+                                                  |    |
+                                                  |    |--/ids_for_pages
+                                                  |    |
+                                                  |    |--/inbox
+                                                  |    |
+                                                  |    |--/invitable_friends
+                                                  |    |
+                                                  |-/user-/likes
+                                                  |    |
+                                                  |    |--/live_videos
+                                                  |    |
+                                                  |    |--/locations
+                                                  |    |
+                                                  |    |--/moments_link_invite
+                                                  |    |
+                                                  |    |--/moments_link_invite_convert
+                                                  |    |
+                                                  |    |--/movies
+                                                  |    |
+                                                  |    |--/music
+                                                  |    |
+                                                  |    |--/mutualfriends
+                                                  |    |
+                                                  |    |--/notifications
+                                                  |    |
+                                                  |    |--/objects
+                                                  |    |
+                                                  |    |--/outbox
+                                                  |    |
+                                                  |    |--/paymentaccountemails
+                                                  |    |
+                                                  |    |--/paymentaccountphones
+                                                  |    |
+                                                  |    |--/permissions
+                                                  |    |
+                                                  |    |--/personal_ad_accounts
+                                                  |    |
+                                                  |    |--/photos
+                                                  |    |
+                                                  |    |--/picture
+                                                  |    |
+                                                  |    |--/promotable_domains
+                                                  |    |
+                                                  |    |--/promotable_events
+                                                  |    |
+                                                  |    |--/questions
+                                                  |    |
+                                                  |    |--/request_history
+                                                  |    |
+                                                  |    |--/scores
+                                                  |    |
+                                                  |    |--/session_keys
+                                                  |    |
+                                                  |    |--/stream_filters
+                                                  |    |
+                                                  |    |--/subscribedto
+                                                  |    |
+                                                  |    |--/subscribers
+                                                  |    |
+                                                  |    |--/taggable_friends
+                                                  |    |
+                                                  |    |--/tagged_places
+                                                  |    |
+                                                  |    |--/television
+                                                  |    |
+                                                  |    |--/video_broadcasts
+                                                  |    |
+                                                  |     \-/videos
+                                                  |
+                                                  |             /-/all_mutual_friends
+                                                  |            |
+                                                  |            |--/mutual_friends
+                                                  |-/user-context
+                                                  |            |--/mutual_likes
+                                                  |            |
+                                                  |             \-/three_degree_mutual_friends
+                                                  |
+                                                  |-/user-invitable-friend-/picture
+                                                  |
+                                                  |-/user-taggable-friend-/picture
+                                                  |
+                                                  |-/user.context-/mutual_friends
+                                                  |
+                                                  |     /-/note
+                                                  |    |
+                                                  |    |--/question
+                                                  |-/v1.0
+                                                  |    |--/question_option
+                                                  |    |
+                                                  |    |     /-/friendrequests
+                                                  |     \/user
+                                                  |          \-/locations
+                                                  |
+                                                  |-/v2.0/user-/checkins
+                                                  |
+                                                  |-/v2.1/app-/app_insights
+                                                  |
+                                                  |-/v2.2-/link
+                                                  |
+                                                  |          /-/links
+                                                  |-/v2.3/page
+                                                  |          \-/statuses
+                                                  |
+                                                  |-/v2.4/user-/inbox
+                                                  |
+                                                  |-/v2.5-/thread
+                                                  |
+                                                  |     /-/insights_result
+                                                  |-/v2.8
+                                                  |     \-/instant-articles-insights-aggregated
+                                                  |
+                                                  |     /-/insights_result
+                                                  |    |
+                                                  |    |--/instant-articles-insights-aggregated
+                                                  |    |
+                                                  |    |--/thread
+                                                  |-/v2.9
+                                                  |    |     /-/links
+                                                  |    |-/page
+                                                  |    |     \-/statuses
+                                                  |    |
+                                                  |     \/user-/inbox
+                                                  |
+                                                  |      /-/auto_generated_captions
+                                                  |     |
+                                                  |     |--/captions
+                                                  |     |
+                                                  |     |--/comments
+                                                  |     |
+                                                  |     |--/crosspost_shared_pages
+                                                  |     |
+                                                  |     |--/likes
+                                                  |     |
+                                                  |-/video-/reactions
+                                                  |     |
+                                                  |     |--/sharedposts
+                                                  |     |
+                                                  |     |--/sponsor_tags
+                                                  |     |
+                                                  |     |--/tags
+                                                  |     |
+                                                  |     |--/thumbnails
+                                                  |     |
+                                                  |      \-/video_insights
+                                                  |
+                                                   \/video-list-/videos

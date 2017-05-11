@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/de.unihd.dbs.heideltime.standalone.jar"/>
+	<classpathentry kind="lib" path="lib/uima-core.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GATE"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

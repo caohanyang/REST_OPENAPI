@@ -1,0 +1,70 @@
+{
+  "basePath": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "paths": {
+    "https://api.twilio.com/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers": {
+      "POST": {}
+    },
+    "/Tokens": {
+      "POST": {}
+    },
+    "/Messages": {
+      "POST": {}
+    },
+    "/Recordings/RE557ce644e5ab8": {
+      "DELETE": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88d": {
+      "delete": {}
+    },
+    "HTTP": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "https://api.twilio.com/2010-04-01/Accounts": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN557ce644e5ab8": {
+      "delete": {}
+    },
+    "/IncomingPhoneNumbers/PN2a0": {
+      "POST": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21201\"": {
+      "put": {}
+    },
+    "/SIP/Domains/SD32a3c4970093": {
+      "POST": {}
+    },
+    "http://m.twil.io": {
+      "get": {}
+    },
+    "/Usage/Triggers/UT33c6aeeba": {
+      "POST": {}
+    },
+    "/Calls": {
+      "POST": {}
+    },
+    "https://api.twilio.com/2010-04-01/Accounts/AC22ef5e6f64bf40a6ac84123ae4fb9fa7/Calls": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders/AIc781610ec0b34": {
+      "delete": {}
+    },
+    "/SIP/CredentialLists": {
+      "POST": {}
+    },
+    "https://www.example.com'": {
+      "POST": {}
+    },
+    "/SIP/IpAccessControlLists/A": {
+      "POST": {}
+    }
+  },
+  "host": "api.twilio.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

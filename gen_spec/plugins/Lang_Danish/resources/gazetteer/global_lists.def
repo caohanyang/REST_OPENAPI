@@ -1,0 +1,13 @@
+person_male_ambig.lst:person_first:male
+person_ending.lst:person_ending
+person_female_cap.lst :person_first:female
+person_female.lst:person_first:female
+person_full.lst:person_full
+person_male_cap.lst:person_first:male
+person_male.lst:person_first:male
+person_sci.lst:person_full:sci
+person_female_ambig.lst:person_first:female
+global_politicians.lst:person_full:government
+global_organization.lst:organization:other
+global_company.lst:organization:company
+global_city.lst:location:city

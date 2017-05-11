@@ -1,0 +1,335 @@
+dim
+sero
+un
+dau
+dwy
+tri
+tair
+pedwar
+pedair
+pump
+chwech
+saith
+wyth
+naw
+deg
+deng
+un ar ddeg
+deuddeg
+tri ar ddeg
+pedwar ar ddeg
+pymtheg
+un ar bymtheg
+dau ar bymtheg
+deunaw
+pedwar am bymtheg
+un ar hugain
+dau ar hugain
+tri ar bymtheg
+pedwar ar bymtheg
+pump ar bymtheg
+chwech ar bymtheg
+saith ar bymtheg
+wyth ar bymtheg
+naw ar bymtheg
+ugain
+un ar ddeg ar hugain
+dau ar ddeg ar hugain
+tri ar ddeg ar hugain
+pedwar ar ddeg ar hugain
+pump ar ddeg ar hugain
+chwech ar ddeg ar hugain
+saith ar ddeg ar hugain
+wyth ar ddeg ar hugain
+naw ar ddeg ar hugain
+deg ar hugain
+un a deugain
+dau a deugain
+tri a deugain
+pedwar a deugain
+pump a deugain
+chwech a deugain
+saith a deugain
+wyth a deugain
+naw a deugain
+deugain
+un ar ddeg a deugain
+dau ar ddeg a deugain
+tri ar ddeg a deugain
+pedwar ar ddeg a deugain
+pump ar ddeg a deugain
+chwech ar ddeg a deugain
+saith ar ddeg a deugain
+wyth ar ddeg a deugain
+naw ar ddeg a deugain
+hanner cant
+un a thrigain
+dau a thrigain
+tri a thrigain
+pedwar a thrigain
+pump a thrigain
+chwech a thrigain
+saith a thrigain
+wyth a thrigain
+naw a thrigain
+trigain
+un ar ddeg a thrigain
+dau ar ddeg a thrigain
+tri ar ddeg a thrigain
+pedwar ar ddeg a thrigain
+pump ar ddeg a thrigain
+chwech ar ddeg a thrigain
+saith ar deg a thrigain
+wyth ar ddeg a thrigain
+naw ar ddeg a thrigain
+deg a thrigain
+un a phedwar ugain
+dau a phedwar ugain
+tri a phedwar ugain
+pedwar a phedwar ugain
+pump a phedwar ugain
+chwech a phedwar ugain
+saith a phedwar ugain
+wyth a phedwar ugain
+naw a phedwar ugain
+deg a phedwar ugain
+un ar ddeg a phedwar ugain
+dau ar ddeg a phedwar ugain
+tri ar ddeg a phedwar ugain
+pedwar ar ddeg a phedwar ugain
+pum ar ddeg a phedwar ugain
+chwech ar ddeg a phedwar ugain
+saith ar ddeg a phedwar ugain
+wyth ar ddeg a phedwar ugain
+naw ar ddeg a phedwar ugain
+pedwar ugain
+cant
+mil
+miliwn
+biliwn
+Dim
+Un
+Dau
+Tri
+Pedwar
+Pump
+Chwech
+Saith
+Wyth
+Naw
+Deg
+Un ar ddeg
+Deuddeg
+Tri ar ddeg
+Pedwar ar ddeg
+Pymtheg
+Un ar bymtheg
+Dau ar bymtheg
+Deunaw
+Pedwar am bymtheg
+Un ar hugain
+Dau ar hugain
+Tri ar bymtheg
+Pedwar ar bymtheg
+Pump ar bymtheg
+Chwech ar bymtheg
+Saith ar bymtheg
+Wyth ar bymtheg
+Naw ar bymtheg
+Ugain
+Un ar ddeg ar hugain
+Dau ar ddeg ar hugain
+Tri ar ddeg ar hugain
+Pedwar ar ddeg ar hugain
+Pump ar ddeg ar hugain
+Chwech ar ddeg ar hugain
+Saith ar ddeg ar hugain
+Wyth ar ddeg ar hugain
+Naw ar ddeg ar hugain
+Deg ar hugain
+Un a deugain
+Dau a deugain
+Tri a deugain
+Pedwar a deugain
+Pump a deugain
+Chwech a deugain
+Saith a deugain
+Wyth a deugain
+Naw a deugain
+Deugain
+Un ar ddeg a deugain
+Dau ar ddeg a deugain
+Tri ar ddeg a deugain
+Pedwar ar ddeg a deugain
+Pump ar ddeg a deugain
+Chwech ar ddeg a deugain
+Saith ar ddeg a deugain
+Wyth ar ddeg a deugain
+Naw ar ddeg a deugain
+Hanner cant
+Un a thrigain
+Dau a thrigain
+Tri a thrigain
+Pedwar a thrigain
+Pump a thrigain
+Chwech a thrigain
+Saith a thrigain
+Wyth a thrigain
+Naw a thrigain
+Trigain
+Un ar ddeg a thrigain
+Dau ar ddeg a thrigain
+Tri ar ddeg a thrigain
+Pedwar ar ddeg a thrigain
+Pump ar ddeg a thrigain
+Chwech ar ddeg a thrigain
+Saith ar deg a thrigain
+Wyth ar ddeg a thrigain
+Naw ar ddeg a thrigain
+Deg a thrigain
+Un a phedwar ugain
+Dau a phedwar ugain
+Tri a phedwar ugain
+Pedwar a phedwar ugain
+Pump a phedwar ugain
+Chwech a phedwar ugain
+Saith a phedwar ugain
+Wyth a phedwar ugain
+Naw a phedwar ugain
+Deg a phedwar ugain
+Un ar ddeg a phedwar ugain
+Dau ar ddeg a phedwar ugain
+Tri ar ddeg a phedwar ugain
+Pedwar ar ddeg a phedwar ugain
+Pum ar ddeg a phedwar ugain
+Chwech ar ddeg a phedwar ugain
+Saith ar ddeg a phedwar ugain
+Wyth ar ddeg a phedwar ugain
+Naw ar ddeg a phedwar ugain
+Pedwar ugain
+Cant
+Mil
+Miliwn
+Biliwn
+un deg un
+un deg dau
+un deg dwy
+un deg tri
+un deg tair
+un deg pedair
+un deg pedwar
+un deg pum
+un deg chwe
+un deg saith
+un deg wyth
+un deg naw
+dau ddeg 
+dau ddeg un
+dau ddeg dau
+dau ddeg dwy
+dau ddeg tri
+dau ddeg tair
+dau ddeg pedair
+dau ddeg pedwar
+dau ddeg pum
+dau ddeg chwe
+dau ddeg saith
+dau ddeg wyth
+dau ddeg naw
+tri deg 
+tri deg un
+tri deg dau
+tri deg dwy
+tri deg tri
+tri deg tair
+tri deg pedair
+tri deg pedwar
+tri deg pum
+tri deg chwe
+tri deg saith
+tri deg wyth
+tri deg naw
+pedwar deg 
+pedwar deg un
+pedwar deg dau
+pedwar deg dwy
+pedwar deg tri
+pedwar deg tair
+pedwar deg pedair
+pedwar deg pedwar
+pedwar deg pum
+pedwar deg chwe
+pedwar deg saith
+pedwar deg wyth
+pedwar deg naw
+pump deg 
+pump deg un
+pump deg dau
+pump deg dwy
+pump deg tri
+pump deg tair
+pump deg pedair
+pump deg pedwar
+pump deg pum
+pump deg chwe
+pump deg saith
+pump deg wyth
+pump deg naw
+chwe deg 
+chwe deg un
+chwe deg dau
+chwe deg dwy
+chwe deg tri
+chwe deg tair
+chwe deg pedair
+chwe deg pedwar
+chwe deg pum
+chwe deg chwe
+chwe deg saith
+chwe deg wyth
+chwe deg naw
+saith deg 
+saith deg un
+saith deg dau
+saith deg dwy
+saith deg tri
+saith deg tair
+saith deg pedair
+saith deg pedwar
+saith deg pum
+saith deg chwe
+saith deg saith
+saith deg wyth
+saith deg naw
+wyth deg 
+wyth deg un
+wyth deg dau
+wyth deg dwy
+wyth deg tri
+wyth deg tair
+wyth deg pedair
+wyth deg pedwar
+wyth deg pum
+wyth deg chwe
+wyth deg saith
+wyth deg wyth
+wyth deg naw
+naw deg 
+naw deg un
+naw deg dau
+naw deg dwy
+naw deg tri
+naw deg tair
+naw deg pedair
+naw deg pedwar
+naw deg pum
+naw deg chwe
+naw deg saith
+naw deg wyth
+naw deg naw
+dau gant 
+tri chant 
+pedwar cant 
+pum cant 
+chwe chant  
+dwy fil 

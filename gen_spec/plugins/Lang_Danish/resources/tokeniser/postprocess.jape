@@ -1,0 +1,41 @@
+// Leon Derczynski
+// $id$
+
+
+Phase: postprocess
+Input: Token SpaceToken
+Options: control = appelt
+
+
+
+
+// CR+LF | CR |LF+CR -> One single SpaceToken
+Rule: NewLine
+ (
+  ({SpaceToken.string=="\n"}) |
+  ({SpaceToken.string=="\r"}) |
+  ({SpaceToken.string=="\n"}{SpaceToken.string=="\r"}) |
+  ({SpaceToken.string=="\r"}{SpaceToken.string=="\n"})
+  ):left
+-->
+{
+  gate.AnnotationSet toRemove = (gate.AnnotationSet)bindings.get("left");
+  outputAS.removeAll(toRemove);
+  
+  // get the tokens
+  java.util.ArrayList tokens = new java.util.ArrayList(toRemove);
+  
+  // define a comparator for annotations by start offset
+  Collections.sort(tokens, new gate.util.OffsetComparator());
+  String text = "";
+  Iterator tokIter = tokens.iterator();
+  while(tokIter.hasNext())
+    text += (String)((Annotation)tokIter.next()).getFeatures().get("string");
+
+
+  gate.FeatureMap features = Factory.newFeatureMap();
+  features.put("kind", "control");
+  features.put("string", text);
+  features.put("length", Integer.toString(text.length()));
+  outputAS.add(toRemove.firstNode(), toRemove.lastNode(), "SpaceToken", features);
+}

@@ -1,0 +1,40 @@
+{
+  "basePath": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "paths": {
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21201\"": {
+      "POST": {}
+    },
+    "https://api.twilio.com/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers": {
+      "POST": {}
+    },
+    "/SIP/Domains/SD32a3c4970093": {
+      "POST": {}
+    },
+    "/Messages": {
+      "POST": {}
+    },
+    "/Usage/Triggers/UT33c6aeeba": {
+      "POST": {}
+    },
+    "/Calls": {
+      "POST": {}
+    },
+    "http:\\/\\/www.google.com\"": {
+      "POST": {}
+    },
+    "HTTP": {
+      "POST": {},
+      "GET": {},
+      "DEL": {}
+    },
+    "https://api.twilio.com/2010-04-01/Accounts": {
+      "POST": {}
+    }
+  },
+  "host": "api.twilio.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

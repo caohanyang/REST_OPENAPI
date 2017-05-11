@@ -1,0 +1,54 @@
+{
+  "basePath": "/photos",
+  "paths": {
+    "http://farm4.static.flickr.com/3228/shapefiles/3534_20081111_0a8afe03c5.tar.gz": {
+      "Get": {}
+    },
+    "/bees": {
+      "Get": {}
+    },
+    "/upload/edit": {
+      "POST": {}
+    },
+    "/kellan/galleries/72157623680420409": {
+      "get": {}
+    },
+    "https://www.flickr.com/services/oauth/request_token": {
+      "get": {}
+    },
+    "http://farm5.staticflickr.com/4035/5080874079_684cf874e0_m.jpg&quot;": {
+      "post": {}
+    },
+    "HTTP": {
+      "POST": {}
+    },
+    "/bees/sets/1234": {
+      "put": {}
+    },
+    "/bees/2733": {
+      "post": {}
+    },
+    "http://remote.bloxus.com": {
+      "get": {}
+    },
+    "/george/galleries/72157622637971865": {
+      "del": {}
+    },
+    "http://www.flickr.com/account/geo/privacy": {
+      "POST": {}
+    },
+    "http://flickr.com": {
+      "get": {},
+      "Get": {}
+    },
+    "/nokinrocks/7120495637/&quot;&gt;&lt;img": {
+      "post": {}
+    }
+  },
+  "host": "www.flickr.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

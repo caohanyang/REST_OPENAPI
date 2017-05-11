@@ -1,0 +1,688 @@
+// Andreas Vlachidis 15/01/2016
+// 
+//Soft Mutation rules
+
+
+Phase:postprocess
+Input: Token 
+Options: control = appelt
+
+//MACROS//
+
+//Words causing contact mutation
+Macro: SOFTCONTACTMUTATION
+(
+	{Token.string ==~ "[Aa]m"}|
+	{Token.string ==~ "[Aa]r"}|
+	{Token.string ==~ "[Aa]t"}|
+	{Token.string ==~ "[Dd]an"}|
+	{Token.string ==~ "[Dd]ros"}|
+	{Token.string ==~ "[Gg]an"}|
+	{Token.string ==~ "[Hh]eb"}|
+	{Token.string ==~ "[Hh]yd"}|
+	{Token.string ==~ "[Ii]"}|
+	{Token.string ==~ "[Oo]"}|
+	{Token.string ==~ "[Tt]an"}|
+	{Token.string ==~ "[Tt]rwy"}|
+	{Token.string ==~ "[Ww]rth"}|
+	{Token.string ==~ "[Pp]an"}|
+	{Token.string ==~ "[Rr]hy"}|
+	{Token.string ==~ "[Pp]a"}|
+	{Token.string ==~ "[Dd]yma"}|
+	{Token.string ==~ "[Dd]yna"}|
+	{Token.string ==~ "[Dd]acw"}|
+	{Token.string ==~ "[Yy]ma"}|
+	{Token.string ==~ "[Yy]na"}|
+	{Token.string ==~ "[Mm]a"}|
+	{Token.string ==~ "[Nn]a"}|
+	{Token.string ==~ "[Pp]ur"}|
+	{Token.string ==~ "[Nn]eu"}|
+	{Token.string ==~ "[Mm]or"}|
+	{Token.string ==~ "[Gg]o"}|
+	{Token.string ==~ "[Ff]e"}|
+	{Token.string ==~ "[Mm]i"}|
+	{Token.string ==~ "[Ee]i"}|
+	{Token.string ==~ "[Dd]y"}
+	
+)
+
+Macro: ASPIRATECONTACTMUTATION
+(
+	{Token.string ==~ "[Aa]"}|
+	{Token.string == "â"}|
+	{Token.string ==~ "[Cc]hwe"}|
+	{Token.string ==~ "[Ee]i"}|
+	{Token.string ==~ "[Gg]yda"}|
+	{Token.string ==~ "[Tt]ri"}|
+	{Token.string ==~ "[Tt]ua"}
+	
+)
+
+Rule: 	SoftMutation
+( 
+	(SOFTCONTACTMUTATION)({Token}):match
+)
+-->
+{
+
+try {
+	
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {
+		if (tokenString.startsWith("g")) {
+			String sub = tokenString.substring(1);
+			newLemma = "c"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape
+		}
+		if (tokenString.startsWith("b")) {
+			String sub = tokenString.substring(1);
+			newLemma = "p"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("d")) {
+			String sub = tokenString.substring(1);
+			newLemma = "t"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("f")) {
+			String sub = tokenString.substring(1);
+			newLemma = "b"+sub;
+			String altLemma = "m"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+			// altLemma is used to accomodate the additional case of mutation for (f) which can be the result of (b) or (m)
+			features.put("altLemma", altLemma);
+			features.put("alt", "true"); // flag for validating the alternative mutation cases.
+	 
+		}
+		if (tokenString.startsWith("dd")) {
+			String sub = tokenString.substring(2);
+			newLemma = "d"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("l")) {
+			String sub = tokenString.substring(1);
+			newLemma = "ll"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("r")) {
+			String sub = tokenString.substring(1);
+			newLemma = "rh"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		features.remove("lemma");
+		features.put("lemma", newLemma);
+		
+		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n SoftMutation");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	SoftMutationDau
+( 
+	{Token.string ==~ "[Dd]au"}({Token.category=="NNM"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {
+		if (tokenString.startsWith("g")) {
+			String sub = tokenString.substring(1);
+			newLemma = "c"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape
+		}
+		if (tokenString.startsWith("b")) {
+			String sub = tokenString.substring(1);
+			newLemma = "p"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("d")) {
+			String sub = tokenString.substring(1);
+			newLemma = "t"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("f")) {
+			String sub = tokenString.substring(1);
+			newLemma = "b"+sub;
+			String altLemma = "m"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+			// altLemma is used to accomodate the additional case of mutation for (f) which can be the result of (b) or (m)
+			features.put("altLemma", altLemma);
+			features.put("alt", "true"); // flag for validating the alternative mutation cases.
+	 
+		}
+		if (tokenString.startsWith("dd")) {
+			String sub = tokenString.substring(2);
+			newLemma = "d"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("l")) {
+			String sub = tokenString.substring(1);
+			newLemma = "ll"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("r")) {
+			String sub = tokenString.substring(1);
+			newLemma = "rh"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		features.remove("lemma");
+		features.put("lemma", newLemma);
+		
+		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n SoftMutationDau");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+
+Rule: 	SoftMutationDwy
+( 
+	{Token.string ==~ "[Dd]wy"}({Token.category=="NNF"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {
+		if (tokenString.startsWith("g")) {
+			String sub = tokenString.substring(1);
+			newLemma = "c"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape
+		}
+		if (tokenString.startsWith("b")) {
+			String sub = tokenString.substring(1);
+			newLemma = "p"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("d")) {
+			String sub = tokenString.substring(1);
+			newLemma = "t"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("f")) {
+			String sub = tokenString.substring(1);
+			newLemma = "b"+sub;
+			String altLemma = "m"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+			// altLemma is used to accomodate the additional case of mutation for (f) which can be the result of (b) or (m)
+			features.put("altLemma", altLemma);
+			features.put("alt", "true"); // flag for validating the alternative mutation cases.
+	 
+		}
+		if (tokenString.startsWith("dd")) {
+			String sub = tokenString.substring(2);
+			newLemma = "d"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("l")) {
+			String sub = tokenString.substring(1);
+			newLemma = "ll"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("r")) {
+			String sub = tokenString.substring(1);
+			newLemma = "rh"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		features.remove("lemma");
+		features.put("lemma", newLemma);
+		
+		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n SoftMutationDwy");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+// Definite article (y, yr, 'r) and 1 (un)
+Rule: 	SoftMutationDA
+( 
+	({Token.string ==~ "[Yy]"}|{Token.string ==~ "[Yy]r"}|{Token.string == "'r"}|{Token.string ==~ "[Un]n"})
+	({Token.category=="NNF"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {
+		if (tokenString.startsWith("g")) {
+			String sub = tokenString.substring(1);
+			newLemma = "c"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape
+		}
+		if (tokenString.startsWith("b")) {
+			String sub = tokenString.substring(1);
+			newLemma = "p"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("d")) {
+			String sub = tokenString.substring(1);
+			newLemma = "t"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("f")) {
+			String sub = tokenString.substring(1);
+			newLemma = "b"+sub;
+			String altLemma = "m"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+			// altLemma is used to accomodate the additional case of mutation for (f) which can be the result of (b) or (m)
+			features.put("altLemma", altLemma);
+			features.put("alt", "true"); // flag for validating the alternative mutation cases.
+	 
+		}
+		if (tokenString.startsWith("dd")) {
+			String sub = tokenString.substring(2);
+			newLemma = "d"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}		
+		features.remove("lemma");
+		features.put("lemma", newLemma);
+		
+		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n SoftMutationDA");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+
+// Complement Marker Yn
+Rule: 	SoftMutationYn
+( 
+	({Token.string ==~ "[Yy]n"}|{Token.string == "'n"})
+	({Token.category=~"NN"}|{Token.category=~"JJ"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {
+		if (tokenString.startsWith("g")) {
+			String sub = tokenString.substring(1);
+			newLemma = "c"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape
+		}
+		if (tokenString.startsWith("b")) {
+			String sub = tokenString.substring(1);
+			newLemma = "p"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("d")) {
+			String sub = tokenString.substring(1);
+			newLemma = "t"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("f")) {
+			String sub = tokenString.substring(1);
+			newLemma = "b"+sub;
+			String altLemma = "m"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+			// altLemma is used to accomodate the additional case of mutation for (f) which can be the result of (b) or (m)
+			features.put("altLemma", altLemma);
+			features.put("alt", "true"); // flag for validating the alternative mutation cases.
+	 
+		}
+		if (tokenString.startsWith("dd")) {
+			String sub = tokenString.substring(2);
+			newLemma = "d"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}		
+		features.remove("lemma");
+		features.put("lemma", newLemma);
+		
+		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n SoftMutationDA");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+
+Rule: 	NasalMutationNGH
+
+( 
+	{Token.string =="yng"}({Token.string ==~ "(Ngh)(\\w)*"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {	
+		String sub = tokenString.substring(3);
+		newLemma = "c"+sub;
+		features.put("Mutation", "TT");
+		features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape 
+		features.remove("lemma");
+		features.put("lemma", newLemma);		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n NasalMutationNGH");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	NasalMutationMH
+
+( 
+	{Token.string =="ym"}({Token.string ==~ "(Mh)(\\w)*"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {	
+		String sub = tokenString.substring(2);
+		newLemma = "p"+sub;
+		features.put("Mutation", "TT");
+		features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape 
+		features.remove("lemma");
+		features.put("lemma", newLemma);		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n NasalMutationMH");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	NasalMutationNH
+
+( 
+	{Token.string =="yn"}({Token.string ==~ "(Nh)(\\w)*"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {	
+		String sub = tokenString.substring(2);
+		newLemma = "t"+sub;
+		features.put("Mutation", "TT");
+		features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape 
+		features.remove("lemma");
+		features.put("lemma", newLemma);		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n NasalMutationNH");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	NasalMutationNG
+
+( 
+	{Token.string =="yng"}({Token.string ==~ "(Ng)(\\w)*"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {	
+		String sub = tokenString.substring(2);
+		newLemma = "g"+sub;
+		features.put("Mutation", "TT");
+		features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape 
+		features.remove("lemma");
+		features.put("lemma", newLemma);		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n NasalMutationNG");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	NasalMutationM
+
+( 
+	{Token.string =="ym"}({Token.string ==~ "(M)(\\w)*"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {	
+		String sub = tokenString.substring(1);
+		newLemma = "b"+sub;
+		features.put("Mutation", "TT");
+		features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape 
+		features.remove("lemma");
+		features.put("lemma", newLemma);		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n NasalMutationM");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	NasalMutationN
+
+( 
+	{Token.string =="yn"}({Token.string ==~ "(N)(\\w)*"}):match
+)
+-->
+{
+
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {	
+		String sub = tokenString.substring(1);
+		newLemma = "d"+sub;
+		features.put("Mutation", "TT");
+		features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape 
+		features.remove("lemma");
+		features.put("lemma", newLemma);		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n NasalMutationN");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	AspirateMutation
+( 
+	(ASPIRATECONTACTMUTATION)({Token}):match
+)
+-->
+{
+
+try {
+	
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString().toLowerCase();
+	String tokenString = features.get("string").toString().toLowerCase();	
+	String newLemma = tokenLemma;
+	//Resolve common soft mutation cases if they have not been resolved so far from glossary input (hence having equal token.string and token.lemma)  
+	if (tokenLemma.equals(tokenString)) {
+		if (tokenString.startsWith("ch")) {
+			String sub = tokenString.substring(2);
+			newLemma = "c"+sub;
+			features.put("Mutation", "TLI");
+			features.put("ValidMutation", "false"); //initially all mutation suggestions are false until validated in the next step at validatemutation.jape
+		}
+		if (tokenString.startsWith("ph")) {
+			String sub = tokenString.substring(2);
+			newLemma = "p"+sub;
+			features.put("Mutation", "TLI");
+			features.put("ValidMutation", "false");
+		}
+		if (tokenString.startsWith("th")) {
+			String sub = tokenString.substring(2);
+			newLemma = "t"+sub;
+			features.put("Mutation", "TM");
+			features.put("ValidMutation", "false");
+		}
+		features.remove("lemma");
+		features.put("lemma", newLemma);
+		
+		
+	}
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n AspirateMutation");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}

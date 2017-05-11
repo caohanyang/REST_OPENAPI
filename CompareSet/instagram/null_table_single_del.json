@@ -1,0 +1,10 @@
+{
+  "basePath": "/v1/tags/puppy/media/recent",
+  "paths": {},
+  "host": "api.instagram.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

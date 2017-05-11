@@ -1,0 +1,24 @@
+/*
+Andreas Vlachidis 2016
+*/
+Phase: Validate
+Input: Person
+Options: control = all
+
+Rule: validate
+(
+	{Person contains {Token.category !~"NN"}}
+):match 
+--> 
+{
+try {
+
+    AnnotationSet matchedAS = bindings.get("match");
+    inputAS.removeAll(matchedAS);
+ }
+catch (Exception ex) {
+		Out.println("Exception in RHS \n validate entities via pos tags");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+

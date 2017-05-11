@@ -1,0 +1,108 @@
+// Andreas Vlachidis 15/01/2016
+// 
+// Mutation rules
+
+
+Phase: Mutation
+Input: Token Lookup
+Options: control = appelt
+
+Rule: 	RemoveInvalidFeatureAlt
+Priority: 100
+( 
+	{Token.ValidMutation == "false", Token.alt == "true"}
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	features.remove("lemma"); //remove invalid mutation 
+	features.put("lemma", features.get("string").toString()); // The new lemma is reverted back to the string feature
+	features.remove("ValidMutation");
+	features.remove("Mutation");
+	features.remove("altLemma"); //remove lemmaAlt 
+	features.remove("alt"); //remove alt flag 
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n RemoveValidationFeatureAlt");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	RemoveInvalidMutation
+Priority: 50
+( 
+	{Token.ValidMutation == "false"}
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	features.remove("lemma"); //remove invalid mutation 
+	features.put("lemma", features.get("string").toString()); // The new lemma is reverted back to the string feature
+	features.remove("ValidMutation");
+	features.remove("Mutation");
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n RemoveInvalidMutation");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+
+Rule: 	RemoveValidationFeature
+( 
+	{Token.ValidMutation == "true"}
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	features.remove("ValidMutation");
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n RemoveValidationFeature");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	RemoveValidationFeatureAlt
+( 
+	{Token.ValidMutation == "trueAlt"}
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	features.remove("lemma"); //remove invalid mutation 
+	features.put("lemma", features.get("altLemma").toString()); // The new lemma is the Alternative lemma (cases where the mutated form can be originate from 2 letters eg f -> from m or b) 
+	features.remove("altLemma"); //remove lemmaAlt 
+	features.remove("alt"); //remove alt flag 
+	features.remove("ValidMutation");
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n RemoveValidationFeatureAlt");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}

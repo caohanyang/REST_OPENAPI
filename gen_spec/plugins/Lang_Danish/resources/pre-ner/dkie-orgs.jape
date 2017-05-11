@@ -1,0 +1,42 @@
+Phase: orgs
+Input: Token SpaceToken
+Options: control = appelt
+
+Rule: clubsAndUnions
+(
+  {Token.string ==~ "[A-Z].*"} {SpaceToken} 
+  (
+    {Token.string == "Boldklub"} |
+    {Token.string == "Landsklub"} |
+    {Token.string == "Bekaempelse"} |
+    {Token.string == "Fagforening"} |
+    {Token.string == "Forbund"}
+  )
+):klub
+-->
+:klub.Lookup = {majorType = "organization", rule = "clubsAndUnions"}
+
+Rule: institutes
+(
+  {Token.string == "Institut"}
+  {SpaceToken}
+  {Token.string ==~ "[Ff]or"}
+  {SpaceToken}
+  {Token}
+  ({SpaceToken} {Token.string ==~ "[A-Z].*"})*
+):institut
+-->
+:institut.Lookup = {majorType = "organization", rule = "institutes"}
+
+Rule: edu
+(
+    ({Token.category == "NP"} {SpaceToken})+
+    ({Token.string == "Universitet"}|
+     {Token.string == "Statsskole"}|
+     {Token.string == "Gymnasium"}
+    )
+
+
+):eduOrg
+-->
+:eduOrg.Lookup = {majorType = "organization", minorType = "academic", rule = "eduOrg"}

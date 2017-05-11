@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- $Id: creole.xml 30100 2016-03-19 10:00:45Z andreasvlachidis $ -->
+<!-- creole.xml for Welsh Natural Language Toolkit PR-->
+<CREOLE-DIRECTORY>
+
+    <JAR SCAN="true">wnlt.jar</JAR>
+    <REQUIRES>../ANNIE</REQUIRES>
+    <REQUIRES>../Tools</REQUIRES>
+
+</CREOLE-DIRECTORY>

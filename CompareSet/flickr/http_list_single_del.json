@@ -1,0 +1,615 @@
+{
+  "basePath": "/photos",
+  "paths": {
+    "http://farm4.static.flickr.com/3228/shapefiles/3534_20081111_0a8afe03c5.tar.gz": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "place_id (Optional)",
+            "description": "A Flickr Places ID. (While optional, you must pass either a valid Places ID or a WOE ID.)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "woe_id (Optional)",
+            "description": "A Where On Earth (WOE) ID. (While optional, you must pass either a valid Places ID or a WOE ID.)",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/bees": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "user_id (Required)",
+            "description": "The NSID of the user to fetch information about.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/upload/edit": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "2: No photo specified",
+            "description": "The photo required argument was missing.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "3: General upload failure",
+            "description": "The file was not correctly uploaded.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "4: Filesize was zero",
+            "description": "The file was zero bytes in length.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "5: Filetype was not recognised",
+            "description": "The file was not of a recognised image format.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "6: User exceeded upload limit",
+            "description": "The calling user has reached their monthly bandwidth limit.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "95: SSL is required",
+            "description": "SSL is required to access the Flickr API.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "96: Invalid signature",
+            "description": "The passed signature was invalid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "97: Missing signature",
+            "description": "The call required signing but no signature was sent.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "98: Login failed / Invalid auth token",
+            "description": "The login details or auth token passed were invalid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "99: User not logged in / Insufficient permissions",
+            "description": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100: Invalid API Key",
+            "description": "The API key passed was not valid or has expired.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "105: Service currently unavailable",
+            "description": "The requested service is temporarily unavailable.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "106: Write operation failed",
+            "description": "The requested operation failed due to a temporary issue.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "116: Bad URL found",
+            "description": "One or more arguments contained a URL that has been used for abuse on Flickr.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/kellan/galleries/72157623680420409": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title (Required)",
+            "description": "The name of the gallery",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description (Required)",
+            "description": "A short description for the gallery",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "primary_photo_id (Optional)",
+            "description": "The first photo to add to your gallery",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "full_result (Optional)",
+            "description": "Get the result in the same format as galleries.getList",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://www.flickr.com/services/oauth/request_token": {
+      "get": {}
+    },
+    "http://farm5.staticflickr.com/4035/5080874079_684cf874e0_m.jpg&quot;": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "group_id (Required)",
+            "description": "The NSID or path alias of the group to fetch information for.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "per_page (Optional)",
+            "description": "Number of photos to return per page. If this argument is omitted, it defaults to 100. The maximum allowed value is 500.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page (Optional)",
+            "description": "The page of results to return. If this argument is omitted, it defaults to 1.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "HTTP": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "group_id (Required)",
+            "description": "The NSID or path alias of the group to add a topic to.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "subject (Required)",
+            "description": "The topic subject.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message (Required)",
+            "description": "The topic message.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/bees/sets/1234": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "1: No title specified",
+            "description": "No title parameter was passed in the request.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2: Photo not found",
+            "description": "The primary photo id passed was not a valid photo id or does not belong to the calling user.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "3: Can't create any more sets",
+            "description": "The user has reached their maximum number of photosets limit.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "95: SSL is required",
+            "description": "SSL is required to access the Flickr API.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "96: Invalid signature",
+            "description": "The passed signature was invalid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "97: Missing signature",
+            "description": "The call required signing but no signature was sent.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "98: Login failed / Invalid auth token",
+            "description": "The login details or auth token passed were invalid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "99: User not logged in / Insufficient permissions",
+            "description": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100: Invalid API Key",
+            "description": "The API key passed was not valid or has expired.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "105: Service currently unavailable",
+            "description": "The requested service is temporarily unavailable.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "106: Write operation failed",
+            "description": "The requested operation failed due to a temporary issue.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "111: Format \"xxx\" not found",
+            "description": "The requested response format was not found.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "112: Method \"xxx\" not found",
+            "description": "The requested method was not found.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "114: Invalid SOAP envelope",
+            "description": "The SOAP envelope send in the request could not be parsed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "115: Invalid XML-RPC Method Call",
+            "description": "The XML-RPC request document could not be parsed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "116: Bad URL found",
+            "description": "One or more arguments contained a URL that has been used for abuse on Flickr.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/bees/2733": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "photo_id (Required)",
+            "description": "The id of the photo to get information for.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "secret (Optional)",
+            "description": "The secret for the photo. If the correct secret is passed then permissions checking is skipped. This enables the 'sharing' of individual photos by passing around the id and secret.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://remote.bloxus.com": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "service (Optional)",
+            "description": "Optionally only return blogs for a given service id. You can get a list of from flickr.blogs.getServices() .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/george/galleries/72157622637971865": {
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "user_id (Required)",
+            "description": "The NSID of the user to get a galleries list for. If none is specified, the calling user is assumed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "per_page (Optional)",
+            "description": "Number of galleries to return per page. If this argument is omitted, it defaults to 100. The maximum allowed value is 500.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page (Optional)",
+            "description": "The page of results to return. If this argument is omitted, it defaults to 1.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "primary_photo_extras (Optional)",
+            "description": "A comma-delimited list of extra information to fetch for the primary photo. Currently supported fields are: license, date_upload, date_taken, owner_name, icon_server, original_format, last_update, geo, tags, machine_tags, o_dims, views, media, path_alias, url_sq, url_t, url_s, url_m, url_o",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://www.flickr.com/account/geo/privacy": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "photo_id (Required)",
+            "description": "The id of the photo to set location data for.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "lat (Required)",
+            "description": "The latitude whose valid range is -90 to 90. Anything more than 6 decimal places will be truncated.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "lon (Required)",
+            "description": "The longitude whose valid range is -180 to 180. Anything more than 6 decimal places will be truncated.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "accuracy (Optional)",
+            "description": "Recorded accuracy level of the location information. World level is 1, Country is ~3, Region ~6, City ~11, Street ~16. Current range is 1-16. Defaults to 16 if not specified.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "context (Optional)",
+            "description": "Context is a numeric value representing the photo's geotagginess beyond latitude and longitude. For example, you may wish to indicate that a photo was taken \"indoors\" or \"outdoors\".\n\nThe current list of context IDs is :\n\n0 , not defined.\n1 , indoors.\n2 , outdoors.\n\nThe default context for geotagged photos is 0, or \"not defined\"",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://flickr.com": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "date (Required)",
+            "description": "Stats will be returned for this date. This should be in either be in YYYY-MM-DD or unix timestamp format. A day according to Flickr Stats starts at midnight GMT for all users, and timestamps will automatically be rounded down to the start of the day.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "domain (Required)",
+            "description": "The domain to return referrers for. This should be a hostname (eg: \"flickr.com\") with no protocol or pathname.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "photoset_id (Optional)",
+            "description": "The id of the photoset to get stats for. If not provided, stats for all sets will be returned.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "per_page (Optional)",
+            "description": "Number of referrers to return per page. If this argument is omitted, it defaults to 25. The maximum allowed value is 100.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page (Optional)",
+            "description": "The page of results to return. If this argument is omitted, it defaults to 1.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_key (Required)",
+            "description": "Your API application key. See here for more details.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "date (Required)",
+            "description": "Stats will be returned for this date. This should be in either be in YYYY-MM-DD or unix timestamp format. A day according to Flickr Stats starts at midnight GMT for all users, and timestamps will automatically be rounded down to the start of the day.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "domain (Required)",
+            "description": "The domain to return referrers for. This should be a hostname (eg: \"flickr.com\") with no protocol or pathname.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "per_page (Optional)",
+            "description": "Number of referrers to return per page. If this argument is omitted, it defaults to 25. The maximum allowed value is 100.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page (Optional)",
+            "description": "The page of results to return. If this argument is omitted, it defaults to 1.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "host": "www.flickr.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

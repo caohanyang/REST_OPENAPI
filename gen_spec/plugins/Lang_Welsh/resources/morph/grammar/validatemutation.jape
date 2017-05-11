@@ -1,0 +1,56 @@
+// Andreas Vlachidis 15/01/2016
+// 
+//Mutation rules
+
+
+Phase: Mutation
+Input: Token Lookup
+Options: control = appelt
+
+Rule: 	ValidateviaLookup
+( 
+	{Token.alt !="true", Lookup} //case of not alternative mutation option , frequent case
+
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	features.remove("ValidMutation");
+	features.put("ValidMutation", "true");
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n ValidateviaLookup");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+
+Rule: 	ValidateviaLookupAlt
+( 
+	{Token.alt =="true", Lookup} // case where alternative mutation is true for the case of eg (f) from (m) or (b)
+
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	features.remove("ValidMutation");
+	features.put("ValidMutation", "trueAlt");
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n ValidateviaLookupAlt");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}

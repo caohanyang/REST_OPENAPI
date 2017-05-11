@@ -1,0 +1,396 @@
+{
+  "basePath": "/",
+  "paths": {
+    "http://www.example.com/feedback\"": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "StartDate",
+            "description": "The first date for which feedback entries are included in this Feedback Summary, formatted as YYYY-MM-DD. All dates are in UTC.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "EndDate",
+            "description": "The last date for which feedback entries are included in this Feedback Summary, formatted as YYYY-MM-DD. All dates are in UTC.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AccountSid",
+            "description": "The Account that reported the feedback entry.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "IncludeSubaccounts",
+            "description": "true if the feedback summary includes subaccounts, false otherwise.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Status",
+            "description": "The status of the feedback summary can be queued, in-progress, completed, or failed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallCount",
+            "description": "The total number of calls.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallFeedbackCount",
+            "description": "The total number of calls with a feedback entry.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreAverage",
+            "description": "The average QualityScore of the feedback entries.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreMedian",
+            "description": "The median QualityScore of the feedback entries.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreStandardDeviation",
+            "description": "The standard deviation of the quality scores.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Issues",
+            "description": "A list of all the issues experienced. The list includes the issue name, the number of occurrences and percentage of calls that experienced this issue.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/preview.twilio.com/porting/PortOrders": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "number",
+            "description": "Porting phone number in E.164 format, e.g., +16175551212.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "iso_country",
+            "description": "The ISO 3166-1 alpha-2 country code in the service address associated with the porting phone number, e.g., US.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "region",
+            "description": "Name of the region in the service address associated with the porting phone number. This can be a 2 letter state code in US, e.g., CA.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "city",
+            "description": "Name of the city in the service address associated with the porting phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "postal_code",
+            "description": "Zip code or postal code in the service address associated with the porting phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "street",
+            "description": "Name of the street in the service address associated with the porting phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "first_name",
+            "description": "First name of the person that owns the porting phone number. Please note that this is the name we will use to populate the “First Name” field in the LOA associated with this port request, and that this person must be the one who is authorized to and will sign the LOA.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "last_name",
+            "description": "Last name of the person that owns the porting phone number. Please note that this is the name we will use to populate the “Last Name” field in the LOA associated with this port request, and that this person must be the one who is authorized to and will sign the LOA.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "email",
+            "description": "Email address of the person that owns the porting phone number. Please note that this person must be the one who is authorized to and will sign the LOA.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "HTTP": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Ttl",
+            "description": "The duration in seconds for which the generated credentials are valid, the default value is 86400 (24 hours).",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AccountSid",
+            "description": "The unique identifier of the Account responsible for this recording.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallSid",
+            "description": "A unique identifier for the call associated with the recording. This will always refer to the parent leg of a two leg call.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingSid",
+            "description": "The unique identifier for the recording.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingUrl",
+            "description": "The URL of the recorded audio.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingStatus",
+            "description": "The status of the recording. Possible values are: completed .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingDuration",
+            "description": "The length of the recording, in seconds.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingChannels",
+            "description": "The number of channels in the final recording file as an integer. Possible values are 1 , 2 .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RecordingSource",
+            "description": "The type of call that created this recording. For recordings initiated when Record=true is set on the REST API, OutboundAPI will be returned..",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "geT": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Twilio will make a request to this url when the trigger fires.",
+            "description": "Twilio will make a request to this url when the trigger fires.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "The HTTP method Twilio will use when making a request to the CallbackUrl. GET or POST .",
+            "description": "The HTTP method Twilio will use when making a request to the CallbackUrl. GET or POST .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "To",
+            "description": "Only show messages to this phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "From",
+            "description": "Only show messages from this phone number or alphanumeric sender ID.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "DateSent",
+            "description": "Only show messages sent on this date (in GMT format), given as YYYY-MM-DD . Example: DateSent=2009-07-06 . You can also specify inequality, such as DateSent<=YYYY-MM-DD for messages that were sent on or before midnight on a date, and DateSent>=YYYY-MM-DD for messages sent on or after midnight on a date.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "Del": {
+        "parameters": []
+      },
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "To",
+            "description": "Only show SMS messages to this phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "From",
+            "description": "Only show SMS messages from this phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "DateSent",
+            "description": "Only show SMS messages sent on this date (in GMT format), given as YYYY-MM-DD . Example: DateSent=2009-07-06 . You can also specify inequality, such as DateSent<=YYYY-MM-DD for SMS messages that were sent on or before midnight on a date, and DateSent>=YYYY-MM-DD for SMS messages sent on or after midnight on a date.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": []
+      }
+    },
+    "/api.twilio.com/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers": {
+      "POST": {}
+    },
+    "/api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages": {
+      "POST": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21201\"": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageSize",
+            "description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://m.twil.io": {
+      "del": {}
+    },
+    "http://requestb.in/1234abcd'": {
+      "POST": {
+        "parameters": []
+      }
+    },
+    "/www.twilio.com/console": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "IpAddress",
+            "description": "An IP address in dotted decimal notation from which you want to accept traffic. Any SIP requests from this IP address will be allowed by Twilio. IPv4 only supported today.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AlphaSender",
+            "description": "An Alphanumeric Sender ID string, up to 11 characters. Valid characters are A-Z, a-z, 0-9, space and dash ( - ). An Alphanumeric Sender ID string cannot be comprised of only numbers.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PhoneNumberSid",
+            "description": "PhoneNumberSid Phone Number SID for the Phone Number being added to the Service.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/api.twilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c4970093": {
+      "POST": {}
+    },
+    "/handler.twilio.com/twiml/EH8ccdbd7f0b8fe34357da8ce87ebe5a16'": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AnsweredBy",
+            "description": "The result of answering machine detection. If Enable was specified, results can be: machine_start , human , fax , unknown . If DetectMessageEnd was specified, results can be: machine_end_beep , machine_end_silence , machine_end_other , human , fax , unknown .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88d": {
+      "del": {}
+    }
+  },
+  "host": "",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

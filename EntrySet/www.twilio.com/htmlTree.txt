@@ -1,0 +1,112 @@
+
+                          /-/rest
+                         |
+                         |     /-/accepted-mime-types
+                         |    |
+                         |    |--/access-tokens
+                         |    |
+                         |    |--/account
+                         |    |
+                         |    |--/addresses
+                         |    |
+                         |    |--/answering-machine-detection
+                         |    |
+                         |    |--/applications
+                         |    |
+                         |    |--/authorized-connect-apps
+                         |    |
+                         |    |--/available-phone-numbers
+                         |    |
+                         |    |--/call
+                         |    |
+                         |    |--/call-feedback
+                         |    |
+                         |    |--/change-call-state
+                         |    |
+                         |    |--/conference
+                         |    |
+                         |    |--/connect-apps
+                         |    |
+-- /www.twilio.com/docs/api   |--/connect-overview
+                         |    |
+                         |    |--/copilot-best-practices
+                         |    |
+                         |    |--/credential
+                         |    |
+                         |    |--/credential-list
+                         |    |
+                         |    |--/credential-list-mapping
+                         |    |
+                         |    |--/domain
+                         |    |
+                         |    |--/incoming-phone-numbers
+                         |    |
+                         |    |--/ip-access-control-list
+                         |    |
+                         |    |--/ip-access-control-list-mapping
+                         |    |
+                         |    |--/ip-address
+                         |    |
+                         |    |--/keys
+                         |    |
+                         |    |--/making-calls
+                         |    |
+                         |    |--/making-calls-sip
+                         |    |
+                         |    |--/media
+                         |    |
+                          \/rest-/member
+                              |
+                              |--/message
+                              |
+                              |--/messaging-services
+                              |
+                              |--/messaging-services-and-copilot-overview
+                              |
+                              |--/outgoing-caller-ids
+                              |
+                              |--/participant
+                              |
+                              |--/queue
+                              |
+                              |--/recording
+                              |
+                              |--/recordings
+                              |
+                              |--/request
+                              |
+                              |--/response
+                              |
+                              |--/rest-api-porting-phone-numbers
+                              |
+                              |--/sending-messages
+                              |
+                              |--/sending-messages-copilot
+                              |
+                              |--/short-codes
+                              |
+                              |--/sms
+                              |
+                              |--/subaccounts
+                              |
+                              |--/test-credentials
+                              |
+                              |--/tips
+                              |
+                              |--/token
+                              |
+                              |--/transcription
+                              |
+                              |--/usage-records
+                              |
+                              |--/usage-triggers
+                              |
+                              |-/message-/feedback
+                              |
+                              |                   /-/alpha-sender-id
+                              |                  |
+                              |-/messaging-services-/phone-numbers
+                              |                  |
+                              |                   \-/short-codes
+                              |
+                               \/messaging-services-and-copilot-overview-/list-characters-replaced-copilots-smart-encoding

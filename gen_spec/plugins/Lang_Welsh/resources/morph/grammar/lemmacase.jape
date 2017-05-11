@@ -1,0 +1,57 @@
+// Andreas Vlachidis 15/01/2016
+// 
+// Mutation rules
+
+
+Phase: Mutation
+Input: Token
+Options: control = appelt
+
+Rule: 	setLemmaCaseUpperInitial
+( 
+	{Token.orth == "upperInitial", Token.length != "1" }
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString();
+	tokenLemma = tokenLemma.substring(0,1).toUpperCase() + tokenLemma.substring(1).toLowerCase();
+	features.remove("lemma"); 
+	features.put("lemma", tokenLemma); // The new lemma 
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n RemoveValidationFeatureAlt");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
+Rule: 	setLemmaCaseAllCaps
+( 
+	{Token.orth == "allCaps", Token.length != "1" }
+):match
+-->
+{
+try {
+	AnnotationSet matchedAS = bindings.get("match");
+	AnnotationSet matchedToken = matchedAS.get("Token");
+	Annotation matchedAnn = (gate.Annotation)matchedToken.iterator().next();
+	outputAS.removeAll(matchedToken);
+	gate.FeatureMap features = Factory.newFeatureMap();
+	features = matchedAnn.getFeatures();
+	String tokenLemma = features.get("lemma").toString();
+	tokenLemma = tokenLemma.toUpperCase();
+	features.remove("lemma"); 
+	features.put("lemma", tokenLemma); // The new lemma 
+	outputAS.add(matchedAS.firstNode().getOffset(), matchedAS.lastNode().getOffset(),"Token", features);
+	}
+catch (Exception ex) {
+		Out.println("Exception in RHS \n RemoveValidationFeatureAlt");
+		ex.printStackTrace(Out.getPrintWriter());
+  	}
+}
