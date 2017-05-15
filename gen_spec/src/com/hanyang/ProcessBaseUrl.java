@@ -154,16 +154,21 @@ public class ProcessBaseUrl {
 	}
 
 	public JSONObject adjustSpec(JSONObject openAPI, String scheme, String baseUrl) throws MalformedURLException, JSONException {
-		URL url = new URL(baseUrl);
-		// 1. add host, basePath, scheme
-		String host = url.getHost();
-		String basePath = url.getPath();
-		String schemes = url.getProtocol();
-		JSONArray scheArr = new JSONArray();
-		openAPI.put("host", host);
-		openAPI.put("basePath", basePath);
-		scheArr.put(schemes);
-		openAPI.put("schemes", scheArr);
+		try {
+			URL url = new URL(baseUrl);
+			// 1. add host, basePath, scheme
+			String host = url.getHost();
+			String basePath = url.getPath();
+			String schemes = url.getProtocol();
+			JSONArray scheArr = new JSONArray();
+			openAPI.put("host", host);
+			openAPI.put("basePath", basePath);
+			scheArr.put(schemes);
+			openAPI.put("schemes", scheArr);
+		} catch (MalformedURLException e) {
+		    // the URL is not in a valid form
+			return openAPI;
+		}
 
 		// 2. short internal urls
 		JSONObject pathObject = openAPI.getJSONObject("paths");

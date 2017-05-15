@@ -1,0 +1,18 @@
+{
+  "basePath": "",
+  "paths": {
+    "//webservices.amazon.com/onca/xml": {
+      "Get": {},
+      "get": {}
+    },
+    "/": {
+      "put": {}
+    }
+  },
+  "host": "",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

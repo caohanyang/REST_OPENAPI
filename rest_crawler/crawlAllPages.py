@@ -61,6 +61,10 @@ class Crawler(object):
     # Define filter
     def filter(link):
 
+        # test html
+        if link.__contains__('.pdf'):
+            return False
+
         if link.__contains__('github') :
             # Get real link:  In some cases, it redirected to a new address
             res = urllib2.urlopen(link)
@@ -72,7 +76,6 @@ class Crawler(object):
 
         # Test the if link contains the doc_page
         if link.__contains__(self.doc_filter):
-
             return True
         else:
             return False

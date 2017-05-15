@@ -42,8 +42,8 @@ public class ExtractInformation {
 	/** The Corpus Pipeline application to contain ANNIE */
 	 // corpus/www.instagram.com dev.twitter.com www.twilio.com www.youtube.com
 	// www.flickr.com
-	private static String API_NAME = "instagram";
-	private static String API_FOLDER = "www.instagram.com";
+	private static String API_NAME = "google";
+	private static String API_FOLDER = "developers.google.com";
 	
 	private static String FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
@@ -65,7 +65,6 @@ public class ExtractInformation {
 			FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 			CompareSet_PATH = "CompareSet/" + API_NAME;
         }
-		
 		
 		// init gate
 		Gate.init();

@@ -1,0 +1,160 @@
+{
+  "basePath": "",
+  "paths": {
+    "//webservices.amazon.com/onca/xml": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Condition\nSpecifies",
+            "description": "an item's condition. If Condition is set to “All”, a separate set of responses is returned for each valid value of Condition.\n\nType: String\n\nDefault: New\n\nValid Values: All | Collectible | Refurbished | Used\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ItemId\nSpecifies",
+            "description": "the item you want to look up. An ItemId is an alphanumeric identifier assigned to an item. You can specify up to ten ItemIds separated by commas.\n\nType: String\n\nDefault: None\n\nValid Values: ASIN\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "MerchantId\nAn",
+            "description": "optional parameter that can be used to filter search results and offer listings to only include items sold by Amazon. By default, Product Advertising API returns items sold by various merchants including Amazon. Enter \"Amazon\" to return only items sold by Amazon.\n\nType: String\n\nValid Values: Amazon\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "SimilarityType\n\"Intersection\"",
+            "description": "returns the intersection of items that are similar to all of the ASINs specified. \"Random\" returns the union of items that are similar to all of the ASINs specified. Only ten items are returned. So, if there are more than ten similar items found, a random selection from the group is returned. For this reason, running the same request multiple times can yield different results.\n\nType: String\n\nDefault: Intersection\n\nValid Value:Random\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ResponseGroup\nSpecifies",
+            "description": "the types of values to return. You can specify multiple response groups in one request by separating them with commas.\n\nType: String\n\nDefault: Request | Small\n\nValid Values: Accessories | BrowseNodes | EditorialReview | Images | Large | ItemAttributes | ItemIds | Medium | Offers | OfferSummary | PromotionSummary | Reviews | SalesRank | Similarities | Small | Tracks | Variations | VariationSummary |\nNo",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AssociateTag\nSpecifies",
+            "description": "the Associate who is making the request. An Associate tag, also known as an Associate ID, is an automatically generated unique identifier. When you log in to the Amazon Associates website for your locale, the page that you are directed to includes a message that says \"Signed in as\" followed by your Associate tag.\n\nThe Associate tag that you used to create a cart must also be used on all other operations associated with the same cart.\n\nType: String\n\nDefault: None\n\nValid Value: The same Associate tag that was used in the related CartCreate request.\n\nConstraint:\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CartId\nAlphanumeric",
+            "description": "token returned by CartCreate that identifies a cart.\n\nType: String\n\nDefault: None\n\nValid Values: Value returned by CartCreate\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CartItemId\nAlphanumeric",
+            "description": "token that uniquely identifies an item in a cart. Once an item, specified by an ASIN or OfferListingId, has been added to a cart, you must use the CartItemId to refer to it. The other identifiers will not work.\n\nType: String\n\nDefault: None\n\nValid Values: Value returned by CartCreate\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "HMAC\nThe",
+            "description": "Hash Message Authentication Code is an encrypted alphanumeric token that is used to authenticate requests.\n\nType: String\n\nDefault: None\n\nValid Values: Value is calculated using request parameters, their values, a cryptographic function, and the Secret Key, which acts as the \"key\" for the function.\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "MergeCart\nThis",
+            "description": "parameter is deprecated. When a customer purchases items in a remote shopping cart, the items are added to the customer's Amazon retail shopping cart.\nDeprecated",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ResponseGroup\nSpecifies",
+            "description": "the types of values to return. You can specify multiple response groups in one request by separating them with commas.\n\nType: String\n\nDefault: Cart\n\nValid Values: CartSimilarities | CartTopSellers | CartNewReleases\nNo",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ASIN\nAn",
+            "description": "alphanumeric token that uniquely identifies an item. Using OfferListingId is preferred instead of ASIN when adding items to a cart.\n\nValid Values: ASIN\n\nConstraint: Required if OfferListingId is not used\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AssociateTag\nSpecifies",
+            "description": "the Associate who is making the request. An Associate tag, also known as an Associate ID, is an automatically generated unique identifier. When you log in to the Amazon Associates website for your locale, the page that you are directed to includes a message that says \"Signed in as\" followed by your Associate tag.\n\nThe Associate tag that you use to create a cart must also be used on all other operations associated with the same cart.\n\nType: String\n\nDefault: None\n\nValid Values: An Associate Tag.\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Item\nFor",
+            "description": "REST, a prefix for ASIN and quantity, both of which are used to specify the item to add to the cart, for example, item.1. ASIN =1234abcd, item.1.quantity=2.\n\nValid Values: Does not take a value.\n\nType: String\n\nDefault: None\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Items",
+            "description": "Container for one or more Item objects. This parameter is required for SOAP only. Yes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "MergeCart\nThis",
+            "description": "parameter is deprecated. When a customer purchases items in a remote shopping cart, the items are added to the customer's Amazon retail shopping cart.\n\nType: String\nDeprecated",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "OfferListingId\nAn",
+            "description": "offer listing ID is an alphanumeric token that uniquely identifies an item. Use the OfferListingId instead of an item's ASIN to add the item to the cart.\n\nType: String\n\nDefault: None\n\nValid Values: An Offer Listing ID\n\nConstraint: Required if ASIN is not used.\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Quantity\nThe",
+            "description": "suffix used with Item to specify the number of items to be added to the cart, for example,\n\nItem.1. ASIN =0976925524\n\nItem.1.Quantity=2.\n\nSee Item .\n\nType: String\n\nDefault: None\n\nValid Values: Positive integer\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ResponseGroup\nSpecifies",
+            "description": "the types of values to return. You can specify multiple response groups in one request by separating them with commas.\n\nType: String\n\nDefault: Cart\n\nValid Values: CartSimilarities | CartTopSellers | CartNewReleases\nNo",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "host": "",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

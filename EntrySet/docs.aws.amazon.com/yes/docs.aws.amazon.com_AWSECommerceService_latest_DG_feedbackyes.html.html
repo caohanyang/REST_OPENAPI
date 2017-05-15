@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <meta content="Learn about how to use the Product Advertising API." name="description" xmlns="http://www.w3.org/1999/xhtml"/>
+  <meta content="IAD" name="deployment_region" xmlns="http://www.w3.org/1999/xhtml"/>
+  <meta content="Product Advertising API" name="product" xmlns="http://www.w3.org/1999/xhtml"/>
+  <meta content="Developer Guide" name="guide" xmlns="http://www.w3.org/1999/xhtml"/>
+  <meta content="en_us" name="guide-locale" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/images/favicon.ico" rel="icon" type="image/ico" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/ico" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="http://docs.aws.amazon.com/AWSECommerceService/latest/DG/top.html" rel="canonical" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/css/jquery-ui.min.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/font/css/font-awesome.min.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/css/google-font.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/css/highlight-default.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/css/colorbox.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml"/>
+  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml"/>
+  <script src="/js/highlight.pack.js" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+  <script src="/js/jquery.min.js" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+  <script src="/js/jquery-ui.min.js" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+  <script src="/js/handlebars.js" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+  <script src="/js/jquery.colorbox.js" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+  <script src="/js/awsdocs.min.js" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+  <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+ </head>
+ <body onload="AWSDocs.feedbackOnload()">
+  <div class="aws-nav-header" id="aws-nav" xmlns="http://www.w3.org/1999/xhtml" xmlns:db="http://docbook.org/ns/docbook">
+   <div class="aws-nav-header-left">
+    <div class="aws-nav-flyout-trigger" id="aws-nav-flyout-trigger">
+     <i class="fa fa-bars fa-2x">
+     </i>
+     Menu
+    </div>
+    <div class="aws-nav-logo">
+     <a href="https://aws.amazon.com">
+      <span>
+       Amazon Web Services
+      </span>
+     </a>
+    </div>
+   </div>
+   <div class="aws-nav-header-right" id="aws-nav-header-right">
+    <div class="aws-nav-cta-button-outer">
+     <div class="js-mbox" data-mbox="en_h_nav_cta">
+      <span class="aws-nav-cta-default" id="span-conosole-signin">
+       <a class="aws-nav-button" href="https://console.aws.amazon.com/console/home" id="aws-nav-cta-button">
+        Sign In to the Console
+       </a>
+      </span>
+      <span class="aws-nav-cta-default" id="span-conosole-signup" style="display:none">
+       <a class="aws-nav-button" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html" id="aws-nav-cta-button">
+        Try AWS for Free
+       </a>
+      </span>
+     </div>
+    </div>
+    <div class="aws-nav-popover-trigger" data-dropdown="aws-nav-dropdown-lang">
+     <select id="languageSelection" onchange="SelectLanguage()">
+      <option value="/de_de/AWSECommerceService/latest/DG/top.html">
+       Deutsch
+      </option>
+      <option selected="selected" value="/en_us/AWSECommerceService/latest/DG/top.html">
+       English
+      </option>
+      <option value="/es_es/AWSECommerceService/latest/DG/top.html">
+       EspaÃ±ol
+      </option>
+      <option value="/fr_fr/AWSECommerceService/latest/DG/top.html">
+       FranÃ§ais
+      </option>
+      <option value="/ja_jp/AWSECommerceService/latest/DG/top.html">
+       æ—¥æœ¬èªž
+      </option>
+      <option value="/ko_kr/AWSECommerceService/latest/DG/top.html">
+       í•œêµ­ì–´
+      </option>
+      <option value="/pt_br/AWSECommerceService/latest/DG/top.html">
+       PortuguÃªs
+      </option>
+      <option value="/zh_cn/AWSECommerceService/latest/DG/top.html">
+       ä¸­æ–‡ (ç®€ä½“)
+      </option>
+     </select>
+    </div>
+    <a class="btn btn-pdf-link" href="prod-adv-api-dg.pdf#top" id="pdf-link-top" style='background-image: url("/images/Adobe_PDF_icon.png")' target="_blank" title="Open PDF">
+    </a>
+    <div class="aws-nav-quicklinks-separator" id="aws-nav-quicklinks-separator">
+     <div class="aws-nav-left">
+     </div>
+     <div class="aws-nav-right">
+     </div>
+    </div>
+   </div>
+   <div id="topnav-flyout-menu-container" xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
+    <ul id="topnav-flyout-menu">
+     <script id="flyout-item-template" type="text/x-handlebars-template">
+      {{#flyoutList}}
+                    
+                    <li>{{listItem}}
+                        {{#if subList}}
+                        <ul>
+                            {{#subList}}
+                            <li class="awsdocs-flyout-link-wrapper"><a href="{{target}}">{{text}}</a></li>
+                            {{/subList}}
+                        </ul>
+                        {{/if}}
+                    </li>
+                    
+                    {{/flyoutList}}
+     </script>
+    </ul>
+    <div id="topnav-flyout-menu-spacer">
+    </div>
+   </div>
+  </div>
+  <div id="fbheading">
+   <h2 class="title">
+    Did this page help you? - Yes
+   </h2>
+   <p>
+    Thanks for letting us know we're doing a good job!
+   </p>
+   <p>
+    If you've got a moment, please tell us what we did right so we can do more of it.
+   </p>
+  </div>
+  <div>
+   <a class="awstoc btn btn-default" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=PAAPI&amp;hidden_guide_name=Developer Guide&amp;hidden_api_version=2013-08-01" id="fblink" target="_blank">
+    Feedback
+   </a>
+  </div>
+  <!-- SiteCatalyst code version: H.25.2.
+            Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+            More info available at http://www.omniture.com -->
+  <script language="JavaScript" src="https://a0.awsstatic.com/s_code/js/1.0/awshome_s_code.js" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+  <script language="JavaScript" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   <!--
+
+            // Documentation Service Name
+            s.prop66='Product Advertising API';
+            s.eVar66='D=c66';
+  
+            // Documentation Guide Name                                                                 
+            s.prop65='Developer Guide';
+            s.eVar65='D=c65';
+
+            var s_code=s.t();if(s_code)document.write(s_code)//-->
+  </script>
+  <script language="JavaScript" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   <!--
+                if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+                //-->
+  </script>
+  <noscript xmlns="http://www.w3.org/1999/xhtml">
+   <img alt="" border="0" height="1" src="http://amazonwebservices.d2.sc.omtrdc.net/b/ss/awsamazondev/1/H.25.2--NS/0" width="1"/>
+  </noscript>
+  <!--/DO NOT REMOVE/-->
+  <!-- End SiteCatalyst code version: H.25.2. -->
+ </body>
+</html>

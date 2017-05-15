@@ -1,0 +1,50 @@
+{
+  "basePath": "",
+  "paths": {
+    "/reviews/iframe": {
+      "Get": {}
+    },
+    "/Mammoth-Book-Tattoos-Lal-Hardy/dp/076243631X%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/PlayStation-3-Dualshock-Wireless-Controller/dp/B0015AARJI%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/gp/offer-listing/B00KOKTZLQ": {
+      "Get": {}
+    },
+    "/Settlers-Catan-Player-Extension/dp/B000W7JWYG%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/Toy-Story-3-Tom-Hanks/dp/B00275EHJG%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "HTTPS": {
+      "Get": {}
+    },
+    "/Samsung-GT-P1010CWAXAR-Galaxy-Tab-Wi-Fi/dp/B004U9USEA%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/Journeys-Lifetime-Worlds-Greatest-Trips/dp/1426201257%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/gp/redirect.html": {
+      "Get": {}
+    },
+    "/Harry-Potter-Deathly-Hallows-Book/dp/0545139708%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/Bob-Dylans-Greatest-Hits/dp/B00136LUWW%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "https://ecx.images-amazon.com/images/I/519SgX2wwDL._SL75_.jpg": {
+      "Get": {}
+    }
+  },
+  "host": "www.amazon.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

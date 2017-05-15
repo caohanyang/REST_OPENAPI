@@ -1,0 +1,10 @@
+{
+  "basePath": "/<API_VERSION>/<PAGE_ID>/feed",
+  "paths": {},
+  "host": "graph.facebook.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

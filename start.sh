@@ -3,6 +3,12 @@
 # crawl html page
 # https://www.instagram.com/developer https://www.instagram.com/developer/endpoints
 # https://dev.twitter.com/rest  https://dev.twitter.com/rest/reference
+# https://www.flickr.com/services/api
+# https://developers.google.com/youtube/v3 https://developers.google.com/youtube/v3/docs
+# https://www.twilio.com/docs/api/rest
+# https://developers.facebook.com/docs/graph-api https://developers.facebook.com/docs/graph-api/reference
+# http://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html   http://docs.aws.amazon.com/AWSECommerceService/latest/DG
+
 python ./rest_crawler/crawlAllPages.py $1 $2
 
 # predict html page

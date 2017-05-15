@@ -162,14 +162,18 @@ public class ProcessParameter {
 			}
 
 			// set defaut value
-			String key = trStr.split(" ")[0];
-			String value = trStr.substring(trStr.indexOf(trStr.split(" ")[1]));
 			JSONObject keyObject = new JSONObject();
-			keyObject.put("name", key);
-			keyObject.put("description", value);
-			keyObject.put("in", "query");
-			keyObject.put("type", "integer");
-			keyObject.put("required", "required");
+			try {
+				String key = trStr.split(" ")[0];
+				String value = trStr.substring(trStr.indexOf(trStr.split(" ")[1]));
+				keyObject.put("name", key);
+				keyObject.put("description", value);
+				keyObject.put("in", "query");
+				keyObject.put("type", "integer");
+				keyObject.put("required", "required");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
 			// if we have already identified the key-value
 			// change the value to the new one
@@ -200,6 +204,7 @@ public class ProcessParameter {
 		Long startTbody = anno.getStartNode().getOffset();
 		Long endTbody = anno.getEndNode().getOffset();
 		AnnotationSet tbodySet = doc.getAnnotations("Original markups").get("tbody", startTbody, endTbody);
+		// if contain only one tbody
 		if (tbodySet.size() == 1) {
 			Annotation tbodyAnno = tbodySet.iterator().next();
 			Long startTr = tbodyAnno.getStartNode().getOffset();

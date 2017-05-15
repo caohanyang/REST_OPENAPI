@@ -1,0 +1,27 @@
+{
+  "basePath": "/",
+  "paths": {
+    "/graph.facebook.com/<video_id>": {
+      "DEL": {}
+    },
+    "/graph.facebook.com/<API_VERSION>/204807582871020_615180368500404/insights": {
+      "post": {}
+    },
+    "/developers.google.com/streetview/spherical-metadata": {
+      "post": {}
+    },
+    "https": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/developers.facebook.com/docs/graph-api/reference/insights)": {
+      "GET": {}
+    }
+  },
+  "host": "",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

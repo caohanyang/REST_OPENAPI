@@ -1,0 +1,385 @@
+{
+  "basePath": "",
+  "paths": {
+    "/gp/cart/aws-merge.html": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ASIN\nSpecifies",
+            "description": "ASIN\nSpecifies ASIN of item to be added to the cart where N is a positive integer between 1 and 10, inclusive. Up to ten items can be added at a time. Using an item's OfferListingId is preferred instead of the item's ASIN.\n\nType: String\n\nDefault: None\n\nValid Values: Valid ASIN\n\nConstraint: Required if an OfferListingId is not specified.\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AssociateTag\nSpecifies",
+            "description": "the Associate who is making the request. An Associate tag, also known as an Associate ID, is an automatically generated unique identifier. When you log in to the Amazon Associates website for your locale, the page that you are directed to includes a message that says \"Signed in as\" followed by your Associate tag.\n\nThe Associate tag that you used to create a cart must also be used on all other operations associated with the same cart.\n\nType: String\n\nDefault: None\n\nValid Value: The same Associate tag that was used in the related CartCreate request.\n\nConstraint:\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CartId\nAlphanumeric",
+            "description": "token returned by CartCreate that identifies a cart.\n\nType: String\n\nDefault: None\n\nValid Values: Value returned by CartCreate .\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "HMAC\nThe",
+            "description": "Hash Message Authentication Code is an encrypted alphanumeric token that is used to authenticate requests.\n\nType: String\n\nDefault: None\n\nValid Values: Value is calculated using request parameters, their values, a cryptographic function, and the Secret Key, which acts as the \"key\" for the function.\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Item",
+            "description": "Container for ASIN or OfferListingId , and Quantity . This is a SOAP only parameter.\nValid Values: An ASIN or an OfferListingId is required.\nYes (SOAP only)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Items",
+            "description": "Container for one or more Item (s). This is a SOAP only parameter.\nValid Values: Item\nYes (SOAP only)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "MergeCart\nThis",
+            "description": "parameter is deprecated. When a customer purchases items in a remote shopping cart, the items are added to the customer’s Amazon retail shopping cart.\nDeprecated",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "OfferListingId\nAn",
+            "description": "offer listing ID is a token that uniquely identifies an item that is sold by any merchant, including Amazon. This parameter is preferred to using an ASIN to add an item to a cart.\n\nType: String\n\nDefault: None\n\nValid Values: Valid offer listing ID\n\nConstraint: Required if ASIN is not offered .\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Quantity\nSpecifies",
+            "description": "number of items to be added to the cart where N is a positive integer. The Quantity value is matched to the Item.N.ASIN value by the index number, N. For example, Item.1.ASIN is associated with Item.1.Quantity.\n\nType: String\n\nDefault: None\n\nValid Values: Positive integer between 1 and 999, inclusive.\n\nConditional Required for REST\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ResponseGroup\nSpecifies",
+            "description": "the types of values to return. You can specify multiple response groups in one request by separating them with commas.\n\nType: String\n\nDefault: Cart\n\nValid Values: CartSimilarities | CartTopSellers | NewReleases\nNo",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AssociateTag\nSpecifies",
+            "description": "the Associate who is making the request. An Associate tag, also known as an Associate ID, is an automatically generated unique identifier. When you log in to the Amazon Associates website for your locale, the page that you are directed to includes a message that says \"Signed in as\" followed by your Associate tag.\n\nThe Associate tag that you used to create a cart must also be used on all other operations associated with the same cart.\n\nType: String\n\nDefault: None\n\nValid Value: The same Associate tag that was used in the related CartCreate request.\n\nConstraint:\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CartId\nAlphanumeric",
+            "description": "token returned by CartCreate that identifies a cart.\n\nType: String\n\nDefault: None\n\nValid Values: Value returned by CartCreate\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CartItemId\nAlphanumeric",
+            "description": "token that uniquely identifies an item in a cart. Once an item, specified by an ASIN or OfferListingId, has been added to a cart, you must use the CartItemId to refer to it. The other identifiers will not work.\n\nType: String\n\nDefault: None\n\nValid Values: Value returned by CartCreate\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "HMAC\nThe",
+            "description": "Hash Message Authentication Code is an encrypted alphanumeric token that is used to authenticate requests.\n\nType: String\n\nDefault: None\n\nValid Values: Value is calculated using request parameters, their values, a cryptographic function, and the Secret Key, which acts as the \"key\" for the function.\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "MergeCart\nThis",
+            "description": "parameter is deprecated. When a customer purchases items in a remote shopping cart, the items are added to the customer's Amazon retail shopping cart.\nDeprecated",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ResponseGroup\nSpecifies",
+            "description": "the types of values to return. You can specify multiple response groups in one request by separating them with commas.\n\nType: String\n\nDefault: Cart\n\nValid Values: CartSimilarities | CartTopSellers | CartNewReleases\nNo",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ASIN\nAn",
+            "description": "alphanumeric token that uniquely identifies an item. Using OfferListingId is preferred instead of ASIN when adding items to a cart.\n\nValid Values: ASIN\n\nConstraint: Required if OfferListingId is not used\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AssociateTag\nSpecifies",
+            "description": "the Associate who is making the request. An Associate tag, also known as an Associate ID, is an automatically generated unique identifier. When you log in to the Amazon Associates website for your locale, the page that you are directed to includes a message that says \"Signed in as\" followed by your Associate tag.\n\nThe Associate tag that you use to create a cart must also be used on all other operations associated with the same cart.\n\nType: String\n\nDefault: None\n\nValid Values: An Associate Tag.\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Item\nFor",
+            "description": "REST, a prefix for ASIN and quantity, both of which are used to specify the item to add to the cart, for example, item.1. ASIN =1234abcd, item.1.quantity=2.\n\nValid Values: Does not take a value.\n\nType: String\n\nDefault: None\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Items",
+            "description": "Container for one or more Item objects. This parameter is required for SOAP only. Yes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "MergeCart\nThis",
+            "description": "parameter is deprecated. When a customer purchases items in a remote shopping cart, the items are added to the customer's Amazon retail shopping cart.\n\nType: String\nDeprecated",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "OfferListingId\nAn",
+            "description": "offer listing ID is an alphanumeric token that uniquely identifies an item. Use the OfferListingId instead of an item's ASIN to add the item to the cart.\n\nType: String\n\nDefault: None\n\nValid Values: An Offer Listing ID\n\nConstraint: Required if ASIN is not used.\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Quantity\nThe",
+            "description": "suffix used with Item to specify the number of items to be added to the cart, for example,\n\nItem.1. ASIN =0976925524\n\nItem.1.Quantity=2.\n\nSee Item .\n\nType: String\n\nDefault: None\n\nValid Values: Positive integer\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ResponseGroup\nSpecifies",
+            "description": "the types of values to return. You can specify multiple response groups in one request by separating them with commas.\n\nType: String\n\nDefault: Cart\n\nValid Values: CartSimilarities | CartTopSellers | CartNewReleases\nNo",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/reviews/iframe": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Condition\nSpecifies",
+            "description": "an item's condition. If Condition is set to \"All\", a separate set of responses is returned for each valid value of Condition. The default value is \"New\" (not \"All\"). So, if your request does not return results, consider setting the value to \"All\". When the value is \"New\", the ItemLookup availability parameter cannot be set to \"Available\". Amazon only sells items that are \"New\".\n\nType: String\n\nDefault: New\n\nValid Values: Used | Collectible | Refurbished, All\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "IdType\nType",
+            "description": "of item identifier used to look up an item. All IdTypes except ASINx require a SearchIndex to be specified.\n\nType: String\n\nDefault: ASIN\n\nValid Values: SKU | UPC | EAN | ISBN (US only, when search index is Books). UPC is not valid in the CA locale.\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "IncludeReviewsSummary\nWhen",
+            "description": "set to true , returns the reviews summary within the Reviews iframe.\n\nType: Boolean\n\nDefault: True\n\nValid Values: True | False\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ItemId\nOne",
+            "description": "or more (up to ten) positive integers that uniquely identify an item. The meaning of the number is specified by IdType . That is, if IdType is ASIN, the ItemId value is an ASIN. If ItemId is an ASIN, a search index cannot be specified in the request.\n\nType: String\n\nDefault: None\n\nConstraints: Must be a valid item ID. For more than one ID, use a comma-separated list of up to ten IDs.\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "MerchantId\nAn",
+            "description": "optional parameter you can use to filter search results and offer listings to only include items sold by Amazon. By default, the API will return items sold by various merchants including Amazon. Enter Amazon if you only want to see items sold by Amazon in the response.\n\nType: String\n\nValid Values: Amazon\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RelatedItemPage",
+            "description": "This optional parameter is only valid when the RelatedItems response group is used. Each ItemLookup request can return, at most, ten related items. The RelatedItemPage value specifies the set of ten related items to return. A value of 2, for example, returns the second set of ten related items No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "RelationshipType",
+            "description": "This parameter is required when the RelatedItems response group is used. The type of related item returned is specified by the RelationshipType parameter. Sample values include Episode, Season, and Tracks. For a complete list of types, see Relationship Types .\nRequired when RelatedItems response group is used.\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "SearchIndex\nThe",
+            "description": "product category to search.\n\nType: String\n\nDefault: None\n\nValid Values: A search index, for example, Apparel, Beauty, Blended, Books, and so forth. For a complete of search indices, see Locale Reference for the Product Advertising API .\n\nConstraint: If ItemId is an ASIN, a search index cannot be specified in the request. Required for non-ASIN ItemIds.\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "TruncateReviewsAt\nBy",
+            "description": "default, reviews are truncated to 1000 characters within the Reviews iframe. To specify a different length, enter the value. To return complete reviews, specify 0 .\n\nType: Integer\n\nDefault: 1000\n\nConstraints: Must be a positive integer or 0 (returns entire review)\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "VariationPage\nPage",
+            "description": "number of variations returned by ItemLookup . By default, ItemLookup returns all variations. Use VariationPage to return a subsection of the response. There are 10 variations per page. To examine offers 11 through 20, for example, set VariationPage to 2.\n\nType: String\n\nDefault: All\n\nValid Values: Integer between 1 and 150, inclusive\nNo",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ResponseGroup\nSpecifies",
+            "description": "the types of values to return. You can specify multiple response groups in one request by separating them with commas.\n\nType: String\n\nDefault: Small\n\nValid Values: Accessories | BrowseNodes | EditorialReview | Images | ItemAttributes | ItemIds | Large | Medium | OfferFull | Offers | PromotionSummary | OfferSummary | RelatedItems | Reviews | SalesRank | Similarities | Small | Tracks | VariationImages | Variations (US only) | VariationSummary\nNo",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/Mammoth-Book-Tattoos-Lal-Hardy/dp/076243631X%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/PlayStation-3-Dualshock-Wireless-Controller/dp/B0015AARJI%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/gp/offer-listing/B00KOKTZLQ": {
+      "Get": {}
+    },
+    "/Settlers-Catan-Player-Extension/dp/B000W7JWYG%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/Toy-Story-3-Tom-Hanks/dp/B00275EHJG%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "HTTPS": {
+      "Get": {}
+    },
+    "/Samsung-GT-P1010CWAXAR-Galaxy-Tab-Wi-Fi/dp/B004U9USEA%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/Journeys-Lifetime-Worlds-Greatest-Trips/dp/1426201257%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/gp/redirect.html": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Locale",
+            "description": "AudienceRating Values",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CA",
+            "description": "G, PG, PG-13, R, NC-17, NR",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "DE",
+            "description": "6, 12, 16",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ES",
+            "description": "7, 12, 16, 18",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "FR",
+            "description": "U, 12, 16, 18",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "IN",
+            "description": "U, UA, A",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "IT",
+            "description": "T, VM14, VM18",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "JP",
+            "description": "G, PG-12, R15+, R18+",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "UK",
+            "description": "U, PG, 12A, 12, 15, 18",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "US",
+            "description": "G, PG, PG-13, R, NC-17, NR",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/Harry-Potter-Deathly-Hallows-Book/dp/0545139708%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "/Bob-Dylans-Greatest-Hits/dp/B00136LUWW%3FAWSAccessKeyId%3D": {
+      "Get": {}
+    },
+    "https://ecx.images-amazon.com/images/I/519SgX2wwDL._SL75_.jpg": {
+      "Get": {}
+    }
+  },
+  "host": "www.amazon.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

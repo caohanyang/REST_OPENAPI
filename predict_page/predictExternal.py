@@ -91,7 +91,7 @@ if __name__ == "__main__":
                                         target_names=dataset.target_names)
     print report
     # Write report to the file
-    report_name = "balance_external.txt"
+    report_name = filteredSet + "/balance_external.txt"
     f = open(report_name, 'w+')
     f.write(report)
 
