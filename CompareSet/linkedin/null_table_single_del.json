@@ -1,0 +1,11 @@
+{
+  "basePath": "/v1/people/12345678\"",
+  "paths": {},
+  "produces": "application/json",
+  "host": "api.linkedin.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

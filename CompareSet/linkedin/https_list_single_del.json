@@ -1,0 +1,36 @@
+{
+  "basePath": "/v1",
+  "paths": {
+    "https://www.linkedin.com/oauth/v2/authorization": {
+      "GET": {}
+    },
+    "https://www.linkedin.com/uas/oauth2/authorization": {
+      "GET": {}
+    },
+    "/companies/{id}/is-company-share-enabled": {
+      "GET": {}
+    },
+    "https://api.linkedin.com/people/~/shares)": {
+      "POST": {}
+    },
+    "HTTPS": {
+      "get": {}
+    },
+    "/people/~/shares": {
+      "POST": {}
+    },
+    "/people/~:(id,first-name,last-name)\";": {
+      "get": {}
+    },
+    "/people/~": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.linkedin.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

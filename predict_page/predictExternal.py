@@ -90,13 +90,15 @@ if __name__ == "__main__":
     report = metrics.classification_report(test_set.target, y_predicted,
                                         target_names=dataset.target_names)
     print report
+
     # Write report to the file
+    if not os.path.exists(filteredSet):
+        os.makedirs(filteredSet)
     report_name = filteredSet + "/balance_external.txt"
     f = open(report_name, 'w+')
     f.write(report)
 
-    if not os.path.exists(filteredSet):
-        os.makedirs(filteredSet)
+
     # Show the details results for each file
     for i in range(0, len(test_set.data)):
         print('File "%s" is "%d": predicted "%d"' % (test_set.filenames[i], test_set.target[i], y_predicted[i]))

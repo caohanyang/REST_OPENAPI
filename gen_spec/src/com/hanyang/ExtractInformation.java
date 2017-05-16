@@ -51,9 +51,9 @@ public class ExtractInformation {
 	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https", "http", "null"));
 	// "table", "list"
 	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table", "list"));
-	// "single", 
+	// "single", "multiple"
 	private static List<String> NUMBER = new ArrayList<String>(Arrays.asList("single", "multiple"));
-	// , "delete"
+	// "del", "delete"
 	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del", "delete"));
 
 	public static void main(String[] args) throws GateException, JSONException, IOException {
@@ -310,7 +310,7 @@ public class ExtractInformation {
 			throws JSONException {
 		// 5.3 for each page, set findParaTable = False
 		boolean findParaTemplate = false;
-		// 5.3.1 Test if the page contains multiply parameter table or not
+		// 5.3.1 Test if the page contains multiple parameter table or not
 		Iterator<Annotation> testIter = annoTemplate.iterator();
 		String templateNumber = templateNum;
 		// int numTemplate = 0;
@@ -326,7 +326,7 @@ public class ExtractInformation {
 		Out.prln(findParaTemplate);
 		// if (numTemplate > 1) {
 		// // more than one parameter template in the page
-		// multiTemplate = "multiply";
+		// multiTemplate = "multiple";
 		// }
 
 		// 5.3.2 handle the template context

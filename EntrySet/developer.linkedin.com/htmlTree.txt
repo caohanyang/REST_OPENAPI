@@ -1,0 +1,78 @@
+
+                         /-/docs
+                        |
+                        |     /-/add-to-profile
+                        |    |
+                        |    |--/android-sdk
+                        |    |
+                        |    |--/android-sdk-auth
+                        |    |
+                        |    |--/best-practices
+                        |    |
+                        |    |--/best-practices-apps
+                        |    |
+                        |    |--/company-pages
+                        |    |
+                        |    |--/fields
+                        |    |
+                        |    |--/getting-started-js-sdk
+                        |    |
+-- /developer.linkedin.com   |--/ios-sdk
+                        |    |
+                        |    |--/ios-sdk-auth
+                        |    |
+                        |    |--/oauth2
+                        |    |
+                        |    |--/oauth2-legacy
+                        |    |
+                        |    |--/rest-api
+                        |    |
+                        |    |--/share-on-linkedin
+                        |    |
+                        |    |--/signin-with-linkedin
+                        |    |
+                        |    |       /-/basic-profile
+                        |    |      |
+                        |    |      |--/certifications
+                        |    |      |
+                         \/docs     |--/companies
+                             |      |
+                             |      |--/company-profile
+                             |      |
+                             |      |--/contact
+                             |      |
+                             |      |--/courses
+                             |      |
+                             |      |--/education
+                             |      |
+                             |      |--/full-profile
+                             |-/fields
+                             |      |--/languages
+                             |      |
+                             |      |--/location
+                             |      |
+                             |      |--/patents
+                             |      |
+                             |      |--/positions
+                             |      |
+                             |      |--/publications
+                             |      |
+                             |      |--/recommendations
+                             |      |
+                             |      |--/skills
+                             |      |
+                             |       \-/volunteer
+                             |
+                             |          /-/company-size-codes
+                             |         |
+                             |         |--/currency-codes
+                             |         |
+                             |         |--/geography-codes
+                             |         |
+                              \/reference-/industry-codes
+                                       |
+                                       |--/job-function-codes
+                                       |
+                                       |--/language-codes
+                                       |
+                                        \-/seniority-codes

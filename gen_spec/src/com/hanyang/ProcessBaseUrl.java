@@ -69,7 +69,8 @@ public class ProcessBaseUrl {
 		// First find the common part for most of the string
 		// Step 1 most frequence
 		Map<String, Integer> allFrequency = new HashMap<String, Integer>();
-
+		String basePath = "https://";
+		
 		for (int i = 0; i < urlList.size(); i++) {
 			// for a string , find the most frequence match common string
 			Map<String, Integer> tmpFrequency = new HashMap<String, Integer>();
@@ -79,10 +80,14 @@ public class ProcessBaseUrl {
 				if (tmpUrl.equals(compareUrl))
 					continue;
 				String tmpCommon = greatestCommonPrefix(tmpUrl, compareUrl);
+				if(tmpCommon.length() <= basePath.length()) {
+					continue;
+				}
+				
 				if (tmpFrequency.containsKey(tmpCommon)) {
-					tmpFrequency.put(tmpCommon, tmpFrequency.get(tmpCommon) + 1);
+ 					tmpFrequency.put(tmpCommon, tmpFrequency.get(tmpCommon) + 1);
 				} else {
-					tmpFrequency.put(tmpCommon, 1);
+ 					tmpFrequency.put(tmpCommon, 1);
 				}
 			}
 			// Out.prln(tmpFrequency);
@@ -90,6 +95,8 @@ public class ProcessBaseUrl {
 			// map
 			int maxNum = 0;
 			String maxCommon = null;
+			
+			
 			for (Map.Entry<String, Integer> it : tmpFrequency.entrySet()) {
 				if (maxNum < it.getValue()) {
 					maxNum = it.getValue();
@@ -98,19 +105,61 @@ public class ProcessBaseUrl {
 			}
 
 			// put them in the whole map
-			allFrequency.put(maxCommon, maxNum);
+			if (maxCommon.length() > basePath.length()) {
+				allFrequency.put(maxCommon, maxNum);
+			}
 		}
 
 		// Step 2 most length
-		String basePath = "http";
+		
+		int num = 0;
 		Out.prln(allFrequency);
-		for (Map.Entry<String, Integer> entry : allFrequency.entrySet()) {
-			if (entry.getKey().length() > basePath.length()) {
-				basePath = entry.getKey().toString();
+		for (Iterator<Map.Entry<String, Integer>> it = allFrequency.entrySet().iterator(); it.hasNext(); ) {
+			// make sure the key is url
+			// remove the non validate one, too small
+			Map.Entry<String, Integer> entry = it.next();
+			if (entry.getKey().length() < "https://www.a".length()) {
+				it.remove();
+			}
+			
+		}
+		
+		
+		ProcessMethod processMe = new ProcessMethod();
+		Map<String, Integer> sortedMap = processMe.sortByValues(allFrequency);
+		// select top 2
+		if (sortedMap.size() == 0) {
+			return null;
+		} else if (sortedMap.size() == 1) {
+			return (String) sortedMap.entrySet().iterator().next().getKey();
+		} else {
+			Object[] sortedArray = sortedMap.keySet().toArray();
+			// select top 2, who contains api
+			String rank1 = sortedArray[0].toString();
+			String rank2 = sortedArray[1].toString();
+			
+			// if they don't contain api, just return the first one
+			basePath = rank1;
+			
+			// case 1: rank 1 contain api, rank 2 don't contain
+			if (rank1.contains("api") && !rank2.contains("api")) {
+				basePath = rank1;
+			} else if (!rank1.contains("api") && rank2.contains("api")) {
+				// case 2: rank 1 don't contain api, rank2 contain api
+				basePath =  rank2;
+			} else if (rank1.contains("api") && rank2.contains("api")) {
+				// case 3 : rank 1 2 contain api
+				// check rank2 last segment contain "v" or not
+				String[] versionSegment = rank2.split("/");
+   				if (versionSegment[versionSegment.length-1].matches("(?i)v\\d")) {
+					basePath = rank2;
+				}
 			}
 		}
+		
 		basePath = basePath.endsWith("/") ? basePath.substring(0, basePath.length() - 1) : basePath.trim();
 
+		Out.prln(basePath);
 		return basePath;
 
 	}
@@ -130,7 +179,11 @@ public class ProcessBaseUrl {
 		JSONObject pathObject = openAPI.getJSONObject("paths");
 		Iterator<?> pathIter = pathObject.keys();
 		while (pathIter.hasNext()) {
-			urlList.add(pathIter.next().toString());
+			String str = pathIter.next().toString();
+			Out.prln(str);
+			if(str != null && !str.isEmpty() && !str.equalsIgnoreCase("http") && !str.equalsIgnoreCase("https")) {
+				urlList.add(str);
+			}
 		}
 
 		Out.prln(urlList);
@@ -139,6 +192,9 @@ public class ProcessBaseUrl {
 			String str = urlList.get(i).trim();
 			if (str.contains("?")) {
 				str = str.substring(0, str.indexOf("?"));
+				if (str.endsWith("~")) {
+					str = str.substring(0, str.length() - 1);
+				}
 				if (str.endsWith("/")) {
 					str = str.substring(0, str.length() - 1);
 				}
@@ -146,7 +202,7 @@ public class ProcessBaseUrl {
 			}
 			Out.prln(str);
 		}
-
+		
 		Out.prln(urlList);
 
 		return urlList;

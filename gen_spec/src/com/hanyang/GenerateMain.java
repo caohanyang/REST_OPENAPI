@@ -9,6 +9,7 @@ public class GenerateMain {
 		try {
 			swagger.put("swagger", "2.0");
 			swagger.put("info", "This is the information of the API");
+			swagger.put("produces", "application/json");
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
