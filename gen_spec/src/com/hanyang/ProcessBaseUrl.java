@@ -15,6 +15,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.tika.Tika;
 import org.json.JSONArray;
@@ -105,7 +106,7 @@ public class ProcessBaseUrl {
 			}
 
 			// put them in the whole map
-			if (maxCommon.length() > basePath.length()) {
+			if (maxCommon!=null && maxCommon.length() > basePath.length()) {
 				allFrequency.put(maxCommon, maxNum);
 			}
 		}
@@ -144,16 +145,19 @@ public class ProcessBaseUrl {
 			// case 1: rank 1 contain api, rank 2 don't contain
 			if (rank1.contains("api") && !rank2.contains("api")) {
 				basePath = rank1;
-			} else if (!rank1.contains("api") && rank2.contains("api")) {
+			} else if (!rank1.contains("api") && (rank2.contains("api") | rank2.contains("rest"))) {
 				// case 2: rank 1 don't contain api, rank2 contain api
 				basePath =  rank2;
 			} else if (rank1.contains("api") && rank2.contains("api")) {
 				// case 3 : rank 1 2 contain api
 				// check rank2 last segment contain "v" or not
-				String[] versionSegment = rank2.split("/");
-   				if (versionSegment[versionSegment.length-1].matches("(?i)v\\d")) {
+				String[] segment = rank2.split("/");
+   				if (segment[segment.length-1].matches("(?i)v\\d")) {
 					basePath = rank2;
-				}
+				} else if (segment[segment.length-1].matches("(?i)rest")) {
+   					// check rank2 last segment contain "/rest" or not
+   					basePath = rank2;
+   				}
 			}
 		}
 		
@@ -218,7 +222,9 @@ public class ProcessBaseUrl {
 			String schemes = url.getProtocol();
 			JSONArray scheArr = new JSONArray();
 			openAPI.put("host", host);
-			openAPI.put("basePath", basePath);
+			if (StringUtils.isNotEmpty(basePath)) {
+				openAPI.put("basePath", basePath);
+			}
 			scheArr.put(schemes);
 			openAPI.put("schemes", scheArr);
 		} catch (MalformedURLException e) {

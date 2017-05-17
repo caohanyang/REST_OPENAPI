@@ -1,0 +1,156 @@
+{
+  "basePath": "/rest",
+  "paths": {
+    "/images/new": {
+      "GET": {}
+    },
+    "/venues/rss": {
+      "put": {}
+    },
+    "http://eventful.com/oauth/access_token": {
+      "POST": {}
+    },
+    "/performers/links/add": {
+      "put": {}
+    },
+    "/venues/tags/new": {
+      "put": {}
+    },
+    "/events/performers/add": {
+      "put": {}
+    },
+    "/venues/properties/remove": {
+      "put": {}
+    },
+    "/events/images/remove": {
+      "get": {}
+    },
+    "/events/performers/remove": {
+      "get": {}
+    },
+    "http://eventful.com/events": {
+      "put": {}
+    },
+    "/venues/search": {
+      "put": {}
+    },
+    "/categories/list": {
+      "put": {}
+    },
+    "/performers/event/list": {
+      "put": {}
+    },
+    "/events/tags/remove": {
+      "delete": {}
+    },
+    "/events/categories/add": {
+      "put": {}
+    },
+    "/performers/withdraw": {
+      "put": {}
+    },
+    "/performers/images/remove": {
+      "get": {}
+    },
+    "/users/locales/add": {
+      "put": {}
+    },
+    "http://api.eventful.com": {
+      "put": {}
+    },
+    "http://eventful.com/venues/V0-001-000111066-8": {
+      "Delete": {},
+      "put": {}
+    },
+    "/users/locales/list": {
+      "put": {}
+    },
+    "/users/locales/delete": {
+      "put": {}
+    },
+    "/events/restore": {
+      "put": {}
+    },
+    "/users/calendars/list": {
+      "put": {}
+    },
+    "/events/categories/remove": {
+      "get": {}
+    },
+    "/venues/restore": {
+      "put": {}
+    },
+    "http://eventful.com/events/new": {
+      "put": {}
+    },
+    "http://eventful.com/venues/new": {
+      "put": {}
+    },
+    "/performers/xids/list": {
+      "put": {}
+    },
+    "/events/dates/resolve": {
+      "put": {}
+    },
+    "http://eventful.com/events/E0-001-000278174-6": {
+      "Delete": {},
+      "put": {}
+    },
+    "/events/ical": {
+      "put": {}
+    },
+    "/events/going/list": {
+      "put": {}
+    },
+    "/users/search": {
+      "put": {}
+    },
+    "http://eventful.com/)": {
+      "put": {}
+    },
+    "/events/tags/list": {
+      "put": {}
+    },
+    "/venues/ical": {
+      "put": {}
+    },
+    "/events/tags/new": {
+      "put": {}
+    },
+    "/venues/tags/list": {
+      "put": {}
+    },
+    "/events/modify": {
+      "put": {}
+    },
+    "/users/going/add": {
+      "put": {}
+    },
+    "/venues/modify": {
+      "put": {}
+    },
+    "http://eventful.com/venues/V0-001-000102695-2": {
+      "Delete": {},
+      "put": {}
+    },
+    "http://images.evdb.com/images/small/m/mruser.jpg</url>": {
+      "put": {}
+    },
+    "/events/reindex": {
+      "put": {}
+    },
+    "/users/calendars/get": {
+      "get": {}
+    },
+    "/events/properties/add": {
+      "put": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.eventful.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

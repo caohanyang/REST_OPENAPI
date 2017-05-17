@@ -1,0 +1,612 @@
+{
+  "paths": {
+    "http://eventful.com/events/E0-001-000278174-6": {
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id string",
+            "description": "The ID of the requested event.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_id string",
+            "description": "The ID of the link to be deleted.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id string",
+            "description": "The ID of the event to which this link is being added.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link string",
+            "description": "The URL of the link. (e.g. \"http://foo.com\")",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description string",
+            "description": "The title of the link. (e.g. \"Foo Laboratories\") (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_type_id integer",
+            "description": "The ID of the link type, as found in this list: ID Link Type\n15 Blog\n2 Box Office\n8 Chat\n23 Facebook\n1 Info\n21 Myspace\n3 News\n17 Official Site\n18 Podcast\n4 Review\n5 Sponsor\n6 Tickets\n14 Webcast\n19 Website\n20 Wiki\n16 Other\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/rest/events/rss": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title string",
+            "description": "Summary of search query passed from input parameters.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link string",
+            "description": "Source of RSS feed. (http://eventful.com/)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description string",
+            "description": "Required by RSS 2.0 format.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "language string",
+            "description": "Default \"en-US\".",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "copyright string",
+            "description": "Required by RSS 2.0 format.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "category string",
+            "description": "Required by RSS 2.0 format.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "generator string",
+            "description": "Required by RSS 2.0 format.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "docs string",
+            "description": "Required by RSS 2.0 format.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ttl string",
+            "description": "Required by RSS 2.0 format.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "item tag",
+            "description": "Each item entry has the following structure: title string The event title. description string The event description. In RSS, this includes the start time, end time, venue, venueid, tags, and description. category string Unused. pubDate string The start date and time of the event. (e.g. \"Mon, 26 Sep 2005 08:33:28 -0700\") guid string The unique ID for this event, it is the event's Eventful URL. link string URL of associated event on Eventful site.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title string",
+            "description": "Each item entry has the following structure: title string The event title. description string The event description. In RSS, this includes the start time, end time, venue, venueid, tags, and description. category string Unused. pubDate string The start date and time of the event. (e.g. \"Mon, 26 Sep 2005 08:33:28 -0700\") guid string The unique ID for this event, it is the event's Eventful URL. link string URL of associated event on Eventful site.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description string",
+            "description": "Each item entry has the following structure: title string The event title. description string The event description. In RSS, this includes the start time, end time, venue, venueid, tags, and description. category string Unused. pubDate string The start date and time of the event. (e.g. \"Mon, 26 Sep 2005 08:33:28 -0700\") guid string The unique ID for this event, it is the event's Eventful URL. link string URL of associated event on Eventful site.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "category string",
+            "description": "Each item entry has the following structure: title string The event title. description string The event description. In RSS, this includes the start time, end time, venue, venueid, tags, and description. category string Unused. pubDate string The start date and time of the event. (e.g. \"Mon, 26 Sep 2005 08:33:28 -0700\") guid string The unique ID for this event, it is the event's Eventful URL. link string URL of associated event on Eventful site.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "pubDate string",
+            "description": "Each item entry has the following structure: title string The event title. description string The event description. In RSS, this includes the start time, end time, venue, venueid, tags, and description. category string Unused. pubDate string The start date and time of the event. (e.g. \"Mon, 26 Sep 2005 08:33:28 -0700\") guid string The unique ID for this event, it is the event's Eventful URL. link string URL of associated event on Eventful site.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "guid string",
+            "description": "Each item entry has the following structure: title string The event title. description string The event description. In RSS, this includes the start time, end time, venue, venueid, tags, and description. category string Unused. pubDate string The start date and time of the event. (e.g. \"Mon, 26 Sep 2005 08:33:28 -0700\") guid string The unique ID for this event, it is the event's Eventful URL. link string URL of associated event on Eventful site.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link string",
+            "description": "Each item entry has the following structure: title string The event title. description string The event description. In RSS, this includes the start time, end time, venue, venueid, tags, and description. category string Unused. pubDate string The start date and time of the event. (e.g. \"Mon, 26 Sep 2005 08:33:28 -0700\") guid string The unique ID for this event, it is the event's Eventful URL. link string URL of associated event on Eventful site.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "pubDate string",
+            "description": "Required by RSS 2.0 format.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "lastBuildDate string",
+            "description": "Required by RSS 2.0 format.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://eventful.com/venues/V0-001-000111066-8": {
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "comment_id string",
+            "description": "The ID of the comment to be deleted.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id string",
+            "description": "The ID of the venue to which this comment is being added.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "comment string",
+            "description": "The body of the comment message.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://eventful.com/venues/V0-001-000102695-2": {
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_id string",
+            "description": "The ID of the link to be deleted.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id string",
+            "description": "The ID of the venue to which this link is being added.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link string",
+            "description": "The URL of the link. (e.g. \"http://foo.com\")",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description string",
+            "description": "The title of the link. (e.g. \"Foo Laboratories\") (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_type_id integer",
+            "description": "The ID of the link type, as found in this list: ID Link Type\n15 Blog\n2 Box Office\n8 Chat\n1 Info\n3 News\n17 Official Site\n18 Podcast\n4 Review\n5 Sponsor\n6 Tickets\n14 Webcast\n19 Website\n16 Other\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://www.eventful.com/users/eventor": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id string",
+            "description": "The ID of the requested user.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "list-counts integer",
+            "description": "List counts of user activity. Set to 1 to display this data. (optional)",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://eventful.com/events": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication . Oauth is NOT needed but an application key (app_key query string parameter) is required.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "keywords string",
+            "description": "The search keywords. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "location string",
+            "description": "A location name to use in filtering the search results. Locations in the form \"San Diego\", \"San Diego, TX\", \"London, United Kingdom\", and \"Calgary, Alberta, Canada\" are accepted, as are postal codes (\"92122\") and venue IDs (\"V0-001-000268633-5\"). Common geocoordinate formats (\"32.746682, -117.162741\") are also accepted, but the \"within\" parameter is required in order to set a search radius. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "date string",
+            "description": "Limit this list of results to a date range, specified by label or exact range. Currently supported labels include: \"All\", \"Future\", \"Past\", \"Today\", \"Last Week\", \"This Week\", \"Next week\", and months by name, e.g. \"October\". Exact ranges can be specified the form 'YYYYMMDD00-YYYYMMDD00', for example '2012042500-2012042700'; the last two digits of each date in this format are ignored. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "category string",
+            "description": "Limit the search results to this category ID. A list of categories may be specified separated by commas. See /categories/list for a list of categories and their IDs. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ex_category string",
+            "description": "Exclude search results from including this category ID. A list of categories may be specified separated by commas. See /categories/list for a list of categories and their IDs. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "within integer",
+            "description": "If within is set and the \"location\" parameter resolves to a specific geolocation, the search will be restricted to the specified radius. If the \"location\" parameter does not resolve to a specific location, this parameter is ignored. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "units string",
+            "description": "One of \"mi\" or \"km\", the units of the \"within\" parameter. Defaults to \"mi\". (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "count_only boolean",
+            "description": "If count_only is set, an abbreviated version of the output will be returned. Only total_items and search_time elements are included in the result. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "sort_order string",
+            "description": "One of 'popularity', 'date', or 'relevance'. Default is 'relevance'. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "sort_direction string",
+            "description": "One of 'ascending' or 'descending'. Default varies by sort_order. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page_size integer",
+            "description": "The desired number of results per page. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page_number integer",
+            "description": "The desired page number. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "image_sizes string",
+            "description": "A comma separted list of image_sizes desired. See Faq for list of possible image sizes. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "languages integer",
+            "description": "Return our guess of each event language. (\"Undetermined\" is a possibility) (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "mature string",
+            "description": "Sets the level of filtering for events marked as \"mature\" due to keywords in the title or description. One of 'all' (no filtering), 'normal', or 'safe'. 'Normal' mature filtering consists of words that are clearly profanities and inappropriate for younger audiences. 'Safe' mature filtering consists of all normal mature filtered words, as well as other terms that may be used as inappropriate innuendo. A 'safe' filter may eliminate events that are benign in nature, but contain questionable content based on keywords. Defaults to 'all'. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "include string",
+            "description": "Indicates that optional sections should be included in the result XML. Multiple section names can be indicated, separated by commas (e.g. 'categories,links'). Sections include 'categories', 'subcategories', 'popularity', 'tickets', 'price', and 'links'. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "change_multi_day_start boolean",
+            "description": "If set changes the start_date of long duration events (lasting multiple days) to the beginning of the search date range. It will also give the next occurence of a recurring event after the start range. This will prevent an event from appearing to be outside the date range requested . (optional)",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://eventful.com/events/new": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id string",
+            "description": "The user ID. (defaults to the authenticated user)",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://eventful.com/venues/new": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name string",
+            "description": "The displayed name for this venue.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "address string",
+            "description": "The street address of the venue. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "city string",
+            "description": "The city name. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "region string",
+            "description": "The name of the region (state, province, county) (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "postal_code string",
+            "description": "The postal code or ZIP code. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "country string",
+            "description": "The name of the country.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description string",
+            "description": "The venue description. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "privacy integer",
+            "description": "The privacy setting for this venue. (1 = public, 2 = private, 3 = semi-private) (optional, defaults to 1)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "venue_type string",
+            "description": "The type of venue (e.g. Cinema, Arena). See the new venue page for a current list of options.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "url string",
+            "description": "A URI link to further information about this venue. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "url_type string",
+            "description": "The type of the link provided in the url parameter (e.g. Blog, Review, Official Site). See the \"Add a link\" section of any event page for a current list. (optional)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "parent_id string",
+            "description": "The ID of this venue's parent venue. (optional)",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/rest/users/going/add": {
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "status string",
+            "description": "ok",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message string",
+            "description": "Event added successfully.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/": {
+      "put": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.eventful.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -66,8 +66,8 @@ public class ExtractInformation {
 			if (API_NAME.contains("google")) {
 				API_NAME = args[0].split("//")[1].split("/")[1];
 			}
-			FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
-			CompareSet_PATH = "CompareSet/" + API_NAME;
+			FilteredSet_PATH = "../FilteredSet/" + API_FOLDER;
+			CompareSet_PATH = "../CompareSet/" + API_NAME;
         }
 		
 		// init gate

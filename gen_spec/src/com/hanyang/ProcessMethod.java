@@ -29,16 +29,25 @@ public class ProcessMethod {
 		JSONObject actionObject = new JSONObject();
 		actionObject.put(action, new JSONObject());
 
-		if (urlObject.isNull(url)) {
-			// if url object is null, add directly for the first time
-			urlObject.put(url, actionObject);
-		} else {
-			// otherwise add the new action to the url
-			JSONObject urlInterObject = urlObject.getJSONObject(url);
-			urlInterObject.put(action, new JSONObject());
+		if (isRealUrl(url)) {
+			if (urlObject.isNull(url)) {
+				// if url object is null, add directly for the first time
+				urlObject.put(url, actionObject);
+			} else {
+				// otherwise add the new action to the url
+				JSONObject urlInterObject = urlObject.getJSONObject(url);
+				urlInterObject.put(action, new JSONObject());
+			} 
 		}
-
 		return openAPI;
+	}
+
+	private boolean isRealUrl(String url) {
+		// url minimum length
+		if (url.length() > "http://".length()) {
+			return true;
+		}
+		return false;
 	}
 
 	public void addNoParaUrl(JSONObject openAPI, String strAll, List<JSONObject> infoJson) throws JSONException {

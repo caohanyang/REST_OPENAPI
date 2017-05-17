@@ -17,13 +17,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/gate-asm-5.0.3.jar"/>
-	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/gate-compiler-jdt-4.3.2-P20140317-1600.jar"/>
-	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/gate.jar"/>
-	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/tika-core-1.7.jar"/>
-	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/tika-parsers-1.7.jar"/>
-	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/Information_Retrieval.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/ant-1.9.3.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/ant-launcher-1.9.3.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/aopalliance-1.0.jar"/>
@@ -38,7 +31,11 @@
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/commons-logging-1.1.3.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/flying-saucer-core-9.0.4.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/fontbox-1.8.8.jar"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/gate-asm-5.0.3.jar"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/gate-compiler-jdt-4.3.2-P20140317-1600.jar"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/gate.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/Information_Retrieval.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/ivy-2.3.0.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/jackson-annotations-2.3.0.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/jackson-core-2.3.2.jar"/>
@@ -49,6 +46,7 @@
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/jempbox-1.8.8.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/joda-time-2.9.2.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/nekohtml-1.9.14.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/pdfbox-1.8.8.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/poi-3.11.jar"/>
@@ -59,11 +57,14 @@
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/spring-beans-2.5.6.SEC01.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/spring-core-2.5.6.SEC01.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/stax2-api-3.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/tika-core-1.7.jar"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/tika-parsers-1.7.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/woodstox-core-lgpl-4.2.0.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/xercesImpl-2.9.1.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/xmlunit-1.5.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/xpp3-1.1.4c.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/xstream-1.4.7.jar"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
