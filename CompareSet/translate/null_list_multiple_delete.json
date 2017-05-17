@@ -1,0 +1,15 @@
+{
+  "basePath": "/language/translate/v2/languages",
+  "paths": {
+    "?method=Method: translate": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "translation.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

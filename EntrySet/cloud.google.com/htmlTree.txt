@@ -1,0 +1,12 @@
+
+                   /-/translate
+                  |
+                  |                         /-/detect
+-- /cloud.google.com                       |
+                  |                        |--/languages
+                  |                        |
+                   \/translate/docs/reference-/libraries
+                                           |
+                                           |--/rest
+                                           |
+                                            \-/translate

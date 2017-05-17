@@ -57,11 +57,15 @@ public class ExtractInformation {
 	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del", "delete"));
 
 	public static void main(String[] args) throws GateException, JSONException, IOException {
-		// corpus/www.instagram.com dev.twitter.com www.twilio.com www.youtube.com
-		// www.flickr.com
+		// https://developers.google.com/youtube/v3 https://developers.google.com/youtube/v3/docs
+		// https://cloud.google.com/translate  https://cloud.google.com/translate/docs/reference
 		if (args.length > 0){
 			API_FOLDER = args[0].split("//")[1].split("/")[0];
 			API_NAME = args[0].split("//")[1].split("\\.")[1];
+			// google have several APIs
+			if (API_NAME.contains("google")) {
+				API_NAME = args[0].split("//")[1].split("/")[1];
+			}
 			FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 			CompareSet_PATH = "CompareSet/" + API_NAME;
         }

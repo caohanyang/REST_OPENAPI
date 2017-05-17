@@ -252,7 +252,10 @@ public class ProcessBaseUrl {
 				
 			} else {
 				// if url contains commonUrl
-				if (keyUrl.contains(baseUrl)) {
+				if (keyUrl.equals(baseUrl)) {
+					retainStr = "/";
+					originStr = (String) pathObject.names().get(i);
+				} else if (keyUrl.contains(baseUrl)) {
 					retainStr = keyUrl.substring(baseUrl.length());
 					originStr = (String) pathObject.names().get(i);
 				} else {

@@ -26,14 +26,14 @@ class Crawler(object):
     # https://go.developer.ebay.com/api-documentation   http://developer.ebay.com/devzone/rest
     # https://msdn.microsoft.com/en-us/library/ff701713.aspx  https://msdn.microsoft.com/en-us/library/ff
     # https://github.com/domainersuitedev/delicious-api https://github.com/domainersuitedev/delicious-api/blob/master/api
-     # https://developer.foursquare.com     https://developer.foursquare.com/docs
-     # https://docs.docusign.com/esign      https://docs.docusign.com/esign/restapi
+    # https://developer.foursquare.com     https://developer.foursquare.com/docs
+    # https://docs.docusign.com/esign      https://docs.docusign.com/esign/restapi
     # http://www.geonames.org/export/ws-overview.html   http://www.geonames.org/export
     # https://www.yelp.com/developers/documentation/v3
-     # https://developers.google.com/analytics/devguides/config/mgmt/v3/mgmtReference  https://developers.google.com/analytics/devguides/config/mgmt/v3/mgmtReference
+    # https://developers.google.com/analytics/devguides/config/mgmt/v3/mgmtReference  https://developers.google.com/analytics/devguides/config/mgmt/v3/mgmtReference
     # https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_list.htm   ui-view
     # http://api.eventful.com/docs
-     # https://cloud.google.com/translate  https://cloud.google.com/translate/docs/reference/rest
+    # https://cloud.google.com/translate  https://cloud.google.com/translate/docs/reference
 
     print len(sys.argv)
     print str(sys.argv)
