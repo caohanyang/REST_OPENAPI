@@ -72,8 +72,9 @@ if __name__ == "__main__":
     # TASK: Build a grid search to find out whether unigrams or bigrams are
     # more useful.
     # Fit the pipeline on the training set using grid search for the parameters
+    # parameters = {'vect__ngram_range': [(1,1),(1,2)],}
     parameters = {'vect__ngram_range': [(1,1),(1,2)],}
-    grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1)
+    grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1, cv=10)
     grid_search.fit(dataset.data, dataset.target)
     # TASK: print the cross-validated scores for the each parameters set
     # explored by the grid search

@@ -1,0 +1,30 @@
+
+                                        /-/v3
+                                       |
+                                       |   /-/additional_resources
+                                       |  |
+                                       |  |--/all_category_list
+                                       |  |
+                                       |  |--/authentication
+-- /www.yelp.com/developers/documentation |
+                                       |  |--/autocomplete
+                                       |  |
+                                       |  |--/business
+                                       |  |
+                                       |  |--/business_reviews
+                                       |  |
+                                       |  |--/business_search
+                                        \/v3
+                                          |--/business_search_phone
+                                          |
+                                          |--/category_list
+                                          |
+                                          |--/get_started
+                                          |
+                                          |--/state_codes
+                                          |
+                                          |--/supported_locales
+                                          |
+                                          |--/transactions_search
+                                          |
+                                           \/all_category_list-/categories.json

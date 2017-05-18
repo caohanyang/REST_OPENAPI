@@ -9,11 +9,12 @@
 # https://developer.linkedin.com/docs
 # http://api.eventful.com/docs
 # https://cloud.google.com/translate  https://cloud.google.com/translate/docs/reference
+# https://www.yelp.com/developers/documentation/v3
 
 # https://developers.facebook.com/docs/graph-api https://developers.facebook.com/docs/graph-api/reference
 # http://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html   http://docs.aws.amazon.com/AWSECommerceService/latest/DG
 # https://en.wikipedia.org/api/rest_v1/
-python ./rest_crawler/crawlAllPages.py $1 $2
+# python ./rest_crawler/crawlAllPages.py $1 $2
 
 # predict html page
 python ./predict_page/predictExternal.py $1

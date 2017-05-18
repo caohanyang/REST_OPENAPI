@@ -30,21 +30,23 @@ import gate.creole.ResourceInstantiationException;
 import gate.util.Out;
 
 public class ProcessBaseUrl {
-	public JSONObject handleBaseUrl(JSONObject openAPI, String mode, String baseUrl) throws JSONException, MalformedURLException {
-		
+	public JSONObject handleBaseUrl(JSONObject openAPI, String mode, String baseUrl)
+			throws JSONException, MalformedURLException {
+
 		if (mode == "null") {
 			openAPI = nullBaseUrl(openAPI, mode, baseUrl);
 		} else {
 			openAPI = httpBaseUrl(openAPI, mode);
 		}
-       
+
 		return openAPI;
 	}
 
-	private JSONObject nullBaseUrl(JSONObject openAPI, String mode, String baseUrl) throws MalformedURLException, JSONException {
-		
+	private JSONObject nullBaseUrl(JSONObject openAPI, String mode, String baseUrl)
+			throws MalformedURLException, JSONException {
+
 		// 1. adjust specification
-		if (baseUrl!=null) {
+		if (baseUrl != null) {
 			openAPI = adjustSpec(openAPI, mode, baseUrl);
 		}
 		return openAPI;
@@ -71,7 +73,7 @@ public class ProcessBaseUrl {
 		// Step 1 most frequence
 		Map<String, Integer> allFrequency = new HashMap<String, Integer>();
 		String basePath = "https://";
-		
+
 		for (int i = 0; i < urlList.size(); i++) {
 			// for a string , find the most frequence match common string
 			Map<String, Integer> tmpFrequency = new HashMap<String, Integer>();
@@ -81,14 +83,14 @@ public class ProcessBaseUrl {
 				if (tmpUrl.equals(compareUrl))
 					continue;
 				String tmpCommon = greatestCommonPrefix(tmpUrl, compareUrl);
-				if(tmpCommon.length() <= basePath.length()) {
+				if (tmpCommon.length() <= basePath.length()) {
 					continue;
 				}
-				
+
 				if (tmpFrequency.containsKey(tmpCommon)) {
- 					tmpFrequency.put(tmpCommon, tmpFrequency.get(tmpCommon) + 1);
+					tmpFrequency.put(tmpCommon, tmpFrequency.get(tmpCommon) + 1);
 				} else {
- 					tmpFrequency.put(tmpCommon, 1);
+					tmpFrequency.put(tmpCommon, 1);
 				}
 			}
 			// Out.prln(tmpFrequency);
@@ -96,8 +98,7 @@ public class ProcessBaseUrl {
 			// map
 			int maxNum = 0;
 			String maxCommon = null;
-			
-			
+
 			for (Map.Entry<String, Integer> it : tmpFrequency.entrySet()) {
 				if (maxNum < it.getValue()) {
 					maxNum = it.getValue();
@@ -106,26 +107,25 @@ public class ProcessBaseUrl {
 			}
 
 			// put them in the whole map
-			if (maxCommon!=null && maxCommon.length() > basePath.length()) {
+			if (maxCommon != null && maxCommon.length() > basePath.length()) {
 				allFrequency.put(maxCommon, maxNum);
 			}
 		}
 
 		// Step 2 most length
-		
+
 		int num = 0;
 		Out.prln(allFrequency);
-		for (Iterator<Map.Entry<String, Integer>> it = allFrequency.entrySet().iterator(); it.hasNext(); ) {
+		for (Iterator<Map.Entry<String, Integer>> it = allFrequency.entrySet().iterator(); it.hasNext();) {
 			// make sure the key is url
 			// remove the non validate one, too small
 			Map.Entry<String, Integer> entry = it.next();
 			if (entry.getKey().length() < "https://www.a".length()) {
 				it.remove();
 			}
-			
+
 		}
-		
-		
+
 		ProcessMethod processMe = new ProcessMethod();
 		Map<String, Integer> sortedMap = processMe.sortByValues(allFrequency);
 		// select top 2
@@ -138,29 +138,38 @@ public class ProcessBaseUrl {
 			// select top 2, who contains api
 			String rank1 = sortedArray[0].toString();
 			String rank2 = sortedArray[1].toString();
-			
+
 			// if they don't contain api, just return the first one
 			basePath = rank1;
-			
+
 			// case 1: rank 1 contain api, rank 2 don't contain
 			if (rank1.contains("api") && !rank2.contains("api")) {
 				basePath = rank1;
 			} else if (!rank1.contains("api") && (rank2.contains("api") | rank2.contains("rest"))) {
 				// case 2: rank 1 don't contain api, rank2 contain api
-				basePath =  rank2;
+				basePath = rank2;
 			} else if (rank1.contains("api") && rank2.contains("api")) {
 				// case 3 : rank 1 2 contain api
 				// check rank2 last segment contain "v" or not
 				String[] segment = rank2.split("/");
-   				if (segment[segment.length-1].matches("(?i)v\\d")) {
+				// https://api.yelp.com/v3/businesses/
+				// check the segment, if it contians v?
+				for (int i = 0; i < segment.length; i++) {
+					if (segment[i].matches("(?i)v\\d")) {
+						basePath = rank2.substring(0, rank2.indexOf(segment[i]) + segment[i].length());
+						break;
+					}
+				}
+				// check last segment
+				if (segment[segment.length - 1].matches("(?i)v\\d")) {
 					basePath = rank2;
-				} else if (segment[segment.length-1].matches("(?i)rest")) {
-   					// check rank2 last segment contain "/rest" or not
-   					basePath = rank2;
-   				}
+				} else if (segment[segment.length - 1].matches("(?i)rest")) {
+					// check rank2 last segment contain "/rest" or not
+					basePath = rank2;
+				}
 			}
 		}
-		
+
 		basePath = basePath.endsWith("/") ? basePath.substring(0, basePath.length() - 1) : basePath.trim();
 
 		Out.prln(basePath);
@@ -185,7 +194,7 @@ public class ProcessBaseUrl {
 		while (pathIter.hasNext()) {
 			String str = pathIter.next().toString();
 			Out.prln(str);
-			if(str != null && !str.isEmpty() && !str.equalsIgnoreCase("http") && !str.equalsIgnoreCase("https")) {
+			if (str != null && !str.isEmpty() && !str.equalsIgnoreCase("http") && !str.equalsIgnoreCase("https")) {
 				urlList.add(str);
 			}
 		}
@@ -206,14 +215,15 @@ public class ProcessBaseUrl {
 			}
 			Out.prln(str);
 		}
-		
+
 		Out.prln(urlList);
 
 		return urlList;
 
 	}
 
-	public JSONObject adjustSpec(JSONObject openAPI, String scheme, String baseUrl) throws MalformedURLException, JSONException {
+	public JSONObject adjustSpec(JSONObject openAPI, String scheme, String baseUrl)
+			throws MalformedURLException, JSONException {
 		try {
 			URL url = new URL(baseUrl);
 			// 1. add host, basePath, scheme
@@ -228,16 +238,16 @@ public class ProcessBaseUrl {
 			scheArr.put(schemes);
 			openAPI.put("schemes", scheArr);
 		} catch (MalformedURLException e) {
-		    // the URL is not in a valid form
+			// the URL is not in a valid form
 			return openAPI;
 		}
 
 		// 2. short internal urls
 		JSONObject pathObject = openAPI.getJSONObject("paths");
 		// if pathObject is null, return directly
-		if (pathObject.length() == 0) 
+		if (pathObject.length() == 0)
 			return openAPI;
-		
+
 		Map<String, Pair<String, JSONObject>> modiMap = new HashMap<String, Pair<String, JSONObject>>();
 		// construct new object
 		for (int i = 0; i < pathObject.names().length(); i++) {
@@ -249,13 +259,13 @@ public class ProcessBaseUrl {
 					keyUrl = keyUrl.substring(0, keyUrl.length() - 1);
 				}
 			}
-           
-			String originStr = null, retainStr=null;
-			
+
+			String originStr = null, retainStr = null;
+
 			if (scheme == "null") {
 				originStr = (String) pathObject.names().get(i);
 				retainStr = "?method" + "=" + originStr;
-				
+
 			} else {
 				// if url contains commonUrl
 				if (keyUrl.equals(baseUrl)) {
@@ -265,15 +275,15 @@ public class ProcessBaseUrl {
 					retainStr = keyUrl.substring(baseUrl.length());
 					originStr = (String) pathObject.names().get(i);
 				} else {
-					// doestn't contain 
+					// doestn't contain
 					continue;
 				}
 			}
 			JSONObject originValue = (JSONObject) pathObject.get(originStr);
-			
+
 			Pair<String, JSONObject> replacedJson = Pair.of(retainStr, originValue);
 			// replacedJson.put(retainStr, originValue);
-			
+
 			modiMap.put(originStr, replacedJson);
 		}
 
@@ -286,15 +296,16 @@ public class ProcessBaseUrl {
 		Out.prln(pathObject);
 		return openAPI;
 	}
-	
-	public String searchBaseUrl(File[] listFiles, String API_NAME) throws MalformedURLException, ResourceInstantiationException, JSONException {
+
+	public String searchBaseUrl(File[] listFiles, String API_NAME)
+			throws MalformedURLException, ResourceInstantiationException, JSONException {
 		// define the list of baseUrl
 		List<String> baseUrlList = new ArrayList<String>();
 		ProcessMethod processMe = new ProcessMethod();
 		for (int i = 0; i < listFiles.length; i++) {
 			// print the file name
-//			Out.prln("=============File name=======================");
-//			Out.prln(listFiles[i].getPath());
+			// Out.prln("=============File name=======================");
+			// Out.prln(listFiles[i].getPath());
 			String type = new Tika().detect(listFiles[i].getPath());
 			// only detect html
 			if (type.equals("text/html")) {
@@ -304,10 +315,11 @@ public class ProcessBaseUrl {
 				Document doc = (Document) Factory.createResource("gate.corpora.DocumentImpl", params);
 				// 2. get all text
 				DocumentContent textAll = doc.getContent();
-                
+
 				// 4.1 search for the GET https
 				String strAll = textAll.toString();
-				// Fix 1: suppose the len(content between get and http) < 40 + "://"
+				// Fix 1: suppose the len(content between get and http) < 40 +
+				// "://"
 				String regexRest = "(?si)rest.+request";
 				String regexHttp = "(?si)((http)|(https)){1}://";
 				Pattern pRest = Pattern.compile(regexRest);
@@ -327,19 +339,18 @@ public class ProcessBaseUrl {
 						}
 					}
 				}
-				
+
 			}
 		}
-		
+
 		Out.prln(baseUrlList);
-		
-        //find the base url
-		Map<Object, Long> counts =
-				baseUrlList.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
-		
+
+		// find the base url
+		Map<Object, Long> counts = baseUrlList.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
+
 		Map<Object, Long> sortedMap = processMe.sortByValues(counts);
-//		Out.prln(sortedMap);
-		
+		// Out.prln(sortedMap);
+
 		// select top 2
 		if (sortedMap.size() == 0) {
 			return null;
@@ -348,12 +359,12 @@ public class ProcessBaseUrl {
 		} else {
 			Object[] sortedArray = sortedMap.keySet().toArray();
 			// select top 2, who contains api
-			for (int i = 0; i< 2; i++) {
+			for (int i = 0; i < 2; i++) {
 				if (sortedArray[i].toString().contains("api")) {
 					return sortedArray[i].toString();
 				}
 			}
-			
+
 			// if they don't contain api, just return the first one
 			return sortedArray[0].toString();
 		}

@@ -37,7 +37,7 @@ public class ProcessMethod {
 				// otherwise add the new action to the url
 				JSONObject urlInterObject = urlObject.getJSONObject(url);
 				urlInterObject.put(action, new JSONObject());
-			} 
+			}
 		}
 		return openAPI;
 	}
@@ -114,21 +114,23 @@ public class ProcessMethod {
 			// it should contain api name
 			return url;
 		}
-		
+
 		return null;
 	}
-  
+
 	public <K, V extends Comparable<V>> Map<K, V> sortByValues(final Map<K, V> map) {
-	    Comparator<K> valueComparator =  new Comparator<K>() {
-	        public int compare(K k1, K k2) {
-	            int compare = map.get(k2).compareTo(map.get(k1));
-	            if (compare == 0) return 1;
-	            else return compare;
-	        }
-	    };
-	    Map<K, V> sortedByValues = new TreeMap<K, V>(valueComparator);
-	    sortedByValues.putAll(map);
-	    return sortedByValues;
+		Comparator<K> valueComparator = new Comparator<K>() {
+			public int compare(K k1, K k2) {
+				int compare = map.get(k2).compareTo(map.get(k1));
+				if (compare == 0)
+					return 1;
+				else
+					return compare;
+			}
+		};
+		Map<K, V> sortedByValues = new TreeMap<K, V>(valueComparator);
+		sortedByValues.putAll(map);
+		return sortedByValues;
 	}
 
 	public boolean isUrl(String urlText, Annotation anno, String strAll, String aPI_NAME) {
@@ -141,9 +143,8 @@ public class ProcessMethod {
 	public String findAction(String urlString) {
 		if (urlString.contains("get")) {
 			return "GET";
-		} else if (urlString.contains("post") | urlString.contains("create") 
-				| urlString.contains("add") | urlString.contains("edit")
-				| urlString.contains("join")| urlString.contains("set")) {
+		} else if (urlString.contains("post") | urlString.contains("create") | urlString.contains("add")
+				| urlString.contains("edit") | urlString.contains("join") | urlString.contains("set")) {
 			return "POST";
 		} else if (urlString.contains("put")) {
 			return "PUT";

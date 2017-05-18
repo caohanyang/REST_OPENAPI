@@ -40,11 +40,11 @@ import com.google.gson.JsonParser;
 public class ExtractInformation {
 
 	/** The Corpus Pipeline application to contain ANNIE */
-	 // corpus/www.instagram.com dev.twitter.com www.twilio.com www.youtube.com
+	// corpus/www.instagram.com dev.twitter.com www.twilio.com www.youtube.com
 	// www.flickr.com
 	private static String API_NAME = "google";
 	private static String API_FOLDER = "developers.google.com";
-	
+
 	private static String FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
 	// "https", "http", "null"
@@ -57,19 +57,21 @@ public class ExtractInformation {
 	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del", "delete"));
 
 	public static void main(String[] args) throws GateException, JSONException, IOException {
-		// https://developers.google.com/youtube/v3 https://developers.google.com/youtube/v3/docs
-		// https://cloud.google.com/translate  https://cloud.google.com/translate/docs/reference
-		if (args.length > 0){
+		// https://developers.google.com/youtube/v3
+		// https://developers.google.com/youtube/v3/docs
+		// https://cloud.google.com/translate
+		// https://cloud.google.com/translate/docs/reference
+		if (args.length > 0) {
 			API_FOLDER = args[0].split("//")[1].split("/")[0];
 			API_NAME = args[0].split("//")[1].split("\\.")[1];
 			// google have several APIs
 			if (API_NAME.contains("google")) {
 				API_NAME = args[0].split("//")[1].split("/")[1];
 			}
-			FilteredSet_PATH = "../FilteredSet/" + API_FOLDER;
-			CompareSet_PATH = "../CompareSet/" + API_NAME;
-        }
-		
+			FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
+			CompareSet_PATH = "CompareSet/" + API_NAME;
+		}
+
 		// init gate
 		Gate.init();
 
@@ -78,7 +80,7 @@ public class ExtractInformation {
 		File[] listFiles = folder.listFiles();
 		new File(CompareSet_PATH).mkdirs();
 		File compareSet = new File(CompareSet_PATH);
-		
+
 		// 2. generate swagger according to pattern
 		for (Iterator<String> sIterator = MODE.iterator(); sIterator.hasNext();) {
 			String mode = sIterator.next();
@@ -104,8 +106,8 @@ public class ExtractInformation {
 
 	}
 
-	public static void generateOpenAPI(File[] listFiles, String mode, String template, String number,
-			String abbrev) throws ResourceInstantiationException, JSONException, IOException, MalformedURLException {
+	public static void generateOpenAPI(File[] listFiles, String mode, String template, String number, String abbrev)
+			throws ResourceInstantiationException, JSONException, IOException, MalformedURLException {
 		// 2. initial the specification
 		GenerateMain mainObject = new GenerateMain();
 		JSONObject openAPI = mainObject.generateStructure();
@@ -114,10 +116,10 @@ public class ExtractInformation {
 		// 3. different mode
 		// if it's null mode, find the common base url first
 		if (mode == "null") {
-		   baseUrl = processBa.searchBaseUrl(listFiles, API_NAME);
-		   Out.prln(baseUrl);
+			baseUrl = processBa.searchBaseUrl(listFiles, API_NAME);
+			Out.prln(baseUrl);
 		}
-		
+
 		// 4. check each html file
 		for (int i = 0; i < listFiles.length; i++) {
 			// print the file name
@@ -129,7 +131,7 @@ public class ExtractInformation {
 				executeFile(listFiles[i].getPath(), openAPI, mode, template, number, abbrev, baseUrl);
 			}
 		}
-		
+
 		// 4. prune swagger
 		openAPI = processBa.handleBaseUrl(openAPI, mode, baseUrl);
 
@@ -138,8 +140,8 @@ public class ExtractInformation {
 
 	}
 
-	public static void executeFile(String path, JSONObject swagger, String scheme, String template,
-			String number, String abbrev, String baseUrl) throws ResourceInstantiationException, JSONException, IOException {
+	public static void executeFile(String path, JSONObject swagger, String scheme, String template, String number,
+			String abbrev, String baseUrl) throws ResourceInstantiationException, JSONException, IOException {
 		URL u = Paths.get(path).toUri().toURL();
 		FeatureMap params = Factory.newFeatureMap();
 		params.put("sourceUrl", u);
@@ -151,13 +153,12 @@ public class ExtractInformation {
 		// 3. initial swagger
 		ProcessMethod processMe = new ProcessMethod();
 		processMe.generateDefault(swagger);
-		
+
 		if (scheme == "null") {
 			nullMode(swagger, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME);
 		} else {
 			httpMode(swagger, scheme, template, number, abbrev, doc, textAll, processMe);
 		}
-        
 
 	}
 
@@ -172,21 +173,21 @@ public class ExtractInformation {
 
 		AnnotationSet annoOrigin = doc.getAnnotations("Original markups");
 		AnnotationSet annoH1 = annoOrigin.get("h1");
-		
+
 		Iterator<Annotation> urlIter = annoH1.iterator();
 		while (urlIter.hasNext()) {
 			Annotation anno = (Annotation) urlIter.next();
 			String urlText = gate.Utils.stringFor(doc, anno);
 			JSONObject sectionJson = new JSONObject();
-			
+
 			if (processMe.isUrl(urlText, anno, strAll, aPI_NAME)) {
 				urlString = urlText;
 				actionStr = processMe.findAction(urlString);
 				Out.prln("==========Url Action=================");
 				Out.prln(urlText + "  " + actionStr);
-				
+
 				int location = anno.getStartNode().getOffset().intValue();
-				//set url/action in the json
+				// set url/action in the json
 				JSONObject acJson = new JSONObject();
 				acJson.put(actionStr, location);
 				sectionJson.put("action", acJson);
@@ -194,15 +195,15 @@ public class ExtractInformation {
 				urJson.put(urlString, location);
 				sectionJson.put("url", urJson);
 			}
-			
+
 			if (sectionJson.length() > 0) {
 				infoJson.add(sectionJson);
 			}
 		}
-		
+
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
-		
+
 		if (template == "table") {
 			// 5.2 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
@@ -212,7 +213,7 @@ public class ExtractInformation {
 			// 5.3 get list annotation
 			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoList);
 		}
-		
+
 	}
 
 	private static void httpMode(JSONObject swagger, String scheme, String template, String number, String abbrev,
@@ -293,11 +294,8 @@ public class ExtractInformation {
 		doc.setMarkupAware(true);
 
 		AnnotationSet annoOrigin = doc.getAnnotations("Original markups");
-       
+
 		// 6. if info json != null
-		if (infoJson.isEmpty()) {
-			Out.prln("sdfasf");
-		}
 		if (template == "table") {
 			// 5.2 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
@@ -309,24 +307,24 @@ public class ExtractInformation {
 		}
 	}
 
-	private static void handleTemplate(JSONObject swagger, String templateNum, String template, Document doc,
+	private static void handleTemplate(JSONObject swagger, String number, String template, Document doc,
 			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate)
 			throws JSONException {
 		// 5.3 for each page, set findParaTable = False
 		boolean findParaTemplate = false;
 		// 5.3.1 Test if the page contains multiple parameter table or not
 		Iterator<Annotation> testIter = annoTemplate.iterator();
-		String templateNumber = templateNum;
+		String templateNumber = number;
 		// int numTemplate = 0;
-//		while (testIter.hasNext()) {
-//			Annotation anno = (Annotation) testIter.next();
-//			String templateText = gate.Utils.stringFor(doc, anno);
-//			ProcessParameter processPa = new ProcessParameter();
-//			if (processPa.isParaTemplate(templateText, anno, strAll)) {
-//				// numTemplate++;
-//			}
-//		}
-    
+		// while (testIter.hasNext()) {
+		// Annotation anno = (Annotation) testIter.next();
+		// String templateText = gate.Utils.stringFor(doc, anno);
+		// ProcessParameter processPa = new ProcessParameter();
+		// if (processPa.isParaTemplate(templateText, anno, strAll)) {
+		// // numTemplate++;
+		// }
+		// }
+
 		Out.prln(findParaTemplate);
 		// if (numTemplate > 1) {
 		// // more than one parameter template in the page
@@ -362,7 +360,7 @@ public class ExtractInformation {
 
 	public static void writeOpenAPI(JSONObject swagger, String scheme, String template, String number, String abbrev)
 			throws IOException {
-		
+
 		// Print pretty swagger
 		String fileName = scheme + "_" + template + "_" + number + "_" + abbrev + ".json";
 		writeFile(swagger.toString(), fileName);

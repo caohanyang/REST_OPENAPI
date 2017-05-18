@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 ie ltie9 ltie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ie ltie9 ltie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ie ltie9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 ie no-js" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+ <head>
+  <script>
+   (function(H){H.className=H.className.replace(/\bno-js\b/,'js');})(document.documentElement);
+  </script>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="Yelp's API exposes search to 3rd party developers." name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://s3-media2.fl.yelpcdn.com/assets/srv0/developer_pages/99ff04c071af/assets/scss/developers-pkg.css" rel="stylesheet"/>
+  <link href="//cdn.jsdelivr.net/graphiql/0.9.3/graphiql.css" rel="stylesheet"/>
+  <script src="//cdn.jsdelivr.net/fetch/0.9.0/fetch.min.js">
+  </script>
+  <script src="//cdn.jsdelivr.net/react/15.0.0/react.min.js">
+  </script>
+  <script src="//cdn.jsdelivr.net/react/15.0.0/react-dom.min.js">
+  </script>
+  <script src="//cdn.jsdelivr.net/graphiql/0.9.3/graphiql.min.js">
+  </script>
+  <title>
+   State / Subdivisions Reference - Yelp Fusion
+  </title>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </script>
+  <script>
+   (function() {
+                var main = null;
+
+                var d=this;function h(a,b){var c=a.split("."),e=d;c[0]in e||!e.execScript||e.execScript("var "+c[0]);for(var f;c.length&&(f=c.shift());)c.length||void 0===b?e[f]?e=e[f]:e=e[f]={}:e[f]=b};function k(a,b){for(var c=0;c<a.length;c++)if(a[c]===b)return c;return-1};function l(a){var b=$(window);function c(a,b){return 0<=a&&a<=b}function e(a,b){return 0>=a.left&&a.right>=b.width()||0>=a.top&&a.bottom>=b.height()}function f(a,b){return c(a.left,b.width())&&!(a.top>=b.height()||0>=a.bottom)}function g(a,b){return c(a.right,b.width())&&!(a.top>=b.height()||0>=a.bottom)}function n(a,b){return c(a.bottom,b.height())&&!(a.left>=b.width()||0>=a.right)}a=a.getBoundingClientRect();return function(a,b){return c(a.top,b.height())&&!(a.left>=b.width()||0>=a.right)}(a,b)||
+f(a,b)||g(a,b)||n(a,b)||e(a,b)};function m(){this.a=[];this.hasOwnProperty("value_")&&delete this.value_}m.prototype.I=function(a){var b=this;this.hasOwnProperty("value_")?setTimeout(function(){a.call(this,b.value_)},0):this.a.push(a)};m.prototype.getInstance=m.prototype.I;function q(a){window.ga||(window.ga=function(){});this.S=(new Date).getTime();this.reload(a)}var r;h("yelp_google_analytics.google_analytics",q);var u=new m,v=["global","m","www","biz","webview"];function w(a,b,c){if(c)for(var e in c[b])c[b].hasOwnProperty(e)&&(a.g[b][e]=c[b][e][0])}q.prototype.s=function(a){for(var b in this.a)this.a.hasOwnProperty(b)&&x(String(b),a)};q.prototype.firePageviews=q.prototype.s;
+q.prototype.G=function(a){for(var b in this.a)this.a.hasOwnProperty(b)&&("global"!==b||this.l)&&x(String(b),a)};q.prototype.firePageviewsWithGlobalTrackerSampled=q.prototype.G;function x(a,b){b&&window.ga(y("set",a),"page",b);window.ga(y("send",a),"pageview")}function y(a,b){if(0<=k(v,b))return[b,a].join(".");throw Error("google analytics attempted to set "+a+" to an unrecognized tracker alias: "+b);}
+q.prototype.L=function(a,b,c){a=this.g[c][a];"undefined"!=typeof a&&null!==b&&(this.b[c]["dimension"+a]=b.toString())};q.prototype.setDimensionOneEvent=q.prototype.L;q.prototype.j=function(a,b,c){a=this.g[c][a];"undefined"!=typeof a&&null!==b&&window.ga(y("set",c),"dimension"+a,b.toString())};q.prototype.setDimension=q.prototype.j;q.prototype.M=function(a,b){for(var c in a)a.hasOwnProperty(c)&&this.j(c,a[c],b)};q.prototype.setDimensions=q.prototype.M;
+q.prototype.D=function(a,b,c){window.ga(y("set",c),"metric"+a,b)};q.prototype.setMetric=q.prototype.D;q.prototype.N=function(a,b,c){this.c[c][a]=b};q.prototype.setMetricOneEvent=q.prototype.N;
+q.prototype.i=function(a,b,c,e,f){for(var g in this.a)if(this.a.hasOwnProperty(g)){var n={hitType:"event",eventCategory:a,eventAction:b,eventLabel:c,eventValue:e,hitCallback:f,nonInteraction:!0},p;for(p in this.b[g])this.b[g].hasOwnProperty(p)&&(n[p]=this.b[g][p]);for(var t in this.c[g])this.c[g].hasOwnProperty(t)&&(n["metric"+t]=this.c[g][t]);this.b[g]={};this.c[g]={};"global"!==g&&window.ga(y("send",String(g)),n)}};q.prototype.trackEvent=q.prototype.i;
+q.prototype.R=function(a,b,c,e){a={hitType:"timing",timingCategory:a,timingVar:b,timingValue:c,timingLabel:e};for(var f in this.a)this.a.hasOwnProperty(f)&&(b=a,window.ga(y("send",String(f)),b))};q.prototype.trackTiming=q.prototype.R;q.prototype.F=function(a,b,c,e,f){this.l&&this.i(a+" / 10",b,c,e,f)};q.prototype.trackEventHighVolume=q.prototype.F;q.prototype.K=function(a,b){return b in this.g[a]};q.prototype.isExperimentSet=q.prototype.K;
+q.prototype.v=function(){var a=this;$(window).on("beforeunload",function(){a.j("viewport_tracking",a.m.join(","),"www");var b=Math.round(((new Date).getTime()-a.S)/1E3),c="240+";0>=b?c="5":30>=b?c=(5*Math.ceil(b/5)).toString():120>=b?c=(15*Math.ceil(b/15)).toString():240>=b&&(c=(30*Math.ceil(b/30)).toString());a.F("time on page","unload",c,b)})};q.prototype.initTimeOnPageEvent=q.prototype.v;q.prototype.u=function(){var a=this;setTimeout(function(){a.i("dwell time","dwell","30 seconds")},3E4)};
+q.prototype.initDwellTimeEvent=q.prototype.u;q.prototype.o=function(){for(var a=document.getElementsByClassName("js-ga-widget"),b=0;b<a.length;b++){var c=a[b],e=c.getAttribute("data-ga-widget-name")||"Unnamed Widget";0>k(this.m,e)&&l(c)&&this.m.push(e)}};q.prototype.addNewlyVisibleWidgets_=q.prototype.o;q.prototype.J=function(){if(Function.prototype.bind&&document.getElementsByClassName&&window.addEventListener){var a=this.o.bind(this);a();window.addEventListener("scroll",a)}};
+q.prototype.initViewportEvent=q.prototype.J;q.init=function(a){z(new q(a))};function z(a){r=a;u.value_=a;for(a=0;a<u.a.length;a++)u.a[a].call(u,u.value_)}q.setInstance=z;function A(){var a=r;if(void 0===a)throw Error("yelp_google_analytics.google_analytics not initialized. Call a site specific GA init!");return a}q.getInstance=A;
+q.prototype.reload=function(a){this.a=a.trackers;this.domain=a.domain;this.w=a.clientID;this.C=a.user_id;this.f=a.dimensions;this.h=a.metrics;this.A=a.js_dimensions;this.l=a.enable_high_volume_events;this.B=a.site_speed_sample_rate;this.m=[];this.g={};this.b={};this.c={};for(var b in this.a)if(this.a.hasOwnProperty(b)){a=String(b);var c=String(this.a[b]),e={cookieDomain:this.domain,name:a,clientId:this.w,siteSpeedSampleRate:this.B||1};this.C&&(e.userId=this.C);window.ga("create",c,e);this.g[a]={};
+this.b[a]={};this.c[a]={};w(this,a,this.f);w(this,a,this.A);c=void 0;for(c in this.f[a])this.f[a].hasOwnProperty(c)&&this.j(String(c),this.f[a][c][1],a);c=void 0;for(c in this.h[a])this.h[a].hasOwnProperty(c)&&this.D(this.h[a][c][0],this.h[a][c][1],a)}};q.prototype.reload=q.prototype.reload;q.prototype.H=function(){return{trackers:this.a,domain:this.domain,clientID:this.w,user_id:this.U,dimensions:this.f,metrics:this.h,js_dimensions:this.A,enable_high_volume_events:this.l,site_speed_sample_rate:this.B}};
+q.prototype.getGaConfig=q.prototype.H;function B(a,b,c,e){a(b,function(){0<e?B(a,b,c,e-1):c()})};function C(a){q.call(this,a)}(function(){function a(){}a.prototype=q.prototype;C.b=q.prototype;C.prototype=new a;C.prototype.constructor=C;C.a=function(a,c,e){for(var f=Array(arguments.length-2),g=2;g<arguments.length;g++)f[g-2]=arguments[g];return q.prototype[c].apply(a,f)}})();h("yelp_google_analytics.www.google_analytics",C);
+C.prototype.O=function(){for(var a=this,b=[".js-main-header",".js-header-nav"],c=0;c<b.length;c++)$(b[c]).on("click",".js-analytics-click",function(b){b=$(b.currentTarget).data("analyticsLabel");a.i("header","click",b)})};C.prototype.trackHeaderNavClicks=C.prototype.O;
+C.prototype.P=function(){var a=!1;return function(){if(!a){var b=this;$.each({logo:"logo","home-link":"home","about-me":"about_me","write-review":"write_a_review","find-friends":"find_friends",messaging:"messaging",talk:"talk",events:"events",delivery:"delivery","member-search":"member_search","biz-owner-link":"biz owner","notifications-icon":"notifications_icon","messages-icon":"messages_icon","header-sign-up":"signup","header-log-in":"login",Zprofile:"account_settings","header-log-out":"logout",
+"dropdown_user-name":"about_me","dropdown_find-friends":"find_friends","dropdown_about-me":"about_me","dropdown_user-photo":"about_me"},function(a,e){$("#"+a).click(function(){b.i("header","click",e)})})}a=!0}}();C.prototype.trackNavClicks=C.prototype.P;
+function D(a){B(function(a,c){var e=new XMLHttpRequest;e.onreadystatechange=function(){this.readyState===XMLHttpRequest.DONE&&(200===this.status?a(JSON.parse(this.responseText)):c())};e.open("GET","/yuv",!0);try{e.send()}catch(f){c()}},function(b){a(b.V)},function(){throw Error("Failed to fetch YUV from /yuv, Google Analytics is not going to be initialized.");},3)}C.fetchClientId=D;C.getInstance=function(){return A()};h("yelp_google_analytics.www.google_analytics.deferredInstance",u);
+h("yelp_google_analytics.www.google_analytics.SITE","www");function E(a,b,c){function e(){z(new C(a));var c=A();c.s(b);c.u()}c?D(function(b){a.T=b;e()}):e()}h("yelp_google_analytics.www.init.initGoogleAnalytics",E);h("yelp_google_analytics.www.init.initTimeOnPageAnalytics",function(){A().v()});null===main&&(main=E); //# sourceMappingURL=
+
+
+                if (main === null) {
+                    throw 'invalid inline script, missing main declaration.';
+                }
+                main({"clientID": "E900EBF11EBE303F", "dimensions": {"global": {"account_level": [1, null], "distil": [12, 0], "distil_js_enabled": [13, false], "full_url": [15, "/developers/documentation/v3/state_codes"], "internal_ip": [18, false], "referrer": [28, "none"]}, "www": {"account_level": [1, null], "distil": [53, 0], "distil_js_enabled": [138, false], "full_url": [34, "/developers/documentation/v3/state_codes"], "internal_ip": [27, false], "referrer": [64, "none"]}}, "domain": "yelp.com", "enable_high_volume_events": true, "ga_enabled": true, "js_dimensions": {"global": {}, "www": {}}, "metrics": {"global": {}, "www": {}}, "site_speed_sample_rate": null, "trackers": {"global": "UA-30501-1", "www": "UA-30501-24"}, "user_id": null},null,false);
+            })();
+  </script>
+  <script defer="" src="/yla-ddfatawzvcxaxus.js" type="text/javascript">
+  </script>
+  <style type="text/css">
+   #d__fFH{position:absolute;top:-5000px;left:-5000px}#d__fF{font-family:serif;font-size:200px;visibility:hidden}#xavyqtxxxzrqtusec{display:none!important}
+  </style>
+ </head>
+ <body class="responsive">
+  <script>
+   (function (d, w) {
+    var supportsSVG = (
+        !!d.createElementNS &&
+        !!d.createElementNS(
+            'http://www.w3.org/2000/svg',
+            'svg'
+        ).createSVGRect
+    );
+    var cdnPath = 'https://s3-media4.fl.yelpcdn.com/assets/srv0/svg_icons/3d019a404b42/assets/svg_sprite.js';
+    var head = d.getElementsByTagName('head')[0];
+    function fallback() {
+        var link = d.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://s3-media2.fl.yelpcdn.com/assets/srv0/svg_icons/5be49c239218/assets/sprite.css';
+        head.appendChild(link);
+    }
+    if (!supportsSVG) {
+        fallback();
+        return;
+    }
+    if (!w.yelp) {
+        w.yelp = {};
+    }
+    w.yelp.__injectSvgSpritesheet = function (svg) {
+        document.body.insertAdjacentHTML('afterbegin', svg);
+        delete window.yelp.__injectSvgSpritesheet;
+    }
+    function onError() {
+        d.documentElement.className = [
+            d.documentElement.className,
+            'icon-svg-unavailable'
+        ].join(' ');
+        fallback();
+        return true;
+    }
+    var script = d.createElement('script');
+    script.async = true;
+    script.onerror = onError;
+    script.src = cdnPath + '?callback=window.yelp.__injectSvgSpritesheet';
+    head.appendChild(script);
+}(document, window));
+  </script>
+  <noscript>
+   <link href="https://s3-media2.fl.yelpcdn.com/assets/srv0/svg_icons/5be49c239218/assets/sprite.css" rel="stylesheet"/>
+  </noscript>
+  <div class="alert-notice js-alert-notice">
+   <iframe allowtransparency="true" class="js-cookie-iframe hidden" frameborder="0" scrolling="no" src="/eu_cookie_notice" style="border: 0; width: 100%;">
+   </iframe>
+  </div>
+  <div class="main-header main-content-wrap js-main-header webview-hidden main-header--slim">
+   <div class="main-header_wrapper">
+    <div class="content-container">
+     <div class="arrange arrange--18 arrange--middle main-header_arrange">
+      <div class="arrange_unit main-header--full_arrange_unit">
+       <div class="main-header_logo js-analytics-click" data-analytics-label="logo" id="logo">
+        <a href="/developers">
+         Yelp
+        </a>
+        <span id="xavyqtxxxzrqtusec">
+         <a href="zeszfuex.html" rel="file" style="display: none;">
+          xwrxfutczvvsbzveyvw
+         </a>
+        </span>
+       </div>
+      </div>
+      <div class="arrange_unit u-nowrap">
+       <h2 class="main-header_title">
+        <span>
+         Fusion
+        </span>
+       </h2>
+      </div>
+      <div class="arrange_unit arrange_unit--fill align-middle main-header--full_arrange_unit main-header_search-container">
+       <div class="main-header_nav u-nowrap responsive-hidden-medium">
+        <div id="header-nav">
+         <ul class="header-nav">
+          <li class="header-nav_item js-analytics-click" data-analytics-label="">
+           <a class="header-nav_link" href="/developers/documentation/v3">
+            Fusion API
+           </a>
+          </li>
+          <li class="header-nav_item js-analytics-click" data-analytics-label="">
+           <a class="header-nav_link" href="/developers/graphql/guides/intro">
+            GraphQL
+           </a>
+          </li>
+          <li class="header-nav_item js-analytics-click" data-analytics-label="">
+           <a class="header-nav_link" href="/developers/v3/manage_app">
+            Manage App
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+      <div class="arrange_unit main-header--full_arrange_unit">
+       <div class="arrange arrange--6">
+        <div class="arrange_unit u-nowrap">
+         <div class="main-header_account webview-hidden">
+          <ul class="header-nav">
+           <li class="header-nav_item responsive-hidden-small js-analytics-click" data-analytics-label="signup">
+            <a class="ybtn ybtn--primary main-header_button header-nav_button--sign-up js-sign-up-button" href="/signup" id="header-sign-up">
+             Sign Up
+            </a>
+           </li>
+           <li class="header-nav_item">
+            <a class="header-nav_link header-nav_link--log-in js-log-in-button" href="/login">
+             Log In
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="arrange_unit u-nowrap hidden-non-responsive-table-cell responsive-hidden-large">
+       <div class="main-header_nav-dropdown">
+        <div class="user-account clearfix drop-menu-origin" id="topbar-account-item">
+         <a class="drop-menu-link inline-block clearfix user-account_button" href="javascript:;">
+          <span aria-hidden="true" class="icon icon--24-hamburger icon--size-24 icon--inverse icon--fallback-inverted drop-menu-link_open" style="width: 24px; height: 24px;">
+           <svg class="icon_svg">
+            <use xlink:href="#24x24_hamburger">
+            </use>
+           </svg>
+          </span>
+          <span aria-hidden="true" class="icon icon--24-close icon--size-24 icon--inverse icon--fallback-inverted drop-menu-link_close" style="width: 24px; height: 24px;">
+           <svg class="icon_svg">
+            <use xlink:href="#24x24_close">
+            </use>
+           </svg>
+          </span>
+         </a>
+         <div class="drop-menu drop-menu-has-arrow">
+          <div class="drop-menu-arrow responsive-hidden-small">
+          </div>
+          <ul class="drop-menu-group drop-menu-group--nav">
+           <li class="drop-down-menu-link">
+            <a class="js-analytics-click arrange arrange--middle arrange--6" data-analytics-label="" href="/developers/documentation/v3">
+             <strong class="arrange_unit">
+              Fusion API
+             </strong>
+             <span class="arrange_unit arrange_unit--fill u-text-right">
+              <span aria-hidden="true" class="icon icon--24-chevron-right icon--size-24 hidden-non-responsive-inline-block responsive-visible-medium-inline-block" style="width: 24px; height: 24px;">
+               <svg class="icon_svg">
+                <use xlink:href="#24x24_chevron_right">
+                </use>
+               </svg>
+              </span>
+             </span>
+            </a>
+           </li>
+           <li class="drop-down-menu-link">
+            <a class="js-analytics-click arrange arrange--middle arrange--6" data-analytics-label="" href="/developers/graphql/guides/intro">
+             <strong class="arrange_unit">
+              GraphQL
+             </strong>
+             <span class="arrange_unit arrange_unit--fill u-text-right">
+              <span aria-hidden="true" class="icon icon--24-chevron-right icon--size-24 hidden-non-responsive-inline-block responsive-visible-medium-inline-block" style="width: 24px; height: 24px;">
+               <svg class="icon_svg">
+                <use xlink:href="#24x24_chevron_right">
+                </use>
+               </svg>
+              </span>
+             </span>
+            </a>
+           </li>
+           <li class="drop-down-menu-link">
+            <a class="js-analytics-click arrange arrange--middle arrange--6" data-analytics-label="" href="/developers/v3/manage_app">
+             <strong class="arrange_unit">
+              Manage App
+             </strong>
+             <span class="arrange_unit arrange_unit--fill u-text-right">
+              <span aria-hidden="true" class="icon icon--24-chevron-right icon--size-24 hidden-non-responsive-inline-block responsive-visible-medium-inline-block" style="width: 24px; height: 24px;">
+               <svg class="icon_svg">
+                <use xlink:href="#24x24_chevron_right">
+                </use>
+               </svg>
+              </span>
+             </span>
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="y-container y-container--full">
+   <div class="y-container_content">
+    <div class="alert-notice js-alert-notice">
+     <iframe allowtransparency="true" class="js-cookie-iframe hidden" frameborder="0" scrolling="no" src="/eu_cookie_notice" style="border: 0; width: 100%;">
+     </iframe>
+    </div>
+    <div class="clearfix layout-block layout-n">
+     <div class="column column-alpha ">
+      <div class="titled-nav js-titled-nav">
+       <input class="titled-nav-dropdown_handler" id="titled-nav-211db99a-a4e0-4701-8ffe-53a5c1f0eb0d" role="presentation" type="checkbox"/>
+       <div class="titled-nav-dropdown hidden-non-responsive-block responsive-hidden-large">
+        <label class="titled-nav-dropdown_trigger" for="titled-nav-211db99a-a4e0-4701-8ffe-53a5c1f0eb0d">
+         <span class="arrange arrange--middle titled-nav-dropdown_content">
+          <span class="arrange_unit arrange_unit--fill titled-nav-dropdown_shadow">
+           <span class="titled-nav-dropdown_faded-title">
+            <strong>
+             Yelp Fusion
+            </strong>
+            Documentation
+           </span>
+          </span>
+          <span class="arrange_unit titled-nav-dropdown_icon">
+           <span aria-hidden="true" class="icon icon--24-chevron-down icon--size-24 titled-nav-dropdown_expand" style="width: 24px; height: 24px;">
+            <svg class="icon_svg">
+             <use xlink:href="#24x24_chevron_down">
+             </use>
+            </svg>
+           </span>
+           <span aria-hidden="true" class="icon icon--24-chevron-up icon--size-24 titled-nav-dropdown_collapse" style="width: 24px; height: 24px;">
+            <svg class="icon_svg">
+             <use xlink:href="#24x24_chevron_up">
+             </use>
+            </svg>
+           </span>
+          </span>
+         </span>
+        </label>
+       </div>
+       <div class="titled-nav_menus">
+        <div class="titled-nav_menu">
+         <div class="titled-nav-header">
+          <div class="arrange arrange--top">
+           <div class="arrange_unit arrange_unit--fill">
+            <div class="titled-nav-header_content">
+             <h3>
+              General
+             </h3>
+            </div>
+           </div>
+           <div class="arrange_unit">
+           </div>
+          </div>
+         </div>
+         <ul class="titled-nav_items">
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/v3/manage_app">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Create App
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/v3/notification_settings">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Email / Notifications
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/display_requirements">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Display Requirements
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/api_terms">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Terms of Use
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="titled-nav_menu">
+         <div class="titled-nav-header">
+          <div class="arrange arrange--top">
+           <div class="arrange_unit arrange_unit--fill">
+            <div class="titled-nav-header_content">
+             <h3>
+              Yelp Fusion
+             </h3>
+            </div>
+           </div>
+           <div class="arrange_unit">
+           </div>
+          </div>
+         </div>
+         <ul class="titled-nav_items">
+          <li class="titled-nav_item is-opened">
+           <a class="titled-nav_link is-active titled-nav_link--with-subnav" href="/developers/documentation/v3">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Documentation
+              </span>
+             </div>
+            </div>
+           </a>
+           <ul class="titled-nav_subnav">
+            <li class="titled-nav_item">
+             <a class="titled-nav_link" href="/developers/documentation/v3/get_started">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Get Started
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="titled-nav_item">
+             <a class="titled-nav_link" href="/developers/documentation/v3/authentication">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Authentication
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="titled-nav_item">
+             <a class="titled-nav_link" href="/developers/documentation/v3/business_search">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Search API
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="titled-nav_item">
+             <a class="titled-nav_link" href="/developers/documentation/v3/business_search_phone">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Phone Search API
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="titled-nav_item">
+             <a class="titled-nav_link" href="/developers/documentation/v3/transactions_search">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Transaction Search API
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="titled-nav_item">
+             <a class="titled-nav_link" href="/developers/documentation/v3/business">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Business API
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="titled-nav_item">
+             <a class="titled-nav_link" href="/developers/documentation/v3/business_reviews">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Reviews API
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="titled-nav_item">
+             <a class="titled-nav_link" href="/developers/documentation/v3/autocomplete">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Autocomplete API
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+            <li class="titled-nav_item">
+             <a class="titled-nav_link is-active" href="/developers/documentation/v3/additional_resources">
+              <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+               <div class="arrange_unit arrange_unit--fill">
+                <span class="titled-nav_link-label">
+                 Additional Resources
+                </span>
+               </div>
+              </div>
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/v3/changelog">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Changelog
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/faq">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               FAQ
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/v2">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               API v2
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="titled-nav_menu">
+         <div class="titled-nav-header">
+          <div class="arrange arrange--top">
+           <div class="arrange_unit arrange_unit--fill">
+            <div class="titled-nav-header_content">
+             <h3>
+              GraphQL
+             </h3>
+            </div>
+           </div>
+           <div class="arrange_unit">
+           </div>
+          </div>
+         </div>
+         <ul class="titled-nav_items">
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/graphql/guides">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Guides
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/graphql/query">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Query
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/graphql/objects">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Objects
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/graphiql">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               GraphQL Console
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/graphql/changelog">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Changelog
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="titled-nav_menu">
+         <div class="titled-nav-header">
+          <div class="arrange arrange--top">
+           <div class="arrange_unit arrange_unit--fill">
+            <div class="titled-nav-header_content">
+             <h3>
+              Yelp Developers
+             </h3>
+            </div>
+           </div>
+           <div class="arrange_unit">
+           </div>
+          </div>
+         </div>
+         <ul class="titled-nav_items">
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/developers/platform">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Yelp Platform
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="/knowledge" target="_blank">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Yelp Knowledge
+              </span>
+             </div>
+             <div class="arrange_unit">
+              <span aria-hidden="true" class="icon icon--18-external-link icon--size-18 icon--neutral-gray titled-nav_new-window u-sticky-top" style="width: 18px; height: 18px;">
+               <svg class="icon_svg">
+                <use xlink:href="#18x18_external_link">
+                </use>
+               </svg>
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="http://yelp.github.io" target="_blank">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Yelp Open Source
+              </span>
+             </div>
+             <div class="arrange_unit">
+              <span aria-hidden="true" class="icon icon--18-external-link icon--size-18 icon--neutral-gray titled-nav_new-window u-sticky-top" style="width: 18px; height: 18px;">
+               <svg class="icon_svg">
+                <use xlink:href="#18x18_external_link">
+                </use>
+               </svg>
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+          <li class="titled-nav_item">
+           <a class="titled-nav_link" href="http://yelp.com/engineering" target="_blank">
+            <div class="titled-nav_link-content arrange arrange--middle arrange--6">
+             <div class="arrange_unit arrange_unit--fill">
+              <span class="titled-nav_link-label">
+               Yelp Engineering
+              </span>
+             </div>
+             <div class="arrange_unit">
+              <span aria-hidden="true" class="icon icon--18-external-link icon--size-18 icon--neutral-gray titled-nav_new-window u-sticky-top" style="width: 18px; height: 18px;">
+               <svg class="icon_svg">
+                <use xlink:href="#18x18_external_link">
+                </use>
+               </svg>
+              </span>
+             </div>
+            </div>
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="titled-nav-header responsive-hidden-large" role="presentation">
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="column column-beta ">
+      <h1 class="section-title">
+       State (Country Subdivision) Codes
+      </h1>
+      <p>
+       The API uses
+       <a href="https://en.wikipedia.org/wiki/ISO_3166-2#Current_codes">
+        ISO 3166-2
+       </a>
+       subdivision codes (without country code) for the "state" field in our API requests and responses. This page clarifies edge cases and exceptions to that rule.
+      </p>
+      <p>
+       In several countries where there are several levels of subdivisions the API may support some but not all of them.
+      </p>
+      <h2>
+       Subdivisions in countries with multiple layers
+      </h2>
+      <p>
+       In countries with multiple layers of subdivisions with ISO 3166-2 codes, we may support some but not all.
+      </p>
+      <table class="table table-bordered table-striped">
+       <thead>
+        <tr>
+         <th>
+          Country Code
+         </th>
+         <th>
+          Country Name
+         </th>
+         <th>
+          Description
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          CZ
+         </td>
+         <td>
+          Czech Republic
+         </td>
+         <td>
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:CZ#Regions">
+           Regions
+          </a>
+          are supported.
+          <br/>
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:CZ#Districts">
+           Districts
+          </a>
+          are not supported.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          ES
+         </td>
+         <td>
+          Spain
+         </td>
+         <td>
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:ES#Provinces">
+           Provinces and
+          </a>
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:ES#Autonomous_communities.3B_autonomous_cities_in_North_Africa">
+           autonomous cities
+          </a>
+          are supported.
+          <br/>
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:ES#Autonomous_communities.3B_autonomous_cities_in_North_Africa">
+           Autonomous communities
+          </a>
+          are not supported.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          FR
+         </td>
+         <td>
+          France
+         </td>
+         <td>
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:FR#Metropolitan_departments">
+           Metropolitan departments
+          </a>
+          are supported.
+          <br/>
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:FR#Metropolitan_regions">
+           Metropolitan Regions
+          </a>
+          ,
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:FR#Overseas_departments">
+           Overseas Departments
+          </a>
+          , and
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-2:FR#Dependency_and_overseas_territorial_collectivities">
+           Dependency and overseas territorial collectivities
+          </a>
+          are not supported.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          GB
+         </td>
+         <td>
+          United Kingdom
+         </td>
+         <td>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:GB#List_of_subdivisions">
+            Two-tier counties
+           </a>
+           are supported.
+           <br/>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:GB#List_of_subdivisions">
+            Unitary authorities
+           </a>
+           are supported.
+          </p>
+          <p>
+           One custom state "XGL" (Greater London) covers the City of London and the 32 London boroughs.
+          </p>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/Metropolitan_county">
+            Metropolitan counties
+           </a>
+           are supported, with the following custom codes:
+          </p>
+          <table class="table table-simple">
+           <tbody>
+            <tr>
+             <td>
+              XGM
+             </td>
+             <td>
+              Greater Manchester
+             </td>
+            </tr>
+            <tr>
+             <td>
+              XMS
+             </td>
+             <td>
+              Merseyside
+             </td>
+            </tr>
+            <tr>
+             <td>
+              XSY
+             </td>
+             <td>
+              South Yorkshire
+             </td>
+            </tr>
+            <tr>
+             <td>
+              XTW
+             </td>
+             <td>
+              Tyne and Wear
+             </td>
+            </tr>
+            <tr>
+             <td>
+              XWM
+             </td>
+             <td>
+              West Midlands
+             </td>
+            </tr>
+            <tr>
+             <td>
+              XWY
+             </td>
+             <td>
+              West Yorkshire
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:GB#List_of_subdivisions">
+            London Boroughs
+           </a>
+           are not supported.
+           <br/>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:GB#List_of_subdivisions">
+            Metropolitan Districts
+           </a>
+           are not supported.
+           <br/>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:GB#Three_countries_and_one_province">
+            Countries
+           </a>
+           are not supported.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          IE
+         </td>
+         <td>
+          Ireland
+         </td>
+         <td>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:IE#Counties">
+            Counties
+           </a>
+           are supported.
+           <br/>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:IE#Provinces">
+            Provinces
+           </a>
+           are not supported.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          IT
+         </td>
+         <td>
+          Italy
+         </td>
+         <td>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:IT#Provinces">
+            Provinces
+           </a>
+           are supported.
+           <br/>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:IT#Regions">
+            Regions
+           </a>
+           are not supported.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          NL
+         </td>
+         <td>
+          Netherlands
+         </td>
+         <td>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:NL#Provinces">
+            Provinces
+           </a>
+           are supported.
+           <br/>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:NL#Countries_and_special_municipalities">
+            Countries and Special Municipalities
+           </a>
+           are not supported.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          PH
+         </td>
+         <td>
+          Philippines
+         </td>
+         <td>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:PH#Provinces">
+            Provinces are supported.
+            <br/>
+            One custom province "NCR" covers Metro Manila.
+           </a>
+          </p>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:PH#Regions">
+            Regions
+           </a>
+           are not supported.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          SG
+         </td>
+         <td>
+          Singapore
+         </td>
+         <td>
+          <p>
+           One custom state "SG" is supported.
+           <br/>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:SG#Current_codes">
+            Districts
+           </a>
+           are not supported.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          TW
+         </td>
+         <td>
+          Taiwan
+         </td>
+         <td>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:TW#Current_codes">
+            Districts
+           </a>
+           are supported, with the exception of:
+          </p>
+          <table class="table table-simple">
+           <tbody>
+            <tr>
+             <td>
+              KHQ
+             </td>
+             <td>
+              (see KHH)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              TXQ
+             </td>
+             <td>
+              (see TXG)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              TNQ
+             </td>
+             <td>
+              (see TNN)
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           Note that TPQ refers to New Taipei City.
+          </p>
+          <p>
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:TW#Current_codes">
+            Municipalities
+           </a>
+           are supported.
+           <br/>
+           All currently assigned
+           <a href="https://en.wikipedia.org/wiki/ISO_3166-2:TW#Current_codes">
+            special municipalities
+           </a>
+           are supported.
+          </p>
+          <p>
+           Two custom codes cover additional counties:
+          </p>
+          <table class="table table-simple">
+           <tbody>
+            <tr>
+             <td>
+              LCH
+             </td>
+             <td>
+              Lienchiang County (incl. Lienchiang and Matsu Islands)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              KNM
+             </td>
+             <td>
+              Kinmen County (incl. Kinmen and Quemoy)
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h2>
+       Subdivisions included in ISO 3166-1
+      </h2>
+      <p>
+       Some country subdivisions also have a dedicated ISO 3166-1 country code.  In this case, the same code is used as both the country and state code.
+      </p>
+      <h3 class="alternate">
+       United States Outlying Areas
+      </h3>
+      <table class="table table-bordered table-striped">
+       <thead>
+        <tr>
+         <th>
+          Country Code
+         </th>
+         <th>
+          Country Name
+         </th>
+         <th>
+          State Code
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          AS
+         </td>
+         <td>
+          American Samoa
+         </td>
+         <td>
+          AS
+         </td>
+        </tr>
+        <tr>
+         <td>
+          GU
+         </td>
+         <td>
+          Guam
+         </td>
+         <td>
+          GU
+         </td>
+        </tr>
+        <tr>
+         <td>
+          MP
+         </td>
+         <td>
+          Northern Mariana Islands
+         </td>
+         <td>
+          MP
+         </td>
+        </tr>
+        <tr>
+         <td>
+          PR
+         </td>
+         <td>
+          Puerto Rico
+         </td>
+         <td>
+          PR
+         </td>
+        </tr>
+        <tr>
+         <td>
+          UM
+         </td>
+         <td>
+          United States Minor Outlying Islands
+         </td>
+         <td>
+          UM
+         </td>
+        </tr>
+        <tr>
+         <td>
+          VI
+         </td>
+         <td>
+          US Virgin Islands
+         </td>
+         <td>
+          VI
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <h3 class="alternate">
+       United Kingdom Crown Dependencies
+      </h3>
+      <table class="table table-bordered table-striped">
+       <thead>
+        <tr>
+         <th>
+          Country Code
+         </th>
+         <th>
+          Country Name
+         </th>
+         <th>
+          State Code
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          GG
+         </td>
+         <td>
+          Guernsey
+         </td>
+         <td>
+          GG
+         </td>
+        </tr>
+        <tr>
+         <td>
+          IM
+         </td>
+         <td>
+          Isle of Man
+         </td>
+         <td>
+          IM
+         </td>
+        </tr>
+        <tr>
+         <td>
+          JE
+         </td>
+         <td>
+          Jersey
+         </td>
+         <td>
+          JE
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="main-content-wrap main-content-wrap--separated">
+   <div class="content-container">
+    <div class="main-footer webview-hidden">
+     <div class="main-footer_section main-footer_menu arrange arrange--equal arrange--30 arrange--stack-small u-sm-space-b0">
+      <div class="main-footer_item arrange_unit">
+       <div class="footer-menu responsive-hidden-small">
+        <h3 class="footer-menu_header">
+         About
+        </h3>
+        <ul class="footer-menu_list">
+         <li class="footer-menu_item">
+          <a href="/about">
+           About Yelp
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="http://eat24.com/">
+           Order Food on Eat24
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/careers/home">
+           Careers
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/press">
+           Press
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="http://yelp-ir.com/">
+           Investor Relations
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/guidelines">
+           Content Guidelines
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/static?country=US&amp;p=tos">
+           Terms of Service
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/tos/privacy_policy">
+           Privacy Policy
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/static?locale=en_US&amp;p=privacy#third-parties">
+           Ad Choices
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="main-footer_item arrange_unit">
+       <div class="footer-menu responsive-hidden-small">
+        <h3 class="footer-menu_header">
+         Discover
+        </h3>
+        <ul class="footer-menu_list">
+         <li class="footer-menu_item">
+          <a href="/local_yelp">
+           The Local Yelp
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="https://officialblog.yelp.com/">
+           Yelp Blog
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="https://www.yelp-support.com/?l=en_US">
+           Support
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/yelpmobile?source=footer">
+           Yelp Mobile
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/developers?country=US">
+           Developers
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/rss">
+           RSS
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="main-footer_item arrange_unit">
+       <div class="footer-menu responsive-hidden-small">
+        <h3 class="footer-menu_header">
+         Yelp for Business Owners
+        </h3>
+        <ul class="footer-menu_list">
+         <li class="footer-menu_item">
+          <a href="https://biz.yelp.com/?utm_campaign=claim_business&amp;utm_content=claim_footer_link&amp;utm_medium=www&amp;utm_source=footer">
+           Claim your Business Page
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="/advertise">
+           Advertise on Yelp
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="http://eat24.com/join">
+           Online Ordering from Eat24
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="https://www.yelpreservations.com/">
+           Yelp Reservations
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="https://biz.yelp.com/support/case_studies">
+           Business Success Stories
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="https://www.yelp-support.com/Yelp_for_Business_Owners?l=en_US">
+           Business Support
+          </a>
+         </li>
+         <li class="footer-menu_item">
+          <a href="https://www.yelpblog.com/section/business">
+           Yelp Blog for Business Owners
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="main-footer_city-landscape-img" role="presentation">
+     </div>
+     <div class="main-footer_mobile-links responsive-visible-small-block hidden-non-responsive-block">
+      <ul class="footer-menu--inline u-text-centered">
+       <li class="footer-menu_item">
+        <a href="/about">
+         About
+        </a>
+       </li>
+       <li class="footer-menu_item">
+        <a href="https://officialblog.yelp.com/">
+         Blog
+        </a>
+       </li>
+       <li class="footer-menu_item">
+        <a href="https://www.yelp-support.com/?l=en_US">
+         Support
+        </a>
+       </li>
+       <li class="footer-menu_item">
+        <a href="/static?country=US&amp;p=tos">
+         Terms
+        </a>
+       </li>
+      </ul>
+     </div>
+     <small class="main-footer_copyright">
+      Copyright © 2004–2017 Yelp Inc. Yelp,
+      <img alt="Yelp logo" class="main-footer_logo-copyright" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/17089be275f0/assets/img/logos/logo_desktop_xsmall_outline.png" srcset="https://s3-media1.fl.yelpcdn.com/assets/srv0/yelp_styleguide/0aade8725c91/assets/img/logos/logo_desktop_xsmall_outline@2x.png 2x"/>
+      ,
+      <img alt="Yelp burst" class="main-footer_logo-burst" src="https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/58cfc999e1f5/assets/img/logos/burst_desktop_xsmall_outline.png" srcset="https://s3-media1.fl.yelpcdn.com/assets/srv0/yelp_styleguide/dcb526e86d86/assets/img/logos/burst_desktop_xsmall_outline@2x.png 2x"/>
+      and related marks are registered trademarks of Yelp.
+     </small>
+    </div>
+   </div>
+  </div>
+  <script src="https://s3-media1.fl.yelpcdn.com/assets/srv0/developer_pages/002da92e2825/assets/vendor/ddr-ecma5-min.js">
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+  </script>
+  <script src="https://s3-media1.fl.yelpcdn.com/assets/srv0/developer_pages/4ffd6de33976/assets/js/module_developer_pages.js">
+  </script>
+  <script>
+   window.yelp.developer_pages.initHeader();window.yelp.developer_pages.initAlerts();window.yelp.developer_pages.initCookieIframe();window.yelp.developer_pages.initCategoryDropdown();
+  </script>
+ </body>
+</html>

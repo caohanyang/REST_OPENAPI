@@ -70,30 +70,29 @@ public class ProcessParameter {
 		JSONArray paraArray = new JSONArray();
 		Long startDl = anno.getStartNode().getOffset();
 		Long endDl = anno.getEndNode().getOffset();
-		
+
 		AnnotationSet dtSet = doc.getAnnotations("Original markups").get("dt", startDl, endDl + 1);
-		
-		//get dt list and sort
+
+		// get dt list and sort
 		List dtList = new ArrayList(dtSet);
 		Collections.sort(dtList, new OffsetComparator());
-		
-		
-		//get dd
+
+		// get dd
 		for (int i = 0; i < dtList.size(); i++) {
 			Annotation dtElement = (Annotation) dtList.get(i);
 			Long endDt = dtElement.getEndNode().getOffset();
-			
+
 			String dtStr = gate.Utils.stringFor(doc, dtElement);
 			if (!dtStr.isEmpty()) {
 				// find value
 				AnnotationSet ddSet = doc.getAnnotations("Original markups").get("dd", endDt, endDt + 100);
-				//get dd list and sort
+				// get dd list and sort
 				List ddList = new ArrayList(ddSet);
 				Collections.sort(ddList, new OffsetComparator());
 				// each time get the first dd (nearest dd)
 				Annotation ddElement = (Annotation) ddList.get(0);
 				String ddStr = gate.Utils.stringFor(doc, ddElement);
-				//construct json
+				// construct json
 				JSONObject keyObject = new JSONObject();
 				keyObject.put("name", dtStr);
 				keyObject.put("description", ddStr);
@@ -102,9 +101,9 @@ public class ProcessParameter {
 				keyObject.put("required", "required");
 				paraArray.put(keyObject);
 			}
-			
+
 		}
-		
+
 		return paraArray;
 	}
 
@@ -289,9 +288,10 @@ public class ProcessParameter {
 		// the "parameter" string must not far from the startNode
 		if (anno.getEndNode().getOffset().intValue() - templateLocation > 100) {
 			// if the table is to big, just check the 100 character
-			appendTemplateText = strAll.substring(templateLocation - 20, templateLocation + 100);
+			// check the pre-text, if it contains parameter | argument
+			appendTemplateText = strAll.substring(templateLocation - 50, templateLocation + 100);
 		} else {
-			appendTemplateText = strAll.substring(templateLocation - 20, anno.getEndNode().getOffset().intValue());
+			appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
 		}
 		if (Pattern.compile("(parameter)|(argument)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
 			return true;
