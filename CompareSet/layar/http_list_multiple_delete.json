@@ -1,0 +1,25 @@
+{
+  "paths": {
+    "http://www.example.com/music.mp3\",": {
+      "POST": {}
+    },
+    "http://yourlink.com/object.l3d\",": {
+      "get": {}
+    },
+    "http://m.layar.com/open/<layername>": {
+      "delete": {}
+    },
+    "http://layarapi.example.net/mylayer/getpoi": {
+      "get": {}
+    },
+    "http://example.com/full_model.l3d\",": {
+      "Delete": {}
+    },
+    "http://mylayer.com/account": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

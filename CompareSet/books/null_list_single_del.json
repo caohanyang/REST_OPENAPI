@@ -1,0 +1,39 @@
+{
+  "basePath": "/books/v1/volumes",
+  "paths": {
+    "?method=Mylibrary.bookshelves": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves.volumes: list": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves: clearVolumes": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves: removeVolume": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves: addVolume": {
+      "POST": {}
+    },
+    "?method=Mylibrary.bookshelves: list": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves: get": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves.volumes": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves: moveVolume": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

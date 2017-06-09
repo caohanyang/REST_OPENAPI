@@ -1,0 +1,22 @@
+
+                                          /-/
+                                         |
+                                         |--/getpois-request
+                                         |
+                                         |--/getpois-response
+                                         |
+                                         |--/layar-intent
+-- /www.layar.com/documentation/browser/api
+                                         |                 /-/actions
+                                         |                |
+                                         |                |--/animations
+                                         |                |
+                                         |                |--/api-v85-changes
+                                         |                |
+                                          \/getpois-response-/changes-84
+                                                          |
+                                                          |--/hotspots
+                                                          |
+                                                          |--/objects
+                                                          |
+                                                           \-/referenceimages

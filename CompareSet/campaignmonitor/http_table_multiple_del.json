@@ -1,0 +1,16 @@
+{
+  "basePath": "/api/v3.1",
+  "paths": {
+    "/": {
+      "Post": {},
+      "Get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.createsend.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

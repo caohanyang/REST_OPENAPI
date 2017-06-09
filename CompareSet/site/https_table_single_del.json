@@ -1,0 +1,16 @@
+{
+  "paths": {
+    "https://api.picplz.com/api/v2/pic": {
+      "get": {}
+    },
+    "https://api-upload.picplz.com/api/v2/upload_basic": {
+      "POST": {}
+    },
+    "https://YOUR_REGISTERED_REDIRECT_URI": {
+      "get": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

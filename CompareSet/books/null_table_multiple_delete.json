@@ -1,0 +1,305 @@
+{
+  "basePath": "/books/v1/volumes",
+  "paths": {
+    "?method=Mylibrary.bookshelves": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves.volumes: list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Required",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "shelf",
+            "description": "string The bookshelf ID or name retrieve volumes for.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Optional",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "unsigned integer Maximum number of results to return",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "projection",
+            "description": "string Restrict information returned to a set of selected fields.\n\nAcceptable values are: \" full \" - Includes all volume data.\n\" lite \" - Includes a subset of fields in volumeInfo and accessInfo.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "description": "string Full-text search query string in this bookshelf.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "showPreorders",
+            "description": "boolean Set to true to show pre-ordered books. Defaults to false.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "string String to identify the originator of this request.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "startIndex",
+            "description": "unsigned integer Index of the first element to return (starts at 0)",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "?method=Mylibrary.bookshelves: clearVolumes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Required",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "shelf",
+            "description": "string ID of bookshelf from which to remove a volume.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Optional",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "string String to identify the originator of this request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "?method=Mylibrary.bookshelves: removeVolume": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Required",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "shelf",
+            "description": "string ID of bookshelf from which to remove a volume.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "volumeId",
+            "description": "string ID of volume to remove.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Optional",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "string String to identify the originator of this request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "?method=Mylibrary.bookshelves: addVolume": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Required",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "shelf",
+            "description": "string ID of bookshelf to which to add a volume.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "volumeId",
+            "description": "string ID of volume to add.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Optional",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "string String to identify the originator of this request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "?method=Mylibrary.bookshelves: list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Optional",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "string String to identify the originator of this request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "?method=Mylibrary.bookshelves: get": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Required",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "shelf",
+            "description": "string ID of bookshelf to retrieve.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Optional",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "string String to identify the originator of this request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "?method=Mylibrary.bookshelves.volumes": {
+      "GET": {}
+    },
+    "?method=Mylibrary.bookshelves: moveVolume": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Required",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "shelf",
+            "description": "string ID of bookshelf with the volume.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "volumeId",
+            "description": "string ID of volume to move.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "volumePosition",
+            "description": "integer Position on shelf to move the item (0 puts the item before the current first item, 1 puts it between the first and the second and so on.)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Optional",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "string String to identify the originator of this request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

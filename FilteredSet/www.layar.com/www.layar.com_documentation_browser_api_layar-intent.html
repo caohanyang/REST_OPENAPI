@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Layar Intent – Layar Developer Documentation
+  </title>
+  <meta charset="utf-8"/>
+  <meta content=" " name="description"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/favicon.008a69ff80a7.png" rel="icon"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/css/base.8a1b3d2c89f8.css" rel="stylesheet"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/css/documentation.f81faeb73433.css" rel="stylesheet"/>
+  <!--[if lte IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+  <!-- ♥ -->
+ </head>
+ <body data-syntaxhighligher-base-url="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jquery-syntaxhighlighter">
+  <header>
+   <div class="header-wrap">
+    <h1>
+     <a class="hide-text" href="/documentation/">
+      Layar Developer Documentation
+     </a>
+    </h1>
+    <a class="back" href="/">
+     <span>
+      ◀
+     </span>
+     Back to layar.com
+    </a>
+   </div>
+  </header>
+  <div class="wrap">
+   <nav class="main">
+    <ul>
+     <li class="selected">
+      <a href="/documentation/browser/">
+       API &amp; Platform
+      </a>
+     </li>
+     <li>
+      <a href="/documentation/connect/">
+       Connect
+      </a>
+     </li>
+     <li>
+      <a href="/documentation/layar-sdk/">
+       SDK
+      </a>
+     </li>
+    </ul>
+    <form action="//www.google.com/search" class="search" method="GET">
+     <input name="sitesearch" type="hidden" value="layar.com/documentation"/>
+     <input name="q" placeholder="Search in documentation…" required="required" type="text"/>
+     <button class="hide-text" type="submit">
+      Submit
+     </button>
+    </form>
+   </nav>
+   <aside class="side-nav">
+    <nav>
+     <ul>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/layar-platform-overview/">
+        Layar Platform Overview
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/layar-platform-overview/layer-service-provider/">
+          Layer Service Provider
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/layar-platform-overview/terminology/">
+          Terminology
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="child-selected">
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/api/">
+        API Documentation
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/getpois-request/">
+          GetPOIs Request
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/getpois-response/">
+          GetPOIs Response
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/changes-84/">
+            API v8.4 Changes
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/api-v85-changes/">
+            API v8.5  Changes
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/hotspots/">
+            hotspots
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/objects/">
+            object
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/actions/">
+            actions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/animations/">
+            animations
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/referenceimages/">
+            reference Images
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="selected">
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/layar-intent/">
+          Layar Intent
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/publishing-site/">
+        Publishing Site
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/publishing-site/test-layer/">
+          Test a Layer
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/publishing-site/test-layer/layer-testing-instructions/">
+            layer testing instructions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/publishing-site/test-layer/best-practices-cool-layers/">
+            best practices for creating cool layers
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/howtos/">
+        HowTo's
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/layar-vision-doc/">
+          Layar Vision
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/enable-layar-vision-layer/">
+            Enable Layar Vision in a layer
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/page-best-practices/">
+            Page best practices
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/layar-vision-faqs/">
+            Layar Vision FAQs
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/html-widgets/">
+          HTML widgets
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/geolocation-layer/">
+          Geo Layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/how-to-actions/">
+          Actions
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/2d-and-3d-objects/">
+          2D and 3D objects
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/filter-settings/">
+          Filter settings
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/user-authentication/">
+          User Authentication
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/sharing-screenshot-developer-defined-url/">
+          Sharing a screenshot to a developer defined URL
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/oauth-signing/">
+          OAuth signing
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/3d-content-creation/">
+        3D Content Creation
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/">
+          3D Model Converter
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/">
+            How to Use 3D Model Converter
+           </a>
+           <ul>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/editing-opacity-blending-and-shader/">
+              editing opacity, blending and shader
+             </a>
+            </li>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/create-texture-animated-3d-models/">
+              create texture animated 3D models
+             </a>
+            </li>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/positioning-3d-model/">
+              positioning  3D model
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/model-converter-release-history/">
+            Model Converter Release History
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/3d-content-creation/blender-addon/">
+          Blender add-on
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/tutorials-tools/">
+        Tutorials &amp; Tools
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/create-simple-vision-layer/">
+          Create a simple vision layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/create-simple-geo-location-layer/">
+          Create a simple Geo-location layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-with-actions/">
+          Layer with Actions
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-1d-icons-2d-images-and-3d-objects/">
+          Layer with 1d icons, 2d images and 3d objects
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-filter-settings/">
+          layer with filter settings
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/placing-pois-evenly-relative-users-current-location/">
+          Placing POis evenly relative to user's current location
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/add-animations-layer/">
+          Add animations to a layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/implement-user-authentication-layer/">
+          Implement user authentication in a layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/third-party/">
+          Third Party Tutorials &amp; Tools
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/archived/">
+        Archived
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/changes-83/">
+          API v8.3 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/getpois-response/">
+          GetPOIs Response v7.1
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/hotspots/">
+            hotspots
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/actions/">
+            actions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/animations/">
+            animations
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/changes-71/">
+          API v7.1 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/api-v70-changes/">
+          API v7.0 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/getpois-response-v62/">
+          GetPOIs Response v6.2
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </nav>
+   </aside>
+   <article>
+    <h1>
+     Layar Intent
+    </h1>
+    <p>
+     Three types of intent are defined in Layar.
+    </p>
+    <ol>
+     <li>
+      <h4>
+       <a href="#layar-layername">
+        layar://&lt;layername&gt;
+       </a>
+      </h4>
+     </li>
+     <li>
+      <h4>
+       <a href="#http-m-layar-com-open-layername">
+        http://m.layar.com/open/&lt;layername&gt;
+       </a>
+      </h4>
+     </li>
+     <li>
+      <h4>
+       <a href="#layarshare-layername-parameters">
+        layarshare://&lt;layername&gt;/?&lt;parameters&gt;
+       </a>
+      </h4>
+     </li>
+    </ol>
+    <h4>
+     layar://&lt;layername&gt;
+    </h4>
+    <table>
+     <caption>
+      <tt>
+       layar://&lt;layername&gt;
+      </tt>
+     </caption>
+     <tbody>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td>
+        <pre>layar://examplelayer</pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        This intent should be used for linking to a layer from within the Layar app (actions, redirects, links within the webviews etc... inside a layer).
+        <br/>
+        <strong>
+         NOTE:
+        </strong>
+        that on iphone and android (and only on these platforms), this also works from external applications but only if the Layar Browser is installed. We recommend to use the second form below if you are not sure on which platform the user is or whether the Layar Browser is installed.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Supported Platform:
+        </strong>
+       </td>
+       <td>
+        All platforms
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td>
+        v3.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         When to use:
+        </strong>
+       </td>
+       <td>
+        <ul>
+         <li>
+          Link to a layer from another layer within Layar app.
+         </li>
+         <li>
+          Link to a layer using an action within Layar app.
+         </li>
+         <li>
+          Opening a layer by using intents in the web browser directly. (iphone only)
+         </li>
+        </ul>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     Additionally, extended URL scheme for "layar://" intent is supported. Please see detailed description below:
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <th colspan="2">
+        <tt>
+         layar://&lt;layername&gt;/?action=refresh
+        </tt>
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td>
+        <pre>layar://examplelayer/?action=refresh</pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        When clicked, this link returns the user to the layer in the URL (AR view) and refreshes the POIs (a new GetPOI request is sent).
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Minimum API version:
+        </strong>
+       </td>
+       <td>
+        v3.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table>
+     <tbody>
+      <tr>
+       <th colspan="2">
+        <tt>
+         layar://&lt;layername&gt;/?&lt;filter&gt;=&lt;value&gt;
+        </tt>
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td>
+        <pre>layar://examplelayer/?CUSTOM_SLIDER_2=540</pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        A layer can be opened directly with specific filters set in the 
+parameters of the URL. The available filter settings are RADIOLIST, 
+  SEARCHBOX*, CUSTOM_SLIDER*,  CHECKBOXLIST, radius.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Minimum API version:
+        </strong>
+       </td>
+       <td>
+        v3.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table>
+     <tbody>
+      <tr>
+       <th colspan="2">
+        <strong>
+         <tt>
+          layar://&lt;layername&gt;/?action=refresh&amp;&lt;filter&gt;=&lt;value&gt;
+         </tt>
+        </strong>
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td>
+        <pre>layar://examplelayer/?action=refresh&amp;CUSTOM_SLIDER_2=540&amp;radius=3500</pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        The above params can be combined (concatenated with &amp;). The  example
+ intent will get back to the AR view, refretch the POIs with the  new 
+setting for the second custom slider and search range.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Minimum API version:
+        </strong>
+       </td>
+       <td>
+        v3.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table>
+     <tbody>
+      <tr>
+       <th colspan="2">
+        <strong>
+         <tt>
+          layar://&lt;layername&gt;/?action=update
+         </tt>
+        </strong>
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td>
+        <pre>layar://examplelayer/?action=update</pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        When clicked, the client will just consider the getPOI response as an update on the current POIs (a new 
+GetPOI request is sent).
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Minimum API version:
+        </strong>
+       </td>
+       <td>
+        v4.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table>
+     <tbody>
+      <tr>
+       <th colspan="2">
+        <strong>
+         <tt>
+          layar://&lt;layername&gt;/?&lt;custom_param&gt;=&lt;value&gt;
+         </tt>
+        </strong>
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td>
+        <pre>layar://examplelayer/?deletedPOIid=3 </pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        custom parameters can be added in the intent. All non-known(unreserved) parameters will be passed as 
+is in the getPOI request to the content provider.
+        <br/>
+        Reserved  parameters are: userId, developerId, countryCode, action, pageKey, oAuth parameters, radius, 
+local CountryCode, requestedPoiId, developerHash, timestamp, version, layerName, requestedPoiId, lang, lat, lon, alt, accuracy,  RADIOLIST, SEARCHBOX*, CUSTOM_SLIDER*,  CHECKBOXLIST and pageKey. Except for the filter settings parameters, other reserved parameters could not be manipulated. For 
+instance, layar://examplelayer/?lat=xxx&amp;lon=yyy, lat and lon values would not be accepted by the Client
+        <br/>
+        <strong>
+         NOTE
+        </strong>
+        : New reserved parameters added in the future will always have "ly_" prepended to them, in order to avoid conflicts with parameters used  
+in layers. custom parameters therefore should not start with "ly_".
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Minimum API version:
+        </strong>
+       </td>
+       <td>
+        v4.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table>
+     <tbody>
+      <tr>
+       <th colspan="2" style="width: 100%;">
+        <tt>
+         layar://&lt;layername&gt;/?action=&lt;value&gt;&amp;&lt;custom_param&gt;=&lt;value&gt;&amp;&lt;filter&gt;=&lt;value&gt;
+        </tt>
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td style="width: 100%;">
+        <pre>layar://examplelayer/?action=refresh&amp;radius=2500&amp;deletedPOIid=3</pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        A combination of action, filter settings and custom parameters is also supported.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Minimum API version:
+        </strong>
+       </td>
+       <td>
+        v4.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4>
+     http://m.layar.com/open/&lt;layername&gt;
+    </h4>
+    <table>
+     <caption>
+      <tt>
+       http://m.layar.com/open/&lt;layername&gt;
+      </tt>
+     </caption>
+     <tbody>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td>
+        <pre>http://m.layar.com/open/examplelayer</pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        This version should be used for linking to a layer from external applications. It will open a web page allowing the user to directly open the layer from that page or, if the Layar Browser is not installed, download the app from the stor for that platform.
+        <br/>
+        <strong>
+         NOTE:
+        </strong>
+        on Android, if Layar Browser is installed, user will be able to choose to open the link directly in the app.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Supported Platform:
+        </strong>
+       </td>
+       <td>
+        All platforms
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td>
+        v3.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         When to use:
+        </strong>
+       </td>
+       <td>
+        <ul>
+         <li>
+          Publish a link to your layer on a website
+         </li>
+         <li>
+          Send a link via e-mail
+         </li>
+         <li>
+          Link to your layer from within another application
+         </li>
+        </ul>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h4>
+     layarshare://&lt;layername&gt;/?&lt;parameters&gt;
+    </h4>
+    <table>
+     <caption>
+      <tt>
+       layarshare://&lt;layername&gt;/?&lt;parameters&gt;
+      </tt>
+     </caption>
+     <tbody>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td>
+        <pre>layarshare://examplelayer/?icon=http%3A%2F%2Ffoo%2Fbar.png&amp;title=Treasure%20hunt&amp;type=message</pre>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Explanation:
+        </strong>
+       </td>
+       <td>
+        Layar internal intent which can be used in Layar action to enable sharing a layer or POI to Facebook and Twitter. A developer can add this intent as the URI of an action, in his own buttons in a web view or even as an HTTP redirect. When using a redirect, take care not to surprise the user with a sharing screen but show it in response to an action that would logically trigger sharing. The sharing intent takes several parameters to format the sharing dialog. NOTE: Parameters need to be URL-encoded. The intent parameters are explained
+        <a href="#layarshare_params">
+         below
+        </a>
+        .
+        <br/>
+        <strong>
+         NOTE:
+        </strong>
+        This sharing intent can only be used within the Layar app.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Supported Platform:
+        </strong>
+       </td>
+       <td>
+        All platforms
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td>
+        v5.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         When to use:
+        </strong>
+       </td>
+       <td>
+        sharing a layer or a POI to Facebook and Twitter via layer and POI action
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p id="layarshare_params">
+     <strong>
+      layarshare:// intent parameters:
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       Sharing a message
+      </strong>
+     </li>
+    </ul>
+    <table>
+     <tbody>
+      <tr>
+       <th>
+        Key
+       </th>
+       <th>
+        Mandatory/
+        <br/>
+        Optional
+       </th>
+       <th>
+        Value
+       </th>
+       <th>
+        Example
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <tt>
+         title
+        </tt>
+       </td>
+       <td>
+        mandatory
+       </td>
+       <td>
+        string
+       </td>
+       <td>
+        Treasure hunt
+       </td>
+       <td>
+        Title to show with the shared message
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <tt>
+         type
+        </tt>
+       </td>
+       <td>
+        mandatory
+       </td>
+       <td>
+        string
+       </td>
+       <td>
+        message
+       </td>
+       <td>
+        Determines if the action should trigger sharing a message or a screenshot. use "message" to share a message.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <tt>
+         link
+        </tt>
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+        url
+       </td>
+       <td>
+        http://developer.com/scoreboard/user
+       </td>
+       <td>
+        This link is attached to the title parameter. It can be linked to a web page which shows more information about shared message.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <tt>
+         icon
+        </tt>
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+        url
+       </td>
+       <td>
+        http://developer.com/image.png
+       </td>
+       <td>
+        Places this icon next to a status update on Facebook. If not provided, the layer's icon (defined under Listing &amp; indexing tab of the layer editing page) will be used. The recommended icon size is 150x150.
+        <strong>
+         Not possible when sharing on Twitter.
+        </strong>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <tt>
+         description
+        </tt>
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+        string
+       </td>
+       <td>
+        Find more treasures with this layer!
+       </td>
+       <td>
+        Text that will show when the user shares their status update. This text is determined by the developer and cannot be changed by the user.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <tt>
+         <strong>
+          service
+         </strong>
+        </tt>
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+        string(facebook, twitter, developer)
+       </td>
+       <td>
+        facebook
+       </td>
+       <td>
+        <strong>
+         Introduced in API v7.0.
+        </strong>
+        This specifies a specific service this share action is meant to be used 
+for. Only 'facebook', 'twitter' or 'developer' are supported at the 
+moment. 'developer' works only if 'type' is 'screenshot' and is then 
+pointing to the
+        <a href="/documentation/browser/howtos/sharing-screenshot-developer-defined-url/">
+         layer-defined developer URL for sharing screenshots
+        </a>
+        .
+        <br/>
+        If not specified, the user gets to choose which service to use. If specified, the user will directly use the defined service.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <ul>
+     <li>
+      <strong>
+       Share a screenshot
+      </strong>
+     </li>
+    </ul>
+    <table>
+     <tbody>
+      <tr>
+       <th>
+        Key
+       </th>
+       <th>
+        Mandatory/Optional
+       </th>
+       <th>
+        Value
+       </th>
+       <th>
+        Example
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <tt>
+         type
+        </tt>
+       </td>
+       <td>
+        mandatory
+       </td>
+       <td>
+        string
+       </td>
+       <td>
+        screenshot
+       </td>
+       <td>
+        Determines if the action should trigger sharing a message or a screenshot. use "screenshot" to share a screenshot.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <tt>
+         <strong>
+          service
+         </strong>
+        </tt>
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+        string(facebook, twitter, developer)
+       </td>
+       <td>
+        facebook
+       </td>
+       <td>
+        <strong>
+         Introduced in API v7.0.
+        </strong>
+        This specifies a specific service this share action is meant to be used 
+for. Only 'facebook', 'twitter' or 'developer' are supported at the 
+moment. 'developer' works only if 'type' is 'screenshot' and is then 
+pointing to the
+        <a href="/documentation/browser/howtos/sharing-screenshot-developer-defined-url/">
+         layer-defined developer URL for sharing screenshots
+        </a>
+        .
+        <br/>
+        If not specified, the user gets to choose which service to use. If specified, the user will directly use the defined service.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     When posting a screenshot, the screenshot and a prefilled description by the Layar client will be posted to facebook and twitter.
+    </p>
+    <p>
+     The example below has two POI level action for sharing and two layer level actions for sharing.
+    </p>
+    <pre>{
+    "layer": "sharingapi",
+    "hotspots": [
+        {
+            "id": "GeoPOI_1",
+            "anchor": {
+                "geolocation": {
+                    "lat": 52.3729,
+                    "lon": 4.9357
+                }
+            },
+            "text": {
+                "title": "Geo POI"
+            },
+            "actions": [
+                {
+                    "label": "Share message",
+                    "uri": "layarshare:\/\/sharingapi\/?title=message%20title&amp;type=message&amp;link=http%3A%2F%2Fcustom.layar.nl%2F&amp;icon=http%3A%2F%2Fcustom.layar.nl%2FPOIimage.jpg&amp;description=check%20out%20this%20object",
+                    "contentType": "application\/vnd.layar.internal",
+                    "activityType": 13
+                },
+                {
+                    "label": "Share screenshot",
+                    "uri": "layarshare:\/\/sharingapi/?type=screenshot",
+                    "contentType": "application\/vnd.layar.internal",
+                    "activityType": 13
+                }
+            ]
+          
+        }
+    ],
+    "actions": [
+        {
+            "label": "Share message",
+            "uri": "layarshare:\/\/sharingapi\/?title=message%20title&amp;type=message&amp;link=http%3A%2F%2Fcustom.layar.nl%2F&amp;description=check%20out%20this%20layer&amp;service=facebook",
+            "contentType": "application\/vnd.layar.internal",
+            "activityType": 13
+        },
+        {
+            "label": "Share screenshot",
+            "uri": "layarshare:\/\/sharingapi\/?type=screenshot&amp;service=twitter",
+            "contentType": "application\/vnd.layar.internal",
+            "activityType": 13
+        }
+    ],
+    "refreshInterval": 10,
+    "fullRefresh": false,
+    "errorCode": 0,
+    "errorString": "OK"
+}</pre>
+    <div class="related">
+     <h3>
+      Related topics
+     </h3>
+     <p>
+      <a href="/documentation/browser/archived/getpois-response/">
+       Layar Developer API - GetPOIs Response
+      </a>
+      <a href="/documentation/browser/api/getpois-response/actions/">
+       Layar Developer API - GetPOIs Response - actions
+      </a>
+     </p>
+    </div>
+   </article>
+  </div>
+  <footer>
+   <span class="copyright">
+    © 2017 Layar, All Rights Reserved
+   </span>
+   <a class="feedback" href="http://devsupport.layar.com/">
+    Dev Support
+   </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jqbrowser.5d3867015613.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jquery-syntaxhighlighter/js/jquery-syntaxhighlighter.min.be0a493e40d1.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/documentation.a223dad8bb9b.js">
+  </script>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-WC63SX" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WC63SX');
+  </script>
+  <!-- End Google Tag Manager -->
+ </body>
+</html>

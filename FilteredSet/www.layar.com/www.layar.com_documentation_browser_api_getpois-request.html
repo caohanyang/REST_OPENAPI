@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   GetPOIs Request – Layar Developer Documentation
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="" name="description"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/favicon.008a69ff80a7.png" rel="icon"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/css/base.8a1b3d2c89f8.css" rel="stylesheet"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/css/documentation.f81faeb73433.css" rel="stylesheet"/>
+  <!--[if lte IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+  <!-- ♥ -->
+ </head>
+ <body data-syntaxhighligher-base-url="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jquery-syntaxhighlighter">
+  <header>
+   <div class="header-wrap">
+    <h1>
+     <a class="hide-text" href="/documentation/">
+      Layar Developer Documentation
+     </a>
+    </h1>
+    <a class="back" href="/">
+     <span>
+      ◀
+     </span>
+     Back to layar.com
+    </a>
+   </div>
+  </header>
+  <div class="wrap">
+   <nav class="main">
+    <ul>
+     <li class="selected">
+      <a href="/documentation/browser/">
+       API &amp; Platform
+      </a>
+     </li>
+     <li>
+      <a href="/documentation/connect/">
+       Connect
+      </a>
+     </li>
+     <li>
+      <a href="/documentation/layar-sdk/">
+       SDK
+      </a>
+     </li>
+    </ul>
+    <form action="//www.google.com/search" class="search" method="GET">
+     <input name="sitesearch" type="hidden" value="layar.com/documentation"/>
+     <input name="q" placeholder="Search in documentation…" required="required" type="text"/>
+     <button class="hide-text" type="submit">
+      Submit
+     </button>
+    </form>
+   </nav>
+   <aside class="side-nav">
+    <nav>
+     <ul>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/layar-platform-overview/">
+        Layar Platform Overview
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/layar-platform-overview/layer-service-provider/">
+          Layer Service Provider
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/layar-platform-overview/terminology/">
+          Terminology
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="child-selected">
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/api/">
+        API Documentation
+       </a>
+       <ul>
+        <li class="selected">
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/getpois-request/">
+          GetPOIs Request
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/getpois-response/">
+          GetPOIs Response
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/changes-84/">
+            API v8.4 Changes
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/api-v85-changes/">
+            API v8.5  Changes
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/hotspots/">
+            hotspots
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/objects/">
+            object
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/actions/">
+            actions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/animations/">
+            animations
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/referenceimages/">
+            reference Images
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/layar-intent/">
+          Layar Intent
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/publishing-site/">
+        Publishing Site
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/publishing-site/test-layer/">
+          Test a Layer
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/publishing-site/test-layer/layer-testing-instructions/">
+            layer testing instructions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/publishing-site/test-layer/best-practices-cool-layers/">
+            best practices for creating cool layers
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/howtos/">
+        HowTo's
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/layar-vision-doc/">
+          Layar Vision
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/enable-layar-vision-layer/">
+            Enable Layar Vision in a layer
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/page-best-practices/">
+            Page best practices
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/layar-vision-faqs/">
+            Layar Vision FAQs
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/html-widgets/">
+          HTML widgets
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/geolocation-layer/">
+          Geo Layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/how-to-actions/">
+          Actions
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/2d-and-3d-objects/">
+          2D and 3D objects
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/filter-settings/">
+          Filter settings
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/user-authentication/">
+          User Authentication
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/sharing-screenshot-developer-defined-url/">
+          Sharing a screenshot to a developer defined URL
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/oauth-signing/">
+          OAuth signing
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/3d-content-creation/">
+        3D Content Creation
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/">
+          3D Model Converter
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/">
+            How to Use 3D Model Converter
+           </a>
+           <ul>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/editing-opacity-blending-and-shader/">
+              editing opacity, blending and shader
+             </a>
+            </li>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/create-texture-animated-3d-models/">
+              create texture animated 3D models
+             </a>
+            </li>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/positioning-3d-model/">
+              positioning  3D model
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/model-converter-release-history/">
+            Model Converter Release History
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/3d-content-creation/blender-addon/">
+          Blender add-on
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/tutorials-tools/">
+        Tutorials &amp; Tools
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/create-simple-vision-layer/">
+          Create a simple vision layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/create-simple-geo-location-layer/">
+          Create a simple Geo-location layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-with-actions/">
+          Layer with Actions
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-1d-icons-2d-images-and-3d-objects/">
+          Layer with 1d icons, 2d images and 3d objects
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-filter-settings/">
+          layer with filter settings
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/placing-pois-evenly-relative-users-current-location/">
+          Placing POis evenly relative to user's current location
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/add-animations-layer/">
+          Add animations to a layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/implement-user-authentication-layer/">
+          Implement user authentication in a layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/third-party/">
+          Third Party Tutorials &amp; Tools
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/archived/">
+        Archived
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/changes-83/">
+          API v8.3 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/getpois-response/">
+          GetPOIs Response v7.1
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/hotspots/">
+            hotspots
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/actions/">
+            actions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/animations/">
+            animations
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/changes-71/">
+          API v7.1 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/api-v70-changes/">
+          API v7.0 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/getpois-response-v62/">
+          GetPOIs Response v6.2
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </nav>
+   </aside>
+   <article>
+    <h1>
+     GetPOIs Request
+    </h1>
+    <p>
+     This call is used to request the points of interest to be displayed for a particular layer.
+    </p>
+    <h4>
+     <strong>
+      URI:
+     </strong>
+    </h4>
+    <p>
+     http://&lt;poiUrl&gt;?&lt;parameters&gt;
+    </p>
+    <h4>
+     <strong>
+      Request example:
+     </strong>
+    </h4>
+    <blockquote>
+     <p>
+      http://devAPI.example.com/getPOIs/?countryCode=IN&amp;lon=4.887339 &amp;userId=ed48067cda8e1b985dbb8ff3653a2da4fd490a37 &amp;radius=6245&amp;lat=52.377544&amp;layerName=snowy4&amp;accuracy=100
+     </p>
+    </blockquote>
+    <h4>
+     <strong>
+      HTTP request header:
+     </strong>
+    </h4>
+    <p>
+     <strong>
+      User-Agent:
+     </strong>
+     The user agent originally set by the client. Format is: Layar/x.y [OS name]/x.y.z ([Brand] [Model]), for example "Layar/3.1 Android/2.1 (Motorola   Milestone)" , "Layar/3.1 iPhoneOS/3.1.2 (Apple iPhone3GS)" or "Layar/3.0 BadaOS/3.0.4(Samsung Wave)".
+    </p>
+    <h4>
+     <strong>
+      poiUrl
+     </strong>
+     :
+    </h4>
+    <p>
+     The API endpoint URL of the POI service provider. This can be defined in the publishing site.
+    </p>
+    <h4>
+     <strong>
+      Request Parameters:
+     </strong>
+    </h4>
+    <p>
+     The detailed explanation of each parameter is listed below.
+    </p>
+    <ul>
+     <li>
+      Note that new request parameters may be added in future versions of Layar. Therefore the layer developer should always ignore unknown params rather than throwing an error.
+     </li>
+     <li>
+      If you need to ensure the request is genuine, request OAuth signing and check it. This way only genuine requests from the Layar server can be filtered.
+     </li>
+     <li>
+      <strong>
+       Please make sure that you are not using reserved parameters from Layar in your own API endPoint URL.
+      </strong>
+      After Layar API v4.0, all new reserved parameters introduced will have "ly_" prepended to them, in order to avoid conflicts with parameters used in layers. custom parameters therefore should not start with "ly_".
+     </li>
+    </ul>
+    <table id="request-userId">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         userId
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        A unique id of the user.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        introduced in v2.1; modified in v6.2 for privacy reasons.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        A unique ID of the end-user, anonymized. It is a hashed code. This ID is created when the layar app is installed the first time. It will be kept when the app is updated. A new ID is generated when the app is completely removed from the device and replaced with a new download.
+        <br/>
+        <strong>
+         NOTE:
+        </strong>
+        Since the algorithm of generating this unique ID is changed in API v6.2, the userID will be replaced when upgrading to v6.2. In future releases, as long as the Layar app is not removed completely, the userID will be kept.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        userId=42241049345
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-layerName">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         layerName
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th style="width: 100%;">
+        The identifier of the layer.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        The layer name defined in the publishing site. This is a unique name used to identify a layer.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        layerName=hyves
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-version">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         version
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        The version of the API used by the client.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        This indicates the version of the API that the phone is using. Note that for older version, strings like "ip3.0" might be used. However, this version string cannot be used anymore to differentiate clients (Android and iPhone clients use the same version string, as it's the API version). Current list of versions: "2.1", "2.2", "3.0" "3.1", "3.5", ”4.0", "5.0" and "6.0". Developers can use this parameter to decide which JSON response should be returned so that the same layer can work on various clients with optimized performance.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        version=6.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-lat">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         lat
+        </tt>
+       </th>
+       <th>
+        decimal
+       </th>
+       <th style="width: 100%;">
+        The latitude of current position of the user. (GPS coordinate)
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        lat=52.360112
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-lon">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         lon
+        </tt>
+       </th>
+       <th>
+        decimal
+       </th>
+       <th style="width: 100%;">
+        The longitude of current position of the user. (GPS coordinate)
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        lon=-4.895665
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-countryCode">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         countryCode
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        The home country of the user.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        This is the home country of the user, as determined by the network provider of the SIM card in the phone. If this is not available (e.g. iPhone or no SIM card inserted), it will return the locale value set on the phone.
+        <strong>
+         NOTE:
+        </strong>
+        If you have development mode on, the country setting in developer settings will overrule the values from SIM card and Locale setting. List of country code can be found
+        <a href="  https://www.iso.org/obp/ui/#search/code/">
+         here
+        </a>
+        .
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        countryCode=NL
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-lang">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         lang
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th style="width: 100%;">
+        The language used on the layar client.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v3.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        This is the language setting found under locale setting on the phone. Currently it is using
+        <a href="http://en.wikipedia.org/wiki/ISO_639-1">
+         ISO 639-1
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        lang=EN
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-action">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         action
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        Specifies whether the layar client is requesting a full refresh or an update.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v4.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        This tells the poi provider whether the client is requesting a full refresh of the layer or just an update: This can be caused by the refresh parameter(fullRefresh) in the getPOIs response or by an intent containing the "action=update" command. Default action=refresh
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        action=update
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-accuracy">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         accuracy
+        </tt>
+       </th>
+       <th>
+        integer
+       </th>
+       <th>
+        The accuracy of the current location.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        the accuracy of the current location, as given by the device. Note that accuracy may not be given if a fixed location is used (developer feature).
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        accuracy=50
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-pageKey">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         pageKey
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        The key of the next page.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        If the POIs are spread over more pages, the Layar Server can request the next page using this pageKey (if received in the previous getPOIs response)
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        pageKey=aldsfj9348dk
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     The following parameters are used for oAuth signing.  If oAuth signing is enabled on the publishing site, all these parameters are mandatory.
+    </p>
+    <table id="request-oauth_consumer_key">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         oauth_consumer_key
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th style="width: 100%;">
+        The oauth consumer key defined in the publishing site.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        oauth_consumer_key=f43f3p214k3103
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-oauth_signature_method">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         oauth_signature_method
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th style="width: 100%;">
+        this will always be HMAC-SHA1
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        oauth_signature_method=HMAC-SHA1
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-oauth_timestamp">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         oauth_timestamp
+        </tt>
+       </th>
+       <th>
+        integer
+       </th>
+       <th style="width: 100%;">
+        timestamp for the request.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        oauth_timestamp=1191242096
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-oauth_nonce">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         oauth_nonce
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th style="width: 100%;">
+        unique nonce to rule out replay attacks
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        oauth_nonce=kllo9940pd9333jh
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-oauth_version">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         oauth_version
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th style="width: 100%;">
+        oauth version used. This wiill always be 1.0
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        oauth_version=1.0
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-oauth_signature">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         oauth_signature
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        HMAC-SHA1 signature using the Signature Base String as text and the Consumer Secret (no token secret) as key. The consumer secret is submitted by the developer on the Layar Publishing Website.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        oauth_signature=tR3+Ty81lMeYar/Fid0kMTYa/WM=
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-oauth_body_hash">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         oauth_body_hash
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th style="width: 100%;">
+        The request body hash value. Please read
+        <a href="http://oauth.googlecode.com/svn/spec/ext/body_hash/1.0/oauth-bodyhash.html">
+         here
+        </a>
+        for more information.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        oauth_body_hash=2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-RADIOLIST">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         RADIOLIST
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        The option id corresponding to the value of the radio button list option selected by the user on the client.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        RADIOLIST=1001
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-SEARCHBOX">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         SEARCHBOX, SEARCHBOX_n
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        the search term entered by the user. When multiple search boxes are defined (up to 3), they will be numbered _2, _3.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1 for SEARCHBOX; v3.0 for SEARCHBOX_2 and SEARCHBOX_3.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        SEARCHBOX=bar, SEARCHBOX_3=foo
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-CUSTOM_SLIDER">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         CUSTOM_SLIDER, CUSTOM_SLIDER_n
+        </tt>
+       </th>
+       <th>
+        float/integer
+       </th>
+       <th>
+        The value for the custom slider selected b the user. When multiple sliders are defined (up to 3), they will be numbered _2, _3.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1 for CUSTOM_SLIDER; v3.0 for CUSTOM_SLIDER_2 and CUSTOM_SLIDER_3.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        CUSTOM_SLIDER=45.6, CUSTOM_SLIDER_2=20
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-radius">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         radius
+        </tt>
+       </th>
+       <th>
+        integer
+       </th>
+       <th>
+        The value for the search radius selected by the user in the RANGE_SLIDER (unit in meters).
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        mandatory before v3.0; Since v3.0, it is optional.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v2.1
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        From v3 on, radius is not mandatory anymore and flexible radius can be used (if the default value of the range slider is empty).
+        <br/>
+        NOTE: If you are using flexible radius, you need to return a radius value in the JSON response. Please check GetPOIs Response page for more information.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        radius=2500
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-CHECKBOXLIST">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         CHECKBOXLIST
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        The value(s) selected for the checkbox: multiple values get passed using comma-separated values.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v3.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        CHECKBOXLIST=4,7
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-localCountryCode">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         localCountryCode
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        country code for the current country the device is located in.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v3.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Detailed Description:
+        </strong>
+       </td>
+       <td colspan="2">
+        It is based on the country of the current mobile network provider the user is roaming in. If not available (e.g iPhone or no SIM card), the app will try to determine the current country based on the GPS location (reverse geo-coding lookup). However this may be unsuccessful and therefore incorrect.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        localCountryCode=UK
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-alt">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         alt
+        </tt>
+       </th>
+       <th>
+        integer
+       </th>
+       <th>
+        The current altitude of the user. This is not always known on the client and will only be passed when there is a gps fix.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        v3.0
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        alt=200
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table id="request-recognizedReferenceImage">
+     <tbody>
+      <tr>
+       <th>
+        <tt>
+         recognizedReferenceImage
+        </tt>
+       </th>
+       <th>
+        string
+       </th>
+       <th>
+        The key(s) of the reference image(s) that caused this layer to show up in the visual search results.
+       </th>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Mandatory/Optional:
+        </strong>
+       </td>
+       <td colspan="2">
+        optional
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Introduced API:
+        </strong>
+       </td>
+       <td colspan="2">
+        introduced in v6.0;
+        <strong>
+         enhanced in v7.0
+        </strong>
+        , supports multiple reference image keys.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <strong>
+         Example:
+        </strong>
+       </td>
+       <td colspan="2">
+        If only one reference image in the layer is recognized: recognizedReferenceImage=cheating
+        <br/>
+        <br/>
+        If multiple reference images in the layer are recognized, image keys are separated using comma (%2C):
+        <br/>
+        <code>
+         recognizedReferenceImage=cheating%2C
+        </code>
+        <code>
+         monkey%2Cbeer
+        </code>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <div class="related">
+     <h3>
+      Related topics
+     </h3>
+     <p>
+      <a href="/documentation/browser/api/">
+       Overview: the Layar Developer API Documentation
+      </a>
+      <a href="/documentation/browser/archived/getpois-response/">
+       Layar Developer API - GetPOIs Response
+      </a>
+     </p>
+    </div>
+   </article>
+  </div>
+  <footer>
+   <span class="copyright">
+    © 2017 Layar, All Rights Reserved
+   </span>
+   <a class="feedback" href="http://devsupport.layar.com/">
+    Dev Support
+   </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jqbrowser.5d3867015613.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jquery-syntaxhighlighter/js/jquery-syntaxhighlighter.min.be0a493e40d1.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/documentation.a223dad8bb9b.js">
+  </script>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-WC63SX" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WC63SX');
+  </script>
+  <!-- End Google Tag Manager -->
+ </body>
+</html>

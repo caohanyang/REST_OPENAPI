@@ -1,6 +1,7 @@
 {
   "basePath": "/search",
   "paths": {},
+  "produces": "application/json",
   "host": "twitter.com",
   "schemes": [
     "http"

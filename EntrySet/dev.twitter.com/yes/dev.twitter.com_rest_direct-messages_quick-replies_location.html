@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+ <head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Location Quick Reply — Twitter Developers
+  </title>
+  <link href="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/favicon.ico" rel="shortcut icon"/>
+  <meta content="DsylEvTL7j64tY0IHBWbMN6pUvvKMIRl8usLs1sn2XQ" name="google-site-verification"/>
+  <meta content="" name="twitter:card"/>
+  <meta content="" name="twitter:title"/>
+  <meta content="" name="twitter:description"/>
+  <meta content="" name="twitter:image"/>
+  <meta content="" name="twitter:url"/>
+  <meta content="on" name="twitter:widgets:csp"/>
+  <meta content="" property="og:title"/>
+  <meta content="" property="og:site_name"/>
+  <meta content="" property="og:type"/>
+  <meta content="" property="og:image"/>
+  <meta content="" property="og:url"/>
+  <link href="" rel="canonical"/>
+  <link href="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/css/theme.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.twitter.com/helvetica_neue/css/light.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.twitter.com/helvetica_neue/css/roman.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.twitter.com/helvetica_neue/css/bold.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.twitter.com/helvetica_neue/css/heavy.css" rel="stylesheet" type="text/css"/>
+  <link href="../../../index" rel="top" title="Twitter Developers"/>
+  <link href="../quick-replies" rel="up" title="Quick Replies"/>
+  <link href="../attaching-media" rel="next" title="Attaching Media to Direct Messages"/>
+  <link href="text-input" rel="prev" title="Text Input Quick Reply"/>
+  <link href="https://platform.twitter.com" rel="dns-prefetch"/>
+  <script src="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/js/modernizr.min.js">
+  </script>
+ </head>
+ <body role="document">
+  <div class="comp-wrapper nav-drawer-dtc no-interaction nav-exposed transparent">
+   <div class="comp-container container">
+    <div class="nav-wrapper">
+     <header>
+      <div class="header-left">
+       <div class="nav-drawer-link">
+        <div class="property-title">
+         <a class="logo-and-title" href="../../../index">
+          <span class="logo">
+           <i aria-hidden="true" class="icon-logo_sml">
+           </i>
+           <span class="screen-reader">
+            Twitter logo icon
+           </span>
+          </span>
+          <span class="title">
+           Developers
+          </span>
+         </a>
+        </div>
+        <!-- <div class="arrow-down">
+                <i class="icon-navigation_down_arrow" aria-hidden="true"></i>
+                <span class="screen-reader">Arrow down icon</span>
+              </div> -->
+       </div>
+      </div>
+      <ul class="nav-exposed__menu">
+       <li class="nav-main__list-item">
+        <a href="/products" title="Products">
+         Products
+        </a>
+       </li>
+       <li class="nav-main__list-item">
+        <a href="../../../docs" title="Documentation">
+         Documentation
+        </a>
+       </li>
+       <li class="nav-main__list-item">
+        <a href="/community" title="Community">
+         Community
+        </a>
+       </li>
+       <li class="nav-main__list-item">
+        <a href="/build" title="Build">
+         Build
+        </a>
+       </li>
+       <li class="nav-main__list-item">
+        <a href="https://apps.twitter.com" target="_blank" title="My Apps">
+         My apps
+        </a>
+       </li>
+       <li class="nav-main__list-item nav-cta">
+        <a href="../../../resources/signup" title="Join">
+         <button>
+          Join
+         </button>
+        </a>
+       </li>
+      </ul>
+      <div class="header-right">
+       <a class="nav-icon" href="#">
+        <span>
+        </span>
+       </a>
+       <a class="nav-cta" href="../../../resources/signup" title="Join">
+        <button>
+         Join
+        </button>
+       </a>
+      </div>
+     </header>
+    </div>
+   </div>
+  </div>
+  <!-- Masthead -->
+  <div class="comp-wrapper masthead slim blue-gradient">
+   <div class="comp-container container">
+    <div class="copy-wrapper">
+     <div class="copy-container">
+      <h2>
+       Twitter Developer Documentation
+      </h2>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- / Masthead -->
+  <div class="container">
+   <div aria-label="breadcrumbs navigation" role="navigation">
+    <ol class="breadcrumb">
+     <li>
+      <a href="../../../docs">
+       Docs
+      </a>
+     </li>
+     <li>
+      <a href="../../public">
+       REST APIs
+      </a>
+     </li>
+     <li>
+      <a href="../../direct-messages">
+       Direct Messages Beta Features
+      </a>
+     </li>
+     <li>
+      <a href="../quick-replies">
+       Quick Replies
+      </a>
+     </li>
+     <li>
+      Location Quick Reply
+     </li>
+    </ol>
+   </div>
+  </div>
+  <div class="bg-outer">
+   <div class="container">
+    <div class="row row-offcanvas row-offcanvas-left">
+     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar-nav">
+      <!--<div role="search">
+  <p class="caption"><span class="caption-text">Search</span></p>
+  <form id="rtd-search-form" action="../../../search" method="get">
+    <label class="search_cont">
+      <input type="text" name="q" placeholder="Search for..." />
+      <i class="icon-navigation_search"></i>
+    </label>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>-->
+      <p class="caption">
+       <span class="caption-text">
+        Products &amp; Services
+       </span>
+      </p>
+      <ul class="current">
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../basics">
+         Best practices
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../overview/api">
+         API overview
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../web/overview">
+         Twitter for Websites
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../twitterkit/overview">
+         Twitter Kit
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../cards/overview">
+         Cards
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../oauth">
+         OAuth
+        </a>
+       </li>
+       <li class="toctree-l1 current">
+        <a class="reference internal" href="../../public">
+         REST APIs
+        </a>
+        <ul class="current">
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../public/rate-limiting">
+           API Rate Limits
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../public/rate-limits">
+           Rate Limits: Chart
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../public/search">
+           The Search API
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../public/search-by-place">
+           The Search API: Tweets by Place
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../public/timelines">
+           Working with Timelines
+          </a>
+         </li>
+         <li class="toctree-l2 current">
+          <a class="reference internal" href="../../direct-messages">
+           Direct Messages Beta Features
+          </a>
+          <ul class="current">
+           <li class="toctree-l3">
+            <a class="reference internal" href="../getting-started">
+             Getting Started
+            </a>
+           </li>
+           <li class="toctree-l3">
+            <a class="reference internal" href="../sending-receiving">
+             Sending and Receiving
+            </a>
+           </li>
+           <li class="toctree-l3">
+            <a class="reference internal" href="../welcome-messages">
+             Welcome Messages
+            </a>
+           </li>
+           <li class="toctree-l3 current">
+            <a class="reference internal" href="../quick-replies">
+             Quick Replies
+            </a>
+            <ul class="current">
+             <li class="toctree-l4">
+              <a class="reference internal" href="options">
+               Options
+              </a>
+             </li>
+             <li class="toctree-l4">
+              <a class="reference internal" href="text-input">
+               Text Input
+              </a>
+             </li>
+             <li class="toctree-l4 current">
+              <a class="current reference internal" href="">
+               Location
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li class="toctree-l3">
+            <a class="reference internal" href="../attaching-media">
+             Attaching Media
+            </a>
+           </li>
+           <li class="toctree-l3">
+            <a class="reference internal" href="../custom-profiles">
+             Custom Profiles
+            </a>
+           </li>
+           <li class="toctree-l3">
+            <a class="reference internal" href="../customer-feedback">
+             Customer Feedback Cards
+            </a>
+           </li>
+           <li class="toctree-l3">
+            <a class="reference internal" href="../best-practices">
+             Tips &amp; Best Practices
+            </a>
+           </li>
+           <li class="toctree-l3">
+            <a class="reference internal" href="../reference">
+             Reference
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../collections">
+           Collections
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../media">
+           Media
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../public/search">
+           Search
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../ton">
+           TON
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="../../reference">
+           Reference Documentation
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../streaming/overview">
+         Streaming APIs
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../webhooks">
+         Webhook APIs
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../ads">
+         Ads API
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference external" href="http://support.gnip.com/apis/">
+         Gnip
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference external" href="http://www.mopub.com/resources/docs/">
+         MoPub
+        </a>
+       </li>
+      </ul>
+      <p class="caption">
+       <span class="caption-text">
+        Tools &amp; Support
+       </span>
+      </p>
+      <ul>
+       <li class="toctree-l1">
+        <a class="reference external" href="https://apps.twitter.com">
+         My apps
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../tools/console">
+         API console
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../overview/status">
+         API status
+        </a>
+       </li>
+      </ul>
+      <p class="caption">
+       <span class="caption-text">
+        Translations
+       </span>
+      </p>
+      <ul>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../ja">
+         日本語
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../pt">
+         Português, Brasil
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../es">
+         Español
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../fr">
+         Français
+        </a>
+       </li>
+      </ul>
+      <p class="caption">
+       <span class="caption-text">
+        Resources
+       </span>
+      </p>
+      <ul>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../resources/twitter-libraries">
+         Libraries
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference external" href="https://twitterdev.github.io">
+         Sample code
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../resources/playbooks">
+         Playbooks
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../resources/case-studies">
+         Case studies
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../resources/signup">
+         Join the community
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../resources/events">
+         Events
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="../../../overview/terms">
+         Developer terms
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="col-xs-12 col-sm-9" id="main">
+      <p class="visible-xs">
+       <button class="btn btn-primary btn-xs" data-toggle="offcanvas" id="nav-toggle" type="button">
+        Show navigation »
+       </button>
+      </p>
+      <div class="container-fluid">
+       <div class="rst-content" id="main-content">
+        <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+         <div itemprop="articleBody">
+          <div class="section" id="location-quick-reply">
+           <h1>
+            Location Quick Reply
+            <a class="headerlink" href="#location-quick-reply" title="Permalink to this headline">
+             ¶
+            </a>
+           </h1>
+           <div class="toctree-wrapper compound" id="id1">
+           </div>
+           <p>
+            Location sharing in Direct Messages provides users the ability to share a location as part of a
+conversation, as well as enable businesses to prompt users to share a location via a new type of
+quick reply.
+           </p>
+           <p>
+            Users have the ability to select from one of three choices for sharing a location in the user experience:
+           </p>
+           <ul class="simple">
+            <li>
+             Current location (lat/long from mobile device)
+            </li>
+            <li>
+             Pinned location (lat/long selected from dragging a pin on a map)
+            </li>
+            <li>
+             Place or POI (Twitter Place ID)
+            </li>
+           </ul>
+           <p>
+            In the response, developers will receive either a coordinate or place ID, which can be hydrated
+from
+            <a class="reference external" href="/rest/reference/get/geo/search">
+             GET geo/search
+            </a>
+            . Developers can also send a location card to a user as part of a DM conversation by attaching a valid Twitter place ID or coordinates to a DM POST request.
+           </p>
+           <p>
+            Working with Location Quick Replies:
+           </p>
+           <div class="contents local topic" id="contents">
+            <ul class="simple">
+             <li>
+              <a class="reference internal" href="#requesting-location-from-a-user-with-a-quick-reply" id="id3">
+               Requesting location from a user with a quick reply
+              </a>
+             </li>
+             <li>
+              <a class="reference internal" href="#sending-a-location" id="id4">
+               Sending a location
+              </a>
+             </li>
+             <li>
+              <a class="reference internal" href="#receiving-a-user-response-via-webhook" id="id5">
+               Receiving a User Response via Webhook
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="section" id="requesting-location-from-a-user-with-a-quick-reply">
+            <h2>
+             <a class="toc-backref" href="#id3">
+              Requesting location from a user with a quick reply
+             </a>
+             <a class="headerlink" href="#requesting-location-from-a-user-with-a-quick-reply" title="Permalink to this headline">
+              ¶
+             </a>
+            </h2>
+            <div class="section" id="quick-reply-object">
+             <h3>
+              Quick Reply Object
+              <a class="headerlink" href="#quick-reply-object" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="31%">
+               </col>
+               <col width="69%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 <strong>
+                  quick_reply.type
+                 </strong>
+                 (required)
+                </td>
+                <td>
+                 Must be set to
+                 <code class="docutils literal">
+                  <span class="pre">
+                   location
+                  </span>
+                 </code>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 <strong>
+                  quick_reply.location.metadata
+                 </strong>
+                 (optional)
+                </td>
+                <td>
+                 Metadata that will be provided in user response payload. String, max length
+of 1,000 characters including spaces.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <div class="section" id="example-request-with-location-quick-reply">
+             <h3>
+              Example Request with Location Quick Reply
+              <a class="headerlink" href="#example-request-with-location-quick-reply" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <div class="code javascript highlight-python">
+              <div class="highlight">
+               <pre><span></span><span class="p">{</span>
+  <span class="s2">"event"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"message_create"</span><span class="p">,</span>
+    <span class="s2">"message_create"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"target"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"recipient_id"</span><span class="p">:</span> <span class="s2">"2001"</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="s2">"message_data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"text"</span><span class="p">:</span> <span class="s2">"I’m sorry your burrito is bad. Which location did you order from?"</span><span class="p">,</span>
+        <span class="s2">"quick_reply"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"location"</span><span class="p">,</span>
+          <span class="s2">"location"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"metadata"</span><span class="p">:</span> <span class="s2">"external_id"</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="section" id="sending-a-location">
+            <h2>
+             <a class="toc-backref" href="#id4">
+              Sending a location
+             </a>
+             <a class="headerlink" href="#sending-a-location" title="Permalink to this headline">
+              ¶
+             </a>
+            </h2>
+            <div class="section" id="id2">
+             <h3>
+              Quick Reply Object
+              <a class="headerlink" href="#id2" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="25%">
+               </col>
+               <col width="75%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 <strong>
+                  type
+                 </strong>
+                 (required)
+                </td>
+                <td>
+                 String value of
+                 <code class="docutils literal">
+                  <span class="pre">
+                   shared_coordinate
+                  </span>
+                 </code>
+                 or
+                 <code class="docutils literal">
+                  <span class="pre">
+                   shared_place
+                  </span>
+                 </code>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 <strong>
+                  shared_coordinate
+                 </strong>
+                 (optional)
+                </td>
+                <td>
+                 <code class="docutils literal">
+                  <span class="pre">
+                   shared_coordinate
+                  </span>
+                 </code>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 <strong>
+                  shared_place
+                 </strong>
+                 (optional)
+                </td>
+                <td>
+                 <code class="docutils literal">
+                  <span class="pre">
+                   shared_place
+                  </span>
+                 </code>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <div class="section" id="shared-coordinate-object">
+             <h3>
+              Shared Coordinate Object
+              <a class="headerlink" href="#shared-coordinate-object" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="25%">
+               </col>
+               <col width="75%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 <strong>
+                  coordinates.coordinates
+                 </strong>
+                 (required)
+                </td>
+                <td>
+                 Array representation in [longitude, latitude]
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 <strong>
+                  coordinates.type
+                 </strong>
+                 (required)
+                </td>
+                <td>
+                 String value that must always be “Point”
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <div class="section" id="shared-place-object">
+             <h3>
+              Shared Place Object
+              <a class="headerlink" href="#shared-place-object" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="25%">
+               </col>
+               <col width="75%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 <strong>
+                  place.id
+                 </strong>
+                 (required)
+                </td>
+                <td>
+                 A place ID. See places documentation for full details.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <div class="section" id="example-request-with-attached-shared-coordinate">
+             <h3>
+              Example Request with Attached Shared Coordinate
+              <a class="headerlink" href="#example-request-with-attached-shared-coordinate" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <div class="code javascript highlight-python">
+              <div class="highlight">
+               <pre><span></span><span class="p">{</span>
+  <span class="s2">"event"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"message_create"</span><span class="p">,</span>
+    <span class="s2">"message_create"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"target"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"recipient_id"</span><span class="p">:</span> <span class="s2">"844385345234"</span>
+      <span class="p">},</span>
+      <span class="s2">"message_data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"text"</span><span class="p">:</span> <span class="s2">"Here's my location"</span><span class="p">,</span>
+        <span class="s2">"attachment"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"location"</span><span class="p">,</span>
+          <span class="s2">"location"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"shared_coordinate"</span><span class="p">,</span>
+            <span class="s2">"shared_coordinate"</span><span class="p">:</span> <span class="p">{</span>
+              <span class="s2">"coordinates"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"Point"</span><span class="p">,</span>
+                <span class="s2">"coordinates"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">122.443893</span><span class="p">,</span> <span class="mf">37.771718</span><span class="p">]</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+              </div>
+             </div>
+            </div>
+            <div class="section" id="example-request-with-attached-shared-place">
+             <h3>
+              Example Request with Attached Shared Place
+              <a class="headerlink" href="#example-request-with-attached-shared-place" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <div class="code javascript highlight-python">
+              <div class="highlight">
+               <pre><span></span>{
+  "event": {
+    "type": "message_create",
+      "message_create": {
+        "target": {
+          "recipient_id": "844385345234"
+        },
+        "message_data": {
+          "text": "Here's my location",
+          "attachment": {
+            "type": "location",
+            "location": {
+              "type": "shared_place",
+              "shared_place": {
+                "place": {
+                  "id": "123456"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+  **Note**
+
+  Not all place IDs are discoverable with `GET geo/search &lt;/rest/reference/get/geo/search&gt;`_ .
+
+  To retrieve all available details for a place ID you may also use `GET geo/id/:place_id &lt;/rest/reference/get/geo/id/place_id&gt;`_.
+</pre>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="section" id="receiving-a-user-response-via-webhook">
+            <h2>
+             <a class="toc-backref" href="#id5">
+              Receiving a User Response via Webhook
+             </a>
+             <a class="headerlink" href="#receiving-a-user-response-via-webhook" title="Permalink to this headline">
+              ¶
+             </a>
+            </h2>
+            <p>
+             Similar to other quick replies requests, user responses to location requests are
+consumed via webhook. When a user sends a location, the
+             <code class="docutils literal">
+              <span class="pre">
+               quick_reply_response.type
+              </span>
+             </code>
+             property will be location. The location data will be in the attachment payload
+as a
+             <code class="docutils literal">
+              <span class="pre">
+               shared_coordinate
+              </span>
+             </code>
+             or
+             <code class="docutils literal">
+              <span class="pre">
+               shared_place
+              </span>
+             </code>
+             .
+            </p>
+            <div class="section" id="message-create-event-with-shared-coordinate">
+             <h3>
+              Message Create Event with Shared Coordinate
+              <a class="headerlink" href="#message-create-event-with-shared-coordinate" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <div class="code javascript highlight-python">
+              <div class="highlight">
+               <pre><span></span><span class="p">{</span>
+  <span class="s2">"direct_message_events"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"message_create"</span><span class="p">,</span>
+      <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"102"</span><span class="p">,</span>
+      <span class="s2">"created_timestamp"</span><span class="p">:</span> <span class="s2">"4893199340"</span><span class="p">,</span>
+      <span class="s2">"message_create"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"target"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"recipient_id"</span><span class="p">:</span> <span class="s2">"2000"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">"sender_id"</span><span class="p">:</span> <span class="s2">"2001"</span><span class="p">,</span>
+        <span class="s2">"message_data"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"text"</span><span class="p">:</span> <span class="s2">"Here's my location https://twitter.com/i/location?lat=37.771718&amp;long=-122.443893"</span><span class="p">,</span>
+          <span class="s2">"quick_reply_response"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"location"</span><span class="p">,</span>
+            <span class="s2">"metadata"</span><span class="p">:</span> <span class="s2">"external_id"</span>
+          <span class="p">},</span>
+          <span class="s2">"attachment"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"location"</span><span class="p">,</span>
+            <span class="s2">"location"</span><span class="p">:</span> <span class="p">{</span>
+              <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"shared_coordinate"</span><span class="p">,</span>
+              <span class="s2">"shared_coordinate"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"coordinates"</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="s2">"coordinates"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">122.443893</span><span class="p">,</span> <span class="mf">37.771718</span><span class="p">],</span>
+                  <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"Point"</span>
+                <span class="p">}</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+              </div>
+             </div>
+            </div>
+            <div class="section" id="message-create-event-with-shared-place">
+             <h3>
+              Message Create Event with Shared Place
+              <a class="headerlink" href="#message-create-event-with-shared-place" title="Permalink to this headline">
+               ¶
+              </a>
+             </h3>
+             <div class="code javascript highlight-python">
+              <div class="highlight">
+               <pre><span></span>{
+  "direct_message_events": [
+    {
+      "type": "message_create",
+      "id": "102",
+      "created_timestamp": "4893199340",
+      "message_create": {
+        "target": {
+          "recipient_id": "2000",
+        },
+        "sender_id": "2001",
+        "message_data": {
+          "text": "Here's my location https://twitter.com/i/location?place_id=123456",
+          "quick_reply_response": {
+            "type": "location",
+            "metadata": "external_id"
+          },
+          "attachment": {
+            "type": "location",
+            "location": {
+              "type": "shared_place",
+              "shared_place": {
+                "place": {
+                  "id": "123456"
+                  // ... hydrated place fields
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+</pre>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <footer class="comp-wrapper nav-footer">
+   <div class="comp-container container">
+    <div class="row">
+     <div class="col-sm-2">
+      <dl>
+       <dt>
+        Solutions
+       </dt>
+       <dd>
+        <a href="/build" title="Build">
+         Build
+        </a>
+       </dd>
+       <dd>
+        <a href="/solutions/customer-service" title="Customer service">
+         Customer service
+        </a>
+       </dd>
+       <dd>
+        <a href="/solutions/tell-great-stories" title="Tell great stories">
+         Tell great stories
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="col-sm-2">
+      <dl>
+       <dt>
+        Products
+       </dt>
+       <dd>
+        <a href="/products/web" title="Publisher platform">
+         Publisher platform
+        </a>
+       </dd>
+       <dd>
+        <a href="/twitterkit/overview" title="Twitter Kit">
+         Twitter Kit
+        </a>
+       </dd>
+       <dd>
+        <a href="../../public" title="REST APIs">
+         REST APIs
+        </a>
+       </dd>
+       <dd>
+        <a href="../../../streaming/public" title="Streaming APIs">
+         Streaming APIs
+        </a>
+       </dd>
+       <dd>
+        <a href="../../../ads" title="Ads API">
+         Ads API
+        </a>
+       </dd>
+       <dd>
+        <a href="https://gnip.com" target="_blank" title="Gnip">
+         Gnip
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="col-sm-2">
+      <dl>
+       <dt>
+        Resources
+       </dt>
+       <dd>
+        <a href="../../../docs" title="Documentation">
+         Documentation
+        </a>
+       </dd>
+       <dd>
+        <a href="https://twittercommunity.com" target="_blank" title="Forums">
+         Forums
+        </a>
+       </dd>
+       <dd>
+        <a href="https://blog.twitter.com/developer" target="_blank" title="Blog">
+         Blog
+        </a>
+       </dd>
+       <dd>
+        <a href="../../../resources/case-studies" title="Case studies">
+         Case studies
+        </a>
+       </dd>
+       <dd>
+        <a href="../../../overview/terms" title="Developer terms">
+         Developer terms
+        </a>
+       </dd>
+       <dd>
+        <a href="https://support.twitter.com/forms/platform" target="_blank" title="Policy support">
+         Policy support
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="col-sm-2">
+      <dl>
+       <dt>
+        Tools
+       </dt>
+       <dd>
+        <a href="../../../overview/status" title="API status">
+         API status
+        </a>
+       </dd>
+       <dd>
+        <a href="../../tools/console" title="API console">
+         API console
+        </a>
+       </dd>
+       <dd>
+        <a href="https://cards-dev.twitter.com/validator" target="_blank" title="Cards validator">
+         Cards validator
+        </a>
+       </dd>
+       <dd>
+        <a href="https://apps.twitter.com" target="_blank" title="Manage my apps">
+         Manage my apps
+        </a>
+       </dd>
+      </dl>
+     </div>
+     <div class="col-sm-2">
+      <dl>
+       <dt>
+        Community
+       </dt>
+       <dd>
+        <a href="/community/meetups" title="#TapIntoTwitter">
+         #TapIntoTwitter
+        </a>
+       </dd>
+       <dd>
+        <a href="https://partners.twitter.com" target="_blank" title="Official partner">
+         Official partner
+        </a>
+       </dd>
+       <dd>
+        <a href="/events" title="Events">
+         Events
+        </a>
+       </dd>
+       <dd>
+        <a href="/flight/2015" title="Flight 2015">
+         Flight 2015
+        </a>
+       </dd>
+       <dd>
+        <a href="/flight/2014" title="Flight 2014">
+         Flight 2014
+        </a>
+       </dd>
+      </dl>
+     </div>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <div class="comp-container container">
+     <div class="row">
+      <ul class="col-xs-6">
+       <div class="copyright">
+        © 2017 Twitter, Inc.
+       </div>
+       <li>
+        <a href="https://twitter.com/tos" title="Terms">
+         Terms
+        </a>
+       </li>
+       <li>
+        <a href="https://twitter.com/privacy" title="Privacy">
+         Privacy
+        </a>
+       </li>
+      </ul>
+      <ul class="text-right col-xs-6">
+       <li>
+        <a href="https://about.twitter.com/company" title="About">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="https://careers.twitter.com" title="Jobs">
+         Jobs
+        </a>
+       </li>
+       <li>
+        <a href="https://support.twitter.com/" title="Help">
+         Help
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <!-- JavaScript -->
+  <script type="text/javascript">
+   var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'4.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+  </script>
+  <script src="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/jquery.js" type="text/javascript">
+  </script>
+  <!-- JavaScript -->
+  <script type="text/javascript">
+   $(document).ready(function () {
+
+      $('[data-toggle="offcanvas"]').click(function () {
+          $('.row-offcanvas').toggleClass('active');
+      });
+
+      $('#nav-toggle').click(function () {
+          if ($('.row-offcanvas').hasClass('active')) {
+              $(this).html("&laquo; Hide Navigation");
+          } else {
+              $(this).html("Show Navigation &raquo;");
+          }
+      });
+      // Only set overflow-x: scroll on sections with tables
+      $('.section').has('table').css('overflow-x', 'scroll');
+    });
+  </script>
+  <script src="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/js/common.js" type="text/javascript">
+  </script>
+  <script src="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/js/navigation.js" type="text/javascript">
+  </script>
+  <script src="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/js/theme.js" type="text/javascript">
+  </script>
+  <script src="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/scripts/vendor.js">
+  </script>
+  <script async="" src="https://platform.twitter.com/widgets.js">
+  </script>
+  <script src="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/scripts/app.js">
+  </script>
+  <script src="https://ton.twimg.com/dtc/25a5598c-0d65-4e71-a3c4-918b9184adde/_static/scripts/google-analytics.js">
+  </script>
+ </body>
+</html>

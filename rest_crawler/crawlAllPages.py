@@ -35,11 +35,13 @@ class Crawler(object):
     # http://api.eventful.com/docs
     # https://cloud.google.com/translate  https://cloud.google.com/translate/docs/reference
 
+    # https://platform.gethealth.io/#!/Account_API/CreateUser https://platform.gethealth.io
+
     print len(sys.argv)
     print str(sys.argv)
     if len(sys.argv) == 1:
-        self.doc_page = "https://www.instagram.com/developer"
-        self.doc_filter = "https://www.instagram.com/developer/endpoints"
+        self.doc_page = "https://platform.gethealth.io"
+        self.doc_filter = "https://platform.gethealth.io"
     elif len(sys.argv) == 2:
         self.doc_page = sys.argv[1]
         self.doc_filter = sys.argv[1]
@@ -63,6 +65,10 @@ class Crawler(object):
 
         # test html
         if link.__contains__('.pdf'):
+            return False
+        if link.__contains__('.jpg'):
+            return False
+        if link.__contains__('.png'):
             return False
 
         if link.__contains__('github') :
@@ -230,8 +236,13 @@ class Crawler(object):
     tree = list2tree.group_urls(self.visited_links)
     # Create directory
     self.dataset_name = "EntrySet/"
-    self.directory_yes = self.dataset_name + self.doc_page.split('://')[-1].split('/')[0] + "/yes/"
-    self.directory_no = self.dataset_name + self.doc_page.split('://')[-1].split('/')[0] + "/no/"
+    if "google" in self.doc_page:
+        self.api_foler = self.doc_page.split('://')[-1].split('/')[1];
+    else:
+        self.api_foler = self.doc_page.split('://')[-1].split('/')[0];
+
+    self.directory_yes = self.dataset_name + self.api_foler + "/yes/"
+    self.directory_no = self.dataset_name + self.api_foler + "/no/"
 
     if not os.path.exists(self.directory_no):
         os.makedirs(self.directory_no)
@@ -239,7 +250,7 @@ class Crawler(object):
         os.makedirs(self.directory_yes)
 
     # write html_tree into files
-    html_tree = self.dataset_name + self.doc_page.split('://')[-1].split('/')[0] + '/htmlTree.txt'
+    html_tree = self.dataset_name + self.api_foler + '/htmlTree.txt'
     f1=open(html_tree, 'w+')
     f1.write(tree.get_ascii(show_internal=True))
 

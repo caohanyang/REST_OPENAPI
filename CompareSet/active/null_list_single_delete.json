@@ -1,0 +1,11 @@
+{
+  "basePath": "/v2/search",
+  "paths": {},
+  "produces": "application/json",
+  "host": "api.amp.active.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

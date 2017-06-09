@@ -35,18 +35,25 @@ public class ProcessParameter {
 			String url = sectionJson.getString("url");
 			String action = sectionJson.getString("action");
 
-			// 1. we add url/action into swagger now.
-			// because here we have known that each table have match one url
-			// some urls would not be used.
-			processMe.addUrl(openAPI, url, action);
+			if (processMe.isRealUrl(url)) {
+				// 1. we add url/action into swagger now.
+				// because here we have known that each table have match one url
+				// some urls would not be used.
+				processMe.addUrl(openAPI, url, action);
 
-			JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
-			// 1. find the action
-			JSONObject paraAll = new JSONObject();
-			// parser the parameters
-			JSONArray paraArray = parseParameter(paraStr, anno, doc, template);
-			paraAll.put("parameters", paraArray);
-			urlObject.put(action, paraAll);
+				try {
+					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
+					// 1. find the action
+					JSONObject paraAll = new JSONObject();
+					// parser the parameters
+					JSONArray paraArray = parseParameter(paraStr, anno, doc, template);
+					paraAll.put("parameters", paraArray);
+					urlObject.put(action, paraAll);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
 		}
 
 		return openAPI;
@@ -289,9 +296,17 @@ public class ProcessParameter {
 		if (anno.getEndNode().getOffset().intValue() - templateLocation > 100) {
 			// if the table is to big, just check the 100 character
 			// check the pre-text, if it contains parameter | argument
-			appendTemplateText = strAll.substring(templateLocation - 50, templateLocation + 100);
+			if (templateLocation <= 50) {
+				appendTemplateText = strAll.substring(templateLocation, templateLocation + 100);
+			} else {				
+				appendTemplateText = strAll.substring(templateLocation - 50, templateLocation + 100);
+			}
 		} else {
-			appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
+			if (templateLocation <= 50) {
+				appendTemplateText = strAll.substring(templateLocation, anno.getEndNode().getOffset().intValue());
+			} else {
+				appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
+			}
 		}
 		if (Pattern.compile("(parameter)|(argument)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
 			return true;

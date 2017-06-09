@@ -1,0 +1,24 @@
+{
+  "swagger": "2.0",
+  "info": "This is the information of the API",
+  "host": "api.instagram.com",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/v1",
+  "paths": {
+    "/media/{media-id}/likes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "access_token",
+            "description": "A valid access token.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+
+  ...
+}

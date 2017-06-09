@@ -1,0 +1,2628 @@
+<!DOCTYPE html>
+<html class="chekov" lang="en">
+ <head>
+  <script>
+   var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="YhiPEgtfDJ56Jvpe1ODZ7xKN3_9IQZhsEEzmq_7HXuY6MTQ5NjkyMTYzOTE2NDc3MA" name="xsrf_token"/>
+  <link href="https://developers.google.com/books/docs/v1/reference/volumes" rel="canonical"/>
+  <link href="https://developers.google.com/books/docs/v1/reference/volumes" hreflang="en" rel="alternate"/>
+  <link href="https://developers.google.cn/books/docs/v1/reference/volumes" hreflang="en-cn" rel="alternate"/>
+  <link href="https://developers.google.com/books/docs/v1/reference/volumes" hreflang="x-default" rel="alternate"/>
+  <link href="https://developers.google.com/_static/fe5e716eb0/images/favicon.png" rel="shortcut icon"/>
+  <link href="https://developers.google.com/_static/fe5e716eb0/images/touch-icon.png" rel="apple-touch-icon"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet"/>
+  <link href="https://developers.google.com/_static/fe5e716eb0/css/devsite-google-blue.css" rel="stylesheet"/>
+  <link href="https://developers.google.com/s/opensearch.xml" rel="search" title="Google Developers" type="application/opensearchdescription+xml"/>
+  <script src="https://developers.google.com/_static/fe5e716eb0/js/jquery-bundle.js">
+  </script>
+  <meta content="Google Developers" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://developers.google.com/books/docs/v1/reference/volumes" property="og:url"/>
+  <meta content="en" property="og:locale"/>
+  <script>
+   var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <title>
+   Volume  |  Google Books APIs
+       |  Google Developers
+  </title>
+  <meta content="Volume  |  Google Books APIs
+       |  Google Developers" property="og:title"/>
+ </head>
+ <body class=" devsite-doc-page devsite-header-no-upper-tabs devsite-uhura" id="top_of_page">
+  <div class="devsite-wrapper">
+   <div class="devsite-top-section-wrapper ">
+    <header class="devsite-top-section nocontent">
+     <div class="devsite-top-logo-row-wrapper-wrapper">
+      <div class="devsite-top-logo-row-wrapper">
+       <div class="devsite-top-logo-row devsite-full-site-width">
+        <button class="devsite-expand-section-nav devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Hamburger menu" type="button">
+        </button>
+        <div class="devsite-product-name-wrapper">
+         <span class="devsite-product-name">
+          <ul class="devsite-breadcrumb-list">
+           <li class="devsite-breadcrumb-item">
+            <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" href="https://developers.google.com/books/">
+             Google Books APIs
+            </a>
+           </li>
+          </ul>
+         </span>
+        </div>
+        <div class="devsite-header-upper-tabs">
+        </div>
+        <form action="https://developers.google.com/s/results/" class="devsite-search-form " id="top-search" method="GET" search-placeholder="Search">
+         <div class="devsite-searchbox" id="searchbox">
+          <input autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="Search" type="text" value=""/>
+          <div class="devsite-search-image material-icons">
+          </div>
+         </div>
+         <input data-project-name="Google Books APIs" data-project-path="/books/" data-query-match="" id="search_project" name="p" type="hidden" value="/books/"/>
+         <input class="suggest-project" type="hidden" value="Google Books APIs"/>
+         <div class="suggest-project-metadata" data-home_url="/books/" data-name="Google Books APIs" data-path="/books/">
+         </div>
+        </form>
+        <a class="devsite-header-link devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site header link" href="https://developers.google.com/products/">
+         <div class="devsite-header-link-label">
+          All Products
+         </div>
+        </a>
+        <button class="devsite-search-button devsite-header-icon-button button-flat material-icons" type="button">
+        </button>
+        <a class="devsite-user-signin devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Sign in button" href="https://www.google.com/accounts/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fdevelopers.google.com%2Fbooks%2Fdocs%2Fv1%2Freference%2Fvolumes%3Frefresh%3D1&amp;service=ahsid">
+         Sign in
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="devsite-collapsible-section">
+      <div class="devsite-header-background devsite-full-site-width">
+       <div class="devsite-doc-set-nav-row devsite-full-site-width">
+        <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+         <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Home" href="https://developers.google.com/books/">
+            Home
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Guides" href="https://developers.google.com/books/docs/overview">
+            Guides
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Reference" href="https://developers.google.com/books/docs/v1/reference/bookshelves">
+            Reference
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Samples" href="https://developers.google.com/books/docs/v1/libraries">
+            Samples
+           </a>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </header>
+    <script>
+     if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('en')
+        }
+      });
+    }
+    </script>
+   </div>
+   <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Books APIs", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Books APIs", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-49880327-1"}'/>
+    <script>
+     var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "FR", "language": {"requested": "en", "served": "en"}, "projectName": "Google Books APIs", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+    <div class="devsite-site-mask">
+    </div>
+    <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+     <div class="devsite-nav-responsive-tabs-panel">
+      <nav class="devsite-nav-responsive-tabs devsite-nav">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home" href="https://developers.google.com/books/">
+          Home
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides" href="https://developers.google.com/books/docs/overview?nav=true">
+          Guides
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title devsite-nav-active gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Reference" tabindex="0">
+          Reference
+         </span>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Samples" href="https://developers.google.com/books/docs/v1/libraries?nav=true">
+          Samples
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+          All Products
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="devsite-nav-responsive-sidebar-panel">
+      <div class="devsite-nav-responsive-back" tabindex="0">
+      </div>
+      <nav class="devsite-nav-responsive-sidebar">
+       <ul class="devsite-nav-list devsite-nav-expandable">
+        <li class="devsite-nav-item devsite-nav-item-section-expandable">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Books API v1
+         </span>
+         <a class="devsite-nav-toggle devsite-nav-toggle-expanded material-icons" track-metadata-position="0" track-name="expandNavSectionArrow" track-type="leftNav">
+         </a>
+         <ul class="devsite-nav-section devsite-nav-section-expanded">
+          <li class="devsite-nav-item devsite-nav-item-section-expandable">
+           <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+            Bookshelf
+           </span>
+           <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+           </a>
+           <ul class="devsite-nav-section devsite-nav-section-collapsed">
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              Overview
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              list
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves/get" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              get
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="devsite-nav-item devsite-nav-item-section-expandable">
+           <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+            Volume
+           </span>
+           <a class="devsite-nav-toggle devsite-nav-toggle-expanded material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+           </a>
+           <ul class="devsite-nav-section devsite-nav-section-expanded">
+            <li class="devsite-nav-item devsite-nav-active">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/volumes" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              Overview
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/volumes/get" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              get
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/volumes/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              list
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="devsite-nav-item devsite-nav-item-section-expandable">
+           <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+            Bookshelves.volumes
+           </span>
+           <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+           </a>
+           <ul class="devsite-nav-section devsite-nav-section-collapsed">
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves/volumes" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              Overview
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves/volumes/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              list
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="devsite-nav-item devsite-nav-item-section-expandable">
+           <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+            Mylibrary.bookshelves
+           </span>
+           <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+           </a>
+           <ul class="devsite-nav-section devsite-nav-section-collapsed">
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              Overview
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/addVolume" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              addVolume
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/clearVolumes" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              clearVolumes
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/get" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              get
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              list
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/moveVolume" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              moveVolume
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/removeVolume" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              removeVolume
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="devsite-nav-item devsite-nav-item-section-expandable">
+           <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+            Mylibrary.bookshelves.volumes
+           </span>
+           <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+           </a>
+           <ul class="devsite-nav-section devsite-nav-section-collapsed">
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/volumes" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              Overview
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/volumes/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              list
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-section-expandable">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Embedded Viewer API
+         </span>
+         <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="0" track-name="expandNavSectionArrow" track-type="leftNav">
+         </a>
+         <ul class="devsite-nav-section devsite-nav-section-collapsed">
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/viewer/reference" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            Reference
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </nav>
+    <div class="devsite-main-content clearfix">
+     <nav class="devsite-section-nav devsite-nav nocontent">
+      <ul class="devsite-nav-list devsite-nav-expandable">
+       <li class="devsite-nav-item devsite-nav-item-section-expandable">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Books API v1
+        </span>
+        <a class="devsite-nav-toggle devsite-nav-toggle-expanded material-icons" track-metadata-position="0" track-name="expandNavSectionArrow" track-type="leftNav">
+        </a>
+        <ul class="devsite-nav-section devsite-nav-section-expanded">
+         <li class="devsite-nav-item devsite-nav-item-section-expandable">
+          <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+           Bookshelf
+          </span>
+          <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+          </a>
+          <ul class="devsite-nav-section devsite-nav-section-collapsed">
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             Overview
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             list
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves/get" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             get
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="devsite-nav-item devsite-nav-item-section-expandable">
+          <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+           Volume
+          </span>
+          <a class="devsite-nav-toggle devsite-nav-toggle-expanded material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+          </a>
+          <ul class="devsite-nav-section devsite-nav-section-expanded">
+           <li class="devsite-nav-item devsite-nav-active">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/volumes" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             Overview
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/volumes/get" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             get
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/volumes/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             list
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="devsite-nav-item devsite-nav-item-section-expandable">
+          <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+           Bookshelves.volumes
+          </span>
+          <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+          </a>
+          <ul class="devsite-nav-section devsite-nav-section-collapsed">
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves/volumes" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             Overview
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/bookshelves/volumes/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             list
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="devsite-nav-item devsite-nav-item-section-expandable">
+          <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+           Mylibrary.bookshelves
+          </span>
+          <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+          </a>
+          <ul class="devsite-nav-section devsite-nav-section-collapsed">
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             Overview
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/addVolume" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             addVolume
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/clearVolumes" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             clearVolumes
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/get" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             get
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             list
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/moveVolume" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             moveVolume
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/removeVolume" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             removeVolume
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="devsite-nav-item devsite-nav-item-section-expandable">
+          <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+           Mylibrary.bookshelves.volumes
+          </span>
+          <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+          </a>
+          <ul class="devsite-nav-section devsite-nav-section-collapsed">
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/volumes" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             Overview
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/v1/reference/mylibrary/bookshelves/volumes/list" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             list
+            </a>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-section-expandable">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Embedded Viewer API
+        </span>
+        <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="0" track-name="expandNavSectionArrow" track-type="leftNav">
+        </a>
+        <ul class="devsite-nav-section devsite-nav-section-collapsed">
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/books/docs/viewer/reference" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           Reference
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+     <nav class="devsite-page-nav devsite-nav">
+     </nav>
+     <article class="devsite-article">
+      <article class="devsite-article-inner">
+       <nav class="devsite-breadcrumb-nav devsite-nav">
+        <ul class="devsite-breadcrumb-list">
+         <li class="devsite-breadcrumb-item">
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" href="https://developers.google.com/products/">
+           Products
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" href="https://developers.google.com/books/">
+           Google Books APIs
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3" href="https://developers.google.com/books/docs/v1/reference/bookshelves">
+           Reference
+          </a>
+         </li>
+        </ul>
+       </nav>
+       <h1 class="devsite-page-title" itemprop="name">
+        Volume
+       </h1>
+       <nav class="devsite-page-nav-embedded devsite-nav">
+       </nav>
+       <div class="devsite-article-body clearfix " itemprop="articleBody">
+        <section id="overview">
+         <div>
+          A
+          <code>
+           Volume
+          </code>
+          collection is used to perform a search or listing the contents of a bookshelf. This collection is a read-only collection.
+         </div>
+        </section>
+        <section id="methods">
+         <h2>
+          Methods
+         </h2>
+         <p>
+         </p>
+         <div>
+          The following methods apply to the public data about volumes and do not require authentication.
+         </div>
+         <span class="apimethod">
+          <a href="#method_books_volumes_list">
+           books.volumes.list
+          </a>
+         </span>
+         <div>
+          <span class="apimethod">
+           <a href="#method_books_volumes_get">
+            books.volumes.get
+           </a>
+          </span>
+          <div>
+           <br/>
+          </div>
+          <div>
+           The following method applies to the private, "My Library" view of volumes and requires authentication.
+          </div>
+          <span class="apimethod">
+           <a href="#method_books_mylibrary_bookshelves_volumes_list">
+            books.mylibrary.bookshelves.volumes.list
+           </a>
+          </span>
+          <div>
+           <span class="apimethod">
+            <a href="#method_books_bookshelves_volumes_list">
+             books.bookshelves.volumes.list
+            </a>
+           </span>
+          </div>
+         </div>
+         <p>
+         </p>
+         <dl>
+          <dt>
+           <a href="https://developers.google.com/books/docs/v1/reference/volumes/get.html">
+            get
+           </a>
+          </dt>
+          <dd>
+           Retrieves a
+           <a href="https://developers.google.com/books/docs/v1/reference/volumes.html">
+            Volume resource
+           </a>
+           based on ID.
+          </dd>
+          <dt>
+           <a href="https://developers.google.com/books/docs/v1/reference/volumes/list.html">
+            list
+           </a>
+          </dt>
+          <dd>
+           Performs a book search.
+          </dd>
+         </dl>
+        </section>
+        <section id="resource">
+         <h2>
+          Resource Representations
+         </h2>
+         <p>
+          A Volume represents information that Google Books hosts about a book or a magazine. It contains metadata, such as title and author, as well as personalized data, such as whether or not it has been purchased. (Volume fields that are available in LITE projection are noted below).
+         </p>
+         <section>
+          <pre class="prettyprint" id="alt-json" style="max-height: 500px; overflow: auto">{
+  "kind": "books#volume",
+  "id": <var class="apiparam">string</var>,
+  "etag": <var class="apiparam">string</var>,
+  "selfLink": <var class="apiparam">string</var>,
+  "volumeInfo": {
+    "title": <var class="apiparam">string</var>,
+    "subtitle": <var class="apiparam">string</var>,
+    "authors": [
+      <var class="apiparam">string</var>
+    ],
+    "publisher": <var class="apiparam">string</var>,
+    "publishedDate": <var class="apiparam">string</var>,
+    "description": <var class="apiparam">string</var>,
+    "industryIdentifiers": [
+      {
+        "type": <var class="apiparam">string</var>,
+        "identifier": <var class="apiparam">string</var>
+      }
+    ],
+    "pageCount": <var class="apiparam">integer</var>,
+    "dimensions": {
+      "height": <var class="apiparam">string</var>,
+      "width": <var class="apiparam">string</var>,
+      "thickness": <var class="apiparam">string</var>
+    },
+    "printType": <var class="apiparam">string</var>,
+    "mainCategory": <var class="apiparam">string</var>,
+    "categories": [
+      <var class="apiparam">string</var>
+    ],
+    "averageRating": <var class="apiparam">double</var>,
+    "ratingsCount": <var class="apiparam">integer</var>,
+    "contentVersion": <var class="apiparam">string</var>,
+    "imageLinks": {
+      "smallThumbnail": <var class="apiparam">string</var>,
+      "thumbnail": <var class="apiparam">string</var>,
+      "small": <var class="apiparam">string</var>,
+      "medium": <var class="apiparam">string</var>,
+      "large": <var class="apiparam">string</var>,
+      "extraLarge": <var class="apiparam">string</var>
+    },
+    "language": <var class="apiparam">string</var>,
+    "previewLink": <var class="apiparam">string</var>,
+    "infoLink": <var class="apiparam">string</var>,
+    "canonicalVolumeLink": <var class="apiparam">string</var>
+  },
+  "userInfo": {
+    "review": <a href="https://developers.google.com/books/docs/v1/reference/mylibrary/reviews.html#resource">mylibrary.reviews Resource</a>,
+    "readingPosition": <a href="https://developers.google.com/books/docs/v1/reference/mylibrary/readingpositions.html#resource">mylibrary.readingpositions Resource</a>,
+    "isPurchased": <var class="apiparam">boolean</var>,
+    "isPreordered": <var class="apiparam">boolean</var>,
+    "updated": <var class="apiparam">datetime</var>
+  },
+  "saleInfo": {
+    "country": <var class="apiparam">string</var>,
+    "saleability": <var class="apiparam">string</var>,
+    "onSaleDate": <var class="apiparam">datetime</var>,
+    "isEbook": <var class="apiparam">boolean</var>,
+    "listPrice": {
+      "amount": <var class="apiparam">double</var>,
+      "currencyCode": <var class="apiparam">string</var>
+    },
+    "retailPrice": {
+      "amount": <var class="apiparam">double</var>,
+      "currencyCode": <var class="apiparam">string</var>
+    },
+    "buyLink": <var class="apiparam">string</var>
+  },
+  "accessInfo": {
+    "country": <var class="apiparam">string</var>,
+    "viewability": <var class="apiparam">string</var>,
+    "embeddable": <var class="apiparam">boolean</var>,
+    "publicDomain": <var class="apiparam">boolean</var>,
+    "textToSpeechPermission": <var class="apiparam">string</var>,
+    "epub": {
+      "isAvailable": <var class="apiparam">boolean</var>,
+      "downloadLink": <var class="apiparam">string</var>,
+      "acsTokenLink": <var class="apiparam">string</var>
+    },
+    "pdf": {
+      "isAvailable": <var class="apiparam">boolean</var>,
+      "downloadLink": <var class="apiparam">string</var>,
+      "acsTokenLink": <var class="apiparam">string</var>
+    },
+    "webReaderLink": <var class="apiparam">string</var>,
+    "accessViewStatus": <var class="apiparam">string</var>,
+    "downloadAccess": {
+      "kind": "books#downloadAccessRestriction",
+      "volumeId": <var class="apiparam">string</var>,
+      "restricted": <var class="apiparam">boolean</var>,
+      "deviceAllowed": <var class="apiparam">boolean</var>,
+      "justAcquired": <var class="apiparam">boolean</var>,
+      "maxDownloadDevices": <var class="apiparam">integer</var>,
+      "downloadsAcquired": <var class="apiparam">integer</var>,
+      "nonce": <var class="apiparam">string</var>,
+      "source": <var class="apiparam">string</var>,
+      "reasonCode": <var class="apiparam">string</var>,
+      "message": <var class="apiparam">string</var>,
+      "signature": <var class="apiparam">string</var>
+    }
+  },
+  "searchInfo": {
+    "textSnippet": <var class="apiparam">string</var>
+  }
+}</pre>
+          <table class="matchpre" id="properties">
+           <thead>
+            <tr>
+             <th>
+              Property Name
+             </th>
+             <th>
+              Value
+             </th>
+             <th>
+              Description
+             </th>
+             <th>
+              Notes
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr id="kind">
+             <td>
+              <code>
+               kind
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Resource type for a volume. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="id">
+             <td>
+              <code>
+               id
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Unique identifier for a volume. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="etag">
+             <td>
+              <code>
+               etag
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Opaque identifier for a specific version of a volume resource. (In LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="selfLink">
+             <td>
+              <code>
+               selfLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to this resource. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo">
+             <td>
+              <code>
+               volumeInfo
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              General volume information.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.title">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               title
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Volume title. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.subtitle">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               subtitle
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Volume subtitle. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.authors">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               authors[]
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               list
+              </code>
+             </td>
+             <td>
+              The names of the authors and/or editors for this volume. (In LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.publisher">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               publisher
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Publisher of this volume. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.publishedDate">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               publishedDate
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Date of publication. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.description">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               description
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              A synopsis of the volume. The text of the description is formatted in HTML and includes simple formatting elements, such as b, i, and br tags. (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.industryIdentifiers">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               industryIdentifiers[]
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               list
+              </code>
+             </td>
+             <td>
+              Industry standard identifiers for this volume.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.industryIdentifiers.type">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.industryIdentifiers[].
+               </span>
+               type
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Identifier type. Possible values are ISBN_10, ISBN_13, ISSN and OTHER.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.industryIdentifiers.identifier">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.industryIdentifiers[].
+               </span>
+               identifier
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Industry specific volume identifier.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.pageCount">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               pageCount
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               integer
+              </code>
+             </td>
+             <td>
+              Total number of pages.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.dimensions">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               dimensions
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              Physical dimensions of this volume.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.dimensions.height">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.dimensions.
+               </span>
+               height
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Height or length of this volume (in cm).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.dimensions.width">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.dimensions.
+               </span>
+               width
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Width of this volume (in cm).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.dimensions.thickness">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.dimensions.
+               </span>
+               thickness
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Thickness of this volume (in cm).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.printType">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               printType
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Type of publication of this volume. Possible values are BOOK or MAGAZINE.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.categories">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               categories[]
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               list
+              </code>
+             </td>
+             <td>
+              A list of subject categories, such as "Fiction", "Suspense", etc.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.averageRating">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               averageRating
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               double
+              </code>
+             </td>
+             <td>
+              The mean review rating for this volume. (min = 1.0, max = 5.0)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.ratingsCount">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               ratingsCount
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               integer
+              </code>
+             </td>
+             <td>
+              The number of review ratings for this volume.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.contentVersion">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               contentVersion
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              An identifier for the version of the volume content (text &amp; images). (In LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.imageLinks">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               imageLinks
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              A list of image links for all the sizes that are available. (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.imageLinks.thumbnail">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.imageLinks.
+               </span>
+               thumbnail
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Image link for thumbnail size (width of ~128 pixels). (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.imageLinks.small">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.imageLinks.
+               </span>
+               small
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Image link for small size (width of ~300 pixels). (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.imageLinks.medium">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.imageLinks.
+               </span>
+               medium
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Image link for medium size (width of ~575 pixels). (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.imageLinks.large">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.imageLinks.
+               </span>
+               large
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Image link for large size (width of ~800 pixels). (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.imageLinks.smallThumbnail">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.imageLinks.
+               </span>
+               smallThumbnail
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Image link for small thumbnail size (width of ~80 pixels). (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.imageLinks.extraLarge">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.imageLinks.
+               </span>
+               extraLarge
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Image link for extra large size (width of ~1280 pixels). (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.language">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               language
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Best language for this volume (based on content). It is the two-letter ISO 639-1 code such as 'fr', 'en', etc.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.mainCategory">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               mainCategory
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              The main category to which this volume belongs. It will be the category from the categories list returned below that has the highest weight.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.previewLink">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               previewLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to preview this volume on the Google Books site.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="userInfo">
+             <td>
+              <code>
+               userInfo
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              User specific information related to this volume. (e.g. page this user last read or whether they purchased this book)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="userInfo.review">
+             <td>
+              <code>
+               <span class="quiet">
+                userInfo.
+               </span>
+               review
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               nested object
+              </code>
+             </td>
+             <td>
+              This user's review of this volume, if one exists.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="userInfo.readingPosition">
+             <td>
+              <code>
+               <span class="quiet">
+                userInfo.
+               </span>
+               readingPosition
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               <a href="#resource_readingpositions">
+                readingPosition Resource
+               </a>
+              </code>
+             </td>
+             <td>
+              The user's current reading position in the volume, if one is available. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="userInfo.isPurchased">
+             <td>
+              <code>
+               <span class="quiet">
+                userInfo.
+               </span>
+               isPurchased
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              Whether or not this volume was purchased by the authenticated user making the request. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo">
+             <td>
+              <code>
+               saleInfo
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              Any information about a volume related to the eBookstore and/or purchaseability. This information can depend on the country where the request originates from (i.e. books may not be for sale in certain countries).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.country">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.
+               </span>
+               country
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              The two-letter ISO_3166-1 country code for which this sale information is valid. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.saleability">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.
+               </span>
+               saleability
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Whether or not this book is available for sale or offered for free in the Google eBookstore for the country listed above. Possible values are FOR_SALE, FREE, NOT_FOR_SALE, or FOR_PREORDER.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.isEbook">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.
+               </span>
+               isEbook
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              Whether or not this volume is an eBook (can be added to the My eBooks shelf).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.listPrice">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.
+               </span>
+               listPrice
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              Suggested retail price. (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.listPrice.amount">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.listPrice.
+               </span>
+               amount
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               double
+              </code>
+             </td>
+             <td>
+              Amount in the currency listed below. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.listPrice.currencyCode">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.listPrice.
+               </span>
+               currencyCode
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              An ISO 4217, three-letter currency code. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.retailPrice">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.
+               </span>
+               retailPrice
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              The actual selling price of the book. This is the same as the suggested retail or list price unless there are offers or discounts on this volume. (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.retailPrice.amount">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.retailPrice.
+               </span>
+               amount
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               double
+              </code>
+             </td>
+             <td>
+              Amount in the currency listed below. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.retailPrice.currencyCode">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.retailPrice.
+               </span>
+               currencyCode
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              An ISO 4217, three-letter currency code. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.buyLink">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.
+               </span>
+               buyLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to purchase this volume on the Google Books site. (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo">
+             <td>
+              <code>
+               accessInfo
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              Any information about a volume related to reading or obtaining that volume text. This information can depend on country (books may be public domain in one country but not in another, e.g.).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.country">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               country
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              The two-letter ISO_3166-1 country code for which this access information is valid. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.viewability">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               viewability
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              The read access of a volume. Possible values are PARTIAL, ALL_PAGES, NO_PAGES or UNKNOWN. This value depends on the country listed above. A value of PARTIAL means that the publisher has allowed some portion of the volume to be viewed publicly, without purchase. This can apply to eBooks as well as non-eBooks. Public domain books will always have a value of ALL_PAGES.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.epub">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               epub
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              Information about epub content. (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.epub.downloadLink">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.epub.
+               </span>
+               downloadLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to download epub. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.epub.acsTokenLink">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.epub.
+               </span>
+               acsTokenLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to retrieve ACS token for epub download. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.pdf">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               pdf
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              Information about pdf content. (in LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.pdf.downloadLink">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.pdf.
+               </span>
+               downloadLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to download pdf. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.pdf.acsTokenLink">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.pdf.
+               </span>
+               acsTokenLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to retrieve ACS token for pdf download. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.accessViewStatus">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               accessViewStatus
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Combines the access and viewability of this volume into a single status field for this user. Values can be FULL_PURCHASED, FULL_PUBLIC_DOMAIN, SAMPLE or NONE. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.embeddable">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               embeddable
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              Whether this volume can be embedded in a viewport using the Embedded Viewer API.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.publicDomain">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               publicDomain
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              Whether or not this book is public domain in the country listed above.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.infoLink">
+             <td>
+              <code>
+               <span class="quiet">
+                <code class="apiobject">
+                 volumeInfo.
+                </code>
+               </span>
+               <code>
+                infoLink
+               </code>
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to view information about this volume on the Google Books site. (In LITE projection)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="userInfo.updated">
+             <td>
+              <code>
+               <span class="quiet">
+                userInfo.
+               </span>
+               updated
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               datetime
+              </code>
+             </td>
+             <td>
+              Timestamp when this volume was last modified by a user action, such as a reading position update, volume purchase or writing a review. (RFC 3339 UTC date-time format).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="volumeInfo.canonicalVolumeLink">
+             <td>
+              <code>
+               <span class="quiet">
+                volumeInfo.
+               </span>
+               canonicalVolumeLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Canonical URL for a volume. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="userInfo.isPreordered">
+             <td>
+              <code>
+               <span class="quiet">
+                userInfo.
+               </span>
+               isPreordered
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              Whether or not this volume was pre-ordered by the authenticated user making the request. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="saleInfo.onSaleDate">
+             <td>
+              <code>
+               <span class="quiet">
+                saleInfo.
+               </span>
+               onSaleDate
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               datetime
+              </code>
+             </td>
+             <td>
+              The date on which this book is available for sale.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.textToSpeechPermission">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               textToSpeechPermission
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Whether text-to-speech is permitted for this volume. Values can be ALLOWED, ALLOWED_FOR_ACCESSIBILITY, or NOT_ALLOWED.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.epub.isAvailable">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.epub.
+               </span>
+               isAvailable
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              Is a flowing text epub available either as public domain or for purchase. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.pdf.isAvailable">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.pdf.
+               </span>
+               isAvailable
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              Is a scanned image pdf available either as public domain or for purchase. (In LITE projection.)
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.webReaderLink">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               webReaderLink
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              URL to read this volume on the Google Books site. Link will not allow users to read non-viewable volumes.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.
+               </span>
+               downloadAccess
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               nested object
+              </code>
+             </td>
+             <td>
+              Information about a volume's download license access restrictions.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.kind">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               kind
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Resource type.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.volumeId">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               volumeId
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Identifies the volume for which this entry applies.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.restricted">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               restricted
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              Whether this volume has any download access restrictions.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.deviceAllowed">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               deviceAllowed
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              If restricted, whether access is granted for this (user, device, volume).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.justAcquired">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               justAcquired
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               boolean
+              </code>
+             </td>
+             <td>
+              If deviceAllowed, whether access was just acquired with this request.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.maxDownloadDevices">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               maxDownloadDevices
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               integer
+              </code>
+             </td>
+             <td>
+              If restricted, the maximum number of content download licenses for this volume.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.downloadsAcquired">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               downloadsAcquired
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               integer
+              </code>
+             </td>
+             <td>
+              If restricted, the number of content download licenses already acquired (including the requesting client, if licensed).
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.nonce">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               nonce
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Client nonce for verification. Download access and client-validation only.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.source">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               source
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Client app identifier for verification. Download access and client-validation only.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.reasonCode">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               reasonCode
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Error/warning reason code.  Additional codes may be added in the future. 0   OK 100   ACCESS_DENIED_PUBLISHER_LIMIT 101   ACCESS_DENIED_LIMIT 200   WARNING_USED_LAST_ACCESS
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.message">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               message
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Error/warning message.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="accessInfo.downloadAccess.signature">
+             <td>
+              <code>
+               <span class="quiet">
+                accessInfo.downloadAccess.
+               </span>
+               signature
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              Response signature.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="searchInfo">
+             <td>
+              <code>
+               searchInfo
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               object
+              </code>
+             </td>
+             <td>
+              Search result information related to this volume.
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr id="searchInfo.textSnippet">
+             <td>
+              <code>
+               <span class="quiet">
+                searchInfo.
+               </span>
+               textSnippet
+              </code>
+             </td>
+             <td>
+              <code class="apitype">
+               string
+              </code>
+             </td>
+             <td>
+              A text snippet containing the search query.
+             </td>
+             <td>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </section>
+        </section>
+       </div>
+       <div class="devsite-content-footer nocontent">
+        <p>
+         Except as otherwise noted, the content of this page is licensed under the
+         <a href="http://creativecommons.org/licenses/by/3.0/">
+          Creative Commons Attribution 3.0 License
+         </a>
+         , and code samples are licensed under the
+         <a href="http://www.apache.org/licenses/LICENSE-2.0">
+          Apache 2.0 License
+         </a>
+         . For details, see our
+         <a href="https://developers.google.com/terms/site-policies">
+          Site Policies
+         </a>
+         . Java is a registered trademark of Oracle and/or its affiliates.
+        </p>
+        <p class="devsite-content-footer-date" content="2012-04-05T04:13:09.969909" itemprop="datePublished">
+         Last updated April 5, 2012.
+        </p>
+       </div>
+      </article>
+     </article>
+    </div>
+    <footer class="devsite-footer-linkboxes nocontent ">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-linkboxes-list">
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Product Info
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/books/terms">
+           Terms of Service
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/books/casestudies">
+           Case Studies
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Connect
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://groups.google.com/a/googleproductforums.com/forum/#!forum/books-api">
+           Google Books API Forums
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox devsite-footer-linkbox-backup">
+        <h3 class="devsite-footer-linkbox-heading">
+         Developer Consoles
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Console" href="//console.developers.google.com">
+           Google API Console
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Cloud Platform Console" href="//console.cloud.google.com">
+           Google Cloud Platform Console
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Play Console" href="//play.google.com/apps/publish/">
+           Google Play Console
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Console" href="//console.firebase.google.com">
+           Firebase Console
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cast SDK Developer Console" href="//cast.google.com/publish/">
+           Cast SDK Developer Console
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Web Store Developer Dashboard" href="//chrome.google.com/webstore/developer/dashboard">
+           Chrome Web Store Dashboard
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox devsite-footer-linkbox-sites">
+        <a class="gc-analytics-event devsite-footer-linkbox-logo-link" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link" href="https://developers.google.com/">
+         <img class="devsite-footer-linkbox-logo" src="https://developers.google.com/_static/fe5e716eb0/images/redesign-14/lockup-color-knockout.png"/>
+        </a>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link" href="//developer.android.com/index.html">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link" href="//developer.chrome.com/home">
+           Chrome
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link" href="//firebase.google.com">
+           Firebase
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cloud Link" href="//cloud.google.com">
+           Google Cloud Platform
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products Link" href="//developers.google.com/products/">
+           All Products
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-utility-footer">
+     <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
+      <div class="devsite-utility-footer-nav-left">
+       <form action="/i18n/setlang/" class="devsite-utility-footer-language" method="post">
+        <input name="xsrf_token" type="hidden" value="YhiPEgtfDJ56Jvpe1ODZ7xKN3_9IQZhsEEzmq_7HXuY6MTQ5NjkyMTYzOTE2NDc3MA"/>
+        <input name="next" type="hidden" value="/books/docs/v1/reference/volumes"/>
+        <select class="devsite-utility-footer-language-select kd-select" name="language" track-name="click" track-type="languageSelector">
+         <option track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector" value="id">
+          Bahasa Indonesia
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector" value="de">
+          Deutsch
+         </option>
+         <option selected="selected" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" value="en">
+          English
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector" value="es">
+          español
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector" value="fr">
+          français
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="pt-br" track-name="changed" track-type="languageSelector" value="pt-br">
+          Português Brasileiro
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector" value="ru">
+          Русский
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector" value="ja">
+          日本語
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-cn" track-name="changed" track-type="languageSelector" value="zh-cn">
+          简体中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector" value="ko">
+          한국어
+         </option>
+        </select>
+       </form>
+       <span class="devsite-utility-footer-links">
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer terms link" href="https://developers.google.com/terms/site-terms">
+         Terms
+        </a>
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer privacy link" href="https://www.google.com/policies/privacy/">
+         Privacy
+        </a>
+       </span>
+      </div>
+      <div class="devsite-utility-footer-nav-right">
+       <div class="devsite-utility-footer-newsletter-signup-text">
+        Sign up for the Google Developers newsletter
+       </div>
+       <a class="button button-primary devsite-utility-footer-newsletter-signup-button" href="https://services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch">
+        Subscribe
+       </a>
+      </div>
+     </nav>
+    </footer>
+   </div>
+   <script async="" defer="" src="//www.gstatic.com/feedback/api.js">
+   </script>
+   <script src="https://developers.google.com/_static/fe5e716eb0/js/jquery_ui-bundle.js">
+   </script>
+   <script src="https://developers.google.com/_static2/fe5e716eb0/jsi18n/">
+   </script>
+   <script src="https://developers.google.com/_static/fe5e716eb0/js/script_foot_closure.js">
+   </script>
+   <script src="https://developers.google.com/_static/fe5e716eb0/js/script_foot.js">
+   </script>
+   <script>
+    (function($) {
+          
+          devsite.devsite.Init($, {'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'VERSION_HASH': 'fe5e716eb0', 'SITE_NAME': 'devsite', 'HISTORY_ENABLED': 1, 'SUBPATH': '', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.api.ai', '.appspot.com', '.devsitetest.how', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.nest.com', '.openthread.io', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0, 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com'},
+                               '[]','en',
+                               true, '',
+                               {"039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/books/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+   </script>
+   <script>
+    $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+   </script>
+   <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=5njhqtv7yuxtgyzycpwkoyhagu">
+   </script>
+  </div>
+  <span data-request-elapsed="164.309978485" id="devsite-request-elapsed">
+  </span>
+ </body>
+</html>

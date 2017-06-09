@@ -1,0 +1,356 @@
+{
+  "basePath": "/v3",
+  "paths": {
+    "/direct_messages": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "source_guid required",
+            "description": "string — This is used for client-side deduplication.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "recipient_id required",
+            "description": "string — The GroupMe user ID of the recipient of this message.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "text required",
+            "description": "string — This can be omitted if at least one attachment is present.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "attachments",
+            "description": "array — A polymorphic list of attachments (locations, images, etc). You may have You may have more than one of any type of attachment, provided clients can display it. object type (string) — “image” required\nurl (string) required — Must be an image service (i.groupme.com) URL\n\nobject type (string) — “location” required\nname (string) required\nlat (string) required\nlng (string) required\n\nobject type (string) — “emoji” required\nplaceholder (string) — “☃” required\ncharmap (array) — “[{pack_id},{offset}]” required\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "other_user_id required",
+            "description": "string — The other participant in the conversation.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "before_id",
+            "description": "string — Returns 20 messages created before the given message ID",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "since_id",
+            "description": "string — Returns 20 messages created after the given message ID",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/users/update": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "avatar_url",
+            "description": "string — URL to valid JPG/PNG/GIF image. URL will be converted into an image service link (http://i.groupme.com/....)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string — Name must be of the form FirstName LastName",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "email",
+            "description": "string — Email address. Must be in name@domain.com form.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "zip_code",
+            "description": "string — Zip code.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/users/sms_mode": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "duration required",
+            "description": "integer",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "registration_id",
+            "description": "string — The push notification ID/token that should be suppressed during SMS mode. If this is omitted, both SMS and push notifications will be delivered to the device.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/:group_id/likes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "period required",
+            "description": "string — one of: 'day', 'week', or 'month'",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/:id/update": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "image_url",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "office_mode",
+            "description": "boolean",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "share",
+            "description": "boolean — If you pass a true value for share , we'll generate a share URL. Anybody with this URL can join the group.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/:group_id/members/:membership_id/remove": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "membership_id required",
+            "description": "string — Please note that this isn't the same as the user ID. In the members key in the group JSON, this is the id value, not the user_id .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/:id": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id required",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/bots/destroy": {
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bot_id required",
+            "description": "",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/change_owners": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "requests required",
+            "description": "array — One request is object where user_id is the new owner who must be active member of a group specified by group_id . object group_id (string) required\nowner_id (string) required\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/:group_id/members/add": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "members",
+            "description": "array — nickname is required. You must use one of the following identifiers: user_id , phone_number , or email . object nickname (string) required\nuser_id (string)\nphone_number (string)\nemail (string)\nguid (string)\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/:group_id/members/results/:results_id": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "results_id required",
+            "description": "string — This is the guid that's returned from an add request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/:group_id/messages": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "source_guid required",
+            "description": "string — Client-side IDs for messages. This can be used by clients to set their own identifiers on messages, but the server also scans these for de-duplication. That is, if two messages are sent with the same source_guid within one minute of each other, the second message will fail with a 409 Conflict response. So it's important to set this to a unique value for each message.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "text required",
+            "description": "string — This can be omitted if at least one attachment is present. The maximum length is 1,000 characters.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "attachments",
+            "description": "array — A polymorphic list of attachments (locations, images, etc). You may have You may have more than one of any type of attachment, provided clients can display it. object type (string) — “image” required\nurl (string) required — Must be an image service (i.groupme.com) URL\n\nobject type (string) — “location” required\nname (string) required\nlat (string) required\nlng (string) required\n\nobject type (string) — “split” required\ntoken (string) required\n\nobject type (string) — “emoji” required\nplaceholder (string) — “☃” required\ncharmap (array) — “[{pack_id},{offset}]” required\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "before_id",
+            "description": "string — Returns messages created before the given message ID",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "since_id",
+            "description": "string — Returns most recent messages created after the given message ID",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "after_id",
+            "description": "string — Returns messages created immediately after the given message ID",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "integer — Number of messages returned. Default is 20. Max is 100.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/groups/join": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "group_id required",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/bots/post": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bot_id required",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "text required",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture_url",
+            "description": "string — Image must be processed through image service .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "api.groupme.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

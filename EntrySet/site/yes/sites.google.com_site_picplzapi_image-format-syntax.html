@@ -1,0 +1,943 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html itemscope="" itemtype="http://schema.org/WebPage" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="chrome=1" http-equiv="X-UA-Compatible"/>
+  <script type="text/javascript">
+   /* Copyright 2008 Google. */ (function() { (function(){function e(a){this.t={};this.tick=function(a,c,b){this.t[a]=[void 0!=b?b:(new Date).getTime(),c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(h){}};this.tick("start",null,a)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var f=0<d?new e(d):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_","_wtsrt",
+d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})(); })()
+  </script>
+  <link href="//www.google.com/images/icons/product/sites-16.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://ssl.gstatic.com/sites/p/06e11a/system/app/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png"/>
+  <script type="text/javascript">
+   /* Copyright 2008 Google. */ (function() { function d(a){return document.getElementById(a)}window.byId=d;function g(a){return a.replace(/^\s+|\s+$/g,"")}window.trim=g;var h=[],k=0;window.JOT_addListener=function(a,b,c){var f=new String(k++);a={eventName:a,handler:b,compId:c,key:f};h.push(a);return f};window.JOT_removeListenerByKey=function(a){for(var b=0;b<h.length;b++)if(h[b].key==a){h.splice(b,1);break}};window.JOT_removeAllListenersForName=function(a){for(var b=0;b<h.length;b++)h[b].eventName==a&&h.splice(b,1)};
+window.JOT_postEvent=function(a,b,c){var f={eventName:a,eventSrc:b||{},payload:c||{}};if(window.JOT_fullyLoaded)for(b=h.length,c=0;c<b&&c<h.length;c++){var e=h[c];e&&e.eventName==a&&(f.listenerCompId=e.compId||"",(e="function"==typeof e.handler?e.handler:window[e.handler])&&e(f))}else window.JOT_delayedEvents.push({eventName:a,eventSrc:b,payload:c})};window.JOT_delayedEvents=[];window.JOT_fullyLoaded=!1;
+window.JOT_formatRelativeToNow=function(a,b){a=((new Date).getTime()-a)/6E4;if(1440<=a||0>a)return null;var c=0;60<=a&&(a/=60,c=2);2<=a&&c++;return b?window.JOT_siteRelTimeStrs[c].replace("__duration__",Math.floor(a)):window.JOT_userRelTimeStrs[c].replace("__duration__",Math.floor(a))}; })()
+  </script>
+  <script>
+   var breadcrumbs = [{"path":"/site/picplzapi/image-format-syntax","deleted":false,"title":"Image Format Syntax","dir":"ltr"}];
+  var JOT_clearDotPath = 'https://ssl.gstatic.com/sites/p/06e11a/system/app/images/cleardot.gif';
+
+  
+  var JOT_userRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+  
+  
+
+  
+
+  var webspace = {"enableAnalytics":true,"pageSharingId":"jotspot_page","enableUniversalAnalytics":false,"sharingPolicy":"OPENED","siteTitle":"picplz API","onepickUrl":"https://docs.google.com/picker","adsensePublisherId":null,"features":{"oAuthForChartsApi":true,"contactStoreMigrationPollForGapi":true,"gapiLoaderUtil":true,"moreMobileStyleImprovements":null,"picasaAlbumInsert":false,"pageDrafts":false,"plusBadge":false,"pdfEmbedSupport":false},"isPublic":true,"isConsumer":true,"serverFlags":{"cajaBaseUrl":"//www.gstatic.com/caja","cajaDebugMode":false},"domainAnalyticsAccountId":"","plusPageId":"","signInUrl":"https://accounts.google.com/AccountChooser?continue\u003dhttps://sites.google.com/site/picplzapi/image-format-syntax\u0026service\u003djotspot","analyticsAccountId":"UA-12119624-7","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":null,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/en/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/06e11a/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/06e11a/system/js/codemirror.js","https://ssl.gstatic.com/sites/p/06e11a/system/app/css/codemirror_css.css","https://ssl.gstatic.com/sites/p/06e11a/system/js/trog_edit__en.js","https://ssl.gstatic.com/sites/p/06e11a/system/app/css/trogedit.css","/site/picplzapi/_/rsrc/1495696974000/system/app/css/editor.css","https://ssl.gstatic.com/sites/p/06e11a/system/app/css/codeeditor.css","/site/picplzapi/_/rsrc/1495696974000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"defaultdomain","baseUri":"/site/picplzapi","name":"picplzapi","siteTemplateId":false,"siteNoticeRevision":null,"siteNoticeUrlAddress":null,"siteNoticeMessage":null,"page":{"isRtlLocale":false,"canDeleteWebspace":null,"isPageDraft":null,"parentPath":null,"parentWuid":null,"siteLocale":"en","timeZone":"America/Los_Angeles","type":"text","title":"Image Format Syntax","locale":"en","wuid":"wuid:gx:5a67e349f1ace3d3","revision":23,"path":"/image-format-syntax","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"image-format-syntax","canChangePath":true,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/text","title":"Web Page"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":"","onePickToken":"","guest_":true,"displayNameOrEmail":"guest","userName":"guest","uid":"","renderMobile":false,"domain":"","namespace":"","hasWriteAccess":false,"namespaceUser":false,"primaryEmail":"guest","hasAdminAccess":false},"gadgets":{"baseUri":"/site/picplzapi/system/app/pages/gadgets"}};
+  webspace.page.breadcrumbs = breadcrumbs;
+
+  
+  var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+  </script>
+  <script type="text/javascript">
+   window.jstiming.load.tick('scl');
+  </script>
+  <meta content="Image Format Syntax - picplz API" name="title"/>
+  <meta content="Image Format Syntax - picplz API" itemprop="name"/>
+  <meta content="Image Format Syntax - picplz API" property="og:title"/>
+  <style type="text/css">
+  </style>
+  <link href="https://ssl.gstatic.com/sites/p/06e11a/system/app/themes/iceberg/standard-css-iceberg-ltr-ltr.css" rel="stylesheet" type="text/css"/>
+  <link href="/site/picplzapi/_/rsrc/1495696974000/system/app/css/overlay.css?cb=iceberg150goog-ws-leftnone30themedefaultstandard" rel="stylesheet" type="text/css"/>
+  <link href="/site/picplzapi/_/rsrc/1495696974000/system/app/css/camelot/allthemes-view.css" rel="stylesheet" type="text/css"/>
+  <!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="/site/picplzapi/system/app/css/camelot/allthemes%2die.css" />
+        <![endif]-->
+  <title>
+   Image Format Syntax - picplz API
+  </title>
+  <script type="text/javascript">
+   window.jstiming.load.tick('cl');
+  </script>
+ </head>
+ <body class=" en " id="body" xmlns="http://www.google.com/ns/jotspot">
+  <div class="sites-header-divider" id="sites-page-toolbar">
+   <div class="sites-status" id="sites-status" style="display:none;" xmlns="http://www.w3.org/1999/xhtml">
+    <div aria-live="assertive" class="sites-notice" id="sites-notice" role="status">
+    </div>
+   </div>
+  </div>
+  <div id="sites-chrome-everything-scrollbar">
+   <div class="" id="sites-chrome-everything">
+    <div id="sites-chrome-page-wrapper" style="direction: ltr">
+     <div id="sites-chrome-page-wrapper-inside">
+      <div id="sites-chrome-header-wrapper" style="" xmlns="http://www.w3.org/1999/xhtml">
+       <table cellspacing="0" class="sites-layout-hbox" id="sites-chrome-header" style="">
+        <tbody>
+         <tr class="sites-header-primary-row" id="sites-chrome-userheader">
+          <td class="" id="sites-header-title" role="banner">
+           <div class="sites-header-cell-buffer-wrapper">
+            <h2>
+             <a dir="ltr" href="https://sites.google.com/site/picplzapi/" id="sites-chrome-userheader-title">
+              picplz API
+             </a>
+            </h2>
+           </div>
+          </td>
+          <td class="sites-layout-searchbox ">
+           <div class="sites-header-cell-buffer-wrapper">
+            <form action="/site/picplzapi/system/app/pages/search" id="sites-searchbox-form" role="search">
+             <input id="sites-searchbox-scope" name="scope" type="hidden" value="search-site"/>
+             <input aria-label="Search this site" id="jot-ui-searchInput" name="q" size="20" type="text" value=""/>
+             <div class="goog-inline-block" id="sites-searchbox-button-set">
+              <div class="goog-inline-block jfk-button jfk-button-standard" id="sites-searchbox-search-button" role="button" tabindex="0">
+               Search this site
+              </div>
+             </div>
+            </form>
+           </div>
+          </td>
+         </tr>
+         <tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
+          <td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div id="sites-chrome-main-wrapper">
+       <div id="sites-chrome-main-wrapper-inside">
+        <table border="0" cellpadding="{scmCellpadding}" cellspacing="0" class="sites-layout-hbox" id="sites-chrome-main">
+         <tbody>
+          <tr>
+           <td class="sites-layout-sidebar-left initial" id="sites-chrome-sidebar-left" style="width:150px">
+            <div class="sites-embed" id="COMP_2bd" role="navigation" xmlns="http://www.w3.org/1999/xhtml">
+             <div class="sites-embed-content sites-sidebar-nav">
+              <ul class="has-expander" jotid="navList" role="navigation">
+               <li class="topLevel nav-first ">
+                <div dir="ltr" style="padding-left: 19px;">
+                 <a class="sites-navigation-link topLevel" href="/site/picplzapi/home" jotid="wuid:gx:7d87f96ffc65e23d">
+                  Home
+                 </a>
+                </div>
+               </li>
+               <li class="topLevel ">
+                <div dir="ltr" style="padding-left: 19px;">
+                 <a class="sites-navigation-link topLevel" href="/site/picplzapi/authentication" jotid="wuid:gx:411dd483c9cdd3c8">
+                  Authentication
+                 </a>
+                </div>
+               </li>
+               <li class="topLevel parent " wuid="gx:5433fa04daa8e79b">
+                <div dir="ltr" style="padding-left: 0px;">
+                 <div class="expander">
+                 </div>
+                 <a class="sites-navigation-link topLevel" href="/site/picplzapi/api-methods" jotid="wuid:gx:5433fa04daa8e79b">
+                  Data API
+                 </a>
+                </div>
+                <ul class="has-expander" role="navigation">
+                 <li class="">
+                  <div class="current-bg" dir="ltr" jotid="wuid:gx:5a67e349f1ace3d3" style="padding-left: 38px;">
+                   Image Format Syntax
+                  </div>
+                 </li>
+                 <li class="">
+                  <div dir="ltr" style="padding-left: 38px;">
+                   <a class="sites-navigation-link" href="/site/picplzapi/pagination" jotid="wuid:gx:1450061d8fef651">
+                    Pagination
+                   </a>
+                  </div>
+                 </li>
+                 <li class="">
+                  <div dir="ltr" style="padding-left: 38px;">
+                   <a class="sites-navigation-link" href="/site/picplzapi/jsonp" jotid="wuid:gx:3eb10d141ea4a6c2">
+                    JSONP
+                   </a>
+                  </div>
+                 </li>
+                 <li class="">
+                  <div dir="ltr" style="padding-left: 38px;">
+                   <a class="sites-navigation-link" href="/site/picplzapi/geo-location-data" jotid="wuid:gx:742c3fba7cd8396a">
+                    Geolocation Data
+                   </a>
+                  </div>
+                 </li>
+                </ul>
+               </li>
+               <li class="topLevel ">
+                <div dir="ltr" style="padding-left: 19px;">
+                 <a class="sites-navigation-link topLevel" href="/site/picplzapi/upload-api" jotid="wuid:gx:7141bcb3f3920a83">
+                  Upload API
+                 </a>
+                </div>
+               </li>
+               <li class="topLevel ">
+                <div dir="ltr" style="padding-left: 19px;">
+                 <a class="sites-navigation-link topLevel" href="/site/picplzapi/system/app/pages/recentChanges" jotid="wuid:gx:63324fac7512bd1b">
+                  Recent site activity
+                 </a>
+                </div>
+               </li>
+              </ul>
+             </div>
+            </div>
+           </td>
+           <td id="sites-canvas-wrapper">
+            <div id="sites-canvas" role="main">
+             <div id="goog-ws-editor-toolbar-container">
+             </div>
+             <div id="title-crumbs" style="" xmlns="http://www.w3.org/1999/xhtml">
+             </div>
+             <h3 align="left" id="sites-page-title-header" style="" xmlns="http://www.w3.org/1999/xhtml">
+              <span dir="ltr" id="sites-page-title" style="outline: none" tabindex="-1">
+               Image Format Syntax
+              </span>
+             </h3>
+             <div class="sites-canvas-main" id="sites-canvas-main">
+              <div id="sites-canvas-main-content">
+               <table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox" xmlns="http://www.w3.org/1999/xhtml">
+                <tbody>
+                 <tr>
+                  <td class="sites-layout-tile sites-tile-name-content-1">
+                   <div dir="ltr">
+                    In any API call that returns pics, you can request that it gives you links to a couple of different picture formats. There is a default set of formats, but you can also request a custom list. However, just because you request a specific size doesn't mean you are going to get it. We have a number of predefined sizes, and we will return the one closest to the size requested. There are also a few methods of working with the differences in screen pixel density between devices.Â
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     A typical format would look something like this:Â
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     <span>
+                      Â Â  Â
+                     </span>
+                     <b>
+                      640r
+                     </b>
+                     : restrict the image to 640px on it's longest sizeÂ
+                    </div>
+                    <div>
+                     <span>
+                      Â Â  Â
+                      <b>
+                       100sh
+                      </b>
+                      : 100px square thumbnail, and we actually
+                      <span style="background-color:rgb(255,255,255)">
+                       want to double the pixel density for it to work correctly on
+                      </span>
+                      iPhone 4 "retina" screens
+                     </span>
+                     <br/>
+                    </div>
+                    <div>
+                     <span>
+                      Â Â  Â
+                      <b>
+                       100s@64
+                      </b>
+                      : 100px square thumbnail, but the API will lie, and tell you the pictures are only 64px x 64px
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      <br/>
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      Elements of the syntax:
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      <br/>
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      <span>
+                       Â Â  Â
+                       <b>
+                        A number [0-9]
+                       </b>
+                       : Start with bounded length in px
+                      </span>
+                      <br/>
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      <span>
+                       <span>
+                        Â Â  Â
+                        <b>
+                         r
+                        </b>
+                        : find a format whose longest side is less then the above number
+                       </span>
+                       <br/>
+                      </span>
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      <span>
+                       <span>
+                        Â Â  Â
+                        <b>
+                         s
+                        </b>
+                        : The picture should be square
+                       </span>
+                      </span>
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      <span>
+                       <span>
+                        <span>
+                         Â Â  Â
+                         <b>
+                          h
+                         </b>
+                         : The picture should be
+                         <span style="background-color:rgb(255,255,255)">
+                          pixel doubled, ie a 200px image
+                         </span>
+                         will be listed as being 100px
+                        </span>
+                       </span>
+                       <br/>
+                      </span>
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      <span>
+                       <span>
+                        <span>
+                         <span>
+                          Â Â  Â
+                          <b>
+                           @ a number [0-9]
+                          </b>
+                          : This will allow you to dynamically browser resize images to fit, on the longest size, inside this numberÂ
+                         </span>
+                         <br/>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </div>
+                    <div>
+                     <span>
+                      <span>
+                       <span>
+                        <span>
+                         <span>
+                          <br/>
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                     </span>
+                    </div>
+                    <div>
+                     You are required to pass aÂ beginningÂ number, and r, or s. Everything else is optional.
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     The default format list is:Â 640r,Â 320rh, 100sh
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     Right now we don't re-format pics on demand. This means the API will try get the size you request, but if it can't find an exact match it will return the closest match. To help guide you here are the formats we have pre-generated:
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     <div>
+                      <span>
+                       Â Â  Â
+                      </span>
+                      Square Thumbnails:Â 56px, 64px, 75px, 100px, 200px
+                     </div>
+                     <div>
+                      <span>
+                       Â Â  Â
+                      </span>
+                      Longest Side: 150px, 320px, 640px, 1024px
+                     </div>
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     Now you can pass a pic_formats parameter to any API call that has a pic list and you will getÂ referencesÂ to those formats. For example, we can request theÂ interestingÂ feed as follows to get 100 square thumbnails and 1024 longest side thumbnails.
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <b>
+                      curl -H 'X-Pretty-JSON: 1' 'http://picplz.com/api/v2/feed.json?&amp;type=interesting&amp;pic_formats=
+                     </b>
+                     <b>
+                      100s,
+                     </b>
+                     <b>
+                      1024r'
+                     </b>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <br/>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <div>
+                      {
+                     </div>
+                     <div>
+                      Â Â  Â "result": "ok",Â
+                     </div>
+                     <div>
+                      Â Â  Â "value": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "more_pics": true,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "last_pic_id": 375623,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "pic_count": 240,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "pics": [
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â {Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "url": "/user/nam27676/pic/1zrn/",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "pic_files": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "
+                      <b>
+                       1024r
+                      </b>
+                      ": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "width": 1024,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "img_url": "http://s0.i1.picplzthumbs.com/upload/img/63/30/4f/63304f23c4701bb85fd856b955a3d5628f2a2c5a_wmlg_00001.jpg",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "height": 683
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â },Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "
+                      <b>
+                       100s
+                      </b>
+                      ": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "width": 100,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "img_url": "http://s0.i1.picplzthumbs.com/upload/img/63/30/4f/63304f23c4701bb85fd856b955a3d5628f2a2c5a_t100s_00001.jpg",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "height": 100
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â }
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â },Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "caption": "",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "comment_count": 1,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "like_count": 37,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "date": 1295353231,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "id": 375348,
+                     </div>
+                     <div>
+                      <span>
+                       Â Â  Â
+                       <span>
+                        Â Â  Â
+                        <span>
+                         Â Â  Â
+                         <span>
+                          Â Â  Â ... redacted for brevity ...Â
+                         </span>
+                        </span>
+                       </span>
+                      </span>
+                      <br/>
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â }
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â ]
+                     </div>
+                     <div>
+                      Â Â  Â }
+                     </div>
+                     <div>
+                      }
+                     </div>
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     Let's say you request 900 on longest side. We don't have 900 so let's see what happens:Â
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <br/>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <b>
+                      curl -H 'X-Pretty-JSON: 1' 'http://picplz.com/api/v2/feed.json?&amp;type=interesting&amp;pic_formats=
+                     </b>
+                     <b>
+                      900r'
+                     </b>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <br/>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <br/>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <div>
+                      {
+                     </div>
+                     <div>
+                      Â Â  Â "result": "ok",Â
+                     </div>
+                     <div>
+                      Â Â  Â "value": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "more_pics": true,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "last_pic_id": 375623,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "pic_count": 240,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "pics": [
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "url": "/user/nam27676/pic/1zrn/",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "pic_files": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "
+                      <b>
+                       900r
+                      </b>
+                      ": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "width":
+                      <font color="#3d85c6">
+                       640
+                      </font>
+                      ,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "img_url": "http://s0.i1.picplzthumbs.com/upload/img/63/30/4f/63304f23c4701bb85fd856b955a3d5628f2a2c5a_wmeg_00001.jpg",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "height": 427
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â }
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â },Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "caption": "",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "comment_count": 1,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "like_count": 37,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "date": 1295353231,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "id": 375348
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â },Â
+                     </div>
+                     <div>
+                      Â
+                      <span>
+                       Â Â  Â
+                       <span>
+                        Â Â  Â
+                        <span>
+                         Â Â  Â ... redacted for brevity ...
+                        </span>
+                       </span>
+                      </span>
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â ]
+                     </div>
+                     <div>
+                      Â Â  Â }
+                     </div>
+                     <div>
+                      }
+                     </div>
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     We returned to you the name of the format requested but you see that the max size is actually 640.
+                     <font color="#3d85c6">
+                      The API automatically found the next closest match
+                     </font>
+                     . If you are comfortable with browser resizing images, you can always get the API to lie to you.
+                     <span style="background-color:rgb(255,255,255)">
+                      For example, let's say you wanted a 1024pxÂ  sized image cut down to 900px (rather than the default 640)
+                     </span>
+                     . In that case you can make a request like the one below. You can see that the API figured out the math for scaling a 1024px image down to 900px on it's longest side. There is no need to do that calculation on the client.Â
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <b>
+                      curl -H 'X-Pretty-JSON: 1' 'http://picplz.com/api/v2/feed.json?&amp;type=interesting&amp;pic_formats=
+                     </b>
+                     <b>
+                      1024r@900'
+                     </b>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <br/>
+                    </div>
+                    <div style="font-family:courier new,monospace">
+                     <div>
+                      {
+                     </div>
+                     <div>
+                      Â Â  Â "result": "ok",Â
+                     </div>
+                     <div>
+                      Â Â  Â "value": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "more_pics": true,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "last_pic_id": 375664,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "pic_count": 240,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â "pics": [
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "url": "/user/nam27676/pic/1zrn/",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "pic_files": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "
+                      <b>
+                       1024r@900
+                      </b>
+                      ": {
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "width": 900,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "img_url": "http://s0.i1.picplzthumbs.com/upload/img/63/30/4f/63304f23c4701bb85fd856b955a3d5628f2a2c5a_wmlg_00001.jpg",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â "height": 600
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â  Â  Â }
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â },Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "caption": "",Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "comment_count": 1,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "like_count": 37,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "date": 1295353231,Â
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â  Â  Â "id": 375348
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â  Â  Â },Â
+                     </div>
+                     <div>
+                      <span>
+                       Â Â  Â
+                       <span>
+                        Â Â  Â
+                        <span>
+                         Â Â  Â ... redacted for brevity ...
+                        </span>
+                       </span>
+                      </span>
+                      <br/>
+                     </div>
+                     <div>
+                      Â Â  Â  Â  Â ]
+                     </div>
+                     <div>
+                      Â Â  Â }
+                     </div>
+                     <div>
+                      }
+                     </div>
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                    <div>
+                     <br/>
+                    </div>
+                   </div>
+                  </td>
+                 </tr>
+                </tbody>
+               </table>
+              </div>
+             </div>
+             <div id="sites-canvas-bottom-panel">
+              <div id="COMP_page-subpages" xmlns="http://www.w3.org/1999/xhtml">
+              </div>
+              <div id="sites-attachments-container">
+              </div>
+              <a name="page-comments" xmlns="http://www.w3.org/1999/xhtml">
+              </a>
+              <div id="COMP_page-comments" xmlns="http://www.w3.org/1999/xhtml">
+               <div class="sites-comment-docos-wrapper">
+                <div class="sites-comment-docos">
+                 <div class="sites-comment-docos-background">
+                 </div>
+                 <div class="sites-comment-docos-header">
+                  <div class="sites-comment-docos-header-title">
+                   Comments
+                  </div>
+                 </div>
+                 <div class="sites-comment-docos-pane" id="sites-comment-docos-pane">
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </div>
+      <div id="sites-chrome-footer-wrapper">
+       <div id="sites-chrome-footer-wrapper-inside">
+        <div id="sites-chrome-footer">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="sites-chrome-adminfooter-container">
+     <div class="sites-adminfooter" role="navigation" xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+       <a class="sites-system-link" href="https://www.google.com/a/UniversalLogin?continue=https://sites.google.com/site/picplzapi/image-format-syntax&amp;service=jotspot">
+        Sign in
+       </a>
+       <span aria-hidden="true">
+        |
+       </span>
+       <a class="sites-system-link" href="https://sites.google.com/site/picplzapi/system/app/pages/reportAbuse" target="_blank">
+        Report Abuse
+       </a>
+       <span aria-hidden="true">
+        |
+       </span>
+       <a class="sites-system-link" href="javascript:;" onclick="window.open(webspace.printUrl)">
+        Print Page
+       </a>
+       <span aria-hidden="true">
+        |
+       </span>
+       <span class="sites-system-link">
+        Powered By
+       </span>
+       <b class="powered-by">
+        <a href="http://sites.google.com">
+         Google Sites
+        </a>
+       </b>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="sites-chrome-onebar-footer">
+  </div>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   window.jstiming.load.tick('sjl');
+  </script>
+  <script src="https://ssl.gstatic.com/sites/p/06e11a/system/js/jot_min_view__en.js" xmlns="http://www.w3.org/1999/xhtml">
+  </script>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   window.jstiming.load.tick('jl');
+  </script>
+  <script xmlns="http://www.w3.org/1999/xhtml">
+   sites.core.Analytics.createTracker();
+          sites.core.Analytics.trackPageview();
+  </script>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   sites.Searchbox.initialize(
+                        'sites-searchbox-search-button',
+                        {"object":[]}['object'],
+                        'search-site',
+                        {"label":"Configure search options...","url":"/site/picplzapi/system/app/pages/admin/settings"});
+  </script>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+  </script>
+  <script defer="true" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   JOT_setupNav("2bd", "Navigation", false);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
+  </script>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   new sites.CommentPane('//docs.google.com/comments/d/AAHRpnXsPxZjbAZh3TEOF-thhM7zMq00j7zOoLq6faVKdyMtplhd9mUqJmi_wTRNyViAif4KljSfdDe4ZjnRdJmzST5Mn8YyNUcQvWus-PAYSCHAZtVxbPNJDcc4HiZ4s2Bo4LfIpJoTh/api/js?anon=true',
+                  false, false);
+  </script>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   setTimeout(function() {
+    var fingerprint = gsites.date.TimeZone.getFingerprint([1109635200000, 1128902400000, 1130657000000, 1143333000000, 1143806400000, 1145000000000, 1146380000000, 1152489600000, 1159800000000, 1159500000000, 1162095000000, 1162075000000, 1162105500000]);
+    gsites.Xhr.send('https://sites.google.com/site/picplzapi/_/tz', null, null, 'GET', null, null, { afjstz: fingerprint });
+  }, 500);
+  </script>
+  <script xmlns="http://www.w3.org/1999/xhtml">
+   window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+  </script>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   JOT_insertAnalyticsCode(false,
+            false);
+  </script>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "en");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  </script>
+  <script defer="true" type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+  //]]>
+  </script>
+  <script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+   JOT_postEvent('decorateGvizCharts');
+  </script>
+  <script type="text/javascript">
+   JOT_setupPostRenderingManager();
+  </script>
+  <script type="text/javascript">
+   JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+  </script>
+  <div id="server-timer-div" style="display:none">
+  </div>
+  <script type="text/javascript">
+   window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+  </script>
+ </body>
+</html>

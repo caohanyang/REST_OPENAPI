@@ -33,7 +33,7 @@ public class ProcessBaseUrl {
 	public JSONObject handleBaseUrl(JSONObject openAPI, String mode, String baseUrl)
 			throws JSONException, MalformedURLException {
 
-		if (mode == "null") {
+		if (mode == "null" | mode == "/") {
 			openAPI = nullBaseUrl(openAPI, mode, baseUrl);
 		} else {
 			openAPI = httpBaseUrl(openAPI, mode);
@@ -262,22 +262,17 @@ public class ProcessBaseUrl {
 
 			String originStr = null, retainStr = null;
 
-			if (scheme == "null") {
+			
+			// if url contains commonUrl
+			if (keyUrl.equals(baseUrl)) {
+				retainStr = "/";
 				originStr = (String) pathObject.names().get(i);
-				retainStr = "?method" + "=" + originStr;
-
+			} else if (keyUrl.contains(baseUrl)) {
+				retainStr = keyUrl.substring(baseUrl.length());
+				originStr = (String) pathObject.names().get(i);
 			} else {
-				// if url contains commonUrl
-				if (keyUrl.equals(baseUrl)) {
-					retainStr = "/";
-					originStr = (String) pathObject.names().get(i);
-				} else if (keyUrl.contains(baseUrl)) {
-					retainStr = keyUrl.substring(baseUrl.length());
-					originStr = (String) pathObject.names().get(i);
-				} else {
-					// doestn't contain
-					continue;
-				}
+				// doestn't contain
+				continue;
 			}
 			JSONObject originValue = (JSONObject) pathObject.get(originStr);
 
@@ -343,8 +338,47 @@ public class ProcessBaseUrl {
 			}
 		}
 
-		Out.prln(baseUrlList);
+		if (baseUrlList.isEmpty()) {
+			// in this case, find the http
+			// don't need contain rest at first
+			for (int i = 0; i < listFiles.length; i++) {
+				// print the file name
+				String type = new Tika().detect(listFiles[i].getPath());
+				// only detect html
+				if (type.equals("text/html")) {
+					URL u = Paths.get(listFiles[i].getPath()).toUri().toURL();
+					FeatureMap params = Factory.newFeatureMap();
+					params.put("sourceUrl", u);
+					Document doc = (Document) Factory.createResource("gate.corpora.DocumentImpl", params);
+					// 2. get all text
+					DocumentContent textAll = doc.getContent();
 
+					// 4.1 search for the GET https
+					String strAll = textAll.toString();
+					// Fix 1: suppose the len(content between get and http) < 40 +
+					// "://"
+					String regexHttp = "(?si)((http)|(https)){1}://";
+					// first find the page which contains REST + request
+					Pattern pHttp = Pattern.compile(regexHttp);
+					Matcher matcherHttp = pHttp.matcher(strAll);
+					while (matcherHttp.find()) {
+						// Fix 2: suppose the URL length < 40
+						String matchStrNull = strAll.substring(matcherHttp.start()).split("\n")[0].trim();
+						// final API endpoint must contain API_NAME
+						matchStrNull = processMe.constrainUrl(matchStrNull, API_NAME);
+						if (matchStrNull != null) {
+							Out.prln(matchStrNull);
+							baseUrlList.add(matchStrNull);
+						}
+					}
+
+				}
+			}
+		}
+		
+		
+		Out.prln(baseUrlList);
+		
 		// find the base url
 		Map<Object, Long> counts = baseUrlList.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
 
@@ -358,16 +392,42 @@ public class ProcessBaseUrl {
 			return (String) sortedMap.entrySet().iterator().next().getKey();
 		} else {
 			Object[] sortedArray = sortedMap.keySet().toArray();
-			// select top 2, who contains api
-			for (int i = 0; i < 2; i++) {
+			List<String> apiArray = new ArrayList<String>();
+			// first, select all the URL who contains APIs
+			for (int i = 0; i< sortedArray.length; i++) {
 				if (sortedArray[i].toString().contains("api")) {
-					return sortedArray[i].toString();
+					apiArray.add(sortedArray[i].toString());
 				}
 			}
+			
+			if (apiArray.size()!=0) {
+				// select from api array
+				for (int j = 0; j < apiArray.size(); j++ ){
+					String[] apiUrl = apiArray.get(j).toString().split("/");
+					// end with version
+					if (apiUrl[apiUrl.length-1].matches("(?si)v\\d+")) {
+						return apiArray.get(j).toString();
+					}
+				}
+			} else {
+				// select from big array
+				// select top 2, who contains api
+				for (int i = 0; i < 2; i++) {
+					if (sortedArray[i].toString().contains("api")) {
+						return sortedArray[i].toString();
+					}
+				}
+			}
+			
 
 			// if they don't contain api, just return the first one
 			return sortedArray[0].toString();
 		}
+	}
+
+	private List<String> searchBaseUrlHttp(Object object, String aPI_NAME) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

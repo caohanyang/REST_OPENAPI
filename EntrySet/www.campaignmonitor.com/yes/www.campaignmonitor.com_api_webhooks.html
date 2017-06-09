@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <script src="//i3.campaignmonitor.com/assets/js/cookie.js?ver=100">
+  </script>
+  <script>
+   dataLayer = [{
+                'event' : 'virtualPageview',
+                'virtualPageURL' : encodeURI(location.pathname+location.search),
+                'virtualPageTitle' : document.title
+            }];
+            
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P6RM8B');
+  </script>
+  <script>
+   document.documentElement.setAttribute('data-useragent', navigator.userAgent);
+  </script>
+  <title>
+   Webhooks | Campaign Monitor
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="772549552" property="fb:admins"/>
+  <meta content="zyTuG88Wn1p_b0kNzl1uKJpZyeTZ0Sl6432CMZxPWcs" name="google-site-verification"/>
+  <meta content="A5352BC31C70117F51CB5B8263B6615F" name="msvalidate.01"/>
+  <meta content="" name="description"/>
+  <meta content="//www.campaignmonitor.com/assets/brand/campaignmonitor.jpg" property="og:image"/>
+  <meta content="width=device-width, maximum-scale=1.0, user-scalable=1" name="viewport"/>
+  <link href="//i1.campaignmonitor.com" rel="dns-prefetch"/>
+  <link href="//i3.campaignmonitor.com" rel="dns-prefetch"/>
+  <link href="//www.googleadservices.com" rel="dns-prefetch"/>
+  <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+  <link href="//themes.googleusercontent.com" rel="dns-prefetch"/>
+  <link href="//341578140.log.optimizely.com" rel="dns-prefetch"/>
+  <link href="//cdn.segment.com" rel="dns-prefetch"/>
+  <link href="//api.segment.io" rel="dns-prefetch"/>
+  <link href="//cdn.mxpnl.com" rel="dns-prefetch"/>
+  <link href="//scripts.kissmetrics.com" rel="dns-prefetch"/>
+  <link href="//www.google.com" rel="dns-prefetch"/>
+  <link href="//www.google.com.au" rel="dns-prefetch"/>
+  <link href="//www.google-analytics.com" rel="dns-prefetch"/>
+  <link href="//sjs.bizographics.com" rel="dns-prefetch"/>
+  <link href="//www.bizographics.com" rel="dns-prefetch"/>
+  <link href="//imp2.bizographics.com" rel="dns-prefetch"/>
+  <link href="//connect.facebook.net" rel="dns-prefetch"/>
+  <link href="//secure.quantserve.com" rel="dns-prefetch"/>
+  <link href="//fonts.gstatic.com" rel="dns-prefetch"/>
+  <link href="//www.getfeedback.com" rel="dns-prefetch"/>
+  <link href="//platform.twitter.com" rel="dns-prefetch"/>
+  <link href="//analytics.twitter.com" rel="dns-prefetch"/>
+  <link href="//trk.kissmetrics.com" rel="dns-prefetch"/>
+  <link href="//dnn506yrbagrg.cloudfront.net" rel="dns-prefetch"/>
+  <link href="//analytics.twitter.com" rel="dns-prefetch"/>
+  <link href="//t.co" rel="dns-prefetch"/>
+  <link href="//api.mixpanel.com" rel="dns-prefetch"/>
+  <link href="//www.facebook.com" rel="dns-prefetch"/>
+  <link href="//stats.g.doubleclick.net" rel="dns-prefetch"/>
+  <link href="//googleads.g.doubleclick.net" rel="dns-prefetch"/>
+  <link href="//pixel.quantserve.com" rel="dns-prefetch"/>
+  <link href="//s.adroll.com" rel="dns-prefetch"/>
+  <link href="//d.adroll.com" rel="dns-prefetch"/>
+  <link href="//secure.adnxs.com" rel="dns-prefetch"/>
+  <link href="//ads.yahoo.com" rel="dns-prefetch"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,500,700" rel="stylesheet"/>
+  <!--[if lt IE 9]>
+            <script src="//i3.campaignmonitor.com/assets/js/html5.js?ver=100"></script>
+            <link href="//i1.campaignmonitor.com/assets/style/ie.css?ver=100" rel="stylesheet" />
+            	<![endif]-->
+  <!--[if IE 9]>
+		<link href="//i1.campaignmonitor.com/assets/style/ie-9.css?ver=100" rel="stylesheet" />
+                <link rel="prefetch" href="//i1.campaignmonitor.com"><link rel="prefetch" href="//i3.campaignmonitor.com"><link rel="prefetch" href="//www.googleadservices.com"><link rel="prefetch" href="//fonts.googleapis.com"><link rel="prefetch" href="//themes.googleusercontent.com"><link rel="prefetch" href="//341578140.log.optimizely.com"><link rel="prefetch" href="//cdn.segment.com"><link rel="prefetch" href="//api.segment.io"><link rel="prefetch" href="//cdn.mxpnl.com"><link rel="prefetch" href="//scripts.kissmetrics.com"><link rel="prefetch" href="//www.google.com"><link rel="prefetch" href="//www.google.com.au"><link rel="prefetch" href="//www.google-analytics.com"><link rel="prefetch" href="//sjs.bizographics.com"><link rel="prefetch" href="//www.bizographics.com"><link rel="prefetch" href="//imp2.bizographics.com"><link rel="prefetch" href="//connect.facebook.net"><link rel="prefetch" href="//secure.quantserve.com"><link rel="prefetch" href="//fonts.gstatic.com"><link rel="prefetch" href="//www.getfeedback.com"><link rel="prefetch" href="//platform.twitter.com"><link rel="prefetch" href="//analytics.twitter.com"><link rel="prefetch" href="//trk.kissmetrics.com"><link rel="prefetch" href="//dnn506yrbagrg.cloudfront.net"><link rel="prefetch" href="//analytics.twitter.com"><link rel="prefetch" href="//t.co"><link rel="prefetch" href="//api.mixpanel.com"><link rel="prefetch" href="//www.facebook.com"><link rel="prefetch" href="//stats.g.doubleclick.net"><link rel="prefetch" href="//googleads.g.doubleclick.net"><link rel="prefetch" href="//pixel.quantserve.com"><link rel="prefetch" href="//s.adroll.com"><link rel="prefetch" href="//d.adroll.com"><link rel="prefetch" href="//secure.adnxs.com"><link rel="prefetch" href="//ads.yahoo.com">        <![endif]-->
+  <link href="//i1.campaignmonitor.com/assets/style/api.new.css?ver=100" rel="stylesheet"/>
+  <link href="//i3.campaignmonitor.com/assets/ico/favicon.ico?ver=100" rel="shortcut icon"/>
+  <link href="//i3.campaignmonitor.com/assets/ico/apple-touch-icon.png?ver=100" rel="apple-touch-icon-precomposed"/>
+  <link color="#00354f" href="//i3.campaignmonitor.com/assets/ico/cm-marque.svg" rel="mask-icon"/>
+  <script type="text/javascript">
+   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+                analytics.load("CBeicFJcYPe9CXTAc2r4FG2cKsee8F9y");
+                                analytics.page("marketing", "Webhooks", {}, { integrations: { Intercom: false} } );
+                analytics.track('Site - UX - Viewed Page', {
+                    category: 'marketing',
+                    path: '%2Fmarketing%2Fblog-admin%2Fapi%2Fwebhooks%2F',
+                    referrer: 'No Referer',
+                    title: 'Webhooks',
+                    url: 'https%3A%2F%2Fcampmon.com%2Fmarketing%2Fblog-admin%2Fapi%2Fwebhooks%2F'
+                });
+            }}();
+            
+            /* For running inline once jQuery is loaded */
+            function defer(func) {
+                if (window.jQuery)
+                    func();
+                else
+                    setTimeout(function() { defer(func) }, 50);
+            }
+  </script>
+  <link href="https://plus.google.com/+campaignmonitor" rel="publisher"/>
+  <link href="https://www.campaignmonitor.com/marketing/blog-admin/api/webhooks/" rel="canonical"/>
+ </head>
+ <body class="transparent">
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-P6RM8B" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <header>
+   <div id="cookie-notification">
+    <div class="central">
+     <p>
+      We use cookies to provide the best site experience.
+      <a href="/policies/#cookies">
+       Find out more
+      </a>
+     </p>
+     <span id="confirm-cookies">
+     </span>
+    </div>
+   </div>
+   <nav>
+    <div class="fullwidth dark" id="darker">
+     <div class="central">
+      <div id="topBar">
+       <div id="cmlogo">
+        <a class="home-nav-link" href="//www.campaignmonitor.com/" title="Campaign Monitor">
+         <svg viewBox="0 0 150 15" xmlns="https://www.w3.org/2000/svg">
+          <title>
+           Campaign Monitor
+          </title>
+          <path class="logo-color" d="M73.93,0c-0.6,0-1.06.13-1.06,0.69V1.23c0,0.56.46,0.7,1.06,0.7S75,1.79,75,1.23V0.69C75,0.13,74.52,0,73.93,0Z">
+          </path>
+          <path class="logo-color" d="M74.36,3H73.51a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V3.53A0.51,0.51,0,0,0,74.36,3Z">
+          </path>
+          <path class="logo-color" d="M49.74,2.93A3.22,3.22,0,0,0,47,4.34a2.54,2.54,0,0,0-2.42-1.4,2.9,2.9,0,0,0-2.47,1.4V3.53A0.51,0.51,0,0,0,41.62,3H40.77a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.65a1.78,1.78,0,0,1,1.73-2c1,0,1.64.71,1.64,2v4.21a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.65a1.75,1.75,0,0,1,1.73-2c1,0,1.64.7,1.64,2v4.2a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.05C52.58,4.06,51.5,2.93,49.74,2.93Z">
+          </path>
+          <path class="logo-color" d="M128,0c-0.6,0-1.06.13-1.06,0.69V1.23c0,0.56.46,0.7,1.06,0.7S129,1.79,129,1.23V0.69C129,0.13,128.58,0,128,0Z">
+          </path>
+          <path class="logo-color" d="M128.41,3h-0.84a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.5-0.51V3.53A0.51,0.51,0,0,0,128.41,3Z">
+          </path>
+          <path class="logo-color" d="M26.27,2.17a3.6,3.6,0,0,1,2.21.75,0.48,0.48,0,0,0,.64,0l0.65-.65a0.49,0.49,0,0,0,0-.73A5.45,5.45,0,0,0,26.27.27a5.58,5.58,0,0,0,0,11.16,5.45,5.45,0,0,0,3.45-1.22,0.49,0.49,0,0,0,0-.73l-0.65-.65a0.49,0.49,0,0,0-.34-0.14,0.48,0.48,0,0,0-.29.1,3.6,3.6,0,0,1-2.21.75A3.68,3.68,0,0,1,26.27,2.17Z">
+          </path>
+          <path class="logo-color" d="M83.63,3H82.79a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4c-1.9,0-3.76,1.51-3.76,4.23v0c0,2.7,1.84,4.23,3.76,4.23a3.26,3.26,0,0,0,2.76-1.38l0,0v0.75a2.64,2.64,0,0,1-2.58,2.69,2.5,2.5,0,0,1-2.19-1.15,0.5,0.5,0,0,0-.69-0.17l-0.36.24a0.51,0.51,0,0,0-.17.7A4,4,0,0,0,79.8,15a4.14,4.14,0,0,0,4.34-4.24V3.53A0.51,0.51,0,0,0,83.63,3ZM82.11,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,77.65,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+          </path>
+          <path class="logo-color" d="M122.88,2.94a2.92,2.92,0,0,0-2.53,1.4V3.53A0.51,0.51,0,0,0,119.84,3H119a0.51,0.51,0,0,0-.5.51v7.29a0.51,0.51,0,0,0,.5.51h0.84a0.53,0.53,0,0,0,.51-0.59V6.35a1.78,1.78,0,1,1,3.56,0v4.47a0.51,0.51,0,0,0,.5.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.06C125.76,4.17,124.7,2.94,122.88,2.94Z">
+          </path>
+          <path class="logo-color" d="M89.82,2.94a2.92,2.92,0,0,0-2.53,1.4V3.53A0.51,0.51,0,0,0,86.79,3H85.94a0.51,0.51,0,0,0-.5.51v7.29a0.51,0.51,0,0,0,.5.51h0.84a0.53,0.53,0,0,0,.51-0.59V6.35a1.78,1.78,0,1,1,3.56,0v4.47a0.51,0.51,0,0,0,.5.51H92.2a0.51,0.51,0,0,0,.51-0.51V6.06C92.7,4.17,91.64,2.94,89.82,2.94Z">
+          </path>
+          <path class="logo-color" d="M149.79,3l-0.05,0-0.06,0a2.43,2.43,0,0,0-2.73,1.33V3.53A0.51,0.51,0,0,0,146.44,3h-0.84a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V7.73c0-2.49,1.29-2.94,2-2.88l0.38,0h0.09a0.36,0.36,0,0,0,.35-0.29L150,3.42A0.36,0.36,0,0,0,149.79,3Z">
+          </path>
+          <path class="logo-color" d="M113.26,2.94A4.21,4.21,0,0,0,109,7.17v0a4.31,4.31,0,0,0,8.61,0v0A4.21,4.21,0,0,0,113.26,2.94Zm2.42,4.25v0a2.43,2.43,0,1,1-4.85,0V7.16a2.43,2.43,0,1,1,4.85,0v0Z">
+          </path>
+          <path class="logo-color" d="M139.82,2.94a4.21,4.21,0,0,0-4.31,4.23v0a4.31,4.31,0,0,0,8.61,0v0A4.21,4.21,0,0,0,139.82,2.94Zm2.42,4.25v0a2.43,2.43,0,1,1-4.85,0V7.16a2.43,2.43,0,1,1,4.85,0v0Z">
+          </path>
+          <path class="logo-color" d="M107.49,0.39h-0.85a0.51,0.51,0,0,0-.4.21l-3.48,4.79L99.27,0.59a0.51,0.51,0,0,0-.4-0.21H98a0.51,0.51,0,0,0-.51.51v9.93a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V3.94l3.08,4h0l0,0h0A0.36,0.36,0,0,0,103,8h0l0,0h0l3.08-4v6.88a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V0.9A0.51,0.51,0,0,0,107.49.39Z">
+          </path>
+          <polygon class="logo-color" points="102.75 8.08 102.75 8.08 102.75 8.08 102.75 8.08">
+          </polygon>
+          <path class="logo-color" d="M58.49,2.94a3.14,3.14,0,0,0-2.76,1.4V3.53A0.51,0.51,0,0,0,55.23,3H54.38a0.51,0.51,0,0,0-.51.51V14.23a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V10a3.28,3.28,0,0,0,2.76,1.4c1.92,0,3.76-1.53,3.76-4.23v0C62.25,4.45,60.39,2.94,58.49,2.94ZM60.36,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,55.9,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+          </path>
+          <path class="logo-color" d="M39,10h0a0.36,0.36,0,0,1-.36-0.36V3.53A0.51,0.51,0,0,0,38.18,3H37.34a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4c-1.9,0-3.76,1.51-3.76,4.23v0c0,2.7,1.84,4.23,3.76,4.23A3.06,3.06,0,0,0,36.86,10a1.78,1.78,0,0,0,1.71,1.3H39A0.36,0.36,0,0,0,39.4,11v-0.6A0.36,0.36,0,0,0,39,10ZM36.67,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,32.2,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+          </path>
+          <path class="logo-color" d="M71.76,10h0a0.36,0.36,0,0,1-.36-0.36V3.53A0.51,0.51,0,0,0,70.9,3H70.06a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4C64.89,2.94,63,4.45,63,7.17v0c0,2.7,1.84,4.23,3.76,4.23A3.06,3.06,0,0,0,69.58,10a1.78,1.78,0,0,0,1.71,1.3h0.47A0.36,0.36,0,0,0,72.12,11v-0.6A0.36,0.36,0,0,0,71.76,10ZM69.39,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,64.92,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+          </path>
+          <path class="logo-color" d="M134.6,3h-1.76V0.74h0a0.36,0.36,0,0,0-.06-0.2,0.36,0.36,0,0,0-.5-0.09h0l-0.88.62a1,1,0,0,0-.41.78V3h-0.6a0.51,0.51,0,0,0-.51.51V4.05a0.51,0.51,0,0,0,.51.51H131V9a2.08,2.08,0,0,0,2.33,2.39,4.79,4.79,0,0,0,1.47-.28,0.3,0.3,0,0,0,.19-0.37c0-.1-0.15-0.8-0.15-0.8a0.27,0.27,0,0,0-.34-0.27,3.87,3.87,0,0,1-.64.05,0.89,0.89,0,0,1-1-1V4.56h1.76a0.51,0.51,0,0,0,.51-0.51V3.53A0.51,0.51,0,0,0,134.6,3Z">
+          </path>
+          <path class="logo-color" d="M14.89,1.46a0.58,0.58,0,0,0-.79-0.14L0.1,11a0.57,0.57,0,0,0,.47.24H14.43A0.57,0.57,0,0,0,15,10.66V1.78a0.56,0.56,0,0,0-.1-0.31">
+          </path>
+          <path class="logo-color" d="M0.9,1.32a0.58,0.58,0,0,0-.79.14,0.56,0.56,0,0,0-.1.31v8.9L6.66,5.3Z">
+          </path>
+         </svg>
+        </a>
+       </div>
+       <a class="menu-link" href="#mainNav">
+        <span class="line line-1">
+        </span>
+        <span class="line line-2">
+        </span>
+        <span class="line line-3">
+        </span>
+       </a>
+      </div>
+      <div id="mainNav">
+       <ul id="primary">
+        <li>
+         <a class="primary-nav-link" href="//www.campaignmonitor.com/features/" id="features">
+          Features
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link" href="//www.campaignmonitor.com/pricing/" id="pricing">
+          Pricing
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link" href="//www.campaignmonitor.com/resources/" id="resources">
+          Resources
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link" href="//www.campaignmonitor.com/customers/" id="customers">
+          Customers
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link" href="//www.campaignmonitor.com/best-email-marketing-campaigns/" id="gallery">
+          Gallery
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link" href="//www.campaignmonitor.com/agencies/" id="agencies">
+          Agencies
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link show-mobile" href="https://help.campaignmonitor.com/contact" id="support">
+          Support
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link show-mobile" href="//www.campaignmonitor.com/contact-sales/?sv=api-Webhooks" id="sales">
+          Sales
+         </a>
+        </li>
+       </ul>
+       <ul id="second">
+        <li>
+         <a class="signup cmbtn primary" href="//www.campaignmonitor.com/signup/?sv=api-Webhooks">
+          SIGN UP
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link" href="https://login.createsend.com/l" id="login">
+          Log In
+         </a>
+        </li>
+        <li>
+         <a class="primary-nav-link open-subnav hide-mobile" id="contact">
+          Contact us
+         </a>
+         <div class="subnav">
+          <div class="backing">
+          </div>
+          <div class="central">
+           <span class="logo">
+            <svg viewBox="0 0 150 15" xmlns="https://www.w3.org/2000/svg">
+             <title>
+              Campaign Monitor
+             </title>
+             <path class="logo-color" d="M73.93,0c-0.6,0-1.06.13-1.06,0.69V1.23c0,0.56.46,0.7,1.06,0.7S75,1.79,75,1.23V0.69C75,0.13,74.52,0,73.93,0Z">
+             </path>
+             <path class="logo-color" d="M74.36,3H73.51a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V3.53A0.51,0.51,0,0,0,74.36,3Z">
+             </path>
+             <path class="logo-color" d="M49.74,2.93A3.22,3.22,0,0,0,47,4.34a2.54,2.54,0,0,0-2.42-1.4,2.9,2.9,0,0,0-2.47,1.4V3.53A0.51,0.51,0,0,0,41.62,3H40.77a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.65a1.78,1.78,0,0,1,1.73-2c1,0,1.64.71,1.64,2v4.21a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.65a1.75,1.75,0,0,1,1.73-2c1,0,1.64.7,1.64,2v4.2a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.05C52.58,4.06,51.5,2.93,49.74,2.93Z">
+             </path>
+             <path class="logo-color" d="M128,0c-0.6,0-1.06.13-1.06,0.69V1.23c0,0.56.46,0.7,1.06,0.7S129,1.79,129,1.23V0.69C129,0.13,128.58,0,128,0Z">
+             </path>
+             <path class="logo-color" d="M128.41,3h-0.84a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.5-0.51V3.53A0.51,0.51,0,0,0,128.41,3Z">
+             </path>
+             <path class="logo-color" d="M26.27,2.17a3.6,3.6,0,0,1,2.21.75,0.48,0.48,0,0,0,.64,0l0.65-.65a0.49,0.49,0,0,0,0-.73A5.45,5.45,0,0,0,26.27.27a5.58,5.58,0,0,0,0,11.16,5.45,5.45,0,0,0,3.45-1.22,0.49,0.49,0,0,0,0-.73l-0.65-.65a0.49,0.49,0,0,0-.34-0.14,0.48,0.48,0,0,0-.29.1,3.6,3.6,0,0,1-2.21.75A3.68,3.68,0,0,1,26.27,2.17Z">
+             </path>
+             <path class="logo-color" d="M83.63,3H82.79a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4c-1.9,0-3.76,1.51-3.76,4.23v0c0,2.7,1.84,4.23,3.76,4.23a3.26,3.26,0,0,0,2.76-1.38l0,0v0.75a2.64,2.64,0,0,1-2.58,2.69,2.5,2.5,0,0,1-2.19-1.15,0.5,0.5,0,0,0-.69-0.17l-0.36.24a0.51,0.51,0,0,0-.17.7A4,4,0,0,0,79.8,15a4.14,4.14,0,0,0,4.34-4.24V3.53A0.51,0.51,0,0,0,83.63,3ZM82.11,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,77.65,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+             </path>
+             <path class="logo-color" d="M122.88,2.94a2.92,2.92,0,0,0-2.53,1.4V3.53A0.51,0.51,0,0,0,119.84,3H119a0.51,0.51,0,0,0-.5.51v7.29a0.51,0.51,0,0,0,.5.51h0.84a0.53,0.53,0,0,0,.51-0.59V6.35a1.78,1.78,0,1,1,3.56,0v4.47a0.51,0.51,0,0,0,.5.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.06C125.76,4.17,124.7,2.94,122.88,2.94Z">
+             </path>
+             <path class="logo-color" d="M89.82,2.94a2.92,2.92,0,0,0-2.53,1.4V3.53A0.51,0.51,0,0,0,86.79,3H85.94a0.51,0.51,0,0,0-.5.51v7.29a0.51,0.51,0,0,0,.5.51h0.84a0.53,0.53,0,0,0,.51-0.59V6.35a1.78,1.78,0,1,1,3.56,0v4.47a0.51,0.51,0,0,0,.5.51H92.2a0.51,0.51,0,0,0,.51-0.51V6.06C92.7,4.17,91.64,2.94,89.82,2.94Z">
+             </path>
+             <path class="logo-color" d="M149.79,3l-0.05,0-0.06,0a2.43,2.43,0,0,0-2.73,1.33V3.53A0.51,0.51,0,0,0,146.44,3h-0.84a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V7.73c0-2.49,1.29-2.94,2-2.88l0.38,0h0.09a0.36,0.36,0,0,0,.35-0.29L150,3.42A0.36,0.36,0,0,0,149.79,3Z">
+             </path>
+             <path class="logo-color" d="M113.26,2.94A4.21,4.21,0,0,0,109,7.17v0a4.31,4.31,0,0,0,8.61,0v0A4.21,4.21,0,0,0,113.26,2.94Zm2.42,4.25v0a2.43,2.43,0,1,1-4.85,0V7.16a2.43,2.43,0,1,1,4.85,0v0Z">
+             </path>
+             <path class="logo-color" d="M139.82,2.94a4.21,4.21,0,0,0-4.31,4.23v0a4.31,4.31,0,0,0,8.61,0v0A4.21,4.21,0,0,0,139.82,2.94Zm2.42,4.25v0a2.43,2.43,0,1,1-4.85,0V7.16a2.43,2.43,0,1,1,4.85,0v0Z">
+             </path>
+             <path class="logo-color" d="M107.49,0.39h-0.85a0.51,0.51,0,0,0-.4.21l-3.48,4.79L99.27,0.59a0.51,0.51,0,0,0-.4-0.21H98a0.51,0.51,0,0,0-.51.51v9.93a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V3.94l3.08,4h0l0,0h0A0.36,0.36,0,0,0,103,8h0l0,0h0l3.08-4v6.88a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V0.9A0.51,0.51,0,0,0,107.49.39Z">
+             </path>
+             <polygon class="logo-color" points="102.75 8.08 102.75 8.08 102.75 8.08 102.75 8.08">
+             </polygon>
+             <path class="logo-color" d="M58.49,2.94a3.14,3.14,0,0,0-2.76,1.4V3.53A0.51,0.51,0,0,0,55.23,3H54.38a0.51,0.51,0,0,0-.51.51V14.23a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V10a3.28,3.28,0,0,0,2.76,1.4c1.92,0,3.76-1.53,3.76-4.23v0C62.25,4.45,60.39,2.94,58.49,2.94ZM60.36,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,55.9,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+             </path>
+             <path class="logo-color" d="M39,10h0a0.36,0.36,0,0,1-.36-0.36V3.53A0.51,0.51,0,0,0,38.18,3H37.34a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4c-1.9,0-3.76,1.51-3.76,4.23v0c0,2.7,1.84,4.23,3.76,4.23A3.06,3.06,0,0,0,36.86,10a1.78,1.78,0,0,0,1.71,1.3H39A0.36,0.36,0,0,0,39.4,11v-0.6A0.36,0.36,0,0,0,39,10ZM36.67,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,32.2,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+             </path>
+             <path class="logo-color" d="M71.76,10h0a0.36,0.36,0,0,1-.36-0.36V3.53A0.51,0.51,0,0,0,70.9,3H70.06a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4C64.89,2.94,63,4.45,63,7.17v0c0,2.7,1.84,4.23,3.76,4.23A3.06,3.06,0,0,0,69.58,10a1.78,1.78,0,0,0,1.71,1.3h0.47A0.36,0.36,0,0,0,72.12,11v-0.6A0.36,0.36,0,0,0,71.76,10ZM69.39,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,64.92,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+             </path>
+             <path class="logo-color" d="M134.6,3h-1.76V0.74h0a0.36,0.36,0,0,0-.06-0.2,0.36,0.36,0,0,0-.5-0.09h0l-0.88.62a1,1,0,0,0-.41.78V3h-0.6a0.51,0.51,0,0,0-.51.51V4.05a0.51,0.51,0,0,0,.51.51H131V9a2.08,2.08,0,0,0,2.33,2.39,4.79,4.79,0,0,0,1.47-.28,0.3,0.3,0,0,0,.19-0.37c0-.1-0.15-0.8-0.15-0.8a0.27,0.27,0,0,0-.34-0.27,3.87,3.87,0,0,1-.64.05,0.89,0.89,0,0,1-1-1V4.56h1.76a0.51,0.51,0,0,0,.51-0.51V3.53A0.51,0.51,0,0,0,134.6,3Z">
+             </path>
+             <path class="logo-color" d="M14.89,1.46a0.58,0.58,0,0,0-.79-0.14L0.1,11a0.57,0.57,0,0,0,.47.24H14.43A0.57,0.57,0,0,0,15,10.66V1.78a0.56,0.56,0,0,0-.1-0.31">
+             </path>
+             <path class="logo-color" d="M0.9,1.32a0.58,0.58,0,0,0-.79.14,0.56,0.56,0,0,0-.1.31v8.9L6.66,5.3Z">
+             </path>
+            </svg>
+           </span>
+           <span class="close">
+           </span>
+           <div class="block">
+            <div class="title small">
+             ASK US YOUR QUESTIONS
+            </div>
+            <a class="sublink" href="//www.campaignmonitor.com/demo/direct/?sv=api-Webhooks">
+             Request a live demo
+            </a>
+            <a class="sublink" href="//www.campaignmonitor.com/contact-sales/?sv=api-Webhooks">
+             Contact Sales
+            </a>
+            <a class="sublink" href="https://help.campaignmonitor.com/contact">
+             Contact Support
+            </a>
+           </div>
+          </div>
+         </div>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <div id="api-banner">
+   <div class="inner">
+    <hgroup>
+     <h2>
+      Our API
+     </h2>
+     <p>
+      The Campaign Monitor API opens up a world of possibilities for integrating our platform with your favorite CMS, blog, or other third party software.
+     </p>
+    </hgroup>
+   </div>
+  </div>
+  <div id="api-container">
+   <div class="inner">
+    <div class="menu">
+     <div id="slide-menu">
+      <ul>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/getting-started/">
+         Getting Started
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#grab-a-wrapper">
+           Grab a Wrapper
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#authentication">
+           Authentication
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#authenticating-with-oauth">
+           Authenticating with OAuth
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#authenticating-api-key">
+           Authenticating with an API key
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#your-client-id">
+           Your Client ID
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#your-list-id">
+           Your List ID
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#input-output">
+           Input &amp; Output
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#response-status-codes">
+           Response status codes
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#making-things-pretty">
+           Making things Pretty
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/getting-started/#rate-limiting">
+           Rate Limiting
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/wrappers/">
+         Wrappers
+        </a>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/account/">
+         Account
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#getting-your-clients">
+           Getting your clients
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#getting-billing-details">
+           Getting your billing details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#getting-valid-countries">
+           Getting valid countries
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#getting-valid-timezones">
+           Getting valid timezones
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#getting-current-date">
+           Getting current date
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#adding-an-administrator">
+           Adding an administrator
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#updating-an-administrator">
+           Updating an administrator
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#getting-administrators">
+           Getting Administrators
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#administrator-details">
+           Administrator details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#deleting-an-administrator">
+           Deleting an administrator
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#setting-primary-contact">
+           Setting primary contact
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#getting-primary-contact">
+           Getting primary contact
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/account/#single-sign-on">
+           Single Sign On
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/campaigns/">
+         Campaigns
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#creating-draft-campaign">
+           Creating a draft campaign
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#creating-campaign-template">
+           Creating a campaign from a template
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#sending-draft-campaign">
+           Sending a draft campaign
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#sending-campaign-preview">
+           Sending a campaign preview
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-summary">
+           Campaign summary
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-email-client-usage">
+           Campaign email client usage
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-lists-segments">
+           Campaign lists and segments
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-recipients">
+           Campaign recipients
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-bounces">
+           Campaign bounces
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-opens">
+           Campaign opens
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-clicks">
+           Campaign clicks
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-unsubscribes">
+           Campaign unsubscribes
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#campaign-spam-complaints">
+           Campaign spam complaints
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#deleting-a-campaign">
+           Deleting a campaign
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/campaigns/#unscheduling-a-campaign">
+           Unscheduling a campaign
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/clients/">
+         Clients
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#creating-a-client">
+           Creating a client
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-clients-details">
+           Getting a client’s details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-sent-campaigns">
+           Getting sent campaigns
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-scheduled-campaigns">
+           Getting scheduled campaigns
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-draft-campaigns">
+           Getting draft campaigns
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-subscriber-lists">
+           Getting subscriber lists
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-lists-email-address">
+           Getting lists for an email address
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-segments">
+           Getting segments
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-suppression-list">
+           Getting suppression list
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#suppress-email-addresses">
+           Suppress email addresses
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#unsuppress-email-address">
+           Unsuppress an email address
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-templates">
+           Getting templates
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#setting-basic-details">
+           Setting basic details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#setting-payg-billing">
+           Setting PAYG billing
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#setting-monthly-billing">
+           Setting monthly billing
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#transfer-credits">
+           Transfer credits
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#deleting-a-client">
+           Deleting a client
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#adding-a-person">
+           Adding a person
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#updating-a-person">
+           Updating a person
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-people">
+           Getting people
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#person-details">
+           Person details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#deleting-a-person">
+           Deleting a Person
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#setting-primary-contact-2">
+           Setting primary contact
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/clients/#getting-primary-contact-2">
+           Getting primary contact
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/lists/">
+         Lists
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#creating-a-list">
+           Creating a list
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#list-details">
+           List details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#list-stats">
+           List stats
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#list-custom-fields">
+           List custom fields
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#list-segments">
+           List segments
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#active-subscribers">
+           Active subscribers
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#unconfirmed-subscribers">
+           Unconfirmed subscribers
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#unsubscribed-subscribers">
+           Unsubscribed subscribers
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#bounced-subscribers">
+           Bounced subscribers
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#deleted-subscribers">
+           Deleted subscribers
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#updating-a-list">
+           Updating a list
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#creating-custom-field">
+           Creating a custom field
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#updating-custom-field">
+           Updating a custom field
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#updating-custom-field-options">
+           Updating custom field options
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#deleting-custom-field">
+           Deleting a custom field
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#deleting-a-list">
+           Deleting a list
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#list-webhooks">
+           List webhooks
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#creating-a-webhook">
+           Creating a webhook
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#testing-a-webhook">
+           Testing a webhook
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#deleting-a-webhook">
+           Deleting a webhook
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#activating-a-webhook">
+           Activating a webhook
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/lists/#deactivating-a-webhook">
+           Deactivating a webhook
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/segments/">
+         Segments
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/segments/#creating-a-segment">
+           Creating a segment
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/segments/#updating-a-segment">
+           Updating a segment
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/segments/#adding-segment-rulegroup">
+           Adding a segment rulegroup
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/segments/#getting-segments-details">
+           Getting a segment’s details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/segments/#getting-active-subscribers">
+           Getting active subscribers
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/segments/#deleting-a-segment">
+           Deleting a segment
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/segments/#deleting-segments-rules">
+           Deleting a segment’s rules
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/segments/#work-segment-rules">
+           How to work with the segment rules
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/subscribers/">
+         Subscribers
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/subscribers/#adding-a-subscriber">
+           Adding a subscriber
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/subscribers/#updating-a-subscriber">
+           Updating a subscriber
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/subscribers/#importing-many-subscribers">
+           Importing many subscribers
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/subscribers/#getting-subscribers-details">
+           Getting a subscriber’s details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/subscribers/#getting-subscribers-history">
+           Getting a subscriber’s history
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/subscribers/#unsubscribing-a-subscriber">
+           Unsubscribing a subscriber
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/subscribers/#deleting-a-subscriber">
+           Deleting a subscriber
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/templates/">
+         Templates
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/templates/#getting-a-template">
+           Getting a template
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/templates/#creating-a-template">
+           Creating a template
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/templates/#updating-a-template">
+           Updating a template
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/templates/#deleting-a-template">
+           Deleting a template
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="https://www.campaignmonitor.com/api/transactional/">
+         Transactional
+        </a>
+        <ul>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#smart-email-listing">
+           Smart email listing
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#smart-email-details">
+           Smart email details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#send-smart-email">
+           Send a smart email
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#send-classic-email">
+           Send classic email
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#classic-email-group-listing">
+           Classic email group listing
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#statistics">
+           Statistics
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#message-timeline">
+           Message timeline
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#message-details">
+           Message details
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/transactional/#resend-message">
+           Resend message
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="active">
+        <a href="https://www.campaignmonitor.com/api/webhooks/">
+         Webhooks
+        </a>
+        <ul style="display: block;">
+         <li>
+          <a href="https://www.campaignmonitor.com/api/webhooks/#whats-a-webhook">
+           What’s a Webhook?
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/webhooks/#batching-events">
+           Batching events
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/webhooks/#handling-request-failures">
+           Handling request failures
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/webhooks/#currently-available-webhooks">
+           Currently available Webhooks
+          </a>
+         </li>
+         <li>
+          <a href="https://www.campaignmonitor.com/api/webhooks/#debugging-testing-tools">
+           Debugging and testing tools
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="content">
+     <div class="section">
+      <h1>
+       Webhooks
+      </h1>
+      <p>
+       Webhooks come in handy for keeping your subscribers in sync. Instead of having to poll our API constantly to check for updates, we'll let you know the instant a change has been made. This might be someone unsubscribing, joining your list, changing their email address and more.
+      </p>
+     </div>
+     <div class="section" id="whats-a-webhook">
+      <h3 class="section-title">
+       What’s a Webhook?
+      </h3>
+      <p>
+       A
+       <a href="https://webhooks.pbworks.com/w/page/13385124/FrontPage" rel="nofollow" target="_blank">
+        webhook
+       </a>
+       is simply a user-defined callback in the form of an HTTP POST, which is invoked when something happens.
+      </p>
+      <p>
+       For example, when someone subscribes to one of your Campaign Monitor lists, you might like the data about that subscription to be made available to another application. You can do this by simply specifying a URL to which that data should be sent when the subscription occurs.
+      </p>
+      <p>
+       Using this example of someone subscribing to your list, here’s an example of the data we’ll post in the body of an HTTP POST request to the URL you’ve specified. We can send this to you in either
+       <code class="inline">
+        xml
+       </code>
+       or
+       <code class="inline">
+        json
+       </code>
+       , depending on what’s most useful to you.
+      </p>
+      <div class="syntax" id="subscription_0">
+       <div class="codehead">
+        Example of the data in the HTTP POST to your URL on subscription:
+        <span class="switch">
+         <a class="active" data-lang="JSON" rel="subscription_0">
+          JSON
+         </a>
+         <a data-lang="XML" rel="subscription_0">
+          XML
+         </a>
+        </span>
+       </div>
+       <pre class="border JSON"><code>{
+    "Events": [
+        {
+            "CustomFields": [
+                {
+                    "Key": "website",
+                    "Value": "http://example.org"
+                }
+            ],
+            "Date": "2010-12-14 11:32:00",
+            "EmailAddress": "test@example.org",
+            "Name": "Test Subscriber",
+            "SignupIPAddress": "53.78.123.243",
+            "Type": "Subscribe"
+        }
+    ],
+    "ListID": "96c0bbdaa54760c8d9e62a2b7ffa2e13"
+}</code></pre>
+       <pre class="border XML" style="display: none;"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Payload&gt;
+    &lt;Events&gt;
+        &lt;Event&gt;
+            &lt;CustomFields&gt;
+                &lt;CustomField&gt;
+                    &lt;Key&gt;website&lt;/Key&gt;
+                    &lt;Value&gt;http://example.org&lt;/Value&gt;
+                &lt;/CustomField&gt;
+            &lt;/CustomFields&gt;
+            &lt;Date&gt;2010-12-14 11:32:00&lt;/Date&gt;
+            &lt;EmailAddress&gt;test@example.org&lt;/EmailAddress&gt;
+            &lt;Name&gt;Test Subscriber&lt;/Name&gt;
+            &lt;SignupIPAddress&gt;53.78.123.243&lt;/SignupIPAddress&gt;
+            &lt;Type&gt;Subscribe&lt;/Type&gt;
+        &lt;/Event&gt;
+    &lt;/Events&gt;
+    &lt;ListID&gt;96c0bbdaa54760c8d9e62a2b7ffa2e13&lt;/ListID&gt;
+&lt;/Payload&gt;</code></pre>
+      </div>
+      <p>
+       So all you need to do is process this data being received at your URL.
+      </p>
+     </div>
+     <div class="section" id="batching-events">
+      <h3 class="section-title">
+       Batching events
+      </h3>
+      <p>
+       To minimise the number of HTTP POST requests we make to your URLs, we batch events together into the request body when possible.
+      </p>
+      <p>
+       For example, if you manually enter two new subscribers through the Campaign Monitor app, we’d make one HTTP POST request to your URL, including data similar to the following.
+      </p>
+      <div class="syntax" id="batching_0">
+       <div class="codehead">
+        Batching two subscribe events together in the body of the HTTP POST to your URL:
+        <span class="switch">
+         <a class="active" data-lang="JSON" rel="batching_0">
+          JSON
+         </a>
+         <a data-lang="XML" rel="batching_0">
+          XML
+         </a>
+        </span>
+       </div>
+       <pre class="border JSON"><code>{
+    "Events": [
+        {
+            "CustomFields": [],
+            "Date": "2010-12-14 11:32:00",
+            "EmailAddress": "testone@example.org",
+            "Name": "Test One Subscriber",
+            "SignupIPAddress": "TypeManual",
+            "Type": "Subscribe"
+        },
+        {
+            "CustomFields": [],
+            "Date": "2010-12-14 11:32:00",
+            "EmailAddress": "testtwo@example.org",
+            "Name": "Test Two Subscriber",
+            "SignupIPAddress": "TypeManual",
+            "Type": "Subscribe"
+        }
+    ],
+    "ListID": "96c0bbdaa54760c8d9e62a2b7ffa2e13"
+}</code></pre>
+       <pre class="border XML" style="display: none;"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Payload&gt;
+    &lt;Events&gt;
+        &lt;Event&gt;
+            &lt;CustomFields/&gt;
+            &lt;Date&gt;2010-12-14 11:32:00&lt;/Date&gt;
+            &lt;EmailAddress&gt;testone@example.org&lt;/EmailAddress&gt;
+            &lt;Name&gt;Test One Subscriber&lt;/Name&gt;
+            &lt;SignupIPAddress&gt;TypeManual&lt;/SignupIPAddress&gt;
+            &lt;Type&gt;Subscribe&lt;/Type&gt;
+        &lt;/Event&gt;
+        &lt;Event&gt;
+            &lt;CustomFields/&gt;
+            &lt;Date&gt;2010-12-14 11:32:00&lt;/Date&gt;
+            &lt;EmailAddress&gt;testtwo@example.org&lt;/EmailAddress&gt;
+            &lt;Name&gt;Test Two Subscriber&lt;/Name&gt;
+            &lt;SignupIPAddress&gt;TypeManual&lt;/SignupIPAddress&gt;
+            &lt;Type&gt;Subscribe&lt;/Type&gt;
+        &lt;/Event&gt;
+    &lt;/Events&gt;
+    &lt;ListID&gt;96c0bbdaa54760c8d9e62a2b7ffa2e13&lt;/ListID&gt;
+&lt;/Payload&gt;</code></pre>
+      </div>
+      <p>
+       We’ll batch a maximum of 1,000 events at a time, at the rate of one batch every 10 seconds. This means that for an import of a new list of 6,500 subscribers, over the course of around a minute you’ll receive seven POST requests, the first six with 1,000 subscribe events, and the last with 500.
+      </p>
+     </div>
+     <div class="section" id="handling-request-failures">
+      <h3 class="section-title">
+       Handling request failures
+      </h3>
+      <p>
+       To ensure we don’t continue to hit a URL that is experiencing a problem, we’ve built some simple failure handling into our webhooks functionality.
+      </p>
+      <p>
+       If we see sustained errors on a request for more than a week, we will automatically deactivate that webhook for you. This limit is something we’ve set initially, but that may change based on customer feedback if it’s too sensitive. Don’t hesitate to
+       <a href="https://help.campaignmonitor.com/contact">
+        get in touch
+       </a>
+       if you think that’s the case.
+      </p>
+     </div>
+     <div class="section" id="currently-available-webhooks">
+      <h3 class="section-title">
+       Currently available Webhooks
+      </h3>
+      <p>
+       We currently support webhooks on a number of events related to a subscriber list, which are detailed below. We provide the ability to manage subscriber list webhooks using our
+       <a href="https://www.campaignmonitor.com/api/lists/">
+        lists API
+       </a>
+       . The API allows you to create, test, activate, de-activate, and delete webhooks, as well as allowing you to get all webhooks you’ve created for a list.
+      </p>
+      <p>
+       The data format of the payload we’ll send as the body of the request is always determined by the payload format you specified when creating the webhook (json or xml).
+      </p>
+      <h4>
+       List Subscribe
+      </h4>
+      <p>
+       When someone subscribes to one of your lists, we’ll submit an HTTP POST request similar to the following, to any URLs you’ve registered with the “Subscribe” event.
+      </p>
+      <p>
+       The “Subscribe” event is triggered in the following ways:
+      </p>
+      <ul>
+       <li>
+        When subscribers are manually entered on the “Add Subscribers” page
+       </li>
+       <li>
+        When subscribers are imported from file
+       </li>
+       <li>
+        When subscribers are moved from an inactive state to “Active” on the “Manage Subscriber List” or “Edit Subscriber” pages
+       </li>
+       <li>
+        When subscribers subscribe to your list using a subscribe form
+       </li>
+       <li>
+        When subscribers are added using the Campaign Monitor API
+       </li>
+      </ul>
+      <p>
+       <span class="label">
+        NOTE:
+       </span>
+       For confirmed opt-in lists, the “Subscribe” event is triggered when the verification link has been clicked in the confirmation email.
+      </p>
+      <div class="syntax" id="list_subscribe_0">
+       <div class="codehead">
+        Request made on list subscribe event:
+        <span class="switch">
+         <a class="active" data-lang="JSON" rel="list_subscribe_0">
+          JSON
+         </a>
+         <a data-lang="XML" rel="list_subscribe_0">
+          XML
+         </a>
+        </span>
+       </div>
+       <pre class="border JSON"><code>POST /subscribe HTTP/1.1
+Host: example.com:80
+Accept: */*
+Content-Type: application/json
+
+{
+    "Events": [
+        {
+            "CustomFields": [
+                {
+                    "Key": "website",
+                    "Value": "http://example.org"
+                }
+            ],
+            "Date": "2010-12-14 11:32:00",
+            "EmailAddress": "test@example.org",
+            "Name": "Test Subscriber",
+            "SignupIPAddress": "53.78.123.243",
+            "Type": "Subscribe"
+        }
+    ],
+    "ListID": "96c0bbdaa54760c8d9e62a2b7ffa2e13"
+}</code></pre>
+       <pre class="border XML" style="display: none;"><code>POST /subscribe HTTP/1.1
+Host: example.com:80
+Accept: */*
+Content-Type: application/xml
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Payload&gt;
+    &lt;Events&gt;
+        &lt;Event&gt;
+            &lt;CustomFields&gt;
+                &lt;CustomField&gt;
+                    &lt;Key&gt;website&lt;/Key&gt;
+                    &lt;Value&gt;http://example.org&lt;/Value&gt;
+                &lt;/CustomField&gt;
+            &lt;/CustomFields&gt;
+            &lt;Date&gt;2010-12-14 11:32:00&lt;/Date&gt;
+            &lt;EmailAddress&gt;test@example.org&lt;/EmailAddress&gt;
+            &lt;Name&gt;Test Subscriber&lt;/Name&gt;
+            &lt;SignupIPAddress&gt;53.78.123.243&lt;/SignupIPAddress&gt;
+            &lt;Type&gt;Subscribe&lt;/Type&gt;
+        &lt;/Event&gt;
+    &lt;/Events&gt;
+    &lt;ListID&gt;96c0bbdaa54760c8d9e62a2b7ffa2e13&lt;/ListID&gt;
+&lt;/Payload&gt;</code></pre>
+      </div>
+      <h4>
+       Subscriber Update
+      </h4>
+      <p>
+       When a subscriber’s details are updated, we’ll submit an HTTP POST request similar to the following, to any URLs you’ve registered with the “Update” event.
+      </p>
+      <p>
+       The “Update” event is triggered in the following ways:
+      </p>
+      <ul>
+       <li>
+        When subscribers have their details updated on the “Edit Subscriber” page
+       </li>
+       <li>
+        When existing subscribers are re-imported from file
+       </li>
+       <li>
+        When subscribers update their details from the Preference Center
+       </li>
+       <li>
+        When existing subscribers are re-added or updated using the Campaign Monitor API
+       </li>
+      </ul>
+      <div class="syntax" id="subscriber_update_1">
+       <div class="codehead">
+        Request made on subscriber update event:
+        <span class="switch">
+         <a class="active" data-lang="JSON" rel="subscriber_update_1">
+          JSON
+         </a>
+         <a data-lang="XML" rel="subscriber_update_1">
+          XML
+         </a>
+        </span>
+       </div>
+       <pre class="border JSON"><code>POST /subscribe HTTP/1.1
+Host: example.com:80
+Accept: */*
+Content-Type: application/json
+
+{
+    "Events": [
+        {
+            "CustomFields": [
+                {
+                    "Key": "website",
+                    "Value": "http://example.org"
+                }
+            ],
+            "Date": "2010-12-14 11:32:00",
+          "OldEmailAddress": "test@example.org",
+          "EmailAddress": "test@example.org",
+          "Name": "Test Subscriber Renamed",
+          "Type": "Update",
+          "State": "Active"
+        }
+    ],
+    "ListID": "96c0bbdaa54760c8d9e62a2b7ffa2e13"
+}</code></pre>
+       <pre class="border XML" style="display: none;"><code>POST /subscribe HTTP/1.1
+Host: example.com:80
+Accept: */*
+Content-Type: application/xml
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Payload&gt;
+    &lt;Events&gt;
+        &lt;Event&gt;
+            &lt;CustomFields&gt;
+                &lt;CustomField&gt;
+                    &lt;Key&gt;website&lt;/Key&gt;
+                    &lt;Value&gt;http://example.org&lt;/Value&gt;
+                &lt;/CustomField&gt;
+            &lt;/CustomFields&gt;
+            &lt;Date&gt;2010-12-14 11:32:00&lt;/Date&gt;
+            &lt;OldEmailAddress&gt;test@example.org&lt;/OldEmailAddress&gt;
+            &lt;EmailAddress&gt;test@example.org&lt;/EmailAddress&gt;
+            &lt;Name&gt;Test Subscriber Renamed&lt;/Name&gt;
+            &lt;Type&gt;Update&lt;/Type&gt;
+            &lt;State&gt;Active&lt;/State&gt;
+        &lt;/Event&gt;
+    &lt;/Events&gt;
+    &lt;ListID&gt;96c0bbdaa54760c8d9e62a2b7ffa2e13&lt;/ListID&gt;
+&lt;/Payload&gt;</code></pre>
+      </div>
+      <h4>
+       Subscriber De-activate
+      </h4>
+      <p>
+       When a subscriber in your list is de-activated, we’ll submit an HTTP POST request similar to the following, to any URLs you’ve registered with the “Deactivate” event.
+      </p>
+      <p>
+       The “Deactivate” event is triggered in the following ways:
+      </p>
+      <ul>
+       <li>
+        When subscribers are moved to an inactive state on the “Manage Subscriber List” or “Edit Subscriber” pages
+       </li>
+       <li>
+        When subscribers unsubscribe by clicking an unsubscribe link
+       </li>
+       <li>
+        When subscribers unsubscribe using the Preference Center
+       </li>
+       <li>
+        When a spam complaint is reported by a subscriber
+       </li>
+       <li>
+        When a hard bounce occurs for a subscriber
+       </li>
+       <li>
+        When subscribers are unsubscribed using the Campaign Monitor API
+       </li>
+      </ul>
+      <div class="syntax" id="subscriber_deactivate_2">
+       <div class="codehead">
+        Request made on subscriber deactivate event:
+        <span class="switch">
+         <a class="active" data-lang="JSON" rel="subscriber_deactivate_2">
+          JSON
+         </a>
+         <a data-lang="XML" rel="subscriber_deactivate_2">
+          XML
+         </a>
+        </span>
+       </div>
+       <pre class="border JSON"><code>POST /deactivate HTTP/1.1
+Host: example.com:80
+Accept: */*
+Content-Type: application/json
+
+{
+    "Events": [
+        {
+            "CustomFields": [
+                {
+                    "Key": "website",
+                    "Value": "http://example.org"
+                }
+            ],
+            "Date": "2010-12-14 11:32:00",
+            "EmailAddress": "test@example.org",
+            "Name": "Test Subscriber",
+            "Type": "Deactivate",
+            "State": "Unsubscribed"
+        }
+    ],
+    "ListID": "96c0bbdaa54760c8d9e62a2b7ffa2e13"
+}</code></pre>
+       <pre class="border XML" style="display: none;"><code>POST /deactivate HTTP/1.1
+Host: example.com:80
+Accept: */*
+Content-Type: application/xml
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Payload&gt;
+    &lt;Events&gt;
+        &lt;Event&gt;
+            &lt;CustomFields&gt;
+                &lt;CustomField&gt;
+                    &lt;Key&gt;website&lt;/Key&gt;
+                    &lt;Value&gt;http://example.org&lt;/Value&gt;
+                &lt;/CustomField&gt;
+            &lt;/CustomFields&gt;
+            &lt;Date&gt;2010-12-14 11:32:00&lt;/Date&gt;
+            &lt;EmailAddress&gt;test@example.org&lt;/EmailAddress&gt;
+            &lt;Name&gt;Test Subscriber&lt;/Name&gt;
+            &lt;Type&gt;Deactivate&lt;/Type&gt;
+            &lt;State&gt;Unsubscribed&lt;/State&gt;
+        &lt;/Event&gt;
+    &lt;/Events&gt;
+    &lt;ListID&gt;96c0bbdaa54760c8d9e62a2b7ffa2e13&lt;/ListID&gt;
+&lt;/Payload&gt;</code></pre>
+      </div>
+     </div>
+     <div class="section" id="debugging-testing-tools">
+      <h3 class="section-title">
+       Debugging and testing tools
+      </h3>
+      <h4>
+       RequestBin
+      </h4>
+      <p>
+       Before you start building your integration,
+       <a href="http://requestb.in/" rel="nofollow" target="_blank">
+        RequestBin
+       </a>
+       is an excellent low-friction tool for inspecting our live webhook data, without a bunch of setup pain.
+      </p>
+      <h4>
+       ngrok
+      </h4>
+      <p>
+       You’re working furiously on your webhook integration. But webhooks need public URLs, and this isn’t ready for production; you just want to receive calls straight to localhost.
+      </p>
+      <p>
+       Enter
+       <a href="https://ngrok.com/" rel="nofollow" target="_blank">
+        ngrok
+       </a>
+       , a handy utility for setting up tunnels between a server running on localhost and a public URL.
+      </p>
+      <p>
+       No need to push. Just let ngrok setup a public domain; any traffic will be sent straight through to your local machine. You then create the webhook on that public domain and start handling the webhooks calls locally.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <footer class="spacer">
+   <div class="central" dynamic="true">
+    <div class="main-footer">
+     <div class="logo">
+      <a class="home-nav-link" href="//www.campaignmonitor.com/" title="Campaign Monitor">
+       <svg viewBox="0 0 150 15" xmlns="https://www.w3.org/2000/svg">
+        <title>
+         Campaign Monitor
+        </title>
+        <path class="logo-color" d="M73.93,0c-0.6,0-1.06.13-1.06,0.69V1.23c0,0.56.46,0.7,1.06,0.7S75,1.79,75,1.23V0.69C75,0.13,74.52,0,73.93,0Z">
+        </path>
+        <path class="logo-color" d="M74.36,3H73.51a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V3.53A0.51,0.51,0,0,0,74.36,3Z">
+        </path>
+        <path class="logo-color" d="M49.74,2.93A3.22,3.22,0,0,0,47,4.34a2.54,2.54,0,0,0-2.42-1.4,2.9,2.9,0,0,0-2.47,1.4V3.53A0.51,0.51,0,0,0,41.62,3H40.77a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.65a1.78,1.78,0,0,1,1.73-2c1,0,1.64.71,1.64,2v4.21a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.65a1.75,1.75,0,0,1,1.73-2c1,0,1.64.7,1.64,2v4.2a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.05C52.58,4.06,51.5,2.93,49.74,2.93Z">
+        </path>
+        <path class="logo-color" d="M128,0c-0.6,0-1.06.13-1.06,0.69V1.23c0,0.56.46,0.7,1.06,0.7S129,1.79,129,1.23V0.69C129,0.13,128.58,0,128,0Z">
+        </path>
+        <path class="logo-color" d="M128.41,3h-0.84a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.5-0.51V3.53A0.51,0.51,0,0,0,128.41,3Z">
+        </path>
+        <path class="logo-color" d="M26.27,2.17a3.6,3.6,0,0,1,2.21.75,0.48,0.48,0,0,0,.64,0l0.65-.65a0.49,0.49,0,0,0,0-.73A5.45,5.45,0,0,0,26.27.27a5.58,5.58,0,0,0,0,11.16,5.45,5.45,0,0,0,3.45-1.22,0.49,0.49,0,0,0,0-.73l-0.65-.65a0.49,0.49,0,0,0-.34-0.14,0.48,0.48,0,0,0-.29.1,3.6,3.6,0,0,1-2.21.75A3.68,3.68,0,0,1,26.27,2.17Z">
+        </path>
+        <path class="logo-color" d="M83.63,3H82.79a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4c-1.9,0-3.76,1.51-3.76,4.23v0c0,2.7,1.84,4.23,3.76,4.23a3.26,3.26,0,0,0,2.76-1.38l0,0v0.75a2.64,2.64,0,0,1-2.58,2.69,2.5,2.5,0,0,1-2.19-1.15,0.5,0.5,0,0,0-.69-0.17l-0.36.24a0.51,0.51,0,0,0-.17.7A4,4,0,0,0,79.8,15a4.14,4.14,0,0,0,4.34-4.24V3.53A0.51,0.51,0,0,0,83.63,3ZM82.11,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,77.65,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+        </path>
+        <path class="logo-color" d="M122.88,2.94a2.92,2.92,0,0,0-2.53,1.4V3.53A0.51,0.51,0,0,0,119.84,3H119a0.51,0.51,0,0,0-.5.51v7.29a0.51,0.51,0,0,0,.5.51h0.84a0.53,0.53,0,0,0,.51-0.59V6.35a1.78,1.78,0,1,1,3.56,0v4.47a0.51,0.51,0,0,0,.5.51h0.84a0.51,0.51,0,0,0,.51-0.51V6.06C125.76,4.17,124.7,2.94,122.88,2.94Z">
+        </path>
+        <path class="logo-color" d="M89.82,2.94a2.92,2.92,0,0,0-2.53,1.4V3.53A0.51,0.51,0,0,0,86.79,3H85.94a0.51,0.51,0,0,0-.5.51v7.29a0.51,0.51,0,0,0,.5.51h0.84a0.53,0.53,0,0,0,.51-0.59V6.35a1.78,1.78,0,1,1,3.56,0v4.47a0.51,0.51,0,0,0,.5.51H92.2a0.51,0.51,0,0,0,.51-0.51V6.06C92.7,4.17,91.64,2.94,89.82,2.94Z">
+        </path>
+        <path class="logo-color" d="M149.79,3l-0.05,0-0.06,0a2.43,2.43,0,0,0-2.73,1.33V3.53A0.51,0.51,0,0,0,146.44,3h-0.84a0.51,0.51,0,0,0-.51.51v7.29a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V7.73c0-2.49,1.29-2.94,2-2.88l0.38,0h0.09a0.36,0.36,0,0,0,.35-0.29L150,3.42A0.36,0.36,0,0,0,149.79,3Z">
+        </path>
+        <path class="logo-color" d="M113.26,2.94A4.21,4.21,0,0,0,109,7.17v0a4.31,4.31,0,0,0,8.61,0v0A4.21,4.21,0,0,0,113.26,2.94Zm2.42,4.25v0a2.43,2.43,0,1,1-4.85,0V7.16a2.43,2.43,0,1,1,4.85,0v0Z">
+        </path>
+        <path class="logo-color" d="M139.82,2.94a4.21,4.21,0,0,0-4.31,4.23v0a4.31,4.31,0,0,0,8.61,0v0A4.21,4.21,0,0,0,139.82,2.94Zm2.42,4.25v0a2.43,2.43,0,1,1-4.85,0V7.16a2.43,2.43,0,1,1,4.85,0v0Z">
+        </path>
+        <path class="logo-color" d="M107.49,0.39h-0.85a0.51,0.51,0,0,0-.4.21l-3.48,4.79L99.27,0.59a0.51,0.51,0,0,0-.4-0.21H98a0.51,0.51,0,0,0-.51.51v9.93a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V3.94l3.08,4h0l0,0h0A0.36,0.36,0,0,0,103,8h0l0,0h0l3.08-4v6.88a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V0.9A0.51,0.51,0,0,0,107.49.39Z">
+        </path>
+        <polygon class="logo-color" points="102.75 8.08 102.75 8.08 102.75 8.08 102.75 8.08">
+        </polygon>
+        <path class="logo-color" d="M58.49,2.94a3.14,3.14,0,0,0-2.76,1.4V3.53A0.51,0.51,0,0,0,55.23,3H54.38a0.51,0.51,0,0,0-.51.51V14.23a0.51,0.51,0,0,0,.51.51h0.84a0.51,0.51,0,0,0,.51-0.51V10a3.28,3.28,0,0,0,2.76,1.4c1.92,0,3.76-1.53,3.76-4.23v0C62.25,4.45,60.39,2.94,58.49,2.94ZM60.36,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,55.9,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+        </path>
+        <path class="logo-color" d="M39,10h0a0.36,0.36,0,0,1-.36-0.36V3.53A0.51,0.51,0,0,0,38.18,3H37.34a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4c-1.9,0-3.76,1.51-3.76,4.23v0c0,2.7,1.84,4.23,3.76,4.23A3.06,3.06,0,0,0,36.86,10a1.78,1.78,0,0,0,1.71,1.3H39A0.36,0.36,0,0,0,39.4,11v-0.6A0.36,0.36,0,0,0,39,10ZM36.67,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,32.2,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+        </path>
+        <path class="logo-color" d="M71.76,10h0a0.36,0.36,0,0,1-.36-0.36V3.53A0.51,0.51,0,0,0,70.9,3H70.06a0.51,0.51,0,0,0-.51.51V4.34a3.14,3.14,0,0,0-2.76-1.4C64.89,2.94,63,4.45,63,7.17v0c0,2.7,1.84,4.23,3.76,4.23A3.06,3.06,0,0,0,69.58,10a1.78,1.78,0,0,0,1.71,1.3h0.47A0.36,0.36,0,0,0,72.12,11v-0.6A0.36,0.36,0,0,0,71.76,10ZM69.39,7.2a2.42,2.42,0,0,1-2.27,2.61A2.32,2.32,0,0,1,64.92,7.2v0a2.34,2.34,0,0,1,2.19-2.61,2.41,2.41,0,0,1,2.27,2.61v0Z">
+        </path>
+        <path class="logo-color" d="M134.6,3h-1.76V0.74h0a0.36,0.36,0,0,0-.06-0.2,0.36,0.36,0,0,0-.5-0.09h0l-0.88.62a1,1,0,0,0-.41.78V3h-0.6a0.51,0.51,0,0,0-.51.51V4.05a0.51,0.51,0,0,0,.51.51H131V9a2.08,2.08,0,0,0,2.33,2.39,4.79,4.79,0,0,0,1.47-.28,0.3,0.3,0,0,0,.19-0.37c0-.1-0.15-0.8-0.15-0.8a0.27,0.27,0,0,0-.34-0.27,3.87,3.87,0,0,1-.64.05,0.89,0.89,0,0,1-1-1V4.56h1.76a0.51,0.51,0,0,0,.51-0.51V3.53A0.51,0.51,0,0,0,134.6,3Z">
+        </path>
+        <path class="logo-color" d="M14.89,1.46a0.58,0.58,0,0,0-.79-0.14L0.1,11a0.57,0.57,0,0,0,.47.24H14.43A0.57,0.57,0,0,0,15,10.66V1.78a0.56,0.56,0,0,0-.1-0.31">
+        </path>
+        <path class="logo-color" d="M0.9,1.32a0.58,0.58,0,0,0-.79.14,0.56,0.56,0,0,0-.1.31v8.9L6.66,5.3Z">
+        </path>
+       </svg>
+      </a>
+     </div>
+     <div class="menu">
+      <dl>
+       <dt>
+        <a href="//www.campaignmonitor.com/features/">
+         Product
+        </a>
+       </dt>
+       <dd>
+        <a href="//www.campaignmonitor.com/features/">
+         Features
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/pricing/">
+         Pricing
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/appstore/">
+         App Store
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/api/">
+         API
+        </a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        <a href="//www.campaignmonitor.com/email-marketing/">
+         Email Marketing
+        </a>
+       </dt>
+       <dd>
+        <a href="//www.campaignmonitor.com/agencies/">
+         Agencies
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/retail/">
+         Retail
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/non-profits/">
+         Nonprofit
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/media-and-entertainment/">
+         Entertainment
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/publishing/">
+         Publishing
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/technology/">
+         Technology
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/travel-and-hospitality/">
+         Travel
+        </a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        <a href="//www.campaignmonitor.com/customers/">
+         Community
+        </a>
+       </dt>
+       <dd>
+        <a href="//www.campaignmonitor.com/customers/">
+         Customers
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/resources/">
+         Resources
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/blog/">
+         Blog
+        </a>
+       </dd>
+       <dd>
+        <a href="https://help.campaignmonitor.com/support">
+         Support
+        </a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        <a href="//www.campaignmonitor.com/company/">
+         Company
+        </a>
+       </dt>
+       <dd>
+        <a href="//www.campaignmonitor.com/company/">
+         About us
+        </a>
+       </dd>
+       <dd>
+        <a data-url="Missing link" href="//www.campaignmonitor.com/">
+         Trust Center
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/careers/">
+         Careers
+        </a>
+       </dd>
+       <dd>
+        <a href="//www.campaignmonitor.com/in-the-news/">
+         In the news
+        </a>
+       </dd>
+      </dl>
+     </div>
+    </div>
+    <div class="sub-footer">
+     <a class="cmbtn secondary" href="//www.campaignmonitor.com/resources/subscription-center/">
+      Get the latest content
+     </a>
+     <div class="footnotes">
+      <div class="social">
+       <a class="linkedin" href="https://www.linkedin.com/company/campaign-monitor" target="_blank" title="Follow us on LinkedIn">
+        <svg height="18px" version="1.1" viewBox="0 0 18 18" width="18px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <title>
+          LinkedIn
+         </title>
+         <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+          <g class="social-color" fill="currentColor" transform="translate(-715.000000, -378.000000)">
+           <g>
+            <g transform="translate(145.000000, 367.000000)">
+             <g transform="translate(570.000000, 11.000000)">
+              <g>
+               <path d="M15.3385,15.338 L12.669,15.338 L12.669,11.1605 C12.669,10.1645 12.652,8.883 11.282,8.883 C9.8925,8.883 9.6805,9.9685 9.6805,11.0895 L9.6805,15.338 L7.014,15.338 L7.014,6.748 L9.573,6.748 L9.573,7.9225 L9.61,7.9225 C9.966,7.247 10.837,6.535 12.1355,6.535 C14.839,6.535 15.3385,8.3135 15.3385,10.627 L15.3385,15.338 Z M4.004,5.5745 C3.1465,5.5745 2.455,4.881 2.455,4.026 C2.455,3.1715 3.1465,2.478 4.004,2.478 C4.858,2.478 5.551,3.1715 5.551,4.026 C5.551,4.881 4.858,5.5745 4.004,5.5745 Z M2.667,15.338 L5.3395,15.338 L5.3395,6.748 L2.667,6.748 L2.667,15.338 Z M16.668,0 L1.3275,0 C0.595,0 0,0.581 0,1.298 L0,16.701 C0,17.418 0.595,18 1.3275,18 L16.668,18 C17.402,18 17.9995,17.418 17.9995,16.701 L17.9995,1.298 C17.9995,0.581 17.402,0 16.668,0 L16.668,0 Z">
+               </path>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </svg>
+       </a>
+       <a class="twitter" href="https://twitter.com/campaignmonitor" target="_blank" title="Follow us on Twitter">
+        <svg height="15px" version="1.1" viewBox="0 0 18 15" width="18px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <title>
+          Twitter
+         </title>
+         <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+          <g class="social-color" fill="currentColor" transform="translate(-751.000000, -379.000000)">
+           <g>
+            <g transform="translate(145.000000, 367.000000)">
+             <g transform="translate(570.000000, 11.000000)">
+              <path d="M52.0165333,5.22450082 C52.0165333,5.06054204 52.0165333,4.8973218 52.0058347,4.73484012 C52.721808,4.19858474 53.3398483,3.53460227 53.8310176,2.77398166 C53.1633381,3.08033479 52.4550545,3.28124108 51.7298105,3.36999401 C52.4935087,2.89656822 53.0650852,2.15195155 53.3381683,1.27471888 C52.6200472,1.71597135 51.8344045,2.02694408 51.0151433,2.19421748 C49.8811496,0.945615395 48.0792444,0.640015644 46.6198326,1.44878102 C45.1604208,2.25754639 44.4064511,3.97954088 44.7807063,5.64916885 C41.8392273,5.49647266 39.098657,4.05782569 37.2410388,1.69126282 C36.2700492,3.42216889 36.7660119,5.63650967 38.3736651,6.74813586 C37.7914761,6.73026845 37.2219806,6.56764321 36.7132407,6.27398477 L36.7132407,6.32199072 C36.7137172,8.12523676 37.9412639,9.67837122 39.6482262,10.0354357 C39.1096365,10.1875333 38.5445437,10.2097669 37.9963607,10.1004283 C38.4756213,11.643578 39.8490566,12.7007142 41.4142102,12.7311545 C40.1187761,13.7853887 38.5184954,14.3576904 36.8708669,14.3559713 C36.5797959,14.3553927 36.289008,14.3371437 36,14.3013183 C37.673003,15.413045 39.6196348,16.0027356 41.6074984,15.9999905 C48.3362112,16.0029447 52.0165333,10.2304137 52.0165333,5.22450082 Z">
+              </path>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </svg>
+       </a>
+       <a class="facebook" href="https://www.facebook.com/campaignmonitor" target="_blank" title="Become a fan on Facebook">
+        <svg height="18px" version="1.1" viewBox="0 0 18 18" width="18px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <title>
+          Facebook
+         </title>
+         <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+          <g class="social-color" fill="currentColor" transform="translate(-787.000000, -378.000000)">
+           <g>
+            <g transform="translate(145.000000, 367.000000)">
+             <g transform="translate(570.000000, 11.000000)">
+              <path d="M72.9934244,0 C72.4447142,0 72,0.444714213 72,0.99342438 L72,17.0065082 C72,17.5551509 72.4447142,18 72.9934244,18 L81.6143652,18 L81.6143652,11.0294385 L79.2685888,11.0294385 L79.2685888,8.31286461 L81.6143652,8.31286461 L81.6143652,6.3094925 C81.6143652,3.98462317 83.0342944,2.71866464 85.1082785,2.71866464 C86.1017704,2.71866464 86.9555893,2.79258135 87.2043837,2.82562806 L87.2043837,5.25530265 L85.7659754,5.25597707 C84.6380712,5.25597707 84.4196257,5.79194065 84.4196257,6.5784522 L84.4196257,8.31286461 L87.1096948,8.31286461 L86.7594672,11.0294385 L84.4196257,11.0294385 L84.4196257,18 L89.0065082,18 C89.5551509,18 89.9999326,17.5551509 89.9999326,17.0065082 L89.9999326,0.99342438 C89.9999326,0.444714213 89.5551509,0 89.0065082,0 L72.9934244,0 Z">
+              </path>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </svg>
+       </a>
+      </div>
+      <div class="foot-line">
+       <a class="policies" href="//www.campaignmonitor.com/policies/">
+        Terms &amp; Policies
+       </a>
+       <span class="sep">
+       </span>
+       <span class="right">
+        © 2017 Campaign Monitor -
+        <a href="//www.campaignmonitor.com/email-marketing-software/">
+         Email Marketing Software
+        </a>
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <br class="clear"/>
+  </footer>
+  <script defer="" src="//i3.campaignmonitor.com/assets/js/api.con.js?ver=100" type="text/javascript">
+  </script>
+  <!-- Tracking -->
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var google_conversion_id = 975651034;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+  </script>
+  <div style="display:none">
+   <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+   </script>
+  </div>
+  <noscript>
+   <div style="display:inline;">
+    <img alt="" height="1" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/975651034/?value=0&amp;guid=ON&amp;script=0" style="border-style:none;" width="1"/>
+   </div>
+  </noscript>
+  <!-- /Tracking -->
+ </body>
+</html>

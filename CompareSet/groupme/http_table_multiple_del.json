@@ -1,0 +1,15 @@
+{
+  "basePath": "/-GAeMYT8SZoI/TtBTK209xMI/AAAAAAAAWts/5nmvpmmvoWo/s1600/TopGun_059Pyxurz.jpg\",",
+  "paths": {
+    "/": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "4.bp.blogspot.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

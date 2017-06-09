@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   GroupMe Developers
+  </title>
+  <meta content="" name="description"/>
+  <meta content="" name="author"/>
+  <!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+<![endif]-->
+  <link href="/assets/application-098fe47f9071fd599921ed0e9e31cad4.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/assets/favicon.ico" rel="shortcut icon"/>
+  <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="/assets/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="/assets/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+ </head>
+ <body class="docs responses" onload="prettyPrint()">
+  <br/>
+  <div class="container">
+   <div class="navbar">
+    <div class="navbar-inner">
+     <div class="container">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+       <span class="i-bar">
+       </span>
+       <span class="i-bar">
+       </span>
+       <span class="i-bar">
+       </span>
+      </a>
+      <a class="brand" href="/">
+       Developers
+      </a>
+      <div class="nav-collapse">
+       <ul class="nav">
+        <li>
+         <a href="/">
+          Documentation
+         </a>
+        </li>
+        <li>
+         <a href="/tutorials">
+          Tutorials &amp; Code
+         </a>
+        </li>
+        <li>
+         <a href="http://status.groupme.com">
+          Status
+         </a>
+        </li>
+        <li>
+         <a href="/bots">
+          Bots
+         </a>
+        </li>
+        <li>
+         <a href="/applications">
+          Applications
+         </a>
+        </li>
+       </ul>
+       <ul class="nav pull-right">
+        <li>
+         <a href="/session/new">
+          Log In
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+   <div class="row">
+    <div class="span12">
+     <div class="tutorial" id="page">
+      <h1 id="responses">
+       A quick word on API responses
+      </h1>
+      <p>
+       All responses come in a request envelope:
+      </p>
+      <pre class="prettyprint linenums">{
+  response: { ... },
+  meta: {
+    code: 400,
+    errors: ["Name is required"]
+  }
+}
+</pre>
+      <dl>
+       <dt>
+        response
+       </dt>
+       <dd>
+        The target or resulting object. Sometimes a list with additional meta data.
+       </dd>
+       <dt>
+        meta.code
+       </dt>
+       <dd>
+        For clients that cannot read HTTP status codes.
+       </dd>
+       <dt>
+        meta.errors
+       </dt>
+       <dd>
+        If you receive 4XX response codes, you can expect an array of errors.
+       </dd>
+      </dl>
+      <div class="alert alert-warning">
+       <b>
+        Note:
+       </b>
+       We omit the envelope for brevity when documenting responses.
+      </div>
+      <section>
+      </section>
+      <h3>
+       Data Types
+      </h3>
+      <ul>
+       <li>
+        <b>
+         IDs
+        </b>
+        are
+        <b>
+         unordered
+        </b>
+        alphanumeric strings.
+       </li>
+       <li>
+        <b>
+         Timestamps
+        </b>
+        are integer seconds since the UNIX epoch.
+       </li>
+       <li>
+        <b>
+         Phone numbers
+        </b>
+        are sent as
+        <code>
+         +&lt;country code&gt; &lt;number&gt;
+        </code>
+       </li>
+      </ul>
+      <section>
+      </section>
+      <h3>
+       Format
+      </h3>
+      <p>
+       All data is sent and received as JSON.
+      </p>
+      <p>
+       While most requests will work as expected with standard HTTP params,
+it is especially important to send data as JSON in the request body to
+ensure consistent hash ordering (e.g. when sending multiple members).
+      </p>
+      <section>
+      </section>
+      <h3>
+       Status Codes
+      </h3>
+      <p>
+       We try to return the most appropriate HTTP status code.
+      </p>
+      <section>
+      </section>
+      <table class="table table-striped table-bordered">
+       <thead>
+        <tr>
+         <th>
+          Code
+         </th>
+         <th class="span4">
+          Text
+         </th>
+         <th>
+          Description
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <b>
+           200
+          </b>
+         </td>
+         <td>
+          OK
+         </td>
+         <td>
+          Success!
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           201
+          </b>
+         </td>
+         <td>
+          Created
+         </td>
+         <td>
+          Resource was created successfully.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           204
+          </b>
+         </td>
+         <td>
+          No Content
+         </td>
+         <td>
+          Resource was deleted successfully.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           304
+          </b>
+         </td>
+         <td>
+          Not Modified
+         </td>
+         <td>
+          There was no new data to return.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           400
+          </b>
+         </td>
+         <td>
+          Bad Request
+         </td>
+         <td>
+          Returned when an invalid format or invalid data is specified in the request.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           401
+          </b>
+         </td>
+         <td>
+          Unauthorized
+         </td>
+         <td>
+          Authentication credentials were missing or incorrect.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           403
+          </b>
+         </td>
+         <td>
+          Forbidden
+         </td>
+         <td>
+          The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           404
+          </b>
+         </td>
+         <td>
+          Not Found
+         </td>
+         <td>
+          The URI requested is invalid or the resource requested, such as a user, does not exists.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           420
+          </b>
+         </td>
+         <td>
+          Enhance Your Calm
+         </td>
+         <td>
+          Returned when you are being rate limited. Chill the heck out.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           500
+          </b>
+         </td>
+         <td>
+          Internal Server Error
+         </td>
+         <td>
+          Something unexpected occurred. GroupMe will be notified.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           502
+          </b>
+         </td>
+         <td>
+          Bad Gateway
+         </td>
+         <td>
+          GroupMe is down or being upgraded.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           503
+          </b>
+         </td>
+         <td>
+          Service Unavailable
+         </td>
+         <td>
+          The GroupMe servers are up, but overloaded with requests. Try again later.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <hr/>
+      <p>
+       Questions? Check out our
+       <a href="https://groups.google.com/forum/#!forum/groupme-api-support">
+        GroupMe API Support Google Group
+       </a>
+       or just email
+       <a href="mailto:groupme-api-support@googlegroups.com">
+        groupme-api-support@googlegroups.com
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <ul>
+     <li>
+      <a href="https://groupme.com/help">
+       Help
+      </a>
+     </li>
+     <li>
+      <a href="/GroupMe_API_License_Agreement.pdf">
+       Terms
+      </a>
+     </li>
+     <li>
+      <a href="https://groupme.com/privacy">
+       Privacy
+      </a>
+     </li>
+     <li>
+      © 2017 GroupMe Inc.
+     </li>
+    </ul>
+    <p class="disclaimer">
+     <a href="/GroupMe_API_License_Agreement.pdf">
+      GroupMe API License Agreement
+     </a>
+     — By using the GroupMe APIs you are indicating that you have read, understood, and agree to the updated Terms of Service.
+    </p>
+   </footer>
+  </div>
+  <script src="/assets/application-061e0f2e66b3fa0ae114023d3c6e8a74.js" type="text/javascript">
+  </script>
+  <script>
+   //<![CDATA[
+    var varAutoFirePV = 1, varClickTracking = 1, varCustomerTracking = 1, Route = "20040";
+    document.write("<script type='text/javascript' src='" + (window.location.protocol) + "//c.microsoft.com/ms.js'" + "'><\/script>");
+  //]]>
+  </script>
+ </body>
+</html>

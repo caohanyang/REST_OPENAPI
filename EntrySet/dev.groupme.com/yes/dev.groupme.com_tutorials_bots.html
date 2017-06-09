@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   GroupMe Developers
+  </title>
+  <meta content="" name="description"/>
+  <meta content="" name="author"/>
+  <!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+<![endif]-->
+  <link href="/assets/application-098fe47f9071fd599921ed0e9e31cad4.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/assets/favicon.ico" rel="shortcut icon"/>
+  <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="/assets/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="/assets/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+ </head>
+ <body class="tutorials bots" onload="prettyPrint()">
+  <br/>
+  <div class="container">
+   <div class="navbar">
+    <div class="navbar-inner">
+     <div class="container">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+       <span class="i-bar">
+       </span>
+       <span class="i-bar">
+       </span>
+       <span class="i-bar">
+       </span>
+      </a>
+      <a class="brand" href="/">
+       Developers
+      </a>
+      <div class="nav-collapse">
+       <ul class="nav">
+        <li>
+         <a href="/">
+          Documentation
+         </a>
+        </li>
+        <li class="active">
+         <a href="/tutorials">
+          Tutorials &amp; Code
+         </a>
+        </li>
+        <li>
+         <a href="http://status.groupme.com">
+          Status
+         </a>
+        </li>
+        <li>
+         <a href="/bots">
+          Bots
+         </a>
+        </li>
+        <li>
+         <a href="/applications">
+          Applications
+         </a>
+        </li>
+       </ul>
+       <ul class="nav pull-right">
+        <li>
+         <a href="/session/new">
+          Log In
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+   <div class="row">
+    <div class="span12">
+     <div class="tutorial" id="page">
+      <h1>
+       Bots Tutorial
+      </h1>
+      <p>
+       <img alt="Bot_demo" src="/assets/tutorials/bot_demo-bdc4c89a61c16402cdbf79a2a776397a.png" style="width: 100%"/>
+      </p>
+      <p>
+       A bot is an automated group member that can be told to post messages to one of your groups with an HTTP POST request. Bots can also respond to messages sent by members of the group. Note: bots can only send messages to the app via push. They cannot send SMS messages to users in SMS-mode.
+      </p>
+      <p>
+       Using a bot is as easy as registering a member name and optional avatar url. Then you use the secret key you get back to post messages from your bot into your group.
+      </p>
+      <h1>
+       How to create a bot
+      </h1>
+      <h2>
+       Method 1: using our form.
+      </h2>
+      <h3>
+       Use our form
+      </h3>
+      <p>
+       The easy (and most error-free) way to get a bot up and running is to use our
+       <a href="/bots/new">
+        form for creating bots.
+       </a>
+      </p>
+      <h2>
+       Method 2: using our API.
+      </h2>
+      <p>
+       Here we'll show you the programmatic way to make a bot.
+      </p>
+      <h3>
+       1. Get your access token.
+      </h3>
+      <p>
+       For the sake of convenience, your access token is listed at the top of the
+       <a href="/bots">
+        bots page
+       </a>
+      </p>
+      <p>
+       For the rest of this tutorial, we'll assume your access token is
+       <strong>
+        token123
+       </strong>
+      </p>
+      <h3>
+       2. Find the group ID for the group you want the bot in.
+      </h3>
+      <p>
+       You can retrieve group ids from the API.
+      </p>
+      <pre>curl https://api.groupme.com/v3/groups?token=token123</pre>
+      <p>
+       Will return json that looks like this:
+      </p>
+      <pre>{
+  meta: {
+    "code": 200
+  }
+  response: [
+    {
+      "id": "12345",
+      "group_id": 2000,
+      //...
+    },
+    //...
+  ]
+}</pre>
+      <p>
+       For the rest of this tutorial, we'll assume your group ID is
+       <strong>
+        2000
+       </strong>
+      </p>
+      <h3>
+       3. Register your bot
+      </h3>
+      <p>
+       So your access token is
+       <strong>
+        token123
+       </strong>
+       and the group ID is
+       <strong>
+        2000
+       </strong>
+       . You want to make a bot called
+       <strong>
+        Johnny Five
+       </strong>
+       . The way to
+create a bot is to send an HTTP POST request to
+       <b>
+        https://api.groupme.com/v3/bots?token=token123
+       </b>
+       with the following POST body:
+      </p>
+      <pre>{
+  "bot" : {
+    "name" : "Johnny Five",
+    "group_id" : "2000"
+  }
+}</pre>
+      If you were using cURL, the command line would look like this:
+      <pre>curl -X POST -d '{"bot": { "name": "Johnny Five", "group_id": "2000"}}' -H 'Content-Type: application/json' https://api.groupme.com/v3/bots?token=token123</pre>
+      <p>
+       You should get back a response that looks like this:
+      </p>
+      <pre>{
+  meta: {
+    "code": 201
+  },
+  response: {
+    bot: {
+      name: "Johnny Five",
+      bot_id: "j5abcdefg",
+      //...
+    }
+  }
+}</pre>
+      <p>
+       The bot id in this case is
+       <strong>
+        j5abcdefg
+       </strong>
+       . Save that somewhere.
+      </p>
+      <h3>
+       Optional arguments when creating bots
+      </h3>
+      <h5>
+       Callback URLs
+      </h5>
+      <p>
+       You can optionally specify a callback URL for the bot to read new messages from the group. This callback URL will receive an HTTP POST request from us every time
+a message is published to that group.
+      </p>
+      <p>
+       Let's say you want messages to be sent via POST to
+       <strong>
+        http://example.com/bot_callback
+       </strong>
+      </p>
+      <p>
+       Your request would look like this:
+      </p>
+      <pre>curl -X POST -d '{"bot": { "name": "Johnny Five", "group_id": "2000", "callback_url": "http://example.com/bot_callback" }}' -H 'Content-Type: application/json' https://api.groupme.com/v3/bots?token=token123</pre>
+      <h5>
+       Avatar URLs
+      </h5>
+      <p>
+       You can also specify an avatar URL that will give your bot an appearance in the group.
+Your request would look like this:
+      </p>
+      <pre>curl -X POST -d '{"bot": { "name": "Johnny Five", "group_id": "2000", "avatar_url": "http://imagehost.com/avatar.jpg" }}' -H 'Content-Type: application/json' https://api.groupme.com/v3/bots?token=token123</pre>
+      <p>
+      </p>
+      <h1>
+       Next: make your bot do something
+      </h1>
+      <p>
+       Still got that bot ID? Cool. You can now write an app that can post to the group and/or get pinged when new messages appear in the group. To post in the group, send an HTTP POST to https://api.groupme.com/v3/bots/post with the following POST body:
+      </p>
+      <pre>{
+  "bot_id"  : "j5abcdefg",
+  "text"    : "Hello world"
+}</pre>
+      <p>
+       For those of you playing along with cURL:
+      </p>
+      <pre>curl -X POST "https://api.groupme.com/v3/bots/post?bot_id=j5abcdefg&amp;text=Hello+world"</pre>
+      <p>
+       OR
+      </p>
+      <pre>curl -X POST -d '{"bot_id": "j5abcdefg", "text": "Hello world"}' -H 'Content-Type: application/json' https://api.groupme.com/v3/bots/post</pre>
+      <h4>
+       New: image and location attachments
+      </h4>
+      <p>
+       We now allow the bot to upload images as well as locations in the form of latitude/longitude pairs.
+      </p>
+      <h5>
+       Posting images
+      </h5>
+      <p>
+       The POST body for attaching an image looks like this. Note that the url must be
+for an image hosted by our image service. To get your images on our
+image service, you need to first upload them to our image service. See the documentation
+on how:
+       <a href="/docs/image_service">
+        Image Service Documentation
+       </a>
+      </p>
+      <pre>{
+  "bot_id"  : "j5abcdefg",
+  "text"    : "Hello world",
+  "attachments" : [
+    {
+      "type"  : "image",
+      "url"   : "https://i.groupme.com/somethingsomething.large"
+    }
+  ]
+}</pre>
+      <h5>
+       Posting locations
+      </h5>
+      <p>
+       Similarly, you can attach locations to your message
+      </p>
+      <pre>{
+  "bot_id"  : "j5abcdefg",
+  "text"    : "Hello world",
+  "attachments" : [
+    {
+      "type"  : "location",
+      "lng"   : "40.000",
+      "lat"   : "70.000",
+      "name"  : "GroupMe HQ"
+    }
+  ]
+}</pre>
+      <p>
+       Protip: You can add multiple attachments to a single message. For example, an image and a location. But you can't add multiple attachments of the same kind.
+      </p>
+      <h3>
+       Callbacks
+      </h3>
+      <p>
+       If you've registered a callback url with your bot, each message sent to the group by any member will be posted to that callback url. A sample of the data format that is POSTed back is a V3 message:
+      </p>
+      <pre>{
+  "attachments": [],
+  "avatar_url": "http://i.groupme.com/123456789",
+  "created_at": 1302623328,
+  "group_id": "1234567890",
+  "id": "1234567890",
+  "name": "John",
+  "sender_id": "12345",
+  "sender_type": "user",
+  "source_guid": "GUID",
+  "system": false,
+  "text": "Hello world ☃☃",
+  "user_id": "1234567890"
+}</pre>
+      <h2>
+       So, where should my bot run???
+      </h2>
+      <p>
+       Your bot can be something as simple as a script that runs every few minutes,
+or as complicated as an application that parses the text of the group conversation.
+You'll need some kind of application environment, with your bot code sitting on top of it. For example,
+you could create an app on Heroku with Heroku Scheduler running, and have that app post to your group.
+      </p>
+      <hr/>
+      <p>
+       Questions? Check out our
+       <a href="https://groups.google.com/forum/#!forum/groupme-api-support">
+        GroupMe API Support Google Group
+       </a>
+       or just email
+       <a href="mailto:groupme-api-support@googlegroups.com">
+        groupme-api-support@googlegroups.com
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <ul>
+     <li>
+      <a href="https://groupme.com/help">
+       Help
+      </a>
+     </li>
+     <li>
+      <a href="/GroupMe_API_License_Agreement.pdf">
+       Terms
+      </a>
+     </li>
+     <li>
+      <a href="https://groupme.com/privacy">
+       Privacy
+      </a>
+     </li>
+     <li>
+      © 2017 GroupMe Inc.
+     </li>
+    </ul>
+    <p class="disclaimer">
+     <a href="/GroupMe_API_License_Agreement.pdf">
+      GroupMe API License Agreement
+     </a>
+     — By using the GroupMe APIs you are indicating that you have read, understood, and agree to the updated Terms of Service.
+    </p>
+   </footer>
+  </div>
+  <script src="/assets/application-061e0f2e66b3fa0ae114023d3c6e8a74.js" type="text/javascript">
+  </script>
+  <script>
+   //<![CDATA[
+    var varAutoFirePV = 1, varClickTracking = 1, varCustomerTracking = 1, Route = "20040";
+    document.write("<script type='text/javascript' src='" + (window.location.protocol) + "//c.microsoft.com/ms.js'" + "'><\/script>");
+  //]]>
+  </script>
+ </body>
+</html>

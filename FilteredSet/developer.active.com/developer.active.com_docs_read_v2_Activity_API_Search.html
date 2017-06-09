@@ -1,0 +1,2697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <link href="/w3c/p3p.xml" rel="P3Pv1"/>
+  <script type="text/javascript">
+   //<![CDATA[
+            var mashery_info = {
+                        };
+
+            // iframe'd detection, to pop out if in an iframe
+            if (window.location !== parent.window.location && !(/(page|docs|blog)\/preview/.test(window.location.pathname))) {
+                parent.window.location = window.location;
+            }
+            //]]>
+  </script>
+  <title>
+   ACTIVE Network API - Activity Search API v2
+  </title>
+  <link href="http://developer.active.com/docs/feed-comments/v2_Activity_API_Search" rel="alternate" type="application/rss+xml"/>
+  <link href="/public/Mashery/styles-min/Mashery-base.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/files/active-bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/public/Mashery/styles/community/mashery-blue.css" media="print" rel="stylesheet" type="text/css"/>
+  <style media="screen" type="text/css">
+   <!--
+/****** Add your css overrides here ****************/
+
+div#branding-logo {
+    background: url("http://developer.active.com/files/logo.png ") repeat-x scroll 0 0 transparent!important;
+    height: 40px;
+    margin: 7px 0 6px 12px;
+    width: 482px;
+}
+-->
+  </style>
+  <script src="/public/Mashery/scripts/Mashery/Mashery-base.js?25453" type="text/javascript">
+  </script>
+  <script src="/public/Mashery/scripts/Mashery/source/ForumPreview.js" type="text/javascript">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   //<![CDATA[
+//]]>
+  </script>
+  <link href="/public/Mashery/styles/clients/activenetworks-theme.css" rel="stylesheet" type="text/css"/>
+  <script src="http://malsup.github.com/jquery.cycle.all.js" type="text/javascript">
+  </script>
+  <script src="/files/twitter.js" type="text/javascript">
+  </script>
+  <!--Adding Google Analytics for ACTIVE Access Team-->
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37845817-1']);
+  _gaq.push(['_setDomainName', 'active.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- re-open script tag must always be at the end of scripts-->
+  <script type="text/javascript">
+   //<![CDATA[
+//]]>
+  </script>
+  <!-- add syntax highlighter -->
+  <script type="text/javascript">
+   if(window.SyntaxHighlighter != undefined) { // check for syntax highlighter load before using
+                SyntaxHighlighter.all();
+            }
+  </script>
+  <!-- end syntax highlighter -->
+  <!--[if lt IE 7.]>
+            <link href="/public/Mashery/styles/IE6.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+  <!--[if IE 7]>
+            <link href="/public/Mashery/styles/IE7.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+  <!--[if gte IE 8]>
+            <link href="/public/Mashery/styles/IE8.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+ </head>
+ <body class="page-docs read en_US" id="page-docs">
+  <!-- PAGE -->
+  <div class="page read" id="page">
+   <!-- HEADER -->
+   <div class="header" id="header">
+    <div class="branding" id="branding">
+     <div class="branding-logo" id="branding-logo">
+      ACTIVE Network API
+     </div>
+     <!-- /branding-logo -->
+     <div id="branding-tagline">
+     </div>
+     <!-- /branding-tagline -->
+     <div id="branding-mashery">
+     </div>
+     <!-- /branding-mashery -->
+    </div>
+    <!-- /branding -->
+    <div class="search" id="search">
+     <form action="/search" class="search-input" id="search-input" method="get">
+      <div>
+       <input class="search-box" id="search-box" name="q" type="text" value=""/>
+       <input class="search-button" id="search-button" type="submit" value="Search"/>
+      </div>
+     </form>
+    </div>
+   </div>
+   <!-- /HEADER -->
+   <div class="user" id="user">
+    <div class="user-auth" id="user-auth">
+    </div>
+    <!-- /user-auth -->
+    <div class="user-main" id="user-main">
+    </div>
+    <!-- /user-main -->
+    <div class="user-nav" id="user-nav">
+     <ul>
+      <li class="first sign-in">
+       <a href="http://developer.active.com/login/mashery-id?r=http%3A%2F%2Fdeveloper.active.com%2Fdocs%2Fread%2Fv2_Activity_API_Search&amp;h=285454b13be5c660875019a397bbdb0d">
+        Sign In
+       </a>
+      </li>
+      <li class="register">
+       <a href="http://developer.active.com/member/register">
+        Register
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- /user-nav -->
+    <div id="user-menu">
+    </div>
+   </div>
+   <!-- /user -->
+   <div class="info" id="info" style="display: none;">
+   </div>
+   <!-- /info -->
+   <!-- CONTENT -->
+   <div class="content" id="content">
+    <div class="main" id="main">
+     <h1 class="first">
+      Activity Search API v2
+     </h1>
+     <div class="section">
+      <div class="section-body">
+       <h2 class="p1">
+        TYPES OF DATA AVAILABLE
+       </h2>
+       <p class="p1">
+        <span class="s2">
+        </span>
+        <strong>
+         Endurance:
+        </strong>
+        Running, cycling, swimming, triathlons, duathlons, walking, mountain biking.
+       </p>
+       <p class="p1">
+        <strong>
+         Team Sports:
+        </strong>
+        Baseball, basketball, soccer, football, hockey, lacrosse, softball.
+       </p>
+       <p class="p1">
+        <strong>
+         Youth Camps:
+        </strong>
+        Day camps, overnight camps, youth sports camps.
+       </p>
+       <p class="p1">
+        <strong>
+         Tennis Leagues:
+        </strong>
+        USTA sanctioned leagues, tournaments, clinics.
+       </p>
+       <p class="p1">
+        <strong>
+         Parks &amp; Recreation:
+        </strong>
+        City &amp; county parks, recreational activities, YMCAs, JCCs, Boys and Girls Clubs.
+       </p>
+       <p class="p1">
+        <strong>
+         Fitness:
+        </strong>
+        Aerobics, dance, zumba, yoga, Pilates, ballet.
+       </p>
+       <p class="p1">
+        <strong>
+         Classes:
+        </strong>
+        Crafts, painting, drawing, ceramics, performing arts, photography, theater.
+       </p>
+       <p class="p1">
+        <strong>
+         Outdoor Adventure:
+        </strong>
+        Sailing, hiking, climbing, kayaking, rafting, fishing
+        <strong>
+         ,
+        </strong>
+        hunting.
+       </p>
+       <h2 class="p1">
+        Request Limits
+       </h2>
+       <p class="p1">
+        <strong>
+         Search API Key
+        </strong>
+        <a class="btn btn-register" href="/apps/register">
+         APPLY FOR A KEY
+        </a>
+       </p>
+       <p class="p1">
+        <span class="s1">
+         ·
+        </span>
+        <span class="s2">
+        </span>
+        <strong>
+         Active -
+        </strong>
+        Upon registration
+       </p>
+       <p class="p1">
+        <span class="s1">
+         ·
+        </span>
+        <span class="s2">
+        </span>
+        <strong>
+         Throttle Rate -
+        </strong>
+        2 calls per second
+       </p>
+       <p class="p1">
+        <span class="s1">
+         ·
+        </span>
+        <span class="s2">
+        </span>
+        <strong>
+         Quota Limit –
+        </strong>
+        500,000 calls per day
+       </p>
+       <p>
+       </p>
+       <p>
+        The V2 Activity Search API processes simple HTTP GET requests.  The results are  returned in JSON.  This API supports  keyword search against ACTIVE.com assets, result restriction to a  particular location, result filtering based on asset metadata, and a variety of other parameters.
+       </p>
+       <p>
+        Interact with the Active APIs -- discover, test, debug live calls all in one place. Test out
+        <a href="http://developer.active.com/io-docs">
+         I/O Docs here
+        </a>
+       </p>
+       <p>
+        <br/>
+        <strong>
+         URL
+        </strong>
+        : http://api.amp.active.com/v2/search?{queryString params}&amp;api_key={key}
+        <br/>
+        <strong>
+         Method
+        </strong>
+        : GET
+       </p>
+       <h2>
+        <strong>
+         Sample Request
+        </strong>
+       </h2>
+       <p>
+        Return search results for the query on the topic of Running near San Diego within 50 miles
+       </p>
+       <p>
+        <a href="http://api.amp.active.com/v2/search?query=running&amp;category=event&amp;start_date=2013-07-04..&amp;near=San%20Diego,CA,US&amp;radius=50&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" target="_blank">
+         http://api.amp.active.com/v2/search?query=running&amp;category=event&amp;start_date=2013-07-04..&amp;near=San%20Diego,CA,US&amp;radius=50&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+        </a>
+        *
+       </p>
+       <p>
+        <strong>
+         *NOTE
+        </strong>
+        -
+        <em>
+         The API key used in the sample API calls on this page is for demo purposes only. Do not use this API key in your application(s).
+        </em>
+       </p>
+       <h2>
+        <strong>
+         Sample Response
+        </strong>
+       </h2>
+       <pre class="brush: xml;gutter: false; fontsize: 100; first-line: 1; ">{
+    total_results: 240,
+    items_per_page: 25,
+    start_index: 0,
+    facets: [],
+    facet_values: [],
+    suggestions: [],
+    results: [{
+            detailPageTemplateId: "",
+            salesStartDate: "2013-07-22T12:09:21",
+            assetChannels: [{
+                sequence: "1",
+                channel: {
+                    channelName: "Running",
+                    channelId: "1020",
+                    channelDsc: "Running"
+                }
+            }],
+            assetDsc: "",
+            salesEndDate: "2013-11-27T23:59:00",
+            sorId: "",
+            assetDescriptions: [{
+                description: " ",
+                descriptionType: {
+                    descriptionTypeName: "Standard",
+                    descriptionTypeId: "6"
+                }
+            }],
+            alternateName: "",
+            currencyCd: "",
+            teamUrlAdr: "",
+            localTimeZoneId: "",
+            timezone: "",
+            evergreenAssetFlag: "false",
+            assetImages: [{
+                linkUrl: "",
+                imageCaptionTxt: "",
+                imageName: "image1",
+                linkTarget: "",
+                imageUrlAdr: "http://www.active.com/images/events/hotrace.gif"
+            }],
+            assetLegacyData: {
+                participationCriteriaTxt: "Family",
+                trackbackUrl: "http://www.active.com/page/Event_Details.htm?event_id=2106249&amp;assetId=7E6CB77E-6FBA-4231-95B0-1563CD6988AC",
+                userCommentTxt: "",
+                onlineMembershipCostAmt: "",
+                estParticipantNb: "5000",
+                isSearchable: "false",
+                priceExtensionTxt: "",
+                eventCategories: "",
+                onlineMembership: "false",
+                costAmt: "",
+                uploadSearchUrlAdr: "",
+                createdDate: "2013-07-22T19:33:21",
+                substitutionUrl: "2106249",
+                minGuaranteedGameNb: "",
+                genderRequirementTxt: "",
+                onlineRegistration: "true",
+                modifiedDate: "2013-09-17T07:27:25",
+                searchWeight: "1",
+                typeName: "",
+                avgUserRatingTxt: "",
+                onlineDonation: "false",
+                maxTeamNb: "",
+                assetTypeId: "EA4E860A-9DCD-4DAA-A7CA-4A77AD194F65",
+                seoUrl: "http://www.active.com/running/san-diego-ca/running-event---runforthehungry-2013",
+                authorName: "",
+                multipleStartDate: "false"
+            },
+            registrationUrlAdr: "https://www.active.com/register/index.cfm?EVENT_ID=2106249",
+            overrideSeourlFlag: "false",
+            place: {
+                timezoneDST: 1,
+                localityName: "",
+                countryName: "United States",
+                dma: {
+                    dmaName: "San Diego",
+                    dmaId: "825"
+                },
+                cityName: "San Diego",
+                countryCode: "",
+                timezoneOffset: -8,
+                placeName: "Downtown San Diego",
+                addressLine1Txt: "Westfield Horton Plaza",
+                directionsTxt: "",
+                placeGuid: "022fb10c-128b-43f4-87ed-12f7df6f1be3",
+                placeDsc: "",
+                geoPoint: {
+                    lon: "-117.1597",
+                    lat: "32.7229"
+                },
+                timezone: "America/Los_Angeles",
+                postalCode: "92101",
+                stateProvinceCode: "CA",
+                placeUrlAdr: "",
+                longitude: "-117.1597",
+                latitude: "32.7229",
+                addressLine2Txt: ""
+            },
+            activityEndDate: "2013-11-28T07:00:00",
+            createdDate: "2013-07-22T19:33:21",
+            publishDate: null,
+            activenetTopGraphic: {},
+            resultsUrlAdr: "",
+            assetCategories: [{
+                category: {
+                    categoryName: "Event",
+                    categoryId: "2",
+                    categoryTaxonomy: "Event"
+                },
+                sequence: "1"
+            }, {
+                category: {
+                    categoryName: "Races",
+                    categoryId: "22",
+                    categoryTaxonomy: "Event/Races"
+                },
+                sequence: "2"
+            }],
+            contactEmailAdr: "mark@purefitness.cc",
+            assetSeoUrls: [{
+                statusCode: "true",
+                seoSystemName: "as3",
+                urlAdr: "http://www.active.com/san-diego-ca/running/races/running-event-runforthehungry-2013"
+            }],
+            homePageUrlAdr: "http://unitedrunforthehungry.org",
+            assetDeals: [],
+            assetStatus: {
+                assetStatusName: "VISIBLE",
+                createdDate: "2012-05-22T17:57:06",
+                modifiedDate: "2012-05-22T17:57:06",
+                assetStatusId: "2"
+            },
+            market: {
+                marketId: "8",
+                marketName: "endurance-running"
+            },
+            assetInterests: [],
+            sourceSystem: {
+                affiliate: "true",
+                legacyGuid: "EA4E860A-9DCD-4DAA-A7CA-4A77AD194F65",
+                sourceSystemName: "RegCenter"
+            },
+            contactName: "Mark Leisinger",
+            assetMediaTypes: [{
+                sequence: "1",
+                mediaType: {
+                    mediaTypeId: "2",
+                    mediaTypeDsc: "",
+                    mediaTypeName: "Event"
+                }
+            }, {
+                sequence: "2",
+                mediaType: {
+                    mediaTypeId: "126",
+                    mediaTypeDsc: "",
+                    mediaTypeName: "Event\10K"
+                }
+            }, {
+                sequence: "3",
+                mediaType: {
+                    mediaTypeId: "95",
+                    mediaTypeDsc: "",
+                    mediaTypeName: "Event\5K"
+                }
+            }, {
+                sequence: "4",
+                mediaType: {
+                    mediaTypeId: "116",
+                    mediaTypeDsc: "",
+                    mediaTypeName: "=difficulty:Advanced"
+                }
+            }, {
+                sequence: "5",
+                mediaType: {
+                    mediaTypeId: "48",
+                    mediaTypeDsc: "",
+                    mediaTypeName: "=difficulty:Beginner"
+                }
+            }, {
+                sequence: "6",
+                mediaType: {
+                    mediaTypeId: "224",
+                    mediaTypeDsc: "",
+                    mediaTypeName: "=difficulty:Intermediate"
+                }
+            }],
+            showContact: "false",
+            authorName: "",
+            assetAttributes: [{
+                attribute: {
+                    attributeValue: "Intermediate",
+                    attributeType: "Skill level",
+                    tagId: "58739"
+                }
+            }, {
+                attribute: {
+                    attributeValue: "Beginner",
+                    attributeType: "Skill level",
+                    tagId: "58738"
+                }
+            }, {
+                attribute: {
+                    attributeValue: "Advanced",
+                    attributeType: "Skill level",
+                    tagId: "58740"
+                }
+            }, {
+                attribute: {
+                    attributeValue: "5K",
+                    attributeType: "Distance (running)",
+                    tagId: "58705"
+                }
+            }, {
+                attribute: {
+                    attributeValue: "10K",
+                    attributeType: "Distance (running)",
+                    tagId: "58707"
+                }
+            }],
+            localeCd: "",
+            assetComponents: [],
+            assetPopularity: {
+                rank: 321,
+                results: 195,
+                views: 19,
+                createdAt: 1379635207,
+                clicks: 25,
+                searches: 5,
+                A3Rank: 142,
+                clickTypes: {
+                    otherActive: 15,
+                    nonActive: 9,
+                    registration: 1
+                }
+            },
+            contactTxt: "",
+            sorCreateUserId: "",
+            evergreenAssets: [],
+            regReqMinAge: "",
+            assetRootAsset: {},
+            preferredUrlAdr: "",
+            registrantSearchUrlAdr: "",
+            organization: {
+                organizationGuid: "d8a0de32-091b-45a9-8e18-5a9e90c2aeb1",
+                organizationDsc: "",
+                addressCityName: "",
+                fax: "",
+                addressPostalCd: "",
+                organizationName: "N/A",
+                addressStateProvinceCode: "",
+                addressCountryCd: " ",
+                primaryContactPhone: "",
+                addressLine1Txt: "",
+                primaryContactEmailAdr: "",
+                organizationUrlAdr: "",
+                hideOrganizationContact: "false",
+                addressLocalityName: "",
+                showOrganizationName: "false",
+                primaryContactName: "",
+                addressLine2Txt: ""
+            },
+            regReqGenderCd: "",
+            evergreenParentAsset: {},
+            assetQuantity: {},
+            assetName: "Running Event - RunForTheHungry",
+            contactPhone: "619-865-9903",
+            assetMetaInterests: [],
+            componentInUrlAdr: {},
+            assetServiceHostName: "as-app03.active.tan",
+            modifiedDate: "2013-09-10T19:41:13",
+            assetTopics: [{
+                topic: {
+                    topicId: "27",
+                    topicTaxonomy: "Endurance/Running",
+                    topicName: "Running"
+                },
+                sequence: "4"
+            }],
+            assetPrices: [],
+            assetGuid: "7e6cb77e-6fba-4231-95b0-1563cd6988ac",
+            regReqMaxAge: "",
+            donationUrlAdr: "",
+            timezoneAbb: "",
+            assetTags: [{
+                tag: {
+                    tagDescription: "Skill level",
+                    tagName: "Advanced",
+                    tagId: "58740"
+                }
+            }, {
+                tag: {
+                    tagDescription: "Distance (running)",
+                    tagName: "10K",
+                    tagId: "58707"
+                }
+            }, {
+                tag: {
+                    tagDescription: "Distance (running)",
+                    tagName: "5K",
+                    tagId: "58705"
+                }
+            }, {
+                tag: {
+                    tagDescription: "Skill level",
+                    tagName: "Intermediate",
+                    tagId: "58739"
+                }
+            }, {
+                tag: {
+                    tagDescription: "Skill level",
+                    tagName: "Beginner",
+                    tagId: "58738"
+                }
+            }],
+            activityRecurrences: [],
+            activityStartDate: "2013-11-28T07:00:00",
+            urlAdr: "http://www.active.com/running/san-diego-ca/runforthehungry-2013",
+            assetParentAsset: {},
+            childIndex: "",
+            logoUrlAdr: "http://www.active.com/images/events/hotrace.gif",
+            timezoneName: "",
+            sorCreateDtm: null,
+            salesStatus: "registration-open"
+        }, {
+            detailPageTemplateId: "",
+            salesStartDate: "2013-08-12T23:25:00",
+            assetChannels: [{
+                sequence: "1",
+                channel: {
+                    channelName: "Running",
+                    channelId: "1020",
+                    channelDsc: "Running"
+                }
+            }],
+
+</pre>
+       <p>
+       </p>
+       <h2>
+        Parameters
+       </h2>
+       <p>
+        <strong>
+         near
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - A string naming a place that can be geocoded. If the near string is not geocodable, returns a failed geocoded error. (e.g.  City,State,Country)
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?topicName=Running&amp;near=San%20Diego,CA,US&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          near=San%20Diego,CA,US
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         lat_lon
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - A location specified as a latitude and longitude separated by a comma.
+        </li>
+        <li>
+         http://api.amp.active.com/v2/search?lat_lon=45.49428,-122.86705&amp;api_key=SQQ35ZVX6A8RGMXHY9CSM8QJ
+        </li>
+        <li>
+         lat_lon=45.49428,-122.86705
+        </li>
+       </ul>
+       <p>
+        <strong>
+         bbox
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - A bounding box specified by the lat/lng of the northwest and southeast corners separated by a semi-colon.
+        </li>
+        <li>
+         http://api.amp.active.com/v2/search?bbox=40.73,-74.1%3b40.717,-73.99&amp;api_key=SQQ35ZVX6A8RGMXHY9CSM8QJ
+        </li>
+        <li>
+         bbox=40.73,-74.1;40.717,-73.-99
+        </li>
+       </ul>
+       <p>
+        <strong>
+         geo_points
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - A list of lat/long pairs separated by a url encoded semi-colon. This limits the result list to assets that fall within the polygon of points.
+        </li>
+        <li>
+         geo_points=40,-70%3B30,-80%3B20,-90
+        </li>
+       </ul>
+       <p>
+        <strong>
+         radius
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          integer
+         </strong>
+         - The search radius as specified in miles.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=San%20Diego,CA,US&amp;radius=50&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          radius=50
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         show_distance
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - If set to true, returns the distance from the asset to the given centerpoint specified by either the lat_lon or near parameter. You must provide either the lat_lon parameter or a valid location in the near parameter. The values will be in the asset.distanceFromCenterpoint in the JSON document.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         city
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by city name. Be sure to encode any spaces. E.g. %20 = space
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?city=San%20Diego&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          city=san%20diego
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         state
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by state or province code.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?state=CA&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          state=CA
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         zip
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by zip or postal code.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?zip=92101&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          zip=92101
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         country
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by country name.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?country=US&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          country=US
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         query
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Search term
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?query=half%20marathon&amp;near=San%20Diego,CA,US&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          query=half%20marathon
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         kids
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Returns assets from ACTIVEkids.com.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?kids=true&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj">
+          kids=true
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         current_page
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          integer
+         </strong>
+         - The current page of results. Defaults to 1.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?query=half%20marathon&amp;near=San%20Diego,CA,US&amp;current_page=3&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          current_page=3
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         per_page
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          integer
+         </strong>
+         - The number of results to return. Defaults to 10.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?per_page=15&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          per_page=50
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         sort
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - The sort order of the results. The possible values are date_asc, date_desc, and distance. If sort is not specified, results are sort by relevance to the
+         <em>
+          <strong>
+           query
+          </strong>
+         </em>
+         param. Distance can only be used when either the near or lat_lon parameters are specified and sorts the results according to distance from the specified location smallest to largest.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?sort=date_asc&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          sort=date_asc
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         facets
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - A comma delimited string containing the facet counts to return.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=San%20Diego,CA,US&amp;facets=topicName&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          facets=topicName
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         facet_values
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Returns facet counts for the specified field values. The value of the param is the field name followed by a comma delimited list of values. The field name and values are separated by a pipe.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=San%20Diego,CA,US&amp;topicName=Running%20OR%20Cycling&amp;facet_values=topicName:Running,Cycling&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          facet_values=topicName:Running,Cycling
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         category
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by category name.
+        </li>
+        <li>
+         Events:
+         <a href="http://api.amp.active.com/v2/search?category=event&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          category=event
+         </a>
+        </li>
+        <li>
+         Articles:
+         <a href="http://api.amp.active.com/v2/search?category=articles&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          category=articles
+         </a>
+        </li>
+        <li>
+         All Events:
+         <a href="http://api.amp.active.com/v2/search?facets=categoryName&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          facets=categoryName&amp;per_page=0
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         category_name
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by category name. For example, if you search for ‘event’ category, you will get assets that are only tagged as ‘event’. Assets tagged as ‘event/races’, ‘event/camps’, etc. will not be returned. See category parameter if you need all subcategories returned.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         topic
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by topic name.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?topic=Running&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          topic=running
+         </a>
+        </li>
+        <li>
+         All Topics:
+         <a href="http://api.amp.active.com/v2/search?facets=topicName&amp;per_page=0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          facets=topicName&amp;per_page=0
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         topic_name
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by topic name. For example, if you search for ‘endurance’ topic, you will get assets that are only tagged as ‘endurance’. Assets tagged as ‘endurance/running’, ‘endurance/cycling’, etc. will not be returned. See topic parameter if you need all subtopics returned.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         meta_interest
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by meta interest in the meta interest taxonomy. For example, if you search for ‘MOB’, you will get assets that are tagged ‘MOB’, ‘MOB/Color Run’, ‘MOB/Mud’, etc.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         meta_interest_name
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches asset by meta interest name. For example, if you search for ‘MOB’, you will get assets that are only tagged as ‘MOB’. Assets tagged as ‘MOB/Color Run’, ‘MOB/Mud’, etc. will not be returned. See metaInterest parameter if you need all sub meta interests returned.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         attributes
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by attribute type and value. The value of the parameter is the attributeType and attributeValue separated by a colon. You can use NOT, AND, and OR in the value. See those respective sections below.
+        </li>
+        <li>
+         attributes=gender:male attributes=gender:male AND age group:junior
+        </li>
+       </ul>
+       <p>
+        <strong>
+         tags
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Matches assets by tag name and description. The value of the parameter is the tagDescription and tagName separated by a colon. You can use NOT, AND, and OR in the value. See those respective sections below.
+        </li>
+        <li>
+         tag=activeadvantage:true tag=activeadvantage:true OR usatsanctioned:false
+        </li>
+       </ul>
+       <p>
+        <strong>
+         start_date
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Limits results to assets with a start date in the given range.
+        </li>
+        <li>
+         See section on
+         <a href="#ranges">
+          <strong>
+           Ranges
+          </strong>
+         </a>
+         <strong>
+         </strong>
+         below for value format.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         end_date
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Limits results to assets with an end date in the given range.
+        </li>
+        <li>
+         See section on
+         <strong>
+          <a href="#ranges">
+           Ranges
+          </a>
+         </strong>
+         below for value format.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         cb
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - JSONP callback parameter.
+        </li>
+        <li>
+         Callback:
+         <a href="http://api.amp.active.com/v2/search?near=San%20Diego,CA,US&amp;topicName=Running%20OR%20Cycling&amp;facet_values=topicName:Running,Cycling&amp;cb=displayResults&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          cb=displayResults
+         </a>
+        </li>
+        <li>
+         Explanation:
+         <a href="http://en.wikipedia.org/wiki/JSONP" rel="nofollow" target="_blank">
+          http://en.wikipedia.org/wiki/JSONP
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         exclude_children
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Removes children assets from the results list. Valid values are true or false. If the parameter is not present, all assets will be returned in the results list.
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?topicName=Running&amp;near=San%20Diego,CA,US&amp;exclude_children=true&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          exclude_children=true
+         </a>
+        </li>
+       </ul>
+       <p>
+        One of the commonly misunderstood attributes is the "exclude_children" parameter.  To explain, our details pages are constructed based on a parent asset and a group of components, or children assets.  For example, the following event has a parent asset for the event and one child asset for the "Spartan Army 5k Challenge" category.
+       </p>
+       <ul>
+        <li>
+         Event on ACTIVE.com:
+         <a href="http://www.active.com/running/las-vegas-nv/spartan-army-5k-challenge-2013" rel="nofollow" target="_blank">
+          http://www.active.com/running/las-vegas-nv/spartan-army-5k-challenge-2013
+         </a>
+        </li>
+        <li>
+         API call for this event:
+         <a href="http://api.amp.active.com/v2/search?asset.assetGuid=88cf65e8-d913-4c2b-a6f5-8da571ce0de0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          http://api.amp.active.com/v2/search?asset.assetGuid=88cf65e8-d913-4c2b-a6f5-8da571ce0de0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+         </a>
+        </li>
+        <li>
+         Spartan Army 5k Challenge:
+         <a href="http://api.amp.active.com/v2/search?asset.assetGuid=88cf65e8-d913-4c2b-a6f5-8da571ce0de0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          http://api.amp.active.com/v2/search?asset.assetGuid=88cf65e8-d913-4c2b-a6f5-8da571ce0de0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+         </a>
+        </li>
+       </ul>
+       <p>
+        To prevent the Spartan Army 5k Challenge from coming up in searches, the exclude_children=true flag should be included in the query string.  I have include it in To include the Spartan Army 5k Challenge as an asset in the API results, the exclude_children flag should be dropped from the querystring.
+       </p>
+       <ul>
+       </ul>
+       <p>
+        <strong>
+         include_evergreen_children
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          boolean
+         </strong>
+         - Includes children of evergreen assets in the results list. Valid values are true or false. If the parameter is not present, evergreen children will be filtered out of search results.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         registerable_only
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          boolean
+         </strong>
+         <em>
+          -
+         </em>
+         Filters results to assets that offer Active.com online registration and the registration close date is at least one day in the future. This flag will only apply if the value is true. If the parameter is not present, all assets will be returned in the results list.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         exists
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Filters results to assets that have a value for the specified field(s). The value of the param is a comma-delimited of fields.
+        </li>
+        <li>
+         E.g. All assets with a populated AuthorName field:
+         <a href="http://api.amp.active.com/v2/search?exists=asset.authorName&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          exists=asset.authorName
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         not_exists
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Filters results to assets that do not have a value for the specified field(s). The value of the param is a comma-delimited of fields.
+        </li>
+        <li>
+         E.g. All assets without a populated AuthorName field:
+         <a href="http://api.amp.active.com/v2/search?not_exists=asset.authorName&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          not_exists=asset.authorName
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Search by Asset ID
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Searches for the specific asset ID -
+         <span>
+          The asset id is found in asset.assetGuid in the JSON returned.
+         </span>
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?asset.assetGuid=88cf65e8-d913-4c2b-a6f5-8da571ce0de0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          http://api.amp.active.com/v2/search?asset.assetGuid=88cf65e8-d913-4c2b-a6f5-8da571ce0de0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+         </a>
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?asset.assetGuid=db5146ee-92bd-4e11-80d0-e34fce48d48e OR e418218a-1b7a-428c-af29-6c1bc5a02eed&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          http://api.amp.active.com/v2/search?asset.assetGuid=db5146ee-92bd-4e11-80d0-e34fce48d48e OR e418218a-1b7a-428c-af29-6c1bc5a02eed&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Search by Event ID
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Searches for the specific event ID - uses assetLegacyData.substitutionURL
+        </li>
+        <li>
+         assetLegacyData.substitutionURL:
+         <a href="http://api.amp.active.com/v2/search?asset.assetLegacyData.substitutionUrl=1696272" rel="nofollow" target="_blank">
+          http://api.amp.active.com/v2/search?asset.assetLegacyData.substitutionUrl=1696272
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         asset_name
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Searches for an asset by its name. The asset name is found in asset.assetName in the JSON document. This must be an exact match.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         org_id
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Limits results to assets that have the given organization id. The organization id is found in the asset.organization.organizationGuid in the JSON returned.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         place_id
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Limits results to assets that have the given place id. The place id is found in the asset.place.placeGuid in the JSON returned.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         source_system_id
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Limits results to assets that have the given source system id. The source system id is found in the asset.sourceSystem.legacyGuid in the JSON returned.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         source_system_name
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - Limits results to assets that have the given source system name. The source system name is found in the asset.sourceSystem.sourceSystemName in the JSON returned.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         show_suggest
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          boolean
+         </strong>
+         - Returns alternate spelling suggestions for terms in your query. Valid values are true or false.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         search_again
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          boolean
+         </strong>
+         - Will perform a second search if there are misspellings in the given query which returns zero results. It will replace misspelled words with the top altnerate suggestions. There will be an original_query and actual_query properties in the return JSON.
+        </li>
+       </ul>
+       <p>
+        <strong>
+         fields
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <em>
+          Optional
+         </em>
+         <strong>
+          string
+         </strong>
+         - A comma separated list of fields to return instead of the whole asset document.
+        </li>
+       </ul>
+       <h2>
+        Other attributes
+       </h2>
+       <p>
+        Besides the parameters listed above, you can use any of the asset attributes as parameters to filter your results. For the key, pass the complete path to the attribute e.g. asset.place.cityName. For the value, you can pass a term with some boolean logic (see NOT, AND, and OR below) or a range value (see Ranges below). Be sure to URL encode any spaces. E.g. %20 = space
+       </p>
+       <ul>
+        <li>
+         asset.authorName=John%20Doe
+        </li>
+        <li>
+         asset.reqMinAge=10..20
+        </li>
+        <li>
+         asset.place.cityName=San Diego%20OR%20Los Angeles OR Oceanside
+        </li>
+        <li>
+         asset.assetTopics.topic.topicName=NOT Running
+        </li>
+       </ul>
+       <p>
+        <span style="color: #000000;">
+         <a id="ranges">
+          <span style="font-size: large;">
+           <strong>
+            Ranges
+           </strong>
+          </span>
+         </a>
+        </span>
+       </p>
+       <p>
+        For fields that have either integer or date values, you can search for a given range.
+        <br/>
+        Limits the results to the given date range specified in the following format: start_date..end_date
+       </p>
+       <p>
+        To search from a particular date forward, leave off the end date. To search until a particular date, leave off the start date.
+       </p>
+       <p>
+        Date format should be in yyyy-mm-dd format.
+       </p>
+       <ul>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?topic=Running&amp;start_date=2013-01-15..&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          start_date=2013-01-15..
+         </a>
+         # search from January 15, 2011 forward
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?topic=Running&amp;start_date=..2013-01-15&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          start_date=..2013-01-15
+         </a>
+         # search up to January 15, 2011
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?topic=Running&amp;start_date=2013-01-15..2013-01-20&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          start_date=2013-01-15..2013-01-20
+         </a>
+         # search from January 15, 2011 until January 20, 2011
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=San%20Diego,CA,US&amp;regReqMinAge=20..40&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          regReqMinAge=20..40
+         </a>
+         # search for the required minimum age between 10 and 20
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=San%20Diego,CA,US&amp;regReqMinAge=10..&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          regReqMinAge=10..
+         </a>
+         # search for assets with required minimum age 10 or greater
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=San%20Diego,CA,US&amp;regReqMinAge=..10&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          regReqMinAge=..10
+         </a>
+         # search for assets with required minimum age up to 10
+        </li>
+       </ul>
+       <p>
+        <span style="font-size: large;">
+         <strong>
+          NOT
+         </strong>
+        </span>
+        <br/>
+        To negate the value of the parameter, precede it with NOT (all uppercase).
+       </p>
+       <ul>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?city=san%20diego&amp;topicName=NOT%20running&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          topicName=NOT%20running
+         </a>
+         # return results that do not have the topic name of Running
+        </li>
+       </ul>
+       <p>
+        <span style="font-size: large;">
+         <strong>
+          AND
+         </strong>
+        </span>
+        <br/>
+        To return results that have multiple values, put AND (all uppercase) between the terms.
+       </p>
+       <ul>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?city=san%20diego&amp;topicName=running%20AND%20cycling&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          topicName=running%20AND%20cycling
+         </a>
+         # return results that have running, triathlon, and cycling as a topic name
+        </li>
+       </ul>
+       <p>
+        <span style="font-size: large;">
+         <strong>
+          OR
+         </strong>
+        </span>
+        <br/>
+        To return results that have any value, put an OR (all uppercase) between the terms.
+       </p>
+       <ul>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?city=san%20diego&amp;topicName=running%20OR%20triathlon%20OR%20cycling&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow" target="_blank">
+          topicName=running%20OR triathlon%20OR%20cycling
+         </a>
+         # return results that have either running, triathlon, and cycling as a topic name
+        </li>
+       </ul>
+       <p>
+       </p>
+       <p>
+        <strong>
+         <span style="font-size: large;">
+          Frequently Asked Questions
+         </span>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <span style="font-size: large;">
+         </span>
+         How do I find math classes in Fremont, CA (94539)?
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=Fremont,CA,US&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj&amp;category=Classes&amp;query=math" target="_blank">
+          http://api.amp.active.com/v2/search?near=Fremont,CA,US&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj&amp;category=Classes&amp;query=math
+         </a>
+        </li>
+        <li>
+         or
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=Fremont,CA,US&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj&amp;category=Classes&amp;topicName=Mathematics" target="_blank">
+          http://api.amp.active.com/v2/search?near=Fremont,CA,US&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj&amp;category=Classes&amp;topicName=Mathematics
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         How do I get all running and triathlon events, between now and Aug 31, 2014 in New Hampshire.:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?near=New%20Hampshire&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj&amp;topicName=Running%20OR%20topicName=Triathlon&amp;category=Event&amp;asset.activityStartDate=2013-09-12..2014-08-31" target="_blank">
+          http://api.amp.active.com/v2/search?near=New%20Hampshire&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj&amp;topicName=Running%20OR%20topicName=Triathlon&amp;category=Event&amp;asset.activityStartDate=2013-09-12..2014-08-31
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Is there a way to get a list of all of the categories?
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?facets=categoryName&amp;per_page=0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" target="_blank">
+          http://api.amp.active.com/v2/search?facets=categoryName&amp;per_page=0&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Is there a way to query on multiple categories in a single API call?
+        </strong>
+       </p>
+       <ul>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?categoryName=Classes%20OR%20categoryName=Event&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" target="_blank">
+          http://api.amp.active.com/v2/search?categoryName=Classes%20OR%20categoryName=Event&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+         </a>
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Is it possible to get structured pricing data for an activity/event?  The only field I see that contains this data is in assetDescriptions.descriptionType.descriptionTypeName.eventFees. This field only seems to be present occasionally.
+        </strong>
+       </p>
+       <ul>
+        <li>
+         It’s contained in the assetPrices of assetComponents.
+        </li>
+        <li>
+         E.g. this event:
+         <a href="http://api.amp.active.com/v2/search?asset.assetGuid=43727359-e865-4683-a1a1-1b1592306ac7&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" target="_blank">
+          http://api.amp.active.com/v2/search?asset.assetGuid=43727359-e865-4683-a1a1-1b1592306ac7&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+         </a>
+        </li>
+        <li>
+         Has a component with assetPrices:
+        </li>
+        <li>
+         <a href="http://api.amp.active.com/v2/search?asset.assetGuid=80cffca1-5844-497f-8139-0adb5740c137&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" target="_blank">
+          http://api.amp.active.com/v2/search?asset.assetGuid=80cffca1-5844-497f-8139-0adb5740c137&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="section-meta">
+       <p>
+        <span class="revision">
+         version 47
+        </span>
+        <span class="timestamp">
+         as of
+         <abbr title="4/5/17 6:23 am">
+          2 months ago
+         </abbr>
+        </span>
+        <span class="moniker">
+         by
+         <span class="user-reference">
+          <a href="http://developer.active.com/profile/1572961">
+           astarnes
+          </a>
+         </span>
+        </span>
+       </p>
+      </div>
+     </div>
+     <div class="comments">
+      <h3>
+       17 Comments
+      </h3>
+      <ol class="comments">
+       <li class="comment ">
+        <div class="comment-body" id="comment-130315">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1439722">
+             hoangle
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="4/28/14 5:00 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          Is it possible to query date time instead of date in "range"? It means the query is more specific to a period of time, not just between days.
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130316">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1299109">
+             Kelly Pace
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="4/29/14 4:40 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          <a href="http://a3pi.active.com/v2/search?asset.activityStartDate=2014-04-29T10:00..2014-04-29T20:00&amp;exclude_children=true" rel="nofollow">
+           http://a3pi.active.com/v2/search?asset.activityStartDate=2014-04-29T10:00..2014-04-29T20:00&amp;exclude_children=true
+          </a>
+         </p>
+         <p>
+          T parameter followed by 24-hour time.
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130318">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1277469">
+             Finihser
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="5/6/14 8:16 am">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          <a href="http://api.amp.active.com/v2/search/?lat_lon=0.000000,0.000000&amp;radius=100&amp;query=triathlon//half-ironman//&amp;current_page=1&amp;per_page=50&amp;sort=date_asc&amp;start_date=2014-05-06..2014-11-06&amp;exclude_children=true&amp;api_key=xxxxxx..how" rel="nofollow">
+           http://api.amp.active.com/v2/search/?lat_lon=0.000000,0.000000&amp;radius=100&amp;query=triathlon//half-ironman//&amp;current_page=1&amp;per_page=50&amp;sort=date_asc&amp;start_date=2014-05-06..2014-11-06&amp;exclude_children=true&amp;api_key=xxxxxx..how
+          </a>
+          i will fetch half-iron man(70.4) results...
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130319">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1277469">
+             Finihser
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="5/6/14 8:18 am">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          <a href="http://api.amp.active.com/v2/search/?lat_lon=0.000000,0.000000&amp;radius=1000&amp;query=cycling//organized/&amp;current_page=1&amp;per_page=50&amp;sort=date_asc&amp;start_date=2014-05-06..2014-11-06&amp;exclude_children=true&amp;api_key=xxxxxxx" rel="nofollow">
+           http://api.amp.active.com/v2/search/?lat_lon=0.000000,0.000000&amp;radius=1000&amp;query=cycling//organized/&amp;current_page=1&amp;per_page=50&amp;sort=date_asc&amp;start_date=2014-05-06..2014-11-06&amp;exclude_children=true&amp;api_key=xxxxxxx
+          </a>
+          how i will fetch organized events.i want know about i am using correct format api or not?
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130320">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/151115">
+             MaryF
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="5/8/14 3:55 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          Is salesEndDate the same as Registration Close Date that I see on the Active.com event page?
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130323">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1422795">
+             racedingo
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="5/13/14 4:44 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          I am trying to find the race start times and grabbing it from the activityStartDate doesn't give the correct. one. Does anyone know where to find the correct race start times. Please help, thank you.
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130331">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1437639">
+             Looptivity
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="5/20/14 12:23 am">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          What is the data format of "activityRecurrences" if the event is recurring?
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130376">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1431542">
+             narasimhasesetti
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="7/6/14 11:37 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          I want to get the activities which were created today. please provide the tag and sample url
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130472">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1469275">
+             Sy Fountaine
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="9/18/14 11:38 am">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          How can I get a listing of all major category events, such as all endurance events?
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130477">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1514282">
+             mark.wang2
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="9/27/14 8:04 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          @racedingo
+You need use the  place: { timezone: "America/Los_Angeles", and activityStartDate togerther to get the right time.
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130478">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1514282">
+             mark.wang2
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="9/27/14 8:19 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          @Looptivity  #7
+like this
+"activityRecurrences":[
+    {
+      "activityStartDate":"2014-09-16T08:30:00",
+      "startTime":"08:30:00",
+      "activityEndDate":"2014-11-16T15:30:00",
+      "endTime":"15:30:00",
+      "frequencyInterval":"2",
+      "frequency":{
+        "frequencyName":"Weekly"
+      },
+      "days":"Monday, Wednesday, Friday",
+      "monthWeekInterval":"3",
+      "activityExclusions":[
+        {
+          "exclusionStartDate":"2012-06-07T00:00:00",
+          "exclusionEndDate":"2012-06-10T00:00:00"
+        }
+      ]
+    }
+  ],
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130486">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1514282">
+             mark.wang2
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="10/9/14 4:53 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          Hi MaryF,#5
+Yes it is ,it can be calculate with time zone.
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130487">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1514282">
+             mark.wang2
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="10/9/14 6:45 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          Hi narasimhasesetti ,8#
+          <a href="http://api.amp.active.com/v2/search?start_date=2014-10-10..2014-10-10&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj" rel="nofollow">
+           http://api.amp.active.com/v2/search?start_date=2014-10-10..2014-10-10&amp;api_key=sqq35zvx6a8rgmxhy9csm8qj
+          </a>
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130488">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1514282">
+             mark.wang2
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="10/9/14 7:17 pm">
+            3 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          Hi Sy Fountaine ,9#
+you can use the topic name to get it.
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130562">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1469275">
+             Sy Fountaine
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="1/10/15 1:00 pm">
+            2 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          Where can I find all of the country codes?
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130564">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1514282">
+             mark.wang2
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="1/12/15 2:17 pm">
+            2 years ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          Hi Fountaine :
+         </p>
+         <p>
+          This web site
+          <a href="http://countrycode.org/" rel="nofollow">
+           http://countrycode.org/
+          </a>
+          may be can help you,we use the stand 
+countrycode.
+         </p>
+        </div>
+       </li>
+       <li class="comment ">
+        <div class="comment-body" id="comment-130898">
+         <p class="comment-meta">
+          <span class="moniker">
+           <span class="user-reference">
+            <a href="http://developer.active.com/profile/1834009">
+             Ryan Waite
+            </a>
+           </span>
+          </span>
+          –
+          <span class="timestamp">
+           <abbr title="3/9/16 3:12 am">
+            1 year ago
+           </abbr>
+          </span>
+         </p>
+         <p>
+          my ajax call throws cross origin error. why?
+         </p>
+        </div>
+       </li>
+      </ol>
+      <p>
+       <a href="http://developer.active.com/login/mashery-id?r=http%3A%2F%2Fdeveloper.active.com%2Fdocs%2Fread%2Fv2_Activity_API_Search&amp;h=285454b13be5c660875019a397bbdb0d">
+        Please sign in to post a comment.
+       </a>
+      </p>
+     </div>
+    </div>
+    <!-- /main -->
+    <!-- SUB -->
+    <div class="sub" id="sub">
+     <h2>
+      Docs Navigation
+     </h2>
+     <ul>
+      <li class="active">
+       <a href="http://developer.active.com/docs/read/Home">
+        API Documentation
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Activity_APIs">
+        Activity API
+       </a>
+      </li>
+      <li class="active">
+       <a class="active" href="http://developer.active.com/docs/read/v2_Activity_API_Search">
+        Activity Search API v2
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Kids_Activity_Search_API_v2">
+        Activity Search API v2 - Kids
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Campground_APIs">
+        Campground API
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Campground_Search_API">
+        Campground Search API
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Campground_Details_API">
+        Campground Details API
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Campsite_Search_API">
+        Campsite Search API
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- /SUB -->
+    <div id="breadcrumbs">
+    </div>
+    <!-- /breadcrumbs -->
+    <div class="local" id="local">
+     <ul>
+      <li class=" first">
+       <a href="http://developer.active.com/page">
+        Home
+       </a>
+      </li>
+      <li class=" ">
+       <a href="http://developer.active.com/api_gallery">
+        API Gallery
+       </a>
+      </li>
+      <li class="active ">
+       <a href="http://developer.active.com/docs">
+        Documentation
+       </a>
+      </li>
+      <li class=" ">
+       <a href="http://developer.active.com/forum">
+        Forum
+       </a>
+      </li>
+      <li class=" ">
+       <a href="http://developer.active.com/blog">
+        Blog
+       </a>
+      </li>
+      <li class=" last">
+       <a href="http://developer.active.com/Affliliates">
+        Affiliates
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- /local -->
+    <div class="nav" id="nav">
+    </div>
+    <!-- /nav -->
+   </div>
+   <!-- /CONTENT -->
+   <div class="footer" id="footer">
+    <!-- SITEINFO -->
+    <div class="siteinfo" id="siteinfo">
+     <p>
+      <style>
+       .yellow-text{color:#F5BA46;}
+      </style>
+      <!--final html for footer copyright-->
+     </p>
+     <div class="navbar nav navbar">
+      <div class="navbar-inner">
+       <div class="container">
+        <!-- for addition to footer copyright area-->
+        <ul class="dropdown">
+         <li class="dropdown_trigger">
+          <a href="/apis">
+           APIS
+          </a>
+          <ul>
+           <li>
+            <a href="/apis">
+             API Overview
+            </a>
+           </li>
+           <li>
+            <a href="/docs/">
+             Documentation
+            </a>
+           </li>
+           <li>
+            <a href="/help_center">
+             Help Center
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="dropdown_trigger">
+          <a href="/Widgets">
+           Widgets
+          </a>
+          <ul>
+           <li>
+            <a href="/Activity_Search_Widget">
+             Activity Search Widget
+            </a>
+           </li>
+           <li>
+            <a href="/Near_You_Widget">
+             Near You Widget
+            </a>
+           </li>
+           <!--<li>
+								<a href="/Popular_Activity_Widget">Popular Activity Widget</a>
+							</li>-->
+           <li>
+            <a href="/Article_Widget">
+             Article Widget
+            </a>
+           </li>
+           <!--<li>
+								<a href="/Training_Plan_Widget">Training Plan Widget</a>
+							</li>-->
+           <!--<li>
+								<a href="/Campground_Trip_Planner_Widget">Campground Trip Planner Widget</a>
+							</li>-->
+          </ul>
+         </li>
+         <li class="dropdown_trigger">
+          <a href="/affiliates">
+           Affiliates
+          </a>
+         </li>
+         <li class="dropdown_trigger">
+          <a href="/forum">
+           Forum
+          </a>
+         </li>
+         <li class="dropdown_trigger">
+          <a href="/blog">
+           Blog
+          </a>
+         </li>
+        </ul>
+        <ul class="nav pull-right">
+         <li class="app-nav">
+          <a href="/member/register">
+           <div class="apply-key">
+           </div>
+           Apply For Keys
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <!--footer-->
+      <div class="global-footer">
+       <div class="container">
+        <div class="banner">
+        </div>
+        <div class="row">
+         <div class="span12">
+          <div class="row">
+           <div class="span3">
+            <h2>
+             Follow Active
+            </h2>
+            <ul>
+             <li>
+              <i class="icon-facebook">
+              </i>
+              <a href="http://www.facebook.com/Activecom" target="_blank">
+               Facebook
+              </a>
+             </li>
+             <li>
+              <i class="icon-twitter">
+              </i>
+              <a href="https://twitter.com/activenetwork" target="_blank">
+               Twitter
+              </a>
+             </li>
+             <li>
+              <i class="icon-pinterest">
+              </i>
+              <a href="http://pinterest.com/activecom/" target="_blank">
+               Pinterest
+              </a>
+             </li>
+             <li>
+              <i class="icon-linkedin">
+              </i>
+              <a href="http://www.linkedin.com/company/7126" target="_blank">
+               LinkedIn
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="span3">
+            <h2>
+             Other Resources
+            </h2>
+            <ul>
+             <li>
+              <a href="http://www.activesports.com" target="_blank">
+               League Management
+              </a>
+             </li>
+             <li>
+              <a href="http://www.fellowshipone.com" target="_blank">
+               Church Management
+              </a>
+             </li>
+             <li>
+              <a href="http://www.ipicosports.com" target="_blank">
+               Race Timing Systems
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="span3">
+            <h2>
+             Active Network
+            </h2>
+            <ul class="unstyled">
+             <li>
+              <a href="/API_Terms_of_Use">
+               API Terms of Use
+              </a>
+             </li>
+             <li>
+              <a href="/Widgets_License_Agreement">
+               Widgets License Agreement
+              </a>
+             </li>
+             <li>
+              <a href="/branding_guidelines">
+               Brand Guidelines
+              </a>
+             </li>
+             <li>
+              <a href="/Affiliate_Agreement" target="_blank">
+               Affiliate Agreement
+              </a>
+             </li>
+             <li>
+              <a href="http://www.active.com/" target="_blank">
+               Visit Active.com
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </div>
+        <p>
+        </p>
+        <!-- organizers -->
+        <div class="org row paddingBottom10">
+         <div class="span2">
+          <a class="network-logo hide-text" href="http://www.activenetwork.com/">
+           Active Network
+          </a>
+         </div>
+         <div class="span9 offset1">
+          <div class="mashery-badge">
+           <a href="http://mashery.com" target="_blank">
+            <img src="/public/Mashery/images/masherymade.png"/>
+           </a>
+          </div>
+         </div>
+        </div>
+        <!-- Network -->
+        <ul class="network nav nav-pills network-bottom">
+         <li>
+          <a href="/page/site_map/">
+           Site Map
+          </a>
+         </li>
+         <li>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/terms-of-use.htm" title="Terms of Use">
+           Terms of Use
+          </a>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/information/privacy-policy" target="_blank" title="Your Privacy Rights">
+           Your Privacy Rights:
+           <span class="yellow-text">
+            Updated
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/information/cookie-policy" title="Cookie Policy">
+           Cookie Policy
+          </a>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/security.htm" title="Security">
+           Security
+          </a>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/media/online-advertising.htm?int=29-79/" title="Advertising">
+           Advertising
+          </a>
+         </li>
+         <li>
+          <a href="http://careers.activenetwork.com/" title="Careers at Active">
+           Careers
+          </a>
+         </li>
+         <li>
+          <a href="http://community.active.com/community/active">
+           Support &amp; Feedback
+          </a>
+         </li>
+         <li>
+         </li>
+         <li class="no_bullet">
+          <a href="#">
+           © 2014
+          </a>
+         </li>
+         <li class="no_bullet">
+          <a href="http://www.activenetwork.com/information/copyright-policy">
+           © 2014 Active Network, LLC and/or its affiliates and licensors. All rights reserved.
+          </a>
+         </li>
+        </ul>
+        <!-- address -->
+        <div class="row">
+         <div class="span4 an-address">
+          The ACTIVE Network
+          <br/>
+          717 N Harwood St
+          <br/>
+          Dallas, TX 75201
+          <br/>
+          Phone: 888-543-7223
+         </div>
+        </div>
+       </div>
+      </div>
+      <p>
+      </p>
+     </div>
+     <!-- /SITEINFO -->
+    </div>
+    <!-- /footer -->
+   </div>
+   <!-- /page -->
+   <!-- Start Branding script tag -->
+   <script type="text/javascript">
+    // get the branding logo to set the mouseover/out and onclick
+            var brandingLogo = document.getElementById('branding-logo');
+            if(brandingLogo != undefined) {
+                brandingLogo['onclick'] = function() {
+                    location.href = "http://developer.active.com/";
+                };
+                brandingLogo['onmouseover'] = function() {
+                    this.style.cursor = 'pointer';
+                };
+                brandingLogo['onmouseout'] = function() {
+                    this.style.cursor = 'auto';
+                };
+            }
+
+            // get the mashery logo to set the mouseover/out and onclick
+            var masheryLogo = document.getElementById('branding-mashery');
+            if(masheryLogo != undefined) {
+                masheryLogo['onclick'] = function() {
+                    location.href = "http://www.mashery.com/";
+                };
+                masheryLogo['onmouseover'] = function() {
+                    this.style.cursor = 'pointer';
+                };
+                masheryLogo['onmouseout'] = function() {
+                    this.style.cursor = 'auto';
+                };
+            }
+   </script>
+   <!-- End Branding script tag -->
+   <!-- <div id="extra1">&nbsp;</div>
+            <div id="extra2">&nbsp;</div> -->
+   <script type="text/javascript">
+    //<![CDATA[
+/************** Add Custom Body Scripts Here ***************************************/
+
+
+/************** Required for layout - Please do not remove *********************/
+$('#page').before($('#header'));
+$('#header').append($('.navbar'));
+$('#user-nav li.sign-in a').text('Login');
+$('#user-nav li.sign-in a').before('Developer ');
+$('#user-nav ul').prepend('<div class="aff">Affiliate  <a href="/affiliate_login">Login</a></div>');
+$('#content').append($('div#search'));
+$('#page').after($('.global-footer'));
+
+if(/docs\/*/.test(location.pathname)) {
+    $('div#sub').append($('.docs-sidebar'));
+}
+/************** /Required for layout ***************/
+//]]>
+   </script>
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19318109-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('send', 'pageview');
+
+//        _gaq.push(['mashery._setDomainName'], document.location.hostname); // use current host name
+   </script>
+   <!-- Start Quantcast tag -->
+   <script type="text/javascript">
+    _qoptions={
+                qacct:"p-2eDO_fDX5hTv6"
+            };
+   </script>
+   <script src="http://edge.quantserve.com/quant.js" type="text/javascript">
+   </script>
+   <noscript>
+    <img alt="Quantcast" border="0" height="1" src="http://pixel.quantserve.com/pixel/p-2eDO_fDX5hTv6.gif" style="display: none;" width="1"/>
+   </noscript>
+   <!-- End Quantcast tag -->
+  </div>
+ </body>
+</html>

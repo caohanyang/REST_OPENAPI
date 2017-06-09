@@ -1,0 +1,10 @@
+
+   /-/platform.gethealth.io
+  |
+--|                     /-/docs
+  |                    |
+  |                    |--/login
+   \platform.gethealth.io
+                       |--/signup
+                       |
+                        \/password-/reset

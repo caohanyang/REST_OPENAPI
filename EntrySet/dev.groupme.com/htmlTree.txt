@@ -1,0 +1,26 @@
+
+                  /-/
+                 |
+                 |--/applications
+                 |
+                 |--/bots
+                 |
+                 |--/tutorials
+                 |
+                 |-/applications-/new
+                 |
+                 |-/bots-/new
+-- /dev.groupme.com
+                 |     /-/image_service
+                 |    |
+                 |-/docs-/responses
+                 |    |
+                 |     \-/v3
+                 |
+                 |-/session-/new
+                 |
+                 |          /-/bots
+                 |         |
+                  \/tutorials-/oauth
+                           |
+                            \-/push

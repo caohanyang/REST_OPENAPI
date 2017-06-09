@@ -47,8 +47,8 @@ public class ExtractInformation {
 
 	private static String FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
-	// "https", "http", "null"
-	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https", "http", "null"));
+	// "https", "http", "null", "/"
+	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https", "http", "null", "/"));
 	// "table", "list"
 	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table", "list"));
 	// "single", "multiple"
@@ -57,19 +57,18 @@ public class ExtractInformation {
 	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del", "delete"));
 
 	public static void main(String[] args) throws GateException, JSONException, IOException {
-		// https://developers.google.com/youtube/v3
-		// https://developers.google.com/youtube/v3/docs
-		// https://cloud.google.com/translate
-		// https://cloud.google.com/translate/docs/reference
+//		System.out.close();
+		
 		if (args.length > 0) {
 			API_FOLDER = args[0].split("//")[1].split("/")[0];
 			API_NAME = args[0].split("//")[1].split("\\.")[1];
 			// google have several APIs
 			if (API_NAME.contains("google")) {
+				API_FOLDER = args[0].split("//")[1].split("/")[1];
 				API_NAME = args[0].split("//")[1].split("/")[1];
 			}
-			FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
-			CompareSet_PATH = "CompareSet/" + API_NAME;
+			FilteredSet_PATH = "../FilteredSet/" + API_FOLDER;
+			CompareSet_PATH = "../CompareSet/" + API_NAME;
 		}
 
 		// init gate
@@ -80,7 +79,7 @@ public class ExtractInformation {
 		File[] listFiles = folder.listFiles();
 		new File(CompareSet_PATH).mkdirs();
 		File compareSet = new File(CompareSet_PATH);
-
+		
 		// 2. generate swagger according to pattern
 		for (Iterator<String> sIterator = MODE.iterator(); sIterator.hasNext();) {
 			String mode = sIterator.next();
@@ -115,7 +114,7 @@ public class ExtractInformation {
 		String baseUrl = null;
 		// 3. different mode
 		// if it's null mode, find the common base url first
-		if (mode == "null") {
+		if (mode == "null" | mode == "/") {
 			baseUrl = processBa.searchBaseUrl(listFiles, API_NAME);
 			Out.prln(baseUrl);
 		}
@@ -157,7 +156,7 @@ public class ExtractInformation {
 		if (scheme == "null") {
 			nullMode(swagger, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME);
 		} else {
-			httpMode(swagger, scheme, template, number, abbrev, doc, textAll, processMe);
+			httpMode(swagger, template, number, abbrev, doc, textAll, processMe, scheme);
 		}
 
 	}
@@ -173,33 +172,12 @@ public class ExtractInformation {
 
 		AnnotationSet annoOrigin = doc.getAnnotations("Original markups");
 		AnnotationSet annoH1 = annoOrigin.get("h1");
-
-		Iterator<Annotation> urlIter = annoH1.iterator();
-		while (urlIter.hasNext()) {
-			Annotation anno = (Annotation) urlIter.next();
-			String urlText = gate.Utils.stringFor(doc, anno);
-			JSONObject sectionJson = new JSONObject();
-
-			if (processMe.isUrl(urlText, anno, strAll, aPI_NAME)) {
-				urlString = urlText;
-				actionStr = processMe.findAction(urlString);
-				Out.prln("==========Url Action=================");
-				Out.prln(urlText + "  " + actionStr);
-
-				int location = anno.getStartNode().getOffset().intValue();
-				// set url/action in the json
-				JSONObject acJson = new JSONObject();
-				acJson.put(actionStr, location);
-				sectionJson.put("action", acJson);
-				JSONObject urJson = new JSONObject();
-				urJson.put(urlString, location);
-				sectionJson.put("url", urJson);
-			}
-
-			if (sectionJson.length() > 0) {
-				infoJson.add(sectionJson);
-			}
-		}
+		AnnotationSet annoCode = annoOrigin.get("code");
+        
+		// generate info json based on the h1 tag
+		genInfoJson(doc, processMe, aPI_NAME, strAll, infoJson, annoH1, abbrev);
+		// generate info json based on the code tag
+		genInfoJson(doc, processMe, aPI_NAME, strAll, infoJson, annoCode, abbrev);
 
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
@@ -216,8 +194,49 @@ public class ExtractInformation {
 
 	}
 
-	private static void httpMode(JSONObject swagger, String scheme, String template, String number, String abbrev,
-			Document doc, DocumentContent textAll, ProcessMethod processMe) throws JSONException {
+	private static void genInfoJson(Document doc, ProcessMethod processMe, String aPI_NAME, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoTag, String abbrev) throws JSONException {
+		String actionStr = null;
+		String urlString = null;
+		Iterator<Annotation> urlIter = annoTag.iterator();
+		while (urlIter.hasNext()) {
+			Annotation anno = (Annotation) urlIter.next();
+			String urlText = gate.Utils.stringFor(doc, anno);
+			JSONObject sectionJson = new JSONObject();
+			
+			if (processMe.isUrlPath(urlText, anno, strAll, aPI_NAME, abbrev)) {
+				if (anno.getType().equals("h1")) {
+					urlString = "?method" + "=" + urlText;
+					actionStr = processMe.findAction(urlString);
+				} 
+				else if (anno.getType().equals("code")) {
+					urlString = urlText.split(" ")[1];
+					actionStr = urlText.split(" ")[0];
+				}
+				
+				Out.prln("==========Url Action=================");
+				Out.prln(urlString + "  " + actionStr);
+
+				if (urlString!=null && actionStr!=null) {
+					int location = anno.getStartNode().getOffset().intValue();
+					// set url/action in the json
+					JSONObject acJson = new JSONObject();
+					acJson.put(actionStr, location);
+					sectionJson.put("action", acJson);
+					JSONObject urJson = new JSONObject();
+					urJson.put(urlString, location);
+					sectionJson.put("url", urJson);
+				}
+			}
+
+			if (sectionJson.length() > 0) {
+				infoJson.add(sectionJson);
+			}
+		}
+	}
+
+	private static void httpMode(JSONObject swagger, String template, String number, String abbrev,
+			Document doc, DocumentContent textAll, ProcessMethod processMe, String scheme) throws JSONException {
 		// 4.1 search for the GET https
 		String strAll = textAll.toString();
 		// Fix 1: suppose the len(content between get and http) < 40 + "://"
@@ -233,7 +252,12 @@ public class ExtractInformation {
 			Out.prln("start: " + matcher.start());
 			Out.prln("end:   " + matcher.end());
 			// Fix 2: suppose the URL length < 100
-			String matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+			String matchStr;
+			try {
+				matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+			} catch (Exception e) {
+				matchStr = strAll.substring(matcher.start(), matcher.end());
+			}
 			Out.prln("========matchSTR==============");
 			Out.prln(matchStr);
 

@@ -1,0 +1,24 @@
+
+                              /-/
+                             |
+                             |--/account
+                             |
+                             |--/campaigns
+                             |
+                             |--/clients
+                             |
+                             |--/getting-started
+                             |
+                             |--/lists
+-- /www.campaignmonitor.com/api
+                             |--/segments
+                             |
+                             |--/subscribers
+                             |
+                             |--/templates
+                             |
+                             |--/transactional
+                             |
+                             |--/webhooks
+                             |
+                              \-/wrappers

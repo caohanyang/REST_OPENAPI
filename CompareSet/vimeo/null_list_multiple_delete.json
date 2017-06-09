@@ -1,0 +1,47 @@
+{
+  "paths": {
+    "?method=api.vimeo.com/tags": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/likes": {
+      "GET": {}
+    },
+    "/me/likes/[video_id]": {
+      "PUT": {}
+    },
+    "?method=api.vimeo.com/albums": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/videos": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/categories": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/users": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/ondemand": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/authenticationextras": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/groups": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/portfolios": {
+      "GET": {}
+    },
+    "?method=api.vimeo.com/channels": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

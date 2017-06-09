@@ -14,6 +14,8 @@ In this examples we will use a movie review dataset.
 import sys
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
+from sklearn.svm import SVC
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.datasets import load_files
@@ -32,7 +34,8 @@ if __name__ == "__main__":
     # that is used when n_jobs != 1 in GridSearchCV
 
     # the training data folder must be passed as first argument
-    unbalence_data_folder = "dataset/unbal_dataset"
+    name = "bal_dataset_700_NB"
+    unbalence_data_folder = "dataset/"+name
     dataset = load_files(unbalence_data_folder, shuffle=True)
     print("n_samples: %d" % len(dataset.data))
     # split the dataset in training and test set:
@@ -44,8 +47,12 @@ if __name__ == "__main__":
     # --------- encode issue ----------------
 
     # Use Random forest max_depth=5, n_estimators=10, max_features=1
+    # pipeline = Pipeline([('vect', TfidfVectorizer(min_df=3, max_df=0.95, decode_error='ignore')),
+    #                      ('clf', RandomForestClassifier()), ])
+    # pipeline = Pipeline([('vect', TfidfVectorizer(min_df=3, max_df=0.95, decode_error='ignore')),
+    #                      ('clf', LinearSVC()), ])
     pipeline = Pipeline([('vect', TfidfVectorizer(min_df=3, max_df=0.95, decode_error='ignore')),
-                         ('clf', RandomForestClassifier()), ])
+                         ('clf', MultinomialNB()), ])
 
     # # Cross validation
     # predicted = cross_val_predict(pipeline, dataset.data, dataset.target, cv=10)
@@ -54,7 +61,7 @@ if __name__ == "__main__":
     # TASK: Build a grid search to find out whether unigrams or bigrams are
     # more useful.
     # Fit the pipeline on the training set using grid search for the parameters
-    parameters = {'vect__ngram_range': [(1,1),(1,2)],}
+    parameters = {'vect__ngram_range': [(1,1)],}
     grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1)
     grid_search.fit(docs_train, y_train)
     # TASK: print the cross-validated scores for the each parameters set
@@ -73,7 +80,7 @@ if __name__ == "__main__":
                                         target_names=dataset.target_names)
     print report
     # Write report to the file
-    report_name = "unbalance_internal.txt"
+    report_name = name + ".txt"
     f = open(report_name, 'w+');
     f.write(report)
     # # Show the details results for each file

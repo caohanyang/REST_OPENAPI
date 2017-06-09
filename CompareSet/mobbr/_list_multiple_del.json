@@ -1,0 +1,10 @@
+{
+  "paths": {
+    "/api_v1/domains": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

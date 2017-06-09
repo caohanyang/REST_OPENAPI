@@ -1,0 +1,28 @@
+
+                                  /-/
+                                 |
+                                 |--/api-methods
+                                 |
+                                 |--/authentication
+                                 |
+                                 |--/geo-location-data
+                                 |
+                                 |--/home
+                                 |
+-- /sites.google.com/site/picplzapi-/image-format-syntax
+                                 |
+                                 |--/jsonp
+                                 |
+                                 |--/pagination
+                                 |
+                                 |--/system
+                                 |
+                                 |--/upload-api
+                                 |
+                                 |       /-/app
+                                  \/system
+                                        |    /-/pages
+                                         \/app
+                                            |      /-/recentChanges
+                                             \/pages
+                                                   \-/reportAbuse

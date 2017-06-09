@@ -10,11 +10,22 @@
 # http://api.eventful.com/docs
 # https://cloud.google.com/translate  https://cloud.google.com/translate/docs/reference
 # https://www.yelp.com/developers/documentation/v3
+# https://docs.docusign.com/esign      https://docs.docusign.com/esign/restapi
 
 # https://developers.facebook.com/docs/graph-api https://developers.facebook.com/docs/graph-api/reference
 # http://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html   http://docs.aws.amazon.com/AWSECommerceService/latest/DG
 # https://en.wikipedia.org/api/rest_v1/
-# python ./rest_crawler/crawlAllPages.py $1 $2
+
+# https://developer.vimeo.com/api/endpoints
+# https://developers.google.com/books/docs/v1/reference/
+# https://sites.google.com/site/picplzapi/
+# http://developer.active.com/docs/read/Home  http://developer.active.com/docs/read
+# https://www.layar.com/documentation/browser/api/
+# https://www.campaignmonitor.com/api/
+# https://api.mobbr.com/
+# https://dev.groupme.com/
+
+python ./rest_crawler/crawlAllPages.py $1 $2
 
 # predict html page
 python ./predict_page/predictExternal.py $1

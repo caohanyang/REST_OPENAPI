@@ -1,0 +1,30 @@
+{
+  "basePath": "/v3",
+  "paths": {
+    "/transactions/{transaction_type}/search": {
+      "GET": {}
+    },
+    "/businesses/{id}/reviews": {
+      "GET": {}
+    },
+    "/businesses/{id}": {
+      "GET": {}
+    },
+    "/autocomplete": {
+      "GET": {}
+    },
+    "https://api.yelp.com/oauth2/token": {
+      "get": {}
+    },
+    "/businesses/search/phone": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.yelp.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -352,6 +352,7 @@
       "GET": {}
     }
   },
+  "produces": "application/json",
   "host": "api.twitter.com",
   "schemes": [
     "https"

@@ -1,0 +1,788 @@
+
+                    /-/esign
+                   |
+                   |      /-/restapi
+                   |     |
+                   |     |        /-/Accounts
+                   |     |       |
+                   |     |       |--/Authentication
+                   |     |       |
+                   |     |       |--/Billing
+                   |     |       |
+                   |     |       |--/BulkEnvelopes
+                   |     |       |
+                   |     |       |--/CloudStorage
+                   |     |       |
+                   |     |       |--/Connect
+                   |     |       |
+                   |     |       |--/CustomTabs
+                   |     |       |
+                   |     |       |--/Diagnostics
+                   |     |       |
+                   |     |       |--/Envelopes
+                   |     |       |
+                   |     |       |--/Folders
+                   |     |       |
+                   |     |       |--/PowerForms
+                   |     |       |
+                   |     |       |--/SigningGroups
+                   |     |       |
+                   |     |       |--/Templates
+                   |     |       |
+                   |     |       |--/UserGroups
+                   |     |       |
+                   |     |       |--/Users
+                   |     |       |
+                   |     |       |--/Workspaces
+                   |     |       |
+                   |     |       |         /-/AccountBrands
+                   |     |       |        |
+                   |     |       |        |--/AccountConsumerDisclosures
+                   |     |       |        |
+                   |     |       |        |--/AccountCustomFields
+                   |     |       |        |
+                   |     |       |        |--/AccountPasswordRules
+                   |     |       |        |
+                   |     |       |        |--/AccountPermissionProfiles
+                   |     |       |        |
+                   |     |       |        |--/AccountSignatureProviders
+                   |     |       |        |
+                   |     |       |        |--/AccountTabSettings
+                   |     |       |        |
+                   |     |       |        |--/AccountWatermarks
+                   |     |       |        |
+                   |     |       |        |--/Accounts
+                   |     |       |        |
+                   |     |       |        |--/EMortgageTransactions
+                   |     |       |        |
+                   |     |       |        |--/ENoteConfigurations
+                   |     |       |        |
+                   |     |       |        |              /-/create
+                   |     |       |        |             |
+                   |     |       |        |             |--/delete
+                   |     |       |        |             |
+                   |     |       |        |             |--/deleteList
+                   |     |       |        |             |
+                   |     |       |        |             |--/deleteLogo
+                   |     |       |        |             |
+                   |     |       |        |             |--/get
+                   |     |       |        |             |
+                   |     |       |        |             |--/getExportFile
+                   |     |       |        |             |
+                   |     |       |        |-/AccountBrands-/getLogo
+                   |     |       |        |             |
+                   |     |       |        |             |--/getResource
+                   |     |       |        |             |
+                   |     |       |        |             |--/list
+                   |     |       |        |             |
+                   |     |       |        |             |--/listResources
+                   |     |       |        |             |
+                   |     |       |        |             |--/update
+                   |     |       |        |             |
+                   |     |       |        |             |--/updateLogo
+                   |     |       |        |             |
+                   |     |       |        |              \-/updateResource
+                   |     |       |        |
+                   |     |       |        |                           /-/get
+                   |     |       |        |                          |
+                   |     |       |        |-/AccountConsumerDisclosures-/getDefault
+                   |     |       |        |                          |
+                   |     |       |        |                           \-/update
+                   |     |       |        |
+                   |     |       |        |                    /-/create
+                   |     |       |        |                   |
+                   |     |       |        |                   |--/delete
+                   |     |       |        |-/AccountCustomFields
+                   |     |       |        |                   |--/list
+                   |     |       |-/Accounts                  |
+                   |     |       |        |                    \-/update
+-- /docs.docusign.com    |       |        |
+                   |     |       |        |                     /-/get
+                   |     |       |        |                    |
+                   |     |       |        |-/AccountPasswordRules-/getForUser
+                   |     |       |        |                    |
+                   |     |       |        |                     \-/update
+                   |     |       |        |
+                   |     |       |        |                          /-/create
+                   |     |       |        |                         |
+                   |     |       |        |                         |--/delete
+                   |     |       |        |                         |
+                   |     |       |        |-/AccountPermissionProfiles-/get
+                   |     |       |        |                         |
+                   |     |       |        |                         |--/list
+                   |     |       |        |                         |
+                   |     |       |        |                          \-/update
+                   |     |       |        |
+                   |     |       |        |-/AccountSignatureProviders-/list
+                   |     |       |        |
+                   |     |       |        |                   /-/get
+                   |     |       |        |-/AccountTabSettings
+                   |     |       |        |                   \-/update
+                   |     |       |        |
+                   |     |       |        |                  /-/get
+                   |     |       |        |                 |
+                   |     |       |        |-/AccountWatermarks-/preview
+                   |     |       |        |                 |
+                   |     |       |        |                  \-/update
+                   |     |       |        |
+                   |     |       |        |         /-/create
+                   |     |       |        |        |
+                   |     |       |        |        |--/delete
+                   |     |       |        |        |
+                   |     |       |        |        |--/deleteCaptiveRecipient
+                   |     |       |        |        |
+                   |     |       |        |        |--/get
+                   |     |       |        |        |
+                   |     |       |        |        |--/getBillingCharges
+                   |     |       |        |        |
+                   |     |       |        |        |--/getProvisioning
+                   |     |       |        |-/Accounts
+                   |     |       |        |        |--/listRecipientNamesByEmail
+                   |     |       |        |        |
+                   |     |       |        |        |--/listSettings
+                   |     |       |        |        |
+                   |     |       |        |        |--/listSharedAccess
+                   |     |       |        |        |
+                   |     |       |        |        |--/listUnsupportedFileTypes
+                   |     |       |        |        |
+                   |     |       |        |        |--/updateSettings
+                   |     |       |        |        |
+                   |     |       |        |         \-/updateSharedAccess
+                   |     |       |        |
+                   |     |       |        |-/EMortgageTransactions-/create
+                   |     |       |        |
+                   |     |       |        |                    /-/delete
+                   |     |       |        |                   |
+                   |     |       |         \/ENoteConfigurations-/get
+                   |     |       |                            |
+                   |     |       |                             \-/update
+                   |     |       |
+                   |     |       |               /-/Authentication
+                   |     |       |              |
+                   |     |       |              |--/UserSocialAccountLogins
+                   |     |       |              |
+                   |     |       |              |               /-/getOAuthToken
+                   |     |       |              |              |
+                   |     |       |              |              |--/login
+                   |     |       |              |              |
+                   |     |       |-/Authentication/Authentication-/revokeOAuthToken
+                   |     |       |              |              |
+                   |     |       |              |              |--/updatePassword
+                   |     |       |              |              |
+                   |     |       |              |               \/./-/login
+                   |     |       |              |
+                   |     |       |              |                        /-/delete
+                   |     |       |              |                       |
+                   |     |       |               \/UserSocialAccountLogins-/list
+                   |     |       |                                      |
+                   |     |       |                                       \-/update
+                   |     |       |
+                   |     |       |        /-/BillingPlans
+                   |     |       |       |
+                   |     |       |       |--/Invoices
+                   |     |       |       |
+                   |     |       |       |--/Payments
+                   |     |       |       |
+                   |     |       |       |             /-/get
+                   |     |       |       |            |
+                   |     |       |       |            |--/getAccountPlan
+                   |     |       |       |            |
+                   |     |       |       |            |--/getCreditCard
+                   |     |       |       |-/BillingPlans
+                   |     |       |       |            |--/list
+                   |     |       |-/Billing           |
+                   |     |       |       |            |--/purchaseEnvelopes
+                   |     |       |       |            |
+                   |     |       |       |             \-/update
+                    \/esign      |       |
+                         |       |       |         /-/get
+                         |       |       |        |
+                         |       |       |-/Invoices-/list
+                         |       |       |        |
+                         |       |       |         \-/listPastDue
+                         |       |       |
+                         |       |       |         /-/create
+                         |       |       |        |
+                         |       |        \/Payments-/get
+                         |       |                |
+                         |       |                 \-/list
+                         |       |
+                         |       |              /-/BulkEnvelopes
+                         |       |             |
+                         |       |             |--/EnvelopeBulkRecipients
+                         |       |             |
+                         |       |             |              /-/get
+                         |       |-/BulkEnvelopes/BulkEnvelopes
+                         |       |             |              \-/list
+                         |       |             |
+                         |       |             |                       /-/delete
+                         |       |             |                      |
+                         |       |              \/EnvelopeBulkRecipients-/list
+                         |       |                                    |
+                         |       |                                     \-/update
+                         |       |
+                         |       |             /-/CloudStorage
+                         |       |            |
+                         |       |            |--/CloudStorageProviders
+                         |       |            |
+                         |       |            |             /-/list
+                         |       |            |-/CloudStorage
+                         |       |-/CloudStorage            \-/listFolders
+                         |       |            |
+                         |       |            |                      /-/create
+                         |       |            |                     |
+                         |       |            |                     |--/delete
+                         |       |            |                     |
+                         |       |             \/CloudStorageProviders-/deleteList
+                         |       |                                  |
+                         |       |                                  |--/get
+                         |       |                                  |
+                         |       |                                   \-/list
+                         |       |
+                         |       |        /-/ConnectConfigurations
+                         |       |       |
+                         |       |       |--/ConnectEvents
+                         |       |       |
+                         |       |       |--/ConnectMobileNotifiers
+                         |       |       |
+                         |       |       |                      /-/create
+                         |       |       |                     |
+                         |       |       |                     |--/delete
+                         |       |       |                     |
+                         |       |       |                     |--/get
+                         |       |       |-/ConnectConfigurations
+                         |       |       |                     |--/list
+                         |       |       |                     |
+                         |       |       |                     |--/listUsers
+                         |       |       |                     |
+                         |       |       |                      \-/update
+                         |       |       |
+                         |       |-/Connect             /-/delete
+                         |       |       |             |
+                         |       |       |             |--/deleteFailure
+                         |       |       |             |
+                         |       |       |             |--/deleteList
+                         |       |       |             |
+                         |       |       |             |--/get
+                         |       |       |-/ConnectEvents
+                         |       |       |             |--/list
+                         |       |       |             |
+                         |       |       |             |--/listFailures
+                         |       |       |             |
+                         |       |       |             |--/retryForEnvelope
+                         |       |       |             |
+                         |       |       |              \-/retryForEnvelopes
+                         |       |       |
+                         |       |       |                       /-/delete
+                         |       |       |                      |
+                         |       |        \/ConnectMobileNotifiers-/list
+                         |       |                              |
+                         |       |                               \-/update
+                         |       |
+                         |       |           /-/CustomTabs
+                         |       |          |
+                         |       |          |           /-/create
+                         |       |-/CustomTabs         |
+                         |       |          |          |--/delete
+                         |       |          |          |
+                         |       |           \/CustomTabs-/get
+                         |       |                     |
+                         |       |                     |--/list
+                         |       |                     |
+                         |       |                      \-/update
+                         |       |
+                         |       |            /-/RequestLogs
+                         |       |           |
+                         |       |           |--/Resources
+                         |       |           |
+                         |       |           |--/Services
+                         |       |           |
+                         |       |           |            /-/delete
+                         |       |           |           |
+                         |       |           |           |--/get
+                         |       |-/Diagnostics          |
+                         |       |           |-/RequestLogs-/getSettings
+                         |       |           |           |
+                         |       |           |           |--/list
+                         |       |           |           |
+                         |       |           |            \-/updateSettings
+                         |       |           |
+                         |       |           |-/Resources-/get
+                         |       |           |
+                         |       |            \/Services-/get
+                         |       |
+                         |       |          /-/ChunkedUploads
+                         |       |         |
+                         |       |         |--/EnvelopeAttachments
+                         |       |         |
+                         |       |         |--/EnvelopeConsumerDisclosures
+                         |       |         |
+                         |       |         |--/EnvelopeCustomFields
+                         |       |         |
+                         |       |         |--/EnvelopeDocumentFields
+                         |       |         |
+                         |       |         |--/EnvelopeDocumentTabs
+                         |       |         |
+                         |       |         |--/EnvelopeDocumentVisibility
+                         |       |         |
+                         |       |         |--/EnvelopeDocuments
+                         |       |         |
+                         |       |         |--/EnvelopeEmailSettings
+                         |       |         |
+                         |       |         |--/EnvelopeFormData
+                         |       |         |
+                         |       |         |--/EnvelopeLocks
+                         |       |         |
+                         |       |         |--/EnvelopeRecipientTabs
+                         |       |         |
+                         |       |         |--/EnvelopeRecipients
+                         |       |         |
+                         |       |         |--/EnvelopeTemplates
+                         |       |         |
+                         |       |         |--/EnvelopeViews
+                         |       |         |
+                         |       |         |--/Envelopes
+                         |       |         |
+                         |       |         |               /-/commit
+                         |       |         |              |
+                         |       |         |              |--/create
+                         |       |         |              |
+                         |       |         |-/ChunkedUploads-/delete
+                         |       |         |              |
+                         |       |         |              |--/get
+                         |       |         |              |
+                         |       |         |               \-/update
+                         |       |         |
+                         |       |         |                    /-/create
+                         |       |         |                   |
+                         |       |         |                   |--/delete
+                         |       |         |                   |
+                         |       |         |-/EnvelopeAttachments-/get
+                         |       |         |                   |
+                         |       |         |                   |--/list
+                         |       |         |                   |
+                         |       |         |                    \-/update
+                         |       |         |
+                         |       |         |                            /-/get
+                         |       |         |-/EnvelopeConsumerDisclosures
+                         |       |         |                            \-/getDefault
+                         |       |         |
+                         |       |         |                     /-/create
+                         |       |         |                    |
+                         |       |         |                    |--/delete
+                         |       |         |-/EnvelopeCustomFields
+                         |       |         |                    |--/list
+                         |       |         |                    |
+                         |       |         |                     \-/update
+                         |       |         |
+                         |       |         |                       /-/create
+                         |       |         |                      |
+                         |       |         |                      |--/delete
+                         |       |         |-/EnvelopeDocumentFields
+                         |       |         |                      |--/list
+                         |       |         |                      |
+                         |       |         |                       \-/update
+                         |       |         |
+                         |       |         |                     /-/get
+                         |       |         |-/EnvelopeDocumentTabs
+                         |       |         |                     \-/getByPage
+                         |       |         |
+                          \/restapi        |                           /-/get
+                                 |         |                          |
+                                 |         |-/EnvelopeDocumentVisibility-/update
+                                 |         |                          |
+                                 |         |                           \-/updateList
+                                 |         |
+                                 |         |                  /-/delete
+                                 |         |                 |
+                                 |-/Envelopes                |--/get
+                                 |         |                 |
+                                 |         |-/EnvelopeDocuments-/list
+                                 |         |                 |
+                                 |         |                 |--/update
+                                 |         |                 |
+                                 |         |                  \-/updateList
+                                 |         |
+                                 |         |                      /-/create
+                                 |         |                     |
+                                 |         |                     |--/delete
+                                 |         |-/EnvelopeEmailSettings
+                                 |         |                     |--/get
+                                 |         |                     |
+                                 |         |                      \-/update
+                                 |         |
+                                 |         |-/EnvelopeFormData-/get
+                                 |         |
+                                 |         |              /-/create
+                                 |         |             |
+                                 |         |             |--/delete
+                                 |         |-/EnvelopeLocks
+                                 |         |             |--/get
+                                 |         |             |
+                                 |         |              \-/update
+                                 |         |
+                                 |         |                      /-/create
+                                 |         |                     |
+                                 |         |                     |--/delete
+                                 |         |-/EnvelopeRecipientTabs
+                                 |         |                     |--/list
+                                 |         |                     |
+                                 |         |                      \-/update
+                                 |         |
+                                 |         |                   /-/create
+                                 |         |                  |
+                                 |         |                  |--/delete
+                                 |         |                  |
+                                 |         |-/EnvelopeRecipients-/deleteList
+                                 |         |                  |
+                                 |         |                  |--/list
+                                 |         |                  |
+                                 |         |                   \-/update
+                                 |         |
+                                 |         |                  /-/apply
+                                 |         |                 |
+                                 |         |                 |--/applyToDocument
+                                 |         |                 |
+                                 |         |-/EnvelopeTemplates-/delete
+                                 |         |                 |
+                                 |         |                 |--/list
+                                 |         |                 |
+                                 |         |                  \-/listByDocument
+                                 |         |
+                                 |         |              /-/createConsole
+                                 |         |             |
+                                 |         |             |--/createCorrect
+                                 |         |             |
+                                 |         |             |--/createEdit
+                                 |         |             |
+                                 |         |-/EnvelopeViews-/createRecipient
+                                 |         |             |
+                                 |         |             |--/createSender
+                                 |         |             |
+                                 |         |             |--/createViewLink
+                                 |         |             |
+                                 |         |              \-/deleteViewLink
+                                 |         |
+                                 |         |          /-/create
+                                 |         |         |
+                                 |         |         |--/deleteDocumentPage
+                                 |         |         |
+                                 |         |         |--/get
+                                 |         |         |
+                                 |         |         |--/getNotificationSettings
+                                 |         |         |
+                                 |         |         |--/getPageImage
+                                 |         |         |
+                                 |         |         |--/getPageImages
+                                 |         |         |
+                                 |         |         |--/getRecipientInitialsImage
+                                 |         |         |
+                                 |         |         |--/getRecipientSignature
+                                 |         |         |
+                                 |          \/Envelopes-/getRecipientSignatureImage
+                                 |                   |
+                                 |                   |--/listAuditEvents
+                                 |                   |
+                                 |                   |--/listStatus
+                                 |                   |
+                                 |                   |--/listStatusChanges
+                                 |                   |
+                                 |                   |--/rotateDocumentPage
+                                 |                   |
+                                 |                   |--/update
+                                 |                   |
+                                 |                   |--/updateNotificationSettings
+                                 |                   |
+                                 |                   |--/updateRecipientInitialsImage
+                                 |                   |
+                                 |                    \-/updateRecipientSignatureImage
+                                 |
+                                 |        /-/Folders
+                                 |       |
+                                 |-/Folders       /-/list
+                                 |       |       |
+                                 |       |       |--/listItems
+                                 |        \/Folders
+                                 |               |--/moveEnvelopes
+                                 |               |
+                                 |                \-/search
+                                 |
+                                 |           /-/PowerFormData
+                                 |          |
+                                 |          |--/PowerForms
+                                 |          |
+                                 |          |-/PowerFormData-/list
+                                 |          |
+                                 |-/PowerForms          /-/create
+                                 |          |          |
+                                 |          |          |--/delete
+                                 |          |          |
+                                 |          |          |--/deleteList
+                                 |          |          |
+                                 |           \/PowerForms-/get
+                                 |                     |
+                                 |                     |--/list
+                                 |                     |
+                                 |                     |--/listSenders
+                                 |                     |
+                                 |                      \-/update
+                                 |
+                                 |              /-/SigningGroupUsers
+                                 |             |
+                                 |             |--/SigningGroups
+                                 |             |
+                                 |             |                  /-/delete
+                                 |             |                 |
+                                 |             |-/SigningGroupUsers-/list
+                                 |-/SigningGroups                |
+                                 |             |                  \-/update
+                                 |             |
+                                 |             |              /-/create
+                                 |             |             |
+                                 |             |             |--/delete
+                                 |             |             |
+                                 |             |             |--/get
+                                 |              \/SigningGroups
+                                 |                           |--/list
+                                 |                           |
+                                 |                           |--/update
+                                 |                           |
+                                 |                            \-/updateList
+                                 |
+                                 |          /-/TemplateBulkRecipients
+                                 |         |
+                                 |         |--/TemplateCustomFields
+                                 |         |
+                                 |         |--/TemplateDocumentFields
+                                 |         |
+                                 |         |--/TemplateDocumentTabs
+                                 |         |
+                                 |         |--/TemplateDocumentVisibility
+                                 |         |
+                                 |         |--/TemplateDocuments
+                                 |         |
+                                 |         |--/TemplateLocks
+                                 |         |
+                                 |         |--/TemplateRecipientTabs
+                                 |         |
+                                 |         |--/TemplateRecipients
+                                 |         |
+                                 |         |--/TemplateViews
+                                 |         |
+                                 |         |--/Templates
+                                 |         |
+                                 |         |                       /-/delete
+                                 |         |                      |
+                                 |         |-/TemplateBulkRecipients-/list
+                                 |         |                      |
+                                 |         |                       \-/update
+                                 |         |
+                                 |         |                     /-/create
+                                 |         |                    |
+                                 |         |                    |--/delete
+                                 |         |-/TemplateCustomFields
+                                 |         |                    |--/list
+                                 |         |                    |
+                                 |         |                     \-/update
+                                 |         |
+                                 |         |                       /-/create
+                                 |         |                      |
+                                 |         |                      |--/delete
+                                 |         |-/TemplateDocumentFields
+                                 |         |                      |--/list
+                                 |         |                      |
+                                 |         |                       \-/update
+                                 |         |
+                                 |         |                     /-/get
+                                 |         |-/TemplateDocumentTabs
+                                 |         |                     \-/getByPage
+                                 |         |
+                                 |         |                           /-/get
+                                 |         |                          |
+                                 |         |-/TemplateDocumentVisibility-/update
+                                 |-/Templates                         |
+                                 |         |                           \-/updateList
+                                 |         |
+                                 |         |                  /-/delete
+                                 |         |                 |
+                                 |         |                 |--/get
+                                 |         |                 |
+                                 |         |-/TemplateDocuments-/list
+                                 |         |                 |
+                                 |         |                 |--/update
+                                 |         |                 |
+                                 |         |                  \-/updateList
+                                 |         |
+                                 |         |              /-/create
+                                 |         |             |
+                                 |         |             |--/delete
+                                 |         |-/TemplateLocks
+                                 |         |             |--/get
+                                 |         |             |
+                                 |         |              \-/update
+                                 |         |
+                                 |         |                      /-/create
+                                 |         |                     |
+                                 |         |                     |--/delete
+                                 |         |-/TemplateRecipientTabs
+                                 |         |                     |--/list
+                                 |         |                     |
+                                 |         |                      \-/update
+                                 |         |
+                                 |         |                   /-/create
+                                 |         |                  |
+                                 |         |                  |--/delete
+                                 |         |                  |
+                                 |         |-/TemplateRecipients-/deleteList
+                                 |         |                  |
+                                 |         |                  |--/list
+                                 |         |                  |
+                                 |         |                   \-/update
+                                 |         |
+                                 |         |-/TemplateViews-/createEdit
+                                 |         |
+                                 |         |          /-/create
+                                 |         |         |
+                                 |         |         |--/deleteDocumentPage
+                                 |         |         |
+                                 |         |         |--/deleteGroupShare
+                                 |         |         |
+                                 |         |         |--/get
+                                 |         |         |
+                                 |         |         |--/getDocumentPageImage
+                                 |         |         |
+                                 |         |         |--/getNotificationSettings
+                                 |          \/Templates
+                                 |                   |--/getPageImages
+                                 |                   |
+                                 |                   |--/list
+                                 |                   |
+                                 |                   |--/rotateDocumentPage
+                                 |                   |
+                                 |                   |--/update
+                                 |                   |
+                                 |                   |--/updateGroupShare
+                                 |                   |
+                                 |                    \-/updateNotificationSettings
+                                 |
+                                 |           /-/GroupBrands
+                                 |          |
+                                 |          |--/GroupUsers
+                                 |          |
+                                 |          |--/Groups
+                                 |          |
+                                 |          |            /-/delete
+                                 |          |           |
+                                 |          |-/GroupBrands-/get
+                                 |          |           |
+                                 |-/UserGroups           \-/update
+                                 |          |
+                                 |          |           /-/delete
+                                 |          |          |
+                                 |          |-/GroupUsers-/list
+                                 |          |          |
+                                 |          |           \-/update
+                                 |          |
+                                 |          |       /-/create
+                                 |          |      |
+                                 |          |      |--/delete
+                                 |           \/Groups
+                                 |                 |--/list
+                                 |                 |
+                                 |                  \-/update
+                                 |
+                                 |      /-/Contacts
+                                 |     |
+                                 |     |--/UserCustomSettings
+                                 |     |
+                                 |     |--/UserProfiles
+                                 |     |
+                                 |     |--/UserSignatures
+                                 |     |
+                                 |     |--/Users
+                                 |     |
+                                 |     |         /-/create
+                                 |     |        |
+                                 |     |        |--/delete
+                                 |     |        |
+                                 |     |-/Contacts-/deleteList
+                                 |     |        |
+                                 |     |        |--/get
+                                 |     |        |
+                                 |     |         \-/update
+                                 |     |
+                                 |     |                   /-/delete
+                                 |     |                  |
+                                 |     |-/UserCustomSettings-/list
+                                 |     |                  |
+                                 |     |                   \-/update
+                                 |     |
+                                 |     |             /-/get
+                                 |     |-/UserProfiles
+                                 |     |             \-/update
+                                 |-/Users
+                                 |     |               /-/create
+                                 |     |              |
+                                 |     |              |--/delete
+                                 |     |              |
+                                 |     |              |--/deleteImage
+                                 |     |              |
+                                 |     |              |--/get
+                                 |     |              |
+                                 |     |-/UserSignatures-/getImage
+                                 |     |              |
+                                 |     |              |--/list
+                                 |     |              |
+                                 |     |              |--/update
+                                 |     |              |
+                                 |     |              |--/updateImage
+                                 |     |              |
+                                 |     |               \-/updateList
+                                 |     |
+                                 |     |      /-/create
+                                 |     |     |
+                                 |     |     |--/delete
+                                 |     |     |
+                                 |     |     |--/deleteProfileImage
+                                 |     |     |
+                                 |     |     |--/get
+                                 |     |     |
+                                 |     |     |--/getProfileImage
+                                 |     |     |
+                                 |      \/Users-/getSettings
+                                 |           |
+                                 |           |--/list
+                                 |           |
+                                 |           |--/update
+                                 |           |
+                                 |           |--/updateList
+                                 |           |
+                                 |           |--/updateProfileImage
+                                 |           |
+                                 |            \-/updateSettings
+                                 |
+                                 |           /-/WorkspaceItems
+                                 |          |
+                                 |          |--/Workspaces
+                                 |          |
+                                 |          |               /-/createFIle
+                                 |          |              |
+                                 |          |              |--/deleteFolderItems
+                                 |          |              |
+                                 |          |              |--/getFile
+                                 |          |-/WorkspaceItems
+                                  \/Workspaces             |--/listFilePages
+                                            |              |
+                                            |              |--/listFolderItems
+                                            |              |
+                                            |               \-/updateFile
+                                            |
+                                            |           /-/create
+                                            |          |
+                                            |          |--/delete
+                                            |          |
+                                             \/Workspaces-/get
+                                                       |
+                                                       |--/list
+                                                       |
+                                                        \-/update

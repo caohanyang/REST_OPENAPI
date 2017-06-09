@@ -1,0 +1,11 @@
+{
+  "basePath": "/youtube/v3/videos",
+  "paths": {},
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

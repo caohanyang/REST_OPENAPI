@@ -1,0 +1,824 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <link href="/w3c/p3p.xml" rel="P3Pv1"/>
+  <script type="text/javascript">
+   //<![CDATA[
+            var mashery_info = {
+                        };
+
+            // iframe'd detection, to pop out if in an iframe
+            if (window.location !== parent.window.location && !(/(page|docs|blog)\/preview/.test(window.location.pathname))) {
+                parent.window.location = window.location;
+            }
+            //]]>
+  </script>
+  <title>
+   ACTIVE Network API - API Documentation
+  </title>
+  <link href="http://developer.active.com/docs/feed-comments/Home" rel="alternate" type="application/rss+xml"/>
+  <link href="/public/Mashery/styles-min/Mashery-base.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/files/active-bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/public/Mashery/styles/community/mashery-blue.css" media="print" rel="stylesheet" type="text/css"/>
+  <style media="screen" type="text/css">
+   <!--
+/****** Add your css overrides here ****************/
+
+div#branding-logo {
+    background: url("http://developer.active.com/files/logo.png ") repeat-x scroll 0 0 transparent!important;
+    height: 40px;
+    margin: 7px 0 6px 12px;
+    width: 482px;
+}
+-->
+  </style>
+  <script src="/public/Mashery/scripts/Mashery/Mashery-base.js?25453" type="text/javascript">
+  </script>
+  <script src="/public/Mashery/scripts/Mashery/source/ForumPreview.js" type="text/javascript">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   //<![CDATA[
+//]]>
+  </script>
+  <link href="/public/Mashery/styles/clients/activenetworks-theme.css" rel="stylesheet" type="text/css"/>
+  <script src="http://malsup.github.com/jquery.cycle.all.js" type="text/javascript">
+  </script>
+  <script src="/files/twitter.js" type="text/javascript">
+  </script>
+  <!--Adding Google Analytics for ACTIVE Access Team-->
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37845817-1']);
+  _gaq.push(['_setDomainName', 'active.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!-- re-open script tag must always be at the end of scripts-->
+  <script type="text/javascript">
+   //<![CDATA[
+//]]>
+  </script>
+  <!-- add syntax highlighter -->
+  <script type="text/javascript">
+   if(window.SyntaxHighlighter != undefined) { // check for syntax highlighter load before using
+                SyntaxHighlighter.all();
+            }
+  </script>
+  <!-- end syntax highlighter -->
+  <!--[if lt IE 7.]>
+            <link href="/public/Mashery/styles/IE6.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+  <!--[if IE 7]>
+            <link href="/public/Mashery/styles/IE7.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+  <!--[if gte IE 8]>
+            <link href="/public/Mashery/styles/IE8.css" type="text/css" media="screen" rel="stylesheet" />
+        <![endif]-->
+ </head>
+ <body class="page-docs read en_US" id="page-docs">
+  <!-- PAGE -->
+  <div class="page read" id="page">
+   <!-- HEADER -->
+   <div class="header" id="header">
+    <div class="branding" id="branding">
+     <div class="branding-logo" id="branding-logo">
+      ACTIVE Network API
+     </div>
+     <!-- /branding-logo -->
+     <div id="branding-tagline">
+     </div>
+     <!-- /branding-tagline -->
+     <div id="branding-mashery">
+     </div>
+     <!-- /branding-mashery -->
+    </div>
+    <!-- /branding -->
+    <div class="search" id="search">
+     <form action="/search" class="search-input" id="search-input" method="get">
+      <div>
+       <input class="search-box" id="search-box" name="q" type="text" value=""/>
+       <input class="search-button" id="search-button" type="submit" value="Search"/>
+      </div>
+     </form>
+    </div>
+   </div>
+   <!-- /HEADER -->
+   <div class="user" id="user">
+    <div class="user-auth" id="user-auth">
+    </div>
+    <!-- /user-auth -->
+    <div class="user-main" id="user-main">
+    </div>
+    <!-- /user-main -->
+    <div class="user-nav" id="user-nav">
+     <ul>
+      <li class="first sign-in">
+       <a href="http://developer.active.com/login/mashery-id?r=http%3A%2F%2Fdeveloper.active.com%2Fdocs%2Fread%2FHome&amp;h=beab7ec8eb28282f885a670878e5ac10">
+        Sign In
+       </a>
+      </li>
+      <li class="register">
+       <a href="http://developer.active.com/member/register">
+        Register
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- /user-nav -->
+    <div id="user-menu">
+    </div>
+   </div>
+   <!-- /user -->
+   <div class="info" id="info" style="display: none;">
+   </div>
+   <!-- /info -->
+   <!-- CONTENT -->
+   <div class="content" id="content">
+    <div class="main" id="main">
+     <h1 class="first">
+      API Documentation
+     </h1>
+     <div class="section">
+      <div class="section-body">
+       <p>
+        The Activity Distribution APIs gives developers easy access to the broad array of data produced by the technology solutions powered by ACTIVE Network, Inc.  It is centered around the concept of "assets", where events, races, tournaments, facilities, classes, leagues are all considered assets.  Each asset has a unique ID, and data about a given asset can be retrieved with this ID.
+       </p>
+       <p>
+        All of the currently Public Activity Distribution APIs are read-only and return public data.  As a result, no security measures (SSL, OAuth) are required.  Transactions are currently processed on ACTIVE.com or ReserveAmerica.com.
+       </p>
+       <h2>
+        I/O Docs
+       </h2>
+       <p>
+        Some learn by reading, some by watching and others by doing. Think documentation meets testing and debugging, all in one convenient, interactive interface.  You can make sample API queries using the I/O Docs.
+       </p>
+       <p>
+        <a class="btn btn-register" href="/io-docs">
+         Test it out
+        </a>
+       </p>
+       <h2>
+        HELP CENTER
+       </h2>
+       <p>
+        Do you have some questions? Checkout the Help Center for answers to frequently asked questions, definitions, marketing tips, and more. If you have something that you'd like to see in the help center, please let us know!
+       </p>
+       <p>
+        <a class="btn btn-register" href="/help_center">
+         Visit Help Center
+        </a>
+       </p>
+       <p>
+       </p>
+       <h2>
+        TECHNICAL OVERVIEW
+       </h2>
+       <p>
+        The Activity Distribution APIs have been designed to be easy to use.  A short technical overview will help you get up and running quickly.
+       </p>
+       <p>
+        <strong>
+         Response Formats Supported
+        </strong>
+        :
+       </p>
+       <p>
+        The Activity Distribution APIs support a variety of response formats such as XML, JSON, iCal, RSS*. Choose which format you want to have returned when sending an API request. The response format is chosen using the “v” parameter in the API request query string.
+       </p>
+       <p>
+        *Note – Not all response formats are supported by each API. Please check documentation for specifics.
+       </p>
+       <p>
+       </p>
+       <p>
+        <strong>
+         Creating an API Request:
+        </strong>
+       </p>
+       <p>
+        To make an API request, you’ll need to:
+       </p>
+       <p>
+        Have your developer key handy
+       </p>
+       <p>
+        Know the assets you're looking to retrieve
+       </p>
+       <p>
+        Know the format (i.e. JSON, XML) you want the response to be returned in
+       </p>
+       <p>
+       </p>
+       <p>
+        <strong>
+         Here’s an example of an API request:
+        </strong>
+       </p>
+       <p>
+        <span class="s3">
+         ·
+        </span>
+        <span class="s4">
+        </span>
+        <span class="s5">
+         URI Format: HTTP GET
+         <span class="s6">
+          http://api.amp.active.com/search
+         </span>
+        </span>
+        ?{queryString params}&amp;api_key={key}
+        <span class="s5">
+        </span>
+       </p>
+       <p>
+       </p>
+       <p>
+        <strong>
+         Error Handling:
+        </strong>
+       </p>
+       <p>
+        When an error is encountered, you’ll receive an appropriate HTTP response code (for example, 404 for "File Not Found".) You’ll also get details returned to you in the body of the response. Below is a list of error codes you many encounter:
+       </p>
+       <ul>
+        <li>
+         400 - Bad Request
+        </li>
+        <li>
+         403 - Not Authorized
+        </li>
+        <li>
+         403 - Account Inactive
+        </li>
+        <li>
+         403 - Over Queries Per Second Limit
+        </li>
+        <li>
+         403 - Over Rate Limit
+        </li>
+        <li>
+         403 - Unknown Referrer
+        </li>
+        <li>
+         403 - Service Over Queries-per-Second-Limit
+        </li>
+        <li>
+         403 - Service Requires SSL
+        </li>
+        <li>
+         414 - Request URI Too Long
+        </li>
+        <li>
+         502 - Bad Gateway
+        </li>
+        <li>
+         503 - API Maintenance/Service Unavailable
+        </li>
+        <li>
+         504 - Gateway Timeout
+        </li>
+       </ul>
+       <!--sidebar content-->
+       <div class="docs-sidebar">
+        <section class="section">
+         <div class="sectionheader">
+          <h2>
+           Brand Guidelines
+          </h2>
+         </div>
+         <div class="sectioncontent top-blue-border thick clearfix sidebar">
+          <div class="brand-guidelines-icon">
+          </div>
+          <p>
+           Grab our logos to follow our guidelines.
+          </p>
+          <a class="btn btn-register pull-right" href="http://developer.active.com/files/ACTIVE_Brand_Guidelines_and_Images.zip">
+           Get Logos
+          </a>
+         </div>
+        </section>
+        <section class="section">
+         <div class="sectionheader">
+          <h2>
+           Let's Talk
+          </h2>
+         </div>
+         <div class="sectioncontent top-blue-border thick clearfix sidebar">
+          <div class="forum-icon">
+          </div>
+          <p>
+           Ask questions, share code samples, or announce your latest project.
+          </p>
+          <a class="btn btn-register pull-right" href="/forum">
+           Visit Forum
+          </a>
+         </div>
+        </section>
+       </div>
+      </div>
+      <div class="section-meta">
+       <p>
+        <span class="revision">
+         version 143
+        </span>
+        <span class="timestamp">
+         as of
+         <abbr title="7/23/15 3:32 am">
+          2 years ago
+         </abbr>
+        </span>
+        <span class="moniker">
+         by
+         <span class="user-reference">
+          <a href="http://developer.active.com/profile/1572961">
+           astarnes
+          </a>
+         </span>
+        </span>
+       </p>
+      </div>
+     </div>
+     <div class="comments">
+      <h3>
+       0 Comments
+      </h3>
+      <p class="comments-locked">
+       New comments are not being accepted at this time.
+      </p>
+     </div>
+    </div>
+    <!-- /main -->
+    <!-- SUB -->
+    <div class="sub" id="sub">
+     <h2>
+      Docs Navigation
+     </h2>
+     <ul>
+      <li class="active">
+       <a class="active" href="http://developer.active.com/docs/read/Home">
+        API Documentation
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Activity_APIs">
+        Activity API
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/v2_Activity_API_Search">
+        Activity Search API v2
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Kids_Activity_Search_API_v2">
+        Activity Search API v2 - Kids
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Campground_APIs">
+        Campground API
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Campground_Search_API">
+        Campground Search API
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Campground_Details_API">
+        Campground Details API
+       </a>
+      </li>
+      <li>
+       <a href="http://developer.active.com/docs/read/Campsite_Search_API">
+        Campsite Search API
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- /SUB -->
+    <div id="breadcrumbs">
+    </div>
+    <!-- /breadcrumbs -->
+    <div class="local" id="local">
+     <ul>
+      <li class=" first">
+       <a href="http://developer.active.com/page">
+        Home
+       </a>
+      </li>
+      <li class=" ">
+       <a href="http://developer.active.com/api_gallery">
+        API Gallery
+       </a>
+      </li>
+      <li class="active ">
+       <a href="http://developer.active.com/docs">
+        Documentation
+       </a>
+      </li>
+      <li class=" ">
+       <a href="http://developer.active.com/forum">
+        Forum
+       </a>
+      </li>
+      <li class=" ">
+       <a href="http://developer.active.com/blog">
+        Blog
+       </a>
+      </li>
+      <li class=" last">
+       <a href="http://developer.active.com/Affliliates">
+        Affiliates
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- /local -->
+    <div class="nav" id="nav">
+    </div>
+    <!-- /nav -->
+   </div>
+   <!-- /CONTENT -->
+   <div class="footer" id="footer">
+    <!-- SITEINFO -->
+    <div class="siteinfo" id="siteinfo">
+     <p>
+      <style>
+       .yellow-text{color:#F5BA46;}
+      </style>
+      <!--final html for footer copyright-->
+     </p>
+     <div class="navbar nav navbar">
+      <div class="navbar-inner">
+       <div class="container">
+        <!-- for addition to footer copyright area-->
+        <ul class="dropdown">
+         <li class="dropdown_trigger">
+          <a href="/apis">
+           APIS
+          </a>
+          <ul>
+           <li>
+            <a href="/apis">
+             API Overview
+            </a>
+           </li>
+           <li>
+            <a href="/docs/">
+             Documentation
+            </a>
+           </li>
+           <li>
+            <a href="/help_center">
+             Help Center
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="dropdown_trigger">
+          <a href="/Widgets">
+           Widgets
+          </a>
+          <ul>
+           <li>
+            <a href="/Activity_Search_Widget">
+             Activity Search Widget
+            </a>
+           </li>
+           <li>
+            <a href="/Near_You_Widget">
+             Near You Widget
+            </a>
+           </li>
+           <!--<li>
+								<a href="/Popular_Activity_Widget">Popular Activity Widget</a>
+							</li>-->
+           <li>
+            <a href="/Article_Widget">
+             Article Widget
+            </a>
+           </li>
+           <!--<li>
+								<a href="/Training_Plan_Widget">Training Plan Widget</a>
+							</li>-->
+           <!--<li>
+								<a href="/Campground_Trip_Planner_Widget">Campground Trip Planner Widget</a>
+							</li>-->
+          </ul>
+         </li>
+         <li class="dropdown_trigger">
+          <a href="/affiliates">
+           Affiliates
+          </a>
+         </li>
+         <li class="dropdown_trigger">
+          <a href="/forum">
+           Forum
+          </a>
+         </li>
+         <li class="dropdown_trigger">
+          <a href="/blog">
+           Blog
+          </a>
+         </li>
+        </ul>
+        <ul class="nav pull-right">
+         <li class="app-nav">
+          <a href="/member/register">
+           <div class="apply-key">
+           </div>
+           Apply For Keys
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <!--footer-->
+      <div class="global-footer">
+       <div class="container">
+        <div class="banner">
+        </div>
+        <div class="row">
+         <div class="span12">
+          <div class="row">
+           <div class="span3">
+            <h2>
+             Follow Active
+            </h2>
+            <ul>
+             <li>
+              <i class="icon-facebook">
+              </i>
+              <a href="http://www.facebook.com/Activecom" target="_blank">
+               Facebook
+              </a>
+             </li>
+             <li>
+              <i class="icon-twitter">
+              </i>
+              <a href="https://twitter.com/activenetwork" target="_blank">
+               Twitter
+              </a>
+             </li>
+             <li>
+              <i class="icon-pinterest">
+              </i>
+              <a href="http://pinterest.com/activecom/" target="_blank">
+               Pinterest
+              </a>
+             </li>
+             <li>
+              <i class="icon-linkedin">
+              </i>
+              <a href="http://www.linkedin.com/company/7126" target="_blank">
+               LinkedIn
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="span3">
+            <h2>
+             Other Resources
+            </h2>
+            <ul>
+             <li>
+              <a href="http://www.activesports.com" target="_blank">
+               League Management
+              </a>
+             </li>
+             <li>
+              <a href="http://www.fellowshipone.com" target="_blank">
+               Church Management
+              </a>
+             </li>
+             <li>
+              <a href="http://www.ipicosports.com" target="_blank">
+               Race Timing Systems
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="span3">
+            <h2>
+             Active Network
+            </h2>
+            <ul class="unstyled">
+             <li>
+              <a href="/API_Terms_of_Use">
+               API Terms of Use
+              </a>
+             </li>
+             <li>
+              <a href="/Widgets_License_Agreement">
+               Widgets License Agreement
+              </a>
+             </li>
+             <li>
+              <a href="/branding_guidelines">
+               Brand Guidelines
+              </a>
+             </li>
+             <li>
+              <a href="/Affiliate_Agreement" target="_blank">
+               Affiliate Agreement
+              </a>
+             </li>
+             <li>
+              <a href="http://www.active.com/" target="_blank">
+               Visit Active.com
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </div>
+        <p>
+        </p>
+        <!-- organizers -->
+        <div class="org row paddingBottom10">
+         <div class="span2">
+          <a class="network-logo hide-text" href="http://www.activenetwork.com/">
+           Active Network
+          </a>
+         </div>
+         <div class="span9 offset1">
+          <div class="mashery-badge">
+           <a href="http://mashery.com" target="_blank">
+            <img src="/public/Mashery/images/masherymade.png"/>
+           </a>
+          </div>
+         </div>
+        </div>
+        <!-- Network -->
+        <ul class="network nav nav-pills network-bottom">
+         <li>
+          <a href="/page/site_map/">
+           Site Map
+          </a>
+         </li>
+         <li>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/terms-of-use.htm" title="Terms of Use">
+           Terms of Use
+          </a>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/information/privacy-policy" target="_blank" title="Your Privacy Rights">
+           Your Privacy Rights:
+           <span class="yellow-text">
+            Updated
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/information/cookie-policy" title="Cookie Policy">
+           Cookie Policy
+          </a>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/security.htm" title="Security">
+           Security
+          </a>
+         </li>
+         <li>
+          <a href="http://www.activenetwork.com/media/online-advertising.htm?int=29-79/" title="Advertising">
+           Advertising
+          </a>
+         </li>
+         <li>
+          <a href="http://careers.activenetwork.com/" title="Careers at Active">
+           Careers
+          </a>
+         </li>
+         <li>
+          <a href="http://community.active.com/community/active">
+           Support &amp; Feedback
+          </a>
+         </li>
+         <li>
+         </li>
+         <li class="no_bullet">
+          <a href="#">
+           © 2014
+          </a>
+         </li>
+         <li class="no_bullet">
+          <a href="http://www.activenetwork.com/information/copyright-policy">
+           © 2014 Active Network, LLC and/or its affiliates and licensors. All rights reserved.
+          </a>
+         </li>
+        </ul>
+        <!-- address -->
+        <div class="row">
+         <div class="span4 an-address">
+          The ACTIVE Network
+          <br/>
+          717 N Harwood St
+          <br/>
+          Dallas, TX 75201
+          <br/>
+          Phone: 888-543-7223
+         </div>
+        </div>
+       </div>
+      </div>
+      <p>
+      </p>
+     </div>
+     <!-- /SITEINFO -->
+    </div>
+    <!-- /footer -->
+   </div>
+   <!-- /page -->
+   <!-- Start Branding script tag -->
+   <script type="text/javascript">
+    // get the branding logo to set the mouseover/out and onclick
+            var brandingLogo = document.getElementById('branding-logo');
+            if(brandingLogo != undefined) {
+                brandingLogo['onclick'] = function() {
+                    location.href = "http://developer.active.com/";
+                };
+                brandingLogo['onmouseover'] = function() {
+                    this.style.cursor = 'pointer';
+                };
+                brandingLogo['onmouseout'] = function() {
+                    this.style.cursor = 'auto';
+                };
+            }
+
+            // get the mashery logo to set the mouseover/out and onclick
+            var masheryLogo = document.getElementById('branding-mashery');
+            if(masheryLogo != undefined) {
+                masheryLogo['onclick'] = function() {
+                    location.href = "http://www.mashery.com/";
+                };
+                masheryLogo['onmouseover'] = function() {
+                    this.style.cursor = 'pointer';
+                };
+                masheryLogo['onmouseout'] = function() {
+                    this.style.cursor = 'auto';
+                };
+            }
+   </script>
+   <!-- End Branding script tag -->
+   <!-- <div id="extra1">&nbsp;</div>
+            <div id="extra2">&nbsp;</div> -->
+   <script type="text/javascript">
+    //<![CDATA[
+/************** Add Custom Body Scripts Here ***************************************/
+
+
+/************** Required for layout - Please do not remove *********************/
+$('#page').before($('#header'));
+$('#header').append($('.navbar'));
+$('#user-nav li.sign-in a').text('Login');
+$('#user-nav li.sign-in a').before('Developer ');
+$('#user-nav ul').prepend('<div class="aff">Affiliate  <a href="/affiliate_login">Login</a></div>');
+$('#content').append($('div#search'));
+$('#page').after($('.global-footer'));
+
+if(/docs\/*/.test(location.pathname)) {
+    $('div#sub').append($('.docs-sidebar'));
+}
+/************** /Required for layout ***************/
+//]]>
+   </script>
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19318109-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('send', 'pageview');
+
+//        _gaq.push(['mashery._setDomainName'], document.location.hostname); // use current host name
+   </script>
+   <!-- Start Quantcast tag -->
+   <script type="text/javascript">
+    _qoptions={
+                qacct:"p-2eDO_fDX5hTv6"
+            };
+   </script>
+   <script src="http://edge.quantserve.com/quant.js" type="text/javascript">
+   </script>
+   <noscript>
+    <img alt="Quantcast" border="0" height="1" src="http://pixel.quantserve.com/pixel/p-2eDO_fDX5hTv6.gif" style="display: none;" width="1"/>
+   </noscript>
+   <!-- End Quantcast tag -->
+  </div>
+ </body>
+</html>

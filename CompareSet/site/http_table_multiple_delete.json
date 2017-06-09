@@ -1,0 +1,16 @@
+{
+  "paths": {
+    "https://YOUR_REGISTERED_REDIRECT_URI": {
+      "get": {}
+    },
+    "http://picplz.com/api/v2/feed": {
+      "get": {}
+    },
+    "https://api.picplz.com/api/v2/pic/comment": {
+      "DELETE": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,48 @@
+{
+  "basePath": "/rest",
+  "paths": {
+    "api/v2": {
+      "get": {}
+    },
+    "https://myapp.eg.com/docusign_return": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "accountId",
+            "description": "string\nThe external account number (int) or account ID Guid.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "envelopeId",
+            "description": "string\nThe envelope’s GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://www.docusign.net/restapi/service_information": {
+      "get": {}
+    },
+    "Api/v2/accounts/{accountId}/envelopes": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "demo.docusign.net",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

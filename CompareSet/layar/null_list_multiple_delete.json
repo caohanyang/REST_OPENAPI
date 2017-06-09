@@ -1,0 +1,11 @@
+{
+  "basePath": "/mylayer/getpoi",
+  "paths": {},
+  "produces": "application/json",
+  "host": "layarapi.example.net",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

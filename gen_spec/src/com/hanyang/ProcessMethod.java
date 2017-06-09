@@ -4,6 +4,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.json.JSONException;
@@ -42,7 +44,7 @@ public class ProcessMethod {
 		return openAPI;
 	}
 
-	private boolean isRealUrl(String url) {
+	public boolean isRealUrl(String url) {
 		// url minimum length
 		if (url.length() > "http://".length()) {
 			return true;
@@ -96,6 +98,12 @@ public class ProcessMethod {
 		if (urlString.endsWith("/")) {
 			urlString = urlString.substring(0, urlString.lastIndexOf("/"));
 		}
+		
+		// www.docusign.com/restapi" => www.docusign.com/restapi
+		if (urlString.endsWith("\"")) {
+			urlString = urlString.substring(0, urlString.lastIndexOf("\""));
+		}
+		
 		// user/user-id.json => user/user-id
 		// String urlEnd = urlString.substring(urlString.lastIndexOf("/"));
 		if (urlString.lastIndexOf(".json") != -1) {
@@ -133,9 +141,23 @@ public class ProcessMethod {
 		return sortedByValues;
 	}
 
-	public boolean isUrl(String urlText, Annotation anno, String strAll, String aPI_NAME) {
-		if (urlText.contains(aPI_NAME)) {
-			return true;
+	public boolean isUrlPath(String urlText, Annotation anno, String strAll, String aPI_NAME, String abbrev) {
+		//case 1: flickr.activity.userComments
+		if (anno.getType().equals("h1")) {
+			if (urlText.contains(aPI_NAME)) {
+				return true;
+			}
+			return false;
+		} else if (anno.getType().equals("code")) {
+			//case 2: flickr.activity.userComments \s(\/.*\/)
+			String regexUrlPath = "(?i)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(\\/.*\\/)" ;
+			Pattern pUrl = Pattern.compile(regexUrlPath);
+			Matcher matcherUrl = pUrl.matcher(urlText);
+			
+			if (matcherUrl.lookingAt()) {
+				return true;
+			}
+			
 		}
 		return false;
 	}

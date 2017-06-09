@@ -1,0 +1,24 @@
+
+                          /-/endpoints
+                         |
+                         |          /-/albums
+                         |         |
+                         |         |--/authenticationextras
+                         |         |
+-- /developer.vimeo.com/api        |--/categories
+                         |         |
+                         |         |--/channels
+                         |         |
+                         |         |--/groups
+                         |         |
+                          \/endpoints-/likes
+                                   |
+                                   |--/ondemand
+                                   |
+                                   |--/portfolios
+                                   |
+                                   |--/tags
+                                   |
+                                   |--/users
+                                   |
+                                    \-/videos

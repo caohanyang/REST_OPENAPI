@@ -1,0 +1,11 @@
+{
+  "basePath": "/v3",
+  "paths": {},
+  "produces": "application/json",
+  "host": "api.groupme.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

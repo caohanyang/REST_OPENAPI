@@ -1,0 +1,545 @@
+{
+  "paths": {
+    "/api_v1/api/translations": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/translations",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/exception message\ncode",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/methods xml(=false)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/currencies base_currency(='EUR')\ninclude_unused(=true)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/languages include_unused(=true)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/countries include_unused(=true)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/timezones",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/kyc_incomeranges",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/oauth_providers",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/api_connections",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/id_providers",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/payment_providers",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/event_types",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "* GET /api_v1/api/happening_right_now language(=null)\nbase_currency(='EUR')",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/balances/",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/balances/uri url\nbase_currency(='EUR')",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/balances/domain domain\nbase_currency(='EUR')",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/domains/info domain\nbase_currency(='EUR')",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/domains/ keyword(=null)\nlanguage(=null)\nusername(=null)\nbase_currency(='EUR')\nsort(=0)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/domains/supported",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/invoices/ array payment_ids(=null)\narray share_ids(=null)\nmonth(=null)\nyear(=null)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/keywords/ username(=null)\narray related_to(=null)\nprefix(=null)\nlanguage(=null)\nbase_currency(='EUR')\nsort(=0)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/keywords/uri url",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/keywords/person username\narray related_to(=null)\nprefix(=null)\nlanguage(=null)\nbase_currency(='EUR')\nsort(=0)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/keywords/domain domain\nlanguage(=null)\nbase_currency(='EUR')\nsort(=0)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/notifications/ event_type(=null)\nfrom_date(=null)\noffset(=0)\nlimit(=1000)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- DELETE /api_v1/notifications/",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/notifications/uri url\nevent_type(=null)\nfrom_date(=null)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/notifications/domain domain\nevent_type(=null)\nfrom_date(=null)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/payments/info id\ninclude_receivers(=true)\ninclude_senders(=true)\ninclude_keywords(=true)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/payments/ search(=null)\nfrom_date(=null)\nto_date(=null)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/payments/pledged offset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- DELETE /api_v1/payments/pledged array ids",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - POST /api_v1/payments/preview data\ncurrency(=null)\namount(=null)\nreferrer(=null)\ninvoiced(=false)\nannotated(=true)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- PUT /api_v1/payments/confirm hash",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - PUT /api_v1/payments/claim url",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/payments/claimable url_or_email",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/payments/unclaimed_shares",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- DELETE /api_v1/payments/unclaimed_shares array share_ids",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/payments/domain domain\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/payments/uri url\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/persons/info username\nbase_currency(='EUR')",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/persons/uri url\nbase_currency(='EUR')\nsort(=0)\noffset(=0)\nlimit(=250)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/persons/domain domain\nbase_currency(='EUR')\nsort(=0)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/persons/ array keywords(=null)\nlanguage(=null)\ninvoiceable(=false)\nfrom_date(=null)\nto_date(=null)\nsort(=0)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/persons/invite url\narray ids",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/referrers/ url(=null)\ndomain(=null)\nkeyword(=null)\nlanguage(=null)\nusername(=null)\nbase_currency(='EUR')\nsort(=0)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/uris/info url\nbase_currency(='EUR')\ninclude_statistics(=true)\nverbose(=true)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/uris/ domain(=null)\narray keywords(=null)\nlanguage(=null)\nusername(=null)\nbase_currency(='EUR')\nsort(=0)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/user/ping",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- DELETE /api_v1/user/logout",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - PUT /api_v1/user/password_login username\npassword",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/user/send_login_link username_or_email_or_id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- DELETE /api_v1/user/user",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/user/oauth_url provider\nredirect_url",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- PUT /api_v1/user/oauth_id provider\nredirected_url",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- PUT /api_v1/user/public_id provider\nidentity",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/user/email_id new_email",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - PUT /api_v1/user/confirm_email_id confirm_token",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- DELETE /api_v1/user/id id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - PUT /api_v1/user/register_user_send_login_link username\nemail\npassword\npassword_control(='')",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/user/update_email new_email",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - POST /api_v1/user/confirm_email update_token",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - PUT /api_v1/user/link_login login_token",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/user/update_password new_password\nold_password(='')",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/user/update_user array user",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/user/upload_identity_proof notification_url(=null)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/xpayments/ search(=null)\nfrom_date(=null)\nto_date(=null)\noffset(=0)\nlimit(=100)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - GET /api_v1/xpayments/info id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/xpayments/withdraw currency\namount\narray address\nnote(='')\nnotification_url(=null)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/xpayments/deposit type\ncurrency\namount\nreturn_url(=null)\nnote(=null)\nnotification_url(=null)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- GET /api_v1/xpayments/list_addresses",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- PUT /api_v1/xpayments/new_account_address currency\ndescription(=null)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "*",
+            "description": "- POST /api_v1/xpayments/url_addres url\ncurrency\namount(=null)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - POST /api_v1/xpayments/withdraw_fee type(=null)\namount(=null)\ncurrency(=null)\narray address(=null)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "-",
+            "description": "- - POST /api_v1/xpayments/deposit_fee type(=null)\namount(=null)\ncurrency(=null)\narray address(=null)",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}
