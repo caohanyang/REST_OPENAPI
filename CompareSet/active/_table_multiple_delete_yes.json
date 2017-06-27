@@ -5,7 +5,7 @@
       "GET": {}
     },
     "/details": {
-      "post": {},
+      "POST": {},
       "GET": {}
     },
     "/Clinics": {
@@ -30,8 +30,7 @@
       "GET": {}
     },
     "/campgrounds": {
-      "GET": {},
-      "Get": {}
+      "GET": {}
     },
     "/api.amp.ac": {
       "GET": {}
@@ -41,7 +40,7 @@
     },
     "/Los_Angeles\",": {
       "POST": {},
-      "get": {}
+      "GET": {}
     },
     "/campgrou": {
       "GET": {}

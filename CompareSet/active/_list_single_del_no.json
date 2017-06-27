@@ -21,8 +21,7 @@
     },
     "//api.amp.active.com/v2/search": {
       "GET": {},
-      "get": {},
-      "put": {}
+      "PUT": {}
     },
     "//countrycode.org": {
       "GET": {}
@@ -37,8 +36,7 @@
       "GET": {}
     },
     "//api.amp.active.com/camping/campground/details": {
-      "GET": {},
-      "get": {}
+      "GET": {}
     }
   },
   "produces": "application/json",

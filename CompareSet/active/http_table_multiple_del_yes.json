@@ -1,8 +1,7 @@
 {
   "paths": {
     "p.active.com/camping/campsites": {
-      "GET": {},
-      "get": {}
+      "GET": {}
     },
     "http://countrycode.org": {
       "POST": {}
@@ -20,12 +19,11 @@
       "GET": {}
     },
     "p.active.com/camping/campgrounds": {
-      "GET": {},
-      "Get": {}
+      "GET": {}
     },
     "p.active.com/camping/campground/details": {
-      "post": {},
-      "Get": {},
+      "POST": {},
+      "GET": {},
       "DEL": {}
     },
     "p.active.com/search": {
@@ -38,10 +36,9 @@
       "GET": {}
     },
     "p.active.com/v2/search": {
-      "post": {},
+      "POST": {},
       "GET": {},
-      "get": {},
-      "put": {}
+      "PUT": {}
     },
     "p.active.com/c": {
       "GET": {}

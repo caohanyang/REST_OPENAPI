@@ -13,12 +13,10 @@
       "GET": {}
     },
     "/camping/campsites": {
-      "GET": {},
-      "get": {}
+      "GET": {}
     },
     "/camping/campground/details": {
-      "GET": {},
-      "get": {}
+      "GET": {}
     },
     "http://www.tantracking.com/click.track": {
       "GET": {}
@@ -28,8 +26,7 @@
     },
     "/v2/search": {
       "GET": {},
-      "get": {},
-      "put": {}
+      "PUT": {}
     }
   },
   "produces": "application/json",

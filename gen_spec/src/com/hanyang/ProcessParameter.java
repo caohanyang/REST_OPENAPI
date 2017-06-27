@@ -36,7 +36,7 @@ public class ProcessParameter {
 			String action = sectionJson.getString("action");
 
 			if (processMe.isRealUrl(url)) {
-				// 1. we add url/action into swagger now.
+				// 1. we add url/action into openAPI now.
 				// because here we have known that each table have match one url
 				// some urls would not be used.
 				processMe.addUrl(openAPI, url, action, null);

@@ -82,7 +82,7 @@ public class ExtractInformation {
 		new File(CompareSet_PATH).mkdirs();
 		File compareSet = new File(CompareSet_PATH);
 		
-		// 2. generate swagger according to pattern
+		// 2. generate openAPI according to pattern
 		for (Iterator<String> sIterator = MODE.iterator(); sIterator.hasNext();) {
 			String mode = sIterator.next();
 
@@ -97,7 +97,7 @@ public class ExtractInformation {
 
 						for (Iterator<String> dIterator = ABBREV_DELETE.iterator(); dIterator.hasNext();) {
 							String abbrev = dIterator.next();
-							// generate different swagger
+							// generate different openAPI
 							generateOpenAPI(listFiles, mode, reverse, template, number, abbrev);
 							System.gc();
 						}
@@ -138,7 +138,7 @@ public class ExtractInformation {
 			}
 		}
 
-		// 4. prune swagger
+		// 4. prune openAPI
 		openAPI = processBa.handleBaseUrl(openAPI, mode, baseUrl);
 
 		// 5. write to file
@@ -146,7 +146,7 @@ public class ExtractInformation {
 
 	}
 
-	public static void executeFile(String path, JSONObject swagger, String scheme, String template, String number,
+	public static void executeFile(String path, JSONObject openAPI, String scheme, String template, String number,
 			String abbrev, String baseUrl, String reverse) throws ResourceInstantiationException, JSONException, IOException {
 		URL u = Paths.get(path).toUri().toURL();
 		FeatureMap params = Factory.newFeatureMap();
@@ -156,19 +156,19 @@ public class ExtractInformation {
 		// 2. get all text
 		DocumentContent textAll = doc.getContent();
 		// Out.prln(textAll);
-		// 3. initial swagger
+		// 3. initial openAPI
 		ProcessMethod processMe = new ProcessMethod();
-		processMe.generateDefault(swagger);
+		processMe.generateDefault(openAPI);
 
 		if (scheme == "null") {
-			nullMode(swagger, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME, reverse, scheme);
+			nullMode(openAPI, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME, reverse, scheme);
 		} else {
-			httpMode(swagger, template, number, abbrev, doc, textAll, processMe, scheme, reverse);
+			httpMode(openAPI, template, number, abbrev, doc, textAll, processMe, scheme, reverse);
 		}
 
 	}
 
-	private static void nullMode(JSONObject swagger, String template, String number, String abbrev, Document doc,
+	private static void nullMode(JSONObject openAPI, String template, String number, String abbrev, Document doc,
 			DocumentContent textAll, ProcessMethod processMe, String baseUrl, String aPI_NAME, String reverse, String scheme) throws JSONException {
 		String strAll = textAll.toString();
 		String actionStr = null, urlString = null;
@@ -192,11 +192,11 @@ public class ExtractInformation {
 		if (template == "table") {
 			// 5.2 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
-			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
+			handleTemplate(openAPI, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
 		} else if (template == "list") {
 			AnnotationSet annoList = annoOrigin.get("dl");
 			// 5.3 get list annotation
-			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
+			handleTemplate(openAPI, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
 		}
 
 	}
@@ -229,7 +229,7 @@ public class ExtractInformation {
 					int location = anno.getStartNode().getOffset().intValue();
 					// set url/action in the json
 					JSONObject acJson = new JSONObject();
-					acJson.put(actionStr, location);
+					acJson.put(actionStr.toUpperCase(), location);
 					sectionJson.put("action", acJson);
 					JSONObject urJson = new JSONObject();
 					urJson.put(urlString, location);
@@ -243,7 +243,7 @@ public class ExtractInformation {
 		}
 	}
 
-	private static void httpMode(JSONObject swagger, String template, String number, String abbrev,
+	private static void httpMode(JSONObject openAPI, String template, String number, String abbrev,
 			Document doc, DocumentContent textAll, ProcessMethod processMe, String scheme, String reverse) throws JSONException {
 		// 4.1 search for the GET https
 		String strAll = textAll.toString();
@@ -292,7 +292,7 @@ public class ExtractInformation {
 				Out.prln("==========REST Action============");
 				actionStr = new StringBuilder(matcherAction.group(1)).reverse().toString();
 				JSONObject acJson = new JSONObject();
-				acJson.put(actionStr, acLocation);
+				acJson.put(actionStr.toUpperCase(), acLocation);
 				sectionJson.put("action", acJson);
 
 				Out.prln(actionStr);
@@ -357,9 +357,9 @@ public class ExtractInformation {
 			
 			
 
-			// Write into swagger
-			// After matching table, we write url/action into swagger
-			// processMe.addUrl(swagger, urlString, actionStr);
+			// Write into openAPI
+			// After matching table, we write url/action into openAPI
+			// processMe.addUrl(openAPI, urlString, actionStr);
 			infoJson.add(sectionJson);
 		}
 
@@ -377,15 +377,15 @@ public class ExtractInformation {
 		if (template == "table") {
 			// 5.2 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
-			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
+			handleTemplate(openAPI, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
 		} else if (template == "list") {
 			AnnotationSet annoList = annoOrigin.get("dl");
 			// 5.3 get list annotation
-			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
+			handleTemplate(openAPI, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
 		}
 	}
 
-	private static void handleTemplate(JSONObject swagger, String number, String template, Document doc,
+	private static void handleTemplate(JSONObject openAPI, String number, String template, Document doc,
 			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate, String reverse, String scheme)
 			throws JSONException {
 		// 5.3 for each page, set findParaTable = False
@@ -419,7 +419,7 @@ public class ExtractInformation {
 				findParaTemplate = true;
 				Out.prln("==========TABLE or LIST=================");
 				Out.prln(templateText);
-				processPa.generateParameter(swagger, templateText, strAll, infoJson, anno, doc, processMe,
+				processPa.generateParameter(openAPI, templateText, strAll, infoJson, anno, doc, processMe,
 						templateNumber, template);
 			}
 		}
@@ -431,24 +431,24 @@ public class ExtractInformation {
 			if (!infoJson.isEmpty()) {
 				// In case of the method doesn't have parameter
 				// add the noPara url
-//				processMe.addNoParaUrl(swagger, strAll, infoJson, reverse);
+//				processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
 				// add all the url/action pair
-				processMe.addAllParaURL(swagger, strAll, infoJson, reverse, scheme);
+				processMe.addAllParaURL(openAPI, strAll, infoJson, reverse, scheme);
 			}
 		}
 	}
 
-	public static void writeOpenAPI(JSONObject swagger, String scheme, String template, String number, String abbrev, String reverse)
+	public static void writeOpenAPI(JSONObject openAPI, String scheme, String template, String number, String abbrev, String reverse)
 			throws IOException {
 
-		// Print pretty swagger
+		// Print pretty openAPI
 		String fileName = scheme + "_" + template + "_" + number + "_" + abbrev + "_" + reverse + ".json";
-		writeFile(swagger.toString(), fileName);
+		writeFile(openAPI.toString(), fileName);
 	}
 
-	public static void writeFile(String swagger, String fileName) throws IOException {
+	public static void writeFile(String openAPI, String fileName) throws IOException {
 		FileWriter fileWriter = new FileWriter(CompareSet_PATH + "/" + fileName);
-		String swString = swagger.toString();
+		String swString = openAPI.toString();
 		JsonParser parser = new JsonParser();
 		JsonElement jelement = parser.parse(swString);
 
