@@ -14,6 +14,9 @@
     "/2013&lengthOfStay=2&api_key=myAPIKey,": {
       "GET": {}
     },
+    "/camps’,": {
+      "GET": {}
+    },
     "/campsites": {
       "GET": {}
     },
@@ -21,6 +24,9 @@
       "GET": {}
     },
     "/campsiteSearch.do": {
+      "GET": {}
+    },
+    "/cycling’,": {
       "GET": {}
     },
     "/Service": {
@@ -32,17 +38,11 @@
     "/campgrounds": {
       "GET": {}
     },
-    "/api.amp.ac": {
-      "GET": {}
-    },
     "/affiliates.": {
       "GET": {}
     },
     "/Los_Angeles\",": {
       "POST": {},
-      "GET": {}
-    },
-    "/campgrou": {
       "GET": {}
     },
     "/latlong": {

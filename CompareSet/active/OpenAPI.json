@@ -1,57 +1,57 @@
 {
+  "basePath": "/v2/search",
   "paths": {
-    "p.active.com/camping/campsites": {
+    "/&current_page=1&per_page=50&sort=date_asc&start_date=2014-05-06..2014-11-06&exclude_children=true&api_key=xxxxxxx": {
+      "GET": {}
+    },
+    "/details": {
+      "POST": {},
       "GET": {},
-      "get": {}
-    },
-    "http://countrycode.org": {
-      "POST": {}
-    },
-    "http://www.tantracking.com/click.track": {
-      "GET": {}
-    },
-    "https://www.active.com/register/index.cfm": {
-      "POST": {}
-    },
-    "http://developer.active.com/affiliates.": {
-      "GET": {}
-    },
-    "/": {
-      "GET": {}
-    },
-    "p.active.com/camping/campgrounds": {
-      "GET": {},
-      "Get": {}
-    },
-    "p.active.com/camping/campground/details": {
-      "post": {},
-      "Get": {},
       "DEL": {}
     },
-    "p.active.com/search": {
+    "/Clinics": {
+      "POST": {}
+    },
+    "/2013&lengthOfStay=2&api_key=myAPIKey,": {
       "GET": {}
     },
-    "http://localhost/campsiteSearch.do": {
+    "/camps’,": {
       "GET": {}
     },
-    "p.ac": {
+    "/campsites": {
       "GET": {}
     },
-    "p.active.com/v2/search": {
-      "post": {},
-      "GET": {},
-      "get": {},
-      "put": {}
-    },
-    "p.active.com/c": {
+    "/provincial": {
       "GET": {}
     },
-    "p.active.com/camping/campgrou": {
+    "/campsiteSearch.do": {
+      "GET": {}
+    },
+    "/cycling’,": {
+      "GET": {}
+    },
+    "/Service": {
+      "GET": {}
+    },
+    "/click.track": {
+      "GET": {}
+    },
+    "/campgrounds": {
+      "GET": {}
+    },
+    "/affiliates.": {
+      "GET": {}
+    },
+    "/Los_Angeles\",": {
+      "POST": {},
+      "GET": {}
+    },
+    "/latlong": {
       "GET": {}
     }
   },
   "produces": "application/json",
-  "host": "api.am",
+  "host": "api.amp.active.com",
   "schemes": [
     "http"
   ],

@@ -1,53 +1,38 @@
 {
   "paths": {
-    "p.active.com/camping/campsites": {
+    "/camping/campgrounds": {
+      "GET": {}
+    },
+    "http://localhost/campsiteSearch.do": {
       "GET": {}
     },
     "http://countrycode.org": {
       "POST": {}
     },
+    "/camping/campsites": {
+      "GET": {}
+    },
+    "/camping/campground/details": {
+      "POST": {},
+      "GET": {}
+    },
     "http://www.tantracking.com/click.track": {
       "GET": {}
+    },
+    "/v2/search": {
+      "POST": {},
+      "GET": {},
+      "PUT": {}
     },
     "https://www.active.com/register/index.cfm": {
       "POST": {}
     },
     "http://developer.active.com/affiliates.": {
       "GET": {}
-    },
-    "/": {
-      "GET": {}
-    },
-    "p.active.com/camping/campgrounds": {
-      "GET": {}
-    },
-    "p.active.com/camping/campground/details": {
-      "POST": {},
-      "GET": {}
-    },
-    "p.active.com/search": {
-      "GET": {}
-    },
-    "http://localhost/campsiteSearch.do": {
-      "GET": {}
-    },
-    "p.ac": {
-      "GET": {}
-    },
-    "p.active.com/v2/search": {
-      "POST": {},
-      "GET": {},
-      "PUT": {}
-    },
-    "p.active.com/c": {
-      "GET": {}
-    },
-    "p.active.com/camping/campgrou": {
-      "GET": {}
     }
   },
   "produces": "application/json",
-  "host": "api.am",
+  "host": "api.amp.active.com",
   "schemes": [
     "http"
   ],

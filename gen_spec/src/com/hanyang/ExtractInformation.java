@@ -263,11 +263,19 @@ public class ExtractInformation {
 			JSONObject sectionJson = new JSONObject();
 			int startIndex = matcher.start();
 			Out.prln("start: " + matcher.start());
-			Out.prln("end:   " + matcher.end());
-			// Fix 2: suppose the URL length < 100
+			Out.prln("end:   " + matcher.end());			
 			String matchStr;
 			try {
-				matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+				if (reverse == "no") {			
+					// Fix 2: suppose the URL length < 100
+					// no reverse: get + url
+					matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+				} else {
+					// reverse mode: url + get
+					matchStr = strAll.substring(matcher.start(), matcher.end());
+				}
+				
+				
 			} catch (Exception e) {
 				matchStr = strAll.substring(matcher.start(), matcher.end());
 			}
