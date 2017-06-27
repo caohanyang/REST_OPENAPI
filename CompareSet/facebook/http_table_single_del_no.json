@@ -1,0 +1,563 @@
+{
+  "basePath": "/<",
+  "paths": {
+    "https://developers.google.com/streetview/spherical-metadata": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "368",
+            "description": "The action attempted has been deemed abusive or is otherwise disallowed",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "240",
+            "description": "Desktop applications cannot call this function for other users",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2010",
+            "description": "Photos calls have been temporarily disabled for this application",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "122",
+            "description": "Invalid vault image id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "123",
+            "description": "Invalid sync object uuid",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "120",
+            "description": "Invalid album id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "121",
+            "description": "Invalid photo id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "190",
+            "description": "Invalid OAuth 2.0 Access Token",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "https://www.facebook.com/<POST_ID>": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\ncall_to_action\n\nObject",
+            "description": "that specifies a Call to Action button. This should be the action you want people to take when they see your post. Clicking on this button will take people to the link you specify.\n\nobject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\n\nDetermines",
+            "description": "the call to action button text. One of allowed values:\n\nBOOK_TRAVEL . Call to action shows up as Book Now.\n\nBUY_NOW . Call to action shows up as Buy Now. Only used for desktop app ads for virtual goods .\n\nCALL_NOW . Call to action shows up as Call Now. Only used for local awareness ads .\n\nDOWNLOAD . Call to action shows up as Download.\n\nGET_DIRECTIONS . Call to action shows up as Get Directions. Must specify coordinates on the link field. Only used for local awareness ads .\n\nGET_QUOTE . Call to action shows up as Get Quote for lead generation .\n\nINSTALL_APP . Call to action shows up as Install Now.\n\nINSTALL_MOBILE_APP . Call to action shows up as Install Now. Only used for mobile app ads .\n\nLEARN_MORE . Call to action shows up as Learn More.\n\nLIKE_PAGE . Call to action shows up as Like Page. Only used for ads in Page Likes objective .\n\nLISTEN_MUSIC . Call to action shows up as Listen Music.\n\nMESSAGE_PAGE . Call to action shows up as Send Message. Only used for local awareness ads .\n\nNO_BUTTON . No call to action shows up.\n\nOPEN_LINK . Call to action shows up as Open Link. Only used for ads in Website Clicks objective .\n\nPLAY_GAME . Call to action shows up as Play Game. Only used for desktop app ads .\n\nSHOP_NOW . Call to action shows up as Shop Now. Only used for ads in Website Conversions objective .\n\nSIGN_UP . Call to action shows up as Sign Up.\n\nSUBSCRIBE . Call to action shows up as Subscribe for lead generation .\n\nUSE_APP . Call to action shows up as Use App.\n\nUSE_MOBILE_APP . Only used for mobile app ads .\n\nWATCH_MORE . Call to action shows up as Watch More.\n\nWATCH_VIDEO . Call to action shows up as Watch Video.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "value\n\nSupporting",
+            "description": "data for the Call to Action button\n\nobject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link\n\nURL",
+            "description": "that the Call to Action button will link to. For link page post this must be the same as the link value of the post. Only external shares are allowed. The CTA link cannot link to facebook.com/.. but can link to apps.facebook.com/app-id.. and other external links.\nWhen Call to Action button is GET_DIRECTIONS or CALL_NOW , link format differs. Please refer to local awareness docs for more detail.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_caption\n\nSpecifies",
+            "description": "the caption used for the link which appears below the description. Default is the host name from the link. For example www.example.com. Overwrites captions specified in other fields.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_format\n\nSpecifies",
+            "description": "the format for the link. For example VIDEO_LPP for video page posts with call to action.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_title\n\nUsed",
+            "description": "ink_title\n\nUsed in carousel ads and is the title of the link of an individual story within the child_attachment.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page\n\nPage",
+            "description": "ID when type is LIKE_PAGE\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "http://example.com'": {
+      "POST": {},
+      "Post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nNo",
+            "description": "optional image parameters\n\nImage is sourced from the contents of the Link\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture",
+            "description": "parameter supplied\n\nstring\n\nURL for the image\n\nImage is sourced from the URL supplied in picture\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "thumbnail",
+            "description": "parameter supplied\n\nfile\n\nImage file to be uploaded. Accepts .jpg .jpeg .gif or .png\n\nImage is sourced from the file uploaded in thumbnail\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http_method": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_version\nenum{unversioned,",
+            "description": "v1.0, v2.0, v2.1, v2.2, v2.3, v2.4, v2.5, v2.6, v2.7, v2.8, v2.9, v2.10, v3.0}\n\nGraph API version of the stored request\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\nstring\n\nDescription",
+            "description": "of the favorite request\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "graph_path\nstring\n\nGraph",
+            "description": "path\nstring\n\nGraph path of the stored request\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "http_method\nenum{GET,",
+            "description": "POST, DELETE}\n\nHTTP method of the stored request.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "post_params\ndictionary",
+            "description": "{ string : <string> }\n\nParameters of the stored POST request\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "query_params\ndictionary",
+            "description": "{ string : <string> }\n\nQuery parameters of the stored GET request\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt2015381%2F": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\n\nThe",
+            "description": "URL itself.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_object\n\nThe",
+            "description": "Open Graph object that is canonically associated with this URL.\n\nOGObject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id\n\nID",
+            "description": "of object.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\n\nThe",
+            "description": "description\n\nThe description of the object.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title\n\nThe",
+            "description": "title\n\nThe title of the object.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\n\nThe",
+            "description": "object type.\n\nog:type\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "updated_time\n\nWhen",
+            "description": "the object was last updated.\n\ndatetime\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "app_links\n\nAppLinks",
+            "description": "data associated with this URL.\n\nAppLinks\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "engagement\n\nEngagements",
+            "description": "associated with this URL.\n\nobject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "reaction_count\n\nThe",
+            "description": "sum of reactions across all posts containing the URL on Facebook.\n\nnumber\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "comment_count\n\nThe",
+            "description": "sum of comments on posts containing this URL on Facebook.\n\nnumber\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "share_count\n\nThe",
+            "description": "total shares of this URL all over Facebook.\n\nnumber\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "comment_plugin_count\n\nThe",
+            "description": "number shown in the comments plugin associated with the URL. This number does not include comments made on posts on Facebook.\n\nnumber\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "video_id>": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "content_category\nenum",
+            "description": "{BEAUTY_FASHION, BUSINESS, CARS_TRUCKS, COMEDY, CUTE_ANIMALS, ENTERTAINMENT, FAMILY, FOOD_HEALTH, HOME, LIFESTYLE, MUSIC, NEWS, POLITICS, SCIENCE, SPORTS, TECHNOLOGY, VIDEO_GAMING, OTHER}\n\nContent category of this video.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\nUTF-8",
+            "description": "string\n\nThe description of the video, used as the accompanying status message in any feed story. This parameter can contain mentions of other Facebook Pages using the following syntax:\n@[page-id]\n\nFor example the following description would mention the Facebook Developers page inline:\nTest message @[19292868552] tag\n\nUsage of this feature is subject to review but by using Pages you are an admin of (both to make the API call, and to be used in a mention), and an app you are a developer of, you can test it for yourself before review.\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "embeddable\nboolean\n\nWhether",
+            "description": "ther the video is embeddable.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "file_size\nint64\n\nThe",
+            "description": "size\nint64\n\nThe size of the entire video file in bytes.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "file_url\nstring\n\nAccessible",
+            "description": "URL of a video file. Cannot be used with upload_phase .\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "fov\nint64\n\n360",
+            "description": "video only: Vertical field of view\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "guide\nlist<list<int64>>\n\n360",
+            "description": "video only: Guide keyframes data. An array of keyframes, each of which is an array of 3 or 4 elements in the following order: [video timestamp (seconds), pitch (degrees, -90 ~ 90), yaw (degrees, -180 ~ 180), field of view (degrees, 40 ~ 90, optional)], ordered by video timestamp in strictly ascending order.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "guide_enabled\nboolean\n\n360",
+            "description": "video only: Whether Guide is active.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "initial_heading\nint64\n\n360",
+            "description": "video only: Horizontal camera perspective to display when the video begins.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "initial_pitch\nint64\n\n360",
+            "description": "video only: Vertical camera perspective to display when the video begins.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "original_projection_type\nenum",
+            "description": "{equirectangular, cubemap}\n\n360 video only: The original projection type of the 360 video being uploaded.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "referenced_sticker_id\nnumeric",
+            "description": "string or integer\n\nSticker id of the sticker in the post\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "replace_video_id\nnumeric",
+            "description": "string or integer\n\nThe video id your uploaded video about to replace\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "slideshow_spec\nJSON",
+            "description": "object\n\nSpecification of a list of images that are used to generate video.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "images_urls\nlist<URL>\n\nA",
+            "description": "3-7 element array of the URLs of the images. Required.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "duration_ms\ninteger\n\nThe",
+            "description": "duration_ms\ninteger\n\nThe duration in milliseconds of each image. Default value is 1000.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "transition_ms\ninteger\n\nThe",
+            "description": "duration in milliseconds of the crossfade transition between images. Default value is 1000.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source\nstring\n\nThe",
+            "description": "video, encoded as form data . This field is required.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "spherical\nboolean\nDefault",
+            "description": "value: false\n\nSet if the video was recorded in 360 format.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "start_offset\nint64\n\nStart",
+            "description": "byte position of the file chunk.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "swap_mode\nenum",
+            "description": "{replace}\n\nType of replacing video request\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "thumb\nimage\n\nThe",
+            "description": "video thumbnail raw data to be uploaded and associated with a video.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title\nUTF-8",
+            "description": "string\n\nThe title of the video.\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "unpublished_content_type\nenum",
+            "description": "{SCHEDULED, DRAFT, ADS_POST}\n\nType of unpublished content, such as scheduled, draft or ads_post.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "upload_phase\nenum",
+            "description": "{start, transfer, finish, cancel}\n\nType of chunked upload request.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "upload_session_id\nnumeric",
+            "description": "string or integer\n\nID of the chunked upload session.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "video_file_chunk\nstring\n\nThe",
+            "description": "video_file_chunk\nstring\n\nThe video file chunk, encoded as form data . This field is required during transfer upload phase.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "API_VERSION>/204807582871020/promotable_posts": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nlink\n\nThe",
+            "description": "link\n\nThe link field is still supported, but its sub-fields have been deprecated.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture\n\nDetermines",
+            "description": "the preview image associated with the link.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\n\nOverwrites",
+            "description": "the title of the link preview.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "caption\n\nOverwrites",
+            "description": "the caption under the title in the link preview.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\n\nOverwrites",
+            "description": "the description in the link preview\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "graph.facebook.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

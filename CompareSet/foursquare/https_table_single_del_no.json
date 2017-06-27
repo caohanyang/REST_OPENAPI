@@ -1,0 +1,66 @@
+{
+  "paths": {
+    "https://swarmapp.com/c": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The check-in associated with this shortId.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://api.foursquare.com/v2": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkins",
+            "description": "An array of checkin objects with user details present. Usually, venue details are also present, depending on whether the checkin has a venue.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "comment",
+            "description": "The newly-created comment.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "A complete check-in object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The checkin, minus this comment.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,79 @@
+{
+  "paths": {
+    "https://api.picplz.com/api/v2/user/follow": {
+      "DELETE": {}
+    },
+    "https://api.picplz.com/api/v2/pic": {
+      "GET": {}
+    },
+    "http://YOUR_REGISTERED_REDIRECT_URI/#access_token=ACCESS_TOKEN": {
+      "POST": {}
+    },
+    "m/api/v2/user/follow": {
+      "DELETE": {}
+    },
+    "http://api": {
+      "GET": {}
+    },
+    "m/api/v2/city": {
+      "GET": {}
+    },
+    "http://picplz.com": {
+      "GET": {}
+    },
+    "m/api/v2/feed": {
+      "GET": {}
+    },
+    "https://api-upload.picplz.com/api/v2/upload_basic": {
+      "POST": {}
+    },
+    "https://YOUR_REGISTERED_REDIRECT_URI": {
+      "GET": {}
+    },
+    "m/api": {
+      "GET": {}
+    },
+    "https://api.picplz.com/api/v2/pic/like": {
+      "DELETE": {},
+      "Post": {}
+    },
+    "https://api.picplz.com/api/v2/pic/comment": {
+      "DELETE": {},
+      "post": {}
+    },
+    "/": {
+      "GET": {}
+    },
+    "m/api/v2/user": {
+      "GET": {}
+    },
+    "m/api/v2/following": {
+      "GET": {}
+    },
+    "m/api/v2/place": {
+      "GET": {}
+    },
+    "m/api/v2/pic": {
+      "GET": {}
+    },
+    "https://api.picplz.com/api/v2/collection/pic": {
+      "DELETE": {}
+    },
+    "m/api/v2/collection": {
+      "DELETE": {}
+    },
+    "http://picplz.com/api/v2/feed": {
+      "GET": {}
+    },
+    "m/api/v2/followers": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.picplz.co",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

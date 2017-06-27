@@ -1,0 +1,18 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/tips/49f083e770c603bbe81f8eb4": {
+      "DELETE": {}
+    },
+    "/": {
+      "DELETE": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

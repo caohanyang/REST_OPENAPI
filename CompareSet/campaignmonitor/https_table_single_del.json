@@ -1,11 +1,7 @@
 {
   "basePath": "/api/v3.1",
   "paths": {
-    "/clients.xml": {
-      "POST": {}
-    },
     "/": {
-      "Post": {},
       "Get": {}
     }
   },

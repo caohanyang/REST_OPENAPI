@@ -1,0 +1,18 @@
+{
+  "basePath": "/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\",",
+  "paths": {
+    "/subscribe": {
+      "POST": {}
+    },
+    "/deactivate": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.campaignmonitor.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

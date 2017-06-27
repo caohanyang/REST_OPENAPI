@@ -1,0 +1,15 @@
+{
+  "basePath": "/mobbr/mobbr-api-v1",
+  "paths": {
+    "/": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "github.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

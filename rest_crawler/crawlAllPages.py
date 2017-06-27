@@ -34,6 +34,7 @@ class Crawler(object):
     # https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_list.htm   ui-view
     # http://api.eventful.com/docs
     # https://cloud.google.com/translate  https://cloud.google.com/translate/docs/reference
+    # https://www.mediawiki.org/wiki/REST_API https://en.wikipedia.org/api/rest_v1
 
     # https://platform.gethealth.io/#!/Account_API/CreateUser https://platform.gethealth.io
 
@@ -129,12 +130,17 @@ class Crawler(object):
                 link = link.split('#')[0]
 
             # Second remove the last / from the link  /developer/endpoint/ => /develper/endpoint
-            link = link.split("/")
-            if link[-1] == "":
-                link.pop()
-            link = '/'.join(link)
+            # Without foursqure and wikipedia
+            if link.__contains__("foursquare") or link.__contains__("wikipedia"):
+                print "don't remove / in the end of URL"
+            else:
+                link = link.split("/")
+                if link[-1] == "":
+                    link.pop()
+                link = '/'.join(link)
             # Start to handle link
             if link.startswith('http'):
+
                 if filter(link):
                     page_links.append(link)
                     print "Adding link " + link + "\n"
@@ -188,9 +194,9 @@ class Crawler(object):
         try:
             page = "http://" + '/'.join(html_page)
 
-            # res = urllib2.urlopen(page)
-            request = urllib2.Request(page, headers={"Accept-Language": "en-US,en;q=0.5"})
-            res = urllib2.urlopen(request)
+            res = urllib2.urlopen(page)
+            # request = urllib2.Request(page, headers={"Accept-Language": "en-US,en;q=0.5"})
+            # res = urllib2.urlopen(request)
 
             print "Downloading: " + res.geturl()
 

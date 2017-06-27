@@ -1,0 +1,80 @@
+{
+  "paths": {
+    "/counterexamples": {
+      "POST": {},
+      "GET": {},
+      "Del": {}
+    },
+    "/{value}": {
+      "POST": {}
+    },
+    "/{intent}": {
+      "POST": {},
+      "DEL": {}
+    },
+    "/intents": {
+      "POST": {},
+      "GET": {}
+    },
+    "/conversa": {
+      "POST": {}
+    },
+    "/gateway.watsonpl": {
+      "POST": {}
+    },
+    "/synonyms": {
+      "POST": {},
+      "GET": {}
+    },
+    "/gateway.watsonp": {
+      "POST": {}
+    },
+    "/convers": {
+      "POST": {}
+    },
+    "/workspaces": {
+      "POST": {},
+      "GET": {},
+      "Del": {}
+    },
+    "/{entity}": {
+      "POST": {}
+    },
+    "/gateway.watsonpla": {
+      "POST": {}
+    },
+    "/entities": {
+      "POST": {},
+      "GET": {}
+    },
+    "/workspace": {
+      "GET": {}
+    },
+    "/{synonym}": {
+      "POST": {}
+    },
+    "/examples": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{workspace_id}": {
+      "POST": {}
+    },
+    "/message": {
+      "POST": {}
+    },
+    "/gateway.watsonplatform": {
+      "POST": {}
+    },
+    "/Make%20me%20a%20sandwich": {
+      "GET": {},
+      "Get": {}
+    },
+    "/{entity": {
+      "DEL": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

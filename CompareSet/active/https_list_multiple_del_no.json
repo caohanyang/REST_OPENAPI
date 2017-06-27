@@ -1,0 +1,13 @@
+{
+  "paths": {
+    "https://campscui.active.com/orgs/UniversityofSanDiego0": {
+      "GET": {}
+    },
+    "https://www.active.com/register/index.cfm": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

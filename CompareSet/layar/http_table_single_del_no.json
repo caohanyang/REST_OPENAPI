@@ -1,0 +1,195 @@
+{
+  "basePath": "/",
+  "paths": {
+    "http://demo.com/video.mp4\",": {
+      "GET": {}
+    },
+    "http://yourlink.com/object.l3d\",": {
+      "DEL": {}
+    },
+    "http://m.layar.com/open/<layername>": {
+      "GET": {},
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Example:",
+            "description": "layar://examplelayer",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Explanation:",
+            "description": "This intent should be used for linking to a layer from within the Layar app (actions, redirects, links within the webviews etc... inside a layer).\nNOTE: that on iphone and android (and only on these platforms), this also works from external applications but only if the Layar Browser is installed. We recommend to use the second form below if you are not sure on which platform the user is or whether the Layar Browser is installed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Supported",
+            "description": "Platform: All platforms",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Introduced",
+            "description": "API: v3.0",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "When",
+            "description": "to use: Link to a layer from another layer within Layar app.\nLink to a layer using an action within Layar app.\nOpening a layer by using intents in the web browser directly. (iphone only)\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "description": "mandatory string Treasure hunt Title to show with the shared message",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "mandatory string message Determines if the action should trigger sharing a message or a screenshot. use \"message\" to share a message.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link",
+            "description": "optional url http://developer.com/scoreboard/user This link is attached to the title parameter. It can be linked to a web page which shows more information about shared message.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "icon",
+            "description": "optional url http://developer.com/image.png Places this icon next to a status update on Facebook. If not provided, the layer's icon (defined under Listing & indexing tab of the layer editing page) will be used. The recommended icon size is 150x150. Not possible when sharing on Twitter.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "optional string Find more treasures with this layer! Text that will show when the user shares their status update. This text is determined by the developer and cannot be changed by the user.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "service",
+            "description": "optional string(facebook, twitter, developer) facebook Introduced in API v7.0. This specifies a specific service this share action is meant to be used for. Only 'facebook', 'twitter' or 'developer' are supported at the moment. 'developer' works only if 'type' is 'screenshot' and is then pointing to the layer-defined developer URL for sharing screenshots .\nIf not specified, the user gets to choose which service to use. If specified, the user will directly use the defined service.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://layarapi.example.net/mylayer/getpoi": {
+      "GET": {}
+    },
+    "example_full.l3d\",": {
+      "DEL": {}
+    },
+    "full_model.l3d\",": {
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "interpolationParam",
+            "description": "decimal Parameter for the interpolation algorithm. The interpolation types are explained below.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Mandatory/Optional:",
+            "description": "Optional: Optional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Path:",
+            "description": "root.animations or hotspots.animations",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Example:",
+            "description": "\"interpolationParam\": 1.0",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http:\\/\\/custom.layar.nl\\/layarimage.jpeg": {
+      "GET": {}
+    },
+    "http://<poiUrl>": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "userId",
+            "description": "string A unique id of the user.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Mandatory/Optional:",
+            "description": "mandatory",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Introduced",
+            "description": "API: introduced in v2.1; modified in v6.2 for privacy reasons.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Detailed",
+            "description": "Description: A unique ID of the end-user, anonymized. It is a hashed code. This ID is created when the layar app is installed the first time. It will be kept when the app is updated. A new ID is generated when the app is completely removed from the device and replaced with a new download.\nNOTE: Since the algorithm of generating this unique ID is changed in API v6.2, the userID will be replaced when upgrading to v6.2. In future releases, as long as the Layar app is not removed completely, the userID will be kept.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Example:",
+            "description": "userId=42241049345",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://mylayer.com/account": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "example.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

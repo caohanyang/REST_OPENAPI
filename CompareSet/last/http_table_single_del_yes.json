@@ -1,0 +1,106 @@
+{
+  "paths": {
+    "/music/Cher/Believe</url>": {
+      "GET": {}
+    },
+    "http://ws.audioscro": {
+      "GET": {}
+    },
+    "/music/Bee+Gees</url>": {
+      "GET": {}
+    },
+    "/music/ABBA</url>": {
+      "GET": {}
+    },
+    "/tag/disco</url>": {
+      "GET": {}
+    },
+    "/music/David+Hudson+and+Friends/Bedarra</url>": {
+      "GET": {}
+    },
+    "http://ws.audioscrobbler.com/2.0/geo/spain/topartists.csv": {
+      "GET": {}
+    },
+    "/music/Dirk+Leyers/_/Wellen</url>": {
+      "GET": {}
+    },
+    "/tag/rock</url>": {
+      "GET": {}
+    },
+    "http://a9.com/-/spec/opensearch/1.1/\">": {
+      "GET": {}
+    },
+    "/tag/pop</url>": {
+      "GET": {},
+      "Get": {},
+      "get": {}
+    },
+    "/music/Róisín+Murphy</url>": {
+      "GET": {}
+    },
+    "/music/Dream+Theater</url>": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://ws.audioscrobbler.com/2.0": {
+      "POST": {}
+    },
+    "/music/Cher</url>": {
+      "GET": {}
+    },
+    "http://ws.audioscrobbler.com/2.0/user/rj/lovedtracks.rss": {
+      "GET": {}
+    },
+    "/tag/albums%20i%20own</url>": {
+      "GET": {}
+    },
+    "/tag/italo</url>": {
+      "GET": {}
+    },
+    "/api/auth": {
+      "GET": {}
+    },
+    "/music/Guns+N%27+Roses</url>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/user/eartle</url>": {
+      "GET": {}
+    },
+    "/tag/swedish</url>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/music/Kanye+West</url>": {
+      "GET": {}
+    },
+    "http://ws.audioscrobbler.com/2.0/artist/cher/toptracks.xspf": {
+      "GET": {}
+    },
+    "/music/Disturbed/_/Believe</url>": {
+      "GET": {}
+    },
+    "http://ws.audioscrobbler.com/2.0/user/rj/recenttracks": {
+      "GET": {}
+    },
+    "/music/David+Hudson+and+Friends</url>": {
+      "GET": {}
+    },
+    "http://example.com": {
+      "GET": {}
+    },
+    "http://ws.audioscrobbler.com/2.0/geo/spain/toptracks.csv": {
+      "GET": {}
+    },
+    "/tag/high": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.last.fm",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

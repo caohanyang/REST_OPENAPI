@@ -1,0 +1,21 @@
+{
+  "basePath": "/profile/view",
+  "paths": {
+    "/oauth/v2/accessToken": {
+      "POST": {}
+    },
+    "/v1/people/~": {
+      "GET": {}
+    },
+    "/uas/oauth2/accessToken": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.linkedin.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

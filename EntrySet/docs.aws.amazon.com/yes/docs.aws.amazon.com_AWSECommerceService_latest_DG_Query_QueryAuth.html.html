@@ -25,7 +25,7 @@
   <link href="/css/highlight-default.css" rel="stylesheet" type="text/css"/>
   <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
   <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/awsdocs.css?v=20170615" rel="stylesheet" type="text/css"/>
   <script src="/js/highlight.pack.js" type="text/javascript">
   </script>
   <script src="/js/jquery.min.js" type="text/javascript">
@@ -36,7 +36,7 @@
   </script>
   <script src="/js/jquery.colorbox.js" type="text/javascript">
   </script>
-  <script src="/js/awsdocs.min.js" type="text/javascript">
+  <script src="/js/awsdocs.min.js?v=20170615" type="text/javascript">
   </script>
   <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript">
   </script>
@@ -1778,7 +1778,7 @@
              AWS Documentation
             </a>
             »
-            <a href="uri">
+            <a href="http://aws.amazon.com/archives/Product%20Advertising%20API">
              Amazon Product Advertising API Docs
             </a>
             »
@@ -1812,8 +1812,10 @@
         Authenticating REST Requests
        </h1>
        <p>
-        This section describes how to create a signature. The Product Advertising API supports only Signature
-                        		Version 2. You can also use the Product Advertising API Scratchpad to generate sample code for requests
+        This section describes how to create a signature. The Product Advertising API supports
+                        only Signature
+                        		Version 2. You can also use the Product Advertising API Scratchpad to generate sample
+                        code for requests
                         		and responses. For more information, see
         <a href="Scratchpad.html">
          Using the Product Advertising API Scratchpad
@@ -1883,8 +1885,9 @@
                 Perl Note:
                </p>
                <p>
-                The commonly used URI::Escape CPAN module uses RFC 2396.  This has five additional reserved characters: asterisk ( * ), left
-                                                and right parenthesis ( ( and ) ), single quote ( ‘ ) and exclamation ( ! ).  To follow RFC 3986 use:
+                The commonly used URI::Escape CPAN module uses RFC 2396.  This has five additional
+                                                reserved characters: asterisk ( * ), left and right parenthesis ( ( and ) ), single
+                                                quote ( ‘ ) and exclamation ( ! ).  To follow RFC 3986 use:
                </p>
                <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">URI::Escape::uri_escape( $parameter_value, "^A-Za-z0-9\-_.~" )</code></pre>
               </div>
@@ -1893,8 +1896,8 @@
                 Java Note:
                </p>
                <p>
-                URLEncoder uses + for space, and won’t encode asterisk ( * ) , and encodes tilda ( ~  ) when not necessary.  To follow RFC
-                                                3986 use:
+                URLEncoder uses + for space, and won’t encode asterisk ( * ) , and encodes tilda (
+                                                ~  ) when not necessary.  To follow RFC 3986 use:
                </p>
                <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">URLEncoder.encode(value, UTF_8_Encoding).replace("+", "%20").replace("*", "%2A").replace("%7E", "~");</code></pre>
               </div>
@@ -1914,7 +1917,8 @@
              Tip
             </p>
             <p>
-             Currently all Product Advertising API service parameter names use unreserved characters, so you
+             Currently all Product Advertising API service parameter names use unreserved characters,
+                                       so you
                                        							don't need to encode them. However, you might want to include code to handle
                                        							parameter names that use reserved characters, for possible future use.
             </p>
@@ -1947,22 +1951,25 @@
 				HTTPRequestURI + "\n" +
 				CanonicalizedQueryString &lt;from the preceding step&gt;</code></pre>
          <p>
-          The HTTPRequestURI component is the HTTP absolute path component of the URI up to, but not
-                              			including, the query string. If the HTTPRequestURI is empty, use a forward slash ( / ).
+          The HTTPRequestURI component is the HTTP absolute path component of the URI up to,
+                              but not
+                              			including, the query string. If the HTTPRequestURI is empty, use a forward slash
+                              ( / ).
          </p>
          <div class="aws-note">
           <p class="aws-note">
            Note
           </p>
           <p>
-           HTTPRequestURI is always “/onca/xml” for Product Advertising API. HTTPVerb is either GET or POST.
+           HTTPRequestURI is always “/onca/xml” for Product Advertising API. HTTPVerb is either
+                                 GET or POST.
           </p>
          </div>
         </li>
         <li>
          <p>
-          Calculate an RFC 2104-compliant HMAC with the string you just created, your AWS secret access key as the key, and SHA256 as
-                              the hash algorithm.
+          Calculate an RFC 2104-compliant HMAC with the string you just created, your AWS secret
+                              access key as the key, and SHA256 as the hash algorithm.
          </p>
          <p>
           For more information, see
@@ -1993,7 +2000,8 @@
          RFC 3986
         </a>
         . If your toolkit URL encodes
-                        		your final request, then it handles the required URL encoding of the signature. If your
+                        		your final request, then it handles the required URL encoding of the signature.
+                        If your
                         		toolkit doesn't URL encode the final request, then make sure to URL encode the signature
                         		before you include it in the request.
        </p>
@@ -2007,7 +2015,8 @@
           only once
          </b>
          . A common
-                           			mistake is to URL encode it manually during signature formation, and then again when the
+                           			mistake is to URL encode it manually during signature formation, and then again
+                           when the
                            			toolkit URL encodes the entire request.
         </p>
        </div>
@@ -2099,7 +2108,8 @@
          Javascript is disabled or is unavailable in your browser.
         </strong>
         <br/>
-        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.
+        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's
+                        Help pages for instructions.
        </div>
       </div>
      </div>

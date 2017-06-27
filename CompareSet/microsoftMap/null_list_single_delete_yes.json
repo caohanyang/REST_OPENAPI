@@ -1,0 +1,18 @@
+{
+  "basePath": "/search/local/ws/rest/v1\">",
+  "paths": {
+    "?method=Geocode Dataflow Sample Input and Output Data Version 1.0": {
+      "PUT": {}
+    },
+    "?method=Output Parameters": {
+      "PUT": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "schemas.microsoft.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

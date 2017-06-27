@@ -1,0 +1,43 @@
+{
+  "basePath": "/api/v2/",
+  "paths": {
+    "collection/pic": {
+      "DEL": {}
+    },
+    "pic/like": {
+      "Post": {},
+      "DEL": {}
+    },
+    "https://picplz.com/oauth2/authenticate": {
+      "POST": {}
+    },
+    "following": {
+      "GET": {}
+    },
+    "https://api-upload.picplz.com/api/v2/upload_basic": {
+      "POST": {}
+    },
+    "pic/comment": {
+      "post": {},
+      "GET": {},
+      "DEL": {}
+    },
+    "https://YOUR_REGISTERED_REDIRECT_URI": {
+      "GET": {}
+    },
+    "user": {
+      "DEL": {}
+    },
+    "user/follow": {
+      "GET": {},
+      "DEL": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.picplz.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

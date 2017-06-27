@@ -1,0 +1,67 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/tips/49f083e770c603bbe81f8eb4": {
+      "DELETE": {}
+    },
+    "https://www.swarmapp.com/c/fcP5m3yn7AL": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The check-in associated with this shortId.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://foursquare.com/user": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user",
+            "description": "A user .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/": {
+      "POST": {},
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venue",
+            "description": "A complete venue .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "An array of compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "delete": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

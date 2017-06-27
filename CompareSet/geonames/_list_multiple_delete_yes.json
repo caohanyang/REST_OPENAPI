@@ -1,0 +1,63 @@
+{
+  "basePath": "/srtm3",
+  "paths": {
+    "/findNearbyWikipediaRSS": {
+      "POST": {}
+    },
+    "/Address": {
+      "POST": {}
+    },
+    "/siblings": {
+      "POST": {}
+    },
+    "/wikipediaBoundingBox": {
+      "POST": {}
+    },
+    "/countrySubdivision": {
+      "GET": {}
+    },
+    "/postalCodeLookupJSON": {
+      "post": {},
+      "POST": {}
+    },
+    "/postalcode": {
+      "post": {},
+      "POST": {}
+    },
+    "/script>": {
+      "PUT": {}
+    },
+    "/postalCodeCountryInfo": {
+      "post": {},
+      "POST": {}
+    },
+    "/postalCodeSearch": {
+      "post": {},
+      "POST": {}
+    },
+    "/astergdem": {
+      "POST": {}
+    },
+    "/findNearbyWikipedia": {
+      "POST": {}
+    },
+    "/findNearByWeatherXML": {
+      "POST": {}
+    },
+    "/timezoneJSON": {
+      "GET": {}
+    },
+    "/findNearbyPostalCodes": {
+      "post": {},
+      "POST": {},
+      "Post": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.geonames.org",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,236 @@
+{
+  "paths": {
+    "/{user_i": {
+      "GET": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/{user_id}": {
+      "GET": {},
+      "Get": {},
+      "DEL": {},
+      "PATCH": {},
+      "PUT": {}
+    },
+    "/api.vime": {
+      "PATCH": {}
+    },
+    "/vimeo_oauth1": {
+      "POST": {}
+    },
+    "/{category}": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/api.vimeo.co": {
+      "GET": {}
+    },
+    "/channels": {
+      "POST": {},
+      "GET": {}
+    },
+    "/comments": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{genre_id}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/{background_id}": {
+      "PATCH": {}
+    },
+    "/{follow_user_id}": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/{channel_id}": {
+      "GET": {},
+      "DEL": {},
+      "PATCH": {},
+      "PUT": {}
+    },
+    "/{poster": {
+      "POST": {}
+    },
+    "/promotions": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{ondemand_": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/{ticket}": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/api.vim": {
+      "GET": {}
+    },
+    "/api.vimeo": {
+      "GET": {}
+    },
+    "/credits": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{group_id}": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/{country": {
+      "GET": {}
+    },
+    "/{video_": {
+      "GET": {}
+    },
+    "/api.vimeo.com": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/presets": {
+      "GET": {}
+    },
+    "/watchlater": {
+      "GET": {}
+    },
+    "/{ondemand_id}": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/[video_id]": {
+      "del": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/{ondemand": {
+      "GET": {}
+    },
+    "/{picture_id}": {
+      "GET": {},
+      "DEL": {},
+      "PATCH": {}
+    },
+    "/{preset_id}": {
+      "GET": {},
+      "DEL": {},
+      "PATCH": {},
+      "PUT": {}
+    },
+    "/followin": {
+      "POST": {}
+    },
+    "/{credit_id}": {
+      "GET": {}
+    },
+    "/{domain}": {
+      "DEL": {},
+      "PUT": {}
+    },
+    "/seasons": {
+      "GET": {}
+    },
+    "/categories": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/{portfolio_id}": {
+      "GET": {}
+    },
+    "/{texttrack_id}": {
+      "GET": {},
+      "DEL": {},
+      "PATCH": {}
+    },
+    "/portfolios": {
+      "GET": {}
+    },
+    "/promoti": {
+      "DEL": {}
+    },
+    "/{portraitset_id}": {
+      "DEL": {}
+    },
+    "/following": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{country}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/regions": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/followers": {
+      "GET": {}
+    },
+    "/{video_id}": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/replies": {
+      "POST": {}
+    },
+    "/texttracks": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{album_id}": {
+      "GET": {},
+      "DEL": {},
+      "PATCH": {}
+    },
+    "/pictures": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{poster_id}": {
+      "POST": {}
+    },
+    "/purchases": {
+      "GET": {}
+    },
+    "/access_token": {
+      "POST": {}
+    },
+    "/{comment_": {
+      "GET": {}
+    },
+    "/backgrounds": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{comment_id}": {
+      "post": {},
+      "GET": {},
+      "DEL": {},
+      "del": {},
+      "PATCH": {}
+    },
+    "/api.vimeo.": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/appearances": {
+      "GET": {}
+    },
+    "/domains": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

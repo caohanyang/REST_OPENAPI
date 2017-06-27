@@ -1,0 +1,31 @@
+{
+  "basePath": "/focus%E5%9B%BE%E5%83%8F.png",
+  "paths": {
+    "//layarapi.example.net/mylayer/getpoi": {
+      "GET": {}
+    },
+    "/Optional:": {
+      "Delete": {},
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "put": {}
+    },
+    "//<layername>": {
+      "GET": {}
+    },
+    "/overshoot.": {
+      "GET": {}
+    },
+    "/onClick,": {
+      "DELETE": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "custom.layar.nl",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

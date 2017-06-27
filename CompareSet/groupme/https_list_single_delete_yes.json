@@ -1,0 +1,119 @@
+{
+  "basePath": "/123456789",
+  "paths": {
+    "https://ap": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer — Fetch a particular page of results. Defaults to 1.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer — Define page size. Defaults to 10.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "\",": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bot_id required",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "text required",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture_url",
+            "description": "string — Image must be processed through image service .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user required",
+            "description": "string — your user id.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "otherUser required",
+            "description": "string — user id of person you want to block.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bot_id required",
+            "description": "",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "results_id required",
+            "description": "string — This is the guid that's returned from an add request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer — Page number",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer — Number of chats per page",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "i.groupme.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

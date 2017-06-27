@@ -1,0 +1,13 @@
+{
+  "paths": {
+    "https://maps.googleapis.com/maps/api/timezone/json'": {
+      "GET": {}
+    },
+    "https://developers.google.com/maps/documentation/timezone/get-api-key": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

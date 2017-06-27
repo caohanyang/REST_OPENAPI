@@ -24,14 +24,14 @@ public class ProcessMethod {
 		return openAPI;
 	}
 
-	public JSONObject addUrl(JSONObject openAPI, String url, String action) throws JSONException {
+	public JSONObject addUrl(JSONObject openAPI, String url, String action, String scheme) throws JSONException {
 		JSONObject urlObject = openAPI.getJSONObject("paths");
 		Out.prln("---------match--action-------------");
 		Out.prln(action);
 		JSONObject actionObject = new JSONObject();
-		actionObject.put(action, new JSONObject());
+		actionObject.put(action.toUpperCase(), new JSONObject());
 
-		if (isRealUrl(url)) {
+		if (isRealUrl(url) | scheme == "null") {
 			if (urlObject.isNull(url)) {
 				// if url object is null, add directly for the first time
 				urlObject.put(url, actionObject);
@@ -45,23 +45,35 @@ public class ProcessMethod {
 	}
 
 	public boolean isRealUrl(String url) {
-		// url minimum length
-		if (url.length() > "http://".length()) {
-			return true;
+		
+		//clean two times
+		url = cleanUrl(url);
+		url = cleanUrl(url);
+		
+		if (url.contains(".jpg")|url.contains(".gif")|url.contains(".png")|url.contains(".txt")) {
+			return false;
 		}
+		
+		if (url.startsWith("http")|url.startsWith("/")) {
+			// url minimum length
+			if (url.length() > "http://".length()) {
+				return true;
+			}
+		}
+			
 		return false;
 	}
 
-	public void addNoParaUrl(JSONObject openAPI, String strAll, List<JSONObject> infoJson) throws JSONException {
+	public void addNoParaUrl(JSONObject openAPI, String strAll, List<JSONObject> infoJson, String reverse) throws JSONException {
 		// choose the most proper url/action pair
-		Pair<String, String> properPair = solveConflicts(strAll, infoJson);
+		Pair<String, String> properPair = solveConflicts(strAll, infoJson, reverse);
 		// handle it badly, need to fix:
 		String action = properPair.getKey();
 		String url = properPair.getValue();
-		addUrl(openAPI, url, action);
+		addUrl(openAPI, url, action, null);
 	}
 
-	public Pair<String, String> solveConflicts(String strAll, List<JSONObject> infoJson) throws JSONException {
+	public Pair<String, String> solveConflicts(String strAll, List<JSONObject> infoJson, String reverse) throws JSONException {
 		// if the are no parameter table in the page
 		// if one URL have two actions, solve the conflicts
 		Pair<String, String> properPair = null;
@@ -75,10 +87,19 @@ public class ProcessMethod {
 			int acLocation = acObject.getInt(actionFinal);
 			int urlLocation = urObject.getInt(urlFinal);
 
-			if (Math.abs(acLocation - urlLocation) < miniMum) {
-				miniMum = Math.abs(acLocation - urlLocation);
-				properPair = Pair.of(actionFinal, urlFinal);
+			if (reverse == "no") {			
+				if (Math.abs(acLocation - urlLocation) < miniMum) {
+					miniMum = Math.abs(acLocation - urlLocation);
+					properPair = Pair.of(actionFinal, urlFinal);
+				}
+			} else {
+				if (Math.abs(urlLocation - acLocation) < miniMum) {
+					miniMum = Math.abs(urlLocation - acLocation );
+					properPair = Pair.of(actionFinal, urlFinal);
+				}
 			}
+			
+			
 		}
 
 		return properPair;
@@ -102,6 +123,11 @@ public class ProcessMethod {
 		// www.docusign.com/restapi" => www.docusign.com/restapi
 		if (urlString.endsWith("\"")) {
 			urlString = urlString.substring(0, urlString.lastIndexOf("\""));
+		}
+		
+		// mmed.jpg\ => mmed.jpg
+		if (urlString.endsWith("\\")) {
+			urlString = urlString.substring(0, urlString.lastIndexOf("\\"));
 		}
 		
 		// user/user-id.json => user/user-id
@@ -146,6 +172,9 @@ public class ProcessMethod {
 		if (anno.getType().equals("h1")) {
 			if (urlText.contains(aPI_NAME)) {
 				return true;
+			} else if (urlText.contains("add") | urlText.contains("remove") | urlText.contains("update") | urlText.contains("get")
+					| urlText.contains("search") | urlText.contains("post") | urlText.contains("put") | urlText.contains("patch")) {
+				return true;
 			}
 			return false;
 		} else if (anno.getType().equals("code")) {
@@ -177,5 +206,19 @@ public class ProcessMethod {
 		} else {
 			return "GET";
 		}
+	}
+
+	public void addAllParaURL(JSONObject openAPI, String strAll, List<JSONObject> infoJson, String reverse, String scheme) throws JSONException {
+		// choose the most proper url/action pair
+		for (int i = 0; i < infoJson.size(); i++) {
+			JSONObject acObject = infoJson.get(i).getJSONObject("action");
+			JSONObject urObject = infoJson.get(i).getJSONObject("url");
+			String actionFinal = acObject.keys().next().toString();
+			String urlFinal = urObject.keys().next().toString();
+				
+			addUrl(openAPI, urlFinal, actionFinal, scheme);
+		}
+		
+		
 	}
 }

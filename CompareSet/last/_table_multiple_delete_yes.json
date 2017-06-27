@@ -1,0 +1,86 @@
+{
+  "basePath": "/2.0/",
+  "paths": {
+    "/taggings>": {
+      "GET": {}
+    },
+    "/topalbums>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/toptags>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/toptracks>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/weeklytrackchart>": {
+      "GET": {}
+    },
+    "/topartists.csv": {
+      "GET": {}
+    },
+    "/weeklychartlist>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/toptracks.csv": {
+      "GET": {}
+    },
+    "/toptracks.xspf": {
+      "GET": {}
+    },
+    "/similartracks>": {
+      "GET": {}
+    },
+    "/weeklyalbumchart>": {
+      "GET": {}
+    },
+    "/ws.audioscro": {
+      "GET": {}
+    },
+    "/topartists>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/recenttracks": {
+      "GET": {}
+    },
+    "/artist>": {
+      "GET": {}
+    },
+    "/artists>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/weeklyartistchart>": {
+      "GET": {}
+    },
+    "/similartags>": {
+      "GET": {}
+    },
+    "/results>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/corrections>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/lovedtracks.rss": {
+      "GET": {}
+    },
+    "/tracks>": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "ws.audioscrobbler.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

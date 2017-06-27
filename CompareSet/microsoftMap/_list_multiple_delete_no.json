@@ -1,0 +1,289 @@
+{
+  "basePath": "/search/local/ws/rest/v1\">",
+  "paths": {
+    "//schemas.microsoft.com/search/local/2010/5/geocode": {
+      "get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/imagerySet/centerPoint/zoomLevel/Routes/travelMode": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/imagerySet/Routes/travelMode": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/V1/Imagery/Metadata/Road": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Metadata/AerialWithLabels/47.23,-122.3": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/imagerySet/centerPoint/zoomLevel": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/imagerySet/query": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.677006,-122.125526/admindivision1": {
+      "GET": {},
+      "Get": {}
+    },
+    "//schemas.microsoft.com/search/local/2010/5/geocode\">": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Metadata/imagerySet/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/V1/Imagery/Metadata/Birdseye/37.779160067439079,-122.42004945874214": {
+      "GET": {},
+      "get": {}
+    },
+    "//spatial.virtualearth.net/REST/v1/Dataflows/Geocode/jobID": {
+      "PUT": {},
+      "put": {}
+    },
+    "//Creates": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Metadata/BirdseyeWithLabels/47.23,-122.3": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Metadata/Birdseye/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/point": {
+      "GET": {},
+      "Get": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Metadata/Aerial/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/V1/Imagery/Metadata/Aerial/40.714550167322159,-74.007124900817871": {
+      "GET": {},
+      "Get": {}
+    },
+    "/\\/schemas.microsoft.com\\/search\\/local\\/ws\\/rest\\/v1\",": {
+      "GET": {},
+      "geT": {}
+    },
+    "//dev.virtualearth.net/REST/V1/Routes/FromMajorRoads": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/Road": {
+      "POST": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Routes/FromMajorRoads": {
+      "GET": {},
+      "Get": {}
+    },
+    "//Checks": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/1%20Microsoft%20Way%20Redmond%20WA%2098052": {
+      "PUT": {},
+      "put": {}
+    },
+    "/\\/ecn.t2.tiles.virtualearth.net\\/tiles\\/a0212300322.jpeg": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/V1/Imagery/Map/road": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations": {
+      "post": {},
+      "POST": {}
+    },
+    "/region,": {
+      "post": {},
+      "POST": {}
+    },
+    "//spatial.virtualearth.net/REST/v1/Dataflows/Geocode/e14b1d9bd65c4b9d99d267bbb8102ccf": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/47.64054,-122.12934": {
+      "GET": {},
+      "get": {}
+    },
+    "//Iterate": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/Road/51.506666,-0.129436/15": {
+      "GET": {},
+      "Get": {}
+    },
+    "//spatial.virtualearth.net/REST/v1/dataflows/Geocode/5bf10c37df944083b1879fbb0556e67e/output/succeede": {
+      "PUT": {},
+      "put": {}
+    },
+    "//Downloads": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/V1/Routes/Driving": {
+      "PUT": {},
+      "put": {}
+    },
+    "//Submit": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/imagerySet/centerPoint/zoomLevel=zoomLevel&mapSize=mapSize": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.619048,-122.35384/15": {
+      "GET": {},
+      "get": {},
+      "Get": {}
+    },
+    "//spatial.virtualearth.net/REST/v1/dataflows/geocode/e14b1d9bd65c4b9d99d267bbb8102ccf": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/version/restApi/resourcePath": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/AerialWithLabels": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/AerialWithLabels/eiffel%20tower": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Metadata/Road/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "/01/2011": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Metadata/imagerySet": {
+      "GET": {},
+      "Get": {}
+    },
+    "//www.w3.org/2001/XMLSchema-instance": {
+      "get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/countryRegion/adminDistrict/postalCode/locality/addressLine": {
+      "post": {},
+      "POST": {}
+    },
+    "//www.wampserver.com),": {
+      "GET": {},
+      "get": {}
+    },
+    "//www.bingmapsportal.com": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.678559869527817,-122.13099449872971/14/Routes": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/locationQuery": {
+      "GET": {},
+      "get": {}
+    },
+    "//spatial.virtualearth.net/REST/v1/Dataflows/Geocode": {
+      "PUT": {},
+      "put": {}
+    },
+    "/plainâ€�": {
+      "POST": {}
+    },
+    "//www.bing.com/api/maps/sdk/mapcontrol/isdk": {
+      "GET": {},
+      "Get": {}
+    },
+    "/country": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/V1/Imagery/Map/Road/Routes/Transit": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/V1/Imagery/Map/Road/Bellevue%20Washington": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/US/NY/10007/New": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/US/WA/98052/Redmond/1%20Microsoft%20Way": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Routes": {
+      "GET": {},
+      "Get": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/CA/adminDistrict/postalCode/locality/addressLine": {
+      "post": {},
+      "POST": {}
+    },
+    "//msdn.microsoft.com/en-us/library/cc981072.aspx": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/BasicMetadata/imagerySet/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/imagerySet": {
+      "GET": {},
+      "Get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/Road/Routes": {
+      "GET": {},
+      "get": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Metadata/Road": {
+      "Get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Locations/BÃ¶rsenplatz%201%20Frankfurt%20am%20Main%20Hessen%2060313": {
+      "PUT": {},
+      "put": {}
+    },
+    "//dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.6156352,-122.2043549/12": {
+      "GET": {},
+      "get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "schemas.microsoft.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,17 @@
+{
+  "paths": {
+    "https://api.foursquare.com/v2": {
+      "post": {},
+      "POST": {},
+      "Post": {},
+      "GET": {},
+      "del": {}
+    },
+    "https://swarmapp.com/c": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

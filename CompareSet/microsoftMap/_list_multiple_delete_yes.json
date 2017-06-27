@@ -1,0 +1,126 @@
+{
+  "basePath": "/search/local/ws/rest/v1\">",
+  "paths": {
+    "/GeocodeFeed>": {
+      "POST": {},
+      "get": {}
+    },
+    "/imagerySet": {
+      "GET": {},
+      "Get": {}
+    },
+    "/spatialDataSource": {
+      "PUT": {},
+      "put": {}
+    },
+    "/eiffel%20tower": {
+      "GET": {},
+      "Get": {}
+    },
+    "/succeeded": {
+      "GET": {},
+      "get": {}
+    },
+    "/longitude": {
+      "GET": {},
+      "get": {}
+    },
+    "/r{quadkey}.jpeg": {
+      "GET": {},
+      "get": {}
+    },
+    "/o02301020333-10749-{zoom}-{tileId}.jpeg": {
+      "GET": {},
+      "Get": {}
+    },
+    "/Transit": {
+      "POST": {}
+    },
+    "/travelMode": {
+      "GET": {},
+      "get": {},
+      "Get": {}
+    },
+    "/GeocodeRequest>": {
+      "POST": {},
+      "Post": {}
+    },
+    "/Geocode": {
+      "GET": {},
+      "get": {}
+    },
+    "/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "/removed).": {
+      "GET": {},
+      "get": {}
+    },
+    "/imagery": {
+      "GET": {},
+      "Get": {}
+    },
+    "/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "/cc981072.aspx": {
+      "GET": {},
+      "get": {}
+    },
+    "/dev.virtu": {
+      "GET": {},
+      "get": {}
+    },
+    "/plainâ€�": {
+      "GET": {},
+      "get": {}
+    },
+    "/Bellevue%20Washington": {
+      "GET": {},
+      "get": {}
+    },
+    "/a032010110123333.jpeg": {
+      "GET": {},
+      "get": {}
+    },
+    "/\".$point.": {
+      "post": {},
+      "POST": {}
+    },
+    "/Response>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/AerialWithLabels": {
+      "GET": {},
+      "get": {}
+    },
+    "/region,": {
+      "post": {},
+      "POST": {}
+    },
+    "/addressLine": {
+      "post": {},
+      "GET": {},
+      "get": {}
+    },
+    "/Locations": {
+      "post": {},
+      "POST": {},
+      "Get": {}
+    },
+    "/schemas.m": {
+      "POST": {},
+      "Post": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "schemas.microsoft.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

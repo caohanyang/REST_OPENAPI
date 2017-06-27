@@ -1,0 +1,56 @@
+{
+  "paths": {
+    "http://example.org": {
+      "POST": {}
+    },
+    "/api/v3.1": {
+      "Delete": {},
+      "Post": {},
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "delete": {},
+      "Put": {}
+    },
+    "/api/v3.1/clients.xml": {
+      "POST": {},
+      "GET": {}
+    },
+    "http://example.com": {
+      "PUT": {},
+      "put": {}
+    },
+    "/api/v3.1/clients": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "put": {}
+    },
+    "http://example.com/campaigncontent/index.html\",": {
+      "GET": {}
+    },
+    "/oauth": {
+      "POST": {},
+      "GET": {}
+    },
+    "http://siteaddress.createsend.com/path/text/preview\",": {
+      "GET": {}
+    },
+    "http://example.com/": {
+      "GET": {}
+    },
+    "https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://ww": {
+      "GET": {}
+    },
+    "/oauth/token": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.createsend.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

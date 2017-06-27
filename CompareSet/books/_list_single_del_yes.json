@@ -1,0 +1,36 @@
+{
+  "basePath": "/books/v1/volumes",
+  "paths": {
+    "/mylibra": {
+      "POST": {},
+      "GET": {}
+    },
+    "/bookshelves": {
+      "GET": {}
+    },
+    "/www.googleapis": {
+      "GET": {}
+    },
+    "/volumes": {
+      "GET": {},
+      "Get": {}
+    },
+    "/moveVolume": {
+      "PUT": {},
+      "put": {}
+    },
+    "/removeVolume": {
+      "POST": {}
+    },
+    "/www.goog": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

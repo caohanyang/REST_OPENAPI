@@ -1,0 +1,11 @@
+{
+  "basePath": "/maps/api/timezone/json'",
+  "paths": {},
+  "produces": "application/json",
+  "host": "maps.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

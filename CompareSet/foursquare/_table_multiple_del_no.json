@@ -1,0 +1,157 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/resolve": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "A complete check-in object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "//nyt.com": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "item The updated list item .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "//blog.zagat.com/fast-food-survey-results-are-here": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "tip",
+            "description": "The newly-added tip .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/v2/lists/12381902N)": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "A list object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "//www.mercurylounge.com": {
+      "post": {},
+      "POST": {}
+    },
+    "//swarmapp.com/c": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The check-in associated with this shortId.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "//api.foursquare.com/v2": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkins",
+            "description": "An array of checkin objects with user details present. Usually, venue details are also present, depending on whether the checkin has a venue.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "comment",
+            "description": "The newly-created comment.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The checkin, minus this comment.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "//your.site.com/path": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "photo",
+            "description": "The photo that was just created.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/venues/search": {
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "responses",
+            "description": "An array in which an entry exists for each response, in the order passed in.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/variations": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "An array of compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

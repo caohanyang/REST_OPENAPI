@@ -25,7 +25,7 @@
   <link href="/css/highlight-default.css" rel="stylesheet" type="text/css"/>
   <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
   <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/awsdocs.css?v=20170615" rel="stylesheet" type="text/css"/>
   <script src="/js/highlight.pack.js" type="text/javascript">
   </script>
   <script src="/js/jquery.min.js" type="text/javascript">
@@ -36,7 +36,7 @@
   </script>
   <script src="/js/jquery.colorbox.js" type="text/javascript">
   </script>
-  <script src="/js/awsdocs.min.js" type="text/javascript">
+  <script src="/js/awsdocs.min.js?v=20170615" type="text/javascript">
   </script>
   <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript">
   </script>
@@ -1778,7 +1778,7 @@
              AWS Documentation
             </a>
             »
-            <a href="uri">
+            <a href="http://aws.amazon.com/archives/Product%20Advertising%20API">
              Amazon Product Advertising API Docs
             </a>
             »
@@ -1816,7 +1816,8 @@
          ItemLookup
         </code>
         operation returns
-                        some or all of the item attributes, depending on the response group specified in the request.
+                        some or all of the item attributes, depending on the response group specified in the
+                        request.
                         By default,
         <code class="code">
          ItemLookup
@@ -1862,7 +1863,7 @@
        </h2>
        <div class="informaltable">
         <div class="informaltable-contents">
-         <table id="w28aab9b7c23b7b2">
+         <table id="w68aab9b7c23b7b2">
           <tbody>
            <tr>
             <th>
@@ -1933,7 +1934,8 @@
               Default: ASIN
              </p>
              <p>
-              Valid Values: SKU | UPC | EAN | ISBN (US only, when search index is Books). UPC is not valid in the CA locale.
+              Valid Values: SKU | UPC | EAN | ISBN (US only, when search index is Books). UPC is
+                                       not valid in the CA locale.
              </p>
             </td>
             <td>
@@ -2011,7 +2013,8 @@
               Default: None
              </p>
              <p>
-              Constraints: Must be a valid item ID. For more than one ID, use a comma-separated list of
+              Constraints: Must be a valid item ID. For more than one ID, use a comma-separated
+                                       list of
                                        up to ten IDs.
              </p>
             </td>
@@ -2027,8 +2030,9 @@
             </td>
             <td>
              <p>
-              An optional parameter you can use to filter search results and offer listings to only include items sold by Amazon. By default,
-                                       the API will return items sold by various merchants including Amazon. Enter
+              An optional parameter you can use to filter search results and offer listings to only
+                                       include items sold by Amazon. By default, the API will return items sold by various
+                                       merchants including Amazon. Enter
               <code class="code">
                Amazon
               </code>
@@ -2349,7 +2353,7 @@
        </h2>
        <div class="informaltable">
         <div class="informaltable-contents">
-         <table id="w28aab9b7c23b9b2">
+         <table id="w68aab9b7c23b9b2">
           <tbody>
            <tr>
             <th>
@@ -2496,7 +2500,8 @@ ItemId=B00008OE6I
         .
        </p>
        <p>
-        The following request returns an offer for a refurbished item that is not sold by Amazon.
+        The following request returns an offer for a refurbished item that is not sold by
+                        Amazon.
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight">http://webservices.amazon.com/onca/xml?
 Service=AWSECommerceService&amp;
@@ -2623,7 +2628,8 @@ IdType=EAN
          OfferSummary
         </a>
         response group to find the
-                        number of offer listings and the lowest price for each of the offer listing condition classes,
+                        number of offer listings and the lowest price for each of the offer listing condition
+                        classes,
                         including New, Used, Collectible, and Refurbished.
        </p>
        <p>
@@ -2636,7 +2642,8 @@ IdType=EAN
                         accessories.
        </p>
        <p>
-        The following requests an iframe that contains customer reviews for the specified item.
+        The following requests an iframe that contains customer reviews for the specified
+                        item.
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight">http://webservices.amazon.com/onca/xml?
 Service=AWSECommerceService&amp;
@@ -2655,7 +2662,8 @@ Version=2013-08-01
         Sample Response
        </h2>
        <p>
-        The following code snippet is a response to the first request. It shows all of the item
+        The following code snippet is a response to the first request. It shows all of the
+                        item
                         attributes that are returned by default.
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">&lt;Items&gt;
@@ -2675,7 +2683,8 @@ Version=2013-08-01
   &lt;/Item&gt;
 &lt;/Items&gt;  </code></pre>
        <p>
-        The following code snippet is part of a response for an iframe that contains customer reviews.
+        The following code snippet is part of a response for an iframe that contains customer
+                        reviews.
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">&lt;ItemLookupResponse&gt;
 	&lt;Items&gt;
@@ -2826,7 +2835,8 @@ Version=2013-08-01
          Javascript is disabled or is unavailable in your browser.
         </strong>
         <br/>
-        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.
+        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's
+                        Help pages for instructions.
        </div>
       </div>
      </div>

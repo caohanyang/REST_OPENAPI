@@ -1,0 +1,219 @@
+{
+  "basePath": "/mobbr/mobbr-api-v1",
+  "paths": {
+    "/api_v1/user/update_password": {
+      "POST": {}
+    },
+    "/api_v1/api/exception": {
+      "GET": {}
+    },
+    "/api_v1/domains/supported": {
+      "GET": {}
+    },
+    "/api_v1/api/payment_providers": {
+      "GET": {}
+    },
+    "/api_v1/api/event_types": {
+      "GET": {}
+    },
+    "/api_v1/xpayments/deposit": {
+      "POST": {}
+    },
+    "/api_v1/payments/uri": {
+      "GET": {}
+    },
+    "/api_v1/keywords/person": {
+      "GET": {}
+    },
+    "/api_v1/api/timezones": {
+      "GET": {}
+    },
+    "/api_v1/persons/uri": {
+      "GET": {}
+    },
+    "/api_v1/api/id_providers": {
+      "GET": {}
+    },
+    "/api_v1/notifications": {
+      "DEL": {}
+    },
+    "/api_v1/persons/domain": {
+      "GET": {}
+    },
+    "/api_v1/user/ping": {
+      "PUT": {}
+    },
+    "/api_v1/api/countries": {
+      "GET": {}
+    },
+    "/api_v1/notifications/domain": {
+      "GET": {}
+    },
+    "/api_v1/user/upload_identity_proof": {
+      "GET": {}
+    },
+    "/api_v1/user/update_user": {
+      "POST": {}
+    },
+    "/api_v1/user/password_login": {
+      "GET": {}
+    },
+    "/api_v1/balances": {
+      "GET": {}
+    },
+    "/api_v1/payments": {
+      "GET": {}
+    },
+    "/api_v1/payments/domain": {
+      "GET": {}
+    },
+    "/api_v1/user/link_login": {
+      "POST": {}
+    },
+    "/api_v1/payments/preview": {
+      "POST": {}
+    },
+    "/api_v1/keywords/uri": {
+      "GET": {}
+    },
+    "/api_v1/api/api_connections": {
+      "GET": {}
+    },
+    "/api_v1/payments/claimable": {
+      "DEL": {}
+    },
+    "/api_v1/xpayments/list_addresses": {
+      "PUT": {}
+    },
+    "/api_v1/user/oauth_id": {
+      "PUT": {}
+    },
+    "/api_v1/payments/info": {
+      "GET": {}
+    },
+    "/api_v1/payments/claim": {
+      "GET": {}
+    },
+    "/api_v1/api/kyc_incomeranges": {
+      "GET": {}
+    },
+    "/api_v1/user/register_user_send_login_link": {
+      "POST": {}
+    },
+    "/api_v1/payments/unclaimed_shares": {
+      "DEL": {}
+    },
+    "/api_v1/persons/info": {
+      "GET": {}
+    },
+    "/api_v1/payments/confirm": {
+      "GET": {}
+    },
+    "/api_v1/xpayments/new_account_address": {
+      "POST": {}
+    },
+    "/api_v1/user/send_login_link": {
+      "GET": {}
+    },
+    "/api_v1/user/confirm_email_id": {
+      "PUT": {}
+    },
+    "/api_v1/api/translations": {
+      "GET": {}
+    },
+    "/api_v1/user/email_id": {
+      "DEL": {}
+    },
+    "/api_v1/xpayments/withdraw_fee": {
+      "POST": {}
+    },
+    "/api_v1/api/oauth_providers": {
+      "GET": {}
+    },
+    "/api_v1/payments/pledged": {
+      "DEL": {}
+    },
+    "/api_v1/xpayments/url_addres": {
+      "POST": {}
+    },
+    "/api_v1/referrers": {
+      "GET": {}
+    },
+    "/api_v1/balances/domain": {
+      "GET": {}
+    },
+    "/api_v1/xpayments/info": {
+      "POST": {}
+    },
+    "/api_v1/invoices": {
+      "GET": {}
+    },
+    "/api_v1/keywords": {
+      "GET": {}
+    },
+    "/api_v1/persons/invite": {
+      "GET": {}
+    },
+    "/api_v1/user/update_email": {
+      "PUT": {}
+    },
+    "/api_v1/persons": {
+      "GET": {}
+    },
+    "/api_v1/user/oauth_url": {
+      "PUT": {}
+    },
+    "/api_v1/api/happening_right_now": {
+      "GET": {}
+    },
+    "/api_v1/notifications/uri": {
+      "GET": {}
+    },
+    "/api_v1/xpayments": {
+      "GET": {}
+    },
+    "/api_v1/api/languages": {
+      "GET": {}
+    },
+    "/api_v1/api/methods": {
+      "GET": {}
+    },
+    "/api_v1/keywords/domain": {
+      "GET": {}
+    },
+    "/api_v1/user/confirm_email": {
+      "POST": {}
+    },
+    "/api_v1/xpayments/withdraw": {
+      "POST": {}
+    },
+    "/api_v1/uris": {
+      "GET": {}
+    },
+    "/api_v1/domains/info": {
+      "GET": {}
+    },
+    "/api_v1/balances/uri": {
+      "GET": {}
+    },
+    "/api_v1/uris/info": {
+      "GET": {}
+    },
+    "/api_v1/user/public_id": {
+      "PUT": {}
+    },
+    "/api_v1/domains": {
+      "GET": {}
+    },
+    "/api_v1/api/currencies": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "github.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

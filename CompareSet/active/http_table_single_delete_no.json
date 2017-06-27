@@ -1,0 +1,42 @@
+{
+  "paths": {
+    "http://en.wikipedia.org/wiki/JSONP": {
+      "GET": {}
+    },
+    "/camping/campgrounds": {
+      "GET": {}
+    },
+    "http://www.reserveamerica.com/campsiteSearch.do": {
+      "GET": {}
+    },
+    "http://countrycode.org": {
+      "GET": {}
+    },
+    "/camping/campsites": {
+      "GET": {},
+      "get": {}
+    },
+    "/camping/campground/details": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.tantracking.com/click.track": {
+      "GET": {}
+    },
+    "/search": {
+      "GET": {}
+    },
+    "/v2/search": {
+      "GET": {},
+      "get": {},
+      "put": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.amp.active.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

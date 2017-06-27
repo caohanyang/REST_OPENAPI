@@ -1,0 +1,373 @@
+{
+  "paths": {
+    "http://demo.twilio.com/docs/voice.xml": {
+      "POST": {},
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts": {
+      "GET": {}
+    },
+    "http://www.twilio.com/docs/errors/21215": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers'": {
+      "POST": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions": {
+      "GET": {},
+      "get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AuthorizedConnectApps/CN47260e643654388faabe8aaa18ea6756": {
+      "GET": {},
+      "get": {}
+    },
+    "https://www.twilio.com/console": {
+      "DEL": {},
+      "del": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders/AIc781610ec0b3400c9e0cab8e757da937": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AlphaSender",
+            "description": "An Alphanumeric Sender ID string, up to 11 characters. Valid characters are A-Z, a-z, 0-9, space and dash ( - ). An Alphanumeric Sender ID string cannot be comprised of only numbers.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages": {
+      "POST": {},
+      "get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "http://requestb.in/1234abcd'": {
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU5ef8732a3c49700934481addd5ce1659/Members/CA386025c9bf5d6052a1d1ea42b4d16662": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN557ce644e5ab84fa21cc21112e22c485'": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://messaging.twilio.com/v1/Service": {
+      "DEL": {}
+    },
+    "http://www.tommypi.com": {
+      "post": {},
+      "POST": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists/AL32a3c49700934481addd5ce1659f04d2/IpAddresses": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.twilio.com/docs/errors/21201": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageSize",
+            "description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://www.twilio.com/docs/errors/21421": {
+      "POST": {}
+    },
+    "http://www.twilio.com/docs/errors/21602": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88dccf16f8859a1a8b25": {
+      "POST": {},
+      "del": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists/AL32a3c49700934481addd5ce1659f04d2/IpAddresses/IP32a3c49700934481addd5ce1659f04d2": {
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "del": {}
+    },
+    "http://www.mycompany.com": {
+      "post": {},
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PhoneNumberSid",
+            "description": "PhoneNumberSid Phone Number SID for the Phone Number being added to the Service.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88dccf16f8859a1a8b25'": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes'": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU5ef8732a3c49700934481addd5ce1659/Members": {
+      "GET": {},
+      "get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.example.com/feedback": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "StartDate",
+            "description": "The first date for which feedback entries are included in this Feedback Summary, formatted as YYYY-MM-DD. All dates are in UTC.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "EndDate",
+            "description": "The last date for which feedback entries are included in this Feedback Summary, formatted as YYYY-MM-DD. All dates are in UTC.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AccountSid",
+            "description": "The Account that reported the feedback entry.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "IncludeSubaccounts",
+            "description": "true if the feedback summary includes subaccounts, false otherwise.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Status",
+            "description": "The status of the feedback summary can be queued, in-progress, completed, or failed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallCount",
+            "description": "The total number of calls.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallFeedbackCount",
+            "description": "The total number of calls with a feedback entry.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreAverage",
+            "description": "The average QualityScore of the feedback entries.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreMedian",
+            "description": "The median QualityScore of the feedback entries.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreStandardDeviation",
+            "description": "The standard deviation of the quality scores.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Issues",
+            "description": "A list of all the issues experienced. The list includes the issue name, the number of occurrences and percentage of calls that experienced this issue.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "/": {
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "accepted",
+            "description": "Twilio has received your API request to send a message with a Messaging Service and a From number is being dynamically selected. This is still the initial status when sending with a Messaging Service and the From parameter.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "queued",
+            "description": "The API request to send a message was successful and the message is queued to be sent out. This is the initial status when you are not using a Messaging Service.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "sending",
+            "description": "Twilio is in the process of dispatching your message to the nearest upstream carrier in the network.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "sent",
+            "description": "The message was successfully accepted by the nearest upstream carrier.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "receiving",
+            "description": "The inbound message has been received by Twilio and is currently being processed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "received",
+            "description": "On inbound messages only. The inbound message was received by one of your Twilio numbers.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "delivered",
+            "description": "Twilio has received confirmation of message delivery from the upstream carrier, and, where available, the destination handset.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "undelivered",
+            "description": "Twilio has received a delivery receipt indicating that the message was not delivered. This can happen for a number of reasons including carrier content filtering, availability of the destination handset, etc.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "failed",
+            "description": "The message could not be sent. This can happen for various reasons including queue overflows, account suspensions and media errors (in the case of MMS). Twilio does not charge you for failed messages.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://www.twilio.com/docs/libraries/csharp#installation": {
+      "GET": {},
+      "Get": {},
+      "Del": {}
+    },
+    "http://reques": {
+      "POST": {}
+    },
+    "http.message.BasicNameValuePair": {
+      "GET": {},
+      "get": {},
+      "Get": {}
+    },
+    "https://handler.twilio.com/twiml/EH8ccdbd7f0b8fe34357da8ce87ebe5a16'": {
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AnsweredBy",
+            "description": "The result of answering machine detection. If Enable was specified, results can be: machine_start , human , fax , unknown . If DetectMessageEnd was specified, results can be: machine_end_beep , machine_end_silence , machine_end_other , human , fax , unknown .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://demo.twilio.com/docs/voice.xml'": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://m.twil.io": {
+      "GET": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AuthorizedConnectApps": {
+      "GET": {},
+      "get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings": {
+      "GET": {},
+      "get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a": {
+      "DEL": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings/AL95a47094615fe05b7c17e62a7877836c": {
+      "GET": {},
+      "get": {},
+      "del": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/CredentialListMappings/CL32a3c49700934481addd5ce1659f04d2": {
+      "DEL": {},
+      "del": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/CredentialListMappings": {
+      "GET": {},
+      "get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions/TR8c61027b709ffb038236612dc5af8723": {
+      "GET": {},
+      "get": {},
+      "del": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.twilio.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,44 @@
+{
+  "basePath": "/",
+  "paths": {
+    "api/v3.1": {
+      "Delete": {},
+      "Post": {},
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "delete": {},
+      "Put": {}
+    },
+    "https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www": {
+      "GET": {}
+    },
+    "https://external1.createsend.com/cd/create/ABCDEF12/DEADBEEF": {
+      "GET": {}
+    },
+    "api/v3.1/clients.xml": {
+      "POST": {},
+      "GET": {}
+    },
+    "api/v3.1/clients": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "put": {}
+    },
+    "oauth": {
+      "POST": {},
+      "GET": {}
+    },
+    "oauth/token": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.createsend.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

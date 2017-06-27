@@ -1,0 +1,24 @@
+{
+  "basePath": "/REST/v1/dataflows/",
+  "paths": {
+    "geocode/e14b1d9bd65c4b9d99d267bbb8102ccf/output/succeeded": {
+      "POST": {},
+      "Post": {}
+    },
+    "geocode/e14b1d9bd65c4b9d99d267bbb8102ccf</Link>": {
+      "GET": {},
+      "Get": {}
+    },
+    "Geocode/5bf10c37df944083b1879fbb0556e67e/output/succeeded": {
+      "GET": {},
+      "get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "spatial.virtualearth.net",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

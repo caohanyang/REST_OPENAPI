@@ -1,0 +1,47 @@
+{
+  "paths": {
+    "https://api.v": {
+      "GET": {}
+    },
+    "meo.co": {
+      "GET": {}
+    },
+    "meo.c": {
+      "PATCH": {}
+    },
+    "https://a": {
+      "GET": {}
+    },
+    "meo.": {
+      "GET": {}
+    },
+    "meo": {
+      "GET": {}
+    },
+    "meo.com": {
+      "DELETE": {},
+      "post": {},
+      "POST": {},
+      "GET": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "m": {
+      "GET": {}
+    },
+    "https://api.": {
+      "GET": {}
+    },
+    "/": {
+      "GET": {},
+      "PUT": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vi",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

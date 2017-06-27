@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html class="chekov" lang="en">
+ <head>
+  <script>
+   var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="VhYPlUD1te-DpykG9hb3rXwnAtaghIH6upXDC44h7vI6MTQ5NzQ0NDQyMTQwOTcyMA" name="xsrf_token"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker" rel="canonical"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=zh-cn" hreflang="zh-Hans" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=zh-tw" hreflang="zh-Hant" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=fr" hreflang="fr" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=pt-br" hreflang="pt-br" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=ru" hreflang="ru" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=ko" hreflang="ko" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=de" hreflang="de" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=ja" hreflang="ja" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=es" hreflang="es" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker?hl=id" hreflang="id" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker" hreflang="en" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=zh-cn" hreflang="zh-Hans-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=zh-tw" hreflang="zh-Hant-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=fr" hreflang="fr-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=pt-br" hreflang="pt-br-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=ru" hreflang="ru-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=ko" hreflang="ko-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=de" hreflang="de-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=ja" hreflang="ja-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=es" hreflang="es-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker?hl=id" hreflang="id-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/api-picker" hreflang="en-cn" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/api-picker" hreflang="x-default" rel="alternate"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/favicon.png" rel="shortcut icon"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/touch-icon.png" rel="apple-touch-icon"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/css/devsite-google-blue.css" rel="stylesheet"/>
+  <link href="https://developers.google.com/s/opensearch.xml" rel="search" title="Google Developers" type="application/opensearchdescription+xml"/>
+  <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery-bundle.js">
+  </script>
+  <meta content="Google Developers" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://developers.google.com/maps/documentation/api-picker" property="og:url"/>
+  <meta content="en" property="og:locale"/>
+  <script>
+   var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <title>
+   API Picker  |  Google Maps APIs
+       |  Google Developers
+  </title>
+  <meta content="API Picker  |  Google Maps APIs
+       |  Google Developers" property="og:title"/>
+  <meta content="Find the API you need for maps and places in your app." name="description"/>
+  <meta content="Find the API you need for maps and places in your app." property="og:description"/>
+  <link href="https://developers.google.com/maps/styles/local.css" rel="stylesheet"/>
+  <link href="https://developers.google.com/maps/styles/common.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body class=" devsite-doc-page devsite-header-no-lower-tabs devsite-uhura" id="top_of_page">
+  <div class="devsite-wrapper">
+   <div class="devsite-top-section-wrapper ">
+    <header class="devsite-top-section nocontent">
+     <div class="devsite-top-logo-row-wrapper-wrapper">
+      <div class="devsite-top-logo-row-wrapper">
+       <div class="devsite-top-logo-row devsite-full-site-width">
+        <button class="devsite-expand-section-nav devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Hamburger menu" type="button">
+        </button>
+        <div class="devsite-product-name-wrapper">
+         <a class="devsite-product-name-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Project logo (header)" href="https://developers.google.com/maps/">
+          <img alt="Google Maps APIs" class="devsite-product-logo" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+         </a>
+         <span class="devsite-product-name">
+          <ul class="devsite-breadcrumb-list">
+           <li class="devsite-breadcrumb-item">
+            <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" href="https://developers.google.com/maps/">
+             Google Maps APIs
+            </a>
+           </li>
+          </ul>
+         </span>
+        </div>
+        <div class="devsite-header-upper-tabs">
+         <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+          <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="home" data-label="navTopMenu" href="https://developers.google.com/maps/">
+             Home
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="documentation" data-label="navTopMenu" href="https://developers.google.com/maps/documentation/">
+             Documentation
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="pricingAndPlans" data-label="navTopMenu" href="https://developers.google.com/maps/pricing-and-plans/">
+             Pricing and Plans
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </div>
+        <form action="https://developers.google.com/s/results/" class="devsite-search-form " id="top-search" method="GET" search-placeholder="Search">
+         <div class="devsite-searchbox" id="searchbox">
+          <input autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="Search" type="text" value=""/>
+          <div class="devsite-search-image material-icons">
+          </div>
+         </div>
+         <input data-project-name="Google Maps APIs" data-project-path="/maps/" data-query-match="" id="search_project" name="p" type="hidden" value="/maps/"/>
+         <input class="suggest-project" type="hidden" value="Google Maps APIs"/>
+         <div class="suggest-project-metadata" data-home_url="/maps/documentation/urls/guide" data-name="Google Maps URLs" data-path="/maps/documentation/urls/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/" data-name="Maps APIs Solutions" data-path="/maps/solutions/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/transport-tracker/" data-name="Transport Tracker Solution" data-path="/maps/solutions/transport-tracker/">
+         </div>
+        </form>
+        <a class="devsite-header-link devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site header link" href="https://developers.google.com/products/">
+         <div class="devsite-header-link-label">
+          All Products
+         </div>
+        </a>
+        <button class="devsite-search-button devsite-header-icon-button button-flat material-icons" type="button">
+        </button>
+        <a class="devsite-user-signin devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Sign in button" href="https://www.google.com/accounts/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fdevelopers.google.com%2Fmaps%2Fdocumentation%2Fapi-picker%3Frefresh%3D1&amp;service=ahsid">
+         Sign in
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="devsite-collapsible-section">
+      <div class="devsite-header-background devsite-full-site-width">
+       <div class="devsite-product-id-row devsite-full-site-width">
+        <div class="devsite-product-description-row">
+         <ul class="devsite-breadcrumb-list">
+          <li class="devsite-breadcrumb-item">
+           Documentation
+          </li>
+         </ul>
+        </div>
+       </div>
+       <button class="devsite-feedback-button devsite-top-button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Send Feedback Button" id="devsite-feedback-project" track-metadata-position="header" track-name="sendFeedbackLink" track-type="feedback" type="button">
+        Send feedback
+       </button>
+      </div>
+     </div>
+    </header>
+    <script>
+     if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('en')
+        }
+      });
+    }
+    </script>
+   </div>
+   <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {}, "gaid": "UA-42966870-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps APIs", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps APIs", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-49880327-1"}'/>
+    <input class="google-tag-manager-id" type="hidden" value="GTM-W546ZN"/>
+    <script>
+     var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "FR", "language": {"requested": "en", "served": "en"}, "projectName": "Google Maps APIs", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+    <div class="devsite-site-mask">
+    </div>
+    <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+     <div class="devsite-nav-responsive-tabs-panel">
+      <nav class="devsite-nav-responsive-tabs devsite-nav">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home" href="https://developers.google.com/maps/">
+          Home
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title devsite-nav-active gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Documentation" tabindex="0">
+          Documentation
+         </span>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Pricing and Plans" href="https://developers.google.com/maps/pricing-and-plans/">
+          Pricing and Plans
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+          All Products
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="devsite-nav-responsive-sidebar-panel">
+      <div class="devsite-nav-responsive-back" tabindex="0">
+      </div>
+      <nav class="devsite-nav-responsive-sidebar">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Google Maps APIs Documentation
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-active">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/api-picker" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          API Picker
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/coverage" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Map Coverage Details
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/faq" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          FAQ
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Android APIs
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Google Maps Android API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/android-api/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Google Places API for Android
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          iOS APIs
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Google Maps SDK for iOS
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/ios-api/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Google Places API for iOS
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Web APIs
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/embed/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Embed API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/javascript/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          JavaScript API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/static-maps/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Static Maps API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/streetview/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Street View Image API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/javascript/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Google Places API JavaScript Library
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Web Service APIs
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/directions/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Directions API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/distance-matrix/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Distance Matrix API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/elevation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Elevation API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/geocoding/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Geocoding API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/geolocation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Geolocation API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/web-service/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Places API Web Service
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Roads API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/timezone/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Time Zone API
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Google Maps APIs Premium Plan
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/premium/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Documentation
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </nav>
+    <div class="devsite-main-content clearfix">
+     <nav class="devsite-section-nav devsite-nav nocontent">
+      <ul class="devsite-nav-list">
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Google Maps APIs Documentation
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-active">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/api-picker" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         API Picker
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/coverage" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Map Coverage Details
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/faq" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         FAQ
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Android APIs
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Google Maps Android API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/android-api/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Google Places API for Android
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         iOS APIs
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Google Maps SDK for iOS
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/ios-api/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Google Places API for iOS
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Web APIs
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/embed/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Embed API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/javascript/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         JavaScript API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/static-maps/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Static Maps API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/streetview/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Street View Image API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/javascript/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Google Places API JavaScript Library
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Web Service APIs
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/directions/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Directions API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/distance-matrix/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Distance Matrix API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/elevation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Elevation API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/geocoding/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Geocoding API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/geolocation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Geolocation API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/web-service/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Places API Web Service
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Roads API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/timezone/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Time Zone API
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Google Maps APIs Premium Plan
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/premium/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Documentation
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <nav class="devsite-page-nav devsite-nav">
+     </nav>
+     <article class="devsite-article">
+      <article class="devsite-article-inner">
+       <nav class="devsite-breadcrumb-nav devsite-nav">
+        <ul class="devsite-breadcrumb-list">
+         <li class="devsite-breadcrumb-item">
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" href="https://developers.google.com/products/">
+           Products
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" href="https://developers.google.com/maps/">
+           Google Maps APIs
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3" href="https://developers.google.com/maps/documentation/">
+           Documentation
+          </a>
+         </li>
+        </ul>
+       </nav>
+       <h1 class="devsite-page-title" itemprop="name">
+        API Picker
+       </h1>
+       <nav class="devsite-page-nav-embedded devsite-nav">
+       </nav>
+       <div class="devsite-article-body clearfix " itemprop="articleBody">
+        <div class="main" id="api-table" style="padding: 0;">
+         <p>
+          The API picker lists the most common things you may want to do on a map or
+    with location-based data, and suggests the API that best suits your needs.
+    For details about each API, follow the links to the related documentation.
+         </p>
+         <div>
+          <input class="devsite-filter" data-classes="function,api" data-div="api-table" data-ga-search="/maps/documentation/api-picker/search?apiSearch=" placeholder="Type your keyword here to find the right API" type="text"/>
+         </div>
+         <table>
+          <thead>
+           <tr>
+            <th style="width: 40%;">
+             What do you want to do?
+            </th>
+            <th style="width: 40%;">
+             Useful APIs:
+            </th>
+           </tr>
+          </thead>
+          <tbody class="list">
+           <tr>
+            <td class="function">
+             <b>
+              Add a map to an Android app.
+             </b>
+             Optionally support map gestures for tilt, rotate, zoom and pan, with
+          full control over the map's 3D camera.
+             <!-- mobile scroll bearing -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/">
+                Google Maps Android API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Add a map to an iOS app.
+             </b>
+             Optionally support map gestures for tilt, rotate, zoom and pan, with
+          full control over the map's 3D camera.
+             <!-- mobile scroll bearing -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/ios-sdk/">
+                Google Maps SDK for iOS
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Add a map to a web page.
+             </b>
+             Customize the map with your own data and imagery. Optionally
+          support map controls, as well as gestures on the mobile web.
+             <!-- mobile scroll bearing pan zoom tilt rotate -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/">
+                Google Maps JavaScript API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Add a map to a web page
+             </b>
+             via a simple HTTP request consisting of just a URL and
+          parameters. Useful in blogs and other places where you can't add
+             <code>
+              &lt;script&gt;
+             </code>
+             tags.
+             <!-- iframe -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/embed/">
+                Google Maps Embed API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Draw a route
+             </b>
+             on a map.
+             <!-- plot course destination -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               Polylines in the
+               <a href="https://developers.google.com/maps/documentation/android-api/polygon-tutorial">
+                Google Maps Android API
+               </a>
+              </li>
+              <li>
+               Polylines in the
+               <a href="https://developers.google.com/maps/documentation/ios-sdk/shapes">
+                Google Maps SDK for iOS
+               </a>
+              </li>
+              <li>
+               Polylines in the
+               <a href="https://developers.google.com/maps/documentation/javascript/shapes">
+                Google Maps JavaScript API
+               </a>
+              </li>
+              <li>
+               Paths in the
+               <a href="https://developers.google.com/maps/documentation/static-maps/intro#Paths">
+                Google Static Maps API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Draw a route
+             </b>
+             between two or more
+          specified points on the map showing the distance and travel time,
+          using various forms of transport: walking, driving, cycling, public
+          transit, and flying.
+             <!-- bus train taxi ride air -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/embed/guide#directions">
+                Google Maps Embed API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Get directions data
+             </b>
+             from origin to
+          destination using various forms of transport: walking, driving,
+          cycling, public transit.
+             <!-- route bus train taxi ride -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/directions">
+                Directions
+              service
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/directions-simple">
+                examples
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/directions/">
+                Google Maps Directions API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Visualize features and arbitrary data
+             </b>
+             on a
+          map.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/utility/geojson">
+                GeoJSON utility
+               </a>
+               for the Google Maps Android API
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/datalayer">
+                Data layer
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-data-simple">
+                examples
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Use a heatmap
+             </b>
+             to visualize the intensity of
+          data at geographical points, using graded colors. Examples of such
+          data include population density, temperature, traffic congestion, and
+          more.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/utility/heatmap">
+                Heatmap
+              utility
+               </a>
+               in the Google Maps Android API Utility Library
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/heatmaplayer">
+                Heatmap
+              layer
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-heatmap">
+                example
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Visualize
+             <b>
+              KML
+             </b>
+             data on a map.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/kmllayer">
+                KML layer
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-kml">
+                examples
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/utility/kml">
+                KML utility
+               </a>
+               for the Google Maps Android API
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Visualize
+             <b>
+              GeoRSS
+             </b>
+             data on a map.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/kmllayer">
+                KML
+              layer
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-georss">
+                example
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Visualize
+             <b>
+              fusion table
+             </b>
+             data on a map.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/fusiontableslayer">
+                Fusion
+              Tables layer
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-fusiontables-simple">
+                examples
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Draw polygons, rectangles, polylines, circles,
+          markers, and info windows (popups)
+             </b>
+             on a map.
+             <!-- note text box blurb -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/polygon-tutorial">
+                Google Maps Android API
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/ios-sdk/marker">
+                Google Maps SDK for iOS
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/overlays">
+                Overlays
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/marker-simple">
+                examples
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Provide a
+             <b>
+              graphical interface with tools for
+          users
+             </b>
+             to draw on the map.
+             <!-- polygons rectangles polylines circles markers -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/drawinglayer">
+                Drawing
+              library
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/drawing-tools">
+                example
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Add an image to a map
+             </b>
+             , as an overlay at a
+          specified location.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/groundoverlay">
+                Google Maps Android API
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/ios-sdk/overlays">
+                Google Maps SDK for iOS
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/groundoverlays">
+                Ground overlays
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/groundoverlay-simple">
+                example
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/customoverlays">
+                Custom overlays
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/overlay-simple">
+                example
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Add interactive Street View panoramas
+             </b>
+             to
+          your application, set the location of the panorama, manipulate
+          the Street View camera (point of view), and more.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/streetview">
+                Google Maps Android API
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/ios-sdk/streetview">
+                Google Maps SDK for iOS
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/streetview">
+                Street
+              View service
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/streetview-simple">
+                examples
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/embed/guide#streetview">
+                Google Maps Embed API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Display a static Street View panorama.
+             </b>
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/streetview/">
+                Google Street View Image API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Perform
+             <b>
+              spherical geometry computations
+             </b>
+             to
+          calculate angles, heading, distances and areas, from latitudes and
+          longitudes.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/utility/">
+                Spherical
+              geometry utility
+               </a>
+               in the Google Maps Android API Utility
+              Library
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/geometry">
+                Geometry
+              library
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/geometry-headings">
+                examples
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Encode a sequence of latitude/longitude
+        coordinates
+             </b>
+             (LatLngs) into an encoded path string, and decode an
+        encoded path string into a sequence of LatLngs.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/utility/">
+                Polyline
+              utility
+               </a>
+               in the Google Maps Android API Utility Library
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/geometry">
+                Geometry
+            library
+               </a>
+               in the Google Maps JavaScript API
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Open the Google Maps app
+             </b>
+             on iOS, Android, or
+          web, via a URL. This is a handy way to launch Google Maps
+          from an app, an email message, or a web page. For example, launch
+          the Maps app with a directions request, to give your users access to
+          turn-by-turn navigation.
+             <!-- intent link -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/urls/guide">
+                Universal,
+              cross-platform Google Maps URLs
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/urls/android-intents">
+                Intents in the
+              Google Maps Android API
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/urls/ios-urlscheme">
+                Google Maps URL
+              Scheme in the Google Maps SDK for iOS
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Customize the look of a map.
+             </b>
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/android-api/styling">
+                Google Maps Android API
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/ios-sdk/styling">
+                Google Maps SDK for iOS
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/styling">
+                Styles
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple">
+                example
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/static-maps/styling">
+                Google Static Maps API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Use
+             <b>
+              vector-based images
+             </b>
+             to add predefined
+          and custom shapes to markers and polylines on a map, using SVG path
+          notation. Examples of such shapes are arrows, dashed lines, custom
+          paths and symbols animated along a path.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/symbols">
+                Symbols
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/marker-symbol-predefined">
+                examples
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Show
+             <b>
+              public transport routes
+             </b>
+             on a map.
+             <!-- transit -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/trafficlayer#transit_layer">
+                Transit
+              layer
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-transit">
+                example
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Show
+             <b>
+              cycle routes
+             </b>
+             on a map.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/trafficlayer#bicycling_layer">
+                Bicycle
+              layer
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-bicycling">
+                example
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Show
+             <b>
+              current traffic conditions
+             </b>
+             on a map.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/trafficlayer">
+                Traffic
+              layer
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-traffic">
+                example
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             Find the latitude/longitude coordinates for a
+          given address (
+             <b>
+              geocoding
+             </b>
+             ), or convert the latitude/longitude
+          coordinates of a geographic location to an address (
+             <b>
+              reverse
+          geocoding
+             </b>
+             ).
+             <!-- geocode -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/geocoding">
+                Geocoding
+              service
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple">
+                examples
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/geocoding/">
+                Google Maps Geocoding API
+               </a>
+               (web service)
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/web-service/search">
+                Google Places API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Find the maximum zoom level for satellite
+          imagery
+             </b>
+             at a specific location.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/maxzoom">
+                Google
+              Maximum Zoom Imagery service
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/maxzoom-simple">
+                example
+               </a>
+               )
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Find nearby businesses and other places, or
+          search for places
+             </b>
+             by place type or with a query string.
+             <!-- place category -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/places/android-api/placepicker">
+                Place Picker
+               </a>
+               in the Google Places API for Android
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/ios-api/placepicker">
+                Place Picker
+               </a>
+               in the Google Places API for iOS
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/places">
+                Places library
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/place-search">
+                examples
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/web-service/search">
+                Google Places API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Get the name, address, opening hours, and other
+          details of a place
+             </b>
+             , including customer ratings and reviews.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/places">
+                Places library
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/place-details">
+                example
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/web-service/details">
+                Google Places API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Add the type-ahead search behavior of the
+          Google Maps search field
+             </b>
+             to your app.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/places/android-api/autocomplete">
+                Place Autocomplete
+               </a>
+               in the Google Places API for Android
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/ios-api/autocomplete">
+                Place Autocomplete
+               </a>
+               in the Google Places API for iOS
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/places-autocomplete">
+                Place Autocomplete widget
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete">
+                example
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/web-service/autocomplete">
+                Place Autocomplete
+               </a>
+               in the Google Places API (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Autofill an address form.
+             </b>
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/places/android-api/autocomplete">
+                Place Autocomplete
+               </a>
+               in the Google Places API for Android
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/ios-api/autocomplete">
+                Place Autocomplete
+               </a>
+               in the Google Places API for iOS
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/places-autocomplete">
+                Place Autocomplete widget
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform">
+                example
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/web-service/autocomplete">
+                Place Autocomplete
+               </a>
+               in the Google Places API (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Add a missing business to Google Maps.
+             </b>
+             <!-- add place -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/places/android-api/add-place">
+                Google Places API for Android
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/ios-api/add-place">
+                Google Places API for iOS
+               </a>
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/web-service/add-place">
+                Google Places API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Find photos of businesses and other points of
+          interest
+             </b>
+             , sourced from the Places and Google+ databases.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/places/android-api/photos">
+                Place Photos
+               </a>
+               in the Google Places API for Android
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/web-service/photos">
+                Photos
+              service
+               </a>
+               in the Google Places API (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Display search results for the visible region on
+          a map
+             </b>
+             , including nearby businesses and other places.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/embed/guide#search">
+                Google Maps Embed API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Get a location and accuracy radius based on
+          information about cell towers and WiFi nodes
+             </b>
+             that a mobile
+          client can detect. Useful when GPS is not available, for example.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/geolocation/">
+                Google Maps Geolocation API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Get businesses or other places where the device 
+          is currently located.
+             </b>
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/places/android-api/current-place">
+                Current Place
+               </a>
+               in the Google Places API for Android
+              </li>
+              <li>
+               <a href="https://developers.google.com/places/ios-api/add-place">
+                Current Place
+               </a>
+               in the Google Places API for iOS
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Display a fixed image of a map
+             </b>
+             , and
+          optionally add markers, polygons, rectangles, polylines, circles and
+          customized styling. This is useful, for example, if you don't need an
+          interactive map and want to optimize performance and size.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/static-maps/">
+                Google Static Maps API
+               </a>
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Calculate the travel distance and travel time
+          for multiple origins and destinations
+             </b>
+             , optionally specifying
+          various forms of transport: walking, driving, cycling.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/distancematrix">
+                Distance Matrix service
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/distance-matrix">
+                example
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/distance-matrix/">
+                Google Maps Distance Matrix API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Find height above sea level and depth of
+          locations on the ocean floor.
+             </b>
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/javascript/elevation">
+                Elevation
+              service
+               </a>
+               in the Google Maps JavaScript API
+              (
+               <a href="https://developers.google.com/maps/documentation/javascript/examples/elevation-simple">
+                examples
+               </a>
+               )
+              </li>
+              <li>
+               <a href="https://developers.google.com/maps/documentation/elevation/">
+                Google Maps Elevation API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Find the time zone name, time offset data and
+          daylight saving time
+             </b>
+             for a location.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/timezone/">
+                Google Maps Time Zone API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Determine the speed limit for a section of
+          road.
+             </b>
+             <!-- kilometers or miles per hour -->
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/roads/speed-limits">
+                Google Maps Roads API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+           <tr>
+            <td class="function">
+             <b>
+              Determine the roads on which a vehicle
+          traveled.
+             </b>
+             Snap a set of GPS coordinates to the most likely road the vehicle was
+          traveling, or find the nearest road segments.
+            </td>
+            <td class="api">
+             <ul class="gc-picker-list">
+              <li>
+               <a href="https://developers.google.com/maps/documentation/roads/intro">
+                Google Maps Roads API
+               </a>
+               (web service)
+              </li>
+             </ul>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+        <script src="https://developers.google.com/_static/eee0a9d1b9/js/managed/listjs.js">
+        </script>
+       </div>
+       <div class="devsite-content-footer nocontent">
+        <p>
+         Except as otherwise noted, the content of this page is licensed under the
+         <a href="http://creativecommons.org/licenses/by/3.0/">
+          Creative Commons Attribution 3.0 License
+         </a>
+         , and code samples are licensed under the
+         <a href="http://www.apache.org/licenses/LICENSE-2.0">
+          Apache 2.0 License
+         </a>
+         . For details, see our
+         <a href="https://developers.google.com/terms/site-policies">
+          Site Policies
+         </a>
+         . Java is a registered trademark of Oracle and/or its affiliates.
+        </p>
+        <p class="devsite-content-footer-date" content="2017-06-07T04:47:18.401260" itemprop="datePublished">
+         Last updated June 7, 2017.
+        </p>
+       </div>
+      </article>
+     </article>
+    </div>
+    <footer class="devsite-footer-promos nocontent">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-promos-list">
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="http://stackoverflow.com/questions/tagged/google-maps">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-stack-overflow.svg"/>
+         Stack Overflow
+        </a>
+        <div class="devsite-footer-promo-description">
+         Ask a question under the google-maps tag.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://github.com/googlemaps/">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg"/>
+         GitHub
+        </a>
+        <div class="devsite-footer-promo-description">
+         Fork our samples and try them yourself.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://googlegeodevelopers.blogspot.com">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/blogger_64dp.png"/>
+         Blog
+        </a>
+        <div class="devsite-footer-promo-description">
+         Read about the latest updates, customer stories, and tips.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://issuetracker.google.com/savedsearches/559082">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/developers_64dp.png"/>
+         Issue tracker
+        </a>
+        <div class="devsite-footer-promo-description">
+         Something wrong? Send us a bug report!
+        </div>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-footer-linkboxes nocontent ">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-linkboxes-list">
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Learn More
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/javascript/tutorials/">
+           Tutorials
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/pricing-and-plans/">
+           Pricing and Plans
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/api-picker">
+           API Picker
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/">
+           Maps APIs Overview
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Platforms
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/android/">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/ios/">
+           iOS
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web/">
+           Web
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web-services/">
+           Web Services
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Product Info
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/contact-sales/">
+           Contact sales
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/support/">
+           Community support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/premium/support">
+           Paid support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/terms">
+           Terms of Service
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox devsite-footer-linkbox-sites">
+        <a class="gc-analytics-event devsite-footer-linkbox-logo-link" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link" href="https://developers.google.com/">
+         <img class="devsite-footer-linkbox-logo" src="https://developers.google.com/_static/eee0a9d1b9/images/redesign-14/lockup-color-knockout.png"/>
+        </a>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link" href="//developer.android.com/index.html">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link" href="//developer.chrome.com/home">
+           Chrome
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link" href="//firebase.google.com">
+           Firebase
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cloud Link" href="//cloud.google.com">
+           Google Cloud Platform
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products Link" href="//developers.google.com/products/">
+           All Products
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-utility-footer">
+     <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
+      <div class="devsite-utility-footer-nav-left">
+       <form action="/i18n/setlang/" class="devsite-utility-footer-language" method="post">
+        <input name="xsrf_token" type="hidden" value="VhYPlUD1te-DpykG9hb3rXwnAtaghIH6upXDC44h7vI6MTQ5NzQ0NDQyMTQwOTcyMA"/>
+        <input name="next" type="hidden" value="/maps/documentation/api-picker"/>
+        <select class="devsite-utility-footer-language-select kd-select" name="language" track-name="click" track-type="languageSelector">
+         <option track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector" value="id">
+          Bahasa Indonesia
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector" value="de">
+          Deutsch
+         </option>
+         <option selected="selected" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" value="en">
+          English
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector" value="es">
+          español
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector" value="fr">
+          français
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="pt-br" track-name="changed" track-type="languageSelector" value="pt-br">
+          Português Brasileiro
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector" value="ru">
+          Русский
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector" value="ja">
+          日本語
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-cn" track-name="changed" track-type="languageSelector" value="zh-cn">
+          简体中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-tw" track-name="changed" track-type="languageSelector" value="zh-tw">
+          繁體中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector" value="ko">
+          한국어
+         </option>
+        </select>
+       </form>
+       <span class="devsite-utility-footer-links">
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer terms link" href="https://developers.google.com/terms/site-terms">
+         Terms
+        </a>
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer privacy link" href="https://www.google.com/policies/privacy/">
+         Privacy
+        </a>
+       </span>
+      </div>
+      <div class="devsite-utility-footer-nav-right">
+       <div class="devsite-utility-footer-newsletter-signup-text">
+        Sign up for the Google Developers newsletter
+       </div>
+       <a class="button button-primary devsite-utility-footer-newsletter-signup-button" href="https://services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch">
+        Subscribe
+       </a>
+      </div>
+     </nav>
+    </footer>
+    <div class="devsite-feedback-dialog devsite-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Send feedback about...
+      </h3>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Image" data-type="documentation" track-metadata-position="header" track-name="feedbackDocIcon" track-type="feedback">
+        <div class="devsite-feedback-item-icon-container">
+         <div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs material-icons">
+         </div>
+        </div>
+       </a>
+       <div class="devsite-feedback-item-name">
+        This page
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Text" data-type="documentation" tabindex="0" track-metadata-position="header" track-name="feedbackDocText" track-type="feedback">
+         Documentation feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Image" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductIcon" track-type="feedback">
+        <img alt="Google Maps APIs" class="devsite-feedback-item-icon" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+       </a>
+       <div class="devsite-feedback-item-name">
+        Google Maps APIs
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Text" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductText" track-type="feedback">
+         Product feedback
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="devsite-feedback-cancel button-white gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button" track-metadata-position="header" track-name="cancelFeedbackButton" track-type="feedback" type="button">
+       Cancel
+      </button>
+     </div>
+    </div>
+    <script>
+     $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'Maps API Product Family',
+        'version': 'devsite-20170612-r03-rc00.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+    </script>
+   </div>
+   <script async="" defer="" src="//www.gstatic.com/feedback/api.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery_ui-bundle.js">
+   </script>
+   <script src="https://developers.google.com/_static2/eee0a9d1b9/jsi18n/">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot_closure.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot.js">
+   </script>
+   <script>
+    (function($) {
+          
+          devsite.devsite.Init($, {'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'VERSION_HASH': 'eee0a9d1b9', 'SITE_NAME': 'devsite', 'HISTORY_ENABLED': 1, 'SUBPATH': '', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.api.ai', '.appspot.com', '.devsitetest.how', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.nest.com', '.openthread.io', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0, 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com'},
+                               '[]','en',
+                               true, '',
+                               {"039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/maps/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+   </script>
+   <script>
+    $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+   </script>
+   <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=paewx4mdhuzny4k5rewdgkq2cy">
+   </script>
+  </div>
+  <span data-request-elapsed="294.600009918" id="devsite-request-elapsed">
+  </span>
+ </body>
+</html>

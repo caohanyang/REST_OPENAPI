@@ -1,0 +1,28 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/tips/49f083e770c603bbe81f8eb4": {
+      "DEL": {}
+    },
+    "http://foursquare.com/img/categories/food/coff": {
+      "GET": {}
+    },
+    "https://irs0.4sqi.net/img/general": {
+      "post": {},
+      "POST": {}
+    },
+    "/": {
+      "post": {},
+      "POST": {},
+      "get": {},
+      "del": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html class="chekov" lang="en">
+ <head>
+  <script>
+   var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="BTAzLWcCT47a1IZbNrxCuNfXGX6slMViPpK8ArtS5-Y6MTQ5NzQ0NDM1NDIyODk2MA" name="xsrf_token"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors" rel="canonical"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=ko" hreflang="ko" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=ja" hreflang="ja" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=es" hreflang="es" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=fr" hreflang="fr" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=id" hreflang="id" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=pt-br" hreflang="pt-br" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=zh-tw" hreflang="zh-Hant" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=ru" hreflang="ru" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=zh-cn" hreflang="zh-Hans" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors?hl=de" hreflang="de" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors" hreflang="en" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=ko" hreflang="ko-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=ja" hreflang="ja-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=es" hreflang="es-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=fr" hreflang="fr-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=id" hreflang="id-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=pt-br" hreflang="pt-br-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=zh-tw" hreflang="zh-Hant-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=ru" hreflang="ru-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=zh-cn" hreflang="zh-Hans-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors?hl=de" hreflang="de-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/roads/errors" hreflang="en-cn" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/roads/errors" hreflang="x-default" rel="alternate"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/favicon.png" rel="shortcut icon"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/touch-icon.png" rel="apple-touch-icon"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/css/devsite-google-blue.css" rel="stylesheet"/>
+  <link href="https://developers.google.com/s/opensearch.xml" rel="search" title="Google Developers" type="application/opensearchdescription+xml"/>
+  <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery-bundle.js">
+  </script>
+  <meta content="Google Developers" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://developers.google.com/maps/documentation/roads/errors" property="og:url"/>
+  <meta content="en" property="og:locale"/>
+  <script>
+   var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <title>
+   Troubleshooting  |  Google Maps Roads API
+       |  Google Developers
+  </title>
+  <meta content="Troubleshooting  |  Google Maps Roads API
+       |  Google Developers" property="og:title"/>
+ </head>
+ <body class=" devsite-doc-page devsite-uhura" id="top_of_page">
+  <div class="devsite-wrapper">
+   <div class="devsite-top-section-wrapper ">
+    <header class="devsite-top-section nocontent">
+     <div class="devsite-top-logo-row-wrapper-wrapper">
+      <div class="devsite-top-logo-row-wrapper">
+       <div class="devsite-top-logo-row devsite-full-site-width">
+        <button class="devsite-expand-section-nav devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Hamburger menu" type="button">
+        </button>
+        <div class="devsite-product-name-wrapper">
+         <a class="devsite-product-name-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Project logo (header)" href="https://developers.google.com/maps/">
+          <img alt="Google Maps APIs" class="devsite-product-logo" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+         </a>
+         <span class="devsite-product-name">
+          <ul class="devsite-breadcrumb-list">
+           <li class="devsite-breadcrumb-item">
+            <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" href="https://developers.google.com/maps/">
+             Google Maps APIs
+            </a>
+           </li>
+          </ul>
+         </span>
+        </div>
+        <div class="devsite-header-upper-tabs">
+         <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+          <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="home" data-label="navTopMenu" href="https://developers.google.com/maps/">
+             Home
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="documentation" data-label="navTopMenu" href="https://developers.google.com/maps/documentation/">
+             Documentation
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="pricingAndPlans" data-label="navTopMenu" href="https://developers.google.com/maps/pricing-and-plans/">
+             Pricing and Plans
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </div>
+        <form action="https://developers.google.com/s/results/" class="devsite-search-form " id="top-search" method="GET" search-placeholder="Search">
+         <div class="devsite-searchbox" id="searchbox">
+          <input autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="Search" type="text" value=""/>
+          <div class="devsite-search-image material-icons">
+          </div>
+         </div>
+         <input data-project-name="Google Maps Roads API" data-project-path="/maps/documentation/roads/" data-query-match="" id="search_project" name="p" type="hidden" value="/maps/documentation/roads/"/>
+         <input class="suggest-project" type="hidden" value="Google Maps Roads API"/>
+         <div class="suggest-project-metadata" data-home_url="/maps/documentation/urls/guide" data-name="Google Maps URLs" data-path="/maps/documentation/urls/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/" data-name="Maps APIs Solutions" data-path="/maps/solutions/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/transport-tracker/" data-name="Transport Tracker Solution" data-path="/maps/solutions/transport-tracker/">
+         </div>
+        </form>
+        <a class="devsite-header-link devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site header link" href="https://developers.google.com/products/">
+         <div class="devsite-header-link-label">
+          All Products
+         </div>
+        </a>
+        <button class="devsite-search-button devsite-header-icon-button button-flat material-icons" type="button">
+        </button>
+        <a class="devsite-user-signin devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Sign in button" href="https://www.google.com/accounts/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fdevelopers.google.com%2Fmaps%2Fdocumentation%2Froads%2Ferrors%3Frefresh%3D1&amp;service=ahsid">
+         Sign in
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="devsite-collapsible-section">
+      <div class="devsite-header-background devsite-full-site-width">
+       <div class="devsite-product-id-row devsite-full-site-width">
+        <div class="devsite-product-description-row">
+         <ul class="devsite-breadcrumb-list">
+          <li class="devsite-breadcrumb-item">
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="1" href="https://developers.google.com/maps/web-services/">
+            Web Services
+           </a>
+          </li>
+          <li class="devsite-breadcrumb-item">
+           <div class="devsite-breadcrumb-guillemet material-icons">
+           </div>
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="2" href="https://developers.google.com/maps/documentation/roads/intro">
+            Roads API
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="devsite-product-button-row ">
+         <a class="devsite-api-getstarted-widget button gc-analytics-event devsite-dialog-button" data-action="buttonClick" data-api-id="roads" data-category="getKey" data-henhouse-link-docs="/maps/documentation/roads/intro" data-henhouse-link-support="/maps/documentation/roads/support" data-henhouse-platforms-list="WEB_SERVER" data-label="hero">
+          Get a Key
+         </a>
+         <a class="button button-text-blue" data-action="buttonClick" data-category="viewPlans" data-label="hero" href="https://developers.google.com/maps/pricing-and-plans/">
+          View Pricing and Plans
+         </a>
+        </div>
+       </div>
+       <div class="devsite-doc-set-nav-row devsite-full-site-width">
+        <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+         <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Guides" href="https://developers.google.com/maps/documentation/roads/intro">
+            Guides
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Support" href="https://developers.google.com/maps/documentation/roads/support">
+            Support
+           </a>
+          </li>
+          <button class="devsite-feedback-button devsite-top-button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Send Feedback Button" id="devsite-feedback-project" track-metadata-position="header" track-name="sendFeedbackLink" track-type="feedback" type="button">
+           Send feedback
+          </button>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </header>
+    <link href="/maps/styles/lhstyles/landing/css/landing.css" rel="stylesheet"/>
+    <!-- exit getkey modal -->
+    <div class="devsite-dialog devsite-enable-getkey-dialog" id="devsite-dialog-onload-getkey-enabled">
+     <div class="get-key-check">
+     </div>
+     <div class="devsite-dialog-contents">
+      <h3>
+       You're all set!
+      </h3>
+      <p>
+       To start developing, please head over to our
+       <a href="/maps/documentation/roads/intro/">
+        developer documentation
+       </a>
+       .
+      </p>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="devsite-dialog-close button-white">
+       Dismiss
+      </button>
+     </div>
+    </div>
+    <!-- enter getkey modal -->
+    <div class="devsite-dialog devsite-enable-getkey-dialog" id="enable-getkey-modal-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Activate the Google Maps Roads API
+      </h3>
+      <p>
+       To get you started we'll guide you through the Google Developers
+    Console to do a few things first:
+      </p>
+      <ol>
+       <li>
+        Create or choose a project
+       </li>
+       <li>
+        Activate the Google Maps Roads API
+       </li>
+       <li>
+        Create appropriate keys
+       </li>
+      </ol>
+     </div>
+     <div class="devsite-dialog-buttons devsite-landing-row-item-buttons">
+      <button class="devsite-dialog-close button-white" data-action="linkClick" data-category="getKeyModalCancel" data-label="modal">
+       Cancel
+      </button>
+      <a class="button button-white gc-analytics-event" data-action="linkClick" data-category="getKeyModalContinue" data-label="modal" href="https://console.developers.google.com/flows/enableapi?apiid=roads&amp;reusekey=true" onclick="devsite.utils.showSiteMask().click()" target="_blank">
+       Continue
+      </a>
+     </div>
+    </div>
+    <script>
+     if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('en')
+        }
+      });
+    }
+    </script>
+   </div>
+   <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {}, "gaid": "UA-42966870-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps Roads API", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps Roads API", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-49880327-1"}'/>
+    <input class="google-tag-manager-id" type="hidden" value="GTM-W546ZN"/>
+    <script>
+     var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "FR", "language": {"requested": "en", "served": "en"}, "projectName": "Google Maps Roads API", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+    <div class="devsite-site-mask">
+    </div>
+    <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+     <div class="devsite-nav-responsive-tabs-panel">
+      <nav class="devsite-nav-responsive-tabs devsite-nav">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home" href="https://developers.google.com/maps/">
+          Home
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Documentation" href="https://developers.google.com/maps/documentation/?nav=true">
+          Documentation
+         </a>
+         <nav class="devsite-nav-responsive-tabs devsite-nav">
+          <ul class="devsite-nav-list">
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title devsite-nav-active gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides" tabindex="0">
+             Guides
+            </span>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Support" href="https://developers.google.com/maps/documentation/roads/support?nav=true">
+             Support
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+             All Products
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Pricing and Plans" href="https://developers.google.com/maps/pricing-and-plans/">
+          Pricing and Plans
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+          All Products
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="devsite-nav-responsive-sidebar-panel">
+      <div class="devsite-nav-responsive-back" tabindex="0">
+      </div>
+      <nav class="devsite-nav-responsive-sidebar">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Developer's Guide
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/intro" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Overview
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/web-service-best-practices" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Best Practices for Web Services
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/client-library" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Client Libraries
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/get-api-key" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Get API Key
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/snap" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Snap to Roads
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/nearest" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Nearest Roads
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/speed-limits" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Speed Limits
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/advanced" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Advanced Concepts
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-active">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/errors" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Troubleshooting
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/inspector" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Roads Inspector
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Policies and Terms
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/usage-limits" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          API Usage Limits
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/policies" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Policies
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/terms" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Terms of Service
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Other Web Service APIs
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/directions/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Directions API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/distance-matrix/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Distance Matrix API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/elevation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Elevation API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/geocoding/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Geocoding API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/geolocation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Geolocation API
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/web-service/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Places API Web Service
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/timezone/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Time Zone API
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </nav>
+    <div class="devsite-main-content clearfix">
+     <nav class="devsite-section-nav devsite-nav nocontent">
+      <ul class="devsite-nav-list">
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Developer's Guide
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/intro" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Overview
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/web-service-best-practices" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Best Practices for Web Services
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/client-library" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Client Libraries
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/get-api-key" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Get API Key
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/snap" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Snap to Roads
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/nearest" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Nearest Roads
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/speed-limits" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Speed Limits
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/advanced" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Advanced Concepts
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-active">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/errors" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Troubleshooting
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/inspector" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Roads Inspector
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Policies and Terms
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/usage-limits" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         API Usage Limits
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/roads/policies" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Policies
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/terms" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Terms of Service
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Other Web Service APIs
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/directions/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Directions API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/distance-matrix/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Distance Matrix API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/elevation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Elevation API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/geocoding/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Geocoding API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/geolocation/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Geolocation API
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/places/web-service/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Places API Web Service
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/timezone/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Time Zone API
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <nav class="devsite-page-nav devsite-nav">
+     </nav>
+     <article class="devsite-article">
+      <article class="devsite-article-inner">
+       <nav class="devsite-breadcrumb-nav devsite-nav">
+        <ul class="devsite-breadcrumb-list">
+         <li class="devsite-breadcrumb-item">
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" href="https://developers.google.com/products/">
+           Products
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" href="https://developers.google.com/maps/">
+           Google Maps APIs
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3" href="https://developers.google.com/maps/web-services/">
+           Web Services
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="4" href="https://developers.google.com/maps/documentation/roads/intro">
+           Roads API
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="5" href="https://developers.google.com/maps/documentation/">
+           Documentation
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="6" href="https://developers.google.com/maps/documentation/roads/intro">
+           Guides
+          </a>
+         </li>
+        </ul>
+       </nav>
+       <h1 class="devsite-page-title" itemprop="name">
+        Troubleshooting
+       </h1>
+       <nav class="devsite-page-nav-embedded devsite-nav">
+       </nav>
+       <div class="devsite-article-body clearfix " itemprop="articleBody">
+        <link href="https://developers.google.com/maps/styles/common.css" rel="stylesheet" type="text/css"/>
+        <p>
+        </p>
+        <h2 id="errors">
+         Errors
+        </h2>
+        <p>
+         In the case of an error, a standard format error response body will be returned
+and the HTTP status code will be set to an error status.
+        </p>
+        <p>
+         The response contains an object with a single
+         <code>
+          error
+         </code>
+         object with the following
+keys:
+        </p>
+        <ul>
+         <li>
+          <code>
+           code
+          </code>
+          : This is the same as the HTTP status of the response.
+         </li>
+         <li>
+          <code>
+           message
+          </code>
+          : A short description of the error.
+         </li>
+         <li>
+          <code>
+           status
+          </code>
+          : A status code indicating the nature of the error.
+         </li>
+        </ul>
+        <p>
+         For example, sending an invalid
+         <code>
+          placeId
+         </code>
+         parameter will return the following
+error:
+        </p>
+        <pre class="prettyprint notranslate lang-json">{
+  "error": {
+    "code": 400,
+    "message": "\"placeId\" value is malformed: \"aChIJqaknMTeuEmsRUYCD5Wd9ARM\"",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+</pre>
+        <p>
+         Possible errors include:
+        </p>
+        <table border="1">
+         <tbody>
+          <tr>
+           <th scope="col">
+            Code
+           </th>
+           <th scope="col">
+            Status
+           </th>
+           <th scope="col">
+            Message
+           </th>
+           <th scope="col">
+            Troubleshooting
+           </th>
+          </tr>
+          <tr>
+           <td>
+            400
+           </td>
+           <td>
+            <code>
+             INVALID_ARGUMENT
+            </code>
+           </td>
+           <td>
+            The key you provided is invalid.
+           </td>
+           <td>
+            Your API key is not valid or was not included in the request.
+      Please ensure that you've included the entire key, and that you've
+      enabled the API for this key.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            400
+           </td>
+           <td>
+            <code>
+             INVALID_ARGUMENT
+            </code>
+           </td>
+           <td>
+            "\"path\" parameter contains an invalid value: ☃"
+           </td>
+           <td>
+            Your request contained invalid arguments. The most likely causes of
+      this error are:
+            <ul>
+             <li>
+              A problem with your
+              <code>
+               path
+              </code>
+              parameter.
+              <br/>
+              Please ensure you have at least 1, and fewer than 100
+          points. Each point should be a pair of numbers separated by a comma,
+          such as:
+              <code>
+               48.409114,-123.369158
+              </code>
+              . Points should be
+          separated by a pipe: '|'.
+             </li>
+             <li>
+              Your request included an invalid
+              <code>
+               placeId
+              </code>
+              .
+             </li>
+             <li>
+              Your request included both
+              <code>
+               placeId
+              </code>
+              s and a
+              <code>
+               path
+              </code>
+              . Only one of these parameters may be specified for
+          each request.
+             </li>
+            </ul>
+            <p>
+             This error will not be returned if a
+             <code>
+              placeId
+             </code>
+             is passed
+      for a road which no longer exists, or for a place which is not a road.
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            403
+           </td>
+           <td>
+            <code>
+             PERMISSION_DENIED
+            </code>
+           </td>
+           <td>
+            Unregistered request was blocked. Please sign up using Google Developers
+      Console.
+           </td>
+           <td>
+            Your API key is not valid or was not included in the request.
+      Please ensure that you've included the entire key, and that you've
+      enabled the API for this key.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            404
+           </td>
+           <td>
+            <code>
+             NOT_FOUND
+            </code>
+           </td>
+           <td>
+            HTTPS is required for this service.
+           </td>
+           <td>
+            Ensure that you are sending requests to
+            <code>
+             <strong>
+              https
+             </strong>
+             ://roads.googleapis.com/
+            </code>
+            and not
+            <code>
+             <strong>
+              http
+             </strong>
+             ://roads.googleapis.com/
+            </code>
+            .
+           </td>
+          </tr>
+          <tr>
+           <td>
+            429
+           </td>
+           <td>
+            <code>
+             RESOURCE_EXHAUSTED
+            </code>
+           </td>
+           <td>
+            The request was throttled due to project QPS limit being reached.
+           </td>
+           <td>
+            You've exceeded the
+            <a href="https://support.google.com/googleapi/answer/7036164">
+             requests
+      per second per user
+            </a>
+            limit that you configured in the
+      API Console. This limit should be configured to prevent
+      a single or small group of users from exhausting your daily quota,
+      while still allowing reasonable access to all users.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            429
+           </td>
+           <td>
+            <code>
+             RESOURCE_EXHAUSTED
+            </code>
+           </td>
+           <td>
+            The request was throttled due to daily limit being reached.
+           </td>
+           <td>
+            You've exceeded the daily quota for your project.
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <h2 id="exponential_backoff">
+         Exponential backoff
+        </h2>
+        <p>
+         When requests fail, you should ensure that you retry requests with exponential
+backoff. For example, if a request fails once, retry after a second, if it
+fails again, retry after two seconds, then four seconds, and so on. This
+ensures that broken requests or wide scale failures do not flood Google’s
+servers, as many clients try to retry requests very quickly.
+        </p>
+        <h2 id="troubleshooting_faq">
+         Troubleshooting FAQ
+        </h2>
+        <h3 id="implementation_issues">
+         Implementation issues
+        </h3>
+        <dl>
+         <dt>
+          At which frequency should I sample my vehicle location?
+         </dt>
+         <dd>
+          Every 1-10 seconds is recommended for high quality snap-to-road results.
+         </dd>
+         <dt>
+          Is there a limit on the number of points I can send per query?
+         </dt>
+         <dd>
+          Yes, a query can have at most 100 points.
+         </dd>
+         <dt>
+          What level of precision should I use to store my snapped latitude/longitude
+pairs?
+         </dt>
+         <dd>
+          To ensure that snapped paths follow the roads at all zoom levels, even at
+maximum zoom level, you should store your snapped latitude/longitude pairs at 7
+decimal places of precision.
+         </dd>
+         <dt>
+          Can I use encoded polylines to display snapped paths?
+         </dt>
+         <dd>
+          Encoded polylines are only specified to a precision of 5 decimal places,
+which results in an error of approximately 2 meters. Encoded polylines are thus
+not suitable if you want your snapped paths to follow the road at high zoom
+levels.
+         </dd>
+        </dl>
+        <h3 id="common_issues">
+         Common issues
+        </h3>
+        <dl>
+         <dt>
+          Some points aren’t being snapped, or I have gaps in snapped paths. How can
+I correct this?
+         </dt>
+         <dd>
+          <ul>
+           <li>
+            If you are sampling your points at timed intervals, ensure your points are
+sampled at shorter intervals (every 1-10 seconds). If a longer interval is used
+(for example 60 seconds), the snap-to-road algorithm may not be able to
+determine roads traveled with sufficient accuracy.
+           </li>
+           <li>
+            If you are manually clicking on a map to create points, it's very easy to
+create paths with few points or sparse points that the snapping algorithm
+doesn't handle well. The snapping algorithm works best for points that are
+close together. Try the
+            <a href="https://developers.google.com/maps/documentation/roads/snap#demo">
+             Snap to
+Roads demo
+            </a>
+            or use the
+            <a href="https://developers.google.com/maps/documentation/roads/inspector">
+             Roads
+inspector
+            </a>
+            to test your paths.
+           </li>
+           <ul>
+           </ul>
+          </ul>
+         </dd>
+         <dt>
+          Why are my snapped paths are jagged or slightly off from the road when I
+zoom in?
+         </dt>
+         <dd>
+          <ul>
+           <li>
+            Are you truncating the precision of the snapped latitude/longitude pairs
+prior to displaying them? Storing snapped latitude/longitude pairs at a
+precision of less than 7 decimal points causes precision errors when the
+snapped path is displayed on the map.
+           </li>
+           <li>
+            Are you using encoded polylines? Encoded polylines truncate
+latitude/longitude pairs to 5 decimal places, which introduces an error of
+several meters, resulting in lines that are jagged or slightly off from the
+road at high zoom levels.
+           </li>
+          </ul>
+          <p>
+           If neither of the above is the case, the map tiles may have been updated
+recently, causing them to become out of sync with the road index used for
+snapping. If only a few of your queries are affected this is likely to be the
+cause. Since Google Maps is updated regularly, this may happen occasionally,
+and can occur more often if you regularly look at old paths on a map (for
+example, paths that were snapped several weeks ago). For optimal visualization,
+you should re-snap old paths just before showing them on a map, in order to
+minimize the inconsistencies between the map tiles and the road index used for
+snapping.
+          </p>
+         </dd>
+         <dt>
+          What could cause the speed limit for road X to display incorrectly?
+         </dt>
+         <dd>
+          Speed limits come from several sources that vary in accuracy and coverage.
+If you find a pattern, for example speed limits for a particular road type or
+in a particular area being consistently wrong, please take the following steps
+to let us know:
+          <ol>
+           <li>
+            Open Google Maps on your desktop computer OR the Google Maps app for
+Android.
+           </li>
+           <li>
+            Open the left side menu.
+           </li>
+           <li>
+            Select
+            <b>
+             Send feedback
+            </b>
+            . Note: you may be prompted to log in.
+           </li>
+           <li>
+            Select
+            <b>
+             Edit the map
+            </b>
+            .
+           </li>
+           <li>
+            Select the road segment you want to edit.
+           </li>
+           <li>
+            Click
+            <b>
+             Next
+            </b>
+            .
+           </li>
+           <li>
+            In the "Other" field, indicate that the speed limit is wrong for that road.
+           </li>
+           <li>
+            Click
+            <b>
+             Submit
+            </b>
+            .
+           </li>
+          </ol>
+          You can also report other issues here (for example if the road has the
+incorrect name, is incorrectly drawn, or is closed, or private).
+         </dd>
+         <dt>
+          Why is my snapped path cutting corners instead of following the road?
+         </dt>
+         <dd>
+          To correct this issue, check the following:
+          <ul>
+           <li>
+            Ensure the
+            <code>
+             interpolate
+            </code>
+            parameter is set to
+            <code>
+             true
+            </code>
+            .
+           </li>
+           <li>
+            Check that your original data points are sampled at close enough intervals
+(every 1-10 seconds).
+           </li>
+          </ul>
+         </dd>
+         <dt>
+          Why am I getting lots of road segments returned in the snapped path for a
+road with no speed limit changes?
+         </dt>
+         <dd>
+          When the
+          <code>
+           interpolate
+          </code>
+          parameter is set to
+          <code>
+           true
+          </code>
+          ,
+the snap-to-road query returns a polyline that follows the road around corners,
+curves, and roundabouts. If the road curves, multiple road segments are
+returned even if the speed limit does not change, in order to create a polyline
+that closely follows the road geometry.
+         </dd>
+        </dl>
+       </div>
+       <div class="devsite-content-footer nocontent">
+        <p>
+         Except as otherwise noted, the content of this page is licensed under the
+         <a href="http://creativecommons.org/licenses/by/3.0/">
+          Creative Commons Attribution 3.0 License
+         </a>
+         , and code samples are licensed under the
+         <a href="http://www.apache.org/licenses/LICENSE-2.0">
+          Apache 2.0 License
+         </a>
+         . For details, see our
+         <a href="https://developers.google.com/terms/site-policies">
+          Site Policies
+         </a>
+         . Java is a registered trademark of Oracle and/or its affiliates.
+        </p>
+        <p class="devsite-content-footer-date" content="2017-06-07T04:47:27.081690" itemprop="datePublished">
+         Last updated June 7, 2017.
+        </p>
+       </div>
+      </article>
+     </article>
+    </div>
+    <footer class="devsite-footer-promos nocontent">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-promos-list">
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="http://stackoverflow.com/questions/tagged/google-maps">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-stack-overflow.svg"/>
+         Stack Overflow
+        </a>
+        <div class="devsite-footer-promo-description">
+         Ask a question under the google-maps tag.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://github.com/googlemaps/">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg"/>
+         GitHub
+        </a>
+        <div class="devsite-footer-promo-description">
+         Fork our samples and try them yourself.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://googlegeodevelopers.blogspot.com">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/blogger_64dp.png"/>
+         Blog
+        </a>
+        <div class="devsite-footer-promo-description">
+         Read the latest updates, customer stories, and tips.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://issuetracker.google.com/bookmark-groups/76561">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/developers_64dp.png"/>
+         Issue Tracker
+        </a>
+        <div class="devsite-footer-promo-description">
+         Something wrong? Send us a bug report!
+        </div>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-footer-linkboxes nocontent ">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-linkboxes-list">
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Resources
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://github.com/googlemaps/google-maps-services-java">
+           Java Client Library
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://github.com/googlemaps/google-maps-services-python">
+           Python Client Library
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/pricing-and-plans/">
+           Pricing and Plans
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/api-picker">
+           API Picker
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Platforms
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/android/">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/ios/">
+           iOS
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web/">
+           Web
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web-services/">
+           Web Services
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Product Info
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/contact-sales">
+           Contact sales
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/support/">
+           Community support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/premium/support">
+           Paid support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/terms">
+           Terms of Service
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox devsite-footer-linkbox-sites">
+        <a class="gc-analytics-event devsite-footer-linkbox-logo-link" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link" href="https://developers.google.com/">
+         <img class="devsite-footer-linkbox-logo" src="https://developers.google.com/_static/eee0a9d1b9/images/redesign-14/lockup-color-knockout.png"/>
+        </a>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link" href="//developer.android.com/index.html">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link" href="//developer.chrome.com/home">
+           Chrome
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link" href="//firebase.google.com">
+           Firebase
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cloud Link" href="//cloud.google.com">
+           Google Cloud Platform
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products Link" href="//developers.google.com/products/">
+           All Products
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-utility-footer">
+     <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
+      <div class="devsite-utility-footer-nav-left">
+       <form action="/i18n/setlang/" class="devsite-utility-footer-language" method="post">
+        <input name="xsrf_token" type="hidden" value="BTAzLWcCT47a1IZbNrxCuNfXGX6slMViPpK8ArtS5-Y6MTQ5NzQ0NDM1NDIyODk2MA"/>
+        <input name="next" type="hidden" value="/maps/documentation/roads/errors"/>
+        <select class="devsite-utility-footer-language-select kd-select" name="language" track-name="click" track-type="languageSelector">
+         <option track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector" value="id">
+          Bahasa Indonesia
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector" value="de">
+          Deutsch
+         </option>
+         <option selected="selected" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" value="en">
+          English
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector" value="es">
+          español
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector" value="fr">
+          français
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="pt-br" track-name="changed" track-type="languageSelector" value="pt-br">
+          Português Brasileiro
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector" value="ru">
+          Русский
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector" value="ja">
+          日本語
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-cn" track-name="changed" track-type="languageSelector" value="zh-cn">
+          简体中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-tw" track-name="changed" track-type="languageSelector" value="zh-tw">
+          繁體中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector" value="ko">
+          한국어
+         </option>
+        </select>
+       </form>
+       <span class="devsite-utility-footer-links">
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer terms link" href="https://developers.google.com/terms/site-terms">
+         Terms
+        </a>
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer privacy link" href="https://www.google.com/policies/privacy/">
+         Privacy
+        </a>
+       </span>
+      </div>
+      <div class="devsite-utility-footer-nav-right">
+       <div class="devsite-utility-footer-newsletter-signup-text">
+        Sign up for the Google Developers newsletter
+       </div>
+       <a class="button button-primary devsite-utility-footer-newsletter-signup-button" href="https://services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch">
+        Subscribe
+       </a>
+      </div>
+     </nav>
+    </footer>
+    <div class="devsite-feedback-dialog devsite-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Send feedback about...
+      </h3>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Image" data-type="documentation" track-metadata-position="header" track-name="feedbackDocIcon" track-type="feedback">
+        <div class="devsite-feedback-item-icon-container">
+         <div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs material-icons">
+         </div>
+        </div>
+       </a>
+       <div class="devsite-feedback-item-name">
+        This page
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Text" data-type="documentation" tabindex="0" track-metadata-position="header" track-name="feedbackDocText" track-type="feedback">
+         Documentation feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Image" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductIcon" track-type="feedback">
+        <img alt="Google Maps Roads API" class="devsite-feedback-item-icon" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+       </a>
+       <div class="devsite-feedback-item-name">
+        Google Maps Roads API
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Text" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductText" track-type="feedback">
+         Product feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-support">
+       <img src="https://developers.google.com/_static/eee0a9d1b9/images/feedback/ic_help_24px.svg"/>
+       Need help? Visit our
+       <a href="https://developers.google.com/maps/documentation/roads/support">
+        support page
+       </a>
+       .
+      </div>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="devsite-feedback-cancel button-white gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button" track-metadata-position="header" track-name="cancelFeedbackButton" track-type="feedback" type="button">
+       Cancel
+      </button>
+     </div>
+    </div>
+    <script>
+     $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'Roads API',
+        'version': 'devsite-20170612-r03-rc00.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+    </script>
+   </div>
+   <script async="" defer="" src="//www.gstatic.com/feedback/api.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery_ui-bundle.js">
+   </script>
+   <script src="https://developers.google.com/_static2/eee0a9d1b9/jsi18n/">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot_closure.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot.js">
+   </script>
+   <script>
+    (function($) {
+          
+          devsite.devsite.Init($, {'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'VERSION_HASH': 'eee0a9d1b9', 'SITE_NAME': 'devsite', 'HISTORY_ENABLED': 1, 'SUBPATH': '', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.api.ai', '.appspot.com', '.devsitetest.how', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.nest.com', '.openthread.io', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0, 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com'},
+                               '[]','en',
+                               true, '',
+                               {"039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/maps/documentation/roads/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+   </script>
+   <script>
+    $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+   </script>
+   <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=paewx4mdhuzny4k5rewdgkq2cy">
+   </script>
+  </div>
+  <span data-request-elapsed="255.19990921" id="devsite-request-elapsed">
+  </span>
+ </body>
+</html>

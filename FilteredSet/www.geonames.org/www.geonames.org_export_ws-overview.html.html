@@ -1,0 +1,1402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd ">
+<html>
+ <head>
+  <title>
+   GeoNames WebServices overview
+  </title>
+  <link href="http://www.geonames.org/opensearch-description.xml" rel="search" title="geonames" type="application/opensearchdescription+xml"/>
+  <link href="http://www.geonames.org/geonames.ico" rel="shortcut icon"/>
+  <link href="http://www.geonames.org/geonames.css" rel="StyleSheet" type="text/css"/>
+  <style type="text/css">
+   .US-only {
+		  background: url(http://geotree.geonames.org/img/flags18/US.png) left no-repeat;
+		  padding-left: 20px;
+		}
+		.username {
+		  background: url(http://geotree.geonames.org/images/user_gray.png) left no-repeat;
+		  padding-left: 20px;
+		}
+  </style>
+ </head>
+ <body>
+  <table cellpadding="0" cellspacing="0" id="topmenutable">
+   <tbody>
+    <tr>
+     <td class="topmenu">
+      <a href="http://www.geonames.org/" title="GeoName Home">
+       GeoNames Home
+      </a>
+      |
+      <a href="http://www.geonames.org/postal-codes/" title="Postal Codes">
+       Postal Codes
+      </a>
+      |
+      <a href="http://www.geonames.org/export/" title="Database Dump and Webservice API">
+       Download / Webservice
+      </a>
+      |
+      <a href="http://www.geonames.org/about.html" title="About GeoNames">
+       About
+      </a>
+     </td>
+     <td class="topsearch">
+      <form action="http://www.geonames.org/servlet/geonames" class="topsearch" method="get" name="searchForm">
+       search
+       <input class="topmenu" name="q" size="20" type="text" value=""/>
+       <input name="srv" type="hidden" value="1"/>
+      </form>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h3>
+   GeoNames WebServices overview
+  </h3>
+  <script src="/sorttable.js" type="text/javascript">
+  </script>
+  <table class="restable sortable" id="wsindex">
+   <thead>
+    <tr>
+     <th class="sorttable_nosort">
+     </th>
+     <th>
+      WebService
+     </th>
+     <th>
+      XML
+     </th>
+     <th>
+      JSON
+     </th>
+     <th>
+      RDF
+     </th>
+     <th>
+      CSV
+     </th>
+     <th>
+      TXT
+     </th>
+     <th>
+      RSS
+     </th>
+     <th>
+      KML
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr class="">
+     <td>
+      1
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#astergdem " target="_BLANK">
+       astergdem
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/astergdem?lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full&amp;type=XML" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/astergdemJSON?formatted=true&amp;lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/astergdem?lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       TXT
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      2
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/place-hierarchy.html#children" target="_BLANK">
+       children
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/children?geonameId=3175395&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/childrenJSON?formatted=true&amp;geonameId=3175395&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      3
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/JSON-webservices.html#citiesJSON" target="_BLANK">
+       cities
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/cities?north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;lang=de&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/citiesJSON?formatted=true&amp;north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;lang=de&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      4
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/place-hierarchy.html#contains" target="_BLANK">
+       contains
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/contains?geonameId=2746385&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/containsJSON?formatted=true&amp;geonameId=2746385&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      5
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#countrycode" target="_BLANK">
+       countryCode
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/countryCodeXML?lat=47.03&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/countryCodeJSON?formatted=true&amp;lat=47.03&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/countryCode?lat=47.03&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       TXT
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      6
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#countryInfo" target="_BLANK">
+       countryInfo
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/countryInfo?lang=it&amp;country=DE&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/countryInfoJSON?formatted=true&amp;lang=it&amp;country=DE&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/countryInfoCSV?lang=it&amp;country=DE&amp;username=demo&amp;style=full" target="_BLANK">
+       CSV
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      7
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#countrysubdiv" target="_BLANK">
+       countrySubdivision
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/countrySubdivision?lat=47.03&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/countrySubdivisionJSON?formatted=true&amp;lat=47.03&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      8
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/JSON-webservices.html#earthquakesJSON" target="_BLANK">
+       earthquakes
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/earthquakes?north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/earthquakesJSON?formatted=true&amp;north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      9
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#extendedFindNearby" target="_BLANK">
+       extendedFindNearby
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/extendedFindNearby?lat=46.2022156980098&amp;lng=6.14569187164307&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      10
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#findNearby" target="_BLANK">
+       findNearby
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearby?lat=48.865618158309374&amp;lng=2.344207763671875&amp;fclass=P&amp;fcode=PPLA&amp;fcode=PPL&amp;fcode=PPLC&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyJSON?formatted=true&amp;lat=48.865618158309374&amp;lng=2.344207763671875&amp;fclass=P&amp;fcode=PPLA&amp;fcode=PPL&amp;fcode=PPLC&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      11
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#findNearbyPlaceName" target="_BLANK">
+       findNearbyPlaceName
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyPlaceName?lat=47.3&amp;lng=9&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyPlaceNameJSON?formatted=true&amp;lat=47.3&amp;lng=9&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      12
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#findNearbyPostalCodes" target="_BLANK">
+       findNearbyPostalCodes
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyPostalCodes?postalcode=8775&amp;country=CH&amp;radius=10&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyPostalCodesJSON?formatted=true&amp;postalcode=8775&amp;country=CH&amp;radius=10&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      13
+     </td>
+     <td>
+      <a href="http://www.geonames.org/maps/us-reverse-geocoder.html#findNearbyStreets" target="_BLANK">
+       findNearbyStreets
+      </a>
+      <span class="US-only">
+      </span>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyStreets?lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyStreetsJSON?formatted=true&amp;lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      14
+     </td>
+     <td>
+      <a href="http://www.geonames.org/maps/osm-reverse-geocoder.html#findNearbyStreetsOSM" target="_BLANK">
+       findNearbyStreetsOSM
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyStreetsOSM?lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyStreetsOSMJSON?formatted=true&amp;lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      15
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/JSON-webservices.html#findNearByWeatherJSON" target="_BLANK">
+       findNearByWeather
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearByWeather?lat=42&amp;lng=-2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearByWeatherJSON?formatted=true&amp;lat=42&amp;lng=-2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      16
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/wikipedia-webservice.html#findNearbyWikipedia" target="_BLANK">
+       findNearbyWikipedia
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyWikipedia?lat=47&amp;lng=9&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyWikipediaJSON?formatted=true&amp;lat=47&amp;lng=9&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyWikipediaRSS?lat=47&amp;lng=9&amp;username=demo&amp;style=full" target="_BLANK">
+       RSS
+      </a>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      17
+     </td>
+     <td>
+      <a href="http://www.geonames.org/maps/us-reverse-geocoder.html#findNearestAddress" target="_BLANK">
+       findNearestAddress
+      </a>
+      <span class="US-only">
+      </span>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearestAddress?lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearestAddressJSON?formatted=true&amp;lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      18
+     </td>
+     <td>
+      <a href="http://www.geonames.org/maps/us-reverse-geocoder.html#findNearestIntersection" target="_BLANK">
+       findNearestIntersection
+      </a>
+      <span class="US-only">
+      </span>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearestIntersection?lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearestIntersectionJSON?formatted=true&amp;lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      19
+     </td>
+     <td>
+      <a href="http://www.geonames.org/maps/osm-reverse-geocoder.html#findNearestIntersectionOSM" target="_BLANK">
+       findNearestIntersectionOSM
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearestIntersectionOSM?lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearestIntersectionOSMJSON?formatted=true&amp;lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      20
+     </td>
+     <td>
+      <a href="http://www.geonames.org/maps/osm-reverse-geocoder.html#findNearbyPOIsOSM" target="_BLANK">
+       findNearbyPOIsOSM
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyPOIsOSM?lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/findNearbyPOIsOSMJSON?formatted=true&amp;lat=37.451&amp;lng=-122.18&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      21
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/geocode.html" target="_BLANK">
+       geocode
+      </a>
+      <span class="US-only">
+      </span>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/geocode?q=N+Civic+Center+Dr&amp;username=demo" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/geocodeJSON?q=N+Civic+Center+Dr&amp;username=demo" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      22
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#get" target="_BLANK">
+       get
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/get?geonameId=6295630&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/getJSON?formatted=true&amp;geonameId=6295630&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      23
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#gtopo30" target="_BLANK">
+       gtopo30
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/gtopo30?lat=47.01&amp;lng=10.2&amp;username=demo&amp;style=full&amp;type=XML" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/gtopo30JSON?formatted=true&amp;lat=47.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/gtopo30?lat=47.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       TXT
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      24
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/place-hierarchy.html#hierarchy" target="_BLANK">
+       hierarchy
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/hierarchy?geonameId=2657896&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/hierarchyJSON?formatted=true&amp;geonameId=2657896&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      25
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#neighbourhood" target="_BLANK">
+       neighbourhood
+      </a>
+      <span class="US-only">
+      </span>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/neighbourhood?lat=40.78343&amp;lng=-73.96625&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/neighbourhoodJSON?formatted=true&amp;lat=40.78343&amp;lng=-73.96625&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      26
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/place-hierarchy.html#neighbours" target="_BLANK">
+       neighbours
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/neighbours?geonameId=2658434&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/neighboursJSON?formatted=true&amp;geonameId=2658434&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      27
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#ocean " target="_BLANK">
+       ocean
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/ocean?lat=40.78343&amp;lng=-43.96625&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/oceanJSON?formatted=true&amp;lat=40.78343&amp;lng=-43.96625&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      28
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#postalCodeCountryInfo" target="_BLANK">
+       postalCodeCountryInfo
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/postalCodeCountryInfo?&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/postalCodeCountryInfoJSON?formatted=true&amp;&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      29
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#postalCodeLookupJSON" target="_BLANK">
+       postalCodeLookup
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/postalCodeLookupJSON?formatted=true&amp;postalcode=6600&amp;country=AT&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      30
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#postalCodeSearch" target="_BLANK">
+       postalCodeSearch
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/postalCodeSearch?postalcode=9011&amp;maxRows=10&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/postalCodeSearchJSON?formatted=true&amp;postalcode=9011&amp;maxRows=10&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      31
+     </td>
+     <td>
+      <a href="http://www.geonames.org/rss-to-georss-converter.html" target="_BLANK">
+       rssToGeo
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/rssToGeoRSS?feedUrl=http://feeds.reuters.com/reuters/worldNews&amp;username=demo&amp;style=full" target="_BLANK">
+       RSS
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/rssToGeoRSS?type=kml&amp;feedUrl=http://feeds.reuters.com/reuters/worldNews&amp;username=demo&amp;style=full" target="_BLANK">
+       KML
+      </a>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      32
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/geonames-search.html" target="_BLANK">
+       search
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/search?q=london&amp;maxRows=10&amp;lang=es&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/searchJSON?formatted=true&amp;q=london&amp;maxRows=10&amp;lang=es&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/searchRDF?q=london&amp;maxRows=10&amp;lang=es&amp;username=demo&amp;style=full" target="_BLANK">
+       RDF
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      33
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/place-hierarchy.html#siblings" target="_BLANK">
+       siblings
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/siblings?geonameId=3017382&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/siblingsJSON?formatted=true&amp;geonameId=3017382&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      34
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#srtm1" target="_BLANK">
+       srtm1
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/srtm1XML?lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/srtm1JSON?formatted=true&amp;lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/srtm1?lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       TXT
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      35
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#srtm3" target="_BLANK">
+       srtm3
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/srtm3XML?lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/srtm3JSON?formatted=true&amp;lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/srtm3?lat=50.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       TXT
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      36
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/web-services.html#timezone" target="_BLANK">
+       timezone
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/timezone?lat=47.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/timezoneJSON?formatted=true&amp;lat=47.01&amp;lng=10.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      37
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/JSON-webservices.html#weatherJSON" target="_BLANK">
+       weather
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/weather?north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/weatherJSON?formatted=true&amp;north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      38
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/JSON-webservices.html#weatherIcaoJSON" target="_BLANK">
+       weatherIcao
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/weatherIcao?ICAO=LSZH&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/weatherIcaoJSON?formatted=true&amp;ICAO=LSZH&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="">
+     <td>
+      39
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/wikipedia-webservice.html#wikipediaBoundingBox" target="_BLANK">
+       wikipediaBoundingBox
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/wikipediaBoundingBox?north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/wikipediaBoundingBoxJSON?formatted=true&amp;north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      40
+     </td>
+     <td>
+      <a href="http://www.geonames.org/export/wikipedia-webservice.html#wikipediaSearch" target="_BLANK">
+       wikipediaSearch
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/wikipediaSearch?q=london&amp;maxRows=10&amp;username=demo&amp;style=full" target="_BLANK">
+       XML
+      </a>
+     </td>
+     <td>
+      <a href="http://api.geonames.org/wikipediaSearchJSON?formatted=true&amp;q=london&amp;maxRows=10&amp;username=demo&amp;style=full" target="_BLANK">
+       JSON
+      </a>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+   <tfoot>
+    <tr>
+     <th>
+     </th>
+     <th>
+      Total
+     </th>
+     <th>
+      37
+     </th>
+     <th>
+      37
+     </th>
+     <th>
+      1
+     </th>
+     <th>
+      1
+     </th>
+     <th>
+      5
+     </th>
+     <th>
+      2
+     </th>
+     <th>
+      1
+     </th>
+    </tr>
+   </tfoot>
+  </table>
+  <p>
+   <span class="US-only">
+    This webservice is only available for the US.
+   </span>
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+  <div id="pageFooter">
+   info@geonames.org
+   <img align="middle" alt="ant" border="0" hspace="40" src="http://www.geonames.org/img/smallant.gif"/>
+   <p>
+    <a href="http://www.geonames.org/">
+     GeoNames Home
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="http://www.geonames.org/postal-codes/">
+     Postal Codes
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="http://www.geonames.org/export/">
+     Download / Webservice
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="http://forum.geonames.org">
+     Forum
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="http://geonames.wordpress.com">
+     Blog
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="http://www.geonames.org/sitemap.html">
+     Sitemap
+    </a>
+   </p>
+  </div>
+ </body>
+</html>

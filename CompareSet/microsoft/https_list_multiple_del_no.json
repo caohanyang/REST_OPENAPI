@@ -1,0 +1,15 @@
+{
+  "basePath": "/bing/v5.0/search",
+  "paths": {
+    "/": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.cognitive.microsoft.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

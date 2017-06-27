@@ -1,0 +1,69 @@
+{
+  "paths": {
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}/synonyms/{synonym}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}/synonyms": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}/examples": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/counterexamples": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}/examples/{text}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/message": {
+      "POST": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/counterexamples/{text}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/logs": {
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values": {
+      "POST": {},
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

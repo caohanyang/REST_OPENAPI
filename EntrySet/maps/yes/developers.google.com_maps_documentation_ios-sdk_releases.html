@@ -1,0 +1,4793 @@
+<!DOCTYPE html>
+<html class="chekov" lang="en">
+ <head>
+  <script>
+   var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="s7NsVk8Ls762bamraFdDmOUDt4f1kOMB24-EJVZFuMc6MTQ5NzQ0NDQ2OTgzNTQ3MA" name="xsrf_token"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases" rel="canonical"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=ko" hreflang="ko" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=ja" hreflang="ja" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=es" hreflang="es" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=fr" hreflang="fr" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=id" hreflang="id" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=pt-br" hreflang="pt-br" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=zh-tw" hreflang="zh-Hant" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=ru" hreflang="ru" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=zh-cn" hreflang="zh-Hans" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases?hl=de" hreflang="de" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases" hreflang="en" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=ko" hreflang="ko-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=ja" hreflang="ja-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=es" hreflang="es-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=fr" hreflang="fr-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=id" hreflang="id-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=pt-br" hreflang="pt-br-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=zh-tw" hreflang="zh-Hant-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=ru" hreflang="ru-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=zh-cn" hreflang="zh-Hans-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases?hl=de" hreflang="de-cn" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/releases" hreflang="en-cn" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/releases" hreflang="x-default" rel="alternate"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/favicon.png" rel="shortcut icon"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/touch-icon.png" rel="apple-touch-icon"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/css/devsite-google-blue.css" rel="stylesheet"/>
+  <link href="https://developers.google.com/s/opensearch.xml" rel="search" title="Google Developers" type="application/opensearchdescription+xml"/>
+  <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery-bundle.js">
+  </script>
+  <meta content="Google Developers" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://developers.google.com/maps/documentation/ios-sdk/releases" property="og:url"/>
+  <meta content="en" property="og:locale"/>
+  <script>
+   var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <title>
+   Release Notes  |  Google Maps SDK for iOS
+       |  Google Developers
+  </title>
+  <meta content="Release Notes  |  Google Maps SDK for iOS
+       |  Google Developers" property="og:title"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/feeds/releases.xml" rel="alternate" type="application/atom+xml"/>
+ </head>
+ <body class=" devsite-doc-page devsite-uhura" id="top_of_page">
+  <div class="devsite-wrapper">
+   <div class="devsite-top-section-wrapper ">
+    <header class="devsite-top-section nocontent">
+     <div class="devsite-top-logo-row-wrapper-wrapper">
+      <div class="devsite-top-logo-row-wrapper">
+       <div class="devsite-top-logo-row devsite-full-site-width">
+        <button class="devsite-expand-section-nav devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Hamburger menu" type="button">
+        </button>
+        <div class="devsite-product-name-wrapper">
+         <a class="devsite-product-name-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Project logo (header)" href="https://developers.google.com/maps/">
+          <img alt="Google Maps APIs" class="devsite-product-logo" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+         </a>
+         <span class="devsite-product-name">
+          <ul class="devsite-breadcrumb-list">
+           <li class="devsite-breadcrumb-item">
+            <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" href="https://developers.google.com/maps/">
+             Google Maps APIs
+            </a>
+           </li>
+          </ul>
+         </span>
+        </div>
+        <div class="devsite-header-upper-tabs">
+         <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+          <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="home" data-label="navTopMenu" href="https://developers.google.com/maps/">
+             Home
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="documentation" data-label="navTopMenu" href="https://developers.google.com/maps/documentation/">
+             Documentation
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="pricingAndPlans" data-label="navTopMenu" href="https://developers.google.com/maps/pricing-and-plans/">
+             Pricing and Plans
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </div>
+        <form action="https://developers.google.com/s/results/" class="devsite-search-form " id="top-search" method="GET" search-placeholder="Search">
+         <div class="devsite-searchbox" id="searchbox">
+          <input autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="Search" type="text" value=""/>
+          <div class="devsite-search-image material-icons">
+          </div>
+         </div>
+         <input data-project-name="Google Maps SDK for iOS" data-project-path="/maps/documentation/ios-sdk/" data-query-match="" id="search_project" name="p" type="hidden" value="/maps/documentation/ios-sdk/"/>
+         <input class="suggest-project" type="hidden" value="Google Maps SDK for iOS"/>
+         <div class="suggest-project-metadata" data-home_url="/maps/documentation/urls/guide" data-name="Google Maps URLs" data-path="/maps/documentation/urls/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/" data-name="Maps APIs Solutions" data-path="/maps/solutions/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/transport-tracker/" data-name="Transport Tracker Solution" data-path="/maps/solutions/transport-tracker/">
+         </div>
+        </form>
+        <a class="devsite-header-link devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site header link" href="https://developers.google.com/products/">
+         <div class="devsite-header-link-label">
+          All Products
+         </div>
+        </a>
+        <button class="devsite-search-button devsite-header-icon-button button-flat material-icons" type="button">
+        </button>
+        <a class="devsite-user-signin devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Sign in button" href="https://www.google.com/accounts/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fdevelopers.google.com%2Fmaps%2Fdocumentation%2Fios-sdk%2Freleases%3Frefresh%3D1&amp;service=ahsid">
+         Sign in
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="devsite-collapsible-section">
+      <div class="devsite-header-background devsite-full-site-width">
+       <div class="devsite-product-id-row devsite-full-site-width">
+        <div class="devsite-product-description-row">
+         <ul class="devsite-breadcrumb-list">
+          <li class="devsite-breadcrumb-item">
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="1" href="https://developers.google.com/maps/ios/">
+            iOS
+           </a>
+          </li>
+          <li class="devsite-breadcrumb-item">
+           <div class="devsite-breadcrumb-guillemet material-icons">
+           </div>
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="2" href="https://developers.google.com/maps/documentation/ios-sdk/">
+            Maps SDK for iOS
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="devsite-product-button-row ">
+         <a class="devsite-api-getstarted-widget button gc-analytics-event devsite-dialog-button" data-action="buttonClick" data-api-id="maps_ios_backend" data-category="getKey" data-henhouse-link-docs="/maps/documentation/ios-sdk/start" data-henhouse-link-support="/maps/documentation/ios-sdk/support" data-henhouse-platforms-list="IOS" data-label="hero">
+          Get a Key
+         </a>
+         <a class="button button-text-blue" data-action="buttonClick" data-category="viewPlans" data-label="hero" href="https://developers.google.com/maps/pricing-and-plans/">
+          View Pricing and Plans
+         </a>
+        </div>
+       </div>
+       <div class="devsite-doc-set-nav-row devsite-full-site-width">
+        <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+         <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Overview" href="https://developers.google.com/maps/documentation/ios-sdk/">
+            Overview
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Guides" href="https://developers.google.com/maps/documentation/ios-sdk/start">
+            Guides
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Reference" href="https://developers.google.com/maps/documentation/ios-sdk/reference/index">
+            Reference
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Samples" href="https://developers.google.com/maps/documentation/ios-sdk/code-samples">
+            Samples
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Support" href="https://developers.google.com/maps/documentation/ios-sdk/support">
+            Support
+           </a>
+          </li>
+          <button class="devsite-feedback-button devsite-top-button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Send Feedback Button" id="devsite-feedback-project" track-metadata-position="header" track-name="sendFeedbackLink" track-type="feedback" type="button">
+           Send feedback
+          </button>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </header>
+    <link href="/maps/styles/lhstyles/landing/css/landing.css" rel="stylesheet"/>
+    <!-- exit getkey modal -->
+    <div class="devsite-dialog devsite-enable-getkey-dialog" id="devsite-dialog-onload-getkey-enabled">
+     <div class="get-key-check">
+     </div>
+     <div class="devsite-dialog-contents">
+      <h3>
+       You're all set!
+      </h3>
+      <p>
+       To start developing, please head over to our
+       <a href="/maps/documentation/ios-sdk/intro/">
+        developer documentation
+       </a>
+       .
+      </p>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="gc-analytics-event devsite-dialog-close button-white" data-action="linkClick" data-category="getKeySuccessModalDismiss" data-label="modal">
+       Dismiss
+      </button>
+     </div>
+    </div>
+    <!-- enter getkey modal -->
+    <div class="devsite-dialog devsite-enable-getkey-dialog" id="enable-getkey-modal-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Activate the Google Maps SDK for iOS
+      </h3>
+      <p>
+       To get you started we'll guide you through the Google Developers
+    Console to do a few things first:
+      </p>
+      <ol>
+       <li>
+        Create or choose a project
+       </li>
+       <li>
+        Activate the Google Maps SDK for iOS
+       </li>
+       <li>
+        Create appropriate keys
+       </li>
+      </ol>
+     </div>
+     <div class="devsite-dialog-buttons devsite-landing-row-item-buttons">
+      <button class="devsite-dialog-close button-white" data-action="linkClick" data-category="getKeyModalCancel" data-label="modal">
+       Cancel
+      </button>
+      <a class="button button-white gc-analytics-event" data-action="linkClick" data-category="getKeyModalContinue" data-label="modal" href="https://console.developers.google.com/flows/enableapi?apiid=maps_ios_backend&amp;reusekey=true" onclick="devsite.utils.showSiteMask().click()" target="_blank">
+       Continue
+      </a>
+     </div>
+    </div>
+    <script>
+     if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('en')
+        }
+      });
+    }
+    </script>
+   </div>
+   <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {}, "gaid": "UA-42966870-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps SDK for iOS", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps SDK for iOS", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-49880327-1"}'/>
+    <input class="google-tag-manager-id" type="hidden" value="GTM-W546ZN"/>
+    <script>
+     var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "FR", "language": {"requested": "en", "served": "en"}, "projectName": "Google Maps SDK for iOS", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+    <div class="devsite-site-mask">
+    </div>
+    <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+     <div class="devsite-nav-responsive-tabs-panel">
+      <nav class="devsite-nav-responsive-tabs devsite-nav">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home" href="https://developers.google.com/maps/">
+          Home
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Documentation" href="https://developers.google.com/maps/documentation/?nav=true">
+          Documentation
+         </a>
+         <nav class="devsite-nav-responsive-tabs devsite-nav">
+          <ul class="devsite-nav-list">
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Overview" href="https://developers.google.com/maps/documentation/ios-sdk/">
+             Overview
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides" href="https://developers.google.com/maps/documentation/ios-sdk/start?nav=true">
+             Guides
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Reference" href="https://developers.google.com/maps/documentation/ios-sdk/reference/index">
+             Reference
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Samples" href="https://developers.google.com/maps/documentation/ios-sdk/code-samples">
+             Samples
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title devsite-nav-active gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Support" tabindex="0">
+             Support
+            </span>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+             All Products
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Pricing and Plans" href="https://developers.google.com/maps/pricing-and-plans/">
+          Pricing and Plans
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+          All Products
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="devsite-nav-responsive-sidebar-panel">
+      <div class="devsite-nav-responsive-back" tabindex="0">
+      </div>
+      <nav class="devsite-nav-responsive-sidebar">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/support" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Support Options
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/premium/support" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Premium Support
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/faq" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          FAQ
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-active">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/releases" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Release Notes
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </nav>
+    <div class="devsite-main-content clearfix">
+     <nav class="devsite-section-nav devsite-nav nocontent">
+      <ul class="devsite-nav-list">
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/support" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Support Options
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/premium/support" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Premium Support
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/faq" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         FAQ
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-active">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/releases" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Release Notes
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <nav class="devsite-page-nav devsite-nav">
+     </nav>
+     <article class="devsite-article">
+      <article class="devsite-article-inner">
+       <nav class="devsite-breadcrumb-nav devsite-nav">
+        <ul class="devsite-breadcrumb-list">
+         <li class="devsite-breadcrumb-item">
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" href="https://developers.google.com/products/">
+           Products
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" href="https://developers.google.com/maps/">
+           Google Maps APIs
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3" href="https://developers.google.com/maps/ios/">
+           iOS
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="4" href="https://developers.google.com/maps/documentation/ios-sdk/">
+           Maps SDK for iOS
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="5" href="https://developers.google.com/maps/documentation/">
+           Documentation
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="6" href="https://developers.google.com/maps/documentation/ios-sdk/support">
+           Support
+          </a>
+         </li>
+        </ul>
+       </nav>
+       <h1 class="devsite-page-title" itemprop="name">
+        Release Notes
+       </h1>
+       <nav class="devsite-page-nav-embedded devsite-nav">
+       </nav>
+       <div class="devsite-article-body clearfix " itemprop="articleBody">
+        <link href="https://developers.google.com/maps/styles/common.css" rel="stylesheet" type="text/css"/>
+        <p>
+        </p>
+        <p>
+         <a class="gc-analytics-event" data-action="linkClick" data-category="rssFeed" data-label="mapsIOS" href="https://developers.google.com/maps/documentation/ios-sdk/feeds/releases.xml">
+          Subscribe
+         </a>
+         to these release notes.
+         <a class="gc-analytics-event" data-action="imgClick" data-category="rssFeed" data-label="mapsIOS" href="https://developers.google.com/maps/documentation/ios-sdk/feeds/releases.xml">
+          <img alt="Subscribe" src="https://developers.google.com/maps/documentation/images/rss-icon.svg"/>
+         </a>
+        </p>
+        <p>
+         The Google Maps API team updates this changelog with each new release of
+the Google Maps SDK for iOS. The changelog lists the releases by date and
+includes any new features, bug fixes or significant performance
+improvements.
+        </p>
+        <p>
+         Consult the
+         <a href="https://developers.google.com/maps/documentation/ios-sdk/start">
+          getting started guide
+         </a>
+         for information on how to
+download the most recent version of the Google Maps SDK for iOS.
+        </p>
+        <p>
+         Release notes for the Google Places API for iOS are now no longer included on
+this page. Visit
+         <a href="https://developers.google.com/places/ios-api/releases">
+          Google Places API for iOS Release Notes
+         </a>
+         to see what's new with the Google Places API for iOS.
+        </p>
+        <p>
+         <a id="latest">
+         </a>
+         <a id="v2030">
+         </a>
+         <a id="2017-05-30">
+         </a>
+        </p>
+        <h2 id="version_23_-_may_30_2017">
+         Version 2.3 - May 30, 2017
+        </h2>
+        <p>
+         <strong>
+          Improvements
+         </strong>
+        </p>
+        <ul>
+         <li>
+          The internals of the GMSPanoramaView and associated classes have had a
+    significant overhaul. These changes should generally give improved
+    performance.
+         </li>
+         <li>
+          Dropped support for iOS 7, which enabled the use of modern core data
+    threading models. This means that applications should be able to use
+    -com.apple.CoreData.ConcurrencyDebug 1 when debugging with iOS 10 devices.
+    (
+          <a href="https://issuetracker.google.com/issues/35829579">
+           Issue 35829579
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed case sensitivity issues with imports in GMSTileLayer.h and
+    GMSPolyline.h. (
+          <a href="https://issuetracker.google.com/issues/35831050">
+           Issue 35831050
+          </a>
+          .)
+         </li>
+        </ul>
+        <aside class="note">
+         <strong>
+          Note:
+         </strong>
+         <span>
+          - The armv7s architecture in the frameworks will be removed in 2.4. Devices
+    which previously used armv7s can continue to be supported using the armv7
+    architecture. All applications using the default architecture settings
+    in any supported version of Xcode shouldn't notice any change.
+         </span>
+        </aside>
+        <p>
+         <a id="v2020">
+         </a>
+         <a id="2017-02-14">
+         </a>
+        </p>
+        <h2 id="version_22_-_february_14_2017">
+         Version 2.2 - February 14, 2017
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Added the
+          <code>
+           cameraTargetBounds
+          </code>
+          property to
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_map_view">
+           <code>
+            GMSMapView
+           </code>
+          </a>
+          .
+    This property restricts the camera target to the specified bounds area.
+    Subsequent gestures are then also restricted to keep the camera target
+    within the specified bounds.
+         </li>
+         <li>
+          The
+          <code>
+           userData
+          </code>
+          property of
+          <code>
+           GMSMarker
+          </code>
+          was moved to its parent class
+          <code>
+           GMSOverlay
+          </code>
+          . This enables the property to be used with the
+          <code>
+           GMSPolyline
+          </code>
+          ,
+          <code>
+           GMSPolygon
+          </code>
+          ,
+          <code>
+           GMSCircle
+          </code>
+          , and
+          <code>
+           GMSGroundOverlay
+          </code>
+          classes.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Improvements
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixes naming of certain enum cases in Swift. The following enums are
+    affected:
+          <code>
+           GMSMapViewType
+          </code>
+          ,
+          <code>
+           GMSFrameRate
+          </code>
+          ,
+          <code>
+           GMSMarkerAnimation
+          </code>
+          , and
+          <code>
+           GMSLengthKind
+          </code>
+          .
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed an issue where the
+          <code>
+           mapViewSnapshotReady
+          </code>
+          delegate method was
+    sometimes raised too early (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10799">
+           Issue 10799
+          </a>
+          .)
+         </li>
+        </ul>
+        <aside class="note">
+         <strong>
+          Note:
+         </strong>
+         <span>
+          - iOS 7 support is intended to be dropped starting with 2.3. 2.2.x will be
+    the last release series to support iOS 7.
+         </span>
+        </aside>
+        <p>
+         <a id="v2011">
+         </a>
+         <a id="2016-11-08">
+         </a>
+        </p>
+        <h2 id="version_211_-_november_8_2016">
+         Version 2.1.1 - November 8, 2016
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed an issue which caused many Road Shields to not be displayed when
+    custom styling is active even if the custom styling didn't attempt to style
+    them.
+         </li>
+         <li>
+          Renamed some symbols which could cause duplicate symbols when using all_load
+    and Firebase. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10631">
+           Issue 10631
+          </a>
+          .)
+         </li>
+         <li>
+          Resolved a problem where changing any property of polygon, polyline or
+    ground overlay in between taps would cause tap cycling to break.  This could
+    make it seem impossible to tap through to items underneath. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10436">
+           Issue 10436
+          </a>
+          .)
+         </li>
+         <li>
+          Fixed cameraForBounds:insets: to respect the currently set min and max zoom
+    restrictions. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10817">
+           Issue 10817
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v2010">
+         </a>
+         <a id="2016-09-22">
+         </a>
+        </p>
+        <h2 id="version_21_-_september_22_2016">
+         Version 2.1 - September 22, 2016
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          <p>
+           This release introduces custom styling of the base map (
+           <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=4968">
+            Issue 4968
+           </a>
+           ). You
+    can use a JSON style declaration to create a
+           <code>
+            GMSMapStyle
+           </code>
+           instance and
+    pass it to the
+           <code>
+            mapStyle
+           </code>
+           property, to change the visual display of
+    features like roads, parks, businesses, and other points of interest. You
+    can use styling to emphasize particular components of the map, or make the
+    map complement the style of your app. Styling works only on the
+           <code>
+            kGMSTypeNormal
+           </code>
+           map type.
+          </p>
+          <ul>
+           <li>
+            See the
+            <a href="https://developers.google.com/maps/documentation/ios-sdk/styling">
+             quick guide to styling your map
+            </a>
+            ,
+    using night mode as an example style.
+           </li>
+           <li>
+            Use styling to
+            <a href="https://developers.google.com/maps/documentation/ios-sdk/hiding-features">
+             prevent certain features from appearing on the map
+            </a>
+            .
+           </li>
+           <li>
+            Learn the full power of custom styling in the
+            <a href="https://developers.google.com/maps/documentation/ios-sdk/style-reference">
+             style reference
+            </a>
+            .
+           </li>
+          </ul>
+         </li>
+         <li>
+          <p>
+           It is now possible to apply "night mode" to maps, by applying
+           <a href="https://developers.google.com/maps/documentation/ios-sdk/styling">
+            custom styles
+           </a>
+           . (
+           <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5661">
+            Issue 5661
+           </a>
+           .)
+          </p>
+         </li>
+         <li>
+          Business points of interest (POIs) now appear by default on the map,
+    provided that the map type is
+          <code>
+           kGMSTypeNormal
+          </code>
+          . Prior to this release,
+    local POIs appeared on the map, but not business POIs). Business POIs
+    represent businesses such as shops, restaurants, hotels, and more. See the
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/poi">
+           guide to points of interest
+          </a>
+          .
+         </li>
+         <li>
+          With the addition of business points of interest, there is a new optional
+    method
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_map_view_delegate-p.html#ac06974bfbebd2ff859b5f93c86fe3845">
+           <code>
+            didTapPOIWithPlaceID
+           </code>
+          </a>
+          on
+          <code>
+           GMSMapViewDelegate
+          </code>
+          which provides notification when a POI has been
+    tapped. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8174">
+           Issue 8174
+          </a>
+          .)
+         </li>
+         <li>
+          You can
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/hiding-features">
+           hide POIs on a map
+          </a>
+          by using map styling.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Renamed the
+          <code>
+           canGoOffline
+          </code>
+          selector internally, to avoid triggering false
+    positives during submission to the Apple app store. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10393">
+           Issue 10393
+          </a>
+          .)
+         </li>
+         <li>
+          The
+          <code>
+           iconView
+          </code>
+          property of
+          <code>
+           GMSMarker
+          </code>
+          is now correctly marked as nullable.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10391">
+           Issue 10391
+          </a>
+          .)
+         </li>
+         <li>
+          Renderer in iOS has been updated to avoid a race condition which would
+    cause rendering to not stop in time when an app transitions to background.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10224">
+           Issue 10224
+          </a>
+          .)
+         </li>
+         <li>
+          <code>
+           GMSPath
+          </code>
+          <code>
+           initFromEncodedPath
+          </code>
+          now returns nil for invalid input
+    (previously invalid input could result in a crash). (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10162">
+           Issue 10162
+          </a>
+          .)
+         </li>
+         <li>
+          An additional method was added to
+          <code>
+           GMSMapView
+          </code>
+          , which compares two camera
+    positions to determine whether they are close enough to render identically.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9494">
+           Issue 9494
+          </a>
+          .)
+         </li>
+         <li>
+          <code>
+           GMSCircle
+          </code>
+          will now always draw at least a dot for small radius circles,
+    including radius 0. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9528">
+           Issue 9528
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v2001">
+         </a>
+         <a id="2016-07-29">
+         </a>
+        </p>
+        <h2 id="version_201_-_july_29_2016">
+         Version 2.0.1 - July 29, 2016
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Array properties are now correctly typed when accessed from Swift.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=10183">
+           Issue 10183
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v2000">
+         </a>
+         <a id="2016-07-26">
+         </a>
+        </p>
+        <h2 id="version_200_-_july_26_2016">
+         Version 2.0.0 - July 26, 2016
+        </h2>
+        <p>
+         <strong>
+          Improvements
+         </strong>
+        </p>
+        <ul>
+         <li>
+          This release splits the Places API from the Maps SDK. Previously, if you
+    wanted to use the Places API you had to include all of GoogleMaps. As a
+    result of the split, the final size of the Places API binary is 70% smaller
+    than the previous combined binary. If you are using only the Maps SDK you
+    will not be affected unless you have pinned your dependency on GoogleMaps
+    to a version earlier than 2.0. In this case, you should update this
+    restriction in your Podfile. If you are using the Places API, see
+          <a href="https://developers.google.com/places/migrate-to-v2">
+           Migrating to Google Places API for iOS 2.0
+          </a>
+          .
+         </li>
+         <li>
+          <a href="https://developers.google.com/places/ios-api/code-samples">
+           Places SDK demos
+          </a>
+          are now available
+    separately from Maps demo apps.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          The GoogleMaps binary has been reduced to less than 100MB to avoid
+    exceeding GitHub's file size limit. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9030">
+           Issue 9030
+          </a>
+          .)
+         </li>
+         <li>
+          The Maps framework is now available as a download for manual installation.
+    For details, see
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/start#step_2_install_the_sdk">
+           Get Started
+          </a>
+          .
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8856">
+           Issue 8856
+          </a>
+          .)
+         </li>
+         <li>
+          GMSGroundOverlays now correctly respond to touch input when rotated.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9544">
+           Issue 9544
+          </a>
+          .)
+         </li>
+         <li>
+          Marker info windows now render consistently (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9670">
+           Issue 9670
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9819">
+           Issue 9819
+          </a>
+          .)
+         </li>
+         <li>
+          Info windows created using the return value of mapView:markerInfoContents:
+    will now correctly respect the height of the returned content rather than
+    always being square based on the width.
+         </li>
+         <li>
+          Fixed an issue where texture cache limit is exceeded on devices supporting
+    @3x sized images. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9859">
+           Issue 9859
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="2016-07-19">
+         </a>
+        </p>
+        <h2 id="utility_library_update_-_july_19_2016">
+         Utility library update - July 19, 2016
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          The new marker clustering utility helps you manage multiple markers at
+    different zoom levels on the map. By clustering your markers, you can put a
+    large number of markers on a map without making the map hard to read. Get
+    the
+          <a href="https://github.com/googlemaps/google-maps-ios-utils">
+           utility library from
+    GitHub
+          </a>
+          , follow the
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/utility/setup">
+           setup guide
+          </a>
+          , and see how to
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/utility/marker-clustering">
+           implement marker
+    clustering
+          </a>
+          in your
+    app. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5723">
+           Issue 5723
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1132">
+         </a>
+         <a id="2016-05-12">
+         </a>
+        </p>
+        <h2 id="version_1132_-_may_12_2016">
+         Version 1.13.2 - May 12, 2016
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Added a workaround to avoid the false positive for the non-public API
+    imageWithName: selector. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9704">
+           Issue 9704
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1131">
+         </a>
+         <a id="2016-05-02">
+         </a>
+        </p>
+        <h2 id="version_1131_-_may_02_2016">
+         Version 1.13.1 - May 02, 2016
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed an application hang when using a UIView with autolayout enabled as an info
+    window or as a marker iconView. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9525">
+           Issue 9525
+          </a>
+          .)
+         </li>
+         <li>
+          Changed lookUpPlaceID to not call its callback twice in error scenarios.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9310">
+           Issue 9310
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1130">
+         </a>
+         <a id="2016-03-29">
+         </a>
+        </p>
+        <h2 id="version_1130_-_march_29_2016">
+         Version 1.13.0 - March 29, 2016
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          UIView based markers. Marker content can now show advanced animations by
+    providing a custom view hierarchy to be displayed through the iconView property.
+    See the
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/marker#use_the_markers_iconview_property">
+           documentation
+          </a>
+          for details.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5203">
+           Issue 5203
+          </a>
+          .)
+         </li>
+         <li>
+          Info windows can now have their custom views animated. Set tracksInfoWindowChanges
+    on the associated marker to YES to enable real-time updates. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5559">
+           Issue 5559
+          </a>
+          .)
+         </li>
+         <li>
+          Map rendering now defaults to 60fps on modern iOS devices. Set the new
+    preferredFrameRate property on GMSMapView to revert to the old behavior
+    (Conservative) or a new low frame rate option to save battery (PowerSave).
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5066">
+           Issue 5066
+          </a>
+          .)
+         </li>
+         <li>
+          Added mapViewSnapshotReady: to GMSMapViewDelegate which fires when map content,
+    including markers and other overlays, has been fully rendered.
+         </li>
+         <li>
+          Autocomplete widgets in the Places API now provide options for custom styling.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          GMSCoordinateBounds initWithVisibleRegion: now chooses correct bounds for large
+    viewports.
+         </li>
+         <li>
+          Added a workaround to avoid a graphical glitch in snapshots taken using pre iOS 7
+    methods when the My Location button is disabled. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9173">
+           Issue 9173
+          </a>
+          .)
+         </li>
+         <li>
+          GMSAutocompleteViewController now works when used in a storyboard.
+         </li>
+         <li>
+          Added missing Place Type constants. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8121">
+           Issue 8121
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1123">
+         </a>
+         <a id="2016-03-01">
+         </a>
+        </p>
+        <h2 id="version_1123_-_february_2016">
+         Version 1.12.3 - February 2016
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed corruption in included bitcode that caused Xcode archive action to fail.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9368">
+           Issue 9368
+          </a>
+          .)
+         </li>
+         <li>
+          Added a workaround for a limitation in Xcode 6.4 which was failing to compile
+    the included headers.
+         </li>
+        </ul>
+        <p>
+         <a id="v1122">
+         </a>
+        </p>
+        <h2 id="version_1122_-_february_2016">
+         Version 1.12.2 - February 2016
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Added place photos to the Places API. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8202">
+           Issue 8202
+          </a>
+          .)
+         </li>
+         <li>
+          Added structured address components to GMSPlace objects. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8121">
+           Issue 8121
+          </a>
+          .)
+         </li>
+         <li>
+          SDK method signatures have been updated with generics and nullability annotations.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          GMSPlace objects now contain rating and price level where available.
+         </li>
+         <li>
+          Minor bugfixes for the autocomplete widget UI.
+         </li>
+         <li>
+          panoramaView:didMoveCamera: is no longer raised during the panoramaView delegate
+    setter. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5630">
+           Issue 5630
+          </a>
+          .)
+         </li>
+         <li>
+          Old unused logo files have been removed from the SDK. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9148">
+           Issue 9148
+          </a>
+          .)
+         </li>
+         <li>
+          Tap events on polygons near the anti-meridian are more reliable.
+         </li>
+         <li>
+          Resolved an issue resulting in unrecognized selector crashes when calling
+    class methods on categories. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=9000">
+           Issue 9000
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1121">
+         </a>
+        </p>
+        <h2 id="version_1121_-_february_2016">
+         Version 1.12.1 - February 2016
+        </h2>
+        <p>
+         This version is exactly the same as 1.11.1. It was released to replace the
+removed 1.12.0 release.
+        </p>
+        <p>
+         <a id="v1120">
+         </a>
+        </p>
+        <h2 id="version_1120_-_february_2016">
+         Version 1.12.0 - February 2016
+        </h2>
+        <p>
+         This version was removed because of errors in the framework and should not be
+used.
+        </p>
+        <p>
+         <a id="v1111">
+         </a>
+        </p>
+        <h2 id="version_1111_-_december_2015">
+         Version 1.11.1 - December 2015
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Modally presented Place Autocomplete widgets now correctly respect
+    UINavigationBar appearance proxy settings.
+         </li>
+         <li>
+          Resolved minor UI issues with the Place Autocomplete widgets.
+         </li>
+         <li>
+          Updated GoogleMaps.bundle info.plist to avoid triggering checks in
+    pre-submission verification. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8488">
+           Issue 8488
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1110">
+         </a>
+        </p>
+        <h2 id="version_1110_-_december_2015">
+         Version 1.11.0 - December 2015
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Bitcode is now included in the SDK binary for all device architectures.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8219">
+           Issue 8219
+          </a>
+          .)
+         </li>
+         <li>
+          Added Place Autocomplete widget classes.
+         </li>
+         <li>
+          New events for long press on an info window, and closing an info window, have
+    been added to GMSMapViewDelegate.
+         </li>
+         <li>
+          GMSMapViewDelegate has new events to indicate when map tiles and labels are
+    pending and finished rendering. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5430">
+           Issue 5430
+          </a>
+          .)
+         </li>
+         <li>
+          GMSPanoramaViewDelegate has new events to indicate when panorama tiles are
+    pending and finished rendering. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5430">
+           Issue 5430
+          </a>
+          .)
+         </li>
+         <li>
+          GMSGroundOverlay now supports an alpha multiplier via the opacity property.
+         </li>
+         <li>
+          Added a holes property to GMSPolygon to allow for the subtraction away from
+    the filled area in order to create more complex shapes. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5464">
+           Issue 5464
+          </a>
+          .)
+         </li>
+         <li>
+          At zoom levels greater than 14, the maximum tilt has been increased.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5169">
+           Issue 5169
+          </a>
+          .)
+         </li>
+         <li>
+          Added an autocomplete screen to the Place Picker.
+         </li>
+         <li>
+          Split autocomplete predictions into primary and secondary text fields.
+         </li>
+         <li>
+          Added a country filter option to GMSAutocompleteFilter.
+         </li>
+         <li>
+          Added a viewport field to GMSPlace.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Correct handling of taps on overlapping markers. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7587">
+           Issue 7587
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8591">
+           Issue 8591
+          </a>
+          .)
+         </li>
+         <li>
+          Address a race condition dependent crash which can happen when an application
+    enters and leaves the background while showing a map. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7011">
+           Issue 7011
+          </a>
+          .)
+         </li>
+         <li>
+          Fix blank maps which can happen when launching an app into the background.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8510">
+           Issue 8510
+          </a>
+          .)
+         </li>
+         <li>
+          Workaround issues with core animation that caused markers to jump.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8451">
+           Issue 8451
+          </a>
+          .)
+         </li>
+         <li>
+          Updated to avoid subtle conflicts with applications which use
+    google-toolbox-for-mac.
+         </li>
+         <li>
+          Use the iPhone language instead of the region formatting language for Places
+    API results (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8536">
+           Issue 8536
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Notes
+         </strong>
+         - Setting GMSMapView selectedMarker to a marker not on the map is now ignored,
+    always set the marker's map property before attempting to select it.
+        </p>
+        <p>
+         <a id="v1105">
+         </a>
+        </p>
+        <h2 id="version_1105_-_october_2015">
+         Version 1.10.5 - October 2015
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Worked around an issue in the Swift compiler's handling of umbrella header
+    module entries. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8524">
+           Issue 8524
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1104">
+         </a>
+        </p>
+        <h2 id="version_1104_-_october_2015">
+         Version 1.10.4 - October 2015
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed a crash on iOS 9 when dismissing the place picker without a selection.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8672">
+           Issue 8672
+          </a>
+          .)
+         </li>
+         <li>
+          Fixed a crash when using both a GMSMapView and a UIWebView or WKWebView in
+    the view hierarchy at the same time. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8343">
+           Issue 8343
+          </a>
+          .)
+         </li>
+         <li>
+          Recompiled with Xcode 7 to avoid raising failed to load optimized model log
+    messages on iOS 9 devices. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8459">
+           Issue 8459
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1103">
+         </a>
+        </p>
+        <h2 id="version_1103_-_september_2015">
+         Version 1.10.3 - September 2015
+        </h2>
+        <p>
+         <strong>
+          Features:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Google logos have been updated.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Framework now ships with the device version of bundles to pass Xcode 7
+    archive checks. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8568">
+           Issue 8568
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1102">
+         </a>
+        </p>
+        <h2 id="version_1102_-_august_2015">
+         Version 1.10.2 - August 2015
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed a crash releasing a map view while in background. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8200">
+           Issue 8200
+          </a>
+          .)
+         </li>
+         <li>
+          Resolved a conflict with apps using gtm-session-fetcher resumable downloads.
+         </li>
+         <li>
+          Recompiled with Xcode 6.4 to avoid some bugs in Xcode 6.3 compiler.
+         </li>
+         <li>
+          Updated GoogleMaps.bundle info.plist to avoid triggering new checks in
+    pre-submission verification. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8488">
+           Issue 8488
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <a id="v1101">
+         </a>
+        </p>
+        <h2 id="version_1101_-_june_2015">
+         Version 1.10.1 - June 2015
+        </h2>
+        <p>
+         <strong>
+          Resolved Issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed an issue where instantiating GMSPlacesClient triggered a request to
+    the user to enable Bluetooth on the device.
+         </li>
+         <li>
+          Miscellaneous improvements to the GMSPlacePicker UI.
+         </li>
+        </ul>
+        <p>
+         <a id="v1100">
+         </a>
+        </p>
+        <h2 id="version_1100_-_may_2015">
+         Version 1.10.0 - May 2015
+        </h2>
+        <p>
+         <strong>
+          Features:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          The
+          <a href="https://developers.google.com/places/ios-api/">
+           Google Places API for iOS
+          </a>
+          is now included in the SDK framework,
+    so you can connect people to places in your iOS apps. If you want to use the
+    Google Places API for iOS in your project, please refer to the
+          <a href="https://developers.google.com/places/ios-api/start">
+           getting
+    started guide
+          </a>
+          .
+         </li>
+         <li>
+          <a href="https://cocoapods.org/">
+           CocoaPods
+          </a>
+          is now the fully-supported means of installing and
+    upgrading the Google Maps SDK for iOS.
+    CocoaPods is an open source dependency manager for Swift and Objective-C
+    Cocoa projects.
+          <a href="#migrate1100">
+           Below
+          </a>
+          is a short guide to migrating from earlier versions of
+    the Google Maps SDK for iOS. See the
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/start">
+           getting started guide
+          </a>
+          for
+    full instructions.
+         </li>
+         <li>
+          A new
+          <code>
+           allowScrollGesturesDuringRotateOrZoom
+          </code>
+          property on
+          <code>
+           GMSUISettings
+          </code>
+          allows you to control whether the user can scroll by panning during
+    multi-touch rotate or zoom gestures.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7737">
+           Issue 7737
+          </a>
+          .)
+         </li>
+         <li>
+          <code>
+           GMSPanoramaView
+          </code>
+          now supports being used in storyboard.
+         </li>
+         <li>
+          <code>
+           GMSGeocoder
+          </code>
+          now supports being used while the app is in the background.
+         </li>
+         <li>
+          <code>
+           GMSServices sharedServices
+          </code>
+          can now be called while the app is in the
+    background. Note that if the first call to
+          <code>
+           sharedServices
+          </code>
+          occurs while the
+    app is in the background, some async initialization work will be deferred
+    until the first time a map is shown where it will be performed
+    synchronously.
+         </li>
+         <li>
+          <code>
+           GMSMapView
+          </code>
+          and
+          <code>
+           GMSPanoramaView
+          </code>
+          init messages can now be handled while
+    the app is in the background. This should remove the last case where
+          <code>
+           GMSMapView
+          </code>
+          or
+          <code>
+           GMSPanoramaView
+          </code>
+          could not be used in the background.
+    (Issues
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7860">
+           7860
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8007">
+           8007
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=8037">
+           8037
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7896">
+           7896
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7951">
+           7951
+          </a>
+          .)
+         </li>
+         <li>
+          <code>
+           GMSMapView
+          </code>
+          and
+          <code>
+           GMSPanormaView
+          </code>
+          delegate properties now support
+          <code>
+           IBOutlet
+          </code>
+          for easier use in storyboard.
+    (Progress towards a fix for
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6866">
+           issue 6866
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          <code>
+           mapView:didTapMyLocationButtonForMapView:
+          </code>
+          is now correctly called even if
+    no location is available.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7742">
+           Issue 7742
+          </a>
+          .)
+         </li>
+         <li>
+          <code>
+           GMSGroundOverlay
+          </code>
+          now shows correctly when rotated if image aspect ratio
+    doesn't match the selected ground region.
+   (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7772">
+           Issue 7772
+          </a>
+          .)
+         </li>
+         <li>
+          Fixed an issue resizing the map on iOS 8.
+         </li>
+         <li>
+          Fixed a rare crash under fast camera changes.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7885">
+           Issue 7885
+          </a>
+          .)
+         </li>
+         <li>
+          Map no longer hangs when adding a ground overlay with certain invalid
+    bounds.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7701">
+           Issue 7701
+          </a>
+          .)
+         </li>
+         <li>
+          Fixed a crash when texture memory is exhausted by markers.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7638">
+           Issue 7638
+          </a>
+          .)
+         </li>
+         <li>
+          Correctly returns the tapped
+          <code>
+           GMSCircle
+          </code>
+          to
+          <code>
+           mapView:didTapOverlay:
+          </code>
+          for
+    tappable circles.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6890">
+           Issue 6890
+          </a>
+          .)
+         </li>
+         <li>
+          <code>
+           mapView:idleAtCameraPosition:
+          </code>
+          is now called even if there is an
+    ongoing update of the My Location dot.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7889">
+           Issue 7889
+          </a>
+          .)
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Notes:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Due to an ABI change in the Xcode compiler, Xcode 6.3 is now the only
+    supported version for compiling against Google Maps SDK for iOS.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7900">
+           Issue 7900
+          </a>
+          .)
+         </li>
+         <li>
+          The minimum target iOS version for Google Maps SDK for iOS is now 7.0.
+    Version 6.0 is no longer supported.
+         </li>
+        </ul>
+        <p>
+         <a id="migrate1100">
+         </a>
+         <strong>
+          Migration from 1.9.2 or earlier:
+         </strong>
+        </p>
+        <p>
+         Versions 1.9.2 and earlier of the Google Maps SDK for iOS were available
+as a zip file containing a static framework. There was also the option to
+install recent versions from a CocoaPods pod. From version 1.10.0 onwards, the
+Google Maps SDK for iOS is available for installation only via CocoaPods.
+        </p>
+        <p>
+         If you previously installed the Google Maps SDK for iOS from a zip file
+containing a static framework:
+        </p>
+        <ol>
+         <li>
+          Remove all references to the previous framework from your Xcode project.
+         </li>
+         <li>
+          Follow the instructions in the
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/start">
+           getting started guide
+          </a>
+          to install
+    the Google Maps SDK for iOS using CocoaPods.
+         </li>
+        </ol>
+        <p>
+         If you previously installed the Google Maps SDK for iOS from the
+         <code>
+          Google-Maps-iOS-SDK
+         </code>
+         pod:
+        </p>
+        <ol>
+         <li>
+          Change your pod name to
+          <code>
+           GoogleMaps
+          </code>
+          .
+         </li>
+         <li>
+          Run
+          <code>
+           pod install
+          </code>
+          .
+         </li>
+        </ol>
+        <p>
+         <a id="v192">
+         </a>
+        </p>
+        <h2 id="version_192_-_february_2015">
+         Version 1.9.2 - February 2015
+        </h2>
+        <p>
+         Download
+         <a class="gc-analytics-event" data-category="maps" data-label="ios-sdk-download" data-value="1.9.2" href="//dl.google.com/geosdk/GoogleMaps-iOS-1.9.1.zip">
+          version 1.9.2
+         </a>
+         .
+        </p>
+        <p>
+         <strong>
+          Resolved Issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Show correct characters for Myanmar place labels. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7576">
+           Issue 7576
+          </a>
+          )
+         </li>
+         <li>
+          Fixed a small memory leak related to font registration. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7559">
+           Issue 7559
+          </a>
+          )
+         </li>
+         <li>
+          Fixed a large memory leak in rare cases where My Location is enabled and the
+    user rotates the screen.
+         </li>
+         <li>
+          Correctly show ground overlays defined by zoom level which extend across
+    more than 180 degrees of longitude.
+         </li>
+         <li>
+          Allow selected marker to be set during
+          <code>
+           mapView:didTapAtCoordinate:
+          </code>
+          .
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7222">
+           Issue 7222
+          </a>
+          )
+         </li>
+         <li>
+          Throw exception rather than crash when map services are initialized while
+    the application is in the background.
+         </li>
+         <li>
+          Raise
+          <code>
+           mapView:willMove:
+          </code>
+          and
+          <code>
+           mapView:idleAtCameraPosition:
+          </code>
+          even for
+    swipe motions which last less than 30ms. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7206">
+           Issue 7206
+          </a>
+          )
+         </li>
+         <li>
+          Correctly handle animations starting while a gesture is decelerating.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7348">
+           Issue 7348
+          </a>
+          )
+         </li>
+         <li>
+          Always return an error from
+          <code>
+           GMSPanoramaService
+          </code>
+          callbacks if the panorama
+    is nil.
+         </li>
+         <li>
+          Don't attempt to navigate to an empty panorama if
+          <code>
+           moveNearCoordinate:
+          </code>
+          resolves to nil. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7109">
+           Issue 7109
+          </a>
+          )
+         </li>
+        </ul>
+        <p>
+         <a id="v191">
+         </a>
+        </p>
+        <h2 id="version_191_-_december_2014">
+         Version 1.9.1 - December 2014
+        </h2>
+        <p>
+         Download
+         <a class="gc-analytics-event" data-category="maps" data-label="ios-sdk-download" data-value="1.9.1" href="//dl.google.com/geosdk/GoogleMaps-iOS-1.9.1.zip">
+          version 1.9.1
+         </a>
+         .
+        </p>
+        <p>
+         <strong>
+          Resolved Issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Added workaround for false positive on
+          <code>
+           userEmail
+          </code>
+          private selector.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7310">
+           Issue 7310
+          </a>
+          )
+         </li>
+         <li>
+          Improved handling of info windows for iPhone 6+ running applications in
+    scaled mode. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7323">
+           Issue 7323
+          </a>
+          )
+         </li>
+        </ul>
+        <p>
+         <a id="v190">
+         </a>
+        </p>
+        <h2 id="version_190_-_october_2014">
+         Version 1.9.0 - October 2014
+        </h2>
+        <p>
+         Download
+         <a class="gc-analytics-event" data-category="maps" data-label="ios-sdk-download" data-value="1.9.0" href="//dl.google.com/geosdk/GoogleMaps-iOS-1.9.0.zip">
+          version 1.9.0
+         </a>
+         .
+        </p>
+        <p>
+         <strong>
+          Features:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Support for iOS 8.
+         </li>
+         <li>
+          Support for iPhone 6/6+. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=7140">
+           Issue 7140
+          </a>
+          )
+         </li>
+         <li>
+          Support for Swift.
+         </li>
+         <li>
+          UI elements have been updated for material design.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved Issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed some memory reclamation issues.
+         </li>
+         <li>
+          Improved handling of application background state transition.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Notes:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          In order to improve compatibility with Swift, two geometry library
+    functions have been renamed to avoid function overloading.
+    The new names are
+          <code>
+           GMSGeometryIsLocationOnPathTolerance
+          </code>
+          and
+          <code>
+           GMSStyleSpansOffset
+          </code>
+          .
+         </li>
+        </ul>
+        <h2 id="version_181_-_may_2014">
+         Version 1.8.1 - May 2014
+        </h2>
+        <p>
+         Download
+         <a class="gc-analytics-event" data-category="maps" data-label="ios-sdk-download" data-value="1.8.1" href="//dl.google.com/geosdk/GoogleMaps-iOS-1.8.1.zip">
+          version 1.8.1
+         </a>
+         .
+        </p>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Resolved GMSTileLayer not displaying. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6686">
+           Issue 6686
+          </a>
+          )
+         </li>
+         <li>
+          Resolved a rare case where an app would crash when displaying polylines
+    while accessibility features are enabled. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6689">
+           Issue 6689
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           mapView:willMove:
+          </code>
+          is no longer called alongside a tap gesture. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6702">
+           Issue 6702
+          </a>
+          )
+         </li>
+         <li>
+          Resolved symbol collisions with the Protocol Buffer library.
+         </li>
+        </ul>
+        <h2 id="version_180_-_may_2014">
+         Version 1.8.0 - May 2014
+        </h2>
+        <p>
+         Version 1.8.0 has been replaced by
+         <a href="#version_181_-_may_2014">
+          version
+1.8.1
+         </a>
+         and is no longer available for download.
+        </p>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Resolved threading deadlock prominent on iPhone 4 running iOS 7.1 or later.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6484">
+           Issue 6484
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6524">
+           Issue 6524
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           GMSMapView
+          </code>
+          correctly releases some shared GL state previously causing
+    memory leak. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5941">
+           Issue 5941
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6265">
+           Issue 6265
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6629">
+           Issue 6629
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          no longer crashes in some cases where its path contained more
+    than 1024 segments. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6542">
+           Issue 6542
+          </a>
+          )
+         </li>
+         <li>
+          The delegate method
+          <code>
+           mapView:idleAtCameraPosition:
+          </code>
+          is now only called once
+    all user gestures are complete. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5718">
+           Issue 5718
+          </a>
+          )
+         </li>
+         <li>
+          The Google Maps SDK for iOS now includes fonts for languages currently
+    unsupported by the iOS system, such as Khmer. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5228">
+           Issue 5228
+          </a>
+          )
+          <ul>
+           <li>
+            These fonts may be safely removed from your
+            <code>
+             GoogleMaps.framework
+            </code>
+            if you
+    have no interest in these regions, but some text may render as "[?]".
+           </li>
+          </ul>
+         </li>
+        </ul>
+        <h2 id="version_172_-_march_2014">
+         Version 1.7.2 - March 2014
+        </h2>
+        <p>
+         Download
+         <a class="gc-analytics-event" data-category="maps" data-label="ios-sdk-download" data-value="1.7.2" href="//dl.google.com/geosdk/GoogleMaps-iOS-1.7.2.zip">
+          version 1.7.2
+         </a>
+         .
+        </p>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          's are no longer grayscale on iOS 7.1.
+         </li>
+        </ul>
+        <h2 id="version_171_-_march_2014">
+         Version 1.7.1 - March 2014
+        </h2>
+        <p>
+         Version 1.7.1 has been replaced by
+         <a href="#version_172_-_march_2014">
+          Version
+1.7.2
+         </a>
+         and is no longer available for download.
+        </p>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Heading will only appear on My Location dot when available.
+         </li>
+         <li>
+          Better reduction of colors on gradient or colored polylines at low zoom. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6386">
+           Issue 6386
+          </a>
+          )
+         </li>
+         <li>
+          The search radius is now respected when retrieving a
+          <code>
+           GMSPanorama
+          </code>
+          object.
+    via
+          <code>
+           GMSPanoramaService
+          </code>
+          and on
+          <code>
+           GMSPanoramaView
+          </code>
+          construction or move.
+         </li>
+        </ul>
+        <h2 id="version_17_-_february_2014">
+         Version 1.7 - February 2014
+        </h2>
+        <p>
+         Version 1.7 has been replaced by
+         <a href="#version_172_-_march_2014">
+          Version
+1.7.2
+         </a>
+         and is no longer available for download.
+        </p>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Styled polylines: additional color options via
+          <code>
+           GMSPolyline
+          </code>
+          , including
+    gradients and colors for any number of polyline segments.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=4856">
+           Issue 4856
+          </a>
+          )
+          <ul>
+           <li>
+            Each polyline may be drawn with many
+            <code>
+             GMSStyleSpan
+            </code>
+            instances, configuring
+  a unique color or gradient over an arbitrary number of segments.
+           </li>
+           <li>
+            Gradient or color may be specified via a
+            <code>
+             GMSStrokeStyle
+            </code>
+            .
+           </li>
+           <li>
+            <code>
+             GMSPath
+            </code>
+            provides a helper category to determine distance along a path.
+           </li>
+           <li>
+            <code>
+             GMSStyleSpans
+            </code>
+            helper to apply repeated styles along a polyline.
+           </li>
+          </ul>
+         </li>
+         <li>
+          <code>
+           GMSGeocoder
+          </code>
+          now provides structured addresses via
+          <code>
+           GMSAddress
+          </code>
+          ,
+    deprecating
+          <code>
+           GMSReverseGeocodeResult
+          </code>
+          .
+         </li>
+         <li>
+          Added mutable version of
+          <code>
+           GMSCameraPosition
+          </code>
+          ,
+          <code>
+           GMSMutableCameraPosition
+          </code>
+          .
+         </li>
+         <li>
+          Delegate method for user tapping the My Location button.
+         </li>
+         <li>
+          Added
+          <code>
+           GMSMapPoint
+          </code>
+          for linear interpolation between points in Mercator space
+    on the Earth.
+         </li>
+         <li>
+          My Location dot now shows compass arrow. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5325">
+           Issue 5325
+          </a>
+          )
+         </li>
+         <li>
+          3D building data is newly available for many places on the Earth.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          width is much closer to screen width. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5788">
+           Issue 5788
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5265">
+           Issue 5265
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          performance and memory improvements. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=4904">
+           Issue 4904
+          </a>
+          )
+         </li>
+         <li>
+          Reduced memory use of OpenGL textures.
+         </li>
+         <li>
+          Floor picker is positioned correctly when My Location button is disabled. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5742">
+           Issue 5742
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           cameraForBounds:insets:
+          </code>
+          on
+          <code>
+           GMSMapView
+          </code>
+          now correctly accounts for padding. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6080">
+           Issue 6080
+          </a>
+          )
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Notes:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          To align with other Google Maps APIs,
+          <code>
+           GMSMapView
+          </code>
+          no longer provides helper
+    methods to retrieve previously added overlays, such as
+          <code>
+           markers
+          </code>
+          ,
+          <code>
+           polylines
+          </code>
+          and
+          <code>
+           groundOverlays
+          </code>
+          .
+         </li>
+        </ul>
+        <h2 id="version_162_-_january_2014">
+         Version 1.6.2 - January 2014
+        </h2>
+        <p>
+         Download
+         <a class="gc-analytics-event" data-category="maps" data-label="ios-sdk-download" data-value="1.6.2" href="//dl.google.com/geosdk/GoogleMaps-iOS-1.6.2.zip">
+          Version 1.6.2
+         </a>
+         .
+        </p>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Resolved a gesture bug effecting full-screen maps on iOS 7. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6216">
+           Issue 6216
+          </a>
+          )
+         </li>
+         <li>
+          Resolved an issue where overlays were sometimes not initially tappable. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6143">
+           Issue 6143
+          </a>
+          )
+         </li>
+        </ul>
+        <h2 id="version_161_-_december_2013">
+         Version 1.6.1 - December 2013
+        </h2>
+        <p>
+         Version 1.6.1 has been replaced by
+         <a href="#version_162_-_january_2014">
+          version 1.6.2
+         </a>
+         and is no
+longer available for download.
+        </p>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Resolved a memory leak involving vector tiles.
+         </li>
+         <li>
+          Markers not immediately added to a GMSMapView no longer fail to appear
+    when configured at a later point. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6092">
+           Issue 6092
+          </a>
+          )
+         </li>
+         <li>
+          GMSMapView/GMSPanoramaView will now continue to render while your
+    application is resigned. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5546">
+           Issue 5546
+          </a>
+          )
+         </li>
+        </ul>
+        <h2 id="version_16_-_november_2013">
+         Version 1.6 - November 2013
+        </h2>
+        <p>
+         Version 1.6 has been replaced by
+         <a href="#version_162_-_january_2014">
+          version 1.6.2
+         </a>
+         and is no
+longer available for download.
+        </p>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          The Google Maps SDK for iOS now supports 64-bit architectures. Both 32 and
+    64 bit binaries are built into the single GoogleMaps framework. The
+    correct binary will be selected by Xcode based on your build settings. For
+    instructions on building 64-bit applications, please refer to Apple’s
+          <a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaTouch64BitGuide/Introduction/Introduction.html">
+           64-bit transition
+    guide
+          </a>
+          .
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5806">
+           Issue 5806
+          </a>
+          )
+         </li>
+         <li>
+          Changed some instances of
+          <code>
+           CGFloat
+          </code>
+          to either a
+          <code>
+           float
+          </code>
+          or
+          <code>
+           double
+          </code>
+          where
+    it was more appropriate.
+         </li>
+         <li>
+          Added the ability to restrict min and max zoom on
+          <code>
+           GMSMapView
+          </code>
+          .
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5882">
+           Issue 5882
+          </a>
+          )
+         </li>
+         <li>
+          Added opacity on
+          <code>
+           GMSTileLayer
+          </code>
+          and
+          <code>
+           GMSMarker
+          </code>
+          .
+         </li>
+         <li>
+          Core Animation on
+          <code>
+           GMSMapView
+          </code>
+          now requires model values to be set
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Info windows and tappable regions now rotate correctly with markers.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5896">
+           Issue 5896
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5969">
+           Issue 5969
+          </a>
+          )
+         </li>
+         <li>
+          Padding on a
+          <code>
+           GMSMapView
+          </code>
+          is no longer clamped to its bounds (useful if
+    setting padding on an initially zero-sized map). (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5864">
+           Issue 5864
+          </a>
+          )
+         </li>
+         <li>
+          Copyright information now animates when changing
+          <code>
+           GMSMapView
+          </code>
+          size or
+    padding.
+         </li>
+         <li>
+          Info windows are removed if their
+          <code>
+           GMSMarker
+          </code>
+          is removed from a
+          <code>
+           GMSMapView
+          </code>
+          . (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5856">
+           Issue 5856
+          </a>
+          )
+         </li>
+         <li>
+          My Location dot uses the last known location information when enabled.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5590">
+           Issue 5590
+          </a>
+          )
+         </li>
+         <li>
+          Resolved two rare race conditions that were causing crashes. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5795">
+           Issue 5795
+          </a>
+          )
+         </li>
+         <li>
+          Resolved an issue where retain cycles were causing memory leaks on
+          <code>
+           GMSMapView
+          </code>
+          and
+          <code>
+           GMSPanoramaView
+          </code>
+          .
+         </li>
+        </ul>
+        <h2 id="version_15_-_september_2013">
+         Version 1.5 - September 2013
+        </h2>
+        <p>
+         Download
+         <a class="gc-analytics-event" data-category="maps" data-label="ios-sdk-download" data-value="1.5.0" href="//dl.google.com/geosdk/GoogleMaps-iOS-1.5.0.zip">
+          Version 1.5
+         </a>
+         .
+        </p>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          This release officially supports iOS 7, and requires iOS 6.0 or later (iOS
+    5.1 is no longer supported).
+         </li>
+         <li>
+          The 'animated' field on
+          <code>
+           GMSMarker
+          </code>
+          is now known as
+          <code>
+           appearAnimation
+          </code>
+          , and
+    may be set to
+          <code>
+           kGMSMarkerAnimationNone
+          </code>
+          (default) or
+          <code>
+           kGMSMarkerAnimationPop
+          </code>
+          .
+         </li>
+         <li>
+          The Google Maps SDK for iOS now ships with an
+          <code>
+           armv7s
+          </code>
+          slice.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=4745">
+           Issue 4745
+          </a>
+          )
+         </li>
+         <li>
+          Several new features for
+          <code>
+           GMSMarker
+          </code>
+          instances:
+          <ul>
+           <li>
+            Markers can be made draggable using the
+            <code>
+             draggable
+            </code>
+            property, and new
+  drag delegate methods have been added to
+            <code>
+             GMSMapViewDelegate
+            </code>
+            .
+  (
+            <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=4975">
+             Issue 4975
+            </a>
+            )
+           </li>
+           <li>
+            Added
+            <code>
+             GMSMarkerLayer
+            </code>
+            , a custom
+            <code>
+             CALayer
+            </code>
+            subclass for
+            <code>
+             GMSMarker
+            </code>
+            that
+  supports animation of marker position and rotation. (
+            <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=4951">
+             Issue 4951
+            </a>
+            ,
+            <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5743">
+             Issue 5743
+            </a>
+            )
+           </li>
+           <li>
+            Changing a markers
+            <code>
+             position
+            </code>
+            will cause the marker to animate to the
+  new location.
+           </li>
+           <li>
+            Added support for markers that appear flat against the Earth's surface.
+           </li>
+           <li>
+            Added rotation property to rotate markers around their ground anchor.
+           </li>
+           <li>
+            The
+            <code>
+             UIImage
+            </code>
+            used by
+            <code>
+             GMSMarker
+            </code>
+            now supports the images and duration
+  properties, and will animate images with multiple frames.
+           </li>
+           <li>
+            The
+            <code>
+             UIImage
+            </code>
+            used by
+            <code>
+             GMSMarker
+            </code>
+            now supports
+            <code>
+             alignmentRectInsets
+            </code>
+            ,
+  and will adjust
+            <code>
+             groundAnchor
+            </code>
+            ,
+            <code>
+             infoWindowAnchor
+            </code>
+            , and the tappable
+  region. (
+            <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5729">
+             Issue 5729
+            </a>
+            )
+           </li>
+          </ul>
+         </li>
+         <li>
+          Added padding on
+          <code>
+           GMSMapView
+          </code>
+          , allowing you to indicate parts of the map
+    that may be obscured by other views; setting padding re-positions the
+    standard map controls, and the camera and camera updates will use the
+    padded region. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5466">
+           Issue 5466
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5728">
+           Issue 5728
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           GMSPanoramaView
+          </code>
+          and
+          <code>
+           GMSPanoramaService
+          </code>
+          now support searching for
+    panoramas with custom radius.
+         </li>
+         <li>
+          Added
+          <code>
+           cameraForBounds:insets:
+          </code>
+          to
+          <code>
+           GMSMapView
+          </code>
+          , allowing construction of
+    a
+          <code>
+           GMSCameraPosition
+          </code>
+          for the map from a specified
+          <code>
+           GMSCoordinateBounds
+          </code>
+          .
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          The "My Location" button now clips within
+          <code>
+           GMSMapView
+          </code>
+          . (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5764">
+           Issue 5764
+          </a>
+          )
+         </li>
+         <li>
+          Reduced memory usage of
+          <code>
+           GMSMapView
+          </code>
+          through less aggressive tile caching.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5202">
+           Issue 5202
+          </a>
+          )
+         </li>
+         <li>
+          Reduced the time taken to obtain
+          <code>
+           GMSServices
+          </code>
+          by moving some startup
+    tasks to a background thread; obtaining this object early in your
+    application (before creating a
+          <code>
+           GMSMapView
+          </code>
+          or other objects) may improve
+    performance. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5640">
+           Issue 5640
+          </a>
+          )
+         </li>
+         <li>
+          Polylines may now be drawn twice, as required, if they have very large
+    longitudinal span.
+         </li>
+         <li>
+          Resolved a rounding error with very small polygons far from latlng (0,0).
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5413">
+           Issue 5413
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5654">
+           Issue 5654
+          </a>
+          )
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Migration from 1.4.x:
+         </strong>
+        </p>
+        <ol>
+         <li>
+          Version 1.5 requires iOS 6.0 or later. Applications that must support
+    iOS 5.1 should continue to use the most recent 1.4.x release.
+         </li>
+         <li>
+          <p>
+           The
+           <code>
+            animated
+           </code>
+           property of GMSMarker has been replaced with the new field:
+           <code>
+            appearAnimation
+           </code>
+           . To maintain previous behavior, replace all references
+    to the
+           <code>
+            animated
+           </code>
+           property as follows:
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>marker.animated = YES;
+</code></pre>
+          <p>
+           Should be replaced with:
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>marker.appearAnimation = kGMSMarkerAnimationPop;
+</code></pre>
+         </li>
+         <li>
+          <p>
+           Changes to the
+           <code>
+            GMSMarker
+           </code>
+           .
+           <code>
+            position
+           </code>
+           property are now animated.
+    You can disable this animation with the following sample code.
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>[CATransaction begin];
+[CATransaction setDisableActions:YES];
+marker.position = ...;
+[CATransaction commit];
+</code></pre>
+         </li>
+        </ol>
+        <h2 id="version_143_-_august_2013">
+         Version 1.4.3 - August 2013
+        </h2>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Resolved several causes of modifying markers that could cause 'ghost'
+    markers to appear. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5751">
+           Issue 5751
+          </a>
+          )
+         </li>
+         <li>
+          Resolved excess texture use when modifying animated markers.
+    (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5756">
+           Issue 5756
+          </a>
+          )
+         </li>
+        </ul>
+        <h2 id="version_142_-_august_2013">
+         Version 1.4.2 - August 2013
+        </h2>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed a rare case where modifying an animated marker could cause 'ghost'
+    markers to appear.
+         </li>
+         <li>
+          Prioritized markers over other overlays for tappability.
+         </li>
+        </ul>
+        <h2 id="version_141_-_august_2013">
+         Version 1.4.1 - August 2013
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Tappable markers inside
+          <code>
+           GMSPanoramaView
+          </code>
+          using the
+          <code>
+           panoramaView:didTapMarker:
+          </code>
+          delegate method on
+          <code>
+           GMSPanoramaViewDelegate
+          </code>
+          .
+   (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5622">
+           Issue 5622
+          </a>
+          )
+         </li>
+         <li>
+          Added
+          <code>
+           GMSPanoramaLayer
+          </code>
+          , a custom
+          <code>
+           CALayer
+          </code>
+          subclass for
+          <code>
+           GMSPanoramaView
+          </code>
+          that supports animation of the panorama camera.
+         </li>
+         <li>
+          <code>
+           GMSPanoramaCamera
+          </code>
+          supports custom field of view (FOV).
+         </li>
+         <li>
+          Programmatic access to the floor picker allows you to enable or disable the
+   selector, and set which floor should be displayed. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5623">
+           Issue 5623
+          </a>
+          ,
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5666">
+           Issue 5666
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           GMSTileLayer
+          </code>
+          now supports high DPI tiles for use on a Retina device.
+   (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5402">
+           Issue 5402
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           GMSMapView.camera
+          </code>
+          is now observable via KVO.
+         </li>
+         <li>
+          Added
+          <code>
+           fitBounds:withEdgeInsets:
+          </code>
+          to
+          <code>
+           GMSCameraUpdate
+          </code>
+          . (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5475">
+           Issue 5475
+          </a>
+          )
+         </li>
+         <li>
+          The default behavior of a
+          <code>
+           GMSMapView
+          </code>
+          to consume all gestures within its
+   bounds may now be disabled via
+          <code>
+           consumesGesturesInView
+          </code>
+          . (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5552">
+           Issue 5552
+          </a>
+          )
+         </li>
+         <li>
+          Expanded
+          <code>
+           GMSGeometryUtils
+          </code>
+          to include additional helper methods.
+         </li>
+         <li>
+          <code>
+           GMSServices
+          </code>
+          may be held by applications to maintain cache and connection
+   to Google; this can improve performance when creating and destroying many
+   maps.
+         </li>
+         <li>
+          Improved visuals when resizing a
+          <code>
+           GMSMapView
+          </code>
+          via
+          <code>
+           UIView
+          </code>
+          animation
+   methods.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed crash bug during memory warning (related to indoor). (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5637">
+           Issue 5637
+          </a>
+          )
+         </li>
+         <li>
+          Fixed crash bug with indoor maps on iOS 5.1. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5664">
+           Issue 5664
+          </a>
+          )
+         </li>
+         <li>
+          Performance improvements when using hundreds of
+          <code>
+           GMSMarkers
+          </code>
+          .
+         </li>
+         <li>
+          Reduced memory footprint of
+          <code>
+           GMSMapView
+          </code>
+          .
+         </li>
+         <li>
+          Touch target for
+          <code>
+           GMSMarkers
+          </code>
+          matches the size and shape of the marker when
+   the
+          <code>
+           GMSMapView
+          </code>
+          is tilted. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5273">
+           Issue 5273
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           GMSMapView
+          </code>
+          will no longer render a single frame of black in some cases
+   (noticable e.g., inside
+          <code>
+           UISplitViewController
+          </code>
+          on iPad).
+         </li>
+         <li>
+          Street View imagery is now adjusted correctly for tilted base data
+   (e.g., data taken by a Street View car on a slope).
+         </li>
+         <li>
+          Geodesic interpolation has been tweaked to be more correct.
+         </li>
+         <li>
+          Fixed incorrect
+          <code>
+           GMSGroundOverlay
+          </code>
+          sizing that prevented some images from
+   displaying. (
+          <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5663">
+           Issue 5663
+          </a>
+          )
+         </li>
+         <li>
+          <code>
+           fitBounds:withPadding:
+          </code>
+          on
+          <code>
+           GMSCameraUpdate
+          </code>
+          now correctly applies padding
+   to all edges of the bounds; previously it used 1/2 padding on each edge.
+         </li>
+        </ul>
+        <h2 id="version_140_-_july_2013">
+         Version 1.4.0 - July 2013
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Support for Google Street View imagery, with coverage in 50+ countries.
+          <ul>
+           <li>
+            Added
+            <code>
+             GMSPanoramaView
+            </code>
+            , a viewer for Street View imagery, that enables
+  both programmatic and user control.
+           </li>
+           <li>
+            <code>
+             GMSMarker
+            </code>
+            s can be shared between
+            <code>
+             GMSMapView
+            </code>
+            and
+            <code>
+             GMSPanoramaView
+            </code>
+            .
+           </li>
+           <li>
+            <code>
+             GMSPanoramaService
+            </code>
+            may be used to load panorama data ahead of display.
+           </li>
+          </ul>
+         </li>
+         <li>
+          Indoor floor plans and a floor selector control will now be displayed when
+    available.
+         </li>
+         <li>
+          Updated map design inspired by the new Google Maps.
+         </li>
+         <li>
+          Info windows now show at 1:1 resolution on the screen regardless of tilt.
+         </li>
+         <li>
+          Additional delegate methods on
+          <code>
+           GMSMapView
+          </code>
+          —
+          <code>
+           mapView:willMove:
+          </code>
+          and
+          <code>
+           mapView:idleAtCameraPosition:
+          </code>
+          — allow you to detect the start and
+    end of camera movement, respectively.
+         </li>
+         <li>
+          An improved look and feel for polylines and polygon stroke.
+         </li>
+         <li>
+          Added a
+          <code>
+           zIndex
+          </code>
+          property on all overlays. Z-Indexes are calculated in two
+    groups:
+          <code>
+           GMSMarker
+          </code>
+          s and all other overlays.
+         </li>
+         <li>
+          Added
+          <code>
+           GMSGeometryUtils
+          </code>
+          methods for heading, distance, offset etc. with
+    respect to points on the Earth.
+         </li>
+         <li>
+          To align with other Google Maps APIs,
+          <code>
+           GMSGroundOverlay
+          </code>
+          no longer supports
+    the
+          <code>
+           zoomLevel
+          </code>
+          property. You can use the helper method
+          <code>
+           groundOverlayWithPosition:icon:zoomLevel:
+          </code>
+          to migrate existing code.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Improved the tappability of
+          <code>
+           GMSPolygon
+          </code>
+          .
+         </li>
+         <li>
+          The compass now disappears when the map returns to zero bearing for any
+    reason, including animation.
+         </li>
+         <li>
+          Resolved crash issue when creating a zero-sized
+          <code>
+           GMSPolygon
+          </code>
+          .
+         </li>
+         <li>
+          Resolved an issue where active gestures could cause a
+          <code>
+           GMSMapView
+          </code>
+          to not
+    be released until deceleration completed.
+         </li>
+         <li>
+          Info windows no longer allow taps to pass through them.
+         </li>
+         <li>
+          Accessibility elements on
+          <code>
+           GMSMapView
+          </code>
+          are now hidden by default. See the
+    migration steps below if you wish to enable these elements.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Migration from 1.3.x:
+         </strong>
+        </p>
+        <p>
+         Version 1.4 introduces changes to accessibility and ground overlays. If you
+make use of either of these in your application, you will have to modify any
+existing code as follows:
+        </p>
+        <ol>
+         <li>
+          <p>
+           If your application relies on the accessibility elements of
+           <code>
+            GMSMapView
+           </code>
+           ,
+    set the
+           <code>
+            accessibilityElementsHidden
+           </code>
+           property to
+           <code>
+            NO
+           </code>
+           .
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>mapView_.accessibilityElementsHidden = NO;
+</code></pre>
+         </li>
+         <li>
+          <p>
+           Replace direct references to the
+           <code>
+            GMSGroundOverlay
+           </code>
+           <code>
+            zoomLevel
+           </code>
+           property
+    with the new
+           <code>
+            groundOverlayWithPosition:icon:zoomLevel:
+           </code>
+           convenience
+    method. Alternatively, you can position the image with a geographic bounds.
+    The below code samples are equivalent.
+          </p>
+         </li>
+        </ol>
+        <p>
+         Version 1.3.x assigned zoomLevel directly.
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>GMSGroundOverlay *groundOverlay = [[GMSGroundOverlay alloc] init];
+groundOverlay.icon = [UIImage imageNamed:@"newark_nj_1922.jpg"];
+groundOverlay.position = CLLocationCoordinate2DMake(40.742, -74.174);
+groundOverlay.zoomLevel = 13.6;
+</code></pre>
+        <p>
+         In version 1.4 and later, you can use the convenience method.
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>GMSGroundOverlay *groundOverlay = [GMSGroundOverlay groundOverlayWithPosition:newark
+                                                                 icon:[UIImage imageNamed:@"newark_nj_1922.jpg"]
+                                                            zoomLevel:13.6];
+</code></pre>
+        <p>
+         From this release, we recommend that you position your ground overlay by
+defining its south west and north east corners.
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>CLLocationCoordinate2D southWest = CLLocationCoordinate2DMake(40.712216,-74.22655);
+CLLocationCoordinate2D northEast = CLLocationCoordinate2DMake(40.773941,-74.12544);
+GMSCoordinateBounds *overlayBounds = [[GMSCoordinateBounds alloc] initWithCoordinate:southWest
+                                                                        coordinate:northEast];
+UIImage *icon = [UIImage imageNamed:@"newark_nj_1922.jpg"];
+GMSGroundOverlay *overlay =
+    [GMSGroundOverlay groundOverlayWithBounds:overlayBounds
+                                         icon:[UIImage imageNamed:@"newark_nj_1922.jpg"]];
+</code></pre>
+        <h2 id="version_131_-_june_2013">
+         Version 1.3.1 - June 2013
+        </h2>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Shows all tiles when animating across the antimeridian
+         </li>
+         <li>
+          Performance improvements while zooming
+         </li>
+         <li>
+          Touches are consumed more agressively by
+          <code>
+           GMSMapView
+          </code>
+         </li>
+         <li>
+          Fixed constructing a
+          <code>
+           GMSMutablePath
+          </code>
+          via
+          <code>
+           pathFromEncodedPath:
+          </code>
+         </li>
+         <li>
+          Restores OpenGL state correctly in
+          <code>
+           GMSMapView
+          </code>
+          in applications that also
+    use
+          <code>
+           GLKView
+          </code>
+         </li>
+        </ul>
+        <h2 id="version_13_-_may_2013">
+         Version 1.3 - May 2013
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Support for custom tile overlays (image-based) via
+          <code>
+           GMSTileLayer
+          </code>
+          .
+         </li>
+         <li>
+          Anti-aliasing for
+          <code>
+           GMSPolyline
+          </code>
+          and
+          <code>
+           GMSPolygon
+          </code>
+          stroke.
+         </li>
+         <li>
+          Support for 'invisible' base map tiles via
+          <code>
+           kGMSTypeNone
+          </code>
+          .
+         </li>
+         <li>
+          Basic support for
+          <code>
+           CAAnimationGroup
+          </code>
+          on
+          <code>
+           GMSMapLayer
+          </code>
+          .
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Performance improvements with large numbers of overlays.
+         </li>
+         <li>
+          Resolved excessive memory use when device was locked/unlocked while
+    an info window was displayed
+         </li>
+         <li>
+          Animations are stopped when a user performs a gesture
+         </li>
+         <li>
+          Animations stop any active gesture (e.g., a pan)
+         </li>
+         <li>
+          Resolved crash issue with setting/clearing My Location dot
+         </li>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          and
+          <code>
+           GMSPolygon
+          </code>
+          now support greater precision at high zoom
+         </li>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          and
+          <code>
+           GMSPolygon
+          </code>
+          use the correct alpha values
+         </li>
+         <li>
+          Touches are consumed by
+          <code>
+           GMSMapView
+          </code>
+          , allowing use within objects such as
+    a scroll view
+         </li>
+        </ul>
+        <h2 id="version_122_-_april_2013">
+         Version 1.2.2 - April 2013
+        </h2>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Tappable regions for
+          <code>
+           GMSMarker
+          </code>
+          fixed.
+         </li>
+         <li>
+          Overlays are no longer able to render on half pixels.
+         </li>
+         <li>
+          Ground overlays appear underneath the My Location dot.
+         </li>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          <code>
+           strokeColor
+          </code>
+          is no longer erroneously deallocated.
+         </li>
+        </ul>
+        <h2 id="version_12_-_april_2013">
+         Version 1.2 - April 2013
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          You can now create overlays directly, without the need for an associated
+    options class. The
+          <code>
+           GMS...Options
+          </code>
+          classes have been removed from this
+    release.
+         </li>
+         <li>
+          Map overlays, such as
+          <code>
+           GMSMarker
+          </code>
+          and
+          <code>
+           GMSPolyline
+          </code>
+          , now inherit from a
+    shared
+          <code>
+           GMSOverlay
+          </code>
+          class.
+         </li>
+         <li>
+          Added support for two new overlays,
+          <code>
+           GMSPolygon
+          </code>
+          and
+          <code>
+           GMSCircle
+          </code>
+          .
+         </li>
+         <li>
+          The
+          <code>
+           width
+          </code>
+          and
+          <code>
+           stroke
+          </code>
+          properties of
+          <code>
+           GMSPolyline
+          </code>
+          have been renamed to
+          <code>
+           strokeWidth
+          </code>
+          and
+          <code>
+           strokeColor
+          </code>
+          to parallel
+          <code>
+           GMSPolygon
+          </code>
+          and
+          <code>
+           GMSCircle
+          </code>
+          .
+         </li>
+         <li>
+          Overlay types may now be subclassed.
+         </li>
+         <li>
+          Additional helper methods have been added to
+          <code>
+           GMSCoordinateBounds
+          </code>
+          . The
+          <code>
+           including
+          </code>
+          method has been renamed to
+          <code>
+           includingCoordinate
+          </code>
+          , added
+          <code>
+           includingBounds
+          </code>
+          .
+         </li>
+         <li>
+          A
+          <code>
+           GMSMarker
+          </code>
+          may be animated when added to a map.
+         </li>
+         <li>
+          <code>
+           GMSCameraUpdate
+          </code>
+          to create camera update objects, including operations to
+    set a camera that presents a specified
+          <code>
+           GMSCoordinateBounds
+          </code>
+         </li>
+         <li>
+          <code>
+           GMSUISettings
+          </code>
+          may be used to add a compass or "My Location" button
+    (disabled by default).
+         </li>
+         <li>
+          Non-marker overlay types are tappable (see
+          <code>
+           GMSMapViewDelegate
+          </code>
+          ).
+         </li>
+         <li>
+          The default marker image has been changed to the Google Maps for iOS
+    marker.
+         </li>
+         <li>
+          Added
+          <code>
+           markerImageWithColor:
+          </code>
+          to create tinted versions of the default
+    marker.
+         </li>
+         <li>
+          <code>
+           GMSMapLayer
+          </code>
+          , the
+          <code>
+           CALayer
+          </code>
+          subclass for
+          <code>
+           GMSMapView
+          </code>
+          , now supports
+    modification of its camera properties, allowing for advanced animation
+    effects.
+         </li>
+         <li>
+          <code>
+           semaphore_wait_trap
+          </code>
+          issue resolved.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          <code>
+           visibleRegion
+          </code>
+          now reports correctly sized region on Retina Devices.
+         </li>
+         <li>
+          Double-tap to zoom now centers around tapped point.
+         </li>
+         <li>
+          Disabling pan via
+          <code>
+           UISettings
+          </code>
+          now prevents movement with zoom gestures.
+         </li>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          performance is improved for large polylines.
+         </li>
+         <li>
+          <code>
+           GMSMapView
+          </code>
+          may be subclassed.
+         </li>
+         <li>
+          My Location dot appears underneath markers.
+         </li>
+         <li>
+          Performance improvements when using the My Location dot.
+         </li>
+         <li>
+          Grayscale polylines now render correctly.
+         </li>
+         <li>
+          Calling
+          <code>
+           renderInContext:
+          </code>
+          on the
+          <code>
+           GMSMapView
+          </code>
+          layer now renders
+    correctly; this allows for snapshots and UI effects.
+         </li>
+         <li>
+          The default behavior when a marker is tapped has been updated to also pan
+    the camera to the marker's position.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Migration from 1.1.x:
+         </strong>
+        </p>
+        <p>
+         When upgrading to the most recent version, you will have to modify any
+existing code as follows:
+        </p>
+        <ol>
+         <li>
+          Replace references to the
+          <code>
+           width
+          </code>
+          and
+          <code>
+           stroke
+          </code>
+          properties of
+          <code>
+           GMSPolyline
+          </code>
+          with
+          <code>
+           strokeWidth
+          </code>
+          and
+          <code>
+           strokeColor
+          </code>
+          . The behavior is
+     otherwise the same.
+         </li>
+         <li>
+          Replace calls to the
+          <code>
+           including
+          </code>
+          method of
+          <code>
+           GMSCoordinateBounds
+          </code>
+          with a
+     call to
+          <code>
+           includingCoordinate
+          </code>
+          .
+         </li>
+         <li>
+          Version 1.2 simplifies overlays (items added to the map) by allowing you
+     to set overlay options directly on the object, instead of first creating
+     an overlay options object. This change impacts existing code as follows:
+          <ul>
+           <li>
+            Remove all references to
+            <code>
+             GMSGroundOverlayOptions
+            </code>
+            ,
+            <code>
+             GMSMarkerOptions
+            </code>
+            or
+            <code>
+             GMSPolylineOptions
+            </code>
+            .
+           </li>
+           <li>
+            <code>
+             GMSGroundOverlay
+            </code>
+            ,
+            <code>
+             GMSMarker
+            </code>
+            and
+            <code>
+             GMSPolyline
+            </code>
+            are now concrete
+   classes, not protocols. Specify them as
+            <code>
+             GMSMarker *
+            </code>
+            , instead of
+            <code>
+             id&lt;GMSMarker&gt;
+            </code>
+            .
+           </li>
+           <li>
+            Add an overlay to the map by setting its
+            <code>
+             map
+            </code>
+            property instead of
+   calling the
+            <code>
+             add...Overlay
+            </code>
+            method.
+           </li>
+           <li>
+            Remove an overlay from the map by setting its
+            <code>
+             map
+            </code>
+            property to
+            <code>
+             nil
+            </code>
+            (rather than calling
+            <code>
+             remove
+            </code>
+            ).
+           </li>
+           <li>
+            Values previously set on properties of an options object should now
+   be set on the object itself.
+           </li>
+          </ul>
+         </li>
+        </ol>
+        <p>
+         Below is an example of how to add a polyline to the map in version 1.1:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>GMSPolylineOptions *lineOptions = [GMSPolylineOptions options];
+
+GMSMutablePath *path = [GMSMutablePath path];
+[path addCoordinate:CLLocationCoordinate2DMake(37.35, -122.0)];
+[path addCoordinate:CLLocationCoordinate2DMake(37.45, -122.0)];
+lineOptions.color = [UIColor blueColor];
+lineOptions.path = path;
+
+id&lt;GMSPolyline&gt; line = [mapView_ addPolylineWithOptions:lineOptions];
+</code></pre>
+        <p>
+         The equivalent code in version 1.2.0 and later is:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>GMSMutablePath *path = [GMSMutablePath path];
+[path addCoordinate:CLLocationCoordinate2DMake(37.35, -122.0)];
+[path addCoordinate:CLLocationCoordinate2DMake(37.45, -122.0)];
+
+GMSPolyline *line = [GMSPolyline polylineWithPath:path];
+line.strokeColor = [UIColor blueColor];
+line.map = mapView_;
+</code></pre>
+        <h2 id="version_112_-_march_2013">
+         Version 1.1.2 - March 2013
+        </h2>
+        <aside class="special">
+         <strong>
+          Important:
+         </strong>
+         <span>
+          You will have to update your linked libraries (in the Build
+Phases tab) from libstdc++.dylib to libc++.dylib to ensure that your
+existing app works with the new SDK.
+         </span>
+        </aside>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Updated the SDK to use libc++ instead of libstdc++.
+         </li>
+         <li>
+          Improved support for including a
+          <code>
+           GMSMapView
+          </code>
+          and
+          <code>
+           GLKView
+          </code>
+          in the same
+    app.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Migrating from v1.1.1 or earlier:
+         </strong>
+        </p>
+        <p>
+         Version 1.1.2 and later use libc++ instead of libstdc++. To upgrade to the
+most recent version of the SDK, do the following:
+        </p>
+        <ol>
+         <li>
+          In the Project Navigator, replace the previous framework with the
+     most recent framework.
+         </li>
+         <li>
+          Select your project from the Project Navigator, and choose your
+     application's target.
+         </li>
+         <li>
+          Open the
+          <em>
+           Build Phases
+          </em>
+          tab, and within
+          <em>
+           Link Binary with Libraries
+          </em>
+          :
+          <ul>
+           <li>
+            Remove
+            <code>
+             libstdc++.dylib
+            </code>
+            .
+           </li>
+           <li>
+            Add
+            <code>
+             libc++.dylib
+            </code>
+            .
+           </li>
+          </ul>
+         </li>
+         <li>
+          Recompile your project.
+         </li>
+        </ol>
+        <h2 id="version_111_-_march_2013">
+         Version 1.1.1 - March 2013
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Improved the messages that are logged to the console when a invalid key is
+    used or a connection error occurs.
+         </li>
+         <li>
+          Added multi-line snippet support for
+          <code>
+           GMSMarker
+          </code>
+          .
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          <code>
+           GMSMapView
+          </code>
+          could return a
+          <code>
+           nil
+          </code>
+          camera.
+         </li>
+         <li>
+          Multiple
+          <code>
+           GMSMapView
+          </code>
+          instances no longer 'camera crosstalk'.
+         </li>
+         <li>
+          The SDK contained unresolved external references.
+         </li>
+         <li>
+          A
+          <code>
+           GMSMarker
+          </code>
+          with an empty title and snippet no longer shows an empty
+    info window.
+         </li>
+        </ul>
+        <h2 id="version_11_-_february_2013">
+         Version 1.1 - February 2013
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          The points of a
+          <code>
+           GMSPolyline
+          </code>
+          (and
+          <code>
+           GMSPolylineOptions
+          </code>
+          ) are now specified
+    as a
+          <code>
+           GMSPath
+          </code>
+          and built via a
+          <code>
+           GMSMutablePath
+          </code>
+          , rather than
+          <code>
+           addVertex:
+          </code>
+          etc
+         </li>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          may now be specified as geodesic.
+         </li>
+         <li>
+          <code>
+           animateToCameraPosition:
+          </code>
+          method on
+          <code>
+           GMSMapView
+          </code>
+          .
+         </li>
+         <li>
+          <code>
+           GMSProjection
+          </code>
+          provides
+          <code>
+           containsCoordinate:
+          </code>
+          and
+          <code>
+           visibleRegion
+          </code>
+          helpers.
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          <code>
+           GMSCameraPosition
+          </code>
+          and
+          <code>
+           animateToLocation:
+          </code>
+          now clamp/wrap
+    latitude/longitude respectively; similarly, bearing is clamped to
+          <code>
+           0 &lt;= bearing &lt; 360
+          </code>
+         </li>
+         <li>
+          <code>
+           GMSGroundOverlay
+          </code>
+          may be modified after creation.
+         </li>
+         <li>
+          <code>
+           GMSPolyline
+          </code>
+          may cross the antimeridian
+         </li>
+         <li>
+          Resolved a marker sorting issue.
+         </li>
+        </ul>
+        <h2 id="version_102_-_january_2013">
+         Version 1.0.2 - January 2013
+        </h2>
+        <p>
+         <strong>
+          Features
+         </strong>
+        </p>
+        <ul>
+         <li>
+          GMSCamera was changed to GMSCameraPosition
+         </li>
+         <li>
+          Removed requirement to call start/stopRendering
+         </li>
+         <li>
+          Improved texture memory handling
+         </li>
+         <li>
+          Added UISettings to control gesture availability
+         </li>
+         <li>
+          Added Ground Overlays
+         </li>
+        </ul>
+        <p>
+         <strong>
+          Resolved issues:
+         </strong>
+        </p>
+        <ul>
+         <li>
+          Fixed: GMSMapViewDelegate's mapView:didTapInfoWindowOfMarker: method is
+    unreliable
+         </li>
+         <li>
+          Selected markers are automatically brought to front
+         </li>
+         <li>
+          Polylines now render at a constant size regardless of the zoom level
+         </li>
+        </ul>
+        <h2 id="version_101_-_december_2012">
+         Version 1.0.1 - December 2012
+        </h2>
+        <ul>
+         <li>
+          Initial release alongside Google Maps for iOS.
+         </li>
+         <li>
+          Support for 3D maps, rotation, tilt, 3D buildings, markers, polylines.
+         </li>
+         <li>
+          Satellite and terrain tiles, traffic data, and other features.
+         </li>
+        </ul>
+       </div>
+       <div class="devsite-content-footer nocontent">
+        <p>
+         Except as otherwise noted, the content of this page is licensed under the
+         <a href="http://creativecommons.org/licenses/by/3.0/">
+          Creative Commons Attribution 3.0 License
+         </a>
+         , and code samples are licensed under the
+         <a href="http://www.apache.org/licenses/LICENSE-2.0">
+          Apache 2.0 License
+         </a>
+         . For details, see our
+         <a href="https://developers.google.com/terms/site-policies">
+          Site Policies
+         </a>
+         . Java is a registered trademark of Oracle and/or its affiliates.
+        </p>
+        <p class="devsite-content-footer-date" content="2017-06-07T04:47:31.038660" itemprop="datePublished">
+         Last updated June 7, 2017.
+        </p>
+       </div>
+      </article>
+     </article>
+    </div>
+    <footer class="devsite-footer-promos nocontent">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-promos-list">
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="http://stackoverflow.com/questions/tagged/google-maps-sdk-ios">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-stack-overflow.svg"/>
+         Stack Overflow
+        </a>
+        <div class="devsite-footer-promo-description">
+         Ask a question under the google-maps-sdk-ios tag.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://github.com/googlemaps/">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg"/>
+         GitHub
+        </a>
+        <div class="devsite-footer-promo-description">
+         Fork our samples and try them yourself.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://googlegeodevelopers.blogspot.com">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/blogger_64dp.png"/>
+         Blog
+        </a>
+        <div class="devsite-footer-promo-description">
+         Read the latest updates, customer stories, and tips.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://issuetracker.google.com/issues/new?component=188833&amp;template=789005">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/developers_64dp.png"/>
+         Issue Tracker
+        </a>
+        <div class="devsite-footer-promo-description">
+         Something wrong? Send us a bug report!
+        </div>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-footer-linkboxes nocontent ">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-linkboxes-list">
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Learn More
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://www.codeschool.com/courses/exploring-google-maps-for-ios">
+           Online Course at Code School
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/pricing-and-plans/">
+           Pricing and Plans
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/api-picker">
+           API Picker
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="http://googlemaps.github.io/OpenInGoogleMaps-iOS/">
+           Open in Google Maps library
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Platforms
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/android/">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/ios/">
+           iOS
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web/">
+           Web
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web-services/">
+           Web Services
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Product Info
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/contact-sales/">
+           Contact sales
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/ios-sdk/support">
+           Community support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/premium/support">
+           Paid support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/terms">
+           Terms of Service
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox devsite-footer-linkbox-sites">
+        <a class="gc-analytics-event devsite-footer-linkbox-logo-link" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link" href="https://developers.google.com/">
+         <img class="devsite-footer-linkbox-logo" src="https://developers.google.com/_static/eee0a9d1b9/images/redesign-14/lockup-color-knockout.png"/>
+        </a>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link" href="//developer.android.com/index.html">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link" href="//developer.chrome.com/home">
+           Chrome
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link" href="//firebase.google.com">
+           Firebase
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cloud Link" href="//cloud.google.com">
+           Google Cloud Platform
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products Link" href="//developers.google.com/products/">
+           All Products
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-utility-footer">
+     <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
+      <div class="devsite-utility-footer-nav-left">
+       <form action="/i18n/setlang/" class="devsite-utility-footer-language" method="post">
+        <input name="xsrf_token" type="hidden" value="s7NsVk8Ls762bamraFdDmOUDt4f1kOMB24-EJVZFuMc6MTQ5NzQ0NDQ2OTgzNTQ3MA"/>
+        <input name="next" type="hidden" value="/maps/documentation/ios-sdk/releases"/>
+        <select class="devsite-utility-footer-language-select kd-select" name="language" track-name="click" track-type="languageSelector">
+         <option track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector" value="id">
+          Bahasa Indonesia
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector" value="de">
+          Deutsch
+         </option>
+         <option selected="selected" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" value="en">
+          English
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector" value="es">
+          español
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector" value="fr">
+          français
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="pt-br" track-name="changed" track-type="languageSelector" value="pt-br">
+          Português Brasileiro
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector" value="ru">
+          Русский
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector" value="ja">
+          日本語
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-cn" track-name="changed" track-type="languageSelector" value="zh-cn">
+          简体中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-tw" track-name="changed" track-type="languageSelector" value="zh-tw">
+          繁體中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector" value="ko">
+          한국어
+         </option>
+        </select>
+       </form>
+       <span class="devsite-utility-footer-links">
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer terms link" href="https://developers.google.com/terms/site-terms">
+         Terms
+        </a>
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer privacy link" href="https://www.google.com/policies/privacy/">
+         Privacy
+        </a>
+       </span>
+      </div>
+      <div class="devsite-utility-footer-nav-right">
+       <div class="devsite-utility-footer-newsletter-signup-text">
+        Sign up for the Google Developers newsletter
+       </div>
+       <a class="button button-primary devsite-utility-footer-newsletter-signup-button" href="https://services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch">
+        Subscribe
+       </a>
+      </div>
+     </nav>
+    </footer>
+    <div class="devsite-feedback-dialog devsite-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Send feedback about...
+      </h3>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Image" data-type="documentation" track-metadata-position="header" track-name="feedbackDocIcon" track-type="feedback">
+        <div class="devsite-feedback-item-icon-container">
+         <div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs material-icons">
+         </div>
+        </div>
+       </a>
+       <div class="devsite-feedback-item-name">
+        This page
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Text" data-type="documentation" tabindex="0" track-metadata-position="header" track-name="feedbackDocText" track-type="feedback">
+         Documentation feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Image" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductIcon" track-type="feedback">
+        <img alt="Google Maps SDK for iOS" class="devsite-feedback-item-icon" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+       </a>
+       <div class="devsite-feedback-item-name">
+        Google Maps SDK for iOS
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Text" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductText" track-type="feedback">
+         Product feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-support">
+       <img src="https://developers.google.com/_static/eee0a9d1b9/images/feedback/ic_help_24px.svg"/>
+       Need help? Visit our
+       <a href="https://developers.google.com/maps/documentation/ios-sdk/support">
+        support page
+       </a>
+       .
+      </div>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="devsite-feedback-cancel button-white gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button" track-metadata-position="header" track-name="cancelFeedbackButton" track-type="feedback" type="button">
+       Cancel
+      </button>
+     </div>
+    </div>
+    <script>
+     $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'Google Maps iOS API',
+        'version': 'devsite-20170612-r03-rc00.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+    </script>
+   </div>
+   <script async="" defer="" src="//www.gstatic.com/feedback/api.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery_ui-bundle.js">
+   </script>
+   <script src="https://developers.google.com/_static2/eee0a9d1b9/jsi18n/">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot_closure.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot.js">
+   </script>
+   <script>
+    (function($) {
+          
+          devsite.devsite.Init($, {'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'VERSION_HASH': 'eee0a9d1b9', 'SITE_NAME': 'devsite', 'HISTORY_ENABLED': 1, 'SUBPATH': '', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.api.ai', '.appspot.com', '.devsitetest.how', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.nest.com', '.openthread.io', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0, 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com'},
+                               '[]','en',
+                               true, '',
+                               {"039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/maps/documentation/ios-sdk/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+   </script>
+   <script>
+    $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+   </script>
+   <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=paewx4mdhuzny4k5rewdgkq2cy">
+   </script>
+  </div>
+  <span data-request-elapsed="298.310041428" id="devsite-request-elapsed">
+  </span>
+ </body>
+</html>

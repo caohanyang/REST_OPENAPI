@@ -2,8 +2,7 @@
   "basePath": "/api/v3.1",
   "paths": {
     "/": {
-      "Post": {},
-      "Get": {}
+      "del": {}
     }
   },
   "produces": "application/json",

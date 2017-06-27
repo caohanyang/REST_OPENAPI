@@ -1,0 +1,60 @@
+{
+  "basePath": "/",
+  "paths": {
+    "export/geonamesData.js": {
+      "GET": {}
+    },
+    "cities": {
+      "PUT": {}
+    },
+    "countryInfoCSV": {
+      "PUT": {}
+    },
+    "astergdem": {
+      "POST": {}
+    },
+    "postalCodeCountryInfo": {
+      "POST": {}
+    },
+    "http://www.maxmind.com/.": {
+      "POST": {}
+    },
+    "postalCodeSearch": {
+      "POST": {}
+    },
+    "citiesJSON": {
+      "GET": {}
+    },
+    "postalCodeLookupJSON": {
+      "POST": {}
+    },
+    "srtm3": {
+      "POST": {}
+    },
+    "contains": {
+      "PUT": {}
+    },
+    "search": {
+      "GET": {}
+    },
+    "srtm1": {
+      "POST": {}
+    },
+    "ocean": {
+      "GET": {}
+    },
+    "countryCode": {
+      "PUT": {}
+    },
+    "get": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.geonames.org",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

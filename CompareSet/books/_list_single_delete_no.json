@@ -1,0 +1,28 @@
+{
+  "basePath": "/books/v1/volumes",
+  "paths": {
+    "/volumes": {
+      "GET": {}
+    },
+    "//www.googleapis.com/books/v1/volumes": {
+      "GET": {}
+    },
+    "/mylibrary/bookshelves": {
+      "GET": {}
+    },
+    "//www.googleapis.com/books/v1/users": {
+      "GET": {}
+    },
+    "//www.googleapis.com/books/v1/mylibrary/bookshelves": {
+      "POST": {},
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

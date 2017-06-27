@@ -1,0 +1,239 @@
+{
+  "paths": {
+    "/{user_i": {
+      "GET": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/{user_id}": {
+      "DELETE": {},
+      "GET": {},
+      "Get": {},
+      "PATCH": {},
+      "PUT": {}
+    },
+    "/vimeo_oauth1": {
+      "POST": {}
+    },
+    "/{category}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/api.vimeo.co": {
+      "GET": {}
+    },
+    "/channels": {
+      "POST": {},
+      "GET": {}
+    },
+    "/comments": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{genre_id}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/{background_id}": {
+      "PATCH": {}
+    },
+    "/{user_id": {
+      "DELETE": {}
+    },
+    "/{follow_user_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/{channel_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {},
+      "PUT": {}
+    },
+    "/{poster": {
+      "POST": {}
+    },
+    "/promotions": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/{ondemand_": {
+      "GET": {}
+    },
+    "/{ticket}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/backgroun": {
+      "DELETE": {}
+    },
+    "/api.vim": {
+      "GET": {}
+    },
+    "/api.vimeo": {
+      "GET": {}
+    },
+    "/credits": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{group_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/{country": {
+      "GET": {}
+    },
+    "/{video_": {
+      "GET": {}
+    },
+    "/api.vimeo.com": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/presets": {
+      "GET": {}
+    },
+    "/watchlater": {
+      "GET": {}
+    },
+    "/{ondemand_id}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/api.vimeo.c": {
+      "PATCH": {}
+    },
+    "/[video_id]": {
+      "delete": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/{ondemand": {
+      "GET": {}
+    },
+    "/{picture_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/{preset_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {},
+      "PUT": {}
+    },
+    "/followin": {
+      "POST": {}
+    },
+    "/{credit_id}": {
+      "GET": {}
+    },
+    "/{domain}": {
+      "DELETE": {},
+      "PUT": {}
+    },
+    "/seasons": {
+      "GET": {}
+    },
+    "/categories": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/{portfolio_id}": {
+      "GET": {}
+    },
+    "/{texttrack_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/portfolios": {
+      "GET": {}
+    },
+    "/{portraitset_id}": {
+      "DELETE": {}
+    },
+    "/following": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{country}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/regions": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/followers": {
+      "GET": {}
+    },
+    "/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/replies": {
+      "POST": {}
+    },
+    "/texttracks": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{album_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/pictures": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{poster_id}": {
+      "POST": {}
+    },
+    "/purchases": {
+      "GET": {}
+    },
+    "/access_token": {
+      "POST": {}
+    },
+    "/{comment_": {
+      "GET": {}
+    },
+    "/backgrounds": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{comment_id}": {
+      "DELETE": {},
+      "post": {},
+      "GET": {},
+      "delete": {},
+      "PATCH": {}
+    },
+    "/api.vimeo.": {
+      "GET": {}
+    },
+    "/appearances": {
+      "GET": {}
+    },
+    "/domains": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

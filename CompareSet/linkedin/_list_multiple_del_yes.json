@@ -1,0 +1,84 @@
+{
+  "basePath": "/profile/view",
+  "paths": {
+    "/Freight": {
+      "DEL": {}
+    },
+    "/callback#linkedin": {
+      "post": {},
+      "POST": {}
+    },
+    "/LISDK.h>": {
+      "GET": {}
+    },
+    "/updates": {
+      "POST": {}
+    },
+    "/comment>": {
+      "POST": {}
+    },
+    "/linkedin": {
+      "DEL": {},
+      "del": {}
+    },
+    "/companies": {
+      "GET": {},
+      "Get": {}
+    },
+    "/{id}:(id,name,ticker,description)": {
+      "GET": {},
+      "Get": {}
+    },
+    "/developer.linkedin.com&title=LinkedIn%20Developer%20Network": {
+      "GET": {}
+    },
+    "/historical-status-update-statistics": {
+      "GET": {}
+    },
+    "/shares)": {
+      "POST": {}
+    },
+    "/is-company-share-enabled": {
+      "GET": {}
+    },
+    "/script>": {
+      "POST": {},
+      "Get": {},
+      "get": {}
+    },
+    "/accessToken": {
+      "POST": {}
+    },
+    "/~:(id,num-connections,picture-url)": {
+      "GET": {}
+    },
+    "/historical-follow-statistics": {
+      "GET": {}
+    },
+    "/company-statistics": {
+      "GET": {}
+    },
+    "/x-www-form-urlenc": {
+      "POST": {}
+    },
+    "/debug.keystore": {
+      "GET": {}
+    },
+    "/num-followers": {
+      "GET": {}
+    },
+    "/x-www-form-urlencod": {
+      "POST": {}
+    },
+    "/update-comment>": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.linkedin.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

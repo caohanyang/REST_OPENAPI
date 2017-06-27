@@ -1,0 +1,109 @@
+{
+  "paths": {
+    ".com/reduced_model.l3d\",": {
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "interpolationParam",
+            "description": "decimal Parameter for the interpolation algorithm. The interpolation types are explained below.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Mandatory/Optional:",
+            "description": "Optional: Optional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Path:",
+            "description": "root.animations or hotspots.animations",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Example:",
+            "description": "\"interpolationParam\": 1.0",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "_reduced.l3d\",": {
+      "PUT": {}
+    },
+    "http://yourlink.com/object.l3d\",": {
+      "GET": {}
+    },
+    "http://m.layar.com/open/<layername>": {
+      "GET": {},
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Example:",
+            "description": "layar://examplelayer",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Explanation:",
+            "description": "This intent should be used for linking to a layer from within the Layar app (actions, redirects, links within the webviews etc... inside a layer).\nNOTE: that on iphone and android (and only on these platforms), this also works from external applications but only if the Layar Browser is installed. We recommend to use the second form below if you are not sure on which platform the user is or whether the Layar Browser is installed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Supported",
+            "description": "Platform: All platforms",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Introduced",
+            "description": "API: v3.0",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "When",
+            "description": "to use: Link to a layer from another layer within Layar app.\nLink to a layer using an action within Layar app.\nOpening a layer by using intents in the web browser directly. (iphone only)\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://layarapi.example.net/mylayer/getpoi": {
+      "GET": {}
+    },
+    "http://devsupport.layar.com.": {
+      "GET": {}
+    },
+    "http:\\/\\/layar.com\\/company\\/contact\\/\",": {
+      "GET": {}
+    },
+    "http:\\/\\/custom.layar.nl\\/layarimage.jpeg": {
+      "GET": {}
+    },
+    "http://mylayer.com/account": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "example",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

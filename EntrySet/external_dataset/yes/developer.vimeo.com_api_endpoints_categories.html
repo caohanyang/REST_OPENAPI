@@ -1,0 +1,3799 @@
+<!DOCTYPE html>
+<!--     _
+ __   _|_|_ __ ___   ___  ___
+ \ \ / / | '_ ' _ \ / _ \/ _ \
+ \ V /| | | | | | |  __/ |_| |
+ \_/ |_|_| |_| |_|\___|\___/
+ you know, for videos
+-->
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=1024,maximum-scale=1.0" name="viewport"/>
+  <link href="//player.vimeo.com" rel="preconnect"/>
+  <link href="//i.vimeocdn.com" rel="preconnect"/>
+  <link href="//f.vimeocdn.com" rel="preconnect"/>
+  <meta content="19884028963" property="fb:app_id"/>
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"/>
+  <meta content="Join the web’s most supportive community of creators and get high-quality tools for hosting, sharing, and streaming videos in gorgeous HD with no ads." name="description"/>
+  <link href="/api/endpoints/categories" rel="canonical"/>
+  <link href="https://i.vimeocdn.com/favicon/main-touch_180" rel="apple-touch-icon-precomposed"/>
+  <link color="#17272e" href="https://f.vimeocdn.com/svg/legacy_view_support/iris_icon_v_64.svg" rel="mask-icon"/>
+  <link data-pause="https://i.vimeocdn.com/favicon/pause_32" data-play="https://i.vimeocdn.com/favicon/play_32" href="https://f.vimeocdn.com/images_v6/favicon.ico" rel="shortcut icon"/>
+  <meta content="https://i.vimeocdn.com/favicon/main-touch_144" name="msapplication-TileImage"/>
+  <meta content="#00adef" name="msapplication-TileColor"/>
+  <link href="/search/opensearch.xml" rel="search" title="Vimeo search" type="application/opensearchdescription+xml"/>
+  <link href="https://f.vimeocdn.com/logo.svg" rel="logo" type="image/svg"/>
+  <title>
+   Categories documentation on Vimeo Developer API
+  </title>
+  <link href="https://f.vimeocdn.com/styles/css_opt/global/icon_fonts.min.css?DEV" rel="stylesheet"/>
+  <link href="https://f.vimeocdn.com/styles/css_opt/global_developer_combined.min.css?6f0a5daa" rel="stylesheet"/>
+  <script>
+   var playerAssetUrls = {"js":"https:\/\/f.vimeocdn.com\/p\/2.58.1\/js\/player.js","moog":"https:\/\/f.vimeocdn.com\/p\/flash\/moogaloop\/6.4.5\/moogaloop.swf","chromeless_css":"https:\/\/f.vimeocdn.com\/p\/2.58.1\/css\/chromeless.css","chromeless_js":"https:\/\/f.vimeocdn.com\/p\/2.58.1\/js\/chromeless.js","moog_js":"https:\/\/f.vimeocdn.com\/p\/2.58.1\/js\/moogaloop.js","css":"https:\/\/f.vimeocdn.com\/p\/2.58.1\/css\/player.css","player_url":"player.vimeo.com"};
+
+  var _extend = function(){for(var r=arguments[0],n=1,e=arguments.length;e>n;n++){var t=arguments[n];for(var a in t)t.hasOwnProperty(a)&&(r[a]=t[a])}return r};
+
+   window = _extend(window, {"vimeo_esi":{"config":{"autocomplete_enabled":true,"onsite_referrer":false}},"global_notifications":[],"ablincoln_config":{"user":[],"tests":[],"disabled":true}});
+  </script>
+ </head>
+ <body class="apis" id="developer">
+  <div id="wrap">
+   <div class="VimeoBrand_ColorRibbon" id="ribbon">
+   </div>
+   <div id="main">
+    <div class="topnav_desktop">
+     <div class="topnav_desktop_wrapper">
+      <div class="logo">
+       <a href="/" title="Go home">
+        <img alt="Go home" height="29" src="https://f.vimeocdn.com/logo.svg?color=fff" width="100"/>
+        <span class="logo_extra">
+         developer();
+        </span>
+       </a>
+      </div>
+      <div class="topnav_menu">
+       <nav class="topnav_nav">
+        <ul class="topnav_menu_items">
+         <li class="subnav apis">
+          <a href="/api/start">
+           API
+          </a>
+         </li>
+         <li class="subnav player">
+          <a href="/player">
+           Player
+          </a>
+         </li>
+         <li class="subnav guidelines">
+          <a href="/guidelines">
+           Guidelines
+          </a>
+         </li>
+         <li class="subnav myapps">
+          <a href="/apps">
+           My Apps
+          </a>
+         </li>
+         <li class="subnav help">
+          <a href="/help">
+           Help
+          </a>
+         </li>
+         <li class="subnav jobs">
+          <a href="https://vimeo.com/jobs">
+           Jobs
+          </a>
+         </li>
+        </ul>
+       </nav>
+      </div>
+      <div class="topnav_mobile_section ">
+       <button class="topnav_mobile_button topnav_icon_mobile_x_b topnav_mobile_pull_right">
+       </button>
+      </div>
+     </div>
+     <div class="topnav_mobile_menu">
+      <nav class="topnav_mobile_nav">
+       <ul class="topnav_mobile_menu_items">
+        <li class="subnav apis">
+         <a href="/api/start">
+          API
+         </a>
+        </li>
+        <li class="subnav player">
+         <a href="/player">
+          Player
+         </a>
+        </li>
+        <li class="subnav guidelines">
+         <a href="/guidelines">
+          Guidelines
+         </a>
+        </li>
+       </ul>
+       <ul class="topnav_mobile_menu_items">
+        <li class="subnav help">
+         <a href="/help">
+          Help
+         </a>
+        </li>
+        <li class="subnav jobs">
+         <a href="https://vimeo.com/jobs">
+          Jobs
+         </a>
+        </li>
+        <li class="subnav myapps">
+         <a href="/apps">
+          My Apps
+         </a>
+        </li>
+       </ul>
+       <nav class="iris_rail_menu contextual_sidebar iris_rail_menu--accordion endpoint_sidebar" data-current-page="endpoints.categories">
+        <ul class="iris_rail_menu__list">
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="authentication">
+          <h3 id="group_authentication">
+           <a class="sidebar_parent_link" href="/api/authentication">
+            Authentication
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="getting-started">
+          <h3 id="group_getting-started">
+           <a class="sidebar_parent_link" href="/api/start">
+            Getting Started
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="common-formats">
+          <h3 id="group_common-formats">
+           <a class="sidebar_parent_link" href="/api/common-formats">
+            Common formats &amp; parameters
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="guidelines">
+          <h3 id="group_guidelines">
+           <a class="sidebar_parent_link" href="/guidelines">
+            Guidelines and best practices
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="libraries-and-sdks">
+          <h3 id="group_libraries-and-sdks">
+           <a class="sidebar_parent_link" href="/api/libraries">
+            Libraries &amp; SDKs
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="oembed">
+          <h3 id="group_oembed">
+           <a class="sidebar_parent_link" href="/apis/oembed">
+            Embed Videos with oEmbed
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="playground">
+          <h3 id="group_playground">
+           <a class="sidebar_parent_link" href="/api/playground">
+            Playground
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="upload-videos">
+          <h3 id="group_upload-videos">
+           <a class="sidebar_parent_link" href="/api/upload/videos">
+            Upload Videos
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="api-reference">
+          <h3 id="group_api-reference">
+           <a class="sidebar_parent_link" href="/api/endpoints">
+            API Reference
+           </a>
+          </h3>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/albums">
+           Albums
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#PUT/users/{user_id}/albums/{album_id}/videos/{video_id}">
+           Add a video to an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#POST/users/{user_id}/albums">
+           Create an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#DELETE/users/{user_id}/albums/{album_id}/videos/{video_id}">
+           Delete a video from an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#DELETE/users/{user_id}/albums/{album_id}">
+           Delete an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#PATCH/users/{user_id}/albums/{album_id}">
+           Edit an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#GET/users/{user_id}/albums/{album_id}/videos/{video_id}">
+           Get a video within an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#GET/users/{user_id}/albums">
+           Get all users' albums
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#GET/users/{user_id}/albums/{album_id}/videos">
+           Get all videos in an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#GET/users/{user_id}/albums/{album_id}">
+           Get an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#PUT/users/{user_id}/albums/{album_id}/videos">
+           Set multiple videos to an album
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/authenticationextras">
+           Authentication Extras
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#POST/oauth/authorize/vimeo_oauth1">
+           Convert OAuth 1 access tokens to OAuth 2 access tokens
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#POST/oauth/access_token">
+           Exchange an authorization code for an access token
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#POST/oauth/authorize/client">
+           OAuth client authorization
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#DELETE/tokens">
+           Revoke the current access token
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#GET/oauth/verify">
+           Verify an OAuth 2 token
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/categories">
+           Categories
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#PUT/videos/{video_id}/categories">
+           Categorize a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}/videos/{video_id}">
+           Check for a video in a category
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/users/{user_id}/categories/{category}">
+           Check if a user follows a category
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}">
+           Get a category
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories">
+           Get all categories
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/users/{user_id}/categories">
+           Get all categories a user follows
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/videos/{video_id}/categories">
+           Get all categories a video is in
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}/channels">
+           Get all channels for a category
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}/groups">
+           Get all groups for a category
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}/videos">
+           Get all videos in a category
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#PUT/users/{user_id}/categories/{category}">
+           Subscribe a user to a category
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#DELETE/users/{user_id}/categories/{category}">
+           Unsubscribe a user from a category
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/channels">
+           Channels
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#PUT/channels/{channel_id}/videos/{video_id}">
+           Add a video to a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/users/{user_id}/channels/{channel_id}">
+           Check if a user follows a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#POST/channels">
+           Create a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#DELETE/channels/{channel_id}">
+           Delete a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#DELETE/channels/{channel_id}/videos/{video_id}">
+           Delete a video from a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#PATCH/channels/{channel_id}">
+           Edit a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels/{channel_id}">
+           Get a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels/{channel_id}/videos/{video_id}">
+           Get a video in a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels">
+           Get all channels
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/users/{user_id}/channels">
+           Get all channels a user is subscribed to
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels/{channel_id}/users">
+           Get all followers of a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels/{channel_id}/videos">
+           Get all videos in a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#PUT/users/{user_id}/channels/{channel_id}">
+           Subscribe a user to a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#DELETE/users/{user_id}/channels/{channel_id}">
+           Unsubscribe a user from a channel
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/groups">
+           Groups
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#PUT/groups/{group_id}/videos/{video_id}">
+           Add a video to a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/users/{user_id}/groups/{group_id}">
+           Check if user has joined a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#POST/groups">
+           Create a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#DELETE/groups/{group_id}">
+           Delete a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#DELETE/groups/{group_id}/videos/{video_id}">
+           Delete a video from a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups/{group_id}">
+           Get a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups/{group_id}/videos/{video_id}">
+           Get a video in a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups">
+           Get all groups
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/users/{user_id}/groups">
+           Get all groups a user has joined
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups/{group_id}/users">
+           Get all members of a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups/{group_id}/videos">
+           Get all videos in a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#PUT/users/{user_id}/groups/{group_id}">
+           Join a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#DELETE/users/{user_id}/groups/{group_id}">
+           Leave a group
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/likes">
+           Likes
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#GET/users/{user_id}/likes/{video_id}">
+           Check if a user has liked a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#GET/videos/{video_id}/likes">
+           Get all users who have liked this video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#GET/ondemand/pages/{ondemand_id}/likes">
+           Get all users who liked videos in an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#GET/users/{user_id}/likes">
+           Get all videos a user has liked
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#PUT/users/{user_id}/likes/{video_id}">
+           Like a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#DELETE/users/{user_id}/likes/{video_id}">
+           Unlike a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/ondemand">
+           On Demand
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PUT/ondemand/pages/{ondemand_id}/genres/{genre_id}">
+           Add a genre to an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#POST/ondemand/pages/{ondemand_id}/pictures">
+           Add a poster to an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#POST/ondemand/pages/{ondemand_id}/promotions">
+           Add a promotion to an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PUT/ondemand/pages/{ondemand_id}/regions/{country}">
+           Add a region to an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PUT/ondemand/pages/{ondemand_id}/videos/{video_id}">
+           Add a video to an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/users/{user_id}/ondemand/purchases">
+           Check if you have purchased an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#POST/ondemand/pages/{ondemand_id}/backgrounds">
+           Create a new background for an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#POST/users/{user_id}/ondemand/pages">
+           Create an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/genres/{genre_id}">
+           Delete a genre from an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/regions">
+           Delete a list of regions from an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/regions/{country}">
+           Delete a region from an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/videos/{video_id}">
+           Delete a video from an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}">
+           Delete an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/backgrounds/{background_id}">
+           Delete an On Demand pages' background
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/promotions/{promotion_id}">
+           Delete an On Demand pages' promotion
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PATCH/ondemand/pages/{ondemand_id}">
+           Edit an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PATCH/ondemand/pages/{ondemand_id}/backgrounds/{background_id}">
+           Edit an On Demand pages' background
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PATCH/ondemand/pages/{ondemand_id}/pictures/{poster_id}">
+           Edit an On Demand pages' poster
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/seasons/{season_id}">
+           Get a season of an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/users/{user_id}/ondemand/pages">
+           Get a users' On Demand pages
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/videos/{video_id}">
+           Get a video in an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/genres">
+           Get all On Demand genres
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/genres/{genre_id}/pages">
+           Get all On Demand pages within a genre
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/regions">
+           Get all On Demand regions
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes">
+           Get all codes for an On Demand pages' promotion
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/pictures">
+           Get all posters for an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos">
+           Get all videos in a season of an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/videos">
+           Get all videos in an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/genres/{genre_id}">
+           Get an On Demand genre
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}">
+           Get an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/backgrounds/{background_id}">
+           Get an On Demand page background
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/genres/{genre_id}/pages/{ondemand_id}">
+           Get an On Demand page in a genre
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/backgrounds">
+           Get an On Demand pages' backgrounds
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/genres/{genre_id}">
+           Get an On Demand pages' genre
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/pictures/{poster_id}">
+           Get an On Demand pages' poster
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/promotions/{promotion_id}">
+           Get an On Demand pages' promotion
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/promotions">
+           Get an On Demand pages' promotions
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/regions/{country}">
+           Get an On Demand pages' region
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/regions/{country}">
+           Get an On Demand region
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/genres">
+           Get genres of an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/regions">
+           Get regions for an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/seasons">
+           Get seasons in an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/me/ondemand/purchases">
+           Get users' On Demand purchases and rentals
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PUT/ondemand/pages/{ondemand_id}/regions">
+           Set a list of regions to an On Demand page
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/portfolios">
+           Portfolios
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/portfolios#GET/users/{user_id}/portfolios/{portfolio_id}">
+           Get a users' portfolio
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/portfolios#GET/users/{user_id}/portfolios">
+           Get all portfolios for a user
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/tags">
+           Tags
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#PUT/videos/{video_id}/tags/{word}">
+           Add a tag to a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#PUT/videos/{video_id}/tags">
+           Assign many tags to a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#GET/videos/{video_id}/tags/{word}">
+           Check if a tag has been added to a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#DELETE/videos/{video_id}/tags/{word}">
+           Delete a tag from a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#GET/tags/{word}">
+           Get a tag
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#GET/tags/{word}/videos">
+           Get all videos tagged with a specific word
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#GET/videos/{video_id}/tags">
+           List a videos' tags
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/users">
+           Users
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PUT/users/{user_id}/watchlater/{video_id}">
+           Add a video to a users' Watch Later queue
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PUT/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}">
+           Add a video to a users' portfolio
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/watchlater/{video_id}">
+           Check if a user has a video in their Watch Later queue
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/following/{follow_user_id}">
+           Check if a user is following another user
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/tickets/{ticket}">
+           Complete a users' streaming upload
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/pictures/{portraitset_id}">
+           Delete a users' picture
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/watchlater/{video_id}">
+           Delete a video from a users' Watch Later queue
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}">
+           Delete a video from a users' portfolio
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PATCH/users/{user_id}">
+           Edit a user
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PATCH/users/{user_id}/presets/{preset_id}">
+           Edit a users' embed preset
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#POST/users/{user_id}/following">
+           Follow a list of users
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PUT/users/{user_id}/following/{follow_user_id}">
+           Follow a user
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}">
+           Get a user
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/presets/{preset_id}">
+           Get a users' embed preset
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/tickets/{ticket}">
+           Get a users' upload ticket
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}">
+           Get a video within a users' portfolio
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/presets">
+           Get all embed presets a user has
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/following">
+           Get all users that a user is following
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/followers">
+           Get all users that follow a user
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/appearances">
+           Get all videos a user appears in
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/watchlater">
+           Get all videos in a users' Watch Later queue
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/feed">
+           Get all videos in a users' feed
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/presets/{preset_id}/videos">
+           Get all videos with a users' embed preset
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/portfolios/{portfolio_id}/videos">
+           Get all videos within a users' portfolio
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users">
+           Search for users
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/following/{follow_user_id}">
+           Unfollow a user
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item">
+          <a class="sidebar_child_link" href="/api/endpoints/videos">
+           Videos
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/comments">
+           Add a comment to a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/credits">
+           Add a credit to a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/comments/{comment_id}/replies">
+           Add a reply to a comment on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/texttracks">
+           Add a text track to a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/privacy/users">
+           Allow a list of users to view a private video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/privacy/users/{user_id}">
+           Allow a user to view a private video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/privacy/domains/{domain}">
+           Allow embedding of a video on a domain
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/presets/{preset_id}">
+           Assign an embed preset to a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/users/{user_id}/videos/{video_id}">
+           Check if a user owns a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/pictures">
+           Create a new video thumbnail
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/comments/{comment_id}">
+           Delete a comment from a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/credits/{credit_id}">
+           Delete a credit on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/me/watched/videos">
+           Delete a users' entire watch history
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}">
+           Delete a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/me/watched/videos/{video_id}">
+           Delete a video from your watch history
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/texttracks/{texttrack_id}">
+           Delete a video text track
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/pictures/{picture_id}">
+           Delete a video thumbnail
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/privacy/users/{user_id}">
+           Disallow a user from viewing a private video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/privacy/domains/{domain}">
+           Disallow embedding of a video on a domain
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}/comments/{comment_id}">
+           Edit a comment on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}/credits/{credit_id}">
+           Edit a credit on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}">
+           Edit a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}/texttracks/{texttrack_id}">
+           Edit a video text track
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}/pictures/{picture_id}">
+           Edit a video thumbnail
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/comments/{comment_id}">
+           Get a comment on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/credits/{credit_id}">
+           Get a credit on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}">
+           Get a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/texttracks/{texttrack_id}">
+           Get a video text track
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/pictures/{picture_id}">
+           Get a video thumbnail
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/comments">
+           Get all comments on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/privacy/domains">
+           Get all domains a video can be embedded on
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/presets/{preset_id}">
+           Get all embed presets for a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/comments/{comment_id}/replies">
+           Get all replies to a comment on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/texttracks">
+           Get all the text tracks for a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/pictures">
+           Get all thumbnails on a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/credits">
+           Get all users credited in a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/privacy/users">
+           Get all users that can view a private video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/me/watched/videos">
+           Get all videos a user has watched
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/users/{user_id}/videos">
+           Get all videos uploaded by a user
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/files">
+           Replace a video source file
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos">
+           Search for videos
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/presets/{preset_id}">
+           Unassign an embed preset from a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/users/{user_id}/videos">
+           Upload a video
+          </a>
+         </li>
+         <li class="iris_rail_menu__list-item-child item hidden">
+          <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/videos">
+           View related videos to a video
+          </a>
+         </li>
+        </ul>
+       </nav>
+      </nav>
+     </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="dev_container clearfix">
+     <div class="iris_p_rail iris_divider-top--p">
+      <div class="rail_container api_rail_container sidenav">
+       <div class="iris_p_rail__rail iris_p_rail__rail-30">
+        <div class="iris_span_xlg-30--2of2">
+         <nav class="iris_rail_menu contextual_sidebar" data-current-page="endpoints.categories">
+          <ul class="iris_rail_menu__list">
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="authentication">
+            <h3 id="group_authentication">
+             <a class="sidebar_parent_link" href="/api/authentication">
+              Authentication
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="getting-started">
+            <h3 id="group_getting-started">
+             <a class="sidebar_parent_link" href="/api/start">
+              Getting Started
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="common-formats">
+            <h3 id="group_common-formats">
+             <a class="sidebar_parent_link" href="/api/common-formats">
+              Common formats &amp; parameters
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="guidelines">
+            <h3 id="group_guidelines">
+             <a class="sidebar_parent_link" href="/guidelines">
+              Guidelines and best practices
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="libraries-and-sdks">
+            <h3 id="group_libraries-and-sdks">
+             <a class="sidebar_parent_link" href="/api/libraries">
+              Libraries &amp; SDKs
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="oembed">
+            <h3 id="group_oembed">
+             <a class="sidebar_parent_link" href="/apis/oembed">
+              Embed Videos with oEmbed
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="playground">
+            <h3 id="group_playground">
+             <a class="sidebar_parent_link" href="/api/playground">
+              Playground
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="upload-videos">
+            <h3 id="group_upload-videos">
+             <a class="sidebar_parent_link" href="/api/upload/videos">
+              Upload Videos
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-parent sidebar_active_parent_link" data-page="api-reference">
+            <h3 id="group_api-reference">
+             <a class="sidebar_parent_link" href="/api/endpoints">
+              API Reference
+             </a>
+            </h3>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/albums">
+             Albums
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#PUT/users/{user_id}/albums/{album_id}/videos/{video_id}">
+             Add a video to an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#POST/users/{user_id}/albums">
+             Create an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#DELETE/users/{user_id}/albums/{album_id}/videos/{video_id}">
+             Delete a video from an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#DELETE/users/{user_id}/albums/{album_id}">
+             Delete an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#PATCH/users/{user_id}/albums/{album_id}">
+             Edit an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#GET/users/{user_id}/albums/{album_id}/videos/{video_id}">
+             Get a video within an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#GET/users/{user_id}/albums">
+             Get all users' albums
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#GET/users/{user_id}/albums/{album_id}/videos">
+             Get all videos in an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#GET/users/{user_id}/albums/{album_id}">
+             Get an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/albums#PUT/users/{user_id}/albums/{album_id}/videos">
+             Set multiple videos to an album
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/authenticationextras">
+             Authentication Extras
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#POST/oauth/authorize/vimeo_oauth1">
+             Convert OAuth 1 access tokens to OAuth 2 access tokens
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#POST/oauth/access_token">
+             Exchange an authorization code for an access token
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#POST/oauth/authorize/client">
+             OAuth client authorization
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#DELETE/tokens">
+             Revoke the current access token
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/authenticationextras#GET/oauth/verify">
+             Verify an OAuth 2 token
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/categories">
+             Categories
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#PUT/videos/{video_id}/categories">
+             Categorize a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}/videos/{video_id}">
+             Check for a video in a category
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/users/{user_id}/categories/{category}">
+             Check if a user follows a category
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}">
+             Get a category
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories">
+             Get all categories
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/users/{user_id}/categories">
+             Get all categories a user follows
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/videos/{video_id}/categories">
+             Get all categories a video is in
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}/channels">
+             Get all channels for a category
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}/groups">
+             Get all groups for a category
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#GET/categories/{category}/videos">
+             Get all videos in a category
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#PUT/users/{user_id}/categories/{category}">
+             Subscribe a user to a category
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/categories#DELETE/users/{user_id}/categories/{category}">
+             Unsubscribe a user from a category
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/channels">
+             Channels
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#PUT/channels/{channel_id}/videos/{video_id}">
+             Add a video to a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/users/{user_id}/channels/{channel_id}">
+             Check if a user follows a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#POST/channels">
+             Create a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#DELETE/channels/{channel_id}">
+             Delete a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#DELETE/channels/{channel_id}/videos/{video_id}">
+             Delete a video from a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#PATCH/channels/{channel_id}">
+             Edit a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels/{channel_id}">
+             Get a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels/{channel_id}/videos/{video_id}">
+             Get a video in a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels">
+             Get all channels
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/users/{user_id}/channels">
+             Get all channels a user is subscribed to
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels/{channel_id}/users">
+             Get all followers of a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#GET/channels/{channel_id}/videos">
+             Get all videos in a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#PUT/users/{user_id}/channels/{channel_id}">
+             Subscribe a user to a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/channels#DELETE/users/{user_id}/channels/{channel_id}">
+             Unsubscribe a user from a channel
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/groups">
+             Groups
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#PUT/groups/{group_id}/videos/{video_id}">
+             Add a video to a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/users/{user_id}/groups/{group_id}">
+             Check if user has joined a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#POST/groups">
+             Create a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#DELETE/groups/{group_id}">
+             Delete a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#DELETE/groups/{group_id}/videos/{video_id}">
+             Delete a video from a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups/{group_id}">
+             Get a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups/{group_id}/videos/{video_id}">
+             Get a video in a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups">
+             Get all groups
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/users/{user_id}/groups">
+             Get all groups a user has joined
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups/{group_id}/users">
+             Get all members of a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#GET/groups/{group_id}/videos">
+             Get all videos in a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#PUT/users/{user_id}/groups/{group_id}">
+             Join a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/groups#DELETE/users/{user_id}/groups/{group_id}">
+             Leave a group
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/likes">
+             Likes
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#GET/users/{user_id}/likes/{video_id}">
+             Check if a user has liked a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#GET/videos/{video_id}/likes">
+             Get all users who have liked this video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#GET/ondemand/pages/{ondemand_id}/likes">
+             Get all users who liked videos in an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#GET/users/{user_id}/likes">
+             Get all videos a user has liked
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#PUT/users/{user_id}/likes/{video_id}">
+             Like a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/likes#DELETE/users/{user_id}/likes/{video_id}">
+             Unlike a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/ondemand">
+             On Demand
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PUT/ondemand/pages/{ondemand_id}/genres/{genre_id}">
+             Add a genre to an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#POST/ondemand/pages/{ondemand_id}/pictures">
+             Add a poster to an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#POST/ondemand/pages/{ondemand_id}/promotions">
+             Add a promotion to an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PUT/ondemand/pages/{ondemand_id}/regions/{country}">
+             Add a region to an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PUT/ondemand/pages/{ondemand_id}/videos/{video_id}">
+             Add a video to an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/users/{user_id}/ondemand/purchases">
+             Check if you have purchased an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#POST/ondemand/pages/{ondemand_id}/backgrounds">
+             Create a new background for an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#POST/users/{user_id}/ondemand/pages">
+             Create an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/genres/{genre_id}">
+             Delete a genre from an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/regions">
+             Delete a list of regions from an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/regions/{country}">
+             Delete a region from an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/videos/{video_id}">
+             Delete a video from an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}">
+             Delete an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/backgrounds/{background_id}">
+             Delete an On Demand pages' background
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#DELETE/ondemand/pages/{ondemand_id}/promotions/{promotion_id}">
+             Delete an On Demand pages' promotion
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PATCH/ondemand/pages/{ondemand_id}">
+             Edit an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PATCH/ondemand/pages/{ondemand_id}/backgrounds/{background_id}">
+             Edit an On Demand pages' background
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PATCH/ondemand/pages/{ondemand_id}/pictures/{poster_id}">
+             Edit an On Demand pages' poster
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/seasons/{season_id}">
+             Get a season of an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/users/{user_id}/ondemand/pages">
+             Get a users' On Demand pages
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/videos/{video_id}">
+             Get a video in an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/genres">
+             Get all On Demand genres
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/genres/{genre_id}/pages">
+             Get all On Demand pages within a genre
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/regions">
+             Get all On Demand regions
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes">
+             Get all codes for an On Demand pages' promotion
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/pictures">
+             Get all posters for an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos">
+             Get all videos in a season of an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/videos">
+             Get all videos in an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/genres/{genre_id}">
+             Get an On Demand genre
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}">
+             Get an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/backgrounds/{background_id}">
+             Get an On Demand page background
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/genres/{genre_id}/pages/{ondemand_id}">
+             Get an On Demand page in a genre
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/backgrounds">
+             Get an On Demand pages' backgrounds
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/genres/{genre_id}">
+             Get an On Demand pages' genre
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/pictures/{poster_id}">
+             Get an On Demand pages' poster
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/promotions/{promotion_id}">
+             Get an On Demand pages' promotion
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/promotions">
+             Get an On Demand pages' promotions
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/regions/{country}">
+             Get an On Demand pages' region
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/regions/{country}">
+             Get an On Demand region
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/genres">
+             Get genres of an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/regions">
+             Get regions for an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/ondemand/pages/{ondemand_id}/seasons">
+             Get seasons in an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#GET/me/ondemand/purchases">
+             Get users' On Demand purchases and rentals
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/ondemand#PUT/ondemand/pages/{ondemand_id}/regions">
+             Set a list of regions to an On Demand page
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/portfolios">
+             Portfolios
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/portfolios#GET/users/{user_id}/portfolios/{portfolio_id}">
+             Get a users' portfolio
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/portfolios#GET/users/{user_id}/portfolios">
+             Get all portfolios for a user
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/tags">
+             Tags
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#PUT/videos/{video_id}/tags/{word}">
+             Add a tag to a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#PUT/videos/{video_id}/tags">
+             Assign many tags to a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#GET/videos/{video_id}/tags/{word}">
+             Check if a tag has been added to a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#DELETE/videos/{video_id}/tags/{word}">
+             Delete a tag from a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#GET/tags/{word}">
+             Get a tag
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#GET/tags/{word}/videos">
+             Get all videos tagged with a specific word
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/tags#GET/videos/{video_id}/tags">
+             List a videos' tags
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/users">
+             Users
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PUT/users/{user_id}/watchlater/{video_id}">
+             Add a video to a users' Watch Later queue
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PUT/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}">
+             Add a video to a users' portfolio
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/watchlater/{video_id}">
+             Check if a user has a video in their Watch Later queue
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/following/{follow_user_id}">
+             Check if a user is following another user
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/tickets/{ticket}">
+             Complete a users' streaming upload
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/pictures/{portraitset_id}">
+             Delete a users' picture
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/watchlater/{video_id}">
+             Delete a video from a users' Watch Later queue
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}">
+             Delete a video from a users' portfolio
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PATCH/users/{user_id}">
+             Edit a user
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PATCH/users/{user_id}/presets/{preset_id}">
+             Edit a users' embed preset
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#POST/users/{user_id}/following">
+             Follow a list of users
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#PUT/users/{user_id}/following/{follow_user_id}">
+             Follow a user
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}">
+             Get a user
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/presets/{preset_id}">
+             Get a users' embed preset
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/tickets/{ticket}">
+             Get a users' upload ticket
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}">
+             Get a video within a users' portfolio
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/presets">
+             Get all embed presets a user has
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/following">
+             Get all users that a user is following
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/followers">
+             Get all users that follow a user
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/appearances">
+             Get all videos a user appears in
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/watchlater">
+             Get all videos in a users' Watch Later queue
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/feed">
+             Get all videos in a users' feed
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/presets/{preset_id}/videos">
+             Get all videos with a users' embed preset
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users/{user_id}/portfolios/{portfolio_id}/videos">
+             Get all videos within a users' portfolio
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#GET/users">
+             Search for users
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/users#DELETE/users/{user_id}/following/{follow_user_id}">
+             Unfollow a user
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item">
+            <a class="sidebar_child_link" href="/api/endpoints/videos">
+             Videos
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/comments">
+             Add a comment to a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/credits">
+             Add a credit to a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/comments/{comment_id}/replies">
+             Add a reply to a comment on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/texttracks">
+             Add a text track to a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/privacy/users">
+             Allow a list of users to view a private video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/privacy/users/{user_id}">
+             Allow a user to view a private video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/privacy/domains/{domain}">
+             Allow embedding of a video on a domain
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/presets/{preset_id}">
+             Assign an embed preset to a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/users/{user_id}/videos/{video_id}">
+             Check if a user owns a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/videos/{video_id}/pictures">
+             Create a new video thumbnail
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/comments/{comment_id}">
+             Delete a comment from a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/credits/{credit_id}">
+             Delete a credit on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/me/watched/videos">
+             Delete a users' entire watch history
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}">
+             Delete a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/me/watched/videos/{video_id}">
+             Delete a video from your watch history
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/texttracks/{texttrack_id}">
+             Delete a video text track
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/pictures/{picture_id}">
+             Delete a video thumbnail
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/privacy/users/{user_id}">
+             Disallow a user from viewing a private video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/privacy/domains/{domain}">
+             Disallow embedding of a video on a domain
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}/comments/{comment_id}">
+             Edit a comment on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}/credits/{credit_id}">
+             Edit a credit on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}">
+             Edit a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}/texttracks/{texttrack_id}">
+             Edit a video text track
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PATCH/videos/{video_id}/pictures/{picture_id}">
+             Edit a video thumbnail
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/comments/{comment_id}">
+             Get a comment on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/credits/{credit_id}">
+             Get a credit on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}">
+             Get a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/texttracks/{texttrack_id}">
+             Get a video text track
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/pictures/{picture_id}">
+             Get a video thumbnail
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/comments">
+             Get all comments on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/privacy/domains">
+             Get all domains a video can be embedded on
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/presets/{preset_id}">
+             Get all embed presets for a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/comments/{comment_id}/replies">
+             Get all replies to a comment on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/texttracks">
+             Get all the text tracks for a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/pictures">
+             Get all thumbnails on a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/credits">
+             Get all users credited in a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/privacy/users">
+             Get all users that can view a private video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/me/watched/videos">
+             Get all videos a user has watched
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/users/{user_id}/videos">
+             Get all videos uploaded by a user
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#PUT/videos/{video_id}/files">
+             Replace a video source file
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos">
+             Search for videos
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#DELETE/videos/{video_id}/presets/{preset_id}">
+             Unassign an embed preset from a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#POST/users/{user_id}/videos">
+             Upload a video
+            </a>
+           </li>
+           <li class="iris_rail_menu__list-item-child item hidden">
+            <a class="sidebar_child_contextual_link" href="/api/endpoints/videos#GET/videos/{video_id}/videos">
+             View related videos to a video
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </div>
+       </div>
+      </div>
+      <div class="iris_p_rail__main iris_p_rail__main-30">
+       <div class="iris_span_xlg-20--2of2 iris_span_md-20--2of2">
+        <header id="page_header">
+         <h2>
+          <a href="/">
+           Developer
+          </a>
+          /
+          <a href="/api/start">
+           API
+          </a>
+          /
+          <a href="/api/endpoints">
+           Endpoints
+          </a>
+         </h2>
+         <h1>
+          api.vimeo.com/categories
+         </h1>
+        </header>
+        <div class="dev_body condensed">
+         <h2 data-no-waypoint="true" id="">
+          Categories
+         </h2>
+         <section class="method_group js-method_group" rel="PUT/videos/{video_id}/categories">
+          <div id="PUT/videos/{video_id}/categories">
+           <p class="method_descrip txt_xlg">
+            Categorize a video
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              PUT
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /videos/{video_id}/categories
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/videos/{video_id}/categories">
+              Playground
+             </a>
+            </blockquote>
+            <div class="scope">
+             This method requires a token with the
+             <strong>
+              "edit"
+             </strong>
+             scope.
+            </div>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                201 Created
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the clip cannot be found.
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the category cannot be found.
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                403 Forbidden
+               </td>
+               <td class="reg end">
+                <p>
+                 If you are attempting to modify an clip you do not own.
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/categories/{category}/videos/{video_id}">
+          <div id="GET/categories/{category}/videos/{video_id}">
+           <p class="method_descrip txt_xlg">
+            Check for a video in a category
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /categories/{category}/videos/{video_id}
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/categories/{category}/videos/{video_id}">
+              Playground
+             </a>
+            </blockquote>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                200 OK
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the category cannot be found.
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the video cannot be found in the category.
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/users/{user_id}/categories/{category}">
+          <div id="GET/users/{user_id}/categories/{category}">
+           <p class="method_descrip txt_xlg">
+            Check if a user follows a category
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /me/categories/{category}
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/me/categories/{category}">
+              Playground
+             </a>
+            </blockquote>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /users/{user_id}/categories/{category}
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/users/{user_id}/categories/{category}">
+              Playground
+             </a>
+            </blockquote>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                204 No Content
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/categories/{category}">
+          <div id="GET/categories/{category}">
+           <p class="method_descrip txt_xlg">
+            Get a category
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /categories/{category}
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/categories/{category}">
+              Playground
+             </a>
+            </blockquote>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                200 OK
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the category cannot be found.
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/categories">
+          <div id="GET/categories">
+           <p class="method_descrip txt_xlg">
+            Get all categories
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /categories
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/categories">
+              Playground
+             </a>
+            </blockquote>
+            <table class="params">
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Required
+               </th>
+               <th>
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                direction
+               </td>
+               <td class="param">
+                string
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 The direction that the results are sorted.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                page
+               </td>
+               <td class="param">
+                integer
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 The page number to show.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                per_page
+               </td>
+               <td class="param">
+                integer
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Number of items to show on each page. Max 100.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                sort
+               </td>
+               <td class="param">
+                string
+                <ul class="bullet_list">
+                 <li>
+                  last_video_featured_time
+                 </li>
+                 <li>
+                  name
+                 </li>
+                </ul>
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Technique used to sort the results.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                200 OK
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/users/{user_id}/categories">
+          <div id="GET/users/{user_id}/categories">
+           <p class="method_descrip txt_xlg">
+            Get all categories a user follows
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /me/categories
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/me/categories">
+              Playground
+             </a>
+            </blockquote>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /users/{user_id}/categories
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/users/{user_id}/categories">
+              Playground
+             </a>
+            </blockquote>
+            <table class="params">
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Required
+               </th>
+               <th>
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                direction
+               </td>
+               <td class="param">
+                string
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 The direction that the results are sorted.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                page
+               </td>
+               <td class="param">
+                integer
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 The page number to show.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                per_page
+               </td>
+               <td class="param">
+                integer
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Number of items to show on each page. Max 100.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                sort
+               </td>
+               <td class="param">
+                string
+                <ul class="bullet_list">
+                 <li>
+                  alphabetical
+                 </li>
+                 <li>
+                  date
+                 </li>
+                 <li>
+                  name
+                 </li>
+                </ul>
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Technique used to sort the results.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                200 OK
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                403 Forbidden
+               </td>
+               <td class="reg end">
+                <p>
+                 When trying to view another user.
+                </p>
+                <p<strong>
+                 Error Code: 3200
+                 <p>
+                 </p>
+                </p<strong>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/videos/{video_id}/categories">
+          <div id="GET/videos/{video_id}/categories">
+           <p class="method_descrip txt_xlg">
+            Get all categories a video is in
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /videos/{video_id}/categories
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/videos/{video_id}/categories">
+              Playground
+             </a>
+            </blockquote>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                200 OK
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the video cannot be found.
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/categories/{category}/channels">
+          <div id="GET/categories/{category}/channels">
+           <p class="method_descrip txt_xlg">
+            Get all channels for a category
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /categories/{category}/channels
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/categories/{category}/channels">
+              Playground
+             </a>
+            </blockquote>
+            <table class="params">
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Required
+               </th>
+               <th>
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                direction
+               </td>
+               <td class="param">
+                string
+                <ul class="bullet_list">
+                 <li>
+                  asc
+                 </li>
+                 <li>
+                  desc
+                 </li>
+                </ul>
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 The direction that the results are sorted.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                page
+               </td>
+               <td class="param">
+                integer
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 The page number to show.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                per_page
+               </td>
+               <td class="param">
+                integer
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Number of items to show on each page. Max 100.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                query
+               </td>
+               <td class="param">
+                string
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Search query.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                sort
+               </td>
+               <td class="param">
+                string
+                <ul class="bullet_list">
+                 <li>
+                  alphabetical
+                 </li>
+                 <li>
+                  date
+                 </li>
+                 <li>
+                  followers
+                 </li>
+                 <li>
+                  videos
+                 </li>
+                </ul>
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Technique used to sort the results.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                200 OK
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the category cannot be found.
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/categories/{category}/groups">
+          <div id="GET/categories/{category}/groups">
+           <p class="method_descrip txt_xlg">
+            Get all groups for a category
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /categories/{category}/groups
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/categories/{category}/groups">
+              Playground
+             </a>
+            </blockquote>
+            <table class="params">
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Required
+               </th>
+               <th>
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                direction
+               </td>
+               <td class="param">
+                string
+                <ul class="bullet_list">
+                 <li>
+                  asc
+                 </li>
+                 <li>
+                  desc
+                 </li>
+                </ul>
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 The direction that the results are sorted.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                page
+               </td>
+               <td class="param">
+                integer
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 The page number to show.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                per_page
+               </td>
+               <td class="param">
+                integer
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Number of items to show on each page. Max 100.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                query
+               </td>
+               <td class="param">
+                string
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Search query.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                sort
+               </td>
+               <td class="param">
+                string
+                <ul class="bullet_list">
+                 <li>
+                  alphabetical
+                 </li>
+                 <li>
+                  date
+                 </li>
+                 <li>
+                  members
+                 </li>
+                 <li>
+                  videos
+                 </li>
+                </ul>
+               </td>
+               <td class="reg">
+                No
+               </td>
+               <td>
+                <p>
+                </p>
+                <p>
+                 Technique used to sort the results.
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                200 OK
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the category cannot be found.
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="GET/categories/{category}/videos">
+          <div id="GET/categories/{category}/videos">
+           <p class="method_descrip txt_xlg">
+            Get all videos in a category
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              GET
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /categories/{category}/videos
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/categories/{category}/videos">
+              Playground
+             </a>
+            </blockquote>
+            <table class="params">
+             <thead>
+              <tr>
+               <th>
+                Name
+               </th>
+               <th>
+                Type
+               </th>
+               <th>
+                Required
+               </th>
+               <th>
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+             </tbody>
+            </table>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                200 OK
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td class="param">
+                404 Not Found
+               </td>
+               <td class="reg end">
+                <p>
+                 If the category cannot be found.
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="PUT/users/{user_id}/categories/{category}">
+          <div id="PUT/users/{user_id}/categories/{category}">
+           <p class="method_descrip txt_xlg">
+            Subscribe a user to a category
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              PUT
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /me/categories/{category}
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/me/categories/{category}">
+              Playground
+             </a>
+            </blockquote>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              PUT
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /users/{user_id}/categories/{category}
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/users/{user_id}/categories/{category}">
+              Playground
+             </a>
+            </blockquote>
+            <div class="scope">
+             This method requires a token with the
+             <strong>
+              "interact"
+             </strong>
+             scope.
+            </div>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                204 No Content
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+         <section class="method_group js-method_group" rel="DELETE/users/{user_id}/categories/{category}">
+          <div id="DELETE/users/{user_id}/categories/{category}">
+           <p class="method_descrip txt_xlg">
+            Unsubscribe a user from a category
+           </p>
+           <section>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              DELETE
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /me/categories/{category}
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/me/categories/{category}">
+              Playground
+             </a>
+            </blockquote>
+            <blockquote class="txt_xlg">
+             <span class="http_method float_left">
+              DELETE
+             </span>
+             <span class="float_left">
+              https://api.vimeo.com
+             </span>
+             <span class="orange float_left">
+              /users/{user_id}/categories/{category}
+             </span>
+             <a class="iconify_next_a cta_playground" href="/api/playground/users/{user_id}/categories/{category}">
+              Playground
+             </a>
+            </blockquote>
+            <div class="scope">
+             This method requires a token with the
+             <strong>
+              "interact"
+             </strong>
+             scope.
+            </div>
+            <table class="method">
+             <thead>
+              <tr>
+               <th>
+                HTTP Status Code
+               </th>
+               <th>
+                Explanation
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td class="param">
+                204 No Content
+               </td>
+               <td class="reg end">
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </section>
+          </div>
+         </section>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="iris_btn iris_btn--downplay" data-gtm-click="api_developer_feedback_open_click" id="feedback_btn">
+      <span class="iris_btn-content">
+       Send Feedback
+      </span>
+     </div>
+     <div class="feedback_panel" id="feedback_panel">
+      <div align="center" class="title">
+       Send us your feedback
+      </div>
+      <div align="center" id="comment_div">
+       <textarea class="iris_input" id="comment" type="text"></textarea>
+      </div>
+      <div align="center" id="feedback_submit_div">
+       <input class="btn btn_green" data-gtm-click="api_developer_feedback_submit_click" id="feedback_submit" type="submit" value="Send"/>
+      </div>
+      <div align="center" id="feedback_message_div">
+       <div align="center" id="feedback_message">
+       </div>
+      </div>
+     </div>
+     <a class="hidden btn iconify_up_b animating" href="#" id="top_link">
+      top
+     </a>
+    </div>
+   </div>
+  </div>
+  <footer class="developer_footer footer_v2__auxiliary footer_v2--responsive ">
+   <div class="footer_v2__legal">
+    <div class="footer_v2__auxiliary-content">
+     <p>
+      TM + © 2017 Vimeo, Inc. All rights reserved.
+     </p>
+    </div>
+    <ul class="footer_v2__legal-list">
+     <li class="footer_v2__legal-list-item">
+      <a class="iris_link iris_link--gray-2" href="https://vimeo.com/terms" title="Terms &amp; Conditions">
+       Terms
+      </a>
+     </li>
+     <li class="footer_v2__legal-list-item">
+      <a class="iris_link iris_link--gray-2" href="https://vimeo.com/privacy" title="Privacy Policy">
+       Privacy
+      </a>
+     </li>
+     <li class="footer_v2__legal-list-item">
+      <a class="iris_link iris_link--gray-2" href="https://vimeo.com/dmca" title="Copyright Information">
+       Copyright
+      </a>
+     </li>
+     <li class="footer_v2__legal-list-item">
+      <a class="iris_link iris_link--gray-2" href="https://vimeo.com/cookie_policy" title="Learn more about how Vimeo uses cookies">
+       Cookies
+      </a>
+     </li>
+    </ul>
+    <div class="footer_v2__auxiliary-content footer_v2__withlove">
+     Made with
+     <a href="http://vimeo.com/love">
+      <svg class="iris_ic is--12 footer_v2__auxiliary-icon" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9 2C7.312 2 6 3.5 6 3.5S4.687 2 3 2C1.312 2 0 3.312 0 5c0 3.188 3.75 3.012 6 6 2.25-2.988 6-2.812 6-6 0-1.688-1.313-3-3-3z">
+       </path>
+      </svg>
+     </a>
+     in NYC.
+    </div>
+   </div>
+   <div class="footer_v2__filters footer_v2__auxiliary-content">
+    <ul>
+     <li class="dev_footer__social-item">
+      <a class="dev_footer__social-icon" href="https://twitter.com/#!/vimeoapi" target="_blank" title="Vimeo API Twitter">
+       <svg class="iris_ic is--16" enable-background="new 0 0 100 81.4" viewBox="0 0 100 81.4" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+        <path d="M100,9.6c-3.7,1.6-7.6,2.7-11.8,3.2c4.2-2.5,7.5-6.6,9-11.4c-4,2.3-8.4,4.1-13,5c-3.8-4-9.1-6.5-15-6.5
+ C57.9,0,48.7,9.2,48.7,20.5c0,1.6,0.2,3.2,0.5,4.7C32.2,24.4,17,16.2,6.9,3.8c-1.8,3-2.8,6.6-2.8,10.3c0,7.1,3.6,13.4,9.1,17.1
+ c-3.4-0.1-6.5-1-9.3-2.6v0.3c0,9.9,7.1,18.2,16.5,20.1c-1.7,0.5-3.5,0.7-5.4,0.7c-1.3,0-2.6-0.1-3.9-0.4
+ c2.6,8.2,10.2,14.1,19.2,14.3c-7,5.5-15.9,8.8-25.5,8.8c-1.7,0-3.3-0.1-4.9-0.3c9.1,5.8,19.9,9.2,31.5,9.2
+ c37.7,0,58.4-31.3,58.4-58.4c0-0.9,0-1.8-0.1-2.7C93.8,17.4,97.3,13.7,100,9.6L100,9.6z">
+        </path>
+       </svg>
+      </a>
+     </li>
+     <li class="dev_footer__social-item">
+      <a class="dev_footer__social-icon" href="http://vimeoapi.tumblr.com/" target="_blank" title="Vimeo API Status Blog">
+       <svg class="iris_ic is--16" enable-background="new 0 0 91.8 159.7" viewBox="0 0 91.8 159.7" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+        <g>
+         <path d="M84.1,127.5c-3,1.4-8.6,2.6-12.9,2.8c-12.8,0.3-15.3-9-15.4-15.7V64.8h32.1V40.7H56V0c0,0-23,0-23.4,0
+ c-0.4,0-1.1,0.3-1.2,1.2C30,13.6,24.2,35.5,0,44.2v20.6h16.2V117c0,17.9,13.2,43.2,48,42.6c11.7-0.2,24.8-5.1,27.6-9.4L84.1,127.5">
+         </path>
+        </g>
+       </svg>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </footer>
+  <script src="https://f.vimeocdn.com/js_opt/global_developer_combined.min.js?61599355">
+  </script>
+  <script src="https://f.vimeocdn.com/js_opt/rainbow_combined.min.js?2d7f1ca1">
+  </script>
+  <script>
+   var _extend = function(){for(var r=arguments[0],n=1,e=arguments.length;e>n;n++){var t=arguments[n];for(var a in t)t.hasOwnProperty(a)&&(r[a]=t[a])}return r};
+
+ var _gtm = _gtm || [],
+ _initial_gtm_state = {"language":"en","user_status":"logged_out","user_type":"none","ga_universal_id":"UA-76641-8","comscore_site_id":10348289},
+ JS_DIR = "https://f.vimeocdn.com/js_opt/",
+ BUILD_HASH = "72454",
+ vimeo = {
+ domain: 'vimeo.com',
+ url: 'vimeo.com',
+ cur_user: null,
+ xsrft: '7a35fe316f5672ff46898bccafe56d97415976b1.brxvke9sgt.1495464244',
+ config: {} };
+
+ window.vimeo = _extend(window.vimeo, null);
+
+ _initial_gtm_state['vuid'] = document.cookie.replace(/(?:(?:^|.*;\s*)vuid\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+ _initial_gtm_state['gtm.start'] = new Date().getTime();
+ _initial_gtm_state['event'] = 'gtm.js';
+ _gtm.push(_initial_gtm_state);
+
+ $(function() {
+   
+ function showSuccessMessage() {
+ // kill completed components
+ $('#comment').hide();
+ $("#feedback_submit").hide();
+ $('#feedback_message').hide();
+
+ h = 284;
+ if ($('.feedback_message_div').is(':visible'))
+ h = 354;
+ $('.feedback_panel').width(252).height(h);
+ // add the success message
+ $('.title').html('Thank you for the feedback!');
+ $('.feedback_panel').animate({height: 40}, 500);
+
+ // t-minus 4 until we out
+ setTimeout(handleActionsForSuccessfulResponse, 4000);
+ }
+
+ function handleActionsForSuccessfulResponse() {
+ // stop looking to trigger this
+ $(document).off('keyup');
+ $(document).off('click');
+ $(window).off('beforeunload');
+
+ $('#feedback_panel').fadeOut('fast');
+ }
+
+ function reset_requested() {
+ // stop looking to trigger this
+ $(document).off('keyup');
+ $(document).off('click');
+
+ $('#feedback_panel').slideToggle('fast');
+ $('#feedback_btn').show();
+ $('#feedback_btn').animate({width: "120",opacity: 1});
+
+ $('#feedback_message_div').hide();
+ $('#feedback_btn').on('click', animate_panel_in);
+ }
+
+ function key_hit(e) {
+ if (e.keyCode == 27) {
+ reset_requested(e);
+ }
+ }
+
+ function check_for_focus_loss(e) {
+ if(!$(e.target).closest('#feedback_panel').length) {
+ reset_requested(e);
+ }
+ }
+
+ function animate_panel_in(e) {
+ $('#feedback_btn').off('click');
+ $('#feedback_btn').animate(
+ {width: "180",opacity: 0},
+ 'fast',
+ function()
+ {
+ $('#feedback_btn').hide();
+
+ $('#feedback_panel').slideToggle('fast');
+
+ // focus on the comment
+ $('#comment').focus();
+
+ // start looking for the escape key
+ $(document).on('keyup', key_hit);
+
+ // start looking for the focus loss
+ $(document).click(check_for_focus_loss);
+
+ $(window).on('beforeunload',function() {
+ if ($('#comment').val().trim().length) {
+ return 'You have feedback in progress.';
+ }
+ }
+ );
+ }
+ );
+ }
+
+ function showErrorMessage(error) {
+ $('#feedback_message').addClass("failure");
+ $('#feedback_message').html(error);
+ $('#feedback_message_div').slideDown();
+ }
+
+ function onSubmit(e) {
+ const data = {
+ page: window.location.pathname,
+ scroll_distance: $(document).scrollTop(),
+ comment: $('#comment').val(),
+ token: vimeo.xsrft
+ };
+
+ if (!$('#comment').val().length) {
+ showErrorMessage('Did you forget to add your feedback?');
+ return;
+ }
+
+ var char_length = $('#comment').val().length;
+
+ if (char_length > 2000) {
+ showErrorMessage('That\'s too much feedback for this simple form! Please reach out to us at <a href="https://vimeo.com/help/contact" target=_new>https://vimeo.com/help/contact</a>');
+
+ return;
+ }
+
+ $.ajax({
+ url: '/api/feedback',
+ type: 'POST',
+ dataType: 'json',
+ data: data,
+ success: function(response) {
+ if (response && response.code == 429) {
+ showErrorMessage('Thank you for the feedback, however you have exceeded our ratelimit. Please use <a href="https://vimeo.com/help/contact" target=_new>this page</a> instead.');
+ }
+ else if (response && response.code !== 200) {
+ showErrorMessage('We encountered an error: ' + err);
+ }
+ else {
+ showSuccessMessage();
+ }
+ }.bind(this),
+ error: function(xhr, status, err) {
+ if (xhr.status === 200) {
+ showSuccessMessage();
+ }
+ else {
+ message = '';
+ if (xhr.status === 429) {
+ message = 'Thank you for the feedback, however you have exceeded our ratelimit. Please use <a href="https://vimeo.com/help/contact" target=_new>this page</a> instead.';
+ }
+ else {
+ message = 'We encountered an error: ' + err;
+ }
+ showErrorMessage(message);
+ }
+ }.bind(this)
+ });
+ }
+
+ (function() {
+ $('#feedback_btn').on('click', animate_panel_in);
+ $('#feedback_submit').on('click', onSubmit);
+ }());
+
+
+   });
+  </script>
+  <script>
+   window.addEventListener('DOMContentLoaded', function() {
+ var scr,
+ s = document.getElementsByTagName('script')[0];
+
+  scr = document.createElement('script');
+ scr.type = 'text/javascript';
+ scr.async = true;
+ scr.src = ('//www.googletagmanager.com/gtm.js?id=GTM-RBKK&l=_gtm');
+ s.parentNode.insertBefore(scr, s);
+  });
+  </script>
+ </body>
+</html>

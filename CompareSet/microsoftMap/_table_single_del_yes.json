@@ -1,0 +1,137 @@
+{
+  "basePath": "/search/local/ws/rest/v1\">",
+  "paths": {
+    "/GeocodeFeed>": {
+      "POST": {},
+      "get": {}
+    },
+    "/cc981072.aspx": {
+      "GET": {},
+      "get": {}
+    },
+    "/dev.virtu": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "output\n\no\n\nOptional",
+            "description": ". The output format for the response.\n\nOne of the following values:\n\njson [default]\n\nxml\n\nExample : output=xml\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "suppressStatus\n\nss\n\nOptional",
+            "description": ". When set to true , the HTTP Status returned is 200 OK for all responses, including when there are errors. The content of the response always contains the actual HTTP Status.\n\ntrue\n\nfalse [default]\n\nExample : suppressStatus=true\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "jsonp\n\nOptional.",
+            "description": "Name of JSON callback function that is called when the response to the request is received. The JSON object provided in the response is passed to the callback function.\n\nA string that contains the name of the callback function.\n\nExample : jsonp=MyCallbackFunction\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "jsonso\n\nOptional.",
+            "description": "The state object to pass to the JSON callback function. You can use a state object to match a response with a specific call. This value is provided as the second parameter to the callback function provided in the JSONP parameter.\n\nAny valid JavaScript string.\n\nExample : jsonso=abc3144sd\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/plainâ€�": {
+      "GET": {},
+      "get": {}
+    },
+    "/spatialDataSource": {
+      "PUT": {},
+      "put": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "\nParameter",
+            "description": "names and values are not case-sensitive except for the key parameter value.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/succeeded": {
+      "GET": {},
+      "get": {}
+    },
+    "/longitude": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "\nYou",
+            "description": "can find the complete sample described in this section in the Code Samples section at the end of this article.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/travelMode": {
+      "GET": {},
+      "get": {}
+    },
+    "/GeocodeRequest>": {
+      "POST": {},
+      "Post": {}
+    },
+    "/Response>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/Geocode": {
+      "GET": {},
+      "get": {}
+    },
+    "/region,": {
+      "post": {},
+      "POST": {}
+    },
+    "/Locations": {
+      "post": {},
+      "POST": {},
+      "Get": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "\nYou",
+            "description": "can substitute a hyphen (-) for any structured URL parameter when there is no value.\n\nFor countries that do not have a structured URL template, use the Unstructured URL described below or use the Find a Location by Query API which takes location well as encode other special characters information as a single query string.\n\nFor all location values, it is a best practice to encode the URI before making the request. Encoding replaces spaces with \"%20\" and replaces other special characters with similar encoded values. For more information, see encodeURI [JavaScript] and Uri.EscapeDataString [.NET].\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "/schemas.m": {
+      "POST": {},
+      "Post": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "schemas.microsoft.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

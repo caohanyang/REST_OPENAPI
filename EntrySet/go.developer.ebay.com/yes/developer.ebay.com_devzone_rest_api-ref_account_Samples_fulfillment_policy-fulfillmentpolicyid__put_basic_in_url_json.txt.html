@@ -1,0 +1,54 @@
+<html>
+ <head>
+ </head>
+ <body>
+  PUT https://api.sandbox.ebay.com/sell/account/v1/fulfillment_policy/5522807000
+
+{
+  "name": "detailed US fulfillment policy",
+  "marketplaceId": "EBAY_US",
+  "categoryTypes": [
+    {
+      "name": "ALL_EXCLUDING_MOTORS_VEHICLES",
+      "default": true
+    }
+  ],
+  "handlingTime": {
+    "value": 1,
+    "unit": "DAY"
+  },
+  "shipToLocations": {
+    "regionIncluded": [
+      {
+        "regionName": "COUNTRY"
+      }
+    ]
+  },
+  "shippingOptions": [
+    {
+      "optionType": "DOMESTIC",
+      "costType": "FLAT_RATE",
+      "shippingServices": [
+        {
+          "sortOrderId": 1,
+          "shippingServiceCode": "FedExHomeDelivery",
+          "shippingCost": {
+            "value": "5.50",
+            "currency": "USD"
+          },
+          "additionalShippingCost": {
+            "value": "1.2",
+            "currency": "USD"
+          },
+          "freeShipping": false,
+          "buyerResponsibleForPickup": false
+        }
+      ]
+    }
+  ],
+  "globalShipping": false,
+  "pickupDropOff": false,
+  "freightShipping": false
+}
+ </body>
+</html>

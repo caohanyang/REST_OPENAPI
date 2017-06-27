@@ -1,0 +1,1046 @@
+{
+  "paths": {
+    "/v2.9/{page-id}/page_backed_instagram_accounts": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-object-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{status-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/events": {
+      "GET": {}
+    },
+    "/v2.9/{story-attachment-id}/subattachments": {
+      "GET": {}
+    },
+    "/v2.9/{object-id}/comments?summary=1&filter=toplevel": {
+      "GET": {}
+    },
+    "/v2.9/me/feed": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{live-video-id}": {
+      "GET": {}
+    },
+    "/v2.9/{object-id}/likes": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{page-id}/videos": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{user-id}/ids_for_business": {
+      "GET": {}
+    },
+    "/v2.9/{test-user-id}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/v2.9/{page-id}/videos_you_can_use": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-media-id}/insights": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/blocked": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-context-id}": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/subscriptions": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{milestone-id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/{page-id}/photos?type=uploaded": {
+      "GET": {}
+    },
+    "/v2.9/{photo-id}/reactions": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/music": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/albums": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/adaccounts": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}?fields=instant_articles_insights.metric(all_views).period(day).since(7": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/scores": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/v2.9/{video-id}/thumbnails": {
+      "GET": {}
+    },
+    "/v2.9/{native-offer-id}/views": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/video_broadcasts": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/video_insights": {
+      "GET": {}
+    },
+    "/v2.9/{user-context-id}/all_mutual_friends": {
+      "GET": {}
+    },
+    "/v2.9/{live-video-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/favorite_requests": {
+      "GET": {}
+    },
+    "/v2.9/{question-option-id}": {
+      "GET": {}
+    },
+    "/v2.9/{object-id}/sharedposts": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/crosspost_pending_approval_pages": {
+      "GET": {}
+    },
+    "/v2.9/{page-call-to-action-id}": {
+      "GET": {}
+    },
+    "/v2.9/me/photos": {
+      "POST": {}
+    },
+    "/v2.9/{page-id}/thread_settings": {
+      "GET": {}
+    },
+    "/v2.9/{video-copyright-id}": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-carousel-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/members": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{canvas-button-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}": {
+      "GET": {}
+    },
+    "/v2.9/{test-user-1}/friends/{test-user-2}": {
+      "POST": {}
+    },
+    "/v2.9/{user-id}/friendlists": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/auto_generated_captions": {
+      "GET": {}
+    },
+    "/v2.9/{page-label-id}/users": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/settings": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}?fields=instant_articles_insights.metric(all_views).breakdown(platform).period(day).since(7": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/call_to_actions": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/nativeoffers": {
+      "GET": {}
+    },
+    "/v2.9/{user-context-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}?fields=instant_articles_insights.metric(all_scrolls).period(week).since(7": {
+      "GET": {}
+    },
+    "/v2.9/{limited-profile-id}/picture": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/promotable_domains": {
+      "GET": {}
+    },
+    "/v2.9/{album-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/tabs": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/curated_collections": {
+      "GET": {}
+    },
+    "/v2.9/{application-context-id}": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-context-id}/video_watch_friends": {
+      "GET": {}
+    },
+    "/v2.9/{photo-id}/sponsor_tags": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/ids_for_apps": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-context-id}/music_listen_friends": {
+      "GET": {}
+    },
+    "/v2.9/{rtb-dynamic-post-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{user-context-id}/mutual_friends": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/tags": {
+      "GET": {}
+    },
+    "/v2.9/{link-id}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/v2.9/{page-id}/feed": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{page-id}/instant_articles": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/crosspost_whitelisted_pages": {
+      "GET": {}
+    },
+    "/v2.9/{canvas-store-locator-id}": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-object-type-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/adcontracts": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/featured_videos_collection": {
+      "GET": {}
+    },
+    "/v2.9/{post-id}/attachments": {
+      "GET": {}
+    },
+    "/v2.9/{album-id}/picture?type=thumbnail": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/video_copyrights": {
+      "GET": {}
+    },
+    "/v2.9/{notification-id}": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-object-id}/picture": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/ratings": {
+      "GET": {}
+    },
+    "/v2.9/{canvas-photo-id}": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/ads_app_insights_dimensions": {
+      "GET": {}
+    },
+    "/v2.9/{video-list-id}": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-media-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/business_activities": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/accounts": {
+      "GET": {}
+    },
+    "/v2.9/{crisis-id}/community_help_posts": {
+      "GET": {}
+    },
+    "/v2.9/{test-user-2}/friends/{test-user-1}": {
+      "POST": {}
+    },
+    "/v2.9/{instagram-user-id}/agencies": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/services": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/television": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/albums": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/attending": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/domains": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-action-type-id}": {
+      "GET": {}
+    },
+    "/v2.9/{from.id}_{status-id}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/v2.9/{friend-list-id}": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/crosspost_shared_pages": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-object-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/seasons": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}?fields=context.fields%28mutual_friends%29": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/picture": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/show_playlists": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/sharedposts": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/files": {
+      "GET": {}
+    },
+    "/v2.9/{photo-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/session_keys": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/purchases": {
+      "GET": {}
+    },
+    "/v2.9/{achievement-id}": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/docs": {
+      "GET": {}
+    },
+    "/v2.9/{photo-id}/tags": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/groups": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{life-event-id}/photos": {
+      "GET": {}
+    },
+    "/v2.9/{place-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/movies": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/permissions": {
+      "GET": {}
+    },
+    "/v2.9/{app-request-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/objects": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/tagged_places": {
+      "GET": {}
+    },
+    "/v2.9/{native-offer-id}": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-carousel-id}": {
+      "GET": {}
+    },
+    "/v2.9/{media-fingerprint-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/links": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/app_link_hosts": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-media-id}": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/sponsor_tags": {
+      "GET": {}
+    },
+    "/v2.9/me/friendrequests": {
+      "GET": {}
+    },
+    "/v2.9/me/feed?with=location": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/feed": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{user-id}/photos": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/connections": {
+      "GET": {}
+    },
+    "/v2.9/{question-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/media_fingerprints": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/business_activities": {
+      "GET": {}
+    },
+    "/v2.9/{request-id}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/v2.9/{page-id}/tagged": {
+      "GET": {}
+    },
+    "/v2.9/{canvas-carousel-id}": {
+      "GET": {}
+    },
+    "/v2.4/me/inbox": {
+      "GET": {}
+    },
+    "/v2.9/{comment-id}/private_replies": {
+      "POST": {}
+    },
+    "/v2.9/{canvas-text-id}": {
+      "GET": {}
+    },
+    "/v2.9/{crisis-listing-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}": {
+      "GET": {}
+    },
+    "/v2.9/{app-link-host-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/live_videos": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/staticresources": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-action-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/object_types": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/canvas_elements": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/agencies": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/locations": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{place-tag-id}": {
+      "GET": {}
+    },
+    "/v2.9/{saved-message-response-id}/macros": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/adnetworkanalytics": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/leadgen_conditional_questions_group": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/insights": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/leadgen_whitelisted_users": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/roles": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/app_event_types": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/invitable_friends": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/apprequests": {
+      "GET": {}
+    },
+    "/v2.9/me/scores": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{instagram-user-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/games": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/captions": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/admins": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/v2.9/{page-id}/place_topics": {
+      "GET": {}
+    },
+    "/v2.9/{video-id}/reactions": {
+      "GET": {}
+    },
+    "/v2.9/{live-video-id}/reactions": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/accounts": {
+      "GET": {}
+    },
+    "/v2.9/{payment-id}/refunds": {
+      "POST": {}
+    },
+    "/v2.9/{page-id}/global_brand_children": {
+      "GET": {}
+    },
+    "/v2.9/{audience-insights-rule-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/stream_filters": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/statuses": {
+      "GET": {}
+    },
+    "/v2.9/{canvas-footer-id}": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/admins": {
+      "GET": {}
+    },
+    "/{user-id}/permissions/{permission-name}": {
+      "DELETE": {}
+    },
+    "/v2.9/{application-id}/authorized_adaccounts": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/live_videos": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/product_catalogs": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/roles": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{user-id}/family": {
+      "GET": {}
+    },
+    "/v2.9/{doc-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/notifications": {
+      "GET": {}
+    },
+    "/v2.9/me/albums": {
+      "POST": {}
+    },
+    "/v2.9/{crisis-listing-id}/reactions": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/picture": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{rtb-dynamic-post-id}": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/events": {
+      "GET": {}
+    },
+    "/v2.9/{rtb-dynamic-post-id}/instagram_comments": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/ad_studies": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/videos": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{photo-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/friends": {
+      "GET": {}
+    },
+    "/v2.9/{live-video-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/books": {
+      "GET": {}
+    },
+    "/v2.9/{conversation-id}": {
+      "GET": {}
+    },
+    "/v2.9/{object-id}/comments": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{open-graph-action-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{canvas-video-id}": {
+      "GET": {}
+    },
+    "/v2.2/{page-id}/roles/{user-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/taggable_friends": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/instagram_accounts": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/video_broadcasts": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-user-id}/authorized_adaccounts": {
+      "GET": {}
+    },
+    "/v2.9/me/locations": {
+      "GET": {}
+    },
+    "/v2.9/{video-copyright-rule-id}": {
+      "GET": {}
+    },
+    "/{user-id}/photos/uploaded": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/picture?redirect=0&height=200&type=normal&width=200": {
+      "GET": {}
+    },
+    "/v2.9/me/home": {
+      "GET": {}
+    },
+    "/v2.9/{conversation-id}/messages": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{event-id}/roles": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/ids_for_pages": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/payments_test_users": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/accounts/test-users": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{message-id}/shares": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/groups": {
+      "GET": {}
+    },
+    "/v2.9/{crisis-id}/community_help_categories": {
+      "GET": {}
+    },
+    "/v2.9/{rtb-dynamic-post-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/appassets": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/videos": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{application-id}/events": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/events": {
+      "GET": {}
+    },
+    "/v2.9/{comment-id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{saved-message-response-id}": {
+      "GET": {}
+    },
+    "/v2.9/{achievement-type-id}": {
+      "GET": {}
+    },
+    "/v2.9/{life-event-id}/sharedposts": {
+      "GET": {}
+    },
+    "/v2.9/{pages-platform-component-flow-service-config-id}": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/achievements": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{education-experience-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/conversations": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/saved_message_responses": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/photos": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/conversations": {
+      "GET": {}
+    },
+    "/v2.9/{group-doc-id}": {
+      "GET": {}
+    },
+    "/v2.9/{message-id}/attachments": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/picture": {
+      "GET": {}
+    },
+    "/v2.9/{video-list-id}/videos": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/promotable_events": {
+      "GET": {}
+    },
+    "/v2.9/{payment-id}": {
+      "GET": {}
+    },
+    "/v2.9/{life-event-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-context-id}/friends_who_like": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/direct_deals": {
+      "GET": {}
+    },
+    "/{user-id}/photos?type=uploaded": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/products": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/admin_notes": {
+      "GET": {}
+    },
+    "/v2.9/me/outbox": {
+      "GET": {}
+    },
+    "/v2.9/{limited-friend-id}/picture": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/noreply": {
+      "GET": {}
+    },
+    "/v2.5/{thread-id}": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/insights_event_labels": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/video_copyright_rules": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/video_lists": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/ozone_release": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/photos": {
+      "POST": {}
+    },
+    "/v2.9/{life-event-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-context-id}/three_degree_mutual_friends": {
+      "GET": {}
+    },
+    "/v2.9/{application-context-id}/friends_using_app": {
+      "GET": {}
+    },
+    "/v2.9/{mailing-address-id}": {
+      "GET": {}
+    },
+    "/v2.9/{photo-id}/sharedposts": {
+      "GET": {}
+    },
+    "/v2.9/{post-id}/reactions": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/banned": {
+      "GET": {}
+    },
+    "/v2.9/{canvas-header-id}": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/albums": {
+      "GET": {}
+    },
+    "/v2.9/{group-id}/feed": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{crisis-listing-id}": {
+      "GET": {}
+    },
+    "/v2.9/{work-experience-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/permissions": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/groups/{group-id}": {
+      "DELETE": {}
+    },
+    "/v2.9/{event-id}/live_videos": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/curated_collections": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/milestones": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}?fields=context.fields%28all_mutual_friends.limit%28100%29%29": {
+      "GET": {}
+    },
+    "/v2.9/{album-id}/photos": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{app-links-id}": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/app_insights/{metric-name}?period=monthly&breakdowns%5B0%5D=client": {
+      "GET": {}
+    },
+    "/v2.9/{message-id}": {
+      "GET": {}
+    },
+    "/v2.9/{thread-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/saved_filters": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/photos": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{application-id}/moods_for_application": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/maybe": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-object-id}/reactions": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/app_insights": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{application-id}/objects": {
+      "GET": {}
+    },
+    "/v2.9/debug_token?input_token={input-token}": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-comment-id}": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-carousel-id}/instagram_comments": {
+      "GET": {}
+    },
+    "/v2.9/{domain-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/subscribed_apps": {
+      "GET": {}
+    },
+    "/v2.9/{album-id}/picture": {
+      "GET": {}
+    },
+    "/v2.9/{user-context-id}/mutual_likes": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/translations?locale=fr_FR": {
+      "GET": {}
+    },
+    "/v2.9/{canvas-product-set-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/apprequestformerrecipients": {
+      "GET": {}
+    },
+    "/{page-id}/photos/uploaded": {
+      "GET": {}
+    },
+    "/v2.9/{place-topic-id}": {
+      "GET": {}
+    },
+    "/v2.9/{crisis-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}?fields=instant_articles_insights.metric(metric-name)": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}?fields=context.fields%28all_mutual_friends.fields%28picture.width%28500%29.height%28200%29%29%29": {
+      "GET": {}
+    },
+    "/v2.9/{photo-id}/insights": {
+      "GET": {}
+    },
+    "/v2.9/{life-event-id}/comments": {
+      "GET": {}
+    },
+    "/v2.9/{open-graph-context-id}/friends_tagged_at": {
+      "GET": {}
+    },
+    "/v2.9/{payment-id}/dispute": {
+      "POST": {}
+    },
+    "/v2.9/{application-id}/custom_audience_third_party_id": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/picture": {
+      "GET": {}
+    },
+    "/v2.9/{app-id}/translations": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/v2.9/{user-id}/request_history": {
+      "GET": {}
+    },
+    "/v2.9/{instagram-media-id}/instagram_usertags": {
+      "GET": {}
+    },
+    "/v2.9/{post-id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v2.9/{event-id}/interested": {
+      "GET": {}
+    },
+    "/v2.9/{promotion-info-id}": {
+      "GET": {}
+    },
+    "/v2.9/{crisis-listing-id}/likes": {
+      "GET": {}
+    },
+    "/v2.9/{event-id}/declined": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/videos": {
+      "GET": {}
+    },
+    "/v2.9/{page-admin-note-id}": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/achievements": {
+      "GET": {}
+    },
+    "/v2.9/{user-id}/personal_ad_accounts": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/screennames": {
+      "GET": {}
+    },
+    "/v2.9/{page-label-id}": {
+      "GET": {}
+    },
+    "/v2.9/{page-id}/labels": {
+      "GET": {}
+    },
+    "/v2.9/me/inbox": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "graph.facebook.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

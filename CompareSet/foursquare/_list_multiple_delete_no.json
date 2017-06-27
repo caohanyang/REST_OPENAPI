@@ -1,0 +1,57 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/resolve": {
+      "GET": {}
+    },
+    "//nyt.com": {
+      "POST": {}
+    },
+    "//blog.zagat.com/fast-food-survey-results-are-here": {
+      "POST": {}
+    },
+    "/v2/lists/12381902N)": {
+      "GET": {}
+    },
+    "//www.mercurylounge.com": {
+      "post": {},
+      "POST": {}
+    },
+    "//swarmapp.com/c": {
+      "GET": {}
+    },
+    "//api.foursquare.com/v2": {
+      "Delete": {},
+      "post": {},
+      "POST": {},
+      "Post": {},
+      "GET": {},
+      "Get": {},
+      "delete": {}
+    },
+    "//your.site.com/path": {
+      "post": {},
+      "POST": {}
+    },
+    "/venues/search": {
+      "POST": {}
+    },
+    "/variations": {
+      "GET": {}
+    },
+    "/XXX/photos": {
+      "GET": {},
+      "get": {}
+    },
+    "/geolong": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

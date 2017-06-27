@@ -1,0 +1,122 @@
+{
+  "basePath": "/focus%E5%9B%BE%E5%83%8F.png",
+  "paths": {
+    "//layarapi.example.net/mylayer/getpoi": {
+      "GET": {}
+    },
+    "/Optional:": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "params",
+            "description": "array of strings A list parameters can be added to the request.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Introduced",
+            "description": "API: v4.0",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Mandatory/Optional:",
+            "description": "optional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Default",
+            "description": "value: empty array",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Path:",
+            "description": "root.actions or hotspots.actions",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Detailed",
+            "description": "Description: Comma-separated list of parameters to be added to the request:\n- For a GET request, the params will be added in the URL E.g. \"lat=45.462&lon=2.42346&alt=560\"\n- For a POST request, the params will be passed as URL-encoded parameters in the body of the response.\nPossible values: lat, lon, alt, lang, countryCode, localCountryCode, version.\nNOTE: countryCode is the home country of the user while localCountryCode is the country where the user is located at the moment.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Example:",
+            "description": "\"params\" : [\"lat\", \"lon\", \"alt\", \"lang\", \"countrycode\", \"localCountryCode\", \"version\"]",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {},
+      "get": {},
+      "put": {}
+    },
+    "//<layername>": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "description": "mandatory string Treasure hunt Title to show with the shared message",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "mandatory string message Determines if the action should trigger sharing a message or a screenshot. use \"message\" to share a message.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link",
+            "description": "optional url http://developer.com/scoreboard/user This link is attached to the title parameter. It can be linked to a web page which shows more information about shared message.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "icon",
+            "description": "optional url http://developer.com/image.png Places this icon next to a status update on Facebook. If not provided, the layer's icon (defined under Listing & indexing tab of the layer editing page) will be used. The recommended icon size is 150x150. Not possible when sharing on Twitter.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "optional string Find more treasures with this layer! Text that will show when the user shares their status update. This text is determined by the developer and cannot be changed by the user.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "service",
+            "description": "optional string(facebook, twitter, developer) facebook Introduced in API v7.0. This specifies a specific service this share action is meant to be used for. Only 'facebook', 'twitter' or 'developer' are supported at the moment. 'developer' works only if 'type' is 'screenshot' and is then pointing to the layer-defined developer URL for sharing screenshots .\nIf not specified, the user gets to choose which service to use. If specified, the user will directly use the defined service.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "custom.layar.nl",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

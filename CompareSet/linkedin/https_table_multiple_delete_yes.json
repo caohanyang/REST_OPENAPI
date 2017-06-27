@@ -1,0 +1,467 @@
+{
+  "basePath": "/v1",
+  "paths": {
+    "/companies/{id}/historical-follow-statistics": {
+      "GET": {},
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "time-granularity",
+            "description": "\nGranularity of statistics. Supported values are:\nday\nmonth\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "start-timestamp",
+            "description": "Starting timestamp of when the stats search should begin (milliseconds since epoch)",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "end-timestamp",
+            "description": "Ending timestamp of when the stats search should end (milliseconds since epoch). The current time will be used if parameter not set.",
+            "type": "integer",
+            "required": "No"
+          },
+          {
+            "in": "query",
+            "name": "update-key",
+            "description": "Optionally provide an update key value to return statistics for a specific company update.",
+            "type": "integer",
+            "required": "No"
+          }
+        ]
+      }
+    },
+    "/companies/1234/updates/key=ABCDE-123456/update-comments-as-company/\";": {
+      "POST": {}
+    },
+    "/people/~/shares\";": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "url",
+            "description": "The url-encoded URL of the page that you wish to share.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "mini",
+            "description": "A required argument who's value must always be:  true",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "title",
+            "description": "The url-encoded title value that you wish you use.\n",
+            "type": "integer",
+            "required": "No"
+          },
+          {
+            "in": "query",
+            "name": "summary",
+            "description": "The url-encoded description that you wish you use.",
+            "type": "integer",
+            "required": "No"
+          },
+          {
+            "in": "query",
+            "name": "source\nThe",
+            "description": "\nThe url-encoded source of the content (e.g. your website or application name)\n",
+            "type": "integer",
+            "required": "No"
+          }
+        ]
+      },
+      "PUT": {}
+    },
+    "/companies/{id}/updates/key={update-key}/update-comments-as-company": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "time-granularity",
+            "description": "\nGranularity of statistics. Supported values are:\nday\nmonth\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "start-timestamp",
+            "description": "Starting timestamp of when the stats search should begin (milliseconds since epoch)",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "end-timestamp",
+            "description": "Ending timestamp of when the stats search should end (milliseconds since epoch). The current time will be used if parameter not set.",
+            "type": "integer",
+            "required": "No"
+          }
+        ]
+      }
+    },
+    "/companies/{id}/shares": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "content",
+            "description": "A collection of fields describing the shared content.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title",
+            "description": "The title of the content being shared.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "The description of the content being shared.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "submitted-url",
+            "description": "A fully qualified URL for the content being shared.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "submitted-image-url",
+            "description": "A fully qualified URL to a thumbnail image to accompany the shared content.\n\nThe image should be at least 80 x 150px for best results. 2MB max filesize.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "comment\nA",
+            "description": "\nA comment by the member to associated with the share.\n\nIf none of the above content parameters are provided, the comment must contain a URL to the content you want to share.  If the comment contains multiple URLs, only the first one will be analyzed for content to share.\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "visibility",
+            "description": "A collection of visibility information about the share.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "code\nOne",
+            "description": "\nOne of the following values:\nanyone:  Share will be visible to all members.\nconnections-only:  Share will only be visible to connections of the member performing the share.\n\nThis field is required in all sharing calls.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "share-target-reach",
+            "description": "A collection of targeting codes and values used to ensure that the shared content reaches a specific audience.\n\nSee targeting company shares for additional information about how to structure a targeted share request.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://api.linkedin.com/people/~/shares)": {
+      "POST": {}
+    },
+    "https://api.linkedin.com/peo": {
+      "GET": {}
+    },
+    "/people/~/shares": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "content",
+            "description": "A collection of fields describing the shared content.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title",
+            "description": "The title of the content being shared.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "The description of the content being shared.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "submitted-url",
+            "description": "A fully qualified URL for the content being shared.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "submitted-image-url",
+            "description": "A fully qualified URL to a thumbnail image to accompany the shared content.\n\nThe image should be at least 80 x 150px for best results.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "comment\n\nA",
+            "description": "\nA comment by the member to associated with the share.\n\nIf none of the above content parameters are provided, the comment must contain a URL to the content you want to share.  If the comment contains multiple URLs, only the first one will be analyzed for content to share.\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "visibility",
+            "description": "A collection of visibility information about the share.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "code\nOne",
+            "description": "\nOne of the following values:\nanyone:  Share will be visible to all members.\nconnections-only:  Share will only be visible to connections of the member performing the share.\n\nThis field is required in all sharing calls.\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/companies/{id}/relation-to-viewer/is-company-share-enabled": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "start",
+            "description": "The offset value for paginating update results by.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "count",
+            "description": "Maximum number of updates to return.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/companies": {
+      "GET": {
+        "parameters": []
+      }
+    },
+    "https://example.com/auth/callback#linkedin": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "response_type",
+            "description": "The value of this field should always be:  code",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "client_id",
+            "description": "The \"API Key\" value generated when you registered your application.",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "redirect_uri\nThe",
+            "description": "\nThe URI your users will be sent back to after authorization.  This value must match one of the defined OAuth 2.0 Redirect URLs in your application configuration .\n\n\ne.g. https://www.example.com/auth/linkedin\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "state\nA",
+            "description": "\nA unique string value of your choice that is hard to guess. Used to prevent CSRF .\n\n\ne.g. state=DCEeFWf45A53sdfKef424\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "scope\nA",
+            "description": "\nA URL-encoded, space delimited list of member permissions your application is requesting on behalf of the user.  If you do not specify a scope in your call, we will fall back to using the default member permissions you defined in your application configuration .\n\n\ne.g. scope=r_fullprofile%20r_emailaddress%20w_share\n\nSee Understanding application permissions and the Best practices guide for additional information about scopes.\n\n",
+            "type": "integer",
+            "required": "Optional"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/people/~\";": {
+      "GET": {}
+    },
+    "/people/~\"];": {
+      "GET": {}
+    },
+    "/people/~:(id,num-connections,picture-url)": {
+      "GET": {}
+    },
+    "https://www.linkedin.com/oauth/v2/accessToken": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "grant_type",
+            "description": "The value of this field should always be:  authorization_code\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "code",
+            "description": "The authorization code you received from Step 2.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "redirect_uri",
+            "description": "The same 'redirect_uri' value that you passed in the previous step.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "client_id",
+            "description": "The \"API Key\" value generated Step 1.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "client_secret\nThe",
+            "description": "\nThe \"Secret Key\" value generated in Step 1.\n\nFollow the Best Practices guide for handing your client_secret value.\n\n",
+            "type": "integer",
+            "required": "Yes"
+          }
+        ]
+      }
+    },
+    "/companies/{id}:(id,name,ticker,description)": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "event-type",
+            "description": "\nFilter the results to only return updates of the specified event type.\n\n\nValid values are:\njob-posting\nnew-product\nstatus-update\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "start",
+            "description": "The offset value for paginating update results by.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "count",
+            "description": "Maximum number of updates to return.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://www.linkedin.com/uas/oauth2/accessToken": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "grant_type",
+            "description": "The value of this field should always be:  authorization_code\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "code",
+            "description": "The authorization code you received from Step 2.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "redirect_uri",
+            "description": "The same 'redirect_uri' value that you passed in the previous step.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "client_id",
+            "description": "The \"API Key\" value generated Step 1.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "client_secret\nThe",
+            "description": "\nThe \"Secret Key\" value generated in Step 1.\n\nFollow the Best Practices guide for handing your client_secret value.\n\n",
+            "type": "integer",
+            "required": "Yes"
+          }
+        ]
+      }
+    },
+    "https://www.linkedin.com/profile/view": {
+      "PUT": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "start",
+            "description": "The index of the first item you want results for.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "count",
+            "description": "The maximum number of items you want included in the result set.  Note that there may be less remaining items than the value you specify here.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/people/~:(id,first-name,last-name)\";": {
+      "POST": {}
+    },
+    "https://media.licdn.com/mpr/mprx/…": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.linkedin.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

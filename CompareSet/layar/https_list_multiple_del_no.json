@@ -1,0 +1,13 @@
+{
+  "paths": {
+    "https://\",": {
+      "GET": {}
+    },
+    "https://)": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

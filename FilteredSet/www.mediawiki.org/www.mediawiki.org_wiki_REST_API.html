@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   REST API - MediaWiki
+  </title>
+  <script>
+   document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );
+  </script>
+  <script>
+   (window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"REST_API","wgTitle":"REST API","wgCurRevisionId":2442979,"wgRevisionId":2442979,"wgArticleId":490508,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["MediaWiki APIs"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"REST_API","wgRelevantArticleId":490508,"wgRequestId":"WUap9QpAMFoAACZAzYIAAABD","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":false,"wgPopupsShouldSendModuleToUser":false,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFExpandAllSectionsUserOption":false,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgULSCurrentAutonym":"English","wgNoticeProject":"mediawiki","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["preload","preloadparams","preloadtitle","undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":true});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","wikibase.client.init":"ready","ext.gadget.site-styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.pt":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.site","ext.gadget.collapsibleTables","ext.gadget.Edittools","ext.gadget.addMe","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});
+  </script>
+  <link href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.site-styles%7Cext.uls.pt%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector">
+  </script>
+  <meta content="" name="ResourceLoaderDynamicStyles"/>
+  <link href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+  <meta content="MediaWiki 1.30.0-wmf.5" name="generator"/>
+  <meta content="origin-when-cross-origin" name="referrer"/>
+  <link href="/w/index.php?title=REST_API&amp;action=edit" rel="alternate" title="Edit" type="application/x-wiki"/>
+  <link href="/w/index.php?title=REST_API&amp;action=edit" rel="edit" title="Edit"/>
+  <link href="/static/apple-touch/mediawiki.png" rel="apple-touch-icon"/>
+  <link href="/static/favicon/mediawiki.ico" rel="shortcut icon"/>
+  <link href="/w/opensearch_desc.php" rel="search" title="MediaWiki (en)" type="application/opensearchdescription+xml"/>
+  <link href="//www.mediawiki.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+  <link href="//creativecommons.org/licenses/by-sa/3.0/" rel="copyright"/>
+  <link href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" title="MediaWiki Atom feed" type="application/atom+xml"/>
+  <link href="https://www.mediawiki.org/wiki/REST_API" rel="canonical"/>
+  <link href="//login.wikimedia.org" rel="dns-prefetch"/>
+  <link href="//meta.wikimedia.org" rel="dns-prefetch"/>
+ </head>
+ <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-REST_API rootpage-REST_API skin-vector action-view">
+  <div class="noprint" id="mw-page-base">
+  </div>
+  <div class="noprint" id="mw-head-base">
+  </div>
+  <div class="mw-body" id="content" role="main">
+   <a id="top">
+   </a>
+   <div class="mw-body-content" id="siteNotice">
+    <!-- CentralNotice -->
+   </div>
+   <div class="mw-indicators mw-body-content">
+   </div>
+   <h1 class="firstHeading" id="firstHeading" lang="en">
+    REST API
+   </h1>
+   <div class="mw-body-content" id="bodyContent">
+    <div id="siteSub">
+     From MediaWiki.org
+    </div>
+    <div id="contentSub">
+    </div>
+    <div class="mw-jump" id="jump-to-nav">
+     Jump to:
+     <a href="#mw-head">
+      navigation
+     </a>
+     ,
+     <a href="#p-search">
+      search
+     </a>
+    </div>
+    <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en">
+     <div class="mw-parser-output">
+      <p>
+       The Wikimedia REST API offers access to Wikimedia's content and metadata in machine-readable formats. Focused on high-volume use cases, it tightly integrates with Wikimedia's globally distributed caching infrastructure. As a result, API users benefit from reduced latencies and support for high request volumes.
+      </p>
+      <p>
+       The REST API along with its documentation is available for all major Wikimedia projects at the location
+       <b>
+        /api/rest_v1/.
+       </b>
+       For example, for the English wikipedia it is available at
+       <b>
+        <a class="external free" href="https://en.wikipedia.org/api/rest_v1/">
+         https://en.wikipedia.org/api/rest_v1/
+        </a>
+        .
+       </b>
+      </p>
+      <p>
+       While the functionality offered by most projects closely matches that on English wikipedia, there are some noteworthy exceptions:
+      </p>
+      <ul>
+       <li>
+        <a class="external text" href="https://wikimedia.org/api/rest_v1/">
+         wikimedia.org
+        </a>
+        offers cross-project information like page view metrics.
+       </li>
+       <li>
+        <a class="external text" href="https://en.wiktionary.org/api/rest_v1/">
+         en.wiktionary.org
+        </a>
+        offers an experimental
+        <a class="external text" href="https://en.wiktionary.org/api/rest_v1/#!/Page_content/get_page_definition_term">
+         definition end point
+        </a>
+        , exposing Wiktionary information as structured data. Support for other languages is
+        <a class="extiw" href="https://phabricator.wikimedia.org/T138709" title="phab:T138709">
+         under discussion
+        </a>
+        .
+       </li>
+      </ul>
+      <h2>
+       <span class="mw-headline" id="Versioning">
+        Versioning
+       </span>
+       <span class="mw-editsection">
+        <span class="mw-editsection-bracket">
+         [
+        </span>
+        <a href="/w/index.php?title=REST_API&amp;action=edit&amp;section=1" title="Edit section: Versioning">
+         edit
+        </a>
+        <span class="mw-editsection-bracket">
+         ]
+        </span>
+       </span>
+      </h2>
+      <p>
+       The REST API follows
+       <a href="/wiki/API_versioning" title="API versioning">
+        <b>
+         this API versioning policy
+        </b>
+       </a>
+       .
+      </p>
+      <h2>
+       <span class="mw-headline" id="Terms_and_conditions">
+        Terms and conditions
+       </span>
+       <span class="mw-editsection">
+        <span class="mw-editsection-bracket">
+         [
+        </span>
+        <a href="/w/index.php?title=REST_API&amp;action=edit&amp;section=2" title="Edit section: Terms and conditions">
+         edit
+        </a>
+        <span class="mw-editsection-bracket">
+         ]
+        </span>
+       </span>
+      </h2>
+      <ul>
+       <li>
+        By using the REST API, you agree to Wikimedia's general
+        <a class="extiw" href="https://wikimediafoundation.org/wiki/Terms_of_Use" title="foundation:Terms of Use">
+         Terms of Use
+        </a>
+        and
+        <a class="extiw" href="https://wikimediafoundation.org/wiki/Privacy_policy" title="foundation:Privacy policy">
+         Privacy Policy
+        </a>
+        .
+       </li>
+       <li>
+        To avoid impacting other API users, limit your clients to no more than 200 requests/s to this API overall. Many entry points additionally specify and enforce more restrictive rate limits.
+       </li>
+       <li>
+        We ask you to set a unique
+        <code>
+         User-Agent
+        </code>
+        or
+        <code>
+         Api-User-Agent
+        </code>
+        header that allows us to contact you quickly. Email addresses or URLs of contact pages work well.
+       </li>
+      </ul>
+      <h2>
+       <span class="mw-headline" id="See_also">
+        See also
+       </span>
+       <span class="mw-editsection">
+        <span class="mw-editsection-bracket">
+         [
+        </span>
+        <a href="/w/index.php?title=REST_API&amp;action=edit&amp;section=3" title="Edit section: See also">
+         edit
+        </a>
+        <span class="mw-editsection-bracket">
+         ]
+        </span>
+       </span>
+      </h2>
+      <ul>
+       <li>
+        <a class="extiw" href="https://blog.wikimedia.org/2017/04/06/wikimedia-rest-api/" title="wmfblog:2017/04/06/wikimedia-rest-api/">
+         Blog post announcing the 1.0 release
+        </a>
+        . Describes several important production use cases, discusses how the REST API fits into Wikimedia's larger technical strategy, and provides pointers to some implementation details.
+       </li>
+       <li>
+        The API is implemented using Node.js.
+        <a class="extiw" href="https://blog.wikimedia.org/2017/02/17/node-6-wikimedia/" title="wmfblog:2017/02/17/node-6-wikimedia/">
+         This blog post
+        </a>
+        describes our experience upgrading the REST API and other services to Node 6.
+       </li>
+       <li>
+        <a href="/wiki/Wikimedia_Services" title="Wikimedia Services">
+         Wikimedia Services team
+        </a>
+        , product owners for the REST API.
+       </li>
+      </ul>
+      <!-- 
+NewPP limit report
+Parsed by mw1274
+Cached time: 20170612031559
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.004 seconds
+Real time usage: 0.010 seconds
+Preprocessor visited node count: 17/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/500
+-->
+      <!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+     </div>
+     <!-- Saved in parser cache with key mediawikiwiki:pcache:idhash:490508-0!canonical and timestamp 20170612031559 and revision id 2442979
+ -->
+     <noscript>
+      <img alt="" height="1" src="//www.mediawiki.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" title="" width="1"/>
+     </noscript>
+    </div>
+    <div class="printfooter">
+     Retrieved from "
+     <a dir="ltr" href="https://www.mediawiki.org/w/index.php?title=REST_API&amp;oldid=2442979">
+      https://www.mediawiki.org/w/index.php?title=REST_API&amp;oldid=2442979
+     </a>
+     "
+    </div>
+    <div class="catlinks" data-mw="interface" id="catlinks">
+     <div class="mw-normal-catlinks" id="mw-normal-catlinks">
+      <a href="/wiki/Special:Categories" title="Special:Categories">
+       Category
+      </a>
+      :
+      <ul>
+       <li>
+        <a href="/wiki/Category:MediaWiki_APIs" title="Category:MediaWiki APIs">
+         MediaWiki APIs
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="visualClear">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <div aria-labelledby="p-personal-label" class="" id="p-personal" role="navigation">
+     <h3 id="p-personal-label">
+      Personal tools
+     </h3>
+     <ul>
+      <li class="active" id="pt-uls">
+       <a class="uls-trigger autonym" href="#">
+        English
+       </a>
+      </li>
+      <li id="pt-anonuserpage">
+       Not logged in
+      </li>
+      <li id="pt-anontalk">
+       <a accesskey="n" href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]">
+        Talk
+       </a>
+      </li>
+      <li id="pt-anoncontribs">
+       <a accesskey="y" href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]">
+        Contributions
+       </a>
+      </li>
+      <li id="pt-createaccount">
+       <a href="/w/index.php?title=Special:CreateAccount&amp;returnto=REST+API" title="You are encouraged to create an account and log in; however, it is not mandatory">
+        Create account
+       </a>
+      </li>
+      <li id="pt-login">
+       <a accesskey="o" href="/w/index.php?title=Special:UserLogin&amp;returnto=REST+API" title="You are encouraged to log in; however, it is not mandatory [o]">
+        Log in
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div id="left-navigation">
+     <div aria-labelledby="p-namespaces-label" class="vectorTabs" id="p-namespaces" role="navigation">
+      <h3 id="p-namespaces-label">
+       Namespaces
+      </h3>
+      <ul>
+       <li class="selected" id="ca-nstab-main">
+        <span>
+         <a accesskey="c" href="/wiki/REST_API" title="View the content page [c]">
+          Page
+         </a>
+        </span>
+       </li>
+       <li id="ca-talk">
+        <span>
+         <a accesskey="t" href="/wiki/Talk:REST_API" rel="discussion" title="Discussion about the content page [t]">
+          Discussion
+         </a>
+        </span>
+       </li>
+      </ul>
+     </div>
+     <div aria-labelledby="p-variants-label" class="vectorMenu emptyPortlet" id="p-variants" role="navigation">
+      <h3 id="p-variants-label">
+       <span>
+        Variants
+       </span>
+       <a href="#">
+       </a>
+      </h3>
+      <div class="menu">
+       <ul>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div id="right-navigation">
+     <div aria-labelledby="p-views-label" class="vectorTabs" id="p-views" role="navigation">
+      <h3 id="p-views-label">
+       Views
+      </h3>
+      <ul>
+       <li class="selected" id="ca-view">
+        <span>
+         <a href="/wiki/REST_API">
+          Read
+         </a>
+        </span>
+       </li>
+       <li id="ca-edit">
+        <span>
+         <a accesskey="e" href="/w/index.php?title=REST_API&amp;action=edit" title="Edit this page [e]">
+          Edit
+         </a>
+        </span>
+       </li>
+       <li class="collapsible" id="ca-history">
+        <span>
+         <a accesskey="h" href="/w/index.php?title=REST_API&amp;action=history" title="Past revisions of this page [h]">
+          View history
+         </a>
+        </span>
+       </li>
+      </ul>
+     </div>
+     <div aria-labelledby="p-cactions-label" class="vectorMenu emptyPortlet" id="p-cactions" role="navigation">
+      <h3 id="p-cactions-label">
+       <span>
+        More
+       </span>
+       <a href="#">
+       </a>
+      </h3>
+      <div class="menu">
+       <ul>
+       </ul>
+      </div>
+     </div>
+     <div id="p-search" role="search">
+      <h3>
+       <label for="searchInput">
+        Search
+       </label>
+      </h3>
+      <form action="/w/index.php" id="searchform">
+       <div id="simpleSearch">
+        <input accesskey="f" id="searchInput" name="search" placeholder="Search MediaWiki" title="Search MediaWiki [f]" type="search"/>
+        <input name="title" type="hidden" value="Special:Search"/>
+        <input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search the pages for this text" type="submit" value="Search"/>
+        <input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/wiki/MediaWiki" title="Visit the main page">
+     </a>
+    </div>
+    <div aria-labelledby="p-navigation-label" class="portal" id="p-navigation" role="navigation">
+     <h3 id="p-navigation-label">
+      Navigation
+     </h3>
+     <div class="body">
+      <ul>
+       <li id="n-mainpage-description">
+        <a accesskey="z" href="/wiki/MediaWiki" title="Visit the main page [z]">
+         Main page
+        </a>
+       </li>
+       <li id="n-mw-download">
+        <a href="/wiki/Download">
+         Get MediaWiki
+        </a>
+       </li>
+       <li id="n-mw-extensions">
+        <a href="/wiki/Special:MyLanguage/Category:Extensions">
+         Get extensions
+        </a>
+       </li>
+       <li id="n-blog-text">
+        <a href="https://blog.wikimedia.org/c/technology/">
+         Tech blog
+        </a>
+       </li>
+       <li id="n-mw-contribute">
+        <a href="/wiki/Special:MyLanguage/How_to_contribute">
+         Contribute
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div aria-labelledby="p-support-label" class="portal" id="p-support" role="navigation">
+     <h3 id="p-support-label">
+      Support
+     </h3>
+     <div class="body">
+      <ul>
+       <li id="n-help">
+        <a href="/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">
+         User help
+        </a>
+       </li>
+       <li id="n-mw-faq">
+        <a href="/wiki/Special:MyLanguage/Manual:FAQ">
+         FAQ
+        </a>
+       </li>
+       <li id="n-mw-manual">
+        <a href="/wiki/Special:MyLanguage/Manual:Contents">
+         Technical manual
+        </a>
+       </li>
+       <li id="n-mw-supportdesk">
+        <a href="/wiki/Project:Support_desk">
+         Support desk
+        </a>
+       </li>
+       <li id="n-mw-communication">
+        <a href="/wiki/Special:MyLanguage/Communication">
+         Communication
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div aria-labelledby="p-development-label" class="portal" id="p-development" role="navigation">
+     <h3 id="p-development-label">
+      Development
+     </h3>
+     <div class="body">
+      <ul>
+       <li id="n-mw-bugtracker">
+        <a href="/wiki/Special:MyLanguage/Phabricator">
+         Bug tracker
+        </a>
+       </li>
+       <li id="n-mw-repo-browse">
+        <a href="https://phabricator.wikimedia.org/diffusion/MW/">
+         Code repository
+        </a>
+       </li>
+       <li id="n-phpdoc">
+        <a href="//doc.wikimedia.org/mediawiki-core/master/php/">
+         Code docs
+        </a>
+       </li>
+       <li id="n-svn-statistics">
+        <a href="/wiki/Development_statistics">
+         Statistics
+        </a>
+       </li>
+       <li id="n-mw-wikimedia-technology">
+        <a href="/wiki/Special:MyLanguage/Wikimedia_Technology">
+         Wikimedia technology
+        </a>
+       </li>
+       <li id="n-mw-wikimedia-audiences">
+        <a href="/wiki/Special:MyLanguage/Wikimedia_Audiences">
+         Wikimedia audiences
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div aria-labelledby="p-MediaWiki.org-label" class="portal" id="p-MediaWiki.org" role="navigation">
+     <h3 id="p-MediaWiki.org-label">
+      MediaWiki.org
+     </h3>
+     <div class="body">
+      <ul>
+       <li id="n-cat-browser">
+        <a href="/wiki/Category:Top_level">
+         Browse categories
+        </a>
+       </li>
+       <li id="n-portal">
+        <a href="/wiki/Project:Help" title="About the project, what you can do, where to find things">
+         Community portal
+        </a>
+       </li>
+       <li id="n-recentchanges">
+        <a accesskey="r" href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]">
+         Recent changes
+        </a>
+       </li>
+       <li id="n-mw-translate">
+        <a href="/wiki/Special:LanguageStats">
+         Translate content
+        </a>
+       </li>
+       <li id="n-randompage">
+        <a accesskey="x" href="/wiki/Special:Random" title="Load a random page [x]">
+         Random page
+        </a>
+       </li>
+       <li id="n-mw-discussion">
+        <a href="/wiki/Project:Current_issues">
+         Current issues
+        </a>
+       </li>
+       <li id="n-mw-sandbox">
+        <a href="/wiki/Project:Sandbox">
+         Sandbox
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div aria-labelledby="p-coll-print_export-label" class="portal" id="p-coll-print_export" role="navigation">
+     <h3 id="p-coll-print_export-label">
+      Print/export
+     </h3>
+     <div class="body">
+      <ul>
+       <li id="coll-create_a_book">
+        <a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=REST+API">
+         Create a book
+        </a>
+       </li>
+       <li id="coll-download-as-rdf2latex">
+        <a href="/w/index.php?title=Special:ElectronPdf&amp;page=REST+API&amp;action=show-selection-screen&amp;coll-download-url=%2Fw%2Findex.php%3Ftitle%3DSpecial%3ABook%26bookcmd%3Drender_article%26arttitle%3DREST%2BAPI%26returnto%3DREST%2BAPI%26oldid%3D2442979%26writer%3Drdf2latex">
+         Download as PDF
+        </a>
+       </li>
+       <li id="t-print">
+        <a accesskey="p" href="/w/index.php?title=REST_API&amp;printable=yes" title="Printable version of this page [p]">
+         Printable version
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div aria-labelledby="p-tb-label" class="portal" id="p-tb" role="navigation">
+     <h3 id="p-tb-label">
+      Tools
+     </h3>
+     <div class="body">
+      <ul>
+       <li id="t-whatlinkshere">
+        <a accesskey="j" href="/wiki/Special:WhatLinksHere/REST_API" title="A list of all wiki pages that link here [j]">
+         What links here
+        </a>
+       </li>
+       <li id="t-recentchangeslinked">
+        <a accesskey="k" href="/wiki/Special:RecentChangesLinked/REST_API" rel="nofollow" title="Recent changes in pages linked from this page [k]">
+         Related changes
+        </a>
+       </li>
+       <li id="t-specialpages">
+        <a accesskey="q" href="/wiki/Special:SpecialPages" title="A list of all special pages [q]">
+         Special pages
+        </a>
+       </li>
+       <li id="t-permalink">
+        <a href="/w/index.php?title=REST_API&amp;oldid=2442979" title="Permanent link to this revision of the page">
+         Permanent link
+        </a>
+       </li>
+       <li id="t-info">
+        <a href="/w/index.php?title=REST_API&amp;action=info" title="More information about this page">
+         Page information
+        </a>
+       </li>
+       <li id="t-cite">
+        <a href="/w/index.php?title=Special:CiteThisPage&amp;page=REST_API&amp;id=2442979" title="Information on how to cite this page">
+         Cite this page
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div aria-labelledby="p-lang-label" class="portal" id="p-lang" role="navigation">
+     <h3 id="p-lang-label">
+      In other languages
+     </h3>
+     <div class="body">
+      <ul>
+      </ul>
+      <div class="after-portlet after-portlet-lang">
+       <span class="wb-langlinks-add wb-langlinks-link">
+        <a class="wbc-editpage" href="https://www.wikidata.org/wiki/Special:NewItem?site=mediawikiwiki&amp;page=REST+API" title="Add interlanguage links">
+         Add links
+        </a>
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="footer" role="contentinfo">
+   <ul id="footer-info">
+    <li id="footer-info-lastmod">
+     This page was last edited on 11 April 2017, at 21:29.
+    </li>
+    <li id="footer-info-copyright">
+     Text is available under the
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/">
+      Creative Commons Attribution-ShareAlike License
+     </a>
+     ;
+additional terms may apply.
+See
+     <a href="https://wikimediafoundation.org/wiki/Terms_of_Use">
+      Terms of Use
+     </a>
+     for details.
+    </li>
+   </ul>
+   <ul id="footer-places">
+    <li id="footer-places-privacy">
+     <a class="extiw" href="https://wikimediafoundation.org/wiki/Privacy_policy" title="wmf:Privacy policy">
+      Privacy policy
+     </a>
+    </li>
+    <li id="footer-places-about">
+     <a href="/wiki/Project:About" title="Project:About">
+      About MediaWiki.org
+     </a>
+    </li>
+    <li id="footer-places-disclaimer">
+     <a href="/wiki/Project:General_disclaimer" title="Project:General disclaimer">
+      Disclaimers
+     </a>
+    </li>
+    <li id="footer-places-wm-codeofconduct">
+     <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Code_of_Conduct">
+      Code of Conduct
+     </a>
+    </li>
+    <li id="footer-places-developers">
+     <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">
+      Developers
+     </a>
+    </li>
+    <li id="footer-places-cookiestatement">
+     <a href="https://wikimediafoundation.org/wiki/Cookie_statement">
+      Cookie statement
+     </a>
+    </li>
+    <li id="footer-places-mobileview">
+     <a class="noprint stopMobileRedirectToggle" href="//m.mediawiki.org/w/index.php?title=REST_API&amp;mobileaction=toggle_view_mobile">
+      Mobile view
+     </a>
+    </li>
+   </ul>
+   <ul class="noprint" id="footer-icons">
+    <li id="footer-copyrightico">
+     <a href="https://wikimediafoundation.org/">
+      <img alt="Wikimedia Foundation" height="31" src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88"/>
+     </a>
+    </li>
+    <li id="footer-poweredbyico">
+     <a href="//www.mediawiki.org/">
+      <img alt="Powered by MediaWiki" height="31" src="/static/images/poweredby_mediawiki_88x31.png" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88"/>
+     </a>
+    </li>
+   </ul>
+   <div style="clear:both">
+   </div>
+  </div>
+  <script>
+   (window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.004","walltime":"0.010","ppvisitednodes":{"value":17,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw1274","timestamp":"20170612031559","ttl":2592000,"transientcontent":false}}});});
+  </script>
+  <script>
+   (window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":51,"wgHostname":"mw1255"});});
+  </script>
+ </body>
+</html>

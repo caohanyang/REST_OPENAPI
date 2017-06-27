@@ -1,12 +1,25 @@
 {
   "paths": {
-    "https://api-upload.picplz.com/api/v2/upload_basic": {
-      "POST": {}
+    "ttps://api.picplz.com/api/v2/collection/pic": {
+      "DELETE": {}
     },
-    "https://YOUR_REGISTERED_REDIRECT_URI": {
-      "get": {}
+    "ttps://api.picplz.com/api/v2/user/follow": {
+      "DELETE": {},
+      "GET": {}
     },
-    "https://api.picplz.com/api/v2/pic/comment": {
+    "ttps://api.picplz.com/api/v2/pic/comment": {
+      "DELETE": {},
+      "post": {},
+      "GET": {}
+    },
+    "ttps://api.picplz.com/api/v2/following": {
+      "GET": {}
+    },
+    "ttps://api.picplz.com/api/v2/pic/like": {
+      "DELETE": {},
+      "Post": {}
+    },
+    "ttps://api.picplz.com/api/v2/user": {
       "DELETE": {}
     }
   },

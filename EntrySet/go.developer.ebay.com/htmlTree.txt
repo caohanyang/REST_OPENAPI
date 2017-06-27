@@ -1,0 +1,580 @@
+
+                                  /-/ebay-logos.zip
+                                 |
+                                 |                /-/enumindex.html
+                                 |               |
+                                 |               |--/fieldindex.html
+                                 |               |
+                                 |               |--/fulfillment_policy-fulfillmentpolicyid__delete.html
+                                 |               |
+                                 |               |--/fulfillment_policy-fulfillmentpolicyid__get.html
+                                 |               |
+                                 |               |--/fulfillment_policy-fulfillmentpolicyid__put.html
+                                 |               |
+                                 |               |--/fulfillment_policy__get.html
+                                 |               |
+                                 |               |--/fulfillment_policy__post.html
+                                 |               |
+                                 |               |--/fulfillment_policy_get_by_policy_name__get.html
+                                 |               |
+                                 |               |--/index.html
+                                 |               |
+                                 |               |--/payment_policy-payment_policy_id__delete.html
+                                 |               |
+                                 |               |--/payment_policy-payment_policy_id__put.html
+                                 |               |
+                                 |               |--/payment_policy-paymentpolicyid__get.html
+                                 |               |
+                                 |               |--/payment_policy__get.html
+                                 |               |
+                                 |               |--/payment_policy__post.html
+                                 |               |
+                                 |               |--/payment_policy_get_by_policy_name__get.html
+                                 |               |
+                                 |               |--/privilege__get.html
+                                 |               |
+                                 |               |--/program_get_opted_in_programs__get.html
+                                 |               |
+                                 |               |--/program_opt_in__post.html
+                                 |               |
+                                 |               |--/program_opt_out__post.html
+                                 |               |
+                                 |               |--/rate_table__get.html
+                                 |               |
+                                 |               |--/return_policy-return_policy_id__delete.html
+                                 |               |
+                                 |               |--/return_policy-return_policy_id__put.html
+                                 |               |
+                                 |               |--/return_policy-returnpolicyid__get.html
+                                 |               |
+                                 |               |--/return_policy__get.html
+                                 |               |
+                                 |               |--/return_policy__post.html
+                                 |               |
+                                 |               |--/return_policy_get_by_policy_name__get.html
+                                 |               |
+                                 |               |--/sales_tax-countrycode-jurisdictionid__delete.html
+                                 |               |
+                                 |               |--/sales_tax-countrycode-jurisdictionid__get.html
+                                 |               |
+                                 |               |--/sales_tax-countrycode-jurisdictionid__put.html
+                                 |               |
+                                 |               |--/sales_tax__get.html
+                                 |               |
+                                 |               |        /-/fulfillment_policy-fulfillmentpolicyid__delete_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/fulfillment_policy-fulfillmentpolicyid__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/fulfillment_policy-fulfillmentpolicyid__put_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/fulfillment_policy__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/fulfillment_policy__post_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/fulfillment_policy__post_detailed_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/fulfillment_policy_get_by_policy_name__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/payment_policy-payment_policy_id__delete_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/payment_policy-payment_policy_id__put_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/payment_policy-paymentpolicyid__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/payment_policy__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/payment_policy__post_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/payment_policy__post_detailed_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/payment_policy__post_vehicle_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/payment_policy_get_by_policy_name__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/privilege__get_basic_in_url_json.txt
+                                 |               |-/Samples
+                                 |               |       |--/program_get_opted_in_programs__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/program_opt_in__post_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/program_opt_out__post_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/rate_table__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/return_policy-return_policy_id__delete_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/return_policy-return_policy_id__put_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/return_policy-returnpolicyid__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/return_policy__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/return_policy__post_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/return_policy__post_detailed_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/return_policy__post_minimal2_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/return_policy_get_by_policy_name__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/sales_tax-countrycode-jurisdictionid__delete_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/sales_tax-countrycode-jurisdictionid__get_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |       |--/sales_tax-countrycode-jurisdictionid__put_basic_in_url_json.txt
+                                 |               |       |
+                                 |               |        \-/sales_tax__get_basic_in_url_json.txt
+                                 |               |
+                                 |               |      /-/flfllmnt_plcy-flfllmntplcyd__gt.Rspns.hndlngTm.nt.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__gt.Rspns.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__gt.Rspns.shppngOptns.nsrncF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__gt.Rspns.shppngOptns.pckgHndlngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__gt.Rspns.shppngOptns.shppngSrvcs.cshOnDlvryF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__gt.Rspns.shppngOptns.shppngSrvcs.ddtnlShppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__gt.Rspns.shppngOptns.shppngSrvcs.shppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__gt.Rspns.shppngOptns.shppngSrvcs.srchrg.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rqst.hndlngTm.nt.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rqst.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rqst.shppngOptns.nsrncF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rqst.shppngOptns.pckgHndlngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rqst.shppngOptns.shppngSrvcs.cshOnDlvryF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rqst.shppngOptns.shppngSrvcs.ddtnlShppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rqst.shppngOptns.shppngSrvcs.shppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rqst.shppngOptns.shppngSrvcs.srchrg.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rspns.hndlngTm.nt.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rspns.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rspns.shppngOptns.nsrncF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rspns.shppngOptns.pckgHndlngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rspns.shppngOptns.shppngSrvcs.cshOnDlvryF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rspns.shppngOptns.shppngSrvcs.ddtnlShppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rspns.shppngOptns.shppngSrvcs.shppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy-flfllmntplcyd__pt.Rspns.shppngOptns.shppngSrvcs.srchrg.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__gt.Rspns.flfllmntPlcs.hndlngTm.nt.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__gt.Rspns.flfllmntPlcs.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__gt.Rspns.flfllmntPlcs.shppngOptns.nsrncF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__gt.Rspns.flfllmntPlcs.shppngOptns.pckgHndlngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__gt.Rspns.flfllmntPlcs.shppngOptns.shppngSrvcs.cshOnDlvryF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__gt.Rspns.flfllmntPlcs.shppngOptns.shppngSrvcs.ddtnlShppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__gt.Rspns.flfllmntPlcs.shppngOptns.shppngSrvcs.shppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__gt.Rspns.flfllmntPlcs.shppngOptns.shppngSrvcs.srchrg.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rqst.hndlngTm.nt.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rqst.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rqst.shppngOptns.nsrncF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rqst.shppngOptns.pckgHndlngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rqst.shppngOptns.shppngSrvcs.cshOnDlvryF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rqst.shppngOptns.shppngSrvcs.ddtnlShppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rqst.shppngOptns.shppngSrvcs.shppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rqst.shppngOptns.shppngSrvcs.srchrg.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rspns.hndlngTm.nt.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rspns.mrktplcId.html
+                                 |-/api-ref/account    |
+                                 |               |     |--/flfllmnt_plcy__pst.Rspns.shppngOptns.nsrncF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rspns.shppngOptns.pckgHndlngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rspns.shppngOptns.shppngSrvcs.cshOnDlvryF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rspns.shppngOptns.shppngSrvcs.ddtnlShppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rspns.shppngOptns.shppngSrvcs.shppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy__pst.Rspns.shppngOptns.shppngSrvcs.srchrg.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy_gt_by_plcy_nm__gt.Rspns.hndlngTm.nt.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy_gt_by_plcy_nm__gt.Rspns.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy_gt_by_plcy_nm__gt.Rspns.shppngOptns.nsrncF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy_gt_by_plcy_nm__gt.Rspns.shppngOptns.pckgHndlngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy_gt_by_plcy_nm__gt.Rspns.shppngOptns.shppngSrvcs.cshOnDlvryF.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy_gt_by_plcy_nm__gt.Rspns.shppngOptns.shppngSrvcs.ddtnlShppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy_gt_by_plcy_nm__gt.Rspns.shppngOptns.shppngSrvcs.shppngCst.crrncy.html
+                                 |               |     |
+                                 |               |     |--/flfllmnt_plcy_gt_by_plcy_nm__gt.Rspns.shppngOptns.shppngSrvcs.srchrg.crrncy.html
+                                 |               |     |
+                                 |               |     |--/prvlg__gt.Rspns.sllngLmt.mnt.crrncy.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rqst.dpst.dIn.nt.html
+                                 |               |-/extra
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rqst.dpst.mnt.crrncy.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rqst.dpst.pymntMthds.pymntMthdTyp.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rqst.fllPymntDIn.nt.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rqst.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rqst.pymntMthds.pymntMthdTyp.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rspns.dpst.dIn.nt.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rspns.dpst.mnt.crrncy.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rspns.dpst.pymntMthds.pymntMthdTyp.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rspns.fllPymntDIn.nt.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rspns.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymnt_plcy_d__pt.Rspns.pymntMthds.pymntMthdTyp.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymntplcyd__gt.Rspns.dpst.dIn.nt.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymntplcyd__gt.Rspns.dpst.mnt.crrncy.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymntplcyd__gt.Rspns.dpst.pymntMthds.pymntMthdTyp.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymntplcyd__gt.Rspns.fllPymntDIn.nt.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymntplcyd__gt.Rspns.mrktplcId.html
+                                 |               |     |
+                                 |               |     |--/pymnt_plcy-pymntplcyd__gt.Rspns.pymntMthds.pymntMthdTyp.html
+                                 |               |     |
+   /developer.ebay.com/devzone/rest              |     |--/pymnt_plcy__gt.Rspns.pymntPlcs.dpst.dIn.nt.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__gt.Rspns.pymntPlcs.dpst.mnt.crrncy.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__gt.Rspns.pymntPlcs.dpst.pymntMthds.pymntMthdTyp.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__gt.Rspns.pymntPlcs.fllPymntDIn.nt.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__gt.Rspns.pymntPlcs.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__gt.Rspns.pymntPlcs.pymntMthds.pymntMthdTyp.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rqst.dpst.dIn.nt.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rqst.dpst.mnt.crrncy.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rqst.dpst.pymntMthds.pymntMthdTyp.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rqst.fllPymntDIn.nt.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rqst.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rqst.pymntMthds.pymntMthdTyp.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rspns.dpst.dIn.nt.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rspns.dpst.mnt.crrncy.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rspns.dpst.pymntMthds.pymntMthdTyp.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rspns.fllPymntDIn.nt.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rspns.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy__pst.Rspns.pymntMthds.pymntMthdTyp.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy_gt_by_plcy_nm__gt.Rspns.dpst.dIn.nt.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy_gt_by_plcy_nm__gt.Rspns.dpst.mnt.crrncy.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy_gt_by_plcy_nm__gt.Rspns.dpst.pymntMthds.pymntMthdTyp.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy_gt_by_plcy_nm__gt.Rspns.fllPymntDIn.nt.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy_gt_by_plcy_nm__gt.Rspns.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/pymnt_plcy_gt_by_plcy_nm__gt.Rspns.pymntMthds.pymntMthdTyp.html
+  |                              |               |     |
+  |                              |               |     |--/rt_tbl__gt.Rspns.rtTbls.cntryCd.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy-rtrn_plcy_d__pt.Rqst.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy-rtrn_plcy_d__pt.Rqst.rtrnPrd.nt.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy-rtrn_plcy_d__pt.Rspns.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy-rtrn_plcy_d__pt.Rspns.rtrnPrd.nt.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy-rtrnplcyd__gt.Rspns.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy-rtrnplcyd__gt.Rspns.rtrnPrd.nt.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy__gt.Rspns.rtrnPlcs.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy__gt.Rspns.rtrnPlcs.rtrnPrd.nt.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy__pst.Rqst.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy__pst.Rqst.rtrnPrd.nt.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy__pst.Rspns.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy__pst.Rspns.rtrnPrd.nt.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy_gt_by_plcy_nm__gt.Rspns.mrktplcId.html
+  |                              |               |     |
+  |                              |               |     |--/rtrn_plcy_gt_by_plcy_nm__gt.Rspns.rtrnPrd.nt.html
+  |                              |               |     |
+  |                              |               |     |--/sls_tx-cntrycd-jrsdctnd__gt.Rspns.cntryCd.html
+  |                              |               |     |
+  |                              |               |      \-/sls_tx__gt.Rspns.slsTxs.cntryCd.html
+  |                              |               |
+  |                              |               |      /-/Amount.html
+  |                              |               |     |
+  |                              |               |     |--/CategoryType.html
+  |                              |               |     |
+  |                              |               |     |--/CategoryTypeEnum.html
+  |                              |               |     |
+  |                              |               |     |--/CountryCodeEnum.html
+  |                              |               |     |
+  |                              |               |     |--/CurrencyCodeEnum.html
+  |                              |               |     |
+  |                              |               |     |--/Deposit.html
+  |                              |               |     |
+  |                              |               |     |--/ErrorDetailV3.html
+  |                              |               |     |
+  |                              |               |     |--/ErrorParameterV3.html
+  |                              |               |     |
+  |                              |               |     |--/ExternalPaymentMethod.html
+  |                              |               |     |
+  |                              |               |     |--/ExternalPaymentMethodTypeEnum.html
+  |                              |               |     |
+  |                              |               |     |--/FulfillmentPolicy.html
+  |                              |               |     |
+  |                              |               |     |--/FulfillmentPolicyRequest.html
+  |                              |               |     |
+  |                              |               |     |--/FulfillmentPolicyResponse.html
+  |                              |               |     |
+  |                              |               |     |--/InventorySizing.html
+  |                              |               |     |
+  |                              |               |     |--/InventorySnapshot.html
+  |                              |               |     |
+  |                              |               |     |--/LookbackPeriod.html
+  |                              |               |     |
+  |                              |               |     |--/MarketplaceIdEnum.html
+  |                              |               |     |
+  |                              |               |     |--/MerchantExternalProfile.html
+  |                              |               |     |
+  |                              |               |     |--/PaymentInstrumentBrandEnum.html
+  |                              |               |     |
+  |                              |               |     |--/PaymentMethod.html
+  |                              |               |     |
+  |                              |               |     |--/PaymentMethodTypeEnum.html
+  |                              |               |     |
+  |                              |               |     |--/PaymentPolicy.html
+  |                              |               |     |
+  |                              |               |     |--/PaymentPolicyRequest.html
+  |                              |               |     |
+  |                              |               |     |--/PaymentPolicyResponse.html
+  |                              |               |     |
+  |                              |               |     |--/Program.html
+  |                              |               |     |
+  |                              |               |     |--/ProgramTypeEnum.html
+  |                              |               |     |
+  |                              |               |     |--/Programs.html
+  |                              |               |     |
+  |                              |               |     |--/RateTable.html
+  |                              |               |     |
+  |                              |               |     |--/RateTableResponse.html
+  |                              |               |     |
+  |                              |               |     |--/RecipientAccountReference.html
+  |                              |                \/types
+  |                              |                     |--/RecipientAccountReferenceTypeEnum.html
+  |                              |                     |
+  |                              |                     |--/RefundMethodEnum.html
+  |                              |                     |
+  |                              |                     |--/Region.html
+  |                              |                     |
+  |                              |                     |--/RegionSet.html
+  |                              |                     |
+  |                              |                     |--/RegionTypeEnum.html
+--|                              |                     |
+  |                              |                     |--/ReturnMethodEnum.html
+  |                              |                     |
+  |                              |                     |--/ReturnPolicy.html
+  |                              |                     |
+  |                              |                     |--/ReturnPolicyRequest.html
+  |                              |                     |
+  |                              |                     |--/ReturnPolicyResponse.html
+  |                              |                     |
+  |                              |                     |--/ReturnShippingCostPayerEnum.html
+  |                              |                     |
+  |                              |                     |--/ReturnSnapshot.html
+  |                              |                     |
+  |                              |                     |--/SalesTax.html
+  |                              |                     |
+  |                              |                     |--/SalesTaxBase.html
+  |                              |                     |
+  |                              |                     |--/SalesTaxes.html
+  |                              |                     |
+  |                              |                     |--/SellingLimit.html
+  |                              |                     |
+  |                              |                     |--/SellingPrivileges.html
+  |                              |                     |
+  |                              |                     |--/SetFulfillmentPolicyResponse.html
+  |                              |                     |
+  |                              |                     |--/SetPaymentPolicyResponse.html
+  |                              |                     |
+  |                              |                     |--/SetReturnPolicyResponse.html
+  |                              |                     |
+  |                              |                     |--/ShippingCostTypeEnum.html
+  |                              |                     |
+  |                              |                     |--/ShippingOption.html
+  |                              |                     |
+  |                              |                     |--/ShippingOptionTypeEnum.html
+  |                              |                     |
+  |                              |                     |--/ShippingService.html
+  |                              |                     |
+  |                              |                     |--/SoldAggregatedMetrics.html
+  |                              |                     |
+  |                              |                     |--/TimeDuration.html
+  |                              |                     |
+  |                              |                     |--/TimeDurationUnitEnum.html
+  |                              |                     |
+  |                              |                     |--/TransactionSnapshot.html
+  |                              |                     |
+  |                              |                     |--/TransactionVolume.html
+  |                              |                     |
+  |                              |                     |--/index.html
+  |                              |                     |
+  |                              |                      \-/simpletypes.html
+  |                              |
+  |                              |                      /-/buy-application-example.html
+  |                              |                     |
+  |                              |                     |--/buy-categories.html
+  |                              |                     |
+  |                              |                     |--/buy-overview.html
+  |                              |                     |
+  |                              |                     |--/buy-requirements.html
+  |                              |-/buy/content/buying-ig
+  |                              |                     |--/buying-ig-landing.html
+  |                              |                     |
+  |                              |                     |--/buying-ig.html
+  |                              |                     |
+  |                              |                     |--/ref-buy-browse-filters.html
+  |                              |                     |
+  |                              |                      \-/ref-buy-negative-testing.html
+  |                              |
+  |                              |                  /-/creating-edp-account.html
+  |                              |                 |
+  |                              |                 |--/ebay-rest-landing.html
+  |                              |                 |
+  |                              |                 |--/handling-error-messages.html
+  |                              |                 |
+  |                              |                 |--/oauth-gen-app-token.html
+  |                              |                 |
+  |                              |                 |--/oauth-gen-user-token.html
+  |                              |                 |
+  |                              |                 |--/oauth-quick-ref-app-tokens.html
+  |                              |                 |
+  |                              |                 |--/oauth-quick-ref-user-tokens.html
+  |                              |                 |
+  |                              |                 |--/oauth-tokens.html
+  |                              |                 |
+  |                              |-/ebay-rest/content-/rest-request-components.html
+  |                              |                 |
+  |                              |                 |--/rest-response-components.html
+  |                              |                 |
+  |                              |                 |--/sandbox-environment.html
+  |                              |                 |
+  |                              |                 |--/sandbox-landing.html
+  |                              |                 |
+  |                              |                 |--/sandbox-test-users.html
+  |                              |                 |
+  |                              |                 |--/sandbox-troubleshooting-going-live.html
+  |                              |                 |
+  |                              |                 |--/security.html
+  |                              |                 |
+  |                              |                 |--/support.html
+  |                              |                 |
+  |                              |                  \-/versioning.html
+  |                              |
+  |                              |                        /-/dev-app.html
+  |                              |                       |
+  |                              |                       |--/sell-categories.html
+  |                              |                       |
+  |                              |                       |--/selling-ig-landing.html
+  |                              |                       |
+  |                              |                       |                            /-/business-policies.html
+  |                              |                       |                           |
+  |                              |                       |                           |--/configuring-seller-accounts.html
+  |                              |                       |                           |
+  |                              |                       |-/configuring-seller-accounts-/get-selling-limits.html
+  |                              |                       |                           |
+  |                              |                       |                           |--/ht_create-a-tax-table.html
+  |                              |                       |                           |
+  |                              |                       |                            \-/tax-tables.html
+  |                              |                       |
+  |                              |                       |          /-/bulk-updates.html
+  |                              |                       |         |
+  |                              |                       |         |--/expected-listing-fees.html
+  |                              |                       |         |
+  |                              |                       |         |--/inventory-item-groups.html
+  |                              |                       |         |
+  |                              |                       |         |--/inventory-item-to-offer.html
+  |                              |                       |-/inventory
+  |                               \/sell/content/selling-ig        |--/managing-inventory-and-offers.html
+  |                                                      |         |
+  |                                                      |         |--/managing-inventory-items.html
+  |                                                      |         |
+  |                                                      |         |--/managing-inventory-locations.html
+  |                                                      |         |
+  |                                                      |          \-/managing-offers.html
+  |                                                      |
+  |                                                      |          /-/marketing-seller-inventory.html
+  |                                                      |         |
+  |                                                      |-/marketing-/promoted-listings.html
+  |                                                      |         |
+  |                                                      |          \-/promotions.html
+  |                                                      |
+  |                                                      |       /-/discovering-unfulfilled-orders.html
+  |                                                      |      |
+  |                                                      |      |--/handling-orders.html
+  |                                                      |      |
+  |                                                      |-/orders-/handling-unfulfilled-lineitems.html
+  |                                                      |      |
+  |                                                      |      |--/managing-fulfillments.html
+  |                                                      |      |
+  |                                                      |       \-/order-fulfillment.html
+  |                                                      |
+  |                                                       \/performance-/analyzing-performance.html
+  |
+   \go.developer.ebay.com-/api-documentation

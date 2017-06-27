@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7 not-logged-in "> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8 not-logged-in "> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9 not-logged-in "> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js not-logged-in " lang="en">
+ <!--<![endif]-->
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   Instagram Developer Documentation
+  </title>
+  <meta content="noimageindex" name="robots"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="#000000" name="theme-color"/>
+  <meta content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" id="viewport" name="viewport"/>
+  <script type="text/javascript">
+   (function() {
+            var docElement = document.documentElement;
+            var classRE = new RegExp('(^|\\s)no-js(\\s|$)');
+            var className = docElement.className;
+            docElement.className = className.replace(classRE, '$1js$2');
+        })();
+  </script>
+  <link href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/932e4d9af891.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+  <link href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/004705c9353f.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+  <link href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/82467bc9bcce.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/515cb4eeeeee.png" rel="apple-touch-icon-precomposed" sizes="167x167"/>
+  <link href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/94fd767f257b.png" rel="apple-touch-icon-precomposed" sizes="180x180"/>
+  <link href="/static/images/ico/favicon-192.png/b407fa101800.png" rel="icon" sizes="192x192"/>
+  <link color="#262626" href="/static/images/ico/favicon.svg/9d8680ab8a3c.svg" rel="mask-icon"/>
+  <link href="/static/images/ico/favicon.ico/dfa85bb1fd63.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/static/styles/developer/developer-main.css/5e5d90bbf1bc.css" rel="stylesheet" type="text/css"/>
+  <script src="/static/scripts/jquery.js/213ba890e802.js" type="text/javascript">
+  </script>
+  <script src="/static/scripts/bluebar.js/57733d51aed5.js" type="text/javascript">
+  </script>
+  <script src="/static/scripts/navigation.js/a98ac49433f4.js" type="text/javascript">
+  </script>
+  <script>
+   $(document).ready(function() {
+    $('#top_bar_right .top-bar-actions').prepend("<li class='manage-clients link-settings'><a class='' href='/developer/clients/manage/'>Manage Clients<i></i></a></li>");
+    $('#top_bar_right .top-bar-actions').prepend("<li class='testing-clients link-settings'><a class='' href='/developer/clients/sandbox_invites/'>Sandbox Invites<i></i></a></li>");
+  });
+  </script>
+ </head>
+ <body class="sidebar-page">
+  <div class="root -cx-PRIVATE-Page__root">
+   <div class="page -cx-PRIVATE-Page__body">
+    <header class="top-bar -cx-PRIVATE-NavBar__root">
+     <div class="wrapper -cx-PRIVATE-NavBar__wrapper">
+      <hgroup class="wrapper -cx-PRIVATE-NavBar__logoGroup">
+       <div class="logo -cx-PRIVATE-NavBar__logo">
+        <a href="/">
+         Instagram
+        </a>
+       </div>
+      </hgroup>
+      <div class="top-bar-right account-state" id="top_bar_right">
+       <ul class="top-bar-actions -cx-PRIVATE-NavBar__topBarActions" id="top_bar_actions">
+        <li class="link-signin -cx-PRIVATE-NavBar__signIn" id="link_profile">
+         <a href="/accounts/login/?next=/developer/authentication/">
+          <i>
+          </i>
+          <strong class="-cx-PRIVATE-NavBar__signInText">
+           Log in
+          </strong>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </header>
+    <!-- .top-bar -->
+    <div class="main -cx-PRIVATE-Page__main">
+     <div class="sidebar -cx-PRIVATE-SidebarLayout__root">
+      <div class="wrapper -cx-PRIVATE-SidebarLayout__navWrapper">
+       <nav class="sidebar-nav -cx-PRIVATE-SidebarLayout__nav">
+        <div class="sidebar-content -cx-PRIVATE-SidebarLayout__content">
+         <form action="/developer/search/" class="quick-search" method="GET">
+          <a class="disclosure-down" href="#">
+          </a>
+          <input name="q" placeholder="Search Documentation" type="text"/>
+          <input type="submit"/>
+         </form>
+         <ul>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/">
+            Overview
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li class="active -cx-PRIVATE-Navigation__active">
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/authentication/">
+            Authentication
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/authorization/">
+            Login Permissions
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/review/">
+            Permissions Review
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/sandbox/">
+            Sandbox Mode
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/secure-api-requests/">
+            Secure Requests
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/endpoints/">
+            Endpoints
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/limits/">
+            Rate Limits
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/subscriptions/">
+            Subscriptions
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/embedding/">
+            Embedding
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/mobile-sharing/">
+            Mobile Sharing
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/libraries/">
+            Libraries
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/support/">
+            Support
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/developer/changelog/">
+            Changelog
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="-cx-PRIVATE-Navigation__navLink" href="/about/legal/terms/api/">
+            Platform Policy
+            <i class="disclosure">
+            </i>
+           </a>
+          </li>
+         </ul>
+        </div>
+       </nav>
+      </div>
+     </div>
+     <div class="wrapper -cx-PRIVATE-SidebarLayout__contentWrapper">
+      <section class="nav-page-content -cx-PRIVATE-SidebarLayout__pageContent" role="main">
+       <h1>
+        Authentication
+       </h1>
+       <p>
+        The Instagram API uses the
+        <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-12">
+         OAuth 2.0 protocol
+        </a>
+        for simple, but effective authentication and authorization. OAuth 2.0 is much easier to use than previous schemes and developers can start using the Instagram API almost immediately. The one thing to keep in mind is that all requests to the API must be made over SSL (http
+        <strong>
+         s
+        </strong>
+        :// not http://).
+       </p>
+       <h3>
+        Do you need to authenticate?
+       </h3>
+       <p>
+        The Instagram API requires authentication - specifically requests made on behalf of a user. Authenticated requests require an
+        <strong>
+         access_token
+        </strong>
+        . These tokens are unique to a user and should be stored securely. Access tokens may expire at any time in the future.
+       </p>
+       <h2>
+        Receiving an access_token
+       </h2>
+       <p>
+        In order to receive an
+        <strong>
+         access_token
+        </strong>
+        , you must do the following:
+       </p>
+       <ol>
+        <li>
+         Direct the user to our authorization url.
+         <ul>
+          <li>
+           If the user is not logged in, they will be asked to log in.
+          </li>
+          <li>
+           The user will be asked if they would like to grant your application access to her Instagram data.
+          </li>
+         </ul>
+        </li>
+        <li>
+         The server will redirect the user in one of two ways that you choose:
+         <ul>
+          <li>
+           <strong>
+            Server-side flow (recommended):
+           </strong>
+           Redirect the user to a URI of your choice. Take the provided
+           <strong>
+            code
+           </strong>
+           parameter and exchange it for an access_token by POSTing the code to our access_token url.
+          </li>
+          <li>
+           <strong>
+            Implicit flow:
+           </strong>
+           Instead of handling a code, we include the access_token as a fragment (#) in the URL. This method is less secure, but allows applications without any server component to receive an access_token.
+          </li>
+         </ul>
+        </li>
+       </ol>
+       <blockquote>
+        <h2 id="important-note">
+         Important
+        </h2>
+        <p>
+         Even though our access tokens do not specify an expiration time, your app should handle the case that either the user revokes access, or Instagram expires the token after some period of time. If the token is no longer valid, API responses will contain an “error_type=OAuthAccessTokenException”. In this case you will need to re-authenticate the user to obtain a new valid token.
+         <br/>
+         In other words:
+         <strong>
+          do not
+         </strong>
+         assume your access_token is valid forever.
+        </p>
+       </blockquote>
+       <h2>
+        Server-side (Explicit) Flow
+       </h2>
+       <p>
+        Using the server-side flow is quite easy. Simply follow these steps:
+       </p>
+       <h3>
+        Step One: Direct your user to our authorization URL
+       </h3>
+       <pre><code>https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&amp;redirect_uri=REDIRECT-URI&amp;response_type=code</code></pre>
+       <p>
+        <strong>
+         Note
+        </strong>
+        : You may provide an optional
+        <strong>
+         scope
+        </strong>
+        parameter to request additional permissions outside of the “basic” permissions scope.
+        <a href="/developer/authorization/">
+         Learn more about scope
+        </a>
+        .
+       </p>
+       <p>
+        <strong>
+         Note
+        </strong>
+        : You may provide an optional
+        <strong>
+         state
+        </strong>
+        parameter to carry through a server-specific state. For example, you can use this to protect against CSRF issues.
+       </p>
+       <p>
+        At this point, we present the user with a login screen and then a confirmation screen where to grant your app access to her Instagram data.
+       </p>
+       <h3>
+        Step Two: Receive the redirect from Instagram
+       </h3>
+       <p>
+        Once a user authorizes your application, we issue a redirect to your redirect_uri with a
+        <strong>
+         code
+        </strong>
+        parameter to use in step three.
+       </p>
+       <pre><code>http://your-redirect-uri?code=CODE</code></pre>
+       <p>
+        Note that the host and path components of your redirect URI must match exactly (including trailing slashes) your registered redirect_uri. You may also include additional query parameters in the supplied redirect_uri, if you need to vary your behavior dynamically. Examples:
+       </p>
+       <table>
+        <tbody>
+         <tr>
+          <th>
+           Registered Redirect URI
+          </th>
+          <th>
+           Redirect_URI parameter passed to /authorize
+          </th>
+          <th>
+           Valid?
+          </th>
+         </tr>
+         <tr>
+          <td>
+           http://yourcallback.com/
+          </td>
+          <td>
+           http://yourcallback.com/
+          </td>
+          <td>
+           yes
+          </td>
+         </tr>
+         <tr>
+          <td>
+           http://yourcallback.com/
+          </td>
+          <td>
+           http://yourcallback.com/?this=that
+          </td>
+          <td>
+           yes
+          </td>
+         </tr>
+         <tr>
+          <td>
+           http://yourcallback.com/?this=that
+          </td>
+          <td>
+           http://yourcallback.com/
+          </td>
+          <td>
+           no
+          </td>
+         </tr>
+         <tr>
+          <td>
+           http://yourcallback.com/?this=that
+          </td>
+          <td>
+           http://yourcallback.com/?this=that&amp;another=true
+          </td>
+          <td>
+           yes
+          </td>
+         </tr>
+         <tr>
+          <td>
+           http://yourcallback.com/?this=that
+          </td>
+          <td>
+           http://yourcallback.com/?another=true&amp;this=that
+          </td>
+          <td>
+           no
+          </td>
+         </tr>
+         <tr>
+          <td>
+           http://yourcallback.com/callback
+          </td>
+          <td>
+           http://yourcallback.com/
+          </td>
+          <td>
+           no
+          </td>
+         </tr>
+         <tr>
+          <td>
+           http://yourcallback.com/callback
+          </td>
+          <td>
+           http://yourcallback.com/callback?type=mobile
+          </td>
+          <td>
+           yes
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        If your request for approval is denied by the user, then we will redirect the user to your
+        <strong>
+         redirect_uri
+        </strong>
+        with the following parameters:
+       </p>
+       <ul>
+        <li>
+         <p>
+          <strong>
+           error
+          </strong>
+          : access_denied
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           error_reason
+          </strong>
+          : user_denied
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           error_description
+          </strong>
+          : The user denied your request
+         </p>
+         <pre><code>http://your-redirect-uri?error=access_denied&amp;error_reason=user_denied&amp;error_description=The+user+denied+your+request<p></p></code></pre>
+        </li>
+       </ul>
+       <p>
+        It is your responsibility to fail gracefully in this situation and display a corresponding error message to your user.
+       </p>
+       <h3>
+        Step Three: Request the access_token
+       </h3>
+       <p>
+        Now you need to exchange the
+        <strong>
+         code
+        </strong>
+        you have received in the previous step for an access token. In order to make this exchange, you simply have to POST this code, along with some app identification parameters, to our access_token endpoint. These are the required parameters:
+       </p>
+       <ul>
+        <li>
+         <strong>
+          client_id
+         </strong>
+         : your client id
+        </li>
+        <li>
+         <strong>
+          client_secret
+         </strong>
+         : your client secret
+        </li>
+        <li>
+         <strong>
+          grant_type
+         </strong>
+         :
+         <strong>
+          authorization_code
+         </strong>
+         is currently the only supported value
+        </li>
+        <li>
+         <strong>
+          redirect_uri
+         </strong>
+         : the redirect_uri you used in the authorization request. Note: this has to be the same value as in the authorization request.
+        </li>
+        <li>
+         <strong>
+          code
+         </strong>
+         : the exact code you received during the authorization step.
+        </li>
+       </ul>
+       <p>
+        This is a sample request:
+       </p>
+       <pre><code>
+    curl -F 'client_id=CLIENT_ID' \
+    -F 'client_secret=CLIENT_SECRET' \
+    -F 'grant_type=authorization_code' \
+    -F 'redirect_uri=AUTHORIZATION_REDIRECT_URI' \
+    -F 'code=CODE' \
+    https://api.instagram.com/oauth/access_token
+</code></pre>
+       <p>
+        If successful, this call will return a neatly packaged OAuth Token that you can use to make authenticated calls to the API. We also include the user who just authenticated for your convenience:
+       </p>
+       <pre><code>{
+    "access_token": "fb2e77d.47a0479900504cb3ab4a1f626d174d2d",
+    "user": {
+        "id": "1574083",
+        "username": "snoopdogg",
+        "full_name": "Snoop Dogg",
+        "profile_picture": "..."
+    }
+}
+</code></pre>
+       <h2>
+        Client-Side (Implicit) Authentication
+       </h2>
+       <p>
+        If you are building an app that does not have a server component (a purely javascript app, for instance), you will notice that it is impossible to complete step three above to receive your access_token without also having to store the secret on the client. You should
+        <strong>
+         never
+        </strong>
+        pass or store your client_id secret onto a client. For these situations there is the Implicit Authentication Flow.
+       </p>
+       <h3>
+        Step One: Direct your user to our authorization URL
+       </h3>
+       <pre><code>https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&amp;redirect_uri=REDIRECT-URI&amp;response_type=token
+</code></pre>
+       <p>
+        At this point, we present the user with a login screen and then a confirmation screen where they grant your app’s access to their Instagram data. Note that unlike the explicit flow the response type here is “token”.
+       </p>
+       <h3>
+        Step Two: Receive the access_token via the URL fragment
+       </h3>
+       <p>
+        Once the user has authenticated and then authorized your application, Instagram redirects them to your redirect_uri with the access_token in the url fragment. It will look like this:
+       </p>
+       <pre><code>http://your-redirect-uri#access_token=ACCESS-TOKEN
+</code></pre>
+       <p>
+        Simply grab the access_token off the URL fragment and you’re good to go. If the user chooses not to authorize your application, you’ll receive the same error response as in the explicit flow
+       </p>
+      </section>
+     </div>
+     <!-- .main -->
+    </div>
+    <!-- .main -->
+   </div>
+   <!-- .page -->
+   <footer class="page-footer -cx-PRIVATE-Footer__root" role="contentinfo">
+    <div class="wrapper -cx-PRIVATE-Footer__wrapper">
+     <nav class="-cx-PRIVATE-Footer__nav">
+      <ul class="-cx-PRIVATE-Footer__navItems">
+       <li>
+        <a href="/about/us/">
+         About us
+        </a>
+       </li>
+       <li>
+        <a href="http://help.instagram.com/">
+         Support
+        </a>
+       </li>
+       <li>
+        <a href="http://blog.instagram.com/">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="https://instagram-press.com/">
+         Press
+        </a>
+       </li>
+       <li>
+        <a href="/developer/">
+         API
+        </a>
+       </li>
+       <li>
+        <a href="/about/jobs/">
+         Jobs
+        </a>
+       </li>
+       <li>
+        <a href="/legal/privacy/">
+         Privacy
+        </a>
+       </li>
+       <li>
+        <a href="/legal/terms/">
+         Terms
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <p class="copyright -cx-PRIVATE-Footer__copyright">
+      © 2017 Instagram
+     </p>
+    </div>
+   </footer>
+   <div id="reactModalMountPoint">
+   </div>
+  </div>
+  <!-- .root -->
+  <script src="/static/scripts/polyfills/es5-shim.min.js/6514c5e08593.js">
+  </script>
+  <script src="/static/scripts/polyfills/es5-sham.min.js/fc3c22cf2d67.js">
+  </script>
+  <script type="text/javascript">
+   window._sharedData = {"activity_counts": null, "config": {"csrf_token": "oigbpgwa6544sJH1Pw2DjWqO3PXXDEGX", "viewer": null}, "country_code": "FR", "language_code": "en", "entry_data": {}, "gatekeepers": {"bn": true, "ld": true, "pl": true}, "qe": {"ebd": {"g": "", "p": {}}, "bc3l": {"g": "", "p": {}}, "create": {"g": "", "p": {}}, "disc": {"g": "", "p": {}}, "feed": {"g": "", "p": {}}, "gql": {"g": "", "p": {}}, "su_universe": {"g": "", "p": {}}, "us": {"g": "", "p": {}}, "us_li": {"g": "", "p": {}}, "nav": {"g": "", "p": {}}, "nav_lo": {"g": "", "p": {}}, "pm": {"g": "", "p": {}}, "profile": {"g": "", "p": {}}, "deact": {"g": "", "p": {}}, "sidecar": {"g": "", "p": {}}, "ufi": {"g": "", "p": {}}, "ufi_loggedout": {"g": "", "p": {}}, "video": {"g": "", "p": {}}, "filters": {"g": "", "p": {}}, "typeahead": {"g": "", "p": {}}, "location_tag": {"g": "", "p": {}}, "pw_link": {"g": "", "p": {}}}, "hostname": "www.instagram.com", "display_properties_server_guess": {"pixel_ratio": 1.5, "viewport_width": 360}, "environment_switcher_visible_server_guess": true, "platform": "web", "probably_has_app": false, "show_app_install": true};
+  </script>
+  <script>
+   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1425767024389221');
+
+fbq('track', 'PageView');
+  </script>
+  <noscript>
+  </noscript>
+ </body>
+</html>

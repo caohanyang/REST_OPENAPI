@@ -1,0 +1,105 @@
+{
+  "paths": {
+    "/music/Cher/Believe</url>": {
+      "GET": {},
+      "get": {}
+    },
+    "/tag/disco</url>": {
+      "GET": {}
+    },
+    "/music/ABBA</url>": {
+      "GET": {}
+    },
+    "/music/David+Hudson+and+Friends/Bedarra</url>": {
+      "GET": {}
+    },
+    "/music/Dirk+Leyers/_/Wellen</url>": {
+      "GET": {}
+    },
+    "/tag/rock</url>": {
+      "GET": {}
+    },
+    "http://a9.com/-/spec/opensearch/1.1/\">": {
+      "GET": {}
+    },
+    "/music/Coldplay</url>": {
+      "GET": {}
+    },
+    "/music/The+Beatles</url>": {
+      "GET": {}
+    },
+    "/user/RJ</url>": {
+      "GET": {}
+    },
+    "/tag/pop</url>": {
+      "GET": {}
+    },
+    "/music/Dream+Theater</url>": {
+      "GET": {},
+      "get": {}
+    },
+    "http://ws.audioscrobbler.com/2.0": {
+      "POST": {}
+    },
+    "http://ws.audioscrobbler.com/2.0/user/rj/recenttracks.rss": {
+      "GET": {}
+    },
+    "/music/Cher</url>": {
+      "GET": {}
+    },
+    "/music/Madonna/_/Ray+of+Light</url>": {
+      "GET": {}
+    },
+    "/tag/albums%20i%20own</url>": {
+      "GET": {}
+    },
+    "/tag/italo</url>": {
+      "GET": {}
+    },
+    "/api/auth": {
+      "GET": {}
+    },
+    "/music/Metallica/_/Better+Than+You</url>": {
+      "GET": {}
+    },
+    "/music/Dream+Theater/_/Learning+to+Live": {
+      "GET": {}
+    },
+    "/tag/swedish</url>": {
+      "GET": {},
+      "get": {}
+    },
+    "/music/Róisín+Murphy/Overpowered": {
+      "GET": {}
+    },
+    "/music/Cher/_/Believe</url>": {
+      "GET": {},
+      "get": {}
+    },
+    "/music/Bee+Gees/_/Stayin'+Alive": {
+      "GET": {}
+    },
+    "/music/Kanye+West/_/Dark+Fantasy</url>": {
+      "GET": {}
+    },
+    "/music/Coldplay/_/Violet+Hill</url>": {
+      "GET": {}
+    },
+    "/music/David+Hudson+and+Friends</url>": {
+      "GET": {}
+    },
+    "/music/Dream+Theater/Images+and+Words": {
+      "GET": {}
+    },
+    "/music/John+Hammond</url>": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.last.fm",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,106 @@
+{
+  "basePath": "/v1",
+  "paths": {
+    "/companies/{id}/historical-follow-statistics": {
+      "GET": {}
+    },
+    "https://www.linkedin.com/updates": {
+      "POST": {}
+    },
+    "/companies/{id}/shares": {
+      "POST": {}
+    },
+    "https://media.licdn.com/…\",": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://linkd.in/1FC2PyG\",": {
+      "GET": {},
+      "Get": {}
+    },
+    "/companies": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://example.com/auth/callback#linkedin": {
+      "post": {},
+      "POST": {}
+    },
+    "/people/~\"];": {
+      "GET": {}
+    },
+    "/people/~:(id,num-connections,picture-url)": {
+      "GET": {}
+    },
+    "https://www.linkedin.com/oauth/v2/accessToken": {
+      "POST": {}
+    },
+    "/companies/{id}:(id,name,ticker,description)": {
+      "GET": {},
+      "Get": {}
+    },
+    "/people/~": {
+      "GET": {}
+    },
+    "/companies/1234/updates/key=ABCDE-123456/update-comments-as-company/\";": {
+      "POST": {}
+    },
+    "http://linkd.in/1FC2PyG</comment>": {
+      "POST": {}
+    },
+    "https://www.example.com/auth/linkedin": {
+      "DEL": {},
+      "del": {}
+    },
+    "/companies/{id}/updates/key={update-key}/update-comments-as-company": {
+      "POST": {}
+    },
+    "https://api.linkedin.com/people/~/shares)": {
+      "POST": {}
+    },
+    "/companies/{id}/num-followers": {
+      "GET": {}
+    },
+    "https://api.linkedin.com/peo": {
+      "GET": {}
+    },
+    "/companies/{id}/relation-to-viewer/is-company-share-enabled": {
+      "GET": {}
+    },
+    "/people/~\";": {
+      "GET": {}
+    },
+    "/compan": {
+      "POST": {}
+    },
+    "http://linkd.in/1FC2PyG\\\",": {
+      "post": {},
+      "POST": {}
+    },
+    "/companies/{id}/historical-status-update-statistics": {
+      "GET": {}
+    },
+    "/companies/{id}/company-statistics": {
+      "GET": {}
+    },
+    "http://developer.linkedin.com&title=LinkedIn%20Developer%20Network": {
+      "GET": {}
+    },
+    "https://www.linkedin.com/profile/view": {
+      "GET": {}
+    },
+    "https://www.linkedin.com/uas/oauth2/accessToken": {
+      "POST": {}
+    },
+    "https://media.licdn.com/mpr/mprx/…": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.linkedin.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

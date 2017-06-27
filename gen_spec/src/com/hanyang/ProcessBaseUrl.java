@@ -297,46 +297,20 @@ public class ProcessBaseUrl {
 		// define the list of baseUrl
 		List<String> baseUrlList = new ArrayList<String>();
 		ProcessMethod processMe = new ProcessMethod();
-		for (int i = 0; i < listFiles.length; i++) {
-			// print the file name
-			// Out.prln("=============File name=======================");
-			// Out.prln(listFiles[i].getPath());
-			String type = new Tika().detect(listFiles[i].getPath());
-			// only detect html
-			if (type.equals("text/html")) {
-				URL u = Paths.get(listFiles[i].getPath()).toUri().toURL();
-				FeatureMap params = Factory.newFeatureMap();
-				params.put("sourceUrl", u);
-				Document doc = (Document) Factory.createResource("gate.corpora.DocumentImpl", params);
-				// 2. get all text
-				DocumentContent textAll = doc.getContent();
-
-				// 4.1 search for the GET https
-				String strAll = textAll.toString();
-				// Fix 1: suppose the len(content between get and http) < 40 +
-				// "://"
-				String regexRest = "(?si)rest.+request";
-				String regexHttp = "(?si)((http)|(https)){1}://";
-				Pattern pRest = Pattern.compile(regexRest);
-				Matcher matcherREST = pRest.matcher(strAll);
-				while (matcherREST.find()) {
-					// first find the page which contains REST + request
-					Pattern pHttp = Pattern.compile(regexHttp);
-					Matcher matcherHttp = pHttp.matcher(strAll);
-					while (matcherHttp.find()) {
-						// Fix 2: suppose the URL length < 40
-						String matchStrNull = strAll.substring(matcherHttp.start()).split("\n")[0].trim();
-						// final API endpoint must contain API_NAME
-						matchStrNull = processMe.constrainUrl(matchStrNull, API_NAME);
-						if (matchStrNull != null) {
-							Out.prln(matchStrNull);
-							baseUrlList.add(matchStrNull);
-						}
-					}
-				}
-
-			}
+		
+		//direct model
+		baseUrlList = searchUrlMode1(listFiles, API_NAME, baseUrlList, processMe, "(?si)API root URL.{1,18}((http)|(https)){1}://");
+		if (baseUrlList.size() != 0) {
+			// if matched, return directly
+			return baseUrlList.get(0);
 		}
+		baseUrlList = searchUrlMode1(listFiles, API_NAME, baseUrlList, processMe, "(?si)REST API along with.{1,100}((http)|(https)){1}://");
+		if (baseUrlList.size() != 0) {
+			// if matched, return directly
+			return baseUrlList.get(0);
+		}
+        
+		baseUrlList = searchUrlMode2(listFiles, API_NAME, baseUrlList, processMe);
 
 		if (baseUrlList.isEmpty()) {
 			// in this case, find the http
@@ -425,9 +399,114 @@ public class ProcessBaseUrl {
 		}
 	}
 
-	private List<String> searchBaseUrlHttp(Object object, String aPI_NAME) {
-		// TODO Auto-generated method stub
-		return null;
+	private List<String> searchUrlMode1(File[] listFiles, String API_NAME, List<String> baseUrlList,
+			ProcessMethod processMe, String regexRoot) throws MalformedURLException, ResourceInstantiationException {
+		
+		
+		for (int i = 0; i < listFiles.length; i++) {
+			// print the file name
+			// Out.prln("=============File name=======================");
+			// Out.prln(listFiles[i].getPath());
+			String type = new Tika().detect(listFiles[i].getPath());
+			// only detect html
+			if (type.equals("text/html")) {
+				URL u = Paths.get(listFiles[i].getPath()).toUri().toURL();
+				FeatureMap params = Factory.newFeatureMap();
+				params.put("sourceUrl", u);
+				Document doc = (Document) Factory.createResource("gate.corpora.DocumentImpl", params);
+				// 2. get all text
+				DocumentContent textAll = doc.getContent();
+
+				// 4.1 search for the GET https
+				String strAll = textAll.toString();
+				// Fix 1: suppose the len(content between get and http) < 40 +
+				// "://"
+
+				Pattern rRest = Pattern.compile(regexRoot);
+				Matcher matcherRoot = rRest.matcher(strAll);
+				while (matcherRoot.find()) {
+					
+					// Fix 2: suppose the URL length < 40
+					String matchStrNull = strAll.substring(matcherRoot.start()).split("\n")[0].trim();
+					// final API endpoint must contain API_NAME
+					matchStrNull = matchStrNull.substring(matchStrNull.indexOf("http"));
+					if (matchStrNull != null) {
+						Out.prln(matchStrNull);
+						baseUrlList.add(matchStrNull);
+					}
+				}
+
+			}
+		}
+		
+		return baseUrlList;
+	}
+
+	private List<String> searchUrlMode2(File[] listFiles, String API_NAME, List<String> baseUrlList, ProcessMethod processMe)
+			throws MalformedURLException, ResourceInstantiationException {
+		
+		for (int i = 0; i < listFiles.length; i++) {
+			// print the file name
+			// Out.prln("=============File name=======================");
+			// Out.prln(listFiles[i].getPath());
+			String type = new Tika().detect(listFiles[i].getPath());
+			// only detect html
+			if (type.equals("text/html")) {
+				URL u = Paths.get(listFiles[i].getPath()).toUri().toURL();
+				FeatureMap params = Factory.newFeatureMap();
+				params.put("sourceUrl", u);
+				Document doc = (Document) Factory.createResource("gate.corpora.DocumentImpl", params);
+				// 2. get all text
+				DocumentContent textAll = doc.getContent();
+
+				// 4.1 search for the GET https
+				String strAll = textAll.toString();
+				// Fix 1: suppose the len(content between get and http) < 40 +
+				// "://"
+				String regexRest = "(?si)rest.+request";
+				String regexHttp = "(?si)((http)|(https)){1}://";
+				Pattern pRest = Pattern.compile(regexRest);
+				Matcher matcherREST = pRest.matcher(strAll);
+				while (matcherREST.find()) {
+					// first find the page which contains REST + request
+					Pattern pHttp = Pattern.compile(regexHttp);
+					Matcher matcherHttp = pHttp.matcher(strAll);
+					while (matcherHttp.find()) {
+						// Fix 2: suppose the URL length < 40
+						String matchStrNull = strAll.substring(matcherHttp.start()).split("\n")[0].trim();
+						// final API endpoint must contain API_NAME
+						matchStrNull = processMe.constrainUrl(matchStrNull, API_NAME);
+						if (matchStrNull != null) {
+							Out.prln(matchStrNull);
+							baseUrlList.add(matchStrNull);
+						}
+					}
+				}
+
+			}
+		}
+		
+		return baseUrlList;
+	}
+
+	public String cleanBaseUrl(String baseUrl) {
+		// in the case the baseUrl contains path templating 
+		// https://graph.facebook.com/<API_VERSION>/<PAGE_ID>/feed
+		if (baseUrl == null) return baseUrl;
+		
+		String[] urlPart = baseUrl.split("/");
+		if (urlPart.length != 0) {
+			for (int i = 0; i < urlPart.length; i++) {
+				String part = urlPart[i];
+				// part contain < | {
+				if (part.startsWith("<") | part.startsWith("{")) {
+					// return the 
+					return baseUrl.substring(0, baseUrl.indexOf(part)-1);
+				}
+			}
+		}
+		
+		return baseUrl;
 	}
 
 }

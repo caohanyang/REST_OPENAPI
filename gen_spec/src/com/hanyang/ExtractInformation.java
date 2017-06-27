@@ -49,6 +49,8 @@ public class ExtractInformation {
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
 	// "https", "http", "null", "/"
 	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https", "http", "null", "/"));
+	// "no", "yes"
+	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no", "yes"));
 	// "table", "list"
 	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table", "list"));
 	// "single", "multiple"
@@ -84,20 +86,24 @@ public class ExtractInformation {
 		for (Iterator<String> sIterator = MODE.iterator(); sIterator.hasNext();) {
 			String mode = sIterator.next();
 
-			for (Iterator<String> tIterator = TEMPLATE.iterator(); tIterator.hasNext();) {
-				String template = tIterator.next();
+			for (Iterator<String> rIterator = REVERSE.iterator(); rIterator.hasNext();) {
+				String reverse = rIterator.next();
+				
+				for (Iterator<String> tIterator = TEMPLATE.iterator(); tIterator.hasNext();) {
+					String template = tIterator.next();
 
-				for (Iterator<String> nIterator = NUMBER.iterator(); nIterator.hasNext();) {
-					String number = nIterator.next();
+					for (Iterator<String> nIterator = NUMBER.iterator(); nIterator.hasNext();) {
+						String number = nIterator.next();
 
-					for (Iterator<String> dIterator = ABBREV_DELETE.iterator(); dIterator.hasNext();) {
-						String abbrev = dIterator.next();
-						// generate different swagger
-						generateOpenAPI(listFiles, mode, template, number, abbrev);
-						System.gc();
+						for (Iterator<String> dIterator = ABBREV_DELETE.iterator(); dIterator.hasNext();) {
+							String abbrev = dIterator.next();
+							// generate different swagger
+							generateOpenAPI(listFiles, mode, reverse, template, number, abbrev);
+							System.gc();
+						}
 					}
 				}
-			}
+			}	
 		}
 
 		// 3. compare the json files and select the final one.
@@ -105,7 +111,7 @@ public class ExtractInformation {
 
 	}
 
-	public static void generateOpenAPI(File[] listFiles, String mode, String template, String number, String abbrev)
+	public static void generateOpenAPI(File[] listFiles, String mode, String reverse, String template, String number, String abbrev)
 			throws ResourceInstantiationException, JSONException, IOException, MalformedURLException {
 		// 2. initial the specification
 		GenerateMain mainObject = new GenerateMain();
@@ -116,6 +122,7 @@ public class ExtractInformation {
 		// if it's null mode, find the common base url first
 		if (mode == "null" | mode == "/") {
 			baseUrl = processBa.searchBaseUrl(listFiles, API_NAME);
+			baseUrl = processBa.cleanBaseUrl(baseUrl);
 			Out.prln(baseUrl);
 		}
 
@@ -127,7 +134,7 @@ public class ExtractInformation {
 			String type = new Tika().detect(listFiles[i].getPath());
 			// only detect html
 			if (type.equals("text/html")) {
-				executeFile(listFiles[i].getPath(), openAPI, mode, template, number, abbrev, baseUrl);
+				executeFile(listFiles[i].getPath(), openAPI, mode, template, number, abbrev, baseUrl, reverse);
 			}
 		}
 
@@ -135,12 +142,12 @@ public class ExtractInformation {
 		openAPI = processBa.handleBaseUrl(openAPI, mode, baseUrl);
 
 		// 5. write to file
-		writeOpenAPI(openAPI, mode, template, number, abbrev);
+		writeOpenAPI(openAPI, mode, template, number, abbrev, reverse);
 
 	}
 
 	public static void executeFile(String path, JSONObject swagger, String scheme, String template, String number,
-			String abbrev, String baseUrl) throws ResourceInstantiationException, JSONException, IOException {
+			String abbrev, String baseUrl, String reverse) throws ResourceInstantiationException, JSONException, IOException {
 		URL u = Paths.get(path).toUri().toURL();
 		FeatureMap params = Factory.newFeatureMap();
 		params.put("sourceUrl", u);
@@ -154,15 +161,15 @@ public class ExtractInformation {
 		processMe.generateDefault(swagger);
 
 		if (scheme == "null") {
-			nullMode(swagger, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME);
+			nullMode(swagger, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME, reverse, scheme);
 		} else {
-			httpMode(swagger, template, number, abbrev, doc, textAll, processMe, scheme);
+			httpMode(swagger, template, number, abbrev, doc, textAll, processMe, scheme, reverse);
 		}
 
 	}
 
 	private static void nullMode(JSONObject swagger, String template, String number, String abbrev, Document doc,
-			DocumentContent textAll, ProcessMethod processMe, String baseUrl, String aPI_NAME) throws JSONException {
+			DocumentContent textAll, ProcessMethod processMe, String baseUrl, String aPI_NAME, String reverse, String scheme) throws JSONException {
 		String strAll = textAll.toString();
 		String actionStr = null, urlString = null;
 		List<JSONObject> infoJson = new ArrayList<JSONObject>();
@@ -185,11 +192,11 @@ public class ExtractInformation {
 		if (template == "table") {
 			// 5.2 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
-			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoTable);
+			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
 		} else if (template == "list") {
 			AnnotationSet annoList = annoOrigin.get("dl");
 			// 5.3 get list annotation
-			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoList);
+			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
 		}
 
 	}
@@ -206,7 +213,8 @@ public class ExtractInformation {
 			
 			if (processMe.isUrlPath(urlText, anno, strAll, aPI_NAME, abbrev)) {
 				if (anno.getType().equals("h1")) {
-					urlString = "?method" + "=" + urlText;
+					
+					urlString = "?method=" + urlText;						
 					actionStr = processMe.findAction(urlString);
 				} 
 				else if (anno.getType().equals("code")) {
@@ -236,11 +244,16 @@ public class ExtractInformation {
 	}
 
 	private static void httpMode(JSONObject swagger, String template, String number, String abbrev,
-			Document doc, DocumentContent textAll, ProcessMethod processMe, String scheme) throws JSONException {
+			Document doc, DocumentContent textAll, ProcessMethod processMe, String scheme, String reverse) throws JSONException {
 		// 4.1 search for the GET https
 		String strAll = textAll.toString();
 		// Fix 1: suppose the len(content between get and http) < 40 + "://"
-		String regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(.*?)" + scheme;
+		String regexAll;
+		if (reverse == "no") {			
+			regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(.*?)" + scheme;
+		} else {
+			regexAll = "(?si)" + scheme +"(.*?)\\s((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}";
+		}
 		Pattern p = Pattern.compile(regexAll);
 		Matcher matcher = p.matcher(strAll);
 		String actionStr = null, urlString = null;
@@ -262,8 +275,9 @@ public class ExtractInformation {
 			Out.prln(matchStr);
 
 			// match reversed action
+			String actionRegex = "((teg)|(tsop)|(" + new StringBuilder(abbrev).reverse().toString() + ")|(tup)|(hctap))";
 			Pattern action = Pattern.compile(
-					"((teg)|(tsop)|(" + new StringBuilder(abbrev).reverse().toString() + ")|(tup)|(hctap))",
+					actionRegex,
 					Pattern.CASE_INSENSITIVE);
 			// match the reversed string, from right to left
 			Matcher matcherAction = action.matcher(new StringBuilder(matchStr).reverse());
@@ -272,7 +286,7 @@ public class ExtractInformation {
 				// find the action which is nearest to http
 				Out.prln("matchStart： " + matcherAction.start());
 				// Out.prln("==========real Action============");
-				int acOffset = matchStr.length() - matcherAction.start() - 4;
+				int acOffset = matchStr.length() - matcherAction.start() - scheme.length();
 				int acLocation = startIndex + acOffset;
 				// Out.prln(strAll.substring(acLocation, matcher.end()));
 				Out.prln("==========REST Action============");
@@ -284,24 +298,64 @@ public class ExtractInformation {
 				Out.prln(actionStr);
 			}
 			// match endpoint
-			String regexHttp = scheme;
-			Pattern endpoint = Pattern.compile(regexHttp, Pattern.CASE_INSENSITIVE);
-			Matcher endpointMatcher = endpoint.matcher(matchStr);
-			if (endpointMatcher.find()) {
-				Out.prln("urlStart： " + endpointMatcher.start());
-				int uLocation = startIndex + endpointMatcher.start();
-				urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
-				// handle url, make it short and clean
-				urlString = processMe.cleanUrl(urlString);
-
-				// Out.prln("==========real ADDRESS============");
-				// Out.prln(strAll.substring(uLocation, uLocation + 100));
-				Out.prln("==========URL ADDRESS============");
-				Out.prln(urlString);
-				JSONObject urJson = new JSONObject();
-				urJson.put(urlString, uLocation);
-				sectionJson.put("url", urJson);
+			String regexHttp;
+			if (reverse == "no") {			
+				regexHttp = scheme;
+			} else {
+				regexHttp = new StringBuilder(scheme).reverse().toString();
 			}
+			
+			Pattern endpoint = Pattern.compile(regexHttp, Pattern.CASE_INSENSITIVE);
+			
+			Matcher endpointMatcher;
+			if (reverse == "no") {			
+				endpointMatcher = endpoint.matcher(matchStr);
+				if (endpointMatcher.find()) {
+					Out.prln("urlStart： " + endpointMatcher.start());
+					int uLocation = startIndex + endpointMatcher.start();
+					urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
+					// handle url, make it short and clean
+					urlString = processMe.cleanUrl(urlString);
+
+					// Out.prln("==========real ADDRESS============");
+					// Out.prln(strAll.substring(uLocation, uLocation + 100));
+					Out.prln("==========URL ADDRESS============");
+					Out.prln(urlString);
+					JSONObject urJson = new JSONObject();
+					urJson.put(urlString, uLocation);
+					sectionJson.put("url", urJson);
+				}
+			} else {
+				endpointMatcher = endpoint.matcher(new StringBuilder(matchStr).reverse().toString());
+				// find the first match
+				if (endpointMatcher.find()) {
+					// find the action which is nearest to http
+					Out.prln("matchStart： " + endpointMatcher.start());
+					Out.prln("matchEnd： " + endpointMatcher.end());
+					// Out.prln("==========real Action============");
+					int urOffset = matchStr.length() - endpointMatcher.start() - scheme.length();
+					int urLocation = startIndex + urOffset;
+//					Out.prln(strAll.substring(urLocation, endpointMatcher.end()));
+					//.split("\n")[0].trim()
+					Out.prln("matchLength: "+ matchStr.length());
+					//if offset < 0, next run
+					if (urOffset < 0) continue;
+					urlString = matchStr.substring(urOffset).split("\n")[0].trim();
+//					urlString = new StringBuilder(endpointMatcher.group()).reverse().toString();
+					
+					urlString = processMe.cleanUrl(urlString);
+
+					// Out.prln("==========real ADDRESS============");
+					// Out.prln(strAll.substring(uLocation, uLocation + 100));
+					Out.prln("==========URL ADDRESS============");
+					Out.prln(urlString);
+					JSONObject urJson = new JSONObject();
+					urJson.put(urlString, urLocation);
+					sectionJson.put("url", urJson);
+				}
+			}
+			
+			
 
 			// Write into swagger
 			// After matching table, we write url/action into swagger
@@ -323,16 +377,16 @@ public class ExtractInformation {
 		if (template == "table") {
 			// 5.2 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
-			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoTable);
+			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
 		} else if (template == "list") {
 			AnnotationSet annoList = annoOrigin.get("dl");
 			// 5.3 get list annotation
-			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoList);
+			handleTemplate(swagger, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
 		}
 	}
 
 	private static void handleTemplate(JSONObject swagger, String number, String template, Document doc,
-			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate)
+			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate, String reverse, String scheme)
 			throws JSONException {
 		// 5.3 for each page, set findParaTable = False
 		boolean findParaTemplate = false;
@@ -377,16 +431,18 @@ public class ExtractInformation {
 			if (!infoJson.isEmpty()) {
 				// In case of the method doesn't have parameter
 				// add the noPara url
-				processMe.addNoParaUrl(swagger, strAll, infoJson);
+//				processMe.addNoParaUrl(swagger, strAll, infoJson, reverse);
+				// add all the url/action pair
+				processMe.addAllParaURL(swagger, strAll, infoJson, reverse, scheme);
 			}
 		}
 	}
 
-	public static void writeOpenAPI(JSONObject swagger, String scheme, String template, String number, String abbrev)
+	public static void writeOpenAPI(JSONObject swagger, String scheme, String template, String number, String abbrev, String reverse)
 			throws IOException {
 
 		// Print pretty swagger
-		String fileName = scheme + "_" + template + "_" + number + "_" + abbrev + ".json";
+		String fileName = scheme + "_" + template + "_" + number + "_" + abbrev + "_" + reverse + ".json";
 		writeFile(swagger.toString(), fileName);
 	}
 

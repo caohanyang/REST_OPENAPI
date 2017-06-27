@@ -24,7 +24,7 @@
   <link href="/css/highlight-default.css" rel="stylesheet" type="text/css"/>
   <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
   <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/awsdocs.css?v=20170615" rel="stylesheet" type="text/css"/>
   <script src="/js/highlight.pack.js" type="text/javascript">
   </script>
   <script src="/js/jquery.min.js" type="text/javascript">
@@ -35,7 +35,7 @@
   </script>
   <script src="/js/jquery.colorbox.js" type="text/javascript">
   </script>
-  <script src="/js/awsdocs.min.js" type="text/javascript">
+  <script src="/js/awsdocs.min.js?v=20170615" type="text/javascript">
   </script>
   <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript">
   </script>
@@ -1777,7 +1777,7 @@
              AWS Documentation
             </a>
             »
-            <a href="uri">
+            <a href="http://aws.amazon.com/archives/Product%20Advertising%20API">
              Amazon Product Advertising API Docs
             </a>
             »
@@ -1803,11 +1803,12 @@
         Common Request Parameters
        </h1>
        <p>
-        The following table describes the request parameters that all Product Advertising API operations can use.
+        The following table describes the request parameters that all Product Advertising
+                        API operations can use.
        </p>
        <div class="informaltable">
         <div class="informaltable-contents">
-         <table id="w28aab9b9b5">
+         <table id="w68aab9b9b5">
           <tbody>
            <tr>
             <th>
@@ -1829,7 +1830,8 @@
             <td>
              <p>
               An alphanumeric token that uniquely identifies an Associate. This token is the
-                                       means by which Amazon identifies the Associate to credit for a sale. If a request is
+                                       means by which Amazon identifies the Associate to credit for a sale. If a request
+                                       is
                                        made without identifying an Associate, Associate fees are not paid by Amazon. If the
                                        AssociateTag is included in the
               <code class="code">
@@ -1863,7 +1865,8 @@
              </code>
             </td>
             <td>
-             An alphanumeric token that uniquely identifies a seller. For information about getting an AWS
+             An alphanumeric token that uniquely identifies a seller. For information about getting
+                                    an AWS
                                     access key ID, see
              <a href="becomingDev.html">
               Becoming a Product Advertising API Developer
@@ -1884,8 +1887,8 @@
              </code>
             </td>
             <td>
-             Specifies the format of the content in the response. For example, to transform your Product Advertising API response into
-                                    HTML, set
+             Specifies the format of the content in the response. For example, to transform your
+                                    Product Advertising API response into HTML, set
              <code class="code">
               ContentType
              </code>
@@ -1907,7 +1910,8 @@
             <td>
              An optional parameter that can be used to filter search results and offer listings
                                     to include only items sold by Amazon. By default, the API returns items sold by various
-                                    merchants including Amazon. If the value "Amazon" is supplied, only items sold by Amazon
+                                    merchants including Amazon. If the value "Amazon" is supplied, only items sold by
+                                    Amazon
                                     are included in the response.
              <p>
               Valid values: Amazon
@@ -1924,7 +1928,8 @@
              </code>
             </td>
             <td>
-             Specifies the Product Advertising API operation to execute. For more information, see
+             Specifies the Product Advertising API operation to execute. For more information,
+                                    see
              <a href="CHAP_OperationListAlphabetical.html">
               Operations
              </a>
@@ -1975,7 +1980,8 @@
               Validate
              </code>
              must equal True; the default value is False. If a
-                                    request is not actually executed (Validate=True), only a subset of the errors for a
+                                    request is not actually executed (Validate=True), only a subset of the errors for
+                                    a
                                     request may be returned because some errors (for example, no_exact_matches) are only
                                     generated during the execution of a request.
              <p>
@@ -2025,7 +2031,8 @@
               XMLEscaping
              </code>
              is Single, and Product Advertising API
-                                    responses are encoded only once in XML. For example, if the response data includes an
+                                    responses are encoded only once in XML. For example, if the response data includes
+                                    an
                                     ampersand character (&amp;), the character is returned in its regular XML encoding
                                     (&amp;). If
              <code class="code">
@@ -2135,7 +2142,8 @@
          Javascript is disabled or is unavailable in your browser.
         </strong>
         <br/>
-        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.
+        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's
+                        Help pages for instructions.
        </div>
       </div>
      </div>

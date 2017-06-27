@@ -1,0 +1,28 @@
+{
+  "paths": {
+    "/following": {
+      "GET": {}
+    },
+    "/api.picplz.co": {
+      "GET": {}
+    },
+    "/followers": {
+      "GET": {}
+    },
+    "/upload_basic": {
+      "POST": {}
+    },
+    "/comment": {
+      "DELETE": {},
+      "post": {},
+      "POST": {},
+      "delete": {}
+    },
+    "/collection": {
+      "DELETE": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

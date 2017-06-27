@@ -1,0 +1,222 @@
+{
+  "paths": {
+    "http:\\/\\/ecn.t3.tiles.virtualearth.net/tiles/a032010110123333.jpeg": {
+      "GET": {},
+      "get": {}
+    },
+    "http://schemas.m": {
+      "POST": {},
+      "Post": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/AerialWithLabels": {
+      "GET": {},
+      "get": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Locations\";": {
+      "GET": {},
+      "get": {}
+    },
+    "http://learn.iis.net/page.aspx/246/using-fastcgi-to-host-php-applications-on-iis-7": {
+      "GET": {},
+      "get": {}
+    },
+    "http:\\/\\/ecn.{subdomain}.tiles.virtualearth.net/tiles/r{quadkey}.jpeg": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/imagerySet/que": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Locations/GB/SW1A": {
+      "post": {},
+      "POST": {}
+    },
+    "http://www.bing.com/maps": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/V1/Imagery/Map/road": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/imagery": {
+      "GET": {},
+      "Get": {}
+    },
+    "/": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Locations/countryRegion/adminDistrict/postalCode/locality/addressLine": {
+      "post": {},
+      "POST": {}
+    },
+    "alearth.net/REST/v1/Imagery/Metadata/Road/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/imagerySet": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Metadata/Aerial/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Metadata/imagerySet/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/AerialWithLabels/eiffel%20tower": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://msdn.microsoft.com/en-us/library/ff701734.aspx": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Metadata/BirdseyeWithLabels/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Routes\";": {
+      "POST": {},
+      "get": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode/e14b1d9bd65c4b9d99d267bbb8102ccf": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Locations": {
+      "post": {},
+      "POST": {},
+      "Get": {}
+    },
+    "http:\\/\\/schemas.microsoft.com\\/search\\/local\\/ws\\/rest\\/v1\",": {
+      "post": {},
+      "POST": {}
+    },
+    "alearth.net/REST/V1/Imagery/Map/Road/Bellevue%20Washington": {
+      "GET": {},
+      "get": {}
+    },
+    "http://msdn.microsoft.com/en-us/library/cc981072.aspx": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Locations/US/NY/10007/New": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Locations/US/ny/10007/new%20york/291%20broadway": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/Road/Routes": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Locations/US/adminDistrict/locality/addressLine": {
+      "GET": {},
+      "get": {}
+    },
+    "http://windows.php.net/download": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Locations/point": {
+      "post": {},
+      "POST": {},
+      "Post": {}
+    },
+    "http://schemas.microsoft.com/search/local/2010/5/geocode\">": {
+      "POST": {},
+      "Post": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Im": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/Road/47.678559869527817,-122.13099449872971/14/Routes": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Metadata/Birdseye/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.bingmapsportal.com.": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Metadata/Road": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://spatial.virtualearth.net/REST/v1/dataflows/Geocode/5bf10c37df944083b1879fbb0556e67e/output/succeeded": {
+      "GET": {},
+      "get": {}
+    },
+    "http:\\/\\/ecn.{subdomain}.tiles.virtualearth.net/tiles/o02301020333-10749-{zoom}-{tileId}.jpeg": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/Road/47.619048,-122.35384/15": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://schemas.microsoft.com/search/local/2010/5/geocode": {
+      "POST": {},
+      "Post": {}
+    },
+    "alearth.net/REST/v1/Locations/locationQuery": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Routes/travelMode": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/Road/47.6156352,-122.2043549/12": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://spatial.virtualearth.net/REST/v1/dataflows/geocode/e14b1d9bd65c4b9d99d267bbb8102ccf</Link>": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode/\".$jobId.": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/imagerySet/centerPoint/zoomLevel/Routes/travelMode": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map\";": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Imagery/Map/Road/51.506666,-0.129436/15": {
+      "GET": {},
+      "Get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "dev.virtu",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

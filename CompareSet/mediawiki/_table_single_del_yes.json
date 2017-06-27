@@ -1,0 +1,15 @@
+{
+  "basePath": "/w/index.php",
+  "paths": {
+    "/index.php": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.mediawiki.org",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

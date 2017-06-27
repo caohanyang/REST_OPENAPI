@@ -1,0 +1,281 @@
+{
+  "paths": {
+    "/{user_i": {
+      "GET": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/[video_id]": {
+      "del": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/{ondemand": {
+      "GET": {}
+    },
+    "/{user_id}": {
+      "GET": {},
+      "Get": {},
+      "PATCH": {}
+    },
+    "/api.vime": {
+      "PATCH": {}
+    },
+    "/vimeo_oauth1": {
+      "POST": {}
+    },
+    "/{category}": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/{preset_id}": {
+      "GET": {},
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf the `uris` batch parameter is supplied with filtering or sorting arguments.\n\nError Code: 2101\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf there is a problem with the batch request.\n\nError Code: 2204\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "503",
+            "description": "Service Unavailable\nIf search is disabled.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "503",
+            "description": "Service Unavailable\nIf there was an internal error with our search infrastructure.\n\nError Code: 7300\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "PATCH": {}
+    },
+    "/followin": {
+      "POST": {}
+    },
+    "/api.vimeo.co": {
+      "GET": {}
+    },
+    "/channels": {
+      "GET": {}
+    },
+    "/seasons": {
+      "GET": {}
+    },
+    "/{genre_id}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/categories": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/{portfolio_id}": {
+      "GET": {}
+    },
+    "/{background_id}": {
+      "PATCH": {}
+    },
+    "/{follow_user_id}": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/portfolios": {
+      "GET": {}
+    },
+    "/promoti": {
+      "DEL": {}
+    },
+    "/{channel_id}": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf an invalid parameter is supplied.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf an invalid parameter is supplied.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "403",
+            "description": "Forbidden\nIf the authenticated user can not create a channel.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{portraitset_id}": {
+      "DEL": {}
+    },
+    "/{poster": {
+      "POST": {}
+    },
+    "/promotions": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{ondemand_": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/{ticket}": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/following": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{country}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/regions": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/followers": {
+      "GET": {}
+    },
+    "/api.vim": {
+      "GET": {}
+    },
+    "/api.vimeo": {
+      "GET": {}
+    },
+    "/{video_id}": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "403",
+            "description": "Forbidden\nIf one of the parameters is invalid.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "404",
+            "description": "Not Found\nIf the credit cannot be found.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/pictures": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{poster_id}": {
+      "POST": {}
+    },
+    "/{group_id}": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/purchases": {
+      "GET": {}
+    },
+    "/access_token": {
+      "POST": {}
+    },
+    "/{country": {
+      "GET": {}
+    },
+    "/{video_": {
+      "GET": {}
+    },
+    "/backgrounds": {
+      "POST": {},
+      "GET": {}
+    },
+    "/api.vimeo.com": {
+      "GET": {}
+    },
+    "/presets": {
+      "GET": {}
+    },
+    "/watchlater": {
+      "GET": {}
+    },
+    "/api.vimeo.": {
+      "GET": {}
+    },
+    "/appearances": {
+      "GET": {}
+    },
+    "/{ondemand_id}": {
+      "GET": {},
+      "DEL": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

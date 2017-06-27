@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html class="chekov" lang="en">
+ <head>
+  <script>
+   var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="4CcPBVTYimAHjODGHCaqJYbQPqOi2zZA3Gg18A0-oMo6MTQ5NzQ0NDM5MzEyMDcyMA" name="xsrf_token"/>
+  <link href="https://developers.google.com/maps/documentation/urls/ios-urlscheme" rel="canonical"/>
+  <link href="https://developers.google.com/maps/documentation/urls/ios-urlscheme" hreflang="en" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/urls/ios-urlscheme" hreflang="en-cn" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/urls/ios-urlscheme" hreflang="x-default" rel="alternate"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/favicon.png" rel="shortcut icon"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/touch-icon.png" rel="apple-touch-icon"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/css/devsite-google-blue.css" rel="stylesheet"/>
+  <link href="https://developers.google.com/s/opensearch.xml" rel="search" title="Google Developers" type="application/opensearchdescription+xml"/>
+  <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery-bundle.js">
+  </script>
+  <meta content="Google Developers" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://developers.google.com/maps/documentation/urls/ios-urlscheme" property="og:url"/>
+  <meta content="en" property="og:locale"/>
+  <script>
+   var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <title>
+   Google Maps URL Scheme for iOS  |  Google Maps URLs
+       |  Google Developers
+  </title>
+  <meta content="Google Maps URL Scheme for iOS  |  Google Maps URLs
+       |  Google Developers" property="og:title"/>
+ </head>
+ <body class=" devsite-doc-page devsite-uhura" id="top_of_page">
+  <div class="devsite-wrapper">
+   <div class="devsite-top-section-wrapper ">
+    <header class="devsite-top-section nocontent">
+     <div class="devsite-top-logo-row-wrapper-wrapper">
+      <div class="devsite-top-logo-row-wrapper">
+       <div class="devsite-top-logo-row devsite-full-site-width">
+        <button class="devsite-expand-section-nav devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Hamburger menu" type="button">
+        </button>
+        <div class="devsite-product-name-wrapper">
+         <a class="devsite-product-name-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Project logo (header)" href="https://developers.google.com/maps/">
+          <img alt="Google Maps APIs" class="devsite-product-logo" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+         </a>
+         <span class="devsite-product-name">
+          <ul class="devsite-breadcrumb-list">
+           <li class="devsite-breadcrumb-item">
+            <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" href="https://developers.google.com/maps/">
+             Google Maps APIs
+            </a>
+           </li>
+          </ul>
+         </span>
+        </div>
+        <div class="devsite-header-upper-tabs">
+         <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+          <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="home" data-label="navTopMenu" href="https://developers.google.com/maps/">
+             Home
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="documentation" data-label="navTopMenu" href="https://developers.google.com/maps/documentation/">
+             Documentation
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="pricingAndPlans" data-label="navTopMenu" href="https://developers.google.com/maps/pricing-and-plans/">
+             Pricing and Plans
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </div>
+        <form action="https://developers.google.com/s/results/" class="devsite-search-form " id="top-search" method="GET" search-placeholder="Search">
+         <div class="devsite-searchbox" id="searchbox">
+          <input autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="Search" type="text" value=""/>
+          <div class="devsite-search-image material-icons">
+          </div>
+         </div>
+         <input data-project-name="Google Maps URLs" data-project-path="/maps/documentation/urls/" data-query-match="" id="search_project" name="p" type="hidden" value="/maps/documentation/urls/"/>
+         <input class="suggest-project" type="hidden" value="Google Maps URLs"/>
+         <div class="suggest-project-metadata" data-home_url="/maps/documentation/urls/guide" data-name="Google Maps URLs" data-path="/maps/documentation/urls/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/" data-name="Maps APIs Solutions" data-path="/maps/solutions/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/transport-tracker/" data-name="Transport Tracker Solution" data-path="/maps/solutions/transport-tracker/">
+         </div>
+        </form>
+        <a class="devsite-header-link devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site header link" href="https://developers.google.com/products/">
+         <div class="devsite-header-link-label">
+          All Products
+         </div>
+        </a>
+        <button class="devsite-search-button devsite-header-icon-button button-flat material-icons" type="button">
+        </button>
+        <a class="devsite-user-signin devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Sign in button" href="https://www.google.com/accounts/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fdevelopers.google.com%2Fmaps%2Fdocumentation%2Furls%2Fios-urlscheme%3Frefresh%3D1&amp;service=ahsid">
+         Sign in
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="devsite-collapsible-section">
+      <div class="devsite-header-background devsite-full-site-width">
+       <div class="devsite-product-id-row devsite-full-site-width">
+        <div class="devsite-product-description-row">
+         <ul class="devsite-breadcrumb-list">
+          <li class="devsite-breadcrumb-item">
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="1" href="https://developers.google.com/maps/documentation/urls/guide">
+            Maps URLs
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="devsite-doc-set-nav-row devsite-full-site-width">
+        <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+         <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Guides" href="https://developers.google.com/maps/documentation/urls/guide">
+            Guides
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Support" href="https://developers.google.com/maps/documentation/urls/support">
+            Support
+           </a>
+          </li>
+          <button class="devsite-feedback-button devsite-top-button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Send Feedback Button" id="devsite-feedback-project" track-metadata-position="header" track-name="sendFeedbackLink" track-type="feedback" type="button">
+           Send feedback
+          </button>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </header>
+    <script>
+     if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('en')
+        }
+      });
+    }
+    </script>
+   </div>
+   <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {}, "gaid": "UA-42966870-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps URLs", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps URLs", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-49880327-1"}'/>
+    <input class="google-tag-manager-id" type="hidden" value="GTM-W546ZN"/>
+    <script>
+     var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "FR", "language": {"requested": "en", "served": "en"}, "projectName": "Google Maps URLs", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+    <div class="devsite-site-mask">
+    </div>
+    <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+     <div class="devsite-nav-responsive-tabs-panel">
+      <nav class="devsite-nav-responsive-tabs devsite-nav">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home" href="https://developers.google.com/maps/">
+          Home
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Documentation" href="https://developers.google.com/maps/documentation/?nav=true">
+          Documentation
+         </a>
+         <nav class="devsite-nav-responsive-tabs devsite-nav">
+          <ul class="devsite-nav-list">
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title devsite-nav-active gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides" tabindex="0">
+             Guides
+            </span>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Support" href="https://developers.google.com/maps/documentation/urls/support?nav=true">
+             Support
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+             All Products
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Pricing and Plans" href="https://developers.google.com/maps/pricing-and-plans/">
+          Pricing and Plans
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+          All Products
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="devsite-nav-responsive-sidebar-panel">
+      <div class="devsite-nav-responsive-back" tabindex="0">
+      </div>
+      <nav class="devsite-nav-responsive-sidebar">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/urls/guide" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Maps URLs for All Platforms
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/urls/url-encoding" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          URL Encoding
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/urls/android-intents" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Google Maps Intents for Android
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-active">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/urls/ios-urlscheme" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Google Maps URL Scheme for iOS
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </nav>
+    <div class="devsite-main-content clearfix">
+     <nav class="devsite-section-nav devsite-nav nocontent">
+      <ul class="devsite-nav-list">
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/urls/guide" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Maps URLs for All Platforms
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/urls/url-encoding" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         URL Encoding
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/urls/android-intents" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Google Maps Intents for Android
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-active">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/urls/ios-urlscheme" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Google Maps URL Scheme for iOS
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <nav class="devsite-page-nav devsite-nav">
+     </nav>
+     <article class="devsite-article">
+      <article class="devsite-article-inner">
+       <nav class="devsite-breadcrumb-nav devsite-nav">
+        <ul class="devsite-breadcrumb-list">
+         <li class="devsite-breadcrumb-item">
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" href="https://developers.google.com/products/">
+           Products
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" href="https://developers.google.com/maps/">
+           Google Maps APIs
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3" href="https://developers.google.com/maps/documentation/urls/guide">
+           Maps URLs
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="4" href="https://developers.google.com/maps/documentation/">
+           Documentation
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="5" href="https://developers.google.com/maps/documentation/urls/guide">
+           Guides
+          </a>
+         </li>
+        </ul>
+       </nav>
+       <h1 class="devsite-page-title" itemprop="name">
+        Google Maps URL Scheme for iOS
+       </h1>
+       <nav class="devsite-page-nav-embedded devsite-nav">
+       </nav>
+       <div class="devsite-article-body clearfix " itemprop="articleBody">
+        <link href="https://developers.google.com/maps/documentation/local_extensions.css" rel="stylesheet" type="text/css"/>
+        <link href="https://developers.google.com/maps/styles/common.css" rel="stylesheet" type="text/css"/>
+        <p>
+        </p>
+        <p>
+         On device running iOS 9 and later, you can use
+         <a href="#universal_links_and_google_maps">
+          Universal Links
+         </a>
+         to launch Google
+Maps when you have a Google Maps URL.
+        </p>
+        <p>
+         You can use the Google Maps URL scheme to launch the
+         <a href="https://itunes.apple.com/app/id585027354">
+          Google Maps app for iOS
+         </a>
+         and perform searches, get direction
+requests, and display map views. When you launch Google Maps your bundle
+identifier is automatically sent as part of the request.
+        </p>
+        <p>
+         You don't need a Google API key to use the Google Maps URL scheme.
+        </p>
+        <aside class="note">
+         <strong>
+          Note:
+          <a href="https://developers.google.com/maps/documentation/urls/guide">
+           Google Maps URLs
+          </a>
+         </strong>
+         lets you build a universal, cross-platform
+URL to launch Google Maps and perform searches, get directions,
+display map views, and display panoramic images. It is recommended that you
+use the cross-platform
+         <strong>
+          <a href="https://developers.google.com/maps/documentation/urls/guide">
+           Maps URLs
+          </a>
+         </strong>
+         to launch
+Google Maps, since these universal URLs allow for broader handling
+of the maps requests no matter which platform the user is on. You should
+only use the iOS-specific Maps URL Scheme for features that may only be
+functional on a mobile platform (for example, turn-by-turn navigation).
+        </aside>
+        <h2 id="universal_links_and_google_maps">
+         Universal Links and Google Maps
+        </h2>
+        <p>
+         Google Maps for iOS supports
+         <a href="https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html">
+          Universal
+Links
+         </a>
+         on devices running iOS 9 or later.
+        </p>
+        <p>
+         If your URL matches the following regular expression, and the device is running
+iOS 9 or later, you may want to consider using the openURL: method directly.
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>(http(s?)://)?
+((maps\.google\.{TLD}/)|
+ ((www\.)?google\.{TLD}/maps/)|
+ (goo.gl/maps/))
+.*
+</code></pre>
+        <p>
+         For example,
+        </p>
+        <p>
+        </p>
+        <div class="ds-selector-tabs">
+         <section>
+          <h3>
+           Swift
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
+</code></pre>
+          <p>
+          </p>
+         </section>
+         <section>
+          <h3>
+           Objective-C
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>[[UIApplication sharedApplication] openURL:
+   [NSURL URLWithString:@"https://www.google.com/maps/@42.585444,13.007813,6z"]];
+</code></pre>
+          <p>
+          </p>
+         </section>
+        </div>
+        <p>
+        </p>
+        <h2 id="overview">
+         Overview
+        </h2>
+        <p>
+         A URL scheme allows you to launch a native iOS application from another iOS app
+or a web application. You can set options in the URL that will be passed to the
+launched application. The Google Maps app for iOS supports the following URL
+schemes:
+        </p>
+        <ul>
+         <li>
+          <p>
+           <code>
+            comgooglemaps://
+           </code>
+           and
+           <code>
+            comgooglemaps-x-callback://
+           </code>
+           - These schemes
+  allow you to launch the Google Maps app for iOS and perform one of several
+  actions:
+          </p>
+          <ul>
+           <li>
+            Display a map at a specified location and zoom level.
+           </li>
+           <li>
+            Search for locations or places, and display them on a map.
+           </li>
+           <li>
+            Request directions from one location to another. Directions can be returned
+  for four modes of transportation: driving, walking, bicycling and public
+  transit.
+           </li>
+           <li>
+            Add navigation to your app.
+           </li>
+           <li>
+            Through iOS 8, issue a callback when the app has completed, using
+            <a href="#specify-a-callback-url">
+             <code>
+              comgooglemaps-x-callback://
+             </code>
+            </a>
+            . Callbacks are often used to
+  return a user to the app that originally opened Google Maps for iOS. Note that
+  on iOS 9, the system automatically provides a "Back to" link in left corner of
+  the status bar.
+           </li>
+          </ul>
+         </li>
+         <li>
+          <p>
+           <code>
+            comgooglemapsurl://
+           </code>
+           - This scheme allows you to launch the Google Maps app
+  for iOS using a URL derived from the desktop Google Maps website. This means
+  that you can give your users a native mobile experience rather than simply
+  loading the Google Maps website.
+          </p>
+          <ul>
+           <li>
+            The original URL can be for
+            <code>
+             maps.google.com
+            </code>
+            , or for
+            <code>
+             google.com/maps
+            </code>
+            ,
+  or using any valid top-level country domain instead of
+            <code>
+             com
+            </code>
+            .
+  You can also pass on
+            <code>
+             goo.gl/maps
+            </code>
+            redirection URLs.
+           </li>
+           <li>
+            You can issue a callback using the
+            <code>
+             x-source
+            </code>
+            and
+            <code>
+             x-success
+            </code>
+            parameters with the
+            <code>
+             comgooglemapsurl://
+            </code>
+            URL scheme.
+           </li>
+          </ul>
+         </li>
+        </ul>
+        <h2 id="launch_the_google_maps_app_for_ios_and_perform_a_specific_function">
+         Launch the Google Maps app for iOS and perform a specific function
+        </h2>
+        <aside class="note">
+         <strong>
+          Note:
+         </strong>
+         <span>
+          Beginning with iOS 9, your app must declare the URL schemes that it
+will open. See
+          <a href="https://developers.google.com/maps/documentation/ios-sdk/start#step_7_declare_the_url_schemes_used_by_the_api">
+           Getting Started
+          </a>
+          for more information.
+         </span>
+        </aside>
+        <p>
+         To launch the Google Maps app for iOS and optionally perform one of the
+supported functions, use a URL scheme of the following form:
+        </p>
+        <pre class="prettyprint notranslate">comgooglemaps://?<i>parameters</i></pre>
+        <p>
+         or:
+        </p>
+        <pre class="prettyprint notranslate">comgooglemaps-x-callback://?<i>parameters</i></pre>
+        <p>
+         Parameters are described in detail later in this document.
+        </p>
+        <h3 id="check_the_availability_of_the_google_maps_app_on_the_device">
+         Check the availability of the Google Maps app on the device
+        </h3>
+        <p>
+         Before you present one of these URLs to a user in your app you should first
+verify that the application is installed. Your app can check that the URL
+scheme is available with the following code:
+        </p>
+        <p>
+        </p>
+        <div class="ds-selector-tabs">
+         <section>
+          <h3>
+           Swift
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)
+</code></pre>
+          <p>
+          </p>
+         </section>
+         <section>
+          <h3>
+           Objective-C
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>[[UIApplication sharedApplication] canOpenURL:
+    [NSURL URLWithString:@"comgooglemaps://"]];
+</code></pre>
+          <p>
+          </p>
+         </section>
+        </div>
+        <p>
+        </p>
+        <p>
+         For example, to display a map of Central Park in New York, you can use the
+following code:
+        </p>
+        <p>
+        </p>
+        <div class="ds-selector-tabs">
+         <section>
+          <h3>
+           Swift
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+  UIApplication.shared.openURL(URL(string:
+    "comgooglemaps://?center=40.765819,-73.975866&amp;zoom=14&amp;views=traffic")!)
+} else {
+  print("Can't use comgooglemaps://");
+}
+</code></pre>
+          <p>
+          </p>
+         </section>
+         <section>
+          <h3>
+           Objective-C
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>if ([[UIApplication sharedApplication] canOpenURL:
+     [NSURL URLWithString:@"comgooglemaps://"]]) {
+  [[UIApplication sharedApplication] openURL:
+   [NSURL URLWithString:@"comgooglemaps://?center=40.765819,-73.975866&amp;zoom=14&amp;views=traffic"]];
+} else {
+  NSLog(@"Can't use comgooglemaps://");
+}
+</code></pre>
+          <p>
+          </p>
+         </section>
+        </div>
+        <p>
+        </p>
+        <h3 id="display_a_map">
+         Display a map
+        </h3>
+        <p>
+         Use the URL scheme to display the map at a specified zoom level and location.
+You can also overlay other views on top of your map, or display Street View
+imagery.
+        </p>
+        <p>
+         <strong>
+          Parameters
+         </strong>
+        </p>
+        <p>
+         All of the following parameters are optional. If no parameters are set, the
+URL scheme will simply launch the Google Maps app for iOS.
+        </p>
+        <ul>
+         <li>
+          <code>
+           center
+          </code>
+          : This is the map viewport center point. Formatted as a comma
+   separated string of
+          <code>
+           latitude,longitude
+          </code>
+          .
+         </li>
+         <li>
+          <code>
+           mapmode
+          </code>
+          : Sets the kind of map shown. Can be set to:
+          <code>
+           standard
+          </code>
+          or
+          <code>
+           streetview
+          </code>
+          . If not specified, the current application settings will be
+   used.
+         </li>
+         <li>
+          <code>
+           views
+          </code>
+          : Turns specific views on/off. Can be set to:
+          <code>
+           satellite
+          </code>
+          ,
+          <code>
+           traffic
+          </code>
+          , or
+          <code>
+           transit
+          </code>
+          . Multiple values can be set using a
+   comma-separator. If the parameter is specified with no value, then it will
+   clear all views.
+         </li>
+         <li>
+          <code>
+           zoom
+          </code>
+          : Specifies the zoom level of the map.
+         </li>
+        </ul>
+        <p>
+         An example URL is below, which displays the map centered on New York at zoom
+14 with the traffic view on:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemaps://?center=40.765819,-73.975866&amp;zoom=14&amp;views=traffic
+</code></pre>
+        <p>
+         <img alt="New York traffic map" src="https://developers.google.com/maps/documentation/ios-sdk/images/url_scheme_traffic.png"/>
+        </p>
+        <p>
+         Some additional examples are below:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemaps://?center=37.788463,-122.392545&amp;zoom=12
+</code></pre>
+        <pre class="prettyprint notranslate">comgooglemaps://?center=46.414382,10.013988&amp;mapmode=streetview</pre>
+        <h3 id="search">
+         Search
+        </h3>
+        <p>
+         Use this scheme to display search queries in a specified viewport location.
+        </p>
+        <p>
+         <strong>
+          Parameters
+         </strong>
+        </p>
+        <p>
+         In addition to the parameters used to display a map, Search supports the
+         <code>
+          q
+         </code>
+         parameter.
+        </p>
+        <ul>
+         <li>
+          <code>
+           q
+          </code>
+          : The query string for your search.
+         </li>
+        </ul>
+        <p>
+         An example URL is below to search for “Pizza” around the specified location:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemaps://?q=Pizza&amp;center=37.759748,-122.427135
+</code></pre>
+        <p>
+         <img alt="Nearby Pizza" src="https://developers.google.com/maps/documentation/ios-sdk/images/url_scheme_pizza.png"/>
+        </p>
+        <p>
+         Some additional examples are below:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemaps://?q=Steamers+Lane+Santa+Cruz,+CA&amp;center=37.782652,-122.410126&amp;views=satellite,traffic&amp;zoom=15
+</code></pre>
+        <pre class="prettyprint notranslate">comgooglemaps://?q=Google+Japan,+Minato,+Tokyo,+Japan&amp;center=35.660888,139.73073&amp;zoom=15&amp;views=transit</pre>
+        <p>
+         <a id="directions">
+         </a>
+        </p>
+        <h3 id="display_directions">
+         Display directions
+        </h3>
+        <p>
+         Use this scheme to request and display directions between two locations.
+You can also specify the transportation mode.
+        </p>
+        <p>
+         <strong>
+          Parameters
+         </strong>
+        </p>
+        <ul>
+         <li>
+          <code>
+           saddr
+          </code>
+          : Sets the starting point for directions searches. This can be
+   a latitude,longitude or a query formatted address. If it is a query
+   string that returns more than one result, the first result will be
+   selected. If the value is left blank, then the user’s current location
+   will be used.
+         </li>
+         <li>
+          <code>
+           daddr
+          </code>
+          : Sets the end point for directions searches. Has the
+   same format and behavior as
+          <code>
+           saddr
+          </code>
+          .
+         </li>
+         <li>
+          <code>
+           directionsmode
+          </code>
+          : Method of transportation. Can be set to:
+          <code>
+           driving
+          </code>
+          ,
+          <code>
+           transit
+          </code>
+          ,
+          <code>
+           bicycling
+          </code>
+          or
+          <code>
+           walking
+          </code>
+          .
+         </li>
+        </ul>
+        <p>
+         An example URL is below to display transit directions between Google NYC and
+JFK Airport:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemaps://?saddr=Google+Inc,+8th+Avenue,+New+York,+NY&amp;daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York&amp;directionsmode=transit
+</code></pre>
+        <p>
+         <img alt="Transit directions" src="https://developers.google.com/maps/documentation/ios-sdk/images/url_scheme_transit.png"/>
+        </p>
+        <p>
+         Some additional examples are below:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemaps://?saddr=Google,+1600+Amphitheatre+Parkway,+Mountain+View,+CA+94043&amp;daddr=Google+Inc,+345+Spear+Street,+San+Francisco,+CA&amp;center=37.422185,-122.083898&amp;zoom=10
+</code></pre>
+        <pre class="prettyprint notranslate">comgooglemaps://?saddr=2025+Garcia+Ave,+Mountain+View,+CA,+USA&amp;daddr=Google,+1600+Amphitheatre+Parkway,+Mountain+View,+CA,+United+States&amp;center=37.423725,-122.0877&amp;directionsmode=walking&amp;zoom=17</pre>
+        <p>
+         <a id="x-callback_requests">
+         </a>
+        </p>
+        <h3 id="specify_a_callback_url">
+         Specify a callback URL
+        </h3>
+        <p>
+         If you'd like to specify a callback URL, you must use the
+         <code>
+          comgooglemaps-x-callback://
+         </code>
+         URL scheme. This scheme adheres to the
+         <a href="http://x-callback-url.com/">
+          x-callback-url specification
+         </a>
+         . When you call the Google Maps app for iOS
+with this scheme, the app will display a button at the top of
+the screen. Tapping this button will issue a callback to a URL that
+you've specified.
+        </p>
+        <p>
+         Requests to the
+         <code>
+          comgooglemaps-x-callback://
+         </code>
+         must be of the form:
+        </p>
+        <pre class="prettyprint notranslate">comgooglemaps-x-callback://?<i>parameters</i></pre>
+        <p>
+         <strong>
+          Parameters
+         </strong>
+        </p>
+        <p>
+         The x-callback URL scheme accepts the same parameters as the
+         <code>
+          comgooglemaps://
+         </code>
+         URL scheme, with the following additional parameters. Both parameters are
+required.
+        </p>
+        <ul>
+         <li>
+          <code>
+           x-source
+          </code>
+          — The name of the application sending the x-callback
+    request. Short names are preferred.
+         </li>
+         <li>
+          <code>
+           x-success
+          </code>
+          — The URL to call when complete. Often this will
+    be a URL scheme for your own app, allowing users to return to the original
+    application.
+         </li>
+        </ul>
+        <p>
+         Note that your app will have to register its own URL scheme so that it can
+respond to the callback URL.
+        </p>
+        <ol>
+         <li>
+          Ensure that your application has registered a URL scheme that can respond
+     to the callback request.
+         </li>
+         <li>
+          Pass the label for the callback button in the
+          <code>
+           x-source
+          </code>
+          parameter.
+         </li>
+         <li>
+          Pass the callback URL in the
+          <code>
+           x-success
+          </code>
+          parameter.
+         </li>
+        </ol>
+        <p>
+         The following example will launch the Google Maps app for iOS and display a map
+centered on New York. The app will also display a button labelled "SourceApp".
+When the "SourceApp" button is clicked, the Google Maps app for iOS will issue
+a callback to a fictitious URL scheme,
+         <code>
+          sourceapp://?resume=true
+         </code>
+         .
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemaps-x-callback://?center=40.765819,-73.975866&amp;zoom=14
+   &amp;x-success=sourceapp://?resume=true
+   &amp;x-source=SourceApp
+</code></pre>
+        <p>
+         As with the
+         <code>
+          comgooglemaps://
+         </code>
+         URL scheme, you should first verify that
+the Google Maps app for iOS is available on the device, and supports
+the x-callback URL scheme. Your app can check that the URL scheme is available
+with the following code:
+        </p>
+        <p>
+        </p>
+        <div class="ds-selector-tabs">
+         <section>
+          <h3>
+           Swift
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>UIApplication.shared.canOpenURL(URL(string:"comgooglemaps-x-callback://")!)
+</code></pre>
+          <p>
+          </p>
+         </section>
+         <section>
+          <h3>
+           Objective-C
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>[[UIApplication sharedApplication] canOpenURL:
+   [NSURL URLWithString:@"comgooglemaps-x-callback://"]];
+</code></pre>
+          <p>
+          </p>
+         </section>
+        </div>
+        <p>
+        </p>
+        <p>
+         An example of a URL that lets users return to an app after searching for
+dessert is shown below.
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemaps-x-callback://?q=dessert&amp;center=37.759748,-122.427135
+   &amp;x-success=sourceapp://?resume=true
+   &amp;x-source=Nom+Nom
+</code></pre>
+        <h3 id="add_navigation_to_your_app">
+         Add navigation to your app
+        </h3>
+        <p>
+         Launching Google Maps app for iOS with a directions request is an easy way to
+give your users access to turn-by-turn navigation from your app. You can use
+either the
+         <code>
+          comgooglemaps://
+         </code>
+         or
+         <code>
+          comgooglemaps-x-callback://
+         </code>
+         URL schemes.
+        </p>
+        <aside class="note">
+         <strong>
+          Note:
+         </strong>
+         <span>
+          Buttons added via the
+          <code>
+           x-source
+          </code>
+          parameter will not be displayed in the
+turn-by-turn navigation UI.
+         </span>
+        </aside>
+        <p>
+         The below code snippet shows how to use the
+         <code>
+          comgooglemaps-x-callback://
+         </code>
+         scheme to
+request directions, and then return to your app when your user is ready. The
+code will do the following:
+        </p>
+        <ol>
+         <li>
+          Verify that the
+          <code>
+           comgooglemaps-x-callback://
+          </code>
+          URL scheme is available.
+         </li>
+         <li>
+          Launch the Google Maps app for iOS, and request directions to JFK Airport in
+     New York city. Leave the start address blank to request directions from the
+     user's current location.
+         </li>
+         <li>
+          Add a button labelled "AirApp" to the Google Maps app for iOS. The button
+     label is defined by the
+          <code>
+           x-source
+          </code>
+          parameter.
+         </li>
+         <li>
+          Call the fictitious URL scheme,
+          <code>
+           sourceapp://
+          </code>
+          , when the users clicks the
+     back button.
+         </li>
+        </ol>
+        <p>
+         The code is shown below.
+        </p>
+        <p>
+        </p>
+        <div class="ds-selector-tabs">
+         <section>
+          <h3>
+           Swift
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>let testURL = URL(string: "comgooglemaps-x-callback://")!
+if UIApplication.shared.canOpenURL(testURL) {
+  let directionsRequest = "comgooglemaps-x-callback://" +
+    "?daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York" +
+    "&amp;x-success=sourceapp://?resume=true&amp;x-source=AirApp"
+
+  let directionsURL = URL(string: directionsRequest)!
+  UIApplication.shared.openURL(directionsURL)
+} else {
+  NSLog("Can't use comgooglemaps-x-callback:// on this device.")
+}
+</code></pre>
+          <p>
+          </p>
+         </section>
+         <section>
+          <h3>
+           Objective-C
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>NSURL *testURL = [NSURL URLWithString:@"comgooglemaps-x-callback://"];
+if ([[UIApplication sharedApplication] canOpenURL:testURL]) {
+  NSString *directionsRequest = @"comgooglemaps-x-callback://" +
+      @"?daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York" +
+      @"&amp;x-success=sourceapp://?resume=true&amp;x-source=AirApp";
+  NSURL *directionsURL = [NSURL URLWithString:directionsRequest];
+  [[UIApplication sharedApplication] openURL:directionsURL];
+} else {
+  NSLog(@"Can't use comgooglemaps-x-callback:// on this device.");
+}
+</code></pre>
+          <p>
+          </p>
+         </section>
+        </div>
+        <p>
+        </p>
+        <h2 id="launch_the_google_maps_app_for_ios_from_a_google_maps_desktop_url">
+         Launch the Google Maps app for iOS from a Google Maps desktop URL
+        </h2>
+        <p>
+         If your app has access to a pre-existing Google Maps URL, such as on a web page
+or in a database, you can use the scheme below to open the URL in the Google
+Maps app for iOS, thus offering your users the best native experience.
+        </p>
+        <ol>
+         <li>
+          Replace the
+          <code>
+           http://
+          </code>
+          or
+          <code>
+           https://
+          </code>
+          scheme with
+          <code>
+           comgooglemapsurl://
+          </code>
+          .
+         </li>
+         <li>
+          If you want to use a callback, include the
+          <code>
+           x-source
+          </code>
+          and
+          <code>
+           x-success
+          </code>
+          parameters. This scheme adheres to the
+          <a href="http://x-callback-url.com/">
+           x-callback-url specification
+          </a>
+          .
+         </li>
+        </ol>
+        <h3 id="supported_google_maps_url_formats">
+         Supported Google Maps URL formats
+        </h3>
+        <p>
+         The
+         <code>
+          comgooglemapsurl://
+         </code>
+         scheme supports URLs that match the following regular
+expression below, where
+         <code>
+          {TLD}
+         </code>
+         refers to any valid top-level country domain.
+Line breaks are added for clarity:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>(http(s?)://)?
+((maps\.google\.{TLD}/)|
+ ((www\.)?google\.{TLD}/maps/)|
+ (goo.gl/maps/))
+.*
+</code></pre>
+        <h3 id="check_the_availability_of_the_google_maps_app">
+         Check the availability of the Google Maps app
+        </h3>
+        <p>
+         First verify that the Google Maps app for iOS is available on the device, and
+supports the URL scheme:
+        </p>
+        <p>
+        </p>
+        <div class="ds-selector-tabs">
+         <section>
+          <h3>
+           Swift
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>UIApplication.shared.canOpenURL(URL(string:"comgooglemaps-x-callback://")!)
+</code></pre>
+          <p>
+          </p>
+         </section>
+         <section>
+          <h3>
+           Objective-C
+          </h3>
+          <p>
+          </p>
+          <pre class="prettyprint notranslate" translate="no"><code>[[UIApplication sharedApplication] canOpenURL:
+   [NSURL URLWithString:@"comgooglemapsurl://"]];
+</code></pre>
+          <p>
+          </p>
+         </section>
+        </div>
+        <p>
+        </p>
+        <h3 id="examples">
+         Examples
+        </h3>
+        <p>
+         <strong>
+          Example of a generic Google Maps URL:
+         </strong>
+        </p>
+        <p>
+         Original Google Maps URL:
+        </p>
+        <pre class="prettyprint notranslate">https://www.google.com/maps/preview/@42.585444,13.007813,6z</pre>
+        <p>
+         Using the URL scheme:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemapsurl://www.google.com/maps/preview/@42.585444,13.007813,6z
+</code></pre>
+        <p>
+         <strong>
+          Example of a generic Google Maps URL:
+         </strong>
+        </p>
+        <p>
+         Original Google Maps URL:
+        </p>
+        <pre class="prettyprint notranslate">https://maps.google.com/?q=@37.3161,-122.1836</pre>
+        <p>
+         Using the URL scheme:
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemapsurl://maps.google.com/?q=@37.3161,-122.1836
+</code></pre>
+        <p>
+         <strong>
+          Example requesting directions to Tokyo Tower with x-callback:
+         </strong>
+        </p>
+        <p>
+         Original Google Maps URL:
+        </p>
+        <pre class="prettyprint notranslate">http://maps.google.com/maps?f=d&amp;daddr=Tokyo+Tower,+Tokyo,+Japan&amp;sll=35.6586,139.7454&amp;sspn=0.2,0.1&amp;nav=1</pre>
+        <p>
+         The following example will launch the Google Maps app for iOS and display a map
+with directions to Tokyo Tower, as specified in the original Google Maps URL
+(above). The app will also display a button labelled
+"SourceApp". When the "SourceApp" button is clicked, the Google Maps app for iOS
+will issue a callback to a fictitious URL scheme,
+         <code>
+          sourceapp://?resume=true
+         </code>
+         .
+        </p>
+        <pre class="prettyprint notranslate" translate="no"><code>comgooglemapsurl://maps.google.com/maps?f=d&amp;daddr=Tokyo+Tower,+Tokyo,+Japan&amp;sll=35.6586,139.7454&amp;sspn=0.2,0.1&amp;nav=1
+    &amp;x-source=SourceApp
+    &amp;x-success=sourceapp://?resume=true
+</code></pre>
+       </div>
+       <div class="devsite-content-footer nocontent">
+        <p>
+         Except as otherwise noted, the content of this page is licensed under the
+         <a href="http://creativecommons.org/licenses/by/3.0/">
+          Creative Commons Attribution 3.0 License
+         </a>
+         , and code samples are licensed under the
+         <a href="http://www.apache.org/licenses/LICENSE-2.0">
+          Apache 2.0 License
+         </a>
+         . For details, see our
+         <a href="https://developers.google.com/terms/site-policies">
+          Site Policies
+         </a>
+         . Java is a registered trademark of Oracle and/or its affiliates.
+        </p>
+        <p class="devsite-content-footer-date" content="2017-06-07T04:47:23.188030" itemprop="datePublished">
+         Last updated June 7, 2017.
+        </p>
+       </div>
+      </article>
+     </article>
+    </div>
+    <footer class="devsite-footer-promos nocontent">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-promos-list">
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="http://stackoverflow.com/questions/tagged/google-maps">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-stack-overflow.svg"/>
+         Stack Overflow
+        </a>
+        <div class="devsite-footer-promo-description">
+         Ask a question under the google-maps tag.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://github.com/googlemaps/">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg"/>
+         GitHub
+        </a>
+        <div class="devsite-footer-promo-description">
+         Fork our samples and try them yourself.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://googlegeodevelopers.blogspot.com">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/blogger_64dp.png"/>
+         Blog
+        </a>
+        <div class="devsite-footer-promo-description">
+         Read about the latest updates, customer stories, and tips.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://issuetracker.google.com/savedsearches/559082">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/developers_64dp.png"/>
+         Issue tracker
+        </a>
+        <div class="devsite-footer-promo-description">
+         Something wrong? Send us a bug report!
+        </div>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-footer-linkboxes nocontent ">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-linkboxes-list">
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Learn More
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/javascript/tutorials/">
+           Tutorials
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/pricing-and-plans/">
+           Pricing and Plans
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/api-picker">
+           API Picker
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/">
+           Maps APIs Overview
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Platforms
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/android/">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/ios/">
+           iOS
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web/">
+           Web
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web-services/">
+           Web Services
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Product Info
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/contact-sales/">
+           Contact sales
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/support/">
+           Community support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/premium/support">
+           Paid support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/terms">
+           Terms of Service
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox devsite-footer-linkbox-sites">
+        <a class="gc-analytics-event devsite-footer-linkbox-logo-link" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link" href="https://developers.google.com/">
+         <img class="devsite-footer-linkbox-logo" src="https://developers.google.com/_static/eee0a9d1b9/images/redesign-14/lockup-color-knockout.png"/>
+        </a>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link" href="//developer.android.com/index.html">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link" href="//developer.chrome.com/home">
+           Chrome
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link" href="//firebase.google.com">
+           Firebase
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cloud Link" href="//cloud.google.com">
+           Google Cloud Platform
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products Link" href="//developers.google.com/products/">
+           All Products
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-utility-footer">
+     <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
+      <div class="devsite-utility-footer-nav-left">
+       <form action="/i18n/setlang/" class="devsite-utility-footer-language" method="post">
+        <input name="xsrf_token" type="hidden" value="4CcPBVTYimAHjODGHCaqJYbQPqOi2zZA3Gg18A0-oMo6MTQ5NzQ0NDM5MzEyMDcyMA"/>
+        <input name="next" type="hidden" value="/maps/documentation/urls/ios-urlscheme"/>
+        <select class="devsite-utility-footer-language-select kd-select" name="language" track-name="click" track-type="languageSelector">
+         <option track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector" value="id">
+          Bahasa Indonesia
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector" value="de">
+          Deutsch
+         </option>
+         <option selected="selected" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" value="en">
+          English
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector" value="es">
+          español
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector" value="fr">
+          français
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="pt-br" track-name="changed" track-type="languageSelector" value="pt-br">
+          Português Brasileiro
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector" value="ru">
+          Русский
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector" value="ja">
+          日本語
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-cn" track-name="changed" track-type="languageSelector" value="zh-cn">
+          简体中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector" value="ko">
+          한국어
+         </option>
+        </select>
+       </form>
+       <span class="devsite-utility-footer-links">
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer terms link" href="https://developers.google.com/terms/site-terms">
+         Terms
+        </a>
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer privacy link" href="https://www.google.com/policies/privacy/">
+         Privacy
+        </a>
+       </span>
+      </div>
+      <div class="devsite-utility-footer-nav-right">
+       <div class="devsite-utility-footer-newsletter-signup-text">
+        Sign up for the Google Developers newsletter
+       </div>
+       <a class="button button-primary devsite-utility-footer-newsletter-signup-button" href="https://services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch">
+        Subscribe
+       </a>
+      </div>
+     </nav>
+    </footer>
+    <div class="devsite-feedback-dialog devsite-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Send feedback about...
+      </h3>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Image" data-type="documentation" track-metadata-position="header" track-name="feedbackDocIcon" track-type="feedback">
+        <div class="devsite-feedback-item-icon-container">
+         <div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs material-icons">
+         </div>
+        </div>
+       </a>
+       <div class="devsite-feedback-item-name">
+        This page
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Text" data-type="documentation" tabindex="0" track-metadata-position="header" track-name="feedbackDocText" track-type="feedback">
+         Documentation feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Image" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductIcon" track-type="feedback">
+        <img alt="Google Maps URLs" class="devsite-feedback-item-icon" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+       </a>
+       <div class="devsite-feedback-item-name">
+        Google Maps URLs
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Text" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductText" track-type="feedback">
+         Product feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-support">
+       <img src="https://developers.google.com/_static/eee0a9d1b9/images/feedback/ic_help_24px.svg"/>
+       Need help? Visit our
+       <a href="https://developers.google.com/maps/support">
+        support page
+       </a>
+       .
+      </div>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="devsite-feedback-cancel button-white gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button" track-metadata-position="header" track-name="cancelFeedbackButton" track-type="feedback" type="button">
+       Cancel
+      </button>
+     </div>
+    </div>
+    <script>
+     $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'Google Maps Actions',
+        'version': 'devsite-20170612-r03-rc00.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+    </script>
+   </div>
+   <script async="" defer="" src="//www.gstatic.com/feedback/api.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery_ui-bundle.js">
+   </script>
+   <script src="https://developers.google.com/_static2/eee0a9d1b9/jsi18n/">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot_closure.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot.js">
+   </script>
+   <script>
+    (function($) {
+          
+          devsite.devsite.Init($, {'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'VERSION_HASH': 'eee0a9d1b9', 'SITE_NAME': 'devsite', 'HISTORY_ENABLED': 1, 'SUBPATH': '', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.api.ai', '.appspot.com', '.devsitetest.how', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.nest.com', '.openthread.io', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0, 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com'},
+                               '[]','en',
+                               true, '',
+                               {"039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/maps/documentation/urls/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+   </script>
+   <script>
+    $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+   </script>
+  </div>
+  <span data-request-elapsed="273.880004883" id="devsite-request-elapsed">
+  </span>
+ </body>
+</html>

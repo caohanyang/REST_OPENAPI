@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="Google Maps API Geocoder Tool" name="description"/>
+  <title>
+   Google Maps API Geocoder Tool
+  </title>
+  <meta content="initial-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta charset="utf-8"/>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;client=gme-addictive&amp;channel=geocoder-tool&amp;libraries=places">
+  </script>
+  <script src="/_static/js/mustache-bundle.js">
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">
+  </script>
+  <script src="constants.js">
+  </script>
+  <script src="state.js">
+  </script>
+  <script src="util.js">
+  </script>
+  <script src="geocoder-tool.js">
+  </script>
+  <script id="resultsTemplate" type="text/mustache">
+   <div class="result" id="result-{{i}}">
+        <table><tbody>
+          <tr valign="top">
+            <td style="padding: 2px">
+              <img id="result-{{i}}-marker-img" src="{{icon}}">
+            </td>
+            <td style="padding: 2px;">
+              <p class="{{partialMatchClass}}">
+                <strong class="warn">Partial match</strong>
+              </p>
+              <p class="result-formatted-address">
+                <strong>Address:</strong>
+              {{formattedAddress}}</p>
+              <p class="result-location">
+                <strong>Location:</strong>
+              {{locationLatlng}}
+              (type: <acronym title="{{locationTypeDescription}}">
+                {{locationType}}</acronym>)</p>
+              <p class="result-types">
+                <strong>Types:</strong>
+              {{resultTypes}}</p>
+              <p class="{{postcodeLocalitiesClass}}">
+                <strong>Postcode localities:</strong>
+                {{#postcodeLocalitiesLinks}}
+                  <a href="{{hash}}" class="visible-inline">{{name}}</a>
+                {{/postcodeLocalitiesLinks}}
+              </p>
+              <div id="details-result-{{i}}">
+              <p><span class="gray">Address components:</span></p>
+              <table class="address-components"><tbody>
+                {{#addressComponents}}
+                <tr>
+                  <td class="vtop">{{primaryType}}</td>
+                  <td class="vtop">{{longName}}
+                  {{#shortName}}
+                  <br><span class="gray">{{shortName}}</span>
+                  {{/shortName}}
+                  </td>
+                  <td class="vtop"><span class="gray">{{nonPrimaryTypes}}</span></td>
+                </tr>
+                {{/addressComponents}}
+              </tbody></table>
+              {{#bounds}}
+              <p class="result-bounds">
+                <strong>Bounds:</strong> {{bounds.ne}} — {{bounds.sw}}</p>
+              {{/bounds}}
+              {{#viewport}}
+              <p class="result-viewport">
+                <strong>Viewport:</strong> {{viewport.ne}} — {{viewport.sw}}</p>
+              {{/viewport}}
+              {{#placeId}}
+              <p class="result-placeid">
+                <strong>Place ID:</strong>
+                <a href="#place_id%3D{{placeId}}">{{placeId}}</a></p>
+              {{/placeId}}
+            </div></td>
+          </tr>
+        </tbody></table>
+      </div>
+  </script>
+  <link href="styles.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+  <div class="hidden">
+   <div id="search-control-ui">
+    <p>
+     Enter a query to geocode, or click on the map to reverse geocode.
+    </p>
+    <input autofocus="" id="query-input"/>
+    <input id="geocode-button" type="button" value="Geocode"/>
+    <div id="show-hide-options-div">
+     <a id="show-options-link">
+      Show options
+     </a>
+     <a class="hidden" id="hide-options-link">
+      Hide options
+     </a>
+    </div>
+    <div class="hidden" id="search-options-div">
+     <table>
+      <tbody>
+       <tr class="headers">
+        <th>
+         Component Filtering
+        </th>
+        <th>
+         <a class="learn-more-link" href="/maps/documentation/geocoding/intro#ComponentFiltering" target="_atop">
+          (?)
+         </a>
+        </th>
+        <th>
+         Examples
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Country
+        </td>
+        <td>
+         <select id="restrict-country-select">
+         </select>
+        </td>
+        <td class="examples">
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <acronym title="matches all the administrative-area levels">
+          Administrative area
+         </acronym>
+        </td>
+        <td>
+         <input id="restrict-administrative-area-input"/>
+        </td>
+        <td class="examples">
+         Canarias, Tenerife
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <acronym title="matches against both locality and sublocality types">
+          Locality
+         </acronym>
+        </td>
+        <td>
+         <input id="restrict-locality-input"/>
+        </td>
+        <td class="examples">
+         La Laguna, Tegueste
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <acronym title="matches postal-code and postal-code-prefix">
+          Postal code
+         </acronym>
+        </td>
+        <td>
+         <input id="restrict-postal-code-input"/>
+        </td>
+        <td class="examples">
+         38005, H0H 0H0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <acronym title="matches long or short name of a route">
+          Route
+         </acronym>
+        </td>
+        <td>
+         <input id="restrict-route-input"/>
+        </td>
+        <td class="examples">
+         Bayshore Freeway
+        </td>
+       </tr>
+       <tr class="headers">
+        <th>
+         Region Biasing
+        </th>
+        <th>
+         <select id="bias-country-select">
+         </select>
+        </th>
+        <th>
+         <a class="learn-more-link" href="/maps/documentation/geocoding/intro#RegionCodes" target="_atop">
+          (?)
+         </a>
+        </th>
+       </tr>
+       <tr class="headers">
+        <th>
+         Viewport Biasing
+        </th>
+        <th>
+         <label for="bias-viewport-checkbox" id="bias-viewport-checkbox-label">
+          on this viewport
+         </label>
+         <input id="bias-viewport-checkbox" title="Will be highlighted in green." type="checkbox"/>
+        </th>
+        <th>
+         <a class="learn-more-link" href="/maps/documentation/geocoding/intro#Viewports" target="_atop">
+          (?)
+         </a>
+        </th>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="hidden" id="results-control-ui">
+    <div id="status-display-div">
+     <p id="status-line">
+     </p>
+     <p id="status-linkbar">
+      Found
+      <span id="status-display-results-length">
+       no
+      </span>
+      results.
+            (
+      <span>
+       <a id="view-all-in-map-link">
+        view all in map
+       </a>
+      </span>
+      )
+            [
+      <span>
+       <a href="" id="status-display-json-link" target="_atop">
+        JSON
+       </a>
+      </span>
+      |
+      <span>
+       <a href="" id="status-display-xml-link" target="_atop">
+        XML
+       </a>
+      </span>
+      ]
+            | [
+      <span>
+       <a id="hide-results-link">
+        Collapse
+       </a>
+      </span>
+      <span>
+       <a class="hidden" id="show-results-link">
+        Expand
+       </a>
+      </span>
+      ]
+     </p>
+    </div>
+    <div id="results-display-div">
+    </div>
+   </div>
+   <div class="result" id="result-template-div">
+    <table>
+     <tbody>
+      <tr valign="top">
+       <td style="padding: 2px">
+        <img id="result-template-div-marker-img" src=""/>
+       </td>
+       <td style="padding: 2px;">
+        <p class="result-partial-match">
+         <strong class="warn">
+          Partial match
+         </strong>
+        </p>
+        <p class="result-formatted-address">
+         <strong>
+          Address:
+         </strong>
+        </p>
+        <p class="result-location">
+         <strong>
+          Location:
+         </strong>
+        </p>
+        <p class="result-types">
+         <strong>
+          Types:
+         </strong>
+        </p>
+        <p class="result-postcode-localities">
+         <strong>
+          Postcode localities:
+         </strong>
+        </p>
+        <div id="details-result-template-dev">
+         <p>
+          <span class="gray">
+           Address components:
+          </span>
+         </p>
+         <table class="address-components">
+          <tbody>
+          </tbody>
+         </table>
+         <p class="result-bounds">
+          <strong>
+           Bounds:
+          </strong>
+         </p>
+         <p class="result-viewport">
+          <strong>
+           Viewport:
+          </strong>
+         </p>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <div id="map">
+  </div>
+ </body>
+</html>

@@ -1,0 +1,87 @@
+{
+  "basePath": "/search/local/ws/rest/v1\">",
+  "paths": {
+    "/GeocodeFeed>": {
+      "POST": {},
+      "get": {}
+    },
+    "/cc981072.aspx": {
+      "GET": {},
+      "get": {}
+    },
+    "/plainâ€�": {
+      "GET": {},
+      "get": {}
+    },
+    "/succeeded": {
+      "GET": {},
+      "get": {}
+    },
+    "/longitude": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "\nYou",
+            "description": "can find the complete sample described in this section in the Code Samples section at the end of this article.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/travelMode": {
+      "GET": {},
+      "get": {}
+    },
+    "/GeocodeRequest>": {
+      "POST": {},
+      "Post": {}
+    },
+    "/Response>": {
+      "GET": {},
+      "Get": {}
+    },
+    "/Geocode": {
+      "GET": {},
+      "get": {}
+    },
+    "/region,": {
+      "post": {},
+      "POST": {}
+    },
+    "/Locations": {
+      "post": {},
+      "POST": {},
+      "Get": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "\nYou",
+            "description": "can substitute a hyphen (-) for any structured URL parameter when there is no value.\n\nFor countries that do not have a structured URL template, use the Unstructured URL described below or use the Find a Location by Query API which takes location well as encode other special characters information as a single query string.\n\nFor all location values, it is a best practice to encode the URI before making the request. Encoding replaces spaces with \"%20\" and replaces other special characters with similar encoded values. For more information, see encodeURI [JavaScript] and Uri.EscapeDataString [.NET].\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "/schemas.m": {
+      "POST": {},
+      "Post": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "schemas.microsoft.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,79 @@
+{
+  "basePath": "/REST",
+  "paths": {
+    "/v1/Routes": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Imagery/Metadata/Aerial/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Metadata/Road/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+
+    "/V1/Imagery/Metadata/Road": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Routes\";": {
+      "POST": {}
+    },
+    "/v1/Imagery/Map/AerialWithLabels": {
+      "GET": {},
+      "Get": {}
+    },
+
+    "/v1/Imagery/Map\";": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode/jobID": {
+
+    "/v1/Imagery/Map/imagerySet/centerPoint/zoomLevel/Routes/travelMode": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/Road/51.506666,-0.129436/15": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/imagerySet": {
+      "GET": {},
+      "Get": {}
+    },
+
+    "/v1/Imagery/Map/Road/47.6156352,-122.2043549/12": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Imagery/Metadata/imagerySet/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+
+    "/v1/Imagery/Map/Road": {
+      "POST": {}
+    },
+
+    "/V1/Imagery/Map/road": {
+      "GET": {},
+      "get": {}
+    },
+    "/V1/Routes/Driving": {
+      "PUT": {},
+      "put": {}
+    },
+
+
+  },
+  "produces": "application/json",
+  "host": "dev.virtualearth.net",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

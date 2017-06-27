@@ -1,0 +1,19 @@
+{
+  "paths": {
+    "/": {
+      "post": {},
+      "POST": {},
+      "GET": {},
+      "Get": {},
+      "PUT": {},
+      "PATCH": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

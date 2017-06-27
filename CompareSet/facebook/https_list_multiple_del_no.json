@@ -1,0 +1,40 @@
+{
+  "paths": {
+    "https://developers.google.com/streetview/spherical-metadata": {
+      "post": {},
+      "POST": {}
+    },
+    "-video.facebook.com/<API_VERSION>/<PAGE_ID>/videos": {
+      "POST": {}
+    },
+    ".facebook.com/<API_VERSION>/<PAGE_ID>/photos": {
+      "POST": {}
+    },
+    "https://www.facebook.com/<POST_ID>": {
+      "POST": {}
+    },
+    "https://developers.facebook.com/docs/graph-api/reference/insights)": {
+      "GET": {}
+    },
+    ".facebook.com/<API_VERSION>/<PAGE_ID>/feed": {
+      "post": {},
+      "POST": {}
+    },
+    ".facebook.com/<video_id>": {
+      "DEL": {}
+    },
+    ".facebook.com/<API_VERSION>/204807582871020/promotable_posts": {
+      "POST": {}
+    },
+    ".facebook.com/<API_VERSION>/204807582871020_615180368500404/insights": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "graph",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

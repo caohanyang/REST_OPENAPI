@@ -1,0 +1,95 @@
+{
+  "basePath": "/bing/v5.0/search",
+  "paths": {
+    "/": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "cc",
+            "description": "A 2-character country code of the country where the results come from. For a list of possible values, see Market Codes .\n\nIf you set this parameter, you must also specify the Accept-Language header. Bing uses the first supported language it finds in the specified languages and combines it with the country code to determine the market to return results for. If the languages list does not include a supported language, Bing finds the closest language and market that supports the request. Or, Bing may use an aggregated or default market for the results.\n\nUse this query parameter and the Accept-Language header only if you specify multiple languages. Otherwise, you should use the mkt and setLang query parameters.\n\nThis parameter and the mkt query parameter are mutually exclusive—do not specify both. String No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "count",
+            "description": "The number of search results to return in the response. The default is 10 and the maximum value that you may specify is 50. The actual number delivered may be less than requested.\n\nUse this parameter along with the offset parameter to page results. For more information, see Paging Webpages .\n\nFor example, if your user interface presents 10 search results per page, you would set count to 10 and offset to 0 to get the first page of results. For each subsequent page, you would increment offset by 10 (for example, 0, 10, 20). It is possible for multiple pages to include some overlap in results. UnsignedShort No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "freshness",
+            "description": "Filter search results by age. Age refers to the date and time when Bing discovered the webpage. The following are the possible filter values.\nDay—Return webpages discovered within the last 24 hours\n\n\nWeek—Return webpages discovered within the last 7 days\n\n\nMonth—Return webpages discovered within the last 30 days\n\nNOTE: This filter applies only to webpage results and not to other results such as news and images. String No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "mkt",
+            "description": "The market where the results come from. Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. The market must be in the form <language code>-<country code>. For example, en-US. The string is case insensitive. For a list of possible market values, see Market Codes .\n\nNOTE: If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. If you specify a market that is not listed in Market Codes , Bing uses a best fit market code based on an internal mapping that is subject to change.\n\nThis parameter and the cc query parameter are mutually exclusive—do not specify both. String No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "The zero-based offset that indicates the number of search results to skip before returning results. The default is 0. The offset should be less than ( totalEstimatedMatches - count ).\n\nUse this parameter along with the count parameter to page results. For example, if your user interface presents 10 search results per page, you would set count to 10 and offset to 0 to get the first page of results. For each subsequent page, you would increment offset by 10 (for example, 0, 10, 20). It is possible for multiple pages to include some overlap in results. Unsigned Short No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "description": "The user's search query string. The query string may not be empty.\n\nThe query string may contain Bing Advanced Operators . For example, to limit results to a specific domain, use the site: operator. String Yes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "responseFilter",
+            "description": "A comma-delimited list of answers to include in the response. If you do not specify this parameter, the response includes all search answers for which there's relevant data.\n\nThe following are the possible filter values.\nComputation\nImages\nNews\nRelatedSearches\nSpellSuggestions\nTimeZone\nVideos\nWebpages\n\nAlthough you may use this filter to get a single answer, you should instead consider using the answer-specific endpoint in order to get richer results. For example, to receive only images, send the request to one of the Image API endpoints.\n\nThe RelatedSearches and SpellSuggestions answers do not support a separate endpoint like the Image Search API does. String No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "safeSearch",
+            "description": "A filter used to filter webpages for adult content. The following are the possible filter values.\nOff—Return webpages with adult text, images, or videos.\n\n\nModerate—Return webpages with adult text, but not adult images or videos.\n\n\nStrict—Do not return webpages with adult text, images, or videos.\n\nThe default is Moderate.\n\nNOTE: If the request comes from a market that Bing's adult policy requires that safeSearch is set to Strict, Bing ignores the safeSearch value and uses Strict.\n\nNOTE: If you use the site: query operator, there is the chance that the response may contain adult content regardless of what the safeSearch query parameter is set to. Use site: only if you are aware of the content on the site and your scenario supports the possibility of adult content. String No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "setLang",
+            "description": "The language to use for user interface strings. Specify the language using the ISO 639-1 2-letter language code. For example, the language code for English is EN. The default is EN (English).\n\nAlthough optional, you should always specify the language. Typically, you set setLang to the same language specified by mkt unless the user wants the user interface strings displayed in a different language.\n\nThis parameter and the Accept-Language header are mutually exclusive—do not specify both.\n\nA user interface string is a string that's used as a label in a user interface. There are few user interface strings in the JSON response objects. Also, any links to Bing.com properties in the response objects apply the specified language. String No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "textDecorations",
+            "description": "A Boolean value that determines whether display strings should contain decoration markers such as hit highlighting characters. If true , the strings may include markers; otherwise, false . The default is false .\n\nTo specify whether to use Unicode characters or HTML tags as the markers, see the textFormat query parameter.\n\nFor information about hit highlighting, see Hit Highlighting . Boolean No",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "textFormat",
+            "description": "The type of markers to use for text decorations (see the textDecorations query parameter).\n\nThe following are the possible values.\nRaw—Use Unicode characters to mark content that needs special formatting. The Unicode characters are in the range E000 through E019. For example, Bing uses E000 and E001 to mark the beginning and end of query terms for hit highlighting.\n\n\nHTML—Use HTML tags to mark content that needs special formatting. For example, use <b> tags to highlight query terms in display strings.\n\nThe default is Raw.\n\nFor a list of markers, see Hit Highlighting .\n\nIf textFormat is set to HTML, and display strings contain escapable HTML characters such as <, >, and &, Bing escapes the characters (for example, < will be escaped to &lt;).\n\nFor information about processing strings with the embedded Unicode characters, see Hit Highlighting . String No",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "api.cognitive.microsoft.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,163 @@
+{
+  "paths": {
+    "https://www.facebook.com/<POST_ID>": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nNo",
+            "description": "optional image parameters\n\nImage is sourced from the contents of the Link\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture",
+            "description": "parameter supplied\n\nstring\n\nURL for the image\n\nImage is sourced from the URL supplied in picture\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "thumbnail",
+            "description": "parameter supplied\n\nfile\n\nImage file to be uploaded. Accepts .jpg .jpeg .gif or .png\n\nImage is sourced from the file uploaded in thumbnail\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "https://graph.facebook.com/<video_id>": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "facebook.com/docs/graph-api/reference/insights)": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "3001",
+            "description": "Invalid query",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "190",
+            "description": "Invalid OAuth 2.0 Access Token",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "google.com/streetview/spherical-metadata": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "368",
+            "description": "The action attempted has been deemed abusive or is otherwise disallowed",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "240",
+            "description": "Desktop applications cannot call this function for other users",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2010",
+            "description": "Photos calls have been temporarily disabled for this application",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "122",
+            "description": "Invalid vault image id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "123",
+            "description": "Invalid sync object uuid",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "120",
+            "description": "Invalid album id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "121",
+            "description": "Invalid photo id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "190",
+            "description": "Invalid OAuth 2.0 Access Token",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "developers.",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

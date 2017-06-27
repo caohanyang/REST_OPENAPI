@@ -1,0 +1,82 @@
+{
+  "basePath": "/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\",",
+  "paths": {
+    "/subscribers/search": {
+      "GET": {}
+    },
+    "//example.com/campaigncontent/index.html\",": {
+      "GET": {}
+    },
+    "/ConfirmationEmail>": {
+      "GET": {}
+    },
+    "//siteaddress.createsend.com/path/text/preview\",": {
+      "GET": {}
+    },
+    "//api.createsend.com/api/v3.1": {
+      "post": {},
+      "Post": {},
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "del": {},
+      "Del": {},
+      "Put": {}
+    },
+    "//api.createsend.com/api/v3.1/clients": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "put": {}
+    },
+    "//api.createsend.com/api/v3.1/clients.xml": {
+      "POST": {},
+      "GET": {}
+    },
+    "//example.org": {
+      "POST": {}
+    },
+    "//api.createsend.com/oauth": {
+      "POST": {},
+      "GET": {}
+    },
+    "/Recipient>": {
+      "GET": {}
+    },
+    "/subscribe": {
+      "POST": {}
+    },
+    "//example.com": {
+      "PUT": {},
+      "put": {}
+    },
+    "/transactional": {
+      "Del": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/clicks.": {
+      "GET": {}
+    },
+    "//api.createsend.com/oauth/token": {
+      "POST": {}
+    },
+    "/deactivate": {
+      "POST": {}
+    },
+    "/title></head>": {
+      "GET": {}
+    },
+    "/var/www/html/blog/wp-content/themes/cm-theme/taxonomy-apiresources.php": {
+      "GET": {},
+      "get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.campaignmonitor.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

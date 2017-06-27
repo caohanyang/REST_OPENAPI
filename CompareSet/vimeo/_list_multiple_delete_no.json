@@ -1,0 +1,34 @@
+{
+  "paths": {
+    "/me/likes/[video_id]": {
+      "PATCH": {}
+    },
+    "//api.vimeo.com": {
+      "DELETE": {},
+      "post": {},
+      "POST": {},
+      "GET": {},
+      "Get": {},
+      "delete": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/videos/[video_id]": {
+      "DELETE": {},
+      "delete": {}
+    },
+    "/me/albums": {
+      "PUT": {}
+    },
+    "/x-www-form-urlencoded": {
+      "PATCH": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,38 @@
+{
+  "basePath": "/v3",
+  "paths": {
+    "/destroy": {
+      "GET": {}
+    },
+    "/:share_token": {
+      "POST": {}
+    },
+    "/sms_mode": {
+      "POST": {}
+    },
+    "/between": {
+      "GET": {}
+    },
+    "/direct_messages": {
+      "POST": {},
+      "GET": {}
+    },
+    "/123456789": {
+      "POST": {}
+    },
+    "/change_owners": {
+      "POST": {}
+    },
+    "/messages": {
+      "POST": {},
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.groupme.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

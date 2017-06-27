@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html class="chekov" lang="en">
+ <head>
+  <script>
+   var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="39JSW5-HqG_e_2S5ww8NNlmsOWTDM-RveyngWHuhCW86MTQ5NzQ0NDQ5MTYyODY4MA" name="xsrf_token"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline" rel="canonical"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline" hreflang="en" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline" hreflang="en-cn" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline" hreflang="x-default" rel="alternate"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/favicon.png" rel="shortcut icon"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/touch-icon.png" rel="apple-touch-icon"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/css/devsite-google-blue.css" rel="stylesheet"/>
+  <link href="https://developers.google.com/s/opensearch.xml" rel="search" title="Google Developers" type="application/opensearchdescription+xml"/>
+  <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery-bundle.js">
+  </script>
+  <meta content="Google Developers" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline" property="og:url"/>
+  <meta content="en" property="og:locale"/>
+  <script>
+   var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <title>
+   GMSPolyline Class Reference  |  Google Maps SDK for iOS
+       |  Google Developers
+  </title>
+  <meta content="GMSPolyline Class Reference  |  Google Maps SDK for iOS
+       |  Google Developers" property="og:title"/>
+  <link href="https://developers.google.com/maps/documentation/ios-sdk/reference/stylesheet.css" rel="stylesheet" type="text/css"/>
+  <link href="https://developers.google.com/maps/styles/common.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body class=" devsite-doc-page devsite-uhura" id="top_of_page">
+  <div class="devsite-wrapper">
+   <div class="devsite-top-section-wrapper ">
+    <header class="devsite-top-section nocontent">
+     <div class="devsite-top-logo-row-wrapper-wrapper">
+      <div class="devsite-top-logo-row-wrapper">
+       <div class="devsite-top-logo-row devsite-full-site-width">
+        <button class="devsite-expand-section-nav devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Hamburger menu" type="button">
+        </button>
+        <div class="devsite-product-name-wrapper">
+         <a class="devsite-product-name-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Project logo (header)" href="https://developers.google.com/maps/">
+          <img alt="Google Maps APIs" class="devsite-product-logo" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+         </a>
+         <span class="devsite-product-name">
+          <ul class="devsite-breadcrumb-list">
+           <li class="devsite-breadcrumb-item">
+            <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" href="https://developers.google.com/maps/">
+             Google Maps APIs
+            </a>
+           </li>
+          </ul>
+         </span>
+        </div>
+        <div class="devsite-header-upper-tabs">
+         <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+          <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="home" data-label="navTopMenu" href="https://developers.google.com/maps/">
+             Home
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="documentation" data-label="navTopMenu" href="https://developers.google.com/maps/documentation/">
+             Documentation
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="pricingAndPlans" data-label="navTopMenu" href="https://developers.google.com/maps/pricing-and-plans/">
+             Pricing and Plans
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </div>
+        <form action="https://developers.google.com/s/results/" class="devsite-search-form " id="top-search" method="GET" search-placeholder="Search">
+         <div class="devsite-searchbox" id="searchbox">
+          <input autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="Search" type="text" value=""/>
+          <div class="devsite-search-image material-icons">
+          </div>
+         </div>
+         <input data-project-name="Google Maps SDK for iOS" data-project-path="/maps/documentation/ios-sdk/" data-query-match="" id="search_project" name="p" type="hidden" value="/maps/documentation/ios-sdk/"/>
+         <input class="suggest-project" type="hidden" value="Google Maps SDK for iOS"/>
+         <div class="suggest-project-metadata" data-home_url="/maps/documentation/urls/guide" data-name="Google Maps URLs" data-path="/maps/documentation/urls/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/" data-name="Maps APIs Solutions" data-path="/maps/solutions/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/transport-tracker/" data-name="Transport Tracker Solution" data-path="/maps/solutions/transport-tracker/">
+         </div>
+        </form>
+        <a class="devsite-header-link devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site header link" href="https://developers.google.com/products/">
+         <div class="devsite-header-link-label">
+          All Products
+         </div>
+        </a>
+        <button class="devsite-search-button devsite-header-icon-button button-flat material-icons" type="button">
+        </button>
+        <a class="devsite-user-signin devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Sign in button" href="https://www.google.com/accounts/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fdevelopers.google.com%2Fmaps%2Fdocumentation%2Fios-sdk%2Freference%2Finterface_g_m_s_polyline%3Frefresh%3D1&amp;service=ahsid">
+         Sign in
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="devsite-collapsible-section">
+      <div class="devsite-header-background devsite-full-site-width">
+       <div class="devsite-product-id-row devsite-full-site-width">
+        <div class="devsite-product-description-row">
+         <ul class="devsite-breadcrumb-list">
+          <li class="devsite-breadcrumb-item">
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="1" href="https://developers.google.com/maps/ios/">
+            iOS
+           </a>
+          </li>
+          <li class="devsite-breadcrumb-item">
+           <div class="devsite-breadcrumb-guillemet material-icons">
+           </div>
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="2" href="https://developers.google.com/maps/documentation/ios-sdk/">
+            Maps SDK for iOS
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="devsite-product-button-row ">
+         <a class="devsite-api-getstarted-widget button gc-analytics-event devsite-dialog-button" data-action="buttonClick" data-api-id="maps_ios_backend" data-category="getKey" data-henhouse-link-docs="/maps/documentation/ios-sdk/start" data-henhouse-link-support="/maps/documentation/ios-sdk/support" data-henhouse-platforms-list="IOS" data-label="hero">
+          Get a Key
+         </a>
+         <a class="button button-text-blue" data-action="buttonClick" data-category="viewPlans" data-label="hero" href="https://developers.google.com/maps/pricing-and-plans/">
+          View Pricing and Plans
+         </a>
+        </div>
+       </div>
+       <div class="devsite-doc-set-nav-row devsite-full-site-width">
+        <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+         <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Overview" href="https://developers.google.com/maps/documentation/ios-sdk/">
+            Overview
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Guides" href="https://developers.google.com/maps/documentation/ios-sdk/start">
+            Guides
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Reference" href="https://developers.google.com/maps/documentation/ios-sdk/reference/index">
+            Reference
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Samples" href="https://developers.google.com/maps/documentation/ios-sdk/code-samples">
+            Samples
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Support" href="https://developers.google.com/maps/documentation/ios-sdk/support">
+            Support
+           </a>
+          </li>
+          <button class="devsite-feedback-button devsite-top-button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Send Feedback Button" id="devsite-feedback-project" track-metadata-position="header" track-name="sendFeedbackLink" track-type="feedback" type="button">
+           Send feedback
+          </button>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </header>
+    <link href="/maps/styles/lhstyles/landing/css/landing.css" rel="stylesheet"/>
+    <!-- exit getkey modal -->
+    <div class="devsite-dialog devsite-enable-getkey-dialog" id="devsite-dialog-onload-getkey-enabled">
+     <div class="get-key-check">
+     </div>
+     <div class="devsite-dialog-contents">
+      <h3>
+       You're all set!
+      </h3>
+      <p>
+       To start developing, please head over to our
+       <a href="/maps/documentation/ios-sdk/intro/">
+        developer documentation
+       </a>
+       .
+      </p>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="gc-analytics-event devsite-dialog-close button-white" data-action="linkClick" data-category="getKeySuccessModalDismiss" data-label="modal">
+       Dismiss
+      </button>
+     </div>
+    </div>
+    <!-- enter getkey modal -->
+    <div class="devsite-dialog devsite-enable-getkey-dialog" id="enable-getkey-modal-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Activate the Google Maps SDK for iOS
+      </h3>
+      <p>
+       To get you started we'll guide you through the Google Developers
+    Console to do a few things first:
+      </p>
+      <ol>
+       <li>
+        Create or choose a project
+       </li>
+       <li>
+        Activate the Google Maps SDK for iOS
+       </li>
+       <li>
+        Create appropriate keys
+       </li>
+      </ol>
+     </div>
+     <div class="devsite-dialog-buttons devsite-landing-row-item-buttons">
+      <button class="devsite-dialog-close button-white" data-action="linkClick" data-category="getKeyModalCancel" data-label="modal">
+       Cancel
+      </button>
+      <a class="button button-white gc-analytics-event" data-action="linkClick" data-category="getKeyModalContinue" data-label="modal" href="https://console.developers.google.com/flows/enableapi?apiid=maps_ios_backend&amp;reusekey=true" onclick="devsite.utils.showSiteMask().click()" target="_blank">
+       Continue
+      </a>
+     </div>
+    </div>
+    <script>
+     if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('en')
+        }
+      });
+    }
+    </script>
+   </div>
+   <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {}, "gaid": "UA-42966870-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps SDK for iOS", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps SDK for iOS", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-49880327-1"}'/>
+    <input class="google-tag-manager-id" type="hidden" value="GTM-W546ZN"/>
+    <script>
+     var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "FR", "language": {"requested": "en", "served": "en"}, "projectName": "Google Maps SDK for iOS", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+    <div class="devsite-site-mask">
+    </div>
+    <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+     <div class="devsite-nav-responsive-tabs-panel">
+      <nav class="devsite-nav-responsive-tabs devsite-nav">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home" href="https://developers.google.com/maps/">
+          Home
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Documentation" href="https://developers.google.com/maps/documentation/?nav=true">
+          Documentation
+         </a>
+         <nav class="devsite-nav-responsive-tabs devsite-nav">
+          <ul class="devsite-nav-list">
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Overview" href="https://developers.google.com/maps/documentation/ios-sdk/">
+             Overview
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides" href="https://developers.google.com/maps/documentation/ios-sdk/start?nav=true">
+             Guides
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title devsite-nav-active gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Reference" tabindex="0">
+             Reference
+            </span>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Samples" href="https://developers.google.com/maps/documentation/ios-sdk/code-samples">
+             Samples
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Support" href="https://developers.google.com/maps/documentation/ios-sdk/support?nav=true">
+             Support
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+             All Products
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Pricing and Plans" href="https://developers.google.com/maps/pricing-and-plans/">
+          Pricing and Plans
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+          All Products
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="devsite-nav-responsive-sidebar-panel">
+      <div class="devsite-nav-responsive-back" tabindex="0">
+      </div>
+      <nav class="devsite-nav-responsive-sidebar">
+       <ul class="devsite-nav-list devsite-nav-expandable">
+        <li class="devsite-nav-item devsite-nav-item-section-expandable">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Reference
+         </span>
+         <a class="devsite-nav-toggle devsite-nav-toggle-expanded material-icons" track-metadata-position="0" track-name="expandNavSectionArrow" track-type="leftNav">
+         </a>
+         <ul class="devsite-nav-section devsite-nav-section-expanded">
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/index" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            Overview
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_address" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSAddress
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_c_a_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSCALayer
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_camera_position" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSCameraPosition
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_camera_update" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSCameraUpdate
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_circle" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSCircle
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_coordinate_bounds" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSCoordinateBounds
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_geocoder" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSGeocoder
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_ground_overlay" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSGroundOverlay
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_indoor_building" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSIndoorBuilding
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_indoor_display" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSIndoorDisplay
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_indoor_display_delegate-p" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSIndoorDisplayDelegate
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_indoor_level" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSIndoorLevel
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_map_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSMapLayer
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_map_view" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSMapView
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_map_view_delegate-p" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSMapViewDelegate
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSMarker
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSMarkerLayer
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_mutable_camera_position" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSMutableCameraPosition
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_mutable_path" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSMutablePath
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/struct_g_m_s_orientation" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSOrientation
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSOverlay
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPanorama
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_camera" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPanoramaCamera
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_camera_update" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPanoramaCameraUpdate
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPanoramaLayer
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_link" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPanoramaLink
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_service" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPanoramaService
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_view" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPanoramaView
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_panorama_view_delegate-p" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPanoramaViewDelegate
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_path" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPath
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polygon" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPolygon
+           </a>
+          </li>
+          <li class="devsite-nav-item devsite-nav-active">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSPolyline
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_projection" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSProjection
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_reverse_geocode_response" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSReverseGeocodeResponse
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_services" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSServices
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_stroke_style" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSStrokeStyle
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_style_span" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSStyleSpan
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_sync_tile_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSSyncTileLayer
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_tile_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSTileLayer
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_tile_receiver-p" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSTileReceiver
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_u_i_settings" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSUISettings
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_u_r_l_tile_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSURLTileLayer
+           </a>
+          </li>
+          <li class="devsite-nav-item">
+           <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/struct_g_m_s_visible_region" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+            GMSVisibleRegion
+           </a>
+          </li>
+          <li class="devsite-nav-item devsite-nav-item-section-expandable">
+           <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+            Modules
+           </span>
+           <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+           </a>
+           <ul class="devsite-nav-section devsite-nav-section-collapsed">
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/group___geometry_utils" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              GMSGeometryUtils
+             </a>
+            </li>
+            <li class="devsite-nav-item">
+             <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/struct_g_m_s_map_point" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+              GMSMapPoint
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </nav>
+    <div class="devsite-main-content clearfix">
+     <nav class="devsite-section-nav devsite-nav nocontent">
+      <ul class="devsite-nav-list devsite-nav-expandable">
+       <li class="devsite-nav-item devsite-nav-item-section-expandable">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Reference
+        </span>
+        <a class="devsite-nav-toggle devsite-nav-toggle-expanded material-icons" track-metadata-position="0" track-name="expandNavSectionArrow" track-type="leftNav">
+        </a>
+        <ul class="devsite-nav-section devsite-nav-section-expanded">
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/index" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           Overview
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_address" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSAddress
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_c_a_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSCALayer
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_camera_position" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSCameraPosition
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_camera_update" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSCameraUpdate
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_circle" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSCircle
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_coordinate_bounds" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSCoordinateBounds
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_geocoder" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSGeocoder
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_ground_overlay" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSGroundOverlay
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_indoor_building" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSIndoorBuilding
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_indoor_display" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSIndoorDisplay
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_indoor_display_delegate-p" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSIndoorDisplayDelegate
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_indoor_level" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSIndoorLevel
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_map_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSMapLayer
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_map_view" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSMapView
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_map_view_delegate-p" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSMapViewDelegate
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSMarker
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSMarkerLayer
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_mutable_camera_position" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSMutableCameraPosition
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_mutable_path" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSMutablePath
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/struct_g_m_s_orientation" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSOrientation
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSOverlay
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPanorama
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_camera" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPanoramaCamera
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_camera_update" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPanoramaCameraUpdate
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPanoramaLayer
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_link" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPanoramaLink
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_service" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPanoramaService
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_panorama_view" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPanoramaView
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_panorama_view_delegate-p" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPanoramaViewDelegate
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_path" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPath
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polygon" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPolygon
+          </a>
+         </li>
+         <li class="devsite-nav-item devsite-nav-active">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSPolyline
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_projection" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSProjection
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_reverse_geocode_response" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSReverseGeocodeResponse
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_services" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSServices
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_stroke_style" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSStrokeStyle
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_style_span" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSStyleSpan
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_sync_tile_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSSyncTileLayer
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_tile_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSTileLayer
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/protocol_g_m_s_tile_receiver-p" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSTileReceiver
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_u_i_settings" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSUISettings
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_u_r_l_tile_layer" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSURLTileLayer
+          </a>
+         </li>
+         <li class="devsite-nav-item">
+          <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/struct_g_m_s_visible_region" track-metadata-position="1" track-name="titleLink" track-type="leftNav">
+           GMSVisibleRegion
+          </a>
+         </li>
+         <li class="devsite-nav-item devsite-nav-item-section-expandable">
+          <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="1" track-name="expandNavSectionNoLink" track-type="leftNav">
+           Modules
+          </span>
+          <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" track-metadata-position="1" track-name="expandNavSectionArrow" track-type="leftNav">
+          </a>
+          <ul class="devsite-nav-section devsite-nav-section-collapsed">
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/group___geometry_utils" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             GMSGeometryUtils
+            </a>
+           </li>
+           <li class="devsite-nav-item">
+            <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/ios-sdk/reference/struct_g_m_s_map_point" track-metadata-position="2" track-name="titleLink" track-type="leftNav">
+             GMSMapPoint
+            </a>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+     <nav class="devsite-page-nav devsite-nav">
+     </nav>
+     <article class="devsite-article">
+      <article class="devsite-article-inner">
+       <nav class="devsite-breadcrumb-nav devsite-nav">
+        <ul class="devsite-breadcrumb-list">
+         <li class="devsite-breadcrumb-item">
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" href="https://developers.google.com/products/">
+           Products
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" href="https://developers.google.com/maps/">
+           Google Maps APIs
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3" href="https://developers.google.com/maps/ios/">
+           iOS
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="4" href="https://developers.google.com/maps/documentation/ios-sdk/">
+           Maps SDK for iOS
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="5" href="https://developers.google.com/maps/documentation/">
+           Documentation
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="6" href="https://developers.google.com/maps/documentation/ios-sdk/reference/index">
+           Reference
+          </a>
+         </li>
+        </ul>
+       </nav>
+       <h1 class="devsite-page-title" itemprop="name">
+        GMSPolyline Class Reference
+       </h1>
+       <nav class="devsite-page-nav-embedded devsite-nav">
+       </nav>
+       <div class="devsite-article-body clearfix " itemprop="articleBody">
+        <div id="top">
+         <!-- do not remove this div -->
+         <!-- Generated by Doxygen 1.7.6.1 -->
+        </div>
+        <div class="header">
+         <div class="summary">
+          <a href="#pub-static-methods">
+           Static Public Member Functions
+          </a>
+          |
+          <a href="#properties">
+           Properties
+          </a>
+         </div>
+         <div class="headertitle">
+          <div class="title">
+           GMSPolyline Class Reference
+          </div>
+         </div>
+        </div>
+        <!--header-->
+        <div class="contents">
+         <!-- doxytag: class="GMSPolyline" -->
+         <!-- doxytag: inherits="GMSOverlay" -->
+         <hr/>
+         <a id="details" name="details">
+         </a>
+         <h2>
+          Overview
+         </h2>
+         <div class="textblock">
+          <p>
+           <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html" title="GMSPolyline specifies the available options for a polyline that exists on the Earth's surface...">
+            GMSPolyline
+           </a>
+           specifies the available options for a polyline that exists on the Earth's surface.
+          </p>
+          <p>
+           It is drawn as a physical line between the points specified in
+           <code>
+            path
+           </code>
+           .
+          </p>
+         </div>
+         <p>
+          Inherits
+          <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html">
+           GMSOverlay
+          </a>
+          .
+         </p>
+         <table class="memberdecls">
+          <tbody>
+           <tr>
+            <td colspan="2">
+             <h2>
+              <a name="pub-static-methods">
+              </a>
+              Static Public Member Functions
+             </h2>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             (instancetype)
+            </td>
+            <td class="memItemRight" valign="bottom">
+             +
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#ace1dd6e6bab9295b3423712d2eed90a4">
+              polylineWithPath:
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             Convenience constructor for
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html" title="GMSPolyline specifies the available options for a polyline that exists on the Earth's surface...">
+              GMSPolyline
+             </a>
+             for a particular path.
+             <a href="#ace1dd6e6bab9295b3423712d2eed90a4">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="2">
+             <h2>
+              <a name="properties">
+              </a>
+              Properties
+             </h2>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_path.html">
+              GMSPath
+             </a>
+             *
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a15e948674357f16e1db69149876d33df">
+              path
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             The path that describes this polyline.
+             <a href="#a15e948674357f16e1db69149876d33df">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             CGFloat
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a5791afd0cab6aaad2c5abd5e13ef5873">
+              strokeWidth
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             The width of the line in screen points.
+             <a href="#a5791afd0cab6aaad2c5abd5e13ef5873">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             UIColor *
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a4ebd936606c2398ebb5d90cdf440bce6">
+              strokeColor
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             The UIColor used to render the polyline.
+             <a href="#a4ebd936606c2398ebb5d90cdf440bce6">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             BOOL
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a7e210010c01d86d77061dc909472d969">
+              geodesic
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             Whether this line should be rendered with geodesic correction.
+             <a href="#a7e210010c01d86d77061dc909472d969">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             NSArray&lt;
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_style_span.html">
+              GMSStyleSpan
+             </a>
+             * &gt; *
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a291a41178c7d660782ba4ddf3707cc27">
+              spans
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             An array containing
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_style_span.html" title="Describes the style for some region of a polyline.">
+              GMSStyleSpan
+             </a>
+             , the spans used to render this polyline.
+             <a href="#a291a41178c7d660782ba4ddf3707cc27">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             NSString *
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#a04f4c8cc1cbf24ff6a354820049ca604">
+              title
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             Title, a short description of the overlay.
+             <a href="#a04f4c8cc1cbf24ff6a354820049ca604">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_map_view.html">
+              GMSMapView
+             </a>
+             *
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#ae1a9e4e14105b4fc5c284865c9cbf5ee">
+              map
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             The map this overlay is on.
+             <a href="#ae1a9e4e14105b4fc5c284865c9cbf5ee">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             BOOL
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#a45005ec17da8c14bd1978f5cf19d91c7">
+              tappable
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             If this overlay should cause tap notifications.
+             <a href="#a45005ec17da8c14bd1978f5cf19d91c7">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             int
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#a0e9871b40c30bb39f9a45dadaf7a0f75">
+              zIndex
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             Higher
+             <code>
+              zIndex
+             </code>
+             value overlays will be drawn on top of lower
+             <code>
+              zIndex
+             </code>
+             value tile layers and overlays.
+             <a href="#a0e9871b40c30bb39f9a45dadaf7a0f75">
+             </a>
+             <br/>
+            </td>
+           </tr>
+           <tr>
+            <td align="right" class="memItemLeft" valign="top">
+             id
+            </td>
+            <td class="memItemRight" valign="bottom">
+             <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#a900ff2be989386d501ed6c64ea1d7ab3">
+              userData
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td class="mdescLeft">
+            </td>
+            <td class="mdescRight">
+             Overlay data.
+             <a href="#a900ff2be989386d501ed6c64ea1d7ab3">
+             </a>
+             <br/>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <hr/>
+         <h2>
+          Member Function Documentation
+         </h2>
+         <a class="anchor" id="ace1dd6e6bab9295b3423712d2eed90a4">
+         </a>
+         <!-- doxytag: member="GMSPolyline::polylineWithPath:" ref="ace1dd6e6bab9295b3423712d2eed90a4" args="(nullable GMSPath *path)" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               + (instancetype)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#ace1dd6e6bab9295b3423712d2eed90a4">
+                polylineWithPath:
+               </a>
+              </td>
+              <td>
+              </td>
+              <td class="paramtype">
+               (nullable
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_path.html">
+                GMSPath
+               </a>
+               *)
+              </td>
+              <td class="paramname">
+               <em>
+                path
+               </em>
+              </td>
+              <td>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            Convenience constructor for
+            <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html" title="GMSPolyline specifies the available options for a polyline that exists on the Earth's surface...">
+             GMSPolyline
+            </a>
+            for a particular path.
+           </p>
+           <p>
+            Other properties will have default values.
+           </p>
+          </div>
+         </div>
+         <hr/>
+         <h2>
+          Property Documentation
+         </h2>
+         <a class="anchor" id="a15e948674357f16e1db69149876d33df">
+         </a>
+         <!-- doxytag: member="GMSPolyline::path" ref="a15e948674357f16e1db69149876d33df" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_path.html">
+                GMSPath
+               </a>
+               *)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a15e948674357f16e1db69149876d33df">
+                path
+               </a>
+               <code>
+                [read, write, copy]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            The path that describes this polyline.
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="a5791afd0cab6aaad2c5abd5e13ef5873">
+         </a>
+         <!-- doxytag: member="GMSPolyline::strokeWidth" ref="a5791afd0cab6aaad2c5abd5e13ef5873" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (CGFloat)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a5791afd0cab6aaad2c5abd5e13ef5873">
+                strokeWidth
+               </a>
+               <code>
+                [read, write, assign]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            The width of the line in screen points.
+           </p>
+           <p>
+            Defaults to 1.
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="a4ebd936606c2398ebb5d90cdf440bce6">
+         </a>
+         <!-- doxytag: member="GMSPolyline::strokeColor" ref="a4ebd936606c2398ebb5d90cdf440bce6" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (UIColor*)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a4ebd936606c2398ebb5d90cdf440bce6">
+                strokeColor
+               </a>
+               <code>
+                [read, write, assign]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            The UIColor used to render the polyline.
+           </p>
+           <p>
+            Defaults to [UIColor blueColor].
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="a7e210010c01d86d77061dc909472d969">
+         </a>
+         <!-- doxytag: member="GMSPolyline::geodesic" ref="a7e210010c01d86d77061dc909472d969" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (BOOL)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a7e210010c01d86d77061dc909472d969">
+                geodesic
+               </a>
+               <code>
+                [read, write, assign]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            Whether this line should be rendered with geodesic correction.
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="a291a41178c7d660782ba4ddf3707cc27">
+         </a>
+         <!-- doxytag: member="GMSPolyline::spans" ref="a291a41178c7d660782ba4ddf3707cc27" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (NSArray&lt;
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_style_span.html">
+                GMSStyleSpan
+               </a>
+               *&gt;*)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline.html#a291a41178c7d660782ba4ddf3707cc27">
+                spans
+               </a>
+               <code>
+                [read, write, copy]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            An array containing
+            <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_style_span.html" title="Describes the style for some region of a polyline.">
+             GMSStyleSpan
+            </a>
+            , the spans used to render this polyline.
+           </p>
+           <p>
+            If this array contains fewer segments than the polyline itself, the final segment will be applied over the remaining length. If this array is unset or empty, then
+            <code>
+             strokeColor
+            </code>
+            is used for the entire line instead.
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="a04f4c8cc1cbf24ff6a354820049ca604">
+         </a>
+         <!-- doxytag: member="GMSPolyline::title" ref="a04f4c8cc1cbf24ff6a354820049ca604" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (NSString*)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#a04f4c8cc1cbf24ff6a354820049ca604">
+                title
+               </a>
+               <code>
+                [read, write, copy, inherited]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            Title, a short description of the overlay.
+           </p>
+           <p>
+            Some overlays, such as markers, will display the title on the map. The title is also the default accessibility text.
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="ae1a9e4e14105b4fc5c284865c9cbf5ee">
+         </a>
+         <!-- doxytag: member="GMSPolyline::map" ref="ae1a9e4e14105b4fc5c284865c9cbf5ee" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_map_view.html">
+                GMSMapView
+               </a>
+               *)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#ae1a9e4e14105b4fc5c284865c9cbf5ee">
+                map
+               </a>
+               <code>
+                [read, write, assign, inherited]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            The map this overlay is on.
+           </p>
+           <p>
+            Setting this property will add the overlay to the map. Setting it to nil removes this overlay from the map. An overlay may be active on at most one map at any given time.
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="a45005ec17da8c14bd1978f5cf19d91c7">
+         </a>
+         <!-- doxytag: member="GMSPolyline::tappable" ref="a45005ec17da8c14bd1978f5cf19d91c7" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (BOOL)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#a45005ec17da8c14bd1978f5cf19d91c7">
+                tappable
+               </a>
+               <code>
+                [read, write, assign, inherited]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            If this overlay should cause tap notifications.
+           </p>
+           <p>
+            Some overlays, such as markers, will default to being tappable.
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="a0e9871b40c30bb39f9a45dadaf7a0f75">
+         </a>
+         <!-- doxytag: member="GMSPolyline::zIndex" ref="a0e9871b40c30bb39f9a45dadaf7a0f75" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (int)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#a0e9871b40c30bb39f9a45dadaf7a0f75">
+                zIndex
+               </a>
+               <code>
+                [read, write, assign, inherited]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            Higher
+            <code>
+             zIndex
+            </code>
+            value overlays will be drawn on top of lower
+            <code>
+             zIndex
+            </code>
+            value tile layers and overlays.
+           </p>
+           <p>
+            Equal values result in undefined draw ordering. Markers are an exception that regardless of
+            <code>
+             zIndex
+            </code>
+            , they will always be drawn above tile layers and other non-marker overlays; they are effectively considered to be in a separate z-index group compared to other overlays.
+           </p>
+          </div>
+         </div>
+         <a class="anchor" id="a900ff2be989386d501ed6c64ea1d7ab3">
+         </a>
+         <!-- doxytag: member="GMSPolyline::userData" ref="a900ff2be989386d501ed6c64ea1d7ab3" args="" -->
+         <div class="memitem">
+          <div class="memproto">
+           <table class="memname">
+            <tbody>
+             <tr>
+              <td class="memname">
+               - (id)
+               <a class="el" href="https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_overlay.html#a900ff2be989386d501ed6c64ea1d7ab3">
+                userData
+               </a>
+               <code>
+                [read, write, assign, inherited]
+               </code>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="memdoc">
+           <p>
+            Overlay data.
+           </p>
+           <p>
+            You can use this property to associate an arbitrary object with this overlay. Google Maps SDK for iOS neither reads nor writes this property.
+           </p>
+           <p>
+            Note that userData should not hold any strong references to any Maps objects, otherwise a retain cycle may be created (preventing objects from being released).
+           </p>
+          </div>
+         </div>
+        </div>
+        <!-- contents -->
+        <!--BEGIN footer.html -->
+       </div>
+       <div class="devsite-content-footer nocontent">
+        <p>
+         Except as otherwise noted, the content of this page is licensed under the
+         <a href="http://creativecommons.org/licenses/by/3.0/">
+          Creative Commons Attribution 3.0 License
+         </a>
+         , and code samples are licensed under the
+         <a href="http://www.apache.org/licenses/LICENSE-2.0">
+          Apache 2.0 License
+         </a>
+         . For details, see our
+         <a href="https://developers.google.com/terms/site-policies">
+          Site Policies
+         </a>
+         . Java is a registered trademark of Oracle and/or its affiliates.
+        </p>
+        <p class="devsite-content-footer-date" content="2017-06-07T04:47:19.639780" itemprop="datePublished">
+         Last updated June 7, 2017.
+        </p>
+       </div>
+      </article>
+     </article>
+    </div>
+    <footer class="devsite-footer-promos nocontent">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-promos-list">
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="http://stackoverflow.com/questions/tagged/google-maps-sdk-ios">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-stack-overflow.svg"/>
+         Stack Overflow
+        </a>
+        <div class="devsite-footer-promo-description">
+         Ask a question under the google-maps-sdk-ios tag.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://github.com/googlemaps/">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg"/>
+         GitHub
+        </a>
+        <div class="devsite-footer-promo-description">
+         Fork our samples and try them yourself.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://googlegeodevelopers.blogspot.com">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/blogger_64dp.png"/>
+         Blog
+        </a>
+        <div class="devsite-footer-promo-description">
+         Read the latest updates, customer stories, and tips.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://issuetracker.google.com/issues/new?component=188833&amp;template=789005">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/developers_64dp.png"/>
+         Issue Tracker
+        </a>
+        <div class="devsite-footer-promo-description">
+         Something wrong? Send us a bug report!
+        </div>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-footer-linkboxes nocontent ">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-linkboxes-list">
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Learn More
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://www.codeschool.com/courses/exploring-google-maps-for-ios">
+           Online Course at Code School
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/pricing-and-plans/">
+           Pricing and Plans
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/api-picker">
+           API Picker
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="http://googlemaps.github.io/OpenInGoogleMaps-iOS/">
+           Open in Google Maps library
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Platforms
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/android/">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/ios/">
+           iOS
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web/">
+           Web
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web-services/">
+           Web Services
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Product Info
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/contact-sales/">
+           Contact sales
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/ios-sdk/support">
+           Community support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/premium/support">
+           Paid support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/terms">
+           Terms of Service
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox devsite-footer-linkbox-sites">
+        <a class="gc-analytics-event devsite-footer-linkbox-logo-link" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link" href="https://developers.google.com/">
+         <img class="devsite-footer-linkbox-logo" src="https://developers.google.com/_static/eee0a9d1b9/images/redesign-14/lockup-color-knockout.png"/>
+        </a>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link" href="//developer.android.com/index.html">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link" href="//developer.chrome.com/home">
+           Chrome
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link" href="//firebase.google.com">
+           Firebase
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cloud Link" href="//cloud.google.com">
+           Google Cloud Platform
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products Link" href="//developers.google.com/products/">
+           All Products
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-utility-footer">
+     <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
+      <div class="devsite-utility-footer-nav-left">
+       <form action="/i18n/setlang/" class="devsite-utility-footer-language" method="post">
+        <input name="xsrf_token" type="hidden" value="39JSW5-HqG_e_2S5ww8NNlmsOWTDM-RveyngWHuhCW86MTQ5NzQ0NDQ5MTYyODY4MA"/>
+        <input name="next" type="hidden" value="/maps/documentation/ios-sdk/reference/interface_g_m_s_polyline"/>
+        <select class="devsite-utility-footer-language-select kd-select" name="language" track-name="click" track-type="languageSelector">
+         <option track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector" value="id">
+          Bahasa Indonesia
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector" value="de">
+          Deutsch
+         </option>
+         <option selected="selected" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" value="en">
+          English
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector" value="es">
+          español
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector" value="fr">
+          français
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="pt-br" track-name="changed" track-type="languageSelector" value="pt-br">
+          Português Brasileiro
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector" value="ru">
+          Русский
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector" value="ja">
+          日本語
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-cn" track-name="changed" track-type="languageSelector" value="zh-cn">
+          简体中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector" value="ko">
+          한국어
+         </option>
+        </select>
+       </form>
+       <span class="devsite-utility-footer-links">
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer terms link" href="https://developers.google.com/terms/site-terms">
+         Terms
+        </a>
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer privacy link" href="https://www.google.com/policies/privacy/">
+         Privacy
+        </a>
+       </span>
+      </div>
+      <div class="devsite-utility-footer-nav-right">
+       <div class="devsite-utility-footer-newsletter-signup-text">
+        Sign up for the Google Developers newsletter
+       </div>
+       <a class="button button-primary devsite-utility-footer-newsletter-signup-button" href="https://services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch">
+        Subscribe
+       </a>
+      </div>
+     </nav>
+    </footer>
+    <div class="devsite-feedback-dialog devsite-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Send feedback about...
+      </h3>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Image" data-type="documentation" track-metadata-position="header" track-name="feedbackDocIcon" track-type="feedback">
+        <div class="devsite-feedback-item-icon-container">
+         <div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs material-icons">
+         </div>
+        </div>
+       </a>
+       <div class="devsite-feedback-item-name">
+        This page
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Text" data-type="documentation" tabindex="0" track-metadata-position="header" track-name="feedbackDocText" track-type="feedback">
+         Documentation feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Image" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductIcon" track-type="feedback">
+        <img alt="Google Maps SDK for iOS" class="devsite-feedback-item-icon" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+       </a>
+       <div class="devsite-feedback-item-name">
+        Google Maps SDK for iOS
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Text" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductText" track-type="feedback">
+         Product feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-support">
+       <img src="https://developers.google.com/_static/eee0a9d1b9/images/feedback/ic_help_24px.svg"/>
+       Need help? Visit our
+       <a href="https://developers.google.com/maps/documentation/ios-sdk/support">
+        support page
+       </a>
+       .
+      </div>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="devsite-feedback-cancel button-white gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button" track-metadata-position="header" track-name="cancelFeedbackButton" track-type="feedback" type="button">
+       Cancel
+      </button>
+     </div>
+    </div>
+    <script>
+     $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'Google Maps iOS API',
+        'version': 'devsite-20170612-r03-rc00.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+    </script>
+   </div>
+   <script async="" defer="" src="//www.gstatic.com/feedback/api.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery_ui-bundle.js">
+   </script>
+   <script src="https://developers.google.com/_static2/eee0a9d1b9/jsi18n/">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot_closure.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot.js">
+   </script>
+   <script>
+    (function($) {
+          
+          devsite.devsite.Init($, {'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'VERSION_HASH': 'eee0a9d1b9', 'SITE_NAME': 'devsite', 'HISTORY_ENABLED': 1, 'SUBPATH': '', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.api.ai', '.appspot.com', '.devsitetest.how', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.nest.com', '.openthread.io', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0, 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com'},
+                               '[]','en',
+                               true, '',
+                               {"039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/maps/documentation/ios-sdk/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+   </script>
+   <script>
+    $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+   </script>
+   <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=paewx4mdhuzny4k5rewdgkq2cy">
+   </script>
+  </div>
+  <span data-request-elapsed="388.14997673" id="devsite-request-elapsed">
+  </span>
+ </body>
+</html>

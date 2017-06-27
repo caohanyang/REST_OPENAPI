@@ -1,0 +1,2515 @@
+<!DOCTYPE html>
+<html class="chekov" lang="en">
+ <head>
+  <script>
+   var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="9gklhUl-A60q1OkTeTmLEronAopb8dlUJ0btzjALsng6MTQ5NzQ0NDUwNzkxMzQ4MA" name="xsrf_token"/>
+  <link href="https://developers.google.com/maps/documentation/android-api/current-place-tutorial" rel="canonical"/>
+  <link href="https://developers.google.com/maps/documentation/android-api/current-place-tutorial" hreflang="en" rel="alternate"/>
+  <link href="https://developers.google.cn/maps/documentation/android-api/current-place-tutorial" hreflang="en-cn" rel="alternate"/>
+  <link href="https://developers.google.com/maps/documentation/android-api/current-place-tutorial" hreflang="x-default" rel="alternate"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/favicon.png" rel="shortcut icon"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/images/touch-icon.png" rel="apple-touch-icon"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons" rel="stylesheet"/>
+  <link href="https://developers.google.com/_static/eee0a9d1b9/css/devsite-google-blue.css" rel="stylesheet"/>
+  <link href="https://developers.google.com/s/opensearch.xml" rel="search" title="Google Developers" type="application/opensearchdescription+xml"/>
+  <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery-bundle.js">
+  </script>
+  <meta content="Google Developers" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://developers.google.com/maps/documentation/android-api/current-place-tutorial" property="og:url"/>
+  <meta content="en" property="og:locale"/>
+  <script>
+   var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <title>
+   Select Current Place and Show Details on a Map  |  Google Maps Android API
+       |  Google Developers
+  </title>
+  <meta content="Select Current Place and Show Details on a Map  |  Google Maps Android API
+       |  Google Developers" property="og:title"/>
+ </head>
+ <body class=" devsite-doc-page devsite-uhura" id="top_of_page">
+  <div class="devsite-wrapper">
+   <div class="devsite-top-section-wrapper ">
+    <header class="devsite-top-section nocontent">
+     <div class="devsite-top-logo-row-wrapper-wrapper">
+      <div class="devsite-top-logo-row-wrapper">
+       <div class="devsite-top-logo-row devsite-full-site-width">
+        <button class="devsite-expand-section-nav devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Hamburger menu" type="button">
+        </button>
+        <div class="devsite-product-name-wrapper">
+         <a class="devsite-product-name-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Project logo (header)" href="https://developers.google.com/maps/">
+          <img alt="Google Maps APIs" class="devsite-product-logo" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+         </a>
+         <span class="devsite-product-name">
+          <ul class="devsite-breadcrumb-list">
+           <li class="devsite-breadcrumb-item">
+            <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" href="https://developers.google.com/maps/">
+             Google Maps APIs
+            </a>
+           </li>
+          </ul>
+         </span>
+        </div>
+        <div class="devsite-header-upper-tabs">
+         <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+          <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="home" data-label="navTopMenu" href="https://developers.google.com/maps/">
+             Home
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="documentation" data-label="navTopMenu" href="https://developers.google.com/maps/documentation/">
+             Documentation
+            </a>
+           </li>
+           <li class="devsite-doc-set-nav-tab-container">
+            <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-action="tabClick" data-category="pricingAndPlans" data-label="navTopMenu" href="https://developers.google.com/maps/pricing-and-plans/">
+             Pricing and Plans
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </div>
+        <form action="https://developers.google.com/s/results/" class="devsite-search-form " id="top-search" method="GET" search-placeholder="Search">
+         <div class="devsite-searchbox" id="searchbox">
+          <input autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="Search" type="text" value=""/>
+          <div class="devsite-search-image material-icons">
+          </div>
+         </div>
+         <input data-project-name="Google Maps Android API" data-project-path="/maps/documentation/android-api/" data-query-match="" id="search_project" name="p" type="hidden" value="/maps/documentation/android-api/"/>
+         <input class="suggest-project" type="hidden" value="Google Maps Android API"/>
+         <div class="suggest-project-metadata" data-home_url="/maps/documentation/urls/guide" data-name="Google Maps URLs" data-path="/maps/documentation/urls/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/" data-name="Maps APIs Solutions" data-path="/maps/solutions/">
+         </div>
+         <div class="suggest-project-metadata" data-home_url="/maps/solutions/transport-tracker/" data-name="Transport Tracker Solution" data-path="/maps/solutions/transport-tracker/">
+         </div>
+        </form>
+        <a class="devsite-header-link devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site header link" href="https://developers.google.com/products/">
+         <div class="devsite-header-link-label">
+          All Products
+         </div>
+        </a>
+        <button class="devsite-search-button devsite-header-icon-button button-flat material-icons" type="button">
+        </button>
+        <a class="devsite-user-signin devsite-top-button button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Sign in button" href="https://www.google.com/accounts/ServiceLogin?passive=true&amp;continue=https%3A%2F%2Fdevelopers.google.com%2Fmaps%2Fdocumentation%2Fandroid-api%2Fcurrent-place-tutorial%3Frefresh%3D1&amp;service=ahsid">
+         Sign in
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="devsite-collapsible-section">
+      <div class="devsite-header-background devsite-full-site-width">
+       <div class="devsite-product-id-row devsite-full-site-width">
+        <div class="devsite-product-description-row">
+         <ul class="devsite-breadcrumb-list">
+          <li class="devsite-breadcrumb-item">
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="1" href="https://developers.google.com/maps/android/">
+            Android
+           </a>
+          </li>
+          <li class="devsite-breadcrumb-item">
+           <div class="devsite-breadcrumb-guillemet material-icons">
+           </div>
+           <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Lower Header" data-value="2" href="https://developers.google.com/maps/documentation/android-api/">
+            Maps Android API
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="devsite-product-button-row ">
+         <a class="devsite-api-getstarted-widget button gc-analytics-event devsite-dialog-button" data-action="buttonClick" data-api-id="maps_android_backend" data-category="getKey" data-henhouse-link-docs="/maps/documentation/android-api/start" data-henhouse-link-support="/maps/documentation/android-api/support" data-henhouse-platforms-list="ANDROID" data-label="hero">
+          Get a Key
+         </a>
+         <a class="button button-text-blue" data-action="buttonClick" data-category="viewPlans" data-label="hero" href="https://developers.google.com/maps/pricing-and-plans/">
+          View Pricing and Plans
+         </a>
+        </div>
+       </div>
+       <div class="devsite-doc-set-nav-row devsite-full-site-width">
+        <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+         <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Overview" href="https://developers.google.com/maps/documentation/android-api/">
+            Overview
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class="devsite-doc-set-nav-active devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Guides" href="https://developers.google.com/maps/documentation/android-api/start">
+            Guides
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Reference" href="https://developers.google.com/maps/documentation/android-api/reference">
+            Reference
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Samples" href="https://developers.google.com/maps/documentation/android-api/code-samples">
+            Samples
+           </a>
+          </li>
+          <li class="devsite-doc-set-nav-tab-container">
+           <a class=" devsite-doc-set-nav-tab gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Support" href="https://developers.google.com/maps/documentation/android-api/support">
+            Support
+           </a>
+          </li>
+          <button class="devsite-feedback-button devsite-top-button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Send Feedback Button" id="devsite-feedback-project" track-metadata-position="header" track-name="sendFeedbackLink" track-type="feedback" type="button">
+           Send feedback
+          </button>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </header>
+    <link href="/maps/styles/lhstyles/landing/css/landing.css" rel="stylesheet"/>
+    <!-- exit getkey modal -->
+    <div class="devsite-dialog devsite-enable-getkey-dialog" id="devsite-dialog-onload-getkey-enabled">
+     <div class="get-key-check">
+     </div>
+     <div class="devsite-dialog-contents">
+      <h3>
+       You're all set!
+      </h3>
+      <p>
+       To start developing, please head over to our
+       <a href="/maps/documentation/android-api/intro/">
+        developer documentation
+       </a>
+       .
+      </p>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="devsite-dialog-close button-white">
+       Dismiss
+      </button>
+     </div>
+    </div>
+    <!-- enter getkey modal -->
+    <div class="devsite-dialog devsite-enable-getkey-dialog" id="enable-getkey-modal-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Activate the Google Maps Android API
+      </h3>
+      <p>
+       To get you started we'll guide you through the Google Developers
+    Console to do a few things first:
+      </p>
+      <ol>
+       <li>
+        Create or choose a project
+       </li>
+       <li>
+        Activate the Google Maps Android API
+       </li>
+       <li>
+        Create appropriate keys
+       </li>
+      </ol>
+     </div>
+     <div class="devsite-dialog-buttons devsite-landing-row-item-buttons">
+      <button class="devsite-dialog-close button-white" data-action="linkClick" data-category="getKeyModalCancel" data-label="modal">
+       Cancel
+      </button>
+      <a class="button button-white gc-analytics-event" data-action="linkClick" data-category="getKeyModalContinue" data-label="modal" href="https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&amp;reusekey=true" onclick="devsite.utils.showSiteMask().click()" target="_blank">
+       Continue
+      </a>
+     </div>
+    </div>
+    <script>
+     if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('en')
+        }
+      });
+    }
+    </script>
+   </div>
+   <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {}, "gaid": "UA-42966870-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps Android API", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-24532603-1"}'/>
+    <input class="google-analytics-id-json" type="hidden" value='{"dimensions": {"dimension6": "en", "dimension4": "Google Maps Android API", "dimension5": "en", "dimension3": false, "dimension1": "Signed out", "dimension8": null}, "gaid": "UA-49880327-1"}'/>
+    <input class="google-tag-manager-id" type="hidden" value="GTM-W546ZN"/>
+    <script>
+     var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "FR", "language": {"requested": "en", "served": "en"}, "projectName": "Google Maps Android API", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+    <div class="devsite-site-mask">
+    </div>
+    <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+     <div class="devsite-nav-responsive-tabs-panel">
+      <nav class="devsite-nav-responsive-tabs devsite-nav">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home" href="https://developers.google.com/maps/">
+          Home
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Documentation" href="https://developers.google.com/maps/documentation/?nav=true">
+          Documentation
+         </a>
+         <nav class="devsite-nav-responsive-tabs devsite-nav">
+          <ul class="devsite-nav-list">
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Overview" href="https://developers.google.com/maps/documentation/android-api/">
+             Overview
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title devsite-nav-active gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides" tabindex="0">
+             Guides
+            </span>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Reference" href="https://developers.google.com/maps/documentation/android-api/reference">
+             Reference
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Samples" href="https://developers.google.com/maps/documentation/android-api/code-samples">
+             Samples
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Support" href="https://developers.google.com/maps/documentation/android-api/support?nav=true">
+             Support
+            </a>
+           </li>
+           <li class="devsite-nav-item devsite-nav-item-heading">
+            <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+             All Products
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Pricing and Plans" href="https://developers.google.com/maps/pricing-and-plans/">
+          Pricing and Plans
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <a class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Responsive Tab: all_products" href="https://developers.google.com/products/">
+          All Products
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="devsite-nav-responsive-sidebar-panel">
+      <div class="devsite-nav-responsive-back" tabindex="0">
+      </div>
+      <nav class="devsite-nav-responsive-sidebar">
+       <ul class="devsite-nav-list">
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/start" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Get Started
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Project Setup
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/intro" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Overview
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/config" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Configuration
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/signup" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Get API Key
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Tutorials
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/map-with-marker" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Map with Marker
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/polygon-tutorial" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Polylines and Polygons to Represent Routes and Areas
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-active">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/current-place-tutorial" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Select Current Place
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Creating a Map
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/map" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Map Objects
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/poi" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Businesses and Other Points of Interest
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/lite" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Lite Mode
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/streetview" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Street View
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/wear" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Android Wear
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/intents" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Launch Google Maps
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Styling your Map
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/styling" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Adding a Styled Map
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/hiding-features" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Hiding Map Features with Styling
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/style-reference" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Style Reference
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Interacting with the Map
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/controls" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Controls and Gestures
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/events" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Events
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/views" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Camera and View
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/location" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Location data
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Drawing on the Map
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/marker" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Markers
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/infowindows" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Info Windows
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/shapes" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Shapes
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/groundoverlay" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Ground Overlays
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/tileoverlay" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Tile Overlays
+         </a>
+        </li>
+        <li class="devsite-nav-item devsite-nav-item-heading">
+         <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+          Utility Library
+         </span>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Overview
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/setup" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Setup and demo
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/geojson" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          GeoJSON
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/kml" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          KML
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/heatmap" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Heatmaps
+         </a>
+        </li>
+        <li class="devsite-nav-item">
+         <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/marker-clustering" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+          Marker Clustering
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </nav>
+    <div class="devsite-main-content clearfix">
+     <nav class="devsite-section-nav devsite-nav nocontent">
+      <ul class="devsite-nav-list">
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/start" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Get Started
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Project Setup
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/intro" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Overview
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/config" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Configuration
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/signup" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Get API Key
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Tutorials
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/map-with-marker" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Map with Marker
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/polygon-tutorial" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Polylines and Polygons to Represent Routes and Areas
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-active">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/current-place-tutorial" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Select Current Place
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Creating a Map
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/map" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Map Objects
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/poi" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Businesses and Other Points of Interest
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/lite" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Lite Mode
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/streetview" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Street View
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/wear" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Android Wear
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/intents" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Launch Google Maps
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Styling your Map
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/styling" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Adding a Styled Map
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/hiding-features" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Hiding Map Features with Styling
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/style-reference" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Style Reference
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Interacting with the Map
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/controls" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Controls and Gestures
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/events" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Events
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/views" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Camera and View
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/location" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Location data
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Drawing on the Map
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/marker" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Markers
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/infowindows" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Info Windows
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/shapes" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Shapes
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/groundoverlay" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Ground Overlays
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/tileoverlay" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Tile Overlays
+        </a>
+       </li>
+       <li class="devsite-nav-item devsite-nav-item-heading">
+        <span class="devsite-nav-title devsite-nav-title-no-path" track-metadata-position="0" track-name="expandNavSectionNoLink" track-type="leftNav">
+         Utility Library
+        </span>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Overview
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/setup" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Setup and demo
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/geojson" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         GeoJSON
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/kml" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         KML
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/heatmap" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Heatmaps
+        </a>
+       </li>
+       <li class="devsite-nav-item">
+        <a class="devsite-nav-title gc-analytics-event" data-action="click" data-category="Site-Wide Custom Events" data-label="Left nav" href="https://developers.google.com/maps/documentation/android-api/utility/marker-clustering" track-metadata-position="0" track-name="titleLink" track-type="leftNav">
+         Marker Clustering
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <nav class="devsite-page-nav devsite-nav">
+     </nav>
+     <article class="devsite-article">
+      <article class="devsite-article-inner">
+       <nav class="devsite-breadcrumb-nav devsite-nav">
+        <ul class="devsite-breadcrumb-list">
+         <li class="devsite-breadcrumb-item">
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" href="https://developers.google.com/products/">
+           Products
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" href="https://developers.google.com/maps/">
+           Google Maps APIs
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3" href="https://developers.google.com/maps/android/">
+           Android
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="4" href="https://developers.google.com/maps/documentation/android-api/">
+           Maps Android API
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="5" href="https://developers.google.com/maps/documentation/">
+           Documentation
+          </a>
+         </li>
+         <li class="devsite-breadcrumb-item">
+          <div class="devsite-breadcrumb-guillemet material-icons">
+          </div>
+          <a class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="6" href="https://developers.google.com/maps/documentation/android-api/start">
+           Guides
+          </a>
+         </li>
+        </ul>
+       </nav>
+       <h1 class="devsite-page-title" itemprop="name">
+        Select Current Place and Show Details on a Map
+       </h1>
+       <nav class="devsite-page-nav-embedded devsite-nav">
+       </nav>
+       <div class="devsite-article-body clearfix " itemprop="articleBody">
+        <link href="https://developers.google.com/maps/styles/common.css" rel="stylesheet" type="text/css"/>
+        <p>
+        </p>
+        <p>
+         This tutorial shows you how to find the current location of an Android device
+  and display details of the place (a business or other point of interest) at
+  that location. Follow this tutorial to build an Android app using the
+         <a href="https://developers.google.com/maps/documentation/android-api">
+          Google Maps Android API
+         </a>
+         ,
+  the
+         <a href="https://developers.google.com/places/android-api">
+          Google Places API for Android
+         </a>
+         ,
+  and the
+         <a href="https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderApi">
+          fused
+  location provider
+         </a>
+         in the Google Play services location APIs.
+        </p>
+        <h2>
+         Get the code
+        </h2>
+        <p>
+         <a href="https://github.com/googlemaps/android-samples">
+          Clone or download the
+  Google Maps Android API v2 Samples repository
+         </a>
+         from GitHub.
+        </p>
+        <section class="expandable">
+         <p class="expand-control">
+          <strong>
+           &lt; &gt;
+          </strong>
+          Show/Hide the Java code
+    for the map activity.
+         </p>
+         <pre class="prettyprint notranslate">package com.example.currentplacedetailsonmap;
+
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.PlaceLikelihood;
+import com.google.android.gms.location.places.PlaceLikelihoodBuffer;
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+/**
+ * An activity that displays a map showing the place at the device's current location.
+ */
+public class MapsActivityCurrentPlace extends AppCompatActivity
+        implements OnMapReadyCallback,
+                GoogleApiClient.ConnectionCallbacks,
+                GoogleApiClient.OnConnectionFailedListener {
+
+    private static final String TAG = MapsActivityCurrentPlace.class.getSimpleName();
+    private GoogleMap mMap;
+    private CameraPosition mCameraPosition;
+
+    // The entry point to Google Play services, used by the Places API and Fused Location Provider.
+    private GoogleApiClient mGoogleApiClient;
+
+    // A default location (Sydney, Australia) and default zoom to use when location permission is
+    // not granted.
+    private final LatLng mDefaultLocation = new LatLng(-33.8523341, 151.2106085);
+    private static final int DEFAULT_ZOOM = 15;
+    private static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
+    private boolean mLocationPermissionGranted;
+
+    // The geographical location where the device is currently located. That is, the last-known
+    // location retrieved by the Fused Location Provider.
+    private Location mLastKnownLocation;
+
+    // Keys for storing activity state.
+    private static final String KEY_CAMERA_POSITION = "camera_position";
+    private static final String KEY_LOCATION = "location";
+
+    // Used for selecting the current place.
+    private final int mMaxEntries = 5;
+    private String[] mLikelyPlaceNames = new String[mMaxEntries];
+    private String[] mLikelyPlaceAddresses = new String[mMaxEntries];
+    private String[] mLikelyPlaceAttributions = new String[mMaxEntries];
+    private LatLng[] mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Retrieve location and camera position from saved instance state.
+        if (savedInstanceState != null) {
+            mLastKnownLocation = savedInstanceState.getParcelable(KEY_LOCATION);
+            mCameraPosition = savedInstanceState.getParcelable(KEY_CAMERA_POSITION);
+        }
+
+        // Retrieve the content view that renders the map.
+        setContentView(R.layout.activity_maps);
+
+        // Build the Play services client for use by the Fused Location Provider and the Places API.
+        // Use the addApi() method to request the Google Places API and the Fused Location Provider.
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this /* FragmentActivity */,
+                        this /* OnConnectionFailedListener */)
+                .addConnectionCallbacks(this)
+                .addApi(LocationServices.API)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .build();
+        mGoogleApiClient.connect();
+    }
+
+    /**
+     * Saves the state of the map when the activity is paused.
+     */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        if (mMap != null) {
+            outState.putParcelable(KEY_CAMERA_POSITION, mMap.getCameraPosition());
+            outState.putParcelable(KEY_LOCATION, mLastKnownLocation);
+            super.onSaveInstanceState(outState);
+        }
+    }
+
+    /**
+     * Builds the map when the Google Play services client is successfully connected.
+     */
+    @Override
+    public void onConnected(Bundle connectionHint) {
+        // Build the map.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+    }
+
+    /**
+     * Handles failure to connect to the Google Play services client.
+     */
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult result) {
+        // Refer to the reference doc for ConnectionResult to see what error codes might
+        // be returned in onConnectionFailed.
+        Log.d(TAG, "Play services connection failed: ConnectionResult.getErrorCode() = "
+                + result.getErrorCode());
+    }
+
+    /**
+     * Handles suspension of the connection to the Google Play services client.
+     */
+    @Override
+    public void onConnectionSuspended(int cause) {
+        Log.d(TAG, "Play services connection suspended");
+    }
+
+    /**
+     * Sets up the options menu.
+     * @param menu The options menu.
+     * @return Boolean.
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.current_place_menu, menu);
+        return true;
+    }
+
+    /**
+     * Handles a click on the menu option to get a place.
+     * @param item The menu item to handle.
+     * @return Boolean.
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.option_get_place) {
+            showCurrentPlace();
+        }
+        return true;
+    }
+
+    /**
+     * Manipulates the map when it's available.
+     * This callback is triggered when the map is ready to be used.
+     */
+    @Override
+    public void onMapReady(GoogleMap map) {
+        mMap = map;
+
+        // Use a custom info window adapter to handle multiple lines of text in the
+        // info window contents.
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+
+            @Override
+            // Return null here, so that getInfoContents() is called next.
+            public View getInfoWindow(Marker arg0) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker marker) {
+                // Inflate the layouts for the info window, title and snippet.
+                View infoWindow = getLayoutInflater().inflate(R.layout.custom_info_contents,
+                        (FrameLayout)findViewById(R.id.map), false);
+
+                TextView title = ((TextView) infoWindow.findViewById(R.id.title));
+                title.setText(marker.getTitle());
+
+                TextView snippet = ((TextView) infoWindow.findViewById(R.id.snippet));
+                snippet.setText(marker.getSnippet());
+
+                return infoWindow;
+            }
+        });
+
+        // Turn on the My Location layer and the related control on the map.
+        updateLocationUI();
+
+        // Get the current location of the device and set the position of the map.
+        getDeviceLocation();
+    }
+
+    /**
+     * Gets the current location of the device, and positions the map's camera.
+     */
+    private void getDeviceLocation() {
+        /*
+         * Request location permission, so that we can get the location of the
+         * device. The result of the permission request is handled by a callback,
+         * onRequestPermissionsResult.
+         */
+        if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
+                android.Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            mLocationPermissionGranted = true;
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                    PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+        }
+        /*
+         * Get the best and most recent location of the device, which may be null in rare
+         * cases when a location is not available.
+         */
+        if (mLocationPermissionGranted) {
+            mLastKnownLocation = LocationServices.FusedLocationApi
+                    .getLastLocation(mGoogleApiClient);
+        }
+
+        // Set the map's camera position to the current location of the device.
+        if (mCameraPosition != null) {
+            mMap.moveCamera(CameraUpdateFactory.newCameraPosition(mCameraPosition));
+        } else if (mLastKnownLocation != null) {
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+                    new LatLng(mLastKnownLocation.getLatitude(),
+                            mLastKnownLocation.getLongitude()), DEFAULT_ZOOM));
+        } else {
+            Log.d(TAG, "Current location is null. Using defaults.");
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mDefaultLocation, DEFAULT_ZOOM));
+            mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        }
+    }
+
+    /**
+     * Handles the result of the request for location permissions.
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
+        mLocationPermissionGranted = false;
+        switch (requestCode) {
+            case PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length &gt; 0
+                        &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    mLocationPermissionGranted = true;
+                }
+            }
+        }
+        updateLocationUI();
+    }
+
+    /**
+     * Prompts the user to select the current place from a list of likely places, and shows the
+     * current place on the map - provided the user has granted location permission.
+     */
+    private void showCurrentPlace() {
+        if (mMap == null) {
+            return;
+        }
+
+        if (mLocationPermissionGranted) {
+            // Get the likely places - that is, the businesses and other points of interest that
+            // are the best match for the device's current location.
+            @SuppressWarnings("MissingPermission")
+            PendingResult&lt;PlaceLikelihoodBuffer&gt; result = Places.PlaceDetectionApi
+                    .getCurrentPlace(mGoogleApiClient, null);
+            result.setResultCallback(new ResultCallback&lt;PlaceLikelihoodBuffer&gt;() {
+                @Override
+                public void onResult(@NonNull PlaceLikelihoodBuffer likelyPlaces) {
+                    int i = 0;
+                    mLikelyPlaceNames = new String[mMaxEntries];
+                    mLikelyPlaceAddresses = new String[mMaxEntries];
+                    mLikelyPlaceAttributions = new String[mMaxEntries];
+                    mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
+                    for (PlaceLikelihood placeLikelihood : likelyPlaces) {
+                        // Build a list of likely places to show the user. Max 5.
+                        mLikelyPlaceNames[i] = (String) placeLikelihood.getPlace().getName();
+                        mLikelyPlaceAddresses[i] = (String) placeLikelihood.getPlace().getAddress();
+                        mLikelyPlaceAttributions[i] = (String) placeLikelihood.getPlace()
+                                .getAttributions();
+                        mLikelyPlaceLatLngs[i] = placeLikelihood.getPlace().getLatLng();
+
+                        i++;
+                        if (i &gt; (mMaxEntries - 1)) {
+                            break;
+                        }
+                    }
+                    // Release the place likelihood buffer, to avoid memory leaks.
+                    likelyPlaces.release();
+
+                    // Show a dialog offering the user the list of likely places, and add a
+                    // marker at the selected place.
+                    openPlacesDialog();
+                }
+            });
+        } else {
+            // Add a default marker, because the user hasn't selected a place.
+            mMap.addMarker(new MarkerOptions()
+                    .title(getString(R.string.default_info_title))
+                    .position(mDefaultLocation)
+                    .snippet(getString(R.string.default_info_snippet)));
+        }
+    }
+
+    /**
+     * Displays a form allowing the user to select a place from a list of likely places.
+     */
+    private void openPlacesDialog() {
+        // Ask the user to choose the place where they are now.
+        DialogInterface.OnClickListener listener =
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // The "which" argument contains the position of the selected item.
+                        LatLng markerLatLng = mLikelyPlaceLatLngs[which];
+                        String markerSnippet = mLikelyPlaceAddresses[which];
+                        if (mLikelyPlaceAttributions[which] != null) {
+                            markerSnippet = markerSnippet + "\n" + mLikelyPlaceAttributions[which];
+                        }
+                        // Add a marker for the selected place, with an info window
+                        // showing information about that place.
+                        mMap.addMarker(new MarkerOptions()
+                                .title(mLikelyPlaceNames[which])
+                                .position(markerLatLng)
+                                .snippet(markerSnippet));
+
+                        // Position the map's camera at the location of the marker.
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(markerLatLng,
+                                DEFAULT_ZOOM));
+                    }
+                };
+
+        // Display the dialog.
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle(R.string.pick_place)
+                .setItems(mLikelyPlaceNames, listener)
+                .show();
+    }
+
+    /**
+     * Updates the map's UI settings based on whether the user has granted location permission.
+     */
+    private void updateLocationUI() {
+        if (mMap == null) {
+            return;
+        }
+
+        /*
+         * Request location permission, so that we can get the location of the
+         * device. The result of the permission request is handled by a callback,
+         * onRequestPermissionsResult.
+         */
+        if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
+                android.Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            mLocationPermissionGranted = true;
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                    PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+        }
+
+        if (mLocationPermissionGranted) {
+            mMap.setMyLocationEnabled(true);
+            mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        } else {
+            mMap.setMyLocationEnabled(false);
+            mMap.getUiSettings().setMyLocationButtonEnabled(false);
+            mLastKnownLocation = null;
+        }
+    }
+}
+
+</pre>
+        </section>
+        <h2>
+         Set up your development project
+        </h2>
+        <p>
+         <img class="attempt-right" height="30%" src="https://developers.google.com/maps/documentation/android-api/images/current-place.png" width="30%"/>
+        </p>
+        <p>
+         Follow these steps to create the tutorial project in Android Studio.
+        </p>
+        <ol>
+         <li>
+          <a href="https://developer.android.com/studio/index.html">
+           Download
+          </a>
+          and
+          <a href="https://developer.android.com/studio/install.html?pkg=studio">
+           install
+          </a>
+          Android Studio.
+         </li>
+         <li>
+          <a href="https://developer.android.com/studio/intro/update.html#sdk-manager">
+           Add
+    the
+           <strong>
+            Google Play services
+           </strong>
+           package
+          </a>
+          to Android
+    Studio.
+         </li>
+         <li>
+          <a href="https://github.com/googlemaps/android-samples">
+           Clone
+    or download the Google Maps Android API v2 Samples repository
+          </a>
+          if you
+    didn't do that when you started reading this tutorial.
+         </li>
+         <li>
+          <p>
+           Import the tutorial project:
+          </p>
+          <ul>
+           <li>
+            In Android Studio, select
+            <strong>
+             File &gt; New &gt; Import
+        Project
+            </strong>
+            .
+           </li>
+           <li>
+            Go to the location where you saved the
+      Google Maps Android API v2 Samples repository after downloading it.
+           </li>
+           <li>
+            Find the
+            <strong>
+             CurrentPlaceDetailsOnMap
+            </strong>
+            project at this
+        location:
+            <br/>
+            <code>
+             PATH-TO-SAVED-REPO/android-samples/tutorials/CurrentPlaceDetailsOnMap
+            </code>
+           </li>
+           <li>
+            Select the project directory, then click
+            <strong>
+             OK
+            </strong>
+            . Android
+      Studio now builds your project, using the Gradle build tool.
+           </li>
+          </ul>
+         </li>
+        </ol>
+        <h2 id="api-key">
+         Get an API key and enable the necessary APIs
+        </h2>
+        <p>
+         To complete this tutorial, you need a Google API key that's authorized to use
+  the Google Maps Android API and the
+  Google Places API for Android.
+        </p>
+        <p>
+         Click the button below to get a key and activate the APIs.
+        </p>
+        <a class="devsite-api-getstarted-widget gc-analytics-event button button-blue" data-action="buttonClick" data-api-id="maps_android_backend" data-category="getKey" data-henhouse-extra-api-ids="placesandroid" data-henhouse-link-docs="/maps/documentation/android-api/start" data-henhouse-link-support="/maps/documentation/android-api/support" data-henhouse-platforms-list="ANDROID" data-label="body">
+         Get a Key
+        </a>
+        <p>
+         For more details, see the full guide to
+         <a href="https://developers.google.com/maps/documentation/android-api/signup">
+          getting an API key
+         </a>
+         .
+        </p>
+        <h2>
+         Add the API key to your app
+        </h2>
+        <ol>
+         <li>
+          Edit your project's
+          <code>
+           gradle.properties
+          </code>
+          file.
+         </li>
+         <li>
+          <p>
+           Paste your API key into the value of the
+           <code>
+            GOOGLE_MAPS_API_KEY
+           </code>
+           property:
+          </p>
+          <pre class="prettyprint notranslate">GOOGLE_MAPS_API_KEY=PASTE-YOUR-API-KEY-HERE</pre>
+          <p>
+           When you build your app, Gradle copies the API key into the app's
+      Android manifest. The app's
+           <code>
+            build.gradle
+           </code>
+           file contains the
+      following line, which maps the string
+           <code>
+            google_maps_key
+           </code>
+           in the
+      manifest to the gradle property
+           <code>
+            GOOGLE_MAPS_API_KEY
+           </code>
+           :
+          </p>
+          <pre class="prettyprint notranslate">resValue "string", "google_maps_key",
+        (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
+</pre>
+         </li>
+        </ol>
+        <h2>
+         Build and run your app
+        </h2>
+        <ol>
+         <li>
+          Connect an Android device to your computer. Follow the
+          <a href="https://developer.android.com/studio/run/device.html">
+           instructions
+          </a>
+          to enable developer options on your Android device and configure your system
+    to detect the device. (Alternatively, you can use the
+          <a href="https://developer.android.com/studio/run/managing-avds.html">
+           Android
+    Virtual Device (AVD) Manager
+          </a>
+          to configure a virtual device. When
+    choosing an emulator, make sure you pick an image that includes the Google
+    APIs. For more details, see the
+          <a href="https://developers.google.com/maps/documentation/android-api/start">
+           getting started
+    guide
+          </a>
+          .)
+         </li>
+         <li>
+          In Android Studio, click the
+          <strong>
+           Run
+          </strong>
+          menu option (or the play
+    button icon). Choose a device as prompted.
+         </li>
+        </ol>
+        <p>
+         Android Studio invokes Gradle to build the app, and then runs the app on
+  the device or on the emulator. You should see a map with a number of markers
+  centered around your current location, similar to the image on this page.
+        </p>
+        <p>
+         Troubleshooting:
+        </p>
+        <ul>
+         <li>
+          If you don't see a map, check that you've obtained an API key and added it
+    to the app,
+          <a href="#api-key">
+           as described above
+          </a>
+          . Check the log in
+    Android Studio's
+          <a href="https://developer.android.com/studio/debug/am-logcat.html">
+           Android
+    Monitor
+          </a>
+          for error messages about the API key.
+         </li>
+         <li>
+          If the map shows just a single marker located on Sydney Harbour Bridge
+    (the default location specified in the app), check that you've granted
+          <strong>
+           location permission
+          </strong>
+          to the app. The app prompts for
+    location permission at run time, following the pattern described in the
+          <a href="https://developer.android.com/training/permissions/requesting.html">
+           Android
+    permissions guide
+          </a>
+          . Note that you can also set permissions directly on
+    the device, by choosing
+          <strong>
+           Settings &gt; Apps &gt;
+           <em>
+            app name
+           </em>
+           &gt;
+    Permissions &gt; Location
+          </strong>
+          . For details on how to handle permissions in
+    your code, see the guide below to
+          <a href="#location-permission">
+           requesting
+    location permission in your app
+          </a>
+          .
+         </li>
+         <li>
+          Use the
+          <a href="https://developer.android.com/studio/debug/am-logcat.html">
+           Android
+    Studio debugging tools
+          </a>
+          to view logs and debug the app.
+         </li>
+        </ul>
+        <h2>
+         Understand the code
+        </h2>
+        <p>
+         This part of the tutorial explains the most significant parts of the
+         <strong>
+          CurrentPlaceDetailsOnMap
+         </strong>
+         app, to help you understand how to
+  build a similar app.
+        </p>
+        <h3>
+         Create a Google API client
+        </h3>
+        <p>
+         You need to create an instance of the Google Play services API client (also
+  known as the Google API client) so that you can connect with the fused
+  location provider and the Google Places API for Android.
+        </p>
+        <p>
+         This tutorial provides the code you need to interact with the Google API
+  client. For more details, see the guide to
+         <a href="https://developers.google.com/android/guides/api-client#Starting">
+          accessing Google APIs
+         </a>
+         .
+        </p>
+        <ol>
+         <li>
+          <p>
+           Declare a variable for your Google API client in the
+           <code>
+            MapsActivityCurrentPlace
+           </code>
+           class:
+          </p>
+          <pre class="prettyprint notranslate">private GoogleApiClient mGoogleApiClient;</pre>
+         </li>
+         <li>
+          <p>
+           Build a Google API client in your activity's
+           <code>
+            onCreate()
+           </code>
+           method. Request the fused location provider
+    (
+           <code>
+            LocationServices.API
+           </code>
+           ) and the two parts of the
+    Google Places API for Android (
+           <code>
+            Places.GEO_DATA_API
+           </code>
+           and
+           <code>
+            Places.PLACE_DETECTION_API
+           </code>
+           ):
+          </p>
+          <pre class="prettyprint notranslate">@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    // Do other setup activities here too, as described elsewhere in this tutorial.
+
+    // Build the Play services client for use by the Fused Location Provider and the Places API.
+    // Use the addApi() method to request the Google Places API and the Fused Location Provider.
+    mGoogleApiClient = new GoogleApiClient.Builder(this)
+            .enableAutoManage(this /* FragmentActivity */,
+                    this /* OnConnectionFailedListener */)
+            .addConnectionCallbacks(this)
+            .addApi(LocationServices.API)
+            .addApi(Places.GEO_DATA_API)
+            .addApi(Places.PLACE_DETECTION_API)
+            .build();
+    mGoogleApiClient.connect();
+}
+</pre>
+         </li>
+        </ol>
+        <aside class="note">
+         <strong>
+          Note:
+         </strong>
+         It's not necessary to create a Google
+  API client if you're using just the Google Maps Android API.
+        </aside>
+        <h3 id="location-permission">
+         Request location permission
+        </h3>
+        <p>
+         Your app must request location permission in order to determine the
+  location of the device and to allow the user to tap the
+         <em>
+          My Location
+         </em>
+         button on the map.
+        </p>
+        <p>
+         This tutorial provides the code you need to request fine location permission.
+  For more details, see the guide to
+         <a href="https://developer.android.com/training/permissions/requesting.html">
+          Android
+  permissions
+         </a>
+         .
+        </p>
+        <ol>
+         <li>
+          <p>
+           Add the permission as a child of the
+           <code>
+            &lt;manifest&gt;
+           </code>
+           element in your Android manifest:
+          </p>
+          <pre class="prettyprint notranslate">&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.currentplacedetailsonmap"&gt;
+    &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+&lt;/manifest&gt;
+</pre>
+         </li>
+         <li>
+          <p>
+           Request runtime permissions in your app, giving the user the
+    opportunity to allow or deny location permission. The following code checks
+    whether the user has granted fine location permission. If not, it requests
+    the permission:
+          </p>
+          <pre class="prettyprint notranslate">private void getDeviceLocation() {
+    if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
+            android.Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED) {
+        mLocationPermissionGranted = true;
+    } else {
+        ActivityCompat.requestPermissions(this,
+                new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+    }
+    // A step later in the tutorial adds the code to get the device location.
+}
+</pre>
+         </li>
+         <li>
+          <p>
+           Override the
+           <code>
+            onRequestPermissionsResult()
+           </code>
+           callback to
+    handle the result of the permission request:
+          </p>
+          <pre class="prettyprint notranslate">@Override
+public void onRequestPermissionsResult(int requestCode,
+                                       @NonNull String permissions[],
+                                       @NonNull int[] grantResults) {
+    mLocationPermissionGranted = false;
+    switch (requestCode) {
+        case PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
+            // If request is cancelled, the result arrays are empty.
+            if (grantResults.length &gt; 0
+                    &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                mLocationPermissionGranted = true;
+            }
+        }
+    }
+    updateLocationUI();
+}
+</pre>
+          <p>
+           A later section of this tuturial describes the
+           <code>
+            updateLocationUI()
+           </code>
+           method.
+          </p>
+         </li>
+        </ol>
+        <h3>
+         Add a map
+        </h3>
+        <p>
+         Display a map, using the Google Maps Android API.
+        </p>
+        <ol>
+         <li>
+          <p>
+           Add a
+           <code>
+            &lt;fragment&gt;
+           </code>
+           element to your activity's layout
+    file,
+           <code>
+            activity_maps.xml
+           </code>
+           . This element defines a
+           <a href="https://developers.google.com/android/reference/com/google/android/gms/maps/SupportMapFragment">
+            <code>
+             SupportMapFragment
+            </code>
+           </a>
+           to act as a container for the map and to provide access to the
+           <code>
+            GoogleMap
+           </code>
+           object. The tutorial uses the Android support library
+    version of the map fragment, to ensure backward compatibility with earlier
+    versions of the Android framework.
+          </p>
+          <pre class="prettyprint notranslate">&lt;fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.currentplacedetailsonmap.MapsActivityCurrentPlace" /&gt;
+
+</pre>
+         </li>
+         <li>
+          <p>
+           In your activity's
+           <code>
+            onCreate()
+           </code>
+           method, set the layout file
+    as the content view:
+          </p>
+          <pre class="prettyprint notranslate">@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_maps);
+}
+</pre>
+         </li>
+         <li>
+          <p>
+           Implement the
+           <a href="https://developers.google.com/android/reference/com/google/android/gms/maps/OnMapReadyCallback">
+            <code>
+             OnMapReadyCallback
+            </code>
+           </a>
+           interface and override the
+           <code>
+            onMapReady()
+           </code>
+           method, to set up the
+    map when the
+           <code>
+            GoogleMap
+           </code>
+           object is available:
+          </p>
+          <pre class="prettyprint notranslate">public class MapsActivityCurrentPlace extends AppCompatActivity
+        implements OnMapReadyCallback,
+                GoogleApiClient.ConnectionCallbacks,
+                GoogleApiClient.OnConnectionFailedListener {
+    /**
+     * Manipulates the map when it's available.
+     * This callback is triggered when the map is ready to be used.
+     */
+    @Override
+    public void onMapReady(GoogleMap map) {
+        mMap = map;
+
+        // Do other setup activities here too, as described elsewhere in this tutorial.
+
+        // Turn on the My Location layer and the related control on the map.
+        updateLocationUI();
+
+        // Get the current location of the device and set the position of the map.
+        getDeviceLocation();
+    }
+}
+</pre>
+         </li>
+         <li>
+          <p>
+           In your activity's
+           <code>
+            onConnected()
+           </code>
+           method, get a handle to
+    the map fragment by calling
+           <a href="https://developer.android.com/reference/android/app/FragmentManager.html#findFragmentById(int)">
+            <code>
+             FragmentManager.findFragmentById()
+            </code>
+           </a>
+           .
+    Then use
+           <a href="https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#getMapAsync(com.google.android.gms.maps.OnMapReadyCallback)">
+            <code>
+             getMapAsync()
+            </code>
+           </a>
+           to register for the map callback:
+          </p>
+          <pre class="prettyprint notranslate">/**
+ * Builds the map when the Google Play services client is successfully connected.
+ */
+@Override
+public void onConnected(Bundle connectionHint) {
+    SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+            .findFragmentById(R.id.map);
+    mapFragment.getMapAsync(this);
+}
+</pre>
+         </li>
+         <li>
+          <p>
+           Write an
+           <code>
+            updateLocationUI()
+           </code>
+           method to set the location
+    controls on the map. If the user has granted location permission, enable the
+    My Location layer and the related control on the map, otherwise disable the
+    layer and the control, and set the current location to null:
+          </p>
+          <pre class="prettyprint notranslate">private void updateLocationUI() {
+    if (mMap == null) {
+        return;
+    }
+
+    /*
+     * Request location permission, so that we can get the location of the
+     * device. The result of the permission request is handled by a callback,
+     * onRequestPermissionsResult.
+     */
+    if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
+            android.Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED) {
+        mLocationPermissionGranted = true;
+    } else {
+        ActivityCompat.requestPermissions(this,
+                new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+    }
+
+    if (mLocationPermissionGranted) {
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+    } else {
+        mMap.setMyLocationEnabled(false);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        mLastKnownLocation = null;
+    }
+}
+</pre>
+         </li>
+        </ol>
+        <h3>
+         Get the location of the Android device and position the map
+        </h3>
+        <p>
+         Use the fused location provider to find the device's last-known location,
+  then use that location to position the map. The tutorial provides the code you
+  need. For more details on getting the device's location, see the guide to the
+         <a href="https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderApi">
+          fused
+  location provider
+         </a>
+         in the Google Play services location APIs.
+        </p>
+        <pre class="prettyprint notranslate">private void getDeviceLocation() {
+    /*
+     * Before getting the device location, you must check location
+     * permission, as described earlier in the tutorial. Then:
+     * Get the best and most recent location of the device, which may be
+     * null in rare cases when a location is not available.
+     */
+    if (mLocationPermissionGranted) {
+        mLastKnownLocation = LocationServices.FusedLocationApi
+                .getLastLocation(mGoogleApiClient);
+    }
+
+    // Set the map's camera position to the current location of the device.
+    if (mCameraPosition != null) {
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(mCameraPosition));
+    } else if (mLastKnownLocation != null) {
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(mLastKnownLocation.getLatitude(),
+                        mLastKnownLocation.getLongitude()), DEFAULT_ZOOM));
+    } else {
+        Log.d(TAG, "Current location is null. Using defaults.");
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mDefaultLocation, DEFAULT_ZOOM));
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+    }
+}
+</pre>
+        <h3>
+         Get the current place
+        </h3>
+        <p>
+         Use the Google Places API for Android to get a list of likely places at the
+  device's current location. In this context, a
+         <em>
+          place
+         </em>
+         is a business
+  or other point of interest.
+        </p>
+        <p>
+         This tutorial gets the current place when the user clicks a
+         <strong>
+          Get Place
+         </strong>
+         button. It offers the user a list of likely places
+  to choose from, then adds a marker on the map at the location of the selected
+  place. The tutorial provides the code you need to interact with the
+  Google Places API for Android. For more details, see the guide to
+         <a href="https://developers.google.com/places/android-api/current-place">
+          getting the current place
+         </a>
+         .
+        </p>
+        <ol>
+         <li>
+          Create a layout file (
+          <code>
+           current_place_menu.xml
+          </code>
+          ) for the options
+    menu, and override the
+          <code>
+           onCreateOptionsMenu()
+          </code>
+          method, to set up
+    the options menu. See the accompanying sample app for the code.
+         </li>
+         <li>
+          Override the
+          <code>
+           onOptionsItemSelected()
+          </code>
+          method to get the
+    current place when the user clicks the
+          <strong>
+           Get Place
+          </strong>
+          option:
+          <pre class="prettyprint notranslate">@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+    if (item.getItemId() == R.id.option_get_place) {
+        showCurrentPlace();
+    }
+    return true;
+}
+</pre>
+         </li>
+         <li>
+          <p>
+           Create a
+           <code>
+            showCurrentPlace()
+           </code>
+           method to get a list of likely
+    places at the device's current location:
+          </p>
+          <pre class="prettyprint notranslate">private void showCurrentPlace() {
+    if (mMap == null) {
+        return;
+    }
+
+    if (mLocationPermissionGranted) {
+        // Get the likely places - that is, the businesses and other points of interest that
+        // are the best match for the device's current location.
+        @SuppressWarnings("MissingPermission")
+        PendingResult&lt;PlaceLikelihoodBuffer&gt; result = Places.PlaceDetectionApi
+                .getCurrentPlace(mGoogleApiClient, null);
+        result.setResultCallback(new ResultCallback&lt;PlaceLikelihoodBuffer&gt;() {
+            @Override
+            public void onResult(@NonNull PlaceLikelihoodBuffer likelyPlaces) {
+                int i = 0;
+                mLikelyPlaceNames = new String[mMaxEntries];
+                mLikelyPlaceAddresses = new String[mMaxEntries];
+                mLikelyPlaceAttributions = new String[mMaxEntries];
+                mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
+                for (PlaceLikelihood placeLikelihood : likelyPlaces) {
+                    // Build a list of likely places to show the user. Max 5.
+                    mLikelyPlaceNames[i] = (String) placeLikelihood.getPlace().getName();
+                    mLikelyPlaceAddresses[i] = (String) placeLikelihood.getPlace().getAddress();
+                    mLikelyPlaceAttributions[i] = (String) placeLikelihood.getPlace()
+                            .getAttributions();
+                    mLikelyPlaceLatLngs[i] = placeLikelihood.getPlace().getLatLng();
+
+                    i++;
+                    if (i &gt; (mMaxEntries - 1)) {
+                        break;
+                    }
+                }
+                // Release the place likelihood buffer, to avoid memory leaks.
+                likelyPlaces.release();
+
+                // Show a dialog offering the user the list of likely places, and add a
+                // marker at the selected place.
+                openPlacesDialog();
+            }
+        });
+    } else {
+        // Add a default marker, because the user hasn't selected a place.
+        mMap.addMarker(new MarkerOptions()
+                .title(getString(R.string.default_info_title))
+                .position(mDefaultLocation)
+                .snippet(getString(R.string.default_info_snippet)));
+    }
+}
+</pre>
+         </li>
+         <li>
+          <p>
+           Create an
+           <code>
+            openPlacesDialog()
+           </code>
+           method to display a form
+    allowing the user to select a place from a list of likely places. Add a
+    marker on the map for the selected place. The marker content includes the
+    name and address of the place, and any attributions that the API supplies:
+          </p>
+          <pre class="prettyprint notranslate">private void openPlacesDialog() {
+    // Ask the user to choose the place where they are now.
+    DialogInterface.OnClickListener listener =
+            new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // The "which" argument contains the position of the selected item.
+                    LatLng markerLatLng = mLikelyPlaceLatLngs[which];
+                    String markerSnippet = mLikelyPlaceAddresses[which];
+                    if (mLikelyPlaceAttributions[which] != null) {
+                        markerSnippet = markerSnippet + "\n" + mLikelyPlaceAttributions[which];
+                    }
+                    // Add a marker for the selected place, with an info window
+                    // showing information about that place.
+                    mMap.addMarker(new MarkerOptions()
+                            .title(mLikelyPlaceNames[which])
+                            .position(markerLatLng)
+                            .snippet(markerSnippet));
+
+                    // Position the map's camera at the location of the marker.
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(markerLatLng,
+                            DEFAULT_ZOOM));
+                }
+            };
+
+    // Display the dialog.
+    AlertDialog dialog = new AlertDialog.Builder(this)
+            .setTitle(R.string.pick_place)
+            .setItems(mLikelyPlaceNames, listener)
+            .show();
+}
+</pre>
+         </li>
+         <li>
+          <p>
+           Create a custom layout for the info window content. This makes it
+    possible to display multiple lines of content in the info window. First, add
+    an XML layout file,
+           <code>
+            custom_info_contents.xml
+           </code>
+           , containing a text
+    view for the info window title, and another text view for the snippet (that
+    is, the info window's textual content):
+          </p>
+          <pre class="prettyprint notranslate">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    android:orientation="vertical"&gt;
+    &lt;TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff000000"
+        android:textStyle="bold" /&gt;
+
+    &lt;TextView
+        android:id="@+id/snippet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff7f7f7f" /&gt;
+&lt;/LinearLayout&gt;
+
+</pre>
+         </li>
+         <li>
+          <p>
+           Implement the
+           <a href="https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.InfoWindowAdapter">
+            <code>
+             InfoWindowAdapter
+            </code>
+           </a>
+           interface to inflate the layout and load the info window content:
+          </p>
+          <pre class="prettyprint notranslate">@Override
+public void onMapReady(GoogleMap map) {
+    // Do other setup activities here too, as described elsewhere in this tutorial.
+    mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+
+    @Override
+    // Return null here, so that getInfoContents() is called next.
+    public View getInfoWindow(Marker arg0) {
+        return null;
+    }
+
+    @Override
+    public View getInfoContents(Marker marker) {
+        // Inflate the layouts for the info window, title and snippet.
+        View infoWindow = getLayoutInflater().inflate(R.layout.custom_info_contents, null);
+
+        TextView title = ((TextView) infoWindow.findViewById(R.id.title));
+        title.setText(marker.getTitle());
+
+        TextView snippet = ((TextView) infoWindow.findViewById(R.id.snippet));
+        snippet.setText(marker.getSnippet());
+
+        return infoWindow;
+      }
+    });
+}
+</pre>
+         </li>
+        </ol>
+        <aside class="note">
+         <strong>
+          Note:
+         </strong>
+         By default, the
+  Google Maps Android API displays the content of the info window when the
+  user taps a marker. There's no need to add a click listener for the marker if
+  you’re happy to use the default behavior.
+        </aside>
+        <h3>
+         Save the map's state
+        </h3>
+        <p>
+         Save the map's camera position and the device location. When a user rotates
+  an Android device, or makes configuration changes, the Android framework
+  destroys and rebuilds the map activity. To ensure a smooth user experience,
+  it's good to store relevant application state and restore it when needed.
+        </p>
+        <p>
+         This tutorial provides all the code you need to save the map's state. For
+  more details, see the guide to the
+         <a href="https://developer.android.com/training/basics/activity-lifecycle/recreating.html">
+          <code>
+           savedInstanceState
+          </code>
+          bundle
+         </a>
+         .
+        </p>
+        <ol>
+         <li>
+          <p>
+           In your map activity, set up key values for storing activity state:
+          </p>
+          <pre class="prettyprint notranslate">private static final String KEY_CAMERA_POSITION = "camera_position";
+private static final String KEY_LOCATION = "location";
+</pre>
+         </li>
+         <li>
+          <p>
+           Implement the
+           <code>
+            onSaveInstanceState()
+           </code>
+           callback to save the
+    state when the activity pauses:
+          </p>
+          <pre class="prettyprint notranslate">@Override
+protected void onSaveInstanceState(Bundle outState) {
+    if (mMap != null) {
+        outState.putParcelable(KEY_CAMERA_POSITION, mMap.getCameraPosition());
+        outState.putParcelable(KEY_LOCATION, mLastKnownLocation);
+        super.onSaveInstanceState(outState);
+    }
+}
+</pre>
+         </li>
+         <li>
+          <p>
+           In your activity's
+           <code>
+            onCreate()
+           </code>
+           method, retrieve the
+    device's location and the map's camera position if previously saved:
+          </p>
+          <pre class="prettyprint notranslate">@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    if (savedInstanceState != null) {
+        mCurrentLocation = savedInstanceState.getParcelable(KEY_LOCATION);
+        mCameraPosition = savedInstanceState.getParcelable(KEY_CAMERA_POSITION);
+    }
+}
+</pre>
+         </li>
+        </ol>
+        <aside class="note">
+         <strong>
+          Congratulations!
+         </strong>
+         You've built an Android
+  app that shows the current place on a Google map. You've also learned how to
+  use the
+         <a href="https://developers.google.com/maps/documentation/android-api">
+          Google Maps Android API
+         </a>
+         ,
+  the
+         <a href="https://developers.google.com/places/android-api">
+          Google Places API for Android
+         </a>
+         , and the
+         <a href="https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderApi">
+          fused
+  location provider
+         </a>
+         .
+        </aside>
+        <h2>
+         Next steps
+        </h2>
+        <p>
+         Learn about the
+         <a href="https://developers.google.com/places/android-api/placepicker">
+          place picker
+         </a>
+         ,
+  a UI widget that displays an interactive map and prompts the user to pick
+  the current location.
+        </p>
+       </div>
+       <div class="devsite-content-footer nocontent">
+        <p>
+         Except as otherwise noted, the content of this page is licensed under the
+         <a href="http://creativecommons.org/licenses/by/3.0/">
+          Creative Commons Attribution 3.0 License
+         </a>
+         , and code samples are licensed under the
+         <a href="http://www.apache.org/licenses/LICENSE-2.0">
+          Apache 2.0 License
+         </a>
+         . For details, see our
+         <a href="https://developers.google.com/terms/site-policies">
+          Site Policies
+         </a>
+         . Java is a registered trademark of Oracle and/or its affiliates.
+        </p>
+        <p class="devsite-content-footer-date" content="2017-06-07T04:47:18.998350" itemprop="datePublished">
+         Last updated June 7, 2017.
+        </p>
+       </div>
+      </article>
+     </article>
+    </div>
+    <footer class="devsite-footer-promos nocontent">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-promos-list">
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="http://stackoverflow.com/questions/tagged/google-maps">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-stack-overflow.svg"/>
+         Stack Overflow
+        </a>
+        <div class="devsite-footer-promo-description">
+         Ask a question under the google-maps tag.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://github.com/googlemaps/">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg"/>
+         GitHub
+        </a>
+        <div class="devsite-footer-promo-description">
+         Fork our samples and try them yourself.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://googlegeodevelopers.blogspot.com">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/blogger_64dp.png"/>
+         Blog
+        </a>
+        <div class="devsite-footer-promo-description">
+         Read the latest updates, customer stories, and tips.
+        </div>
+       </li>
+       <li class="devsite-footer-promo">
+        <a class="devsite-footer-promo-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo" href="https://issuetracker.google.com/savedsearches/558550">
+         <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/developers_64dp.png"/>
+         Issue Tracker
+        </a>
+        <div class="devsite-footer-promo-description">
+         Something wrong? Send us a bug report!
+        </div>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-footer-linkboxes nocontent ">
+     <nav class="devsite-full-site-width">
+      <ul class="devsite-footer-linkboxes-list">
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Learn More
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="http://developer.android.com/google/play-services/index.html">
+           Google Play Services
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/places/android">
+           Places API for Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/pricing-and-plans/">
+           Pricing and Plans
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/api-picker">
+           API Picker
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Platforms
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/android/">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/ios/">
+           iOS
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web/">
+           Web
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/web-services/">
+           Web Services
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox ">
+        <h3 class="devsite-footer-linkbox-heading">
+         Product Info
+        </h3>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/contact-sales">
+           Contact sales
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/documentation/android-api/support">
+           Community support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/premium/support">
+           Paid support
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox" href="https://developers.google.com/maps/terms">
+           Terms of Service
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="devsite-footer-linkbox devsite-footer-linkbox-sites">
+        <a class="gc-analytics-event devsite-footer-linkbox-logo-link" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link" href="https://developers.google.com/">
+         <img class="devsite-footer-linkbox-logo" src="https://developers.google.com/_static/eee0a9d1b9/images/redesign-14/lockup-color-knockout.png"/>
+        </a>
+        <ul class="devsite-footer-linkbox-list">
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link" href="//developer.android.com/index.html">
+           Android
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link" href="//developer.chrome.com/home">
+           Chrome
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link" href="//firebase.google.com">
+           Firebase
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Cloud Link" href="//cloud.google.com">
+           Google Cloud Platform
+          </a>
+         </li>
+         <li class="devsite-footer-linkbox-item">
+          <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products Link" href="//developers.google.com/products/">
+           All Products
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </footer>
+    <footer class="devsite-utility-footer">
+     <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
+      <div class="devsite-utility-footer-nav-left">
+       <form action="/i18n/setlang/" class="devsite-utility-footer-language" method="post">
+        <input name="xsrf_token" type="hidden" value="9gklhUl-A60q1OkTeTmLEronAopb8dlUJ0btzjALsng6MTQ5NzQ0NDUwNzkxMzQ4MA"/>
+        <input name="next" type="hidden" value="/maps/documentation/android-api/current-place-tutorial"/>
+        <select class="devsite-utility-footer-language-select kd-select" name="language" track-name="click" track-type="languageSelector">
+         <option track-metadata-original-language="en" track-metadata-selected-language="id" track-name="changed" track-type="languageSelector" value="id">
+          Bahasa Indonesia
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="de" track-name="changed" track-type="languageSelector" value="de">
+          Deutsch
+         </option>
+         <option selected="selected" track-metadata-original-language="en" track-metadata-selected-language="en" track-name="changed" track-type="languageSelector" value="en">
+          English
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="es" track-name="changed" track-type="languageSelector" value="es">
+          español
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector" value="fr">
+          français
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="pt-br" track-name="changed" track-type="languageSelector" value="pt-br">
+          Português Brasileiro
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector" value="ru">
+          Русский
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector" value="ja">
+          日本語
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="zh-cn" track-name="changed" track-type="languageSelector" value="zh-cn">
+          简体中文
+         </option>
+         <option track-metadata-original-language="en" track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector" value="ko">
+          한국어
+         </option>
+        </select>
+       </form>
+       <span class="devsite-utility-footer-links">
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer terms link" href="https://developers.google.com/terms/site-terms">
+         Terms
+        </a>
+        <a class="devsite-utility-footer-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer privacy link" href="https://www.google.com/policies/privacy/">
+         Privacy
+        </a>
+       </span>
+      </div>
+      <div class="devsite-utility-footer-nav-right">
+       <div class="devsite-utility-footer-newsletter-signup-text">
+        Sign up for the Google Developers newsletter
+       </div>
+       <a class="button button-primary devsite-utility-footer-newsletter-signup-button" href="https://services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch">
+        Subscribe
+       </a>
+      </div>
+     </nav>
+    </footer>
+    <div class="devsite-feedback-dialog devsite-dialog">
+     <div class="devsite-dialog-contents">
+      <h3>
+       Send feedback about...
+      </h3>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Image" data-type="documentation" track-metadata-position="header" track-name="feedbackDocIcon" track-type="feedback">
+        <div class="devsite-feedback-item-icon-container">
+         <div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs material-icons">
+         </div>
+        </div>
+       </a>
+       <div class="devsite-feedback-item-name">
+        This page
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Text" data-type="documentation" tabindex="0" track-metadata-position="header" track-name="feedbackDocText" track-type="feedback">
+         Documentation feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-item">
+       <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Image" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductIcon" track-type="feedback">
+        <img alt="Google Maps Android API" class="devsite-feedback-item-icon" src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png"/>
+       </a>
+       <div class="devsite-feedback-item-name">
+        Google Maps Android API
+       </div>
+       <div class="devsite-feedback-item-description">
+        <a class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Text" data-type="product" tabindex="0" track-metadata-position="header" track-name="feedbackProductText" track-type="feedback">
+         Product feedback
+        </a>
+       </div>
+      </div>
+      <div class="devsite-feedback-support">
+       <img src="https://developers.google.com/_static/eee0a9d1b9/images/feedback/ic_help_24px.svg"/>
+       Need help? Visit our
+       <a href="https://developers.google.com/maps/documentation/android-api/support">
+        support page
+       </a>
+       .
+      </div>
+     </div>
+     <div class="devsite-dialog-buttons">
+      <button class="devsite-feedback-cancel button-white gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button" track-metadata-position="header" track-name="cancelFeedbackButton" track-type="feedback" type="button">
+       Cancel
+      </button>
+     </div>
+    </div>
+    <script>
+     $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'Google Maps Android API',
+        'version': 'devsite-20170612-r03-rc00.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+    </script>
+   </div>
+   <script async="" defer="" src="//www.gstatic.com/feedback/api.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/jquery_ui-bundle.js">
+   </script>
+   <script src="https://developers.google.com/_static2/eee0a9d1b9/jsi18n/">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot_closure.js">
+   </script>
+   <script src="https://developers.google.com/_static/eee0a9d1b9/js/script_foot.js">
+   </script>
+   <script>
+    (function($) {
+          
+          devsite.devsite.Init($, {'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'VERSION_HASH': 'eee0a9d1b9', 'SITE_NAME': 'devsite', 'HISTORY_ENABLED': 1, 'SUBPATH': '', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.api.ai', '.appspot.com', '.devsitetest.how', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.nest.com', '.openthread.io', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0, 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com'},
+                               '[]','en',
+                               true, '',
+                               {"039e5d84b87fd75807ffb37b7f1bbf2c": true, "098dafe57affddc137df300142652cfd": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/maps/documentation/android-api/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+   </script>
+   <script>
+    $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+   </script>
+   <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=paewx4mdhuzny4k5rewdgkq2cy">
+   </script>
+  </div>
+  <span data-request-elapsed="326.410055161" id="devsite-request-elapsed">
+  </span>
+ </body>
+</html>

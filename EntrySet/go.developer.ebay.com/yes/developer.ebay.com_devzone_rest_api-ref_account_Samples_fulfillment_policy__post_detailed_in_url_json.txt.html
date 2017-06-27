@@ -1,0 +1,86 @@
+<html>
+ <head>
+ </head>
+ <body>
+  POST https://api.ebay.com/sell/account/v1/fulfillment_policy
+
+{
+  "name": "detailed fulfillment policy: worldwide shipping",
+  "marketplaceId": "EBAY_US",
+  "categoryTypes": [
+    {
+      "name": "ALL_EXCLUDING_MOTORS_VEHICLES"
+    }
+  ],
+  "handlingTime": {
+    "value": 1,
+    "unit": "DAY"
+  },
+  "shipToLocations": {
+    "regionIncluded": [
+      {
+        "regionName": "WORLDWIDE"
+      }
+    ],
+    "regionExcluded": [
+      {
+        "regionType": "WORLD_REGION",
+        "regionName": "Antartica"
+      }
+    ]
+  },
+  "shippingOptions": [
+    {
+      "optionType": "DOMESTIC",
+      "costType": "FLAT_RATE",
+      "shippingServices": [
+        {
+          "sortOrderId": 1,
+          "shippingServiceCode": "FedExHomeDelivery",
+          "shippingCost": {
+            "value": "5.50",
+            "currency": "USD"
+          },
+          "additionalShippingCost": {
+            "value": "1.2",
+            "currency": "USD"
+          },
+          "freeShipping": false,
+          "buyerResponsibleForPickup": false
+        }
+      ]
+    },
+    {
+      "optionType": "INTERNATIONAL",
+      "costType": "FLAT_RATE",
+      "shippingServices": [
+        {
+          "sortOrderId": 1,
+          "shippingServiceCode": "InternationalPriorityShipping",
+          "shippingCost": {
+            "value": "7.79",
+            "currency": "USD"
+          },
+          "additionalShippingCost": {
+            "value": "3.50",
+            "currency": "USD"
+          },
+          "freeShipping": false,
+          "shipToLocations": {
+            "regionIncluded": [
+              {
+                "regionName": "WORLDWIDE"
+              }
+            ]
+          },
+          "buyerResponsibleForPickup": false
+        }
+      ]
+    }
+  ],
+  "globalShipping": true,
+  "pickupDropOff": false,
+  "freightShipping": false
+}
+ </body>
+</html>

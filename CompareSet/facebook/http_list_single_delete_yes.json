@@ -1,0 +1,45 @@
+{
+  "paths": {
+    "http%3A%2F%2Fexample.com%": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "https://developers.google.com/streetview/spherical-metadata": {
+      "post": {},
+      "POST": {}
+    },
+    "-video.facebook.com/<API_VERSION>/<PAGE_ID>/videos": {
+      "POST": {}
+    },
+    "https://www.facebook.com/<POST_ID>": {
+      "post": {},
+      "POST": {}
+    },
+    ".facebook.com/<API_VERSION>/<PAGE_ID>/feed": {
+      "POST": {}
+    },
+    "http://www.example.com'": {
+      "POST": {}
+    },
+    ".facebook.com/<video_id>": {
+      "DELETE": {}
+    },
+    "http://bit.ly/alaska'": {
+      "POST": {},
+      "Post": {}
+    },
+    ".facebook.com/<API_VERSION>/204807582871020_615180368500404/insights": {
+      "POST": {}
+    },
+    "http%3A%2F%": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "graph",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

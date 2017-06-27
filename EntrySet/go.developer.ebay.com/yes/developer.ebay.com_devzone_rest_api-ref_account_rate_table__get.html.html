@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+ <head>
+  <title>
+   Get Shipping Rate Tables - eBay Account API Reference
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <link href="https://developer.ebay.com/DevZone/assets/navstyle.css" rel="StyleSheet" type="text/css"/>
+  <link href="https://developer.ebay.com/DevZone/assets/API.css" rel="StyleSheet" type="text/css"/>
+  <link href="https://developer.ebay.com/DevZone/assets/ss-styles.css" rel="StyleSheet" type="text/css"/>
+  <link href="https://developer.ebay.com/DevZone/assets/ebay.css" rel="StyleSheet" type="text/css"/>
+  <link href="https://developer.ebay.com/DevZone/assets/types.css" rel="StyleSheet" type="text/css"/>
+  <link href="https://developer.ebay.com/DevZone/assets/ss-print.css" media="print" rel="StyleSheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://developer.ebay.com/DevZone/assets/navstyle.js" type="text/javascript">
+  </script>
+  <script src="https://developer.ebay.com/DevZone/assets/tablist.js" type="text/javascript">
+  </script>
+ </head>
+ <body>
+  <a class="navhighlight" value="API Reference">
+  </a>
+  <!-- Start Headers -->
+  <div id="headbar">
+   <!-- Product and Version -->
+   <div id="dochead">
+    <span id="realm">
+     eBay Account API
+    </span>
+    <span id="version">
+     Version 1
+    </span>
+   </div>
+   <div id="docsetAll">
+    <ul>
+     <li>
+      <a href="index.html">
+       API Reference
+      </a>
+     </li>
+     <li>
+      <a href="../../sell/content/account/overview.html">
+       API Overview
+      </a>
+     </li>
+     <li>
+      <a href="../../sell/content/account/release-notes.html">
+       Release Notes
+      </a>
+     </li>
+     <li>
+      <a href="../../ebay-rest/content/ebay-rest-landing.html">
+       eBay REST
+      </a>
+     </li>
+     <li>
+      <a href="../../sell/content/sell-landing.html">
+       Selling APIs
+      </a>
+     </li>
+     <li>
+      <a href="../../sell/content/selling-ig/selling-ig-landing.html">
+       Integration Guide
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <!-- End Headers -->
+  <!-- Start bottom half divs -->
+  <div id="bottomhalf">
+   <a name="top">
+   </a>
+   <div id="docNoLeftNav">
+    <!-- Start Doc Content -->
+    <a name="overview">
+    </a>
+    <h1>
+     Get Shipping Rate Tables
+    </h1>
+    <a name="GETrt_tbl">
+    </a>
+    <h2>
+     <span class="http_method">
+      GET
+     </span>
+     /rate_table
+    </h2>
+    <p>
+     Retrieves information on the shipping-rate tables defined by the seller. The call returns the shipping-rate tables for the country specified by the
+     <b>
+      country_code
+     </b>
+     query parameter, or all the shipping-rate tables defined by the seller.
+     <br/>
+     <br/>
+     <span class="tablenote">
+      <b>
+       Important:
+      </b>
+      The documentation for this call is provided for information purposes only; the call is not yet live on our Production or Sandbox servers. This note will be removed once the call is wired-on and available for general use.
+     </span>
+    </p>
+    <a name="Request">
+    </a>
+    <!-- %shorthead=Input% -->
+    <table class="navbar">
+     <tbody>
+      <tr>
+       <td class="navbar_local">
+        <span class="quickPicks">
+         <span class="navlink">
+          Input
+         </span>
+         <a class="navlink" href="#Output" title="Details about every field that might be returned by this call">
+          Output
+         </a>
+         <a class="navlink" href="#ErrorCodes" title="The list of error codes that could be returned by this call">
+          Error Codes
+         </a>
+         <a class="navlink" href="#Samples" title="Illustrations of how to use this call">
+          Samples
+         </a>
+         <a class="navlink" href="#ChangeHistory" title="Details about changes to this call">
+          Change History
+         </a>
+        </span>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <a name="Input">
+    </a>
+    <h2>
+     Input
+    </h2>
+    <a name="Requestmodel">
+    </a>
+    <p>
+     See also
+     <a href="#Samples">
+      Samples
+     </a>
+     .
+    </p>
+    <h4>
+     Resource URI (production)
+    </h4>
+    <pre>GET https://api.ebay.com/sell/account/v1/rate_table?
+  <a class="proto_name" href="#Request.country_code">country_code</a>=<i>CountryCodeEnum</i>
+</pre>
+    <h4>
+     URI parameters
+    </h4>
+    <table border="1" cellpadding="4" cellspacing="2" id="stdInputTable" style="display: block" width="90%">
+     <tbody>
+      <tr>
+       <th width="240">
+        Parameter
+       </th>
+       <th width="100">
+        Type
+       </th>
+       <th width="80">
+        Required?
+       </th>
+       <th>
+        Meaning
+       </th>
+      </tr>
+      <tr class="data-row opt">
+       <td class="fieldname">
+        <a name="Request.country_code">
+        </a>
+        <b>
+         country_code
+        </b>
+       </td>
+       <td align="left">
+        <span class="defn_type">
+         <a class="nohi" href="types/simpletypes.html#string">
+          string
+         </a>
+        </span>
+       </td>
+       <td align="center" width="70">
+        <span class="defn_cond">
+         ---
+        </span>
+       </td>
+       <td align="left">
+        A two-letter
+        <a href="http://www.iso.org/iso/country_codes" target="_blank">
+         ISO 3166-1 Alpha-2
+        </a>
+        code representing a source or listing country. If you do not specify a county, the call returns all the seller-defined rate tables.
+        <br/>
+        <br/>
+        Applicable values are from
+        <a href="types/CountryCodeEnum.html">
+         CountryCodeEnum
+        </a>
+        .
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <br/>
+    <br/>
+    <h4>
+     HTTP request headers
+    </h4>
+    <p>
+     All requests made to eBay REST operations require you to provide the
+     <code>
+      authorization
+     </code>
+     HTTP header for authentication.
+     <br/>
+     See
+     <a href="../../ebay-rest/content/rest-request-components.html#HTTP" target="_blank">
+      HTTP request headers
+     </a>
+     for details.
+    </p>
+    <br/>
+    <br/>
+    <h4>
+     OAuth request scope
+    </h4>
+    <p>
+     This request requires a user access token with the following scope:
+    </p>
+    <p>
+     <code>
+      https://api.ebay.com/oauth/api_scope/sell.account
+     </code>
+    </p>
+    <p>
+     <code>
+      https://api.ebay.com/oauth/api_scope/sell.account.readonly
+     </code>
+    </p>
+    <p>
+     See
+     <a href="../../ebay-rest/content/oauth-tokens.html" target="blank">
+      Getting Access Tokens
+     </a>
+     for more information.
+    </p>
+    <br/>
+    <br/>
+    <h4>
+     Payload model
+    </h4>
+    <p>
+     This call has no request payload.
+    </p>
+    <br/>
+    <a name="Response">
+    </a>
+    <!-- %shorthead=Output% -->
+    <table class="navbar">
+     <tbody>
+      <tr>
+       <td class="navbar_local">
+        <span class="quickPicks">
+         <a class="navlink" href="#Input" title="Details about every field that can be used in this call">
+          Input
+         </a>
+         <span class="navlink">
+          Output
+         </span>
+         <a class="navlink" href="#ErrorCodes" title="The list of error codes that could be returned by this call">
+          Error Codes
+         </a>
+         <a class="navlink" href="#Samples" title="Illustrations of how to use this call">
+          Samples
+         </a>
+         <a class="navlink" href="#ChangeHistory" title="Details about changes to this call">
+          Change History
+         </a>
+        </span>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <a name="Output">
+    </a>
+    <h2>
+     Output
+    </h2>
+    <a name="Responsemodel">
+    </a>
+    <p>
+     See also
+     <a href="#Samples">
+      Samples
+     </a>
+     .
+    </p>
+    <h4>
+     HTTP status codes
+    </h4>
+    <p>
+     This call can return one of the following HTTP status codes. See the
+     <a class="nohi" href="http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml" target="_blank">
+      HTTP Status Code Registry
+     </a>
+     for a complete overview of HTTP status codes.
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <th>
+        Status
+       </th>
+       <th>
+        Meaning
+       </th>
+      </tr>
+      <tr>
+       <td>
+        200
+       </td>
+       <td>
+        Success
+       </td>
+      </tr>
+      <tr>
+       <td>
+        400
+       </td>
+       <td>
+        Bad Request
+       </td>
+      </tr>
+      <tr>
+       <td>
+        500
+       </td>
+       <td>
+        Internal Server Error
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <br/>
+    <h4>
+     Payload model
+    </h4>
+    <p>
+     <span class="tablenote">
+      <strong>
+       Note:
+      </strong>
+      For information about the error fields and how to work with them, see
+      <a class="nohi" href="../../ebay-rest/content/handling-error-messages.html" target="_blank">
+       Error Handling
+      </a>
+      .
+     </span>
+    </p>
+    <p>
+     The following lists
+     <i>
+      all fields that could be included
+     </i>
+     in the response.
+    </p>
+    <!-- JSON proto -->
+    <pre>{ /* <i><a class="proto_type" href="types/RateTableResponse.html">RateTableResponse</a></i> */
+"<a class="proto_name" href="#Response.rateTables">rateTables</a>": [
+    { /* <a class="proto_type" href="types/RateTable.html">RateTable</a> */
+    "<a class="proto_name" href="#Response.rateTables.countryCode">countryCode</a>": <a class="proto_type" href="types/simpletypes.html#string">string</a>,
+    "<a class="proto_name" href="#Response.rateTables.locality">locality</a>": <a class="proto_type" href="types/simpletypes.html#string">string</a>,
+    "<a class="proto_name" href="#Response.rateTables.name">name</a>": <a class="proto_type" href="types/simpletypes.html#string">string</a>,
+    "<a class="proto_name" href="#Response.rateTables.rateTableId">rateTableId</a>": <a class="proto_type" href="types/simpletypes.html#string">string</a>
+    }
+    <span class="MoreNodes">/* More <a class="proto_type" href="types/RateTable.html">RateTable</a> nodes here */</span>
+  ]
+}
+</pre>
+    <h4>
+     Response field descriptions
+    </h4>
+    <br/>
+    <br/>
+    <table border="1" cellpadding="4" cellspacing="2" class="field-desc">
+     <tbody>
+      <tr>
+       <th width="200">
+        Output Container/Field
+       </th>
+       <th width="100">
+        Type
+       </th>
+       <th width="70">
+        Occurrence
+       </th>
+       <th>
+        Meaning
+       </th>
+      </tr>
+      <tr>
+       <td align="left" class="fieldname" width="200">
+        <a name="Response.rateTables">
+        </a>
+        <b>
+         rateTables
+        </b>
+       </td>
+       <td align="left" width="100">
+        <span class="defn_type">
+         array of
+         <a class="defn_type" href="types/RateTable.html">
+          RateTable
+         </a>
+        </span>
+       </td>
+       <td align="center" width="70">
+        <span class="defn_cond">
+         Conditionally
+        </span>
+       </td>
+       <td align="left">
+        A list of shipping-rate tables.
+       </td>
+      </tr>
+      <tr>
+       <td align="left" class="fieldname" width="200">
+        <a name="Response.rateTables.countryCode">
+        </a>
+        rateTables.
+        <b>
+         countryCode
+        </b>
+       </td>
+       <td align="left" width="100">
+        <span class="defn_type">
+         <a class="defn_type" href="types/simpletypes.html#string">
+          string
+         </a>
+        </span>
+       </td>
+       <td align="center" width="70">
+        <span class="defn_cond">
+         Conditionally
+        </span>
+       </td>
+       <td align="left">
+        A two-letter
+        <a href="http://www.iso.org/iso/country_codes" target="_blank">
+         ISO 3166-1 Alpha-2
+        </a>
+        code representing the source or listing country.
+        <br/>
+        <br/>
+        <b>
+         Applicable values are from
+         <a href="types/CountryCodeEnum.html">
+          CountryCodeEnum
+         </a>
+        </b>
+        :See
+        <a href="extra/rt_tbl__gt.Rspns.rtTbls.cntryCd.html">
+         countryCode
+        </a>
+        .
+        <br/>
+        Code so that your app gracefully handles any future changes to this list.
+       </td>
+      </tr>
+      <tr>
+       <td align="left" class="fieldname" width="200">
+        <a name="Response.rateTables.locality">
+        </a>
+        rateTables.
+        <b>
+         locality
+        </b>
+       </td>
+       <td align="left" width="100">
+        <span class="defn_type">
+         <a class="defn_type" href="types/simpletypes.html#string">
+          string
+         </a>
+        </span>
+       </td>
+       <td align="center" width="70">
+        <span class="defn_cond">
+         Conditionally
+        </span>
+       </td>
+       <td align="left">
+        The region covered by the shipping rate table, either DOMESTIC or INTERNATIONAL.
+        <br/>
+        <br/>
+        DOMESTIC indicates that the shipping-rate table applies to regions within country from where the item ships (the
+        <i>
+         source
+        </i>
+        country) while INTERNATIONAL indicates that the shipping-rate table applies to regions outside of the country from where an item is shipped.
+        <br/>
+        <br/>
+        <b>
+         Applicable values are from
+         <a href="types/ShippingOptionTypeEnum.html">
+          ShippingOptionTypeEnum
+         </a>
+        </b>
+        :
+        <br/>
+        <br/>
+        <dt>
+         DOMESTIC
+        </dt>
+        <dd>
+         <code>
+          DOMESTIC
+         </code>
+         indicates a region that is within the source country.
+        </dd>
+        <dt>
+         INTERNATIONAL
+        </dt>
+        <dd>
+         <code>
+          INTERNATIONAL
+         </code>
+         indicates a region that is external to the source country.
+        </dd>
+        <br/>
+        Code so that your app gracefully handles any future changes to this list.
+       </td>
+      </tr>
+      <tr>
+       <td align="left" class="fieldname" width="200">
+        <a name="Response.rateTables.name">
+        </a>
+        rateTables.
+        <b>
+         name
+        </b>
+       </td>
+       <td align="left" width="100">
+        <a class="defn_type" href="types/simpletypes.html#string">
+         string
+        </a>
+       </td>
+       <td align="center" width="70">
+        <span class="defn_cond">
+         Conditionally
+        </span>
+       </td>
+       <td align="left">
+        The user-defined name for the shipping-rate table. Sellers can access Seller Hub to assign names to their shipping-rate tables.
+       </td>
+      </tr>
+      <tr>
+       <td align="left" class="fieldname" width="200">
+        <a name="Response.rateTables.rateTableId">
+        </a>
+        rateTables.
+        <b>
+         rateTableId
+        </b>
+       </td>
+       <td align="left" width="100">
+        <a class="defn_type" href="types/simpletypes.html#string">
+         string
+        </a>
+       </td>
+       <td align="center" width="70">
+        <span class="defn_cond">
+         Conditionally
+        </span>
+       </td>
+       <td align="left">
+        A unique eBay-assigned ID for the shipping-rate table.
+        <br/>
+        <br/>
+        Use this ID value in the
+        <b>
+         RateTableDetails
+        </b>
+        container of the Add/Revise/Relist calls in the Trading API. If
+        <b>
+         locality
+        </b>
+        for a rate table is set to
+        <code>
+         DOMESTIC
+        </code>
+        , pass the ID value in the
+        <b>
+         RateTableDetails.DomesticRateTableId
+        </b>
+        field. Otherwise, if
+        <b>
+         locality
+        </b>
+        is
+        <code>
+         INTERNATIONAL
+        </code>
+        , pass the ID value in
+        <b>
+         RateTableDetails.InternationalRateTableId
+        </b>
+        .
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <br/>
+     <br/>
+    </p>
+    <!-- Start Error Codes Content -->
+    <a name="errorCodes">
+    </a>
+    <!-- %shorthead=Error Codes Returned by this Call% -->
+    <table class="navbar">
+     <tbody>
+      <tr>
+       <td class="navbar_local">
+        <span class="quickPicks">
+         <a class="navlink" href="#Input" title="Details about every field that can be used in this call">
+          Input
+         </a>
+         <a class="navlink" href="#Output" title="Details about every field that might be returned by this call">
+          Output
+         </a>
+         <span class="navlink">
+          Error Codes
+         </span>
+         <a class="navlink" href="#Samples" title="Illustrations of how to use this call">
+          Samples
+         </a>
+         <a class="navlink" href="#ChangeHistory" title="Details about changes to this call">
+          Change History
+         </a>
+        </span>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <a name="ErrorCodes">
+    </a>
+    <h2>
+     Error Codes
+    </h2>
+    <table>
+     <tbody>
+      <tr>
+       <th>
+        Code
+       </th>
+       <th>
+        Domain
+       </th>
+       <th>
+        Category
+       </th>
+       <th>
+        Nature
+       </th>
+       <th>
+        Meaning
+       </th>
+      </tr>
+      <tr>
+       <td>
+        20403
+        <a name="20403">
+        </a>
+       </td>
+       <td>
+        API_ACCOUNT
+       </td>
+       <td>
+        REQUEST
+       </td>
+       <td>
+        ERROR
+       </td>
+       <td>
+        Invalid {fieldName}. {additionalInfo}
+       </td>
+      </tr>
+      <tr>
+       <td>
+        20500
+        <a name="20500">
+        </a>
+       </td>
+       <td>
+        API_ACCOUNT
+       </td>
+       <td>
+        APPLICATION
+       </td>
+       <td>
+        ERROR
+       </td>
+       <td>
+        System error.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <!-- End Error Codes Content -->
+    <p>
+     <br/>
+     <br/>
+    </p>
+    <!-- Start Samples Content -->
+    <a name="Samples">
+    </a>
+    <!-- %shorthead=Samples% -->
+    <table class="navbar">
+     <tbody>
+      <tr>
+       <td class="navbar_local">
+        <span class="quickPicks">
+         <a class="navlink" href="#Input" title="Details about every field that can be used in this call">
+          Input
+         </a>
+         <a class="navlink" href="#Output" title="Details about every field that might be returned by this call">
+          Output
+         </a>
+         <a class="navlink" href="#ErrorCodes" title="The list of error codes that could be returned by this call">
+          Error Codes
+         </a>
+         <span class="navlink">
+          Samples
+         </span>
+         <a class="navlink" href="#ChangeHistory" title="Details about changes to this call">
+          Change History
+         </a>
+        </span>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <a name="Samples">
+    </a>
+    <h2>
+     Samples
+    </h2>
+    <p>
+     Note: Some item IDs, user IDs, or other data in these samples might no longer be active on eBay. If necessary, you can substitute current eBay data in your requests.
+    </p>
+    <a name="samplebasic">
+    </a>
+    <div style="margin-top:40px">
+     <span class="sampleBar1">
+      <span class="sampleBar2">
+       Sample: Get the shipping-rate tables for a country
+      </span>
+     </span>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      Description
+     </b>
+    </p>
+    <p>
+     This example retrieves details about the shipping-rate tables defined by a seller for a specific country.
+    </p>
+    <p>
+     <b>
+      Input
+     </b>
+    </p>
+    <p>
+     This call does not require a request payload and the
+     <b>
+      countryCode
+     </b>
+     query parameter is optional (the country defaults to
+     <code>
+      US
+     </code>
+     ). The example show relies on the default countryCode value.
+    </p>
+    <pre><span style="font-family:sans-serif"><b>URL format</b>.</span> <span style="font-family:sans-serif">See also the <a href="Samples/rate_table__get_basic_in_url_json.txt">non-wrapped</a> version of this URL.</span>
+
+GET https://api.ebay.com/sell/account/v1/rate_table</pre>
+    <p>
+     <b>
+      Output
+     </b>
+    </p>
+    <p>
+     A successful call returns information on the shipping-rate tables defined by the seller. Table information is returned for the country specified in the request and information on up to 20 tables can be returned by this call.
+    </p>
+    <pre class="xscroll"><span style="font-family:sans-serif"><b>JSON format</b>.</span>
+{
+  "rateTables": [
+    {
+      "rateTableId": "1948372637",
+      "name": "Shoes Shipping Rates",
+      "locality": "DOMESTIC"
+    },
+    {
+      "rateTableId": "1948372638",
+      "name": "T-Shirts Shipping Rates",
+      "locality": "DOMESTIC"
+    },
+    {
+      "rateTableId": "1948372639",
+      "name": "Pants Shipping Rates",
+      "locality": "DOMESTIC"
+    },
+    {
+      "rateTableId": "1948372640",
+      "name": "Baseball Cards Shipping Rates",
+      "locality": "INTERNATIONAL"
+    },
+    {
+      "rateTableId": "1948372641",
+      "name": "Guitars Shipping Rates",
+      "locality": "INTERNATIONAL"
+    }
+  ]
+}
+
+</pre>
+    <!-- End Samples Content -->
+    <p>
+     <br/>
+     <br/>
+    </p>
+    <!-- Start ChangeHistory Content -->
+    <a name="ChangeHistory">
+    </a>
+    <!-- %shorthead=Change History% -->
+    <table class="navbar">
+     <tbody>
+      <tr>
+       <td class="navbar_local">
+        <span class="quickPicks">
+         <a class="navlink" href="#Input" title="Details about every field that can be used in this call">
+          Input
+         </a>
+         <a class="navlink" href="#Output" title="Details about every field that might be returned by this call">
+          Output
+         </a>
+         <a class="navlink" href="#ErrorCodes" title="The list of error codes that could be returned by this call">
+          Error Codes
+         </a>
+         <a class="navlink" href="#Samples" title="Illustrations of how to use this call">
+          Samples
+         </a>
+         <span class="navlink">
+          Change History
+         </span>
+        </span>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <a name="ChangeHistory">
+    </a>
+    <h2>
+     Change History
+    </h2>
+    <table width="90%">
+     <tbody>
+      <tr>
+       <th>
+        Change Date
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </tbody>
+    </table>
+    <!-- End ChangeHistory Content -->
+    <!-- End Doc Content -->
+    <br/>
+    <br/>
+    <p class="copyright">
+     Copyright © 2016–2017
+eBay Inc. All rights reserved. This documentation and the API may only be used in accordance with the eBay Developers Program and API License Agreement.
+    </p>
+   </div>
+   <!-- End bottom half divs -->
+  </div>
+ </body>
+</html>

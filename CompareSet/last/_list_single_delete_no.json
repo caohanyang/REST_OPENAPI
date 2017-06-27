@@ -1,0 +1,21 @@
+{
+  "basePath": "/2.0/",
+  "paths": {
+    "/api/auth": {
+      "GET": {}
+    },
+    "//www.last.fm/api/auth": {
+      "GET": {}
+    },
+    "//ws.audioscrobbler.com/2.0": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "ws.audioscrobbler.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,47 @@
+{
+  "basePath": "/focus%E5%9B%BE%E5%83%8F.png",
+  "paths": {
+    "/layarimage.jpeg": {
+      "GET": {}
+    },
+    "/plain\",": {
+      "GET": {}
+    },
+    "/devsupport.layar.com.": {
+      "GET": {}
+    },
+    "/Optional:": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "Get": {},
+      "del": {},
+      "Del": {}
+    },
+    "/vnd.layar.l3d\",": {
+      "GET": {}
+    },
+    "/vnd.layar.internal\", ": {
+      "GET": {}
+    },
+    "/vnd.layar.internal\",": {
+      "GET": {}
+    },
+    "/Optional": {
+      "GET": {}
+    },
+    "/url_to_features\",": {
+      "GET": {}
+    },
+    "/vnd.layar.async": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "custom.layar.nl",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

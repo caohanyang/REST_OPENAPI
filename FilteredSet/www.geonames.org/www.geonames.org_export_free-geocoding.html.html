@@ -1,0 +1,327 @@
+<html>
+ <head>
+  <title>
+   free geocoding webservice
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <link href="http://www.geonames.org/geonames.ico" rel="shortcut icon"/>
+  <link href="/geonames.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <table id="topmenutable">
+   <tbody>
+    <tr>
+     <td class="topmenu">
+      <a href="http://www.geonames.org/">
+       GeoNames Home
+      </a>
+      |
+      <a href="http://www.geonames.org/postal-codes/">
+       Postal Codes
+      </a>
+      |
+      <a href="http://www.geonames.org/export/">
+       Download / Webservice
+      </a>
+      |
+      <a href="http://www.geonames.org/about.html">
+       About
+      </a>
+      |
+     </td>
+     <td class="topsearch">
+      <form action="/servlet/geonames" class="topsearch" method="post" name="searchForm" onsubmit="javascript:fulltextsearch();return false;">
+       search
+       <input class="topmenu" name="q" size="20" type="text" value=""/>
+       <input name="srv" type="hidden" value="1"/>
+      </form>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div style="margin: auto; width: 600px; text-align: left;">
+   <h3>
+    Free Geocoding Webservice
+   </h3>
+   <h4>
+    Postal code
+   </h4>
+   Webservice Type : REST
+   <br/>
+   Url : api.geonames.org/postalCodeSearch?
+   <br/>
+   Parameters : postalcode ,placename,maxRows,country
+   <br/>
+   Result : returns a list of places for the placename/postalcode query as xml document
+   <br/>
+   Example
+   <a href="http://api.geonames.org/postalCodeSearch?postalcode=9011&amp;maxRows=10&amp;username=demo" target="_blank">
+    http://api.geonames.org/postalCodeSearch?postalcode=9011&amp;maxRows=10&amp;username=demo
+   </a>
+   <br/>
+   <br/>
+   <br/>
+   Note : Don't forget to url encode string parameters containing special characters or spaces. (
+   <a href="http://forum.geonames.org/gforum/posts/list/8.page">
+    Faq entry on url encoding
+   </a>
+   )
+   <br/>
+   <br/>
+   This webservice is also available in JSON format for a javascript
+   <a href="http://www.geonames.org/export/ajax-postalcode-autocomplete.html">
+    postal code autocomplete
+   </a>
+   .
+   <br/>
+   <h5>
+    Supported Countries
+   </h5>
+   <ul>
+    <li>
+     Andorra (AD)
+    </li>
+    <li>
+     Argentina (AR)
+    </li>
+    <li>
+     Austria (AT)
+    </li>
+    <li>
+     Australia (AU)
+    </li>
+    <li>
+     Bangladesh (BD)
+    </li>
+    <li>
+     Belgium (BE)
+    </li>
+    <li>
+     Bulgaria (BG)
+    </li>
+    <li>
+     Brazil (BR)
+    </li>
+    <li>
+     Canada (CA),
+     <b>
+      FSA only
+     </b>
+    </li>
+    <li>
+     Switzerland (CH)
+    </li>
+    <li>
+     Czech Republic (CZ)
+    </li>
+    <li>
+     Germany (DE)
+    </li>
+    <li>
+     Denmark (DK)
+    </li>
+    <li>
+     Dominican Republic (DO)
+    </li>
+    <li>
+     Spain (ES)
+    </li>
+    <li>
+     Finland (FI)
+    </li>
+    <li>
+     Faroe Islands (FO)
+    </li>
+    <li>
+     France (FR)
+    </li>
+    <li>
+     United Kingdom (GB) , Contains Royal Mail data Royal Mail copyright and database right 2010.
+    </li>
+    <li>
+     French Guiana (GF)
+    </li>
+    <li>
+     Greenland (GL)
+    </li>
+    <li>
+     Guadeloupe (GP)
+    </li>
+    <li>
+     Guatemala (GT)
+    </li>
+    <li>
+     Croatia (HR)
+    </li>
+    <li>
+     Hungary (HU)
+    </li>
+    <li>
+     India (IN)
+    </li>
+    <li>
+     Iceland (IS)
+    </li>
+    <li>
+     Italy (IT)
+    </li>
+    <li>
+     Japan (JP)
+    </li>
+    <li>
+     Liechtenstein (LI)
+    </li>
+    <li>
+     Sri Lanka (LK)
+    </li>
+    <li>
+     Lithuania (LT)
+    </li>
+    <li>
+     Luxembourg (LU)
+    </li>
+    <li>
+     Monaco (MC)
+    </li>
+    <li>
+     Moldova (MD)
+    </li>
+    <li>
+     Macedonia (MK)
+    </li>
+    <li>
+     Martinique (MQ)
+    </li>
+    <li>
+     Mexico (MX)
+    </li>
+    <li>
+     Malaysia (MY)
+    </li>
+    <li>
+     Netherlands (NL)
+    </li>
+    <li>
+     Norway (NO)
+    </li>
+    <li>
+     New Zealand (NZ)
+    </li>
+    <li>
+     Philippines (PH)
+    </li>
+    <li>
+     Pakistan (PK)
+    </li>
+    <li>
+     Poland (PL)
+    </li>
+    <li>
+     Saint Pierre and Miquelon (PM)
+    </li>
+    <li>
+     Portugal (PT)
+    </li>
+    <li>
+     Reunion (RE)
+    </li>
+    <li>
+     Russia (RU)
+    </li>
+    <li>
+     Sweden (SE)
+    </li>
+    <li>
+     Slovenia (SI)
+    </li>
+    <li>
+     Slovakia (SK)
+    </li>
+    <li>
+     San Marino (SM)
+    </li>
+    <li>
+     Thailand (TH)
+    </li>
+    <li>
+     Turkey (TR)
+    </li>
+    <li>
+     United States (US)
+    </li>
+    <li>
+     Vatican City (VA)
+    </li>
+    <li>
+     Wallis and Futuna (WF)
+    </li>
+    <li>
+     Mayotte (YT)
+    </li>
+    <li>
+     South Africa (ZA)
+    </li>
+   </ul>
+   <br/>
+   <br/>
+   The webservice postalCodeCountryInfo returns information on the available postal codes :
+   <a href="http://api.geonames.org/postalCodeCountryInfo?username=demo" target="_blank">
+    http://api.geonames.org/postalCodeCountryInfo?username=demo
+   </a>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <div id="license">
+    <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">
+     <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/88x31.png" style="border-width:0"/>
+    </a>
+    <p>
+     This work is licensed under a
+     <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">
+      Creative Commons Attribution 3.0 License
+     </a>
+     .
+    </p>
+   </div>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <p>
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+  <div id="pageFooter">
+   info@geonames.org
+   <p>
+    <a href="/">
+     GeoNames Home
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="/postal-codes/">
+     Postal Codes
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="/export/">
+     Download / Webservice
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="/about.html">
+     About
+    </a>
+   </p>
+  </div>
+ </body>
+</html>

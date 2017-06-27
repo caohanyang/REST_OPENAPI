@@ -1,0 +1,11 @@
+{
+  "basePath": "/focus%E5%9B%BE%E5%83%8F.png",
+  "paths": {},
+  "produces": "application/json",
+  "host": "custom.layar.nl",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

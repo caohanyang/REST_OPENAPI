@@ -25,7 +25,7 @@
   <link href="/css/highlight-default.css" rel="stylesheet" type="text/css"/>
   <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
   <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/awsdocs.css?v=20170615" rel="stylesheet" type="text/css"/>
   <script src="/js/highlight.pack.js" type="text/javascript">
   </script>
   <script src="/js/jquery.min.js" type="text/javascript">
@@ -36,7 +36,7 @@
   </script>
   <script src="/js/jquery.colorbox.js" type="text/javascript">
   </script>
-  <script src="/js/awsdocs.min.js" type="text/javascript">
+  <script src="/js/awsdocs.min.js?v=20170615" type="text/javascript">
   </script>
   <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript">
   </script>
@@ -1778,7 +1778,7 @@
              AWS Documentation
             </a>
             »
-            <a href="uri">
+            <a href="http://aws.amazon.com/archives/Product%20Advertising%20API">
              Amazon Product Advertising API Docs
             </a>
             »
@@ -1853,10 +1853,12 @@
          ItemSearch
         </code>
         into groups, called bins. The grouping is based on some
-                        criteria, depending on the search index. For example, a set of bins can be based on a
+                        criteria, depending on the search index. For example, a set of bins can be based on
+                        a
                         set of price ranges for an item. In the case of women’s shoes, for example, SearchBins
                         might return a bin that contains ASINs for shoes that cost between $0 and $50, a second
-                        bin for shoes that cost $50 to $100, and a third bin for shoes that cost more than $100.
+                        bin for shoes that cost $50 to $100, and a third bin for shoes that cost more than
+                        $100.
        </p>
        <p>
        </p>
@@ -1866,7 +1868,8 @@
        </p>
        <p>
         The advantage of using search bins is that the response group divides the items into
-                        bins without you having to return or parse item attributes. You can then submit a second
+                        bins without you having to return or parse item attributes. You can then submit a
+                        second
         <code class="code">
          ItemSearch
         </code>
@@ -1877,9 +1880,11 @@
                         groups. The SearchBins response group does that automatically.
        </p>
        <p>
-        Some search indices support more than one kind of bin. For example, apparel items can
+        Some search indices support more than one kind of bin. For example, apparel items
+                        can
                         be divided in to bins according to price range and brand. In this case, the response
-                        would return multiple sets of bins, called SearchBinSets, in which the items would be
+                        would return multiple sets of bins, called SearchBinSets, in which the items would
+                        be
                         divided according to different criteria.
        </p>
        <p>
@@ -2139,18 +2144,18 @@ ResponseGroup=<b>SearchBins</b>
          <li>
           <p>
            Include the SearchBins response group in an ItemSearch
-                                    request.
+                                 request.
           </p>
           <p>
            The response includes the narrowby value and results grouped by
-                                    bins.
+                                 bins.
           </p>
          </li>
          <li>
           <p>
            Use related ItemSearch parameters to send a second request to
-                                    return results related to only those items within the specified
-                                    bin.
+                                 return results related to only those items within the specified
+                                 bin.
           </p>
           <p>
            For example, if the
@@ -2179,7 +2184,7 @@ ResponseGroup=<b>SearchBins</b>
          <li>
           <p>
            If you want to refine the results further, use the SearchBins response
-                                    group in a second request and repeat the procedure.
+                                 group in a second request and repeat the procedure.
           </p>
          </li>
         </ol>
@@ -2244,7 +2249,8 @@ MaximumPrice=2499&amp;</code></pre>
             Keywords
            </code>
            parameter searches for word matches in an
-                                 item's title and description. If you know a word is part of the title of an item, use the Title parameter
+                                 item's title and description. If you know a word is part of the title of an item,
+                                 use the Title parameter
                                  because, in this case, it often returns fewer but more accurate results than the
                                  Keywords parameter.
           </p>
@@ -2255,7 +2261,8 @@ MaximumPrice=2499&amp;</code></pre>
            <code class="code">
             ItemSearch
            </code>
-           request, use the Power parameter. You can create relatively sophisticated search criteria using this parameter.
+           request, use the Power parameter. You can create relatively sophisticated search
+                                 criteria using this parameter.
                                  For more information, see
            <a href="ItemSearch.html">
             ItemSearch
@@ -2368,7 +2375,8 @@ MaximumPrice=2499&amp;</code></pre>
          Javascript is disabled or is unavailable in your browser.
         </strong>
         <br/>
-        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.
+        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's
+                        Help pages for instructions.
        </div>
       </div>
      </div>

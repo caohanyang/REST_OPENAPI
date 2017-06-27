@@ -1,0 +1,40 @@
+{
+  "basePath": "/api/v3.1",
+  "paths": {
+    "https://api.createsend.com/oauth/token": {
+      "POST": {}
+    },
+    "http://example.org</Value>": {
+      "GET": {}
+    },
+    "https://external1.createsend.com/cd/create/ABCDEF12/DEADBEEF": {
+      "GET": {}
+    },
+    "/clients": {
+      "POST": {},
+      "GET": {},
+      "get": {}
+    },
+    "/clients.xml": {
+      "POST": {}
+    },
+    "/": {
+      "Delete": {},
+      "post": {},
+      "Post": {},
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "delete": {},
+      "Put": {},
+      "PUT": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.createsend.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

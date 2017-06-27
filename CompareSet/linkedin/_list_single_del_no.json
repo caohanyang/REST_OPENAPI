@@ -1,0 +1,146 @@
+{
+  "basePath": "/profile/view",
+  "paths": {
+    "/oauth/v2/accessToken": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/people/~\";": {
+      "GET": {}
+    },
+    "//www.linkedin.com/uas/oauth2/accessToken": {
+      "POST": {}
+    },
+    "/v1/people/~": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/is-company-share-enabled": {
+      "GET": {}
+    },
+    "/comment>": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/company-statistics": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/people/~\"];": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/updates/key={update-key}/update-comments": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/people/~:(id,num-connections,picture-url)": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/num-followers": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/people/~/shares\"];": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/historical-status-update-statistics": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/people/~": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/updates/key={update-key}/likes": {
+      "GET": {}
+    },
+    "//www.linkedin.com/shareArticle": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/updates": {
+      "GET": {}
+    },
+    "//www.linkedin.com/oauth/v2/authorization": {
+      "GET": {}
+    },
+    "//www.linkedin.com/uas/oauth2/authorization)": {
+      "GET": {}
+    },
+    "//api.linkedin.com/people/~)": {
+      "POST": {}
+    },
+    "//www.example.com/content.html\",": {
+      "POST": {},
+      "get": {}
+    },
+    "//www.linkedin.com/uas/oauth2/authorization": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/people/~:(id,first-name,last-name)\";": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/historical-follow-statistics": {
+      "GET": {}
+    },
+    "/javascript": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/companies/1234/updates/key=ABCDE-123456/update-comments-as-company/\";": {
+      "PUT": {}
+    },
+    "//api.linkedin.com/v1/companies/1234/shares": {
+      "POST": {}
+    },
+    "//api.linkedin.com/people/~/shares)": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}:(id,name,ticker,description)": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/updates/key={update-key}/update-comments-as-company": {
+      "POST": {}
+    },
+    "/Login\"></script>": {
+      "GET": {},
+      "get": {}
+    },
+    "//www.linkedin.com/oauth/v2/accessToken": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/people/~/shares\";": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/companies/1337/updates": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/shares": {
+      "POST": {}
+    },
+    "//developer.linkedin.com\",": {
+      "POST": {}
+    },
+    "//www.linkedin.com/...": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/relation-to-viewer/is-company-share-enabled": {
+      "GET": {}
+    },
+    "//api.linkedin.com/v1/companies/{id}/updates/key={update-key}": {
+      "GET": {}
+    },
+    "/uas/oauth2/accessToken": {
+      "POST": {}
+    },
+    "//api.linkedin.com/v1/people/~/shares": {
+      "POST": {}
+    },
+    "//linkd.in/1FC2PyG</comment>": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.linkedin.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>
+   Geocode Webservice
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <link href="http://www.geonames.org/geonames.ico" rel="shortcut icon"/>
+  <link href="/geonames.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <table id="topmenutable">
+   <tbody>
+    <tr>
+     <td class="topmenu">
+      <a href="http://www.geonames.org/">
+       GeoNames Home
+      </a>
+      |
+      <a href="http://www.geonames.org/postal-codes/">
+       Postal Codes
+      </a>
+      |
+      <a href="http://www.geonames.org/export/">
+       Download / Webservice
+      </a>
+      |
+      <a href="http://www.geonames.org/about.html">
+       About
+      </a>
+      |
+     </td>
+     <td class="topsearch">
+      <form action="/servlet/geonames" class="topsearch" method="post" name="searchForm" onsubmit="javascript:fulltextsearch();return false;">
+       search
+       <input class="topmenu" name="q" size="20" type="text" value=""/>
+       <input name="srv" type="hidden" value="1"/>
+      </form>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div style="margin: auto; width: 600px; text-align: left;">
+   <h3>
+    Geocode Webservice
+   </h3>
+   <br/>
+   <br/>
+   <a name="geocode">
+   </a>
+   <h4>
+    geocode
+   </h4>
+   Returns lat/lng for an address in the US.
+   <p>
+    Webservice Type : XML,JSON
+    <br/>
+    Url : api.geonames.org/geocode?
+    <br/>
+    Parameters :
+    <br/>
+    q: search terms (streetname,city, zip code, housenumber etc for a US address)
+Result : returns the lat/lng and address infos for the most relevant streetsegment
+    <br/>
+    Example:
+    <br/>
+    <a href="http://api.geonames.org/geocode?q=N+Civic+Center+Dr&amp;username=demo" target="_blank">
+     http://api.geonames.org/geocode?q=N+Civic+Center+Dr&amp;username=demo
+    </a>
+    <br/>
+    or
+    <br/>
+    <a href="http://api.geonames.org/geocodeJSON?q=N+Civic+Center+Dr&amp;username=demo" target="_blank">
+     http://api.geonames.org/geocodeJSON?q=N+Civic+Center+Dr&amp;username=demo
+    </a>
+   </p>
+   <p>
+    <small>
+     [
+     <a href="/export/free-geocoding.html">
+      more geocoding
+     </a>
+     ]
+    </small>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    Note : Don't forget to url encode string parameters containing special characters or spaces. (
+    <a href="http://forum.geonames.org/gforum/posts/list/8.page">
+     Faq entry on url encoding
+    </a>
+    )
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+   </p>
+  </div>
+  <p>
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+  <div id="pageFooter">
+   info@geonames.org
+   <img align="middle" alt="ant" border="0" hspace="40" src="/img/smallant.gif"/>
+   <p>
+    <a href="/">
+     GeoNames Home
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="/postal-codes/">
+     Postal Codes
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="/export/">
+     Download / Webservice
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="http://forum.geonames.org">
+     Forum
+    </a>
+    <span class="separator">
+     •
+    </span>
+    <a href="/sitemap.html">
+     Sitemap
+    </a>
+   </p>
+  </div>
+ </body>
+</html>

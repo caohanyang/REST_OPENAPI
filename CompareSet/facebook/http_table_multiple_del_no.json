@@ -1,0 +1,243 @@
+{
+  "paths": {
+    "https://developers.google.com/streetview/spherical-metadata": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "368",
+            "description": "The action attempted has been deemed abusive or is otherwise disallowed",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "240",
+            "description": "Desktop applications cannot call this function for other users",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2010",
+            "description": "Photos calls have been temporarily disabled for this application",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "122",
+            "description": "Invalid vault image id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "123",
+            "description": "Invalid sync object uuid",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "120",
+            "description": "Invalid album id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "121",
+            "description": "Invalid photo id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "190",
+            "description": "Invalid OAuth 2.0 Access Token",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "https://www.facebook.com/<POST_ID>": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nNo",
+            "description": "optional image parameters\n\nImage is sourced from the contents of the Link\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture",
+            "description": "parameter supplied\n\nstring\n\nURL for the image\n\nImage is sourced from the URL supplied in picture\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "thumbnail",
+            "description": "parameter supplied\n\nfile\n\nImage file to be uploaded. Accepts .jpg .jpeg .gif or .png\n\nImage is sourced from the file uploaded in thumbnail\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "http_method": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "https://graph.facebook.com/<video_id>": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt2015381%2F": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\n\nThe",
+            "description": "URL itself.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_object\n\nThe",
+            "description": "Open Graph object that is canonically associated with this URL.\n\nOGObject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id\n\nID",
+            "description": "of object.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\n\nThe",
+            "description": "description\n\nThe description of the object.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title\n\nThe",
+            "description": "title\n\nThe title of the object.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\n\nThe",
+            "description": "object type.\n\nog:type\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "updated_time\n\nWhen",
+            "description": "the object was last updated.\n\ndatetime\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "app_links\n\nAppLinks",
+            "description": "data associated with this URL.\n\nAppLinks\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "engagement\n\nEngagements",
+            "description": "associated with this URL.\n\nobject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "reaction_count\n\nThe",
+            "description": "sum of reactions across all posts containing the URL on Facebook.\n\nnumber\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "comment_count\n\nThe",
+            "description": "sum of comments on posts containing this URL on Facebook.\n\nnumber\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "share_count\n\nThe",
+            "description": "total shares of this URL all over Facebook.\n\nnumber\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "comment_plugin_count\n\nThe",
+            "description": "number shown in the comments plugin associated with the URL. This number does not include comments made on posts on Facebook.\n\nnumber\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,146 @@
+{
+  "basePath": "/REST/v1/Dataflows/Geocode",
+  "paths": {
+    "http://msdn.microsoft.com/en-us/library/ff701734.aspx": {
+      "PUT": {},
+      "put": {}
+    },
+    "/\".$jobId.": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://www.bingmapsportal.com": {
+      "GET": {},
+      "Get": {}
+    },
+    "http:\\/\\/schemas.microsoft.com\\/search\\/local\\/ws\\/rest\\/v1\",": {
+      "GET": {},
+      "geT": {}
+    },
+    "http://schemas.microsoft.com/search/local/2010/5/geocode": {
+      "PUT": {},
+      "put": {}
+    },
+    "/": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://spatial.virtualearth.net/REST/v1/dataflows/Geocode/5bf10c37df944083b1879fbb0556e67e/output/succe": {
+      "PUT": {},
+      "put": {}
+    },
+    "/jobID": {
+      "PUT": {},
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "jobID\n\nRequired.",
+            "description": "The ID of the job.\n\nWhen you request a dataflow job, the job ID is returned in the ID field of the response. For more information, see Geocode Dataflow Response Description .\n\nExample : e14b1d9bd65c4b9d99d267bbb8102ccf\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "key\n\nRequired",
+            "description": ". The Bing Maps Key that you used to create the geocode job.\n\nA Bing Maps Key from the Bing Maps Account Center .\n\nExample : key=abc123def456ghi789abc123def456ghi789\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "output\n\no\n\nOptional",
+            "description": ". The output format for the response.\n\nOne of the following values:\n\njson [default]\n\nxml\n\nExample : o=xml\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://www.wampserver.com),": {
+      "GET": {}
+    },
+    "http://dev.virtualearth.net/REST/v1/Imagery/BasicMetadata/imagerySet/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://msdn.microsoft.com/en-us/library/cc981072.aspx": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.w3.org/2001/XMLSchema-instance": {
+      "GET": {},
+      "get": {}
+    },
+    "https://spatial.virtualearth.net/REST/v1/dataflows/geocode/e14b1d9bd65c4b9d99d267bbb8102ccf": {
+      "GET": {},
+      "get": {}
+    },
+    "http://dev.virtualearth.net/REST/v1/Locations/point": {
+      "GET": {},
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "includeEntityTypes\n\nOptional",
+            "description": ". Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.\n\nA comma separated list of entity types selected from the following options.\n\nAddress\n\nNeighborhood\n\nPopulatedPlace\n\nPostcode1\n\nAdminDivision1\n\nAdminDivision2\n\nCountryRegion\n\nThese entity types are ordered from the most specific entity to the least specific entity. When entities of more than one entity type are found, only the most specific entity is returned. For example, if you specify Address and AdminDistrict1 as entity types and entities were found for both types, only the Address entity information is returned in the response. One exception to this rule is when both PopulatedPlace and Neighborhood entity types are specified and information is found for both. In this case, the information for both entity types is returned. Also, more than one Neighborhood may be returned because the area covered by two different neighborhoods can overlap.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "point\n\nRequired.",
+            "description": "The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude. For more information, see the definition of Point in Location and Area Types .\n\nA point on the Earth specified by a latitude and longitude. For more information, see the definition of Point in Location and Area Types .\n\nExample : 47.64054,-122.12934\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "includeNeighborhood\n\ninclnb\n\nOptional.",
+            "description": "Specifies to include the neighborhood in the response when it is available.\n\nOne of the following values:\n\n1: Include neighborhood information when available.\n\n0 [default] : Do not include neighborhood information.\n\nExample: Â\n\ninclnb=1\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "include\n\nincl\n\nOptional.",
+            "description": "Specifies additional values to include.\n\nThe only value for this parameter is ciso2. When you specify include=ciso2, the two-letter ISO country code is included for addresses in the response.\n\nExample: Â\n\nincl=ciso2\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "get": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "\nYou",
+            "description": "can find the complete sample described in this section in the Code Samples section at the end of this article.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://www.bing.com/api/maps/sdk/mapcontrol/isdk": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://schemas.microsoft.com/search/local/2010/5/geocode\">": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://dev.virtualearth.net/REST/v1/Locations": {
+      "post": {},
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "spatial.virtualearth.net",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

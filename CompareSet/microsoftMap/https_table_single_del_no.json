@@ -1,0 +1,91 @@
+{
+  "basePath": "/REST/v1/dataflows/",
+  "paths": {
+    "geocode/e14b1d9bd65c4b9d99d267bbb8102ccf": {
+      "GET": {},
+      "get": {}
+    },
+    "Geocode/5bf10c37df944083b1879fbb0556e67e/output/succee": {
+      "PUT": {},
+      "put": {}
+    },
+    "geocode/e14b1d9bd65c4b9d99d267bbb8102ccf</Link>": {
+      "GET": {},
+      "get": {}
+    },
+    "https:\\/\\/spatial.virtualearth.net\\/REST\\/v1\\/dataflows\\/Geocode\\/5bf10c37df944083b1879fbb0556e67e": {
+      "PUT": {},
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "copyright\n\nCopyright\n\nstring\n\nA",
+            "description": "copyright\n\nCopyright\n\nstring\n\nA copyright notice.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "brandLogoUri\n\nBrandLogoUri\n\nstring\n\nA",
+            "description": "URL that references a brand image to support contractual branding requirements.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "statusCode\n\nStatusCode\n\ninteger\n\nThe",
+            "description": "HTTP Status code for the request.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "statusDescription\n\nStatusDescription\n\nstring\n\nA",
+            "description": "description of the HTTP status code.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "authenticationResultCode\n\nAuthenticationResultCode\n\nOne",
+            "description": "of the following values:\n\nValidCredentials\n\nInvalidCredentials\n\nCredentialsExpired\n\nNotAuthorized\n\nNoCredentials\n\nNone\n\nA status code that offers additional information about authentication success or failure.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "traceId\n\nTraceId\n\nstring\n\nA",
+            "description": "unique identifier for the request.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "resourceSets\n\nResourceSets\n\ncollection\n\nA",
+            "description": "collection\n\nA collection of ResourceSet objects. A ResourceSet is a container of Resources returned by the request. For more information, see the ResourceSet section below.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "errorDetails\n\nErrorDetails\n\nstring[]\n\nA",
+            "description": "collection of error descriptions. For example, ErrorDetails can identify parameter values that are not valid or are missing.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://www.bingmapsportal.com": {
+      "GET": {},
+      "Get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "spatial.virtualearth.net",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

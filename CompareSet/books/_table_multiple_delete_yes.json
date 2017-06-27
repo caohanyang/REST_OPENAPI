@@ -1,0 +1,81 @@
+{
+  "basePath": "/books/v1/volumes",
+  "paths": {
+    "/mylibra": {
+      "POST": {},
+      "GET": {}
+    },
+    "/bookshelves": {
+      "GET": {}
+    },
+    "/www.googleapis": {
+      "GET": {}
+    },
+    "/volumes": {
+      "GET": {},
+      "Get": {}
+    },
+    "/moveVolume": {
+      "PUT": {},
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Required",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "shelf",
+            "description": "string ID of bookshelf with the volume.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "volumeId",
+            "description": "string ID of volume to move.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "volumePosition",
+            "description": "integer Position on shelf to move the item (0 puts the item before the current first item, 1 puts it between the first and the second and so on.)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Optional",
+            "description": "Parameters",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "string String to identify the originator of this request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/removeVolume": {
+      "POST": {}
+    },
+    "/www.goog": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

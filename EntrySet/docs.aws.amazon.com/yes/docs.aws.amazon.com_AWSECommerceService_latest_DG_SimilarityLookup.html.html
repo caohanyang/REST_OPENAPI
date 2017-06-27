@@ -25,7 +25,7 @@
   <link href="/css/highlight-default.css" rel="stylesheet" type="text/css"/>
   <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
   <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/awsdocs.css?v=20170615" rel="stylesheet" type="text/css"/>
   <script src="/js/highlight.pack.js" type="text/javascript">
   </script>
   <script src="/js/jquery.min.js" type="text/javascript">
@@ -36,7 +36,7 @@
   </script>
   <script src="/js/jquery.colorbox.js" type="text/javascript">
   </script>
-  <script src="/js/awsdocs.min.js" type="text/javascript">
+  <script src="/js/awsdocs.min.js?v=20170615" type="text/javascript">
   </script>
   <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript">
   </script>
@@ -1778,7 +1778,7 @@
              AWS Documentation
             </a>
             »
-            <a href="uri">
+            <a href="http://aws.amazon.com/archives/Product%20Advertising%20API">
              Amazon Product Advertising API Docs
             </a>
             »
@@ -1815,23 +1815,26 @@
         <code class="code">
          SimilarityLookup
         </code>
-        operation returns up to ten products per page that are similar to one or more items specified in the request. This operation
-                        is typically used to pique a customer’s interest in buying something similar to what they’ve already ordered.
+        operation returns up to ten products per page that are similar to one or more items
+                        specified in the request. This operation is typically used to pique a customer’s interest
+                        in buying something similar to what they’ve already ordered.
        </p>
        <p>
-        If you specify more than one item, SimilarityLookup returns the intersection of similar items each item would return separately.
-                        Alternatively, you can  use the
+        If you specify more than one item, SimilarityLookup returns the intersection of similar
+                        items each item would return separately. Alternatively, you can  use the
         <code class="code">
          SimilarityType
         </code>
-        parameter to return the union of items that are similar to any of the specified items. A maximum of ten similar items are
-                        returned; the operation does not return additional pages of similar items. If there are more than ten similar items, running
-                        the same request can result in different answers because the ten that are included in the response are picked randomly. The
-                        results are picked randomly only when you specify multiple items and the results include more than ten similar items.
+        parameter to return the union of items that are similar to any of the specified items.
+                        A maximum of ten similar items are returned; the operation does not return additional
+                        pages of similar items. If there are more than ten similar items, running the same
+                        request can result in different answers because the ten that are included in the response
+                        are picked randomly. The results are picked randomly only when you specify multiple
+                        items and the results include more than ten similar items.
        </p>
        <p>
-        When you specify multiple items, it is possible for there to be no intersection of similar items. In this case, the operation
-                        returns the following error:
+        When you specify multiple items, it is possible for there to be no intersection of
+                        similar items. In this case, the operation returns the following error:
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">
 &lt;Error&gt;
@@ -1840,12 +1843,13 @@
 &lt;/Error&gt;
 </code></pre>
        <p>
-        This result is very often the case if the items belong to different search indices. The error can occur, however, even when
-                        the items share the same search index.
+        This result is very often the case if the items belong to different search indices.
+                        The error can occur, however, even when the items share the same search index.
        </p>
        <p>
-        Similarity is a measurement of similar items purchased, that is, customers who bought X also bought Y and Z. It is not a measure,
-                        for example, of items viewed, that is, customers who viewed X also viewed Y and Z.
+        Similarity is a measurement of similar items purchased, that is, customers who bought
+                        X also bought Y and Z. It is not a measure, for example, of items viewed, that is,
+                        customers who viewed X also viewed Y and Z.
        </p>
        <p>
         Items returned can be filtered by:
@@ -1877,7 +1881,8 @@ Operation=SimilarityLookup&amp;ItemId=ASIN1,ASIN2,ASIN3
 &amp;Signature=[Request Signature]
     </code></pre>
        <p>
-        This request returns the intersection of the similarities for each ASIN. The response to this request is shown in
+        This request returns the intersection of the similarities for each ASIN. The response
+                        to this request is shown in
         <a href="SimilarityLookup.html#SimilarityLookup-srep">
          Sample Response
         </a>
@@ -1898,15 +1903,16 @@ SimilarityType=Random
 &amp;Signature=[Request Signature]
     </code></pre>
        <p>
-        This request returns the union of items that are similar to all of the ASINs specified. Only ten items can be returned and
-                        those are picked randomly from all of the similar items. Repeating the operation could produce different results.
+        This request returns the union of items that are similar to all of the ASINs specified.
+                        Only ten items can be returned and those are picked randomly from all of the similar
+                        items. Repeating the operation could produce different results.
        </p>
        <h3 id="SimilarityLookup-rp">
         Request Parameters
        </h3>
        <div class="informaltable">
         <div class="informaltable-contents">
-         <table id="w28aab9b7c25b5c14b2">
+         <table id="w68aab9b7c25b5c14b2">
           <tbody>
            <tr>
             <th>
@@ -1952,8 +1958,8 @@ SimilarityType=Random
             </td>
             <td>
              <p>
-              Specifies the item you want to look up. An ItemId is an alphanumeric identifier assigned to an item. You can specify up to
-                                       ten ItemIds separated by commas.
+              Specifies the item you want to look up. An ItemId is an alphanumeric identifier assigned
+                                       to an item. You can specify up to ten ItemIds separated by commas.
              </p>
              <p>
               Type: String
@@ -1977,8 +1983,9 @@ SimilarityType=Random
             </td>
             <td>
              <p>
-              An optional parameter that can be used to filter search results and offer listings to only include items sold by Amazon. By
-                                       default, Product Advertising API returns items sold by various merchants including Amazon. Enter "Amazon" to return only items
+              An optional parameter that can be used to filter search results and offer listings
+                                       to only include items sold by Amazon. By default, Product Advertising API returns
+                                       items sold by various merchants including Amazon. Enter "Amazon" to return only items
                                        sold by Amazon.
              </p>
              <p>
@@ -2003,10 +2010,11 @@ SimilarityType=Random
             </td>
             <td>
              <p>
-              "Intersection" returns the intersection of items that are similar to all of the ASINs specified. "Random" returns the union
-                                       of items that are similar to all of the ASINs specified. Only ten items are returned. So, if there are more than ten similar
-                                       items found, a random selection from the group is returned. For this reason, running the same request multiple times can yield
-                                       different results.
+              "Intersection" returns the intersection of items that are similar to all of the ASINs
+                                       specified. "Random" returns the union of items that are similar to all of the ASINs
+                                       specified. Only ten items are returned. So, if there are more than ten similar items
+                                       found, a random selection from the group is returned. For this reason, running the
+                                       same request multiple times can yield different results.
              </p>
              <p>
               Type: String
@@ -2030,7 +2038,8 @@ SimilarityType=Random
             </td>
             <td>
              <p>
-              Specifies the types of values to return. You can specify multiple response groups in one request by separating them with commas.
+              Specifies the types of values to return. You can specify multiple response groups
+                                       in one request by separating them with commas.
              </p>
              <p>
               Type: String
@@ -2164,15 +2173,15 @@ SimilarityType=Random
 &lt;/Item&gt;
   </code></pre>
        <p>
-        This response shows that two items were similar to the ASINs submitted. The information included with each item is sufficient
-                        to display the item for sale.
+        This response shows that two items were similar to the ASINs submitted. The information
+                        included with each item is sufficient to display the item for sale.
        </p>
        <h4 id="SimilarityLookup-rep">
         Response
        </h4>
        <div class="informaltable">
         <div class="informaltable-contents">
-         <table id="w28aab9b7c25b5c16b8b2">
+         <table id="w68aab9b7c25b5c16b8b2">
           <tbody>
            <tr>
             <th>
@@ -2237,7 +2246,8 @@ SimilarityType=Random
         </div>
        </div>
        <p>
-        For more information about the parent elements of these tags, see the appropriate response group in
+        For more information about the parent elements of these tags, see the appropriate
+                        response group in
         <a href="CHAP_ResponseGroupsList.html">
          Response Groups
         </a>
@@ -2359,7 +2369,8 @@ SimilarityType=Random
          Javascript is disabled or is unavailable in your browser.
         </strong>
         <br/>
-        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.
+        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's
+                        Help pages for instructions.
        </div>
       </div>
      </div>

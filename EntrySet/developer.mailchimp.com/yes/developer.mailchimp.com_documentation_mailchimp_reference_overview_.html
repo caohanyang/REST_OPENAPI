@@ -1,0 +1,4014 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   Developer | MailChimp
+  </title>
+  <meta content="MailChimp Developer" name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="MailChimp Developer" name="apple-mobile-web-app-title"/>
+  <meta content="no" name="msapplication-tap-highlight"/>
+  <meta content="en" name="language"/>
+  <meta content="index,follow,archive" name="robots"/>
+  <meta content="Developer | MailChimp" property="og:title"/>
+  <meta content="website" property="og:type"/>
+  <meta content="http://developer.mailchimp.com/" property="og:url"/>
+  <meta content="http://developer.mailchimp.com/documentation/mailchimp/img/freddie_wink_opengraph.png" property="og:image"/>
+  <meta content="MailChimp Developer" property="og:description"/>
+  <meta content="summary_large_image" property="twitter:card"/>
+  <meta content="http://developer.mailchimp.com/documentation/mailchimp/img/freddie_wink_opengraph.png" property="twitter:image"/>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Open+Sans:300italic,400italic,600italic,700italic,700,300,600,400" rel="stylesheet"/>
+  <link href="/documentation/mailchimp/img/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/documentation/mailchimp/img/touch-icon-192x192.png" rel="icon" sizes="192x192"/>
+  <link href="/documentation/mailchimp/img/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  <link href="/documentation/mailchimp/img/favicon.ico" rel="shortcut icon"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/github.min.css" rel="stylesheet"/>
+  <link href="/documentation/mailchimp/css/api.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+  </script>
+  <script src="/documentation/mailchimp/js/apidocs.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <script type="application/ld+json">
+   {
+          "@context" : "http://schema.org",
+          "@type" : "WebSite",
+          "name" : "Developer | MailChimp",
+          "alternateName" : "MailChimp Developer",
+          "url" : "http://developer.mailchimp.com/"
+        }
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-329148-81', 'auto', {
+		  'allowLinker': true
+		});
+		ga('require', 'linker');
+		ga('linker:autoLink', [/(.*\.)?mailchimp(app)?\.com$/], false, true);
+		ga('require', 'linkid', 'linkid.js');
+		ga('send', 'pageview');
+  </script>
+ </head>
+ <body class="nopadding">
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-PBD4RC" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-PBD4RC');
+  </script>
+  <header class="below30" itemscope="" itemtype="http://schema.org/WPHeader">
+   <div class="main-navigation selfclearrelative no-sticky-nav">
+    <div>
+     <nav class="navigation-left group nochange">
+      <div class="float-left pad-lv2 branding">
+       <a href="http://mailchimp.com/" id="freddie-developer-link">
+        <img height="36" role="presentation" src="/documentation/mailchimp/img/freddie_wink.svg"/>
+       </a>
+       <p class="header-text inline pad-lv2 pad-r0 pad-tb0 hide-phone" itemprop="headline">
+        <a href="/" id="developer-link">
+         Developer
+        </a>
+       </p>
+      </div>
+      <ul class="linear-list selfclear hide-print" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+       <li class="nav-link small-meta fwb show-phone">
+        <a aria-label="Menu button — click to toggle menu" class="menu-button no-delay gray-link alignc pad-lv3 pad-tb0" href="#" id="toggle-mobile-nav">
+         <span class="freddicon hamburger">
+         </span>
+        </a>
+       </li>
+       <li class="nav-link small-meta fwb hide-phone" itemprop="url">
+        <a class="selected gray-link pad-lv3 pad-tb0" href="/documentation/mailchimp/" id="documentation-link">
+         Documentation
+        </a>
+       </li>
+       <li class="nav-link small-meta fwb hide-phone" itemprop="url">
+        <a class="pad-lv3 pad-tb0 gray-link" href="https://us1.api.mailchimp.com/playground/" id="playground-link">
+         Playground
+        </a>
+       </li>
+       <li class="nav-link small-meta fwb hide-phone" itemprop="url">
+        <a class="pad-lv3 pad-tb0 gray-link" href="/status/" id="status-link">
+         API Status
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+   </div>
+  </header>
+  <div class="below48">
+   <div class="line">
+    <nav class="unit nav-local hide-print">
+     <ul class="regular">
+      <li>
+       <a class="show-phone" href="/documentation/mailchimp/">
+        Documentation
+       </a>
+       <ul>
+        <li class="show-phone">
+         <a href="/documentation/mailchimp/guides/">
+          Guides
+         </a>
+         <ul>
+          <li>
+           <a href="/documentation/mailchimp/guides/get-started-with-mailchimp-api-3/">
+            Getting Started
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/an-introduction-to-rest/">
+            Intro to REST
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/about-the-api-playground/">
+            About the Playground
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/mailchimp-api-best-practices/">
+            Best Practices
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/manage-subscribers-with-the-mailchimp-api/">
+            Manage Subscribers
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/getting-started-with-ecommerce/">
+            E-Commerce API Guide
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/how-to-use-batch-operations/">
+            Batch Operations
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/changelog/">
+            Changelog
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/how-to-use-oauth2/">
+            How to Use OAuth2
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/error-glossary/">
+            Error Glossary
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/about-webhooks/">
+            About Webhooks
+           </a>
+          </li>
+          <li>
+           <a href="/documentation/mailchimp/guides/how-to-use-the-export-api/">
+            Export API
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="hide-phone nav-heading">
+         Reference:
+        </li>
+        <li>
+         <a class="show-phone" href="/documentation/mailchimp/reference/overview/">
+          Reference
+         </a>
+         <ul>
+          <li class="selected ">
+           <a href="/documentation/mailchimp/reference/overview/">
+            Overview
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/root/">
+            API Root
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/authorized-apps/">
+            Authorized Apps
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/automations/">
+            Automations
+           </a>
+           <ul class="sub-menu">
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/automations/emails/">
+              Emails
+             </a>
+             <ul class="sub-menu">
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/automations/emails/queue/">
+                Queue
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/automations/removed-subscribers/">
+              Removed Subscribers
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/batches/">
+            Batch Operations
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/batch-webhooks/">
+            Batch Webhooks
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/campaign-folders/">
+            Campaign Folders
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/campaigns/">
+            Campaigns
+           </a>
+           <ul class="sub-menu">
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/campaigns/content/">
+              Content
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/campaigns/feedback/">
+              Feedback
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/campaigns/send-checklist/">
+              Send Checklist
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/conversations/">
+            Conversations
+           </a>
+           <ul class="sub-menu">
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/conversations/messages/">
+              Messages
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/ecommerce/stores/">
+            E-commerce Stores
+           </a>
+           <ul class="sub-menu">
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+              Carts
+             </a>
+             <ul class="sub-menu">
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+                Cart Lines
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+              Customers
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+              Orders
+             </a>
+             <ul class="sub-menu">
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+                Order Lines
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+              Products
+             </a>
+             <ul class="sub-menu">
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+                Product Images
+               </a>
+              </li>
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+                Product Variants
+               </a>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/file-manager/files/">
+            File Manager Files
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/file-manager/folders/">
+            File Manager Folders
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/lists/">
+            Lists
+           </a>
+           <ul class="sub-menu">
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/abuse-reports/">
+              Abuse Reports
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/activity/">
+              Activity
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/clients/">
+              Clients
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/growth-history/">
+              Growth History
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/interest-categories/">
+              Interest Categories
+             </a>
+             <ul class="sub-menu">
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+                Interests
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/locations/">
+              Locations
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/members/">
+              Members
+             </a>
+             <ul class="sub-menu">
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/lists/members/activity/">
+                Member Activity
+               </a>
+              </li>
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/lists/members/goals/">
+                Member Goals
+               </a>
+              </li>
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/lists/members/notes/">
+                Member Notes
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/merge-fields/">
+              Merge Fields
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/segments/">
+              Segments
+             </a>
+             <ul class="sub-menu">
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/lists/segments/members/">
+                Segment Members
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/signup-forms/">
+              Signup Forms
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/lists/webhooks/">
+              Webhooks
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/reports/">
+            Reports
+           </a>
+           <ul class="sub-menu">
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/abuse-reports/">
+              Campaign Abuse
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/advice/">
+              Campaign Advice
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/click-details/">
+              Click Reports
+             </a>
+             <ul class="sub-menu">
+              <li class=" ">
+               <a href="/documentation/mailchimp/reference/reports/click-details/members/">
+                Click Reports Members
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/domain-performance/">
+              Domain Performance
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/eepurl/">
+              EepURL Reports
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/email-activity/">
+              Email Activity
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/locations/">
+              Location
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/sent-to/">
+              Sent To
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/sub-reports/">
+              Sub-Reports
+             </a>
+            </li>
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/reports/unsubscribed/">
+              Unsubscribes
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/search-campaigns/">
+            Search Campaigns
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/search-members/">
+            Search Members
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/template-folders/">
+            Template Folders
+           </a>
+          </li>
+          <li class=" ">
+           <a href="/documentation/mailchimp/reference/templates/">
+            Templates
+           </a>
+           <ul class="sub-menu">
+            <li class=" ">
+             <a href="/documentation/mailchimp/reference/templates/default-content/">
+              Default Content
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li class="show-phone">
+       <a href="https://us1.api.mailchimp.com/playground/">
+        Playground
+       </a>
+      </li>
+      <li class="show-phone">
+       <a href="/status/">
+        Status
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <article class="unit lastUnit">
+     <p>
+     </p>
+     <section class="line below12">
+      <div class="left">
+       <h1>
+        Overview
+       </h1>
+       <p>
+        Quickly review all available resources for MailChimp API 3.0 with this reference overview.
+       </p>
+       <p>
+        Learn the basics of the MailChimp API in our
+        <a href="/documentation/mailchimp/guides/get-started-with-mailchimp-api-3/">
+         Getting Started guide
+        </a>
+        , or explore the API with your own data in the
+        <a href="https://us1.api.mailchimp.com/playground/">
+         Playground
+        </a>
+        .
+       </p>
+      </div>
+      <img alt="Overview" class="overview-img hide-print" src="/documentation/mailchimp/img/apidocs/references.svg" width="175"/>
+     </section>
+     <p>
+     </p>
+     <section>
+      <h3>
+       API Root
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_root" href="/documentation/mailchimp/reference/root/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_root" href="/documentation/mailchimp/reference/root/">
+            /
+           </a>
+          </td>
+          <td>
+           API Root
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Authorized Apps
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_authorized_apps" href="/documentation/mailchimp/reference/authorized-apps/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_authorized_apps" href="/documentation/mailchimp/reference/authorized-apps/">
+            /authorized-apps
+           </a>
+          </td>
+          <td>
+           Link your application
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_authorized_apps" href="/documentation/mailchimp/reference/authorized-apps/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_authorized_apps" href="/documentation/mailchimp/reference/authorized-apps/">
+            /authorized-apps
+           </a>
+          </td>
+          <td>
+           Get a list of authorized apps
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_authorized_apps_app_id" href="/documentation/mailchimp/reference/authorized-apps/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_authorized_apps_app_id" href="/documentation/mailchimp/reference/authorized-apps/">
+            /authorized-apps/{app_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific authorized app
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Automations
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_automations" href="/documentation/mailchimp/reference/automations/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_automations" href="/documentation/mailchimp/reference/automations/">
+            /automations
+           </a>
+          </td>
+          <td>
+           Get a list of Automations
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_automations_workflow_id" href="/documentation/mailchimp/reference/automations/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_automations_workflow_id" href="/documentation/mailchimp/reference/automations/">
+            /automations/{workflow_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific Automation workflow
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_automations_workflow_id_actions_pause_all_emails" href="/documentation/mailchimp/reference/automations/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_automations_workflow_id_actions_pause_all_emails" href="/documentation/mailchimp/reference/automations/">
+            /automations/{workflow_id}/actions/pause-all-emails
+           </a>
+          </td>
+          <td>
+           Pause all emails in an Automation workflow
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_automations_workflow_id_actions_start_all_emails" href="/documentation/mailchimp/reference/automations/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_automations_workflow_id_actions_start_all_emails" href="/documentation/mailchimp/reference/automations/">
+            /automations/{workflow_id}/actions/start-all-emails
+           </a>
+          </td>
+          <td>
+           Start all emails in an Automation workflow
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_automations_workflow_id_emails" href="/documentation/mailchimp/reference/automations/emails/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_automations_workflow_id_emails" href="/documentation/mailchimp/reference/automations/emails/">
+            /automations/{workflow_id}/emails
+           </a>
+          </td>
+          <td>
+           Get a list of automated emails in a workflow
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_automations_workflow_id_emails_workflow_email_id" href="/documentation/mailchimp/reference/automations/emails/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_automations_workflow_id_emails_workflow_email_id" href="/documentation/mailchimp/reference/automations/emails/">
+            /automations/{workflow_id}/emails/{workflow_email_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific workflow email
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_automations_workflow_id_emails_workflow_email_id_actions_pause" href="/documentation/mailchimp/reference/automations/emails/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_automations_workflow_id_emails_workflow_email_id_actions_pause" href="/documentation/mailchimp/reference/automations/emails/">
+            /automations/{workflow_id}/emails/{workflow_email_id}/actions/pause
+           </a>
+          </td>
+          <td>
+           Pause an automated email
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_automations_workflow_id_emails_workflow_email_id_actions_start" href="/documentation/mailchimp/reference/automations/emails/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_automations_workflow_id_emails_workflow_email_id_actions_start" href="/documentation/mailchimp/reference/automations/emails/">
+            /automations/{workflow_id}/emails/{workflow_email_id}/actions/start
+           </a>
+          </td>
+          <td>
+           Start an automated email
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_automations_workflow_id_emails_workflow_email_id_queue" href="/documentation/mailchimp/reference/automations/emails/queue/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_automations_workflow_id_emails_workflow_email_id_queue" href="/documentation/mailchimp/reference/automations/emails/queue/">
+            /automations/{workflow_id}/emails/{workflow_email_id}/queue
+           </a>
+          </td>
+          <td>
+           Add a subscriber to a workflow email
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_automations_workflow_id_emails_workflow_email_id_queue" href="/documentation/mailchimp/reference/automations/emails/queue/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_automations_workflow_id_emails_workflow_email_id_queue" href="/documentation/mailchimp/reference/automations/emails/queue/">
+            /automations/{workflow_id}/emails/{workflow_email_id}/queue
+           </a>
+          </td>
+          <td>
+           View queued subscribers for an automated email
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_automations_workflow_id_emails_workflow_email_id_queue_subscriber_hash" href="/documentation/mailchimp/reference/automations/emails/queue/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_automations_workflow_id_emails_workflow_email_id_queue_subscriber_hash" href="/documentation/mailchimp/reference/automations/emails/queue/">
+            /automations/{workflow_id}/emails/{workflow_email_id}/queue/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           View specific subscriber in email queue
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_automations_workflow_id_removed_subscribers" href="/documentation/mailchimp/reference/automations/removed-subscribers/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_automations_workflow_id_removed_subscribers" href="/documentation/mailchimp/reference/automations/removed-subscribers/">
+            /automations/{workflow_id}/removed-subscribers
+           </a>
+          </td>
+          <td>
+           Remove subscriber from a workflow
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_automations_workflow_id_removed_subscribers" href="/documentation/mailchimp/reference/automations/removed-subscribers/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_automations_workflow_id_removed_subscribers" href="/documentation/mailchimp/reference/automations/removed-subscribers/">
+            /automations/{workflow_id}/removed-subscribers
+           </a>
+          </td>
+          <td>
+           View all subscribers removed from a workflow
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Batch Operations
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_batches" href="/documentation/mailchimp/reference/batches/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_batches" href="/documentation/mailchimp/reference/batches/">
+            /batches
+           </a>
+          </td>
+          <td>
+           Start a batch operation
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_batches" href="/documentation/mailchimp/reference/batches/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_batches" href="/documentation/mailchimp/reference/batches/">
+            /batches
+           </a>
+          </td>
+          <td>
+           Get a list of batch requests
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_batches_batch_id" href="/documentation/mailchimp/reference/batches/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_batches_batch_id" href="/documentation/mailchimp/reference/batches/">
+            /batches/{batch_id}
+           </a>
+          </td>
+          <td>
+           Get the status of a batch operation request
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_batches_batch_id" href="/documentation/mailchimp/reference/batches/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_batches_batch_id" href="/documentation/mailchimp/reference/batches/">
+            /batches/{batch_id}
+           </a>
+          </td>
+          <td>
+           Delete a batch request and stop if from processing further.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Batch Webhooks
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_batch_webhooks" href="/documentation/mailchimp/reference/batch-webhooks/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_batch_webhooks" href="/documentation/mailchimp/reference/batch-webhooks/">
+            /batch-webhooks
+           </a>
+          </td>
+          <td>
+           Configure a webhook for batches
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_batch_webhooks" href="/documentation/mailchimp/reference/batch-webhooks/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_batch_webhooks" href="/documentation/mailchimp/reference/batch-webhooks/">
+            /batch-webhooks
+           </a>
+          </td>
+          <td>
+           Get a list of all webhooks configured for batches
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_batch_webhooks_batch_webhook_id" href="/documentation/mailchimp/reference/batch-webhooks/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_batch_webhooks_batch_webhook_id" href="/documentation/mailchimp/reference/batch-webhooks/">
+            /batch-webhooks/{batch_webhook_id}
+           </a>
+          </td>
+          <td>
+           Get a batch webook
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_batch_webhooks_batch_webhook_id" href="/documentation/mailchimp/reference/batch-webhooks/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_batch_webhooks_batch_webhook_id" href="/documentation/mailchimp/reference/batch-webhooks/">
+            /batch-webhooks/{batch_webhook_id}
+           </a>
+          </td>
+          <td>
+           Update a webhook for batches
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_batch_webhooks_batch_webhook_id" href="/documentation/mailchimp/reference/batch-webhooks/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_batch_webhooks_batch_webhook_id" href="/documentation/mailchimp/reference/batch-webhooks/">
+            /batch-webhooks/{batch_webhook_id}
+           </a>
+          </td>
+          <td>
+           Delete a batch webhook
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Campaign Folders
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_campaign_folders" href="/documentation/mailchimp/reference/campaign-folders/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_campaign_folders" href="/documentation/mailchimp/reference/campaign-folders/">
+            /campaign-folders
+           </a>
+          </td>
+          <td>
+           Create campaign folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_campaign_folders" href="/documentation/mailchimp/reference/campaign-folders/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_campaign_folders" href="/documentation/mailchimp/reference/campaign-folders/">
+            /campaign-folders
+           </a>
+          </td>
+          <td>
+           Get all campaign folders
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_campaign_folders_folder_id" href="/documentation/mailchimp/reference/campaign-folders/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_campaign_folders_folder_id" href="/documentation/mailchimp/reference/campaign-folders/">
+            /campaign-folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Get a specific campaign folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_campaign_folders_folder_id" href="/documentation/mailchimp/reference/campaign-folders/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_campaign_folders_folder_id" href="/documentation/mailchimp/reference/campaign-folders/">
+            /campaign-folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Update a campaign folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_campaign_folders_folder_id" href="/documentation/mailchimp/reference/campaign-folders/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_campaign_folders_folder_id" href="/documentation/mailchimp/reference/campaign-folders/">
+            /campaign-folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Delete a campaign folder
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Campaigns
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_campaigns" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_campaigns" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns
+           </a>
+          </td>
+          <td>
+           Create a new campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_campaigns" href="/documentation/mailchimp/reference/campaigns/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_campaigns" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns
+           </a>
+          </td>
+          <td>
+           Get all campaigns
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_campaigns_campaign_id" href="/documentation/mailchimp/reference/campaigns/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_campaigns_campaign_id" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_campaigns_campaign_id" href="/documentation/mailchimp/reference/campaigns/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_campaigns_campaign_id" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}
+           </a>
+          </td>
+          <td>
+           Update the settings for a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_campaigns_campaign_id" href="/documentation/mailchimp/reference/campaigns/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_campaigns_campaign_id" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}
+           </a>
+          </td>
+          <td>
+           Delete a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_campaigns_campaign_id_actions_cancel_send" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_campaigns_campaign_id_actions_cancel_send" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}/actions/cancel-send
+           </a>
+          </td>
+          <td>
+           Cancel a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_campaigns_campaign_id_actions_pause" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_campaigns_campaign_id_actions_pause" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}/actions/pause
+           </a>
+          </td>
+          <td>
+           Pause an RSS-Driven campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_campaigns_campaign_id_actions_replicate" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_campaigns_campaign_id_actions_replicate" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}/actions/replicate
+           </a>
+          </td>
+          <td>
+           Replicate a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_campaigns_campaign_id_actions_resume" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_campaigns_campaign_id_actions_resume" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}/actions/resume
+           </a>
+          </td>
+          <td>
+           Resume an RSS-Driven campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_campaigns_campaign_id_actions_schedule" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_campaigns_campaign_id_actions_schedule" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}/actions/schedule
+           </a>
+          </td>
+          <td>
+           Schedule a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_campaigns_campaign_id_actions_send" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_campaigns_campaign_id_actions_send" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}/actions/send
+           </a>
+          </td>
+          <td>
+           Send a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_campaigns_campaign_id_actions_test" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_campaigns_campaign_id_actions_test" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}/actions/test
+           </a>
+          </td>
+          <td>
+           Send a test email
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method action" data-content="action-post_campaigns_campaign_id_actions_unschedule" href="/documentation/mailchimp/reference/campaigns/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="action-post_campaigns_campaign_id_actions_unschedule" href="/documentation/mailchimp/reference/campaigns/">
+            /campaigns/{campaign_id}/actions/unschedule
+           </a>
+          </td>
+          <td>
+           Unschedule a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_campaigns_campaign_id_content" href="/documentation/mailchimp/reference/campaigns/content/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_campaigns_campaign_id_content" href="/documentation/mailchimp/reference/campaigns/content/">
+            /campaigns/{campaign_id}/content
+           </a>
+          </td>
+          <td>
+           Get campaign content
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-put_campaigns_campaign_id_content" href="/documentation/mailchimp/reference/campaigns/content/">
+            PUT
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-put_campaigns_campaign_id_content" href="/documentation/mailchimp/reference/campaigns/content/">
+            /campaigns/{campaign_id}/content
+           </a>
+          </td>
+          <td>
+           Set campaign content
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_campaigns_campaign_id_feedback" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_campaigns_campaign_id_feedback" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            /campaigns/{campaign_id}/feedback
+           </a>
+          </td>
+          <td>
+           Add campaign feedback
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_campaigns_campaign_id_feedback" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_campaigns_campaign_id_feedback" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            /campaigns/{campaign_id}/feedback
+           </a>
+          </td>
+          <td>
+           Get feedback about a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_campaigns_campaign_id_feedback_feedback_id" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_campaigns_campaign_id_feedback_feedback_id" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            /campaigns/{campaign_id}/feedback/{feedback_id}
+           </a>
+          </td>
+          <td>
+           Get a specific feedback message
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_campaigns_campaign_id_feedback_feedback_id" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_campaigns_campaign_id_feedback_feedback_id" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            /campaigns/{campaign_id}/feedback/{feedback_id}
+           </a>
+          </td>
+          <td>
+           Update a campaign feedback message
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_campaigns_campaign_id_feedback_feedback_id" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_campaigns_campaign_id_feedback_feedback_id" href="/documentation/mailchimp/reference/campaigns/feedback/">
+            /campaigns/{campaign_id}/feedback/{feedback_id}
+           </a>
+          </td>
+          <td>
+           Delete a campaign feedback message
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_campaigns_campaign_id_send_checklist" href="/documentation/mailchimp/reference/campaigns/send-checklist/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_campaigns_campaign_id_send_checklist" href="/documentation/mailchimp/reference/campaigns/send-checklist/">
+            /campaigns/{campaign_id}/send-checklist
+           </a>
+          </td>
+          <td>
+           Get the send checklist for a campaign
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Conversations
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_conversations" href="/documentation/mailchimp/reference/conversations/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_conversations" href="/documentation/mailchimp/reference/conversations/">
+            /conversations
+           </a>
+          </td>
+          <td>
+           Get a list of conversations
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_conversations_conversation_id" href="/documentation/mailchimp/reference/conversations/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_conversations_conversation_id" href="/documentation/mailchimp/reference/conversations/">
+            /conversations/{conversation_id}
+           </a>
+          </td>
+          <td>
+           Get information about a conversation
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_conversations_conversation_id_messages" href="/documentation/mailchimp/reference/conversations/messages/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_conversations_conversation_id_messages" href="/documentation/mailchimp/reference/conversations/messages/">
+            /conversations/{conversation_id}/messages
+           </a>
+          </td>
+          <td>
+           Post a new conversation message
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_conversations_conversation_id_messages" href="/documentation/mailchimp/reference/conversations/messages/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_conversations_conversation_id_messages" href="/documentation/mailchimp/reference/conversations/messages/">
+            /conversations/{conversation_id}/messages
+           </a>
+          </td>
+          <td>
+           Get conversation messages
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_conversations_conversation_id_messages_message_id" href="/documentation/mailchimp/reference/conversations/messages/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_conversations_conversation_id_messages_message_id" href="/documentation/mailchimp/reference/conversations/messages/">
+            /conversations/{conversation_id}/messages/{message_id}
+           </a>
+          </td>
+          <td>
+           Get a specific conversation message
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       E-commerce Stores
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            /ecommerce/stores
+           </a>
+          </td>
+          <td>
+           Add a new store
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            /ecommerce/stores
+           </a>
+          </td>
+          <td>
+           Get information about all stores
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            /ecommerce/stores/{store_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific store
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            /ecommerce/stores/{store_id}
+           </a>
+          </td>
+          <td>
+           Update a store
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id" href="/documentation/mailchimp/reference/ecommerce/stores/">
+            /ecommerce/stores/{store_id}
+           </a>
+          </td>
+          <td>
+           Delete a store
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores_store_id_carts" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores_store_id_carts" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            /ecommerce/stores/{store_id}/carts
+           </a>
+          </td>
+          <td>
+           Add a new cart to a store
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_carts" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_carts" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            /ecommerce/stores/{store_id}/carts
+           </a>
+          </td>
+          <td>
+           Get information about a store’s carts
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_carts_cart_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_carts_cart_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            /ecommerce/stores/{store_id}/carts/{cart_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific cart
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id_carts_cart_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id_carts_cart_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            /ecommerce/stores/{store_id}/carts/{cart_id}
+           </a>
+          </td>
+          <td>
+           Update a specific cart
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id_carts_cart_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id_carts_cart_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/">
+            /ecommerce/stores/{store_id}/carts/{cart_id}
+           </a>
+          </td>
+          <td>
+           Delete a cart
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores_store_id_carts_cart_id_lines" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores_store_id_carts_cart_id_lines" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            /ecommerce/stores/{store_id}/carts/{cart_id}/lines
+           </a>
+          </td>
+          <td>
+           Add a new line item to an existing cart
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_carts_cart_id_lines" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_carts_cart_id_lines" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            /ecommerce/stores/{store_id}/carts/{cart_id}/lines
+           </a>
+          </td>
+          <td>
+           Get information about a cart’s line items
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_carts_cart_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_carts_cart_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            /ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific cart line item
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id_carts_cart_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id_carts_cart_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            /ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}
+           </a>
+          </td>
+          <td>
+           Update a specific cart line item
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id_carts_cart_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id_carts_cart_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/carts/lines/">
+            /ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}
+           </a>
+          </td>
+          <td>
+           Delete a specific cart line item
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores_store_id_customers" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores_store_id_customers" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            /ecommerce/stores/{store_id}/customers
+           </a>
+          </td>
+          <td>
+           Add a new customer to a store
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_customers" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_customers" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            /ecommerce/stores/{store_id}/customers
+           </a>
+          </td>
+          <td>
+           Get information about a store’s customers
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_customers_customer_id" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_customers_customer_id" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            /ecommerce/stores/{store_id}/customers/{customer_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific customer
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id_customers_customer_id" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id_customers_customer_id" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            /ecommerce/stores/{store_id}/customers/{customer_id}
+           </a>
+          </td>
+          <td>
+           Update a customer
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-put_ecommerce_stores_store_id_customers_customer_id" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            PUT
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-put_ecommerce_stores_store_id_customers_customer_id" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            /ecommerce/stores/{store_id}/customers/{customer_id}
+           </a>
+          </td>
+          <td>
+           Add or update a customer
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id_customers_customer_id" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id_customers_customer_id" href="/documentation/mailchimp/reference/ecommerce/stores/customers/">
+            /ecommerce/stores/{store_id}/customers/{customer_id}
+           </a>
+          </td>
+          <td>
+           Delete a customer
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores_store_id_orders" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores_store_id_orders" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            /ecommerce/stores/{store_id}/orders
+           </a>
+          </td>
+          <td>
+           Add a new order to a store
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_orders" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_orders" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            /ecommerce/stores/{store_id}/orders
+           </a>
+          </td>
+          <td>
+           Get information about a store’s orders
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_orders_order_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_orders_order_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            /ecommerce/stores/{store_id}/orders/{order_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific order
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id_orders_order_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id_orders_order_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            /ecommerce/stores/{store_id}/orders/{order_id}
+           </a>
+          </td>
+          <td>
+           Update a specific order
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id_orders_order_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id_orders_order_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/">
+            /ecommerce/stores/{store_id}/orders/{order_id}
+           </a>
+          </td>
+          <td>
+           Delete an order
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores_store_id_orders_order_id_lines" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores_store_id_orders_order_id_lines" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            /ecommerce/stores/{store_id}/orders/{order_id}/lines
+           </a>
+          </td>
+          <td>
+           Add a new line item to an existing order
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_orders_order_id_lines" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_orders_order_id_lines" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            /ecommerce/stores/{store_id}/orders/{order_id}/lines
+           </a>
+          </td>
+          <td>
+           Get information about an order’s line items.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_orders_order_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_orders_order_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            /ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific order line item
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id_orders_order_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id_orders_order_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            /ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}
+           </a>
+          </td>
+          <td>
+           Update a specific order line item
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id_orders_order_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id_orders_order_id_lines_line_id" href="/documentation/mailchimp/reference/ecommerce/stores/orders/lines/">
+            /ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}
+           </a>
+          </td>
+          <td>
+           Delete a specific order line item
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores_store_id_products" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores_store_id_products" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            /ecommerce/stores/{store_id}/products
+           </a>
+          </td>
+          <td>
+           Add a new product to a store
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_products" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_products" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            /ecommerce/stores/{store_id}/products
+           </a>
+          </td>
+          <td>
+           Get information about a store’s products.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_products_product_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_products_product_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            /ecommerce/stores/{store_id}/products/{product_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific product
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id_products_product_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id_products_product_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            /ecommerce/stores/{store_id}/products/{product_id}
+           </a>
+          </td>
+          <td>
+           Update a specific product
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id_products_product_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id_products_product_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/">
+            /ecommerce/stores/{store_id}/products/{product_id}
+           </a>
+          </td>
+          <td>
+           Delete a product
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores_store_id_products_product_id_images" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores_store_id_products_product_id_images" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            /ecommerce/stores/{store_id}/products/{product_id}/images
+           </a>
+          </td>
+          <td>
+           Add a new image to the product.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_products_product_id_images" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_products_product_id_images" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            /ecommerce/stores/{store_id}/products/{product_id}/images
+           </a>
+          </td>
+          <td>
+           Get information about a product’s images.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_products_product_id_images_image_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_products_product_id_images_image_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            /ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific product image
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id_products_product_id_images_image_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id_products_product_id_images_image_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            /ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}
+           </a>
+          </td>
+          <td>
+           Update a product image
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id_products_product_id_images_image_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id_products_product_id_images_image_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/images/">
+            /ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}
+           </a>
+          </td>
+          <td>
+           Delete a product image
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_ecommerce_stores_store_id_products_product_id_variants" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_ecommerce_stores_store_id_products_product_id_variants" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            /ecommerce/stores/{store_id}/products/{product_id}/variants
+           </a>
+          </td>
+          <td>
+           Add a new variant to the product.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_products_product_id_variants" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_products_product_id_variants" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            /ecommerce/stores/{store_id}/products/{product_id}/variants
+           </a>
+          </td>
+          <td>
+           Get information about a product’s variants.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_ecommerce_stores_store_id_products_product_id_variants_variant_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_ecommerce_stores_store_id_products_product_id_variants_variant_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific product variant
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_ecommerce_stores_store_id_products_product_id_variants_variant_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_ecommerce_stores_store_id_products_product_id_variants_variant_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}
+           </a>
+          </td>
+          <td>
+           Update a product variant
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-put_ecommerce_stores_store_id_products_product_id_variants_variant_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            PUT
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-put_ecommerce_stores_store_id_products_product_id_variants_variant_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}
+           </a>
+          </td>
+          <td>
+           Add or update a product variant
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_ecommerce_stores_store_id_products_product_id_variants_variant_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_ecommerce_stores_store_id_products_product_id_variants_variant_id" href="/documentation/mailchimp/reference/ecommerce/stores/products/variants/">
+            /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}
+           </a>
+          </td>
+          <td>
+           Delete a product variant
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       File Manager Files
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_file_manager_files" href="/documentation/mailchimp/reference/file-manager/files/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_file_manager_files" href="/documentation/mailchimp/reference/file-manager/files/">
+            /file-manager/files
+           </a>
+          </td>
+          <td>
+           Upload a new file
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_file_manager_files" href="/documentation/mailchimp/reference/file-manager/files/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_file_manager_files" href="/documentation/mailchimp/reference/file-manager/files/">
+            /file-manager/files
+           </a>
+          </td>
+          <td>
+           Get information about stored files
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_file_manager_files_file_id" href="/documentation/mailchimp/reference/file-manager/files/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_file_manager_files_file_id" href="/documentation/mailchimp/reference/file-manager/files/">
+            /file-manager/files/{file_id}
+           </a>
+          </td>
+          <td>
+           Get a specific file
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_file_manager_files_file_id" href="/documentation/mailchimp/reference/file-manager/files/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_file_manager_files_file_id" href="/documentation/mailchimp/reference/file-manager/files/">
+            /file-manager/files/{file_id}
+           </a>
+          </td>
+          <td>
+           Update a specific file
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_file_manager_files_file_id" href="/documentation/mailchimp/reference/file-manager/files/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_file_manager_files_file_id" href="/documentation/mailchimp/reference/file-manager/files/">
+            /file-manager/files/{file_id}
+           </a>
+          </td>
+          <td>
+           Remove a specific file
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       File Manager Folders
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_file_manager_folders" href="/documentation/mailchimp/reference/file-manager/folders/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_file_manager_folders" href="/documentation/mailchimp/reference/file-manager/folders/">
+            /file-manager/folders
+           </a>
+          </td>
+          <td>
+           Create a new folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_file_manager_folders" href="/documentation/mailchimp/reference/file-manager/folders/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_file_manager_folders" href="/documentation/mailchimp/reference/file-manager/folders/">
+            /file-manager/folders
+           </a>
+          </td>
+          <td>
+           Get a list of folders in the File Manager
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_file_manager_folders_folder_id" href="/documentation/mailchimp/reference/file-manager/folders/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_file_manager_folders_folder_id" href="/documentation/mailchimp/reference/file-manager/folders/">
+            /file-manager/folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_file_manager_folders_folder_id" href="/documentation/mailchimp/reference/file-manager/folders/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_file_manager_folders_folder_id" href="/documentation/mailchimp/reference/file-manager/folders/">
+            /file-manager/folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Update a File Manager folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_file_manager_folders_folder_id" href="/documentation/mailchimp/reference/file-manager/folders/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_file_manager_folders_folder_id" href="/documentation/mailchimp/reference/file-manager/folders/">
+            /file-manager/folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Remove a File Manager folder
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Lists
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists" href="/documentation/mailchimp/reference/lists/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists" href="/documentation/mailchimp/reference/lists/">
+            /lists
+           </a>
+          </td>
+          <td>
+           Create a new list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists" href="/documentation/mailchimp/reference/lists/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists" href="/documentation/mailchimp/reference/lists/">
+            /lists
+           </a>
+          </td>
+          <td>
+           Get information about all lists
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id" href="/documentation/mailchimp/reference/lists/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id" href="/documentation/mailchimp/reference/lists/">
+            /lists/{list_id}
+           </a>
+          </td>
+          <td>
+           Batch sub/unsub list members
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id" href="/documentation/mailchimp/reference/lists/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id" href="/documentation/mailchimp/reference/lists/">
+            /lists/{list_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_lists_list_id" href="/documentation/mailchimp/reference/lists/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_lists_list_id" href="/documentation/mailchimp/reference/lists/">
+            /lists/{list_id}
+           </a>
+          </td>
+          <td>
+           Update a specific list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id" href="/documentation/mailchimp/reference/lists/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id" href="/documentation/mailchimp/reference/lists/">
+            /lists/{list_id}
+           </a>
+          </td>
+          <td>
+           Delete a list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_abuse_reports" href="/documentation/mailchimp/reference/lists/abuse-reports/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_abuse_reports" href="/documentation/mailchimp/reference/lists/abuse-reports/">
+            /lists/{list_id}/abuse-reports
+           </a>
+          </td>
+          <td>
+           Get information about abuse reports
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_abuse_reports_report_id" href="/documentation/mailchimp/reference/lists/abuse-reports/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_abuse_reports_report_id" href="/documentation/mailchimp/reference/lists/abuse-reports/">
+            /lists/{list_id}/abuse-reports/{report_id}
+           </a>
+          </td>
+          <td>
+           Get details about a specific abuse report
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_activity" href="/documentation/mailchimp/reference/lists/activity/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_activity" href="/documentation/mailchimp/reference/lists/activity/">
+            /lists/{list_id}/activity
+           </a>
+          </td>
+          <td>
+           Get recent list activity
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_clients" href="/documentation/mailchimp/reference/lists/clients/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_clients" href="/documentation/mailchimp/reference/lists/clients/">
+            /lists/{list_id}/clients
+           </a>
+          </td>
+          <td>
+           Get top email clients
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_growth_history" href="/documentation/mailchimp/reference/lists/growth-history/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_growth_history" href="/documentation/mailchimp/reference/lists/growth-history/">
+            /lists/{list_id}/growth-history
+           </a>
+          </td>
+          <td>
+           Get list growth history data
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_growth_history_month" href="/documentation/mailchimp/reference/lists/growth-history/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_growth_history_month" href="/documentation/mailchimp/reference/lists/growth-history/">
+            /lists/{list_id}/growth-history/{month}
+           </a>
+          </td>
+          <td>
+           Get list growth history by month
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_interest_categories" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_interest_categories" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            /lists/{list_id}/interest-categories
+           </a>
+          </td>
+          <td>
+           Create a new interest category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_interest_categories" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_interest_categories" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            /lists/{list_id}/interest-categories
+           </a>
+          </td>
+          <td>
+           Get information about a list’s interest categories
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_interest_categories_interest_category_id" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_interest_categories_interest_category_id" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            /lists/{list_id}/interest-categories/{interest_category_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific interest category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_lists_list_id_interest_categories_interest_category_id" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_lists_list_id_interest_categories_interest_category_id" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            /lists/{list_id}/interest-categories/{interest_category_id}
+           </a>
+          </td>
+          <td>
+           Update a specific interest category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id_interest_categories_interest_category_id" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id_interest_categories_interest_category_id" href="/documentation/mailchimp/reference/lists/interest-categories/">
+            /lists/{list_id}/interest-categories/{interest_category_id}
+           </a>
+          </td>
+          <td>
+           Delete a specific interest category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_interest_categories_interest_category_id_interests" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_interest_categories_interest_category_id_interests" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            /lists/{list_id}/interest-categories/{interest_category_id}/interests
+           </a>
+          </td>
+          <td>
+           Create a new interest in a specific category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_interest_categories_interest_category_id_interests" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_interest_categories_interest_category_id_interests" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            /lists/{list_id}/interest-categories/{interest_category_id}/interests
+           </a>
+          </td>
+          <td>
+           Get all interests in a specific category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_interest_categories_interest_category_id_interests_interest_id" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_interest_categories_interest_category_id_interests_interest_id" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            /lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}
+           </a>
+          </td>
+          <td>
+           Get interests in a specific category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_lists_list_id_interest_categories_interest_category_id_interests_interest_id" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_lists_list_id_interest_categories_interest_category_id_interests_interest_id" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            /lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}
+           </a>
+          </td>
+          <td>
+           Update interests in a specific category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id_interest_categories_interest_category_id_interests_interest_id" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id_interest_categories_interest_category_id_interests_interest_id" href="/documentation/mailchimp/reference/lists/interest-categories/interests/">
+            /lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}
+           </a>
+          </td>
+          <td>
+           Delete interests in a specific category
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_locations" href="/documentation/mailchimp/reference/lists/locations/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_locations" href="/documentation/mailchimp/reference/lists/locations/">
+            /lists/{list_id}/locations
+           </a>
+          </td>
+          <td>
+           Get list locations
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_members" href="/documentation/mailchimp/reference/lists/members/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_members" href="/documentation/mailchimp/reference/lists/members/">
+            /lists/{list_id}/members
+           </a>
+          </td>
+          <td>
+           Add a new list member
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_members" href="/documentation/mailchimp/reference/lists/members/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_members" href="/documentation/mailchimp/reference/lists/members/">
+            /lists/{list_id}/members
+           </a>
+          </td>
+          <td>
+           Get information about members in a list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/members/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/members/">
+            /lists/{list_id}/members/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Get information about a specific list member
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_lists_list_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/members/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_lists_list_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/members/">
+            /lists/{list_id}/members/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Update a list member
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-put_lists_list_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/members/">
+            PUT
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-put_lists_list_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/members/">
+            /lists/{list_id}/members/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Add or update a list member
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/members/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/members/">
+            /lists/{list_id}/members/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Remove a list member
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_members_subscriber_hash_activity" href="/documentation/mailchimp/reference/lists/members/activity/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_members_subscriber_hash_activity" href="/documentation/mailchimp/reference/lists/members/activity/">
+            /lists/{list_id}/members/{subscriber_hash}/activity
+           </a>
+          </td>
+          <td>
+           Get recent list member activity
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_members_subscriber_hash_goals" href="/documentation/mailchimp/reference/lists/members/goals/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_members_subscriber_hash_goals" href="/documentation/mailchimp/reference/lists/members/goals/">
+            /lists/{list_id}/members/{subscriber_hash}/goals
+           </a>
+          </td>
+          <td>
+           Get the last 50 Goal events for a member on a specific list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_members_subscriber_hash_notes" href="/documentation/mailchimp/reference/lists/members/notes/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_members_subscriber_hash_notes" href="/documentation/mailchimp/reference/lists/members/notes/">
+            /lists/{list_id}/members/{subscriber_hash}/notes
+           </a>
+          </td>
+          <td>
+           Add a new note
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_members_subscriber_hash_notes" href="/documentation/mailchimp/reference/lists/members/notes/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_members_subscriber_hash_notes" href="/documentation/mailchimp/reference/lists/members/notes/">
+            /lists/{list_id}/members/{subscriber_hash}/notes
+           </a>
+          </td>
+          <td>
+           Get recent notes for a specific list member
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_members_subscriber_hash_notes_note_id" href="/documentation/mailchimp/reference/lists/members/notes/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_members_subscriber_hash_notes_note_id" href="/documentation/mailchimp/reference/lists/members/notes/">
+            /lists/{list_id}/members/{subscriber_hash}/notes/{note_id}
+           </a>
+          </td>
+          <td>
+           Get a specific note for a specific list member
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_lists_list_id_members_subscriber_hash_notes_note_id" href="/documentation/mailchimp/reference/lists/members/notes/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_lists_list_id_members_subscriber_hash_notes_note_id" href="/documentation/mailchimp/reference/lists/members/notes/">
+            /lists/{list_id}/members/{subscriber_hash}/notes/{note_id}
+           </a>
+          </td>
+          <td>
+           Update a note
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id_members_subscriber_hash_notes_note_id" href="/documentation/mailchimp/reference/lists/members/notes/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id_members_subscriber_hash_notes_note_id" href="/documentation/mailchimp/reference/lists/members/notes/">
+            /lists/{list_id}/members/{subscriber_hash}/notes/{note_id}
+           </a>
+          </td>
+          <td>
+           Delete a note
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_merge_fields" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_merge_fields" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            /lists/{list_id}/merge-fields
+           </a>
+          </td>
+          <td>
+           Add a new merge field
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_merge_fields" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_merge_fields" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            /lists/{list_id}/merge-fields
+           </a>
+          </td>
+          <td>
+           Get all merge fields for a list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_merge_fields_merge_id" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_merge_fields_merge_id" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            /lists/{list_id}/merge-fields/{merge_id}
+           </a>
+          </td>
+          <td>
+           Get a specific merge field
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_lists_list_id_merge_fields_merge_id" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_lists_list_id_merge_fields_merge_id" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            /lists/{list_id}/merge-fields/{merge_id}
+           </a>
+          </td>
+          <td>
+           Update a merge field
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id_merge_fields_merge_id" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id_merge_fields_merge_id" href="/documentation/mailchimp/reference/lists/merge-fields/">
+            /lists/{list_id}/merge-fields/{merge_id}
+           </a>
+          </td>
+          <td>
+           Delete a merge field
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_segments" href="/documentation/mailchimp/reference/lists/segments/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_segments" href="/documentation/mailchimp/reference/lists/segments/">
+            /lists/{list_id}/segments
+           </a>
+          </td>
+          <td>
+           Create a new segment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_segments" href="/documentation/mailchimp/reference/lists/segments/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_segments" href="/documentation/mailchimp/reference/lists/segments/">
+            /lists/{list_id}/segments
+           </a>
+          </td>
+          <td>
+           Get information about all segments in a list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_segments_segment_id" href="/documentation/mailchimp/reference/lists/segments/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_segments_segment_id" href="/documentation/mailchimp/reference/lists/segments/">
+            /lists/{list_id}/segments/{segment_id}
+           </a>
+          </td>
+          <td>
+           Batch add/remove list members to static segment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_segments_segment_id" href="/documentation/mailchimp/reference/lists/segments/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_segments_segment_id" href="/documentation/mailchimp/reference/lists/segments/">
+            /lists/{list_id}/segments/{segment_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific segment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_lists_list_id_segments_segment_id" href="/documentation/mailchimp/reference/lists/segments/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_lists_list_id_segments_segment_id" href="/documentation/mailchimp/reference/lists/segments/">
+            /lists/{list_id}/segments/{segment_id}
+           </a>
+          </td>
+          <td>
+           Update a segment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id_segments_segment_id" href="/documentation/mailchimp/reference/lists/segments/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id_segments_segment_id" href="/documentation/mailchimp/reference/lists/segments/">
+            /lists/{list_id}/segments/{segment_id}
+           </a>
+          </td>
+          <td>
+           Delete a segment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_segments_segment_id_members" href="/documentation/mailchimp/reference/lists/segments/members/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_segments_segment_id_members" href="/documentation/mailchimp/reference/lists/segments/members/">
+            /lists/{list_id}/segments/{segment_id}/members
+           </a>
+          </td>
+          <td>
+           Add a member to a static segment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_segments_segment_id_members" href="/documentation/mailchimp/reference/lists/segments/members/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_segments_segment_id_members" href="/documentation/mailchimp/reference/lists/segments/members/">
+            /lists/{list_id}/segments/{segment_id}/members
+           </a>
+          </td>
+          <td>
+           Get information about all members in a list segment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id_segments_segment_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/segments/members/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id_segments_segment_id_members_subscriber_hash" href="/documentation/mailchimp/reference/lists/segments/members/">
+            /lists/{list_id}/segments/{segment_id}/members/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Remove a member from the specified static segment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_signup_forms" href="/documentation/mailchimp/reference/lists/signup-forms/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_signup_forms" href="/documentation/mailchimp/reference/lists/signup-forms/">
+            /lists/{list_id}/signup-forms
+           </a>
+          </td>
+          <td>
+           Customize the signup form settings for a specific list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_signup_forms" href="/documentation/mailchimp/reference/lists/signup-forms/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_signup_forms" href="/documentation/mailchimp/reference/lists/signup-forms/">
+            /lists/{list_id}/signup-forms
+           </a>
+          </td>
+          <td>
+           Get signup forms for a specific list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_lists_list_id_webhooks" href="/documentation/mailchimp/reference/lists/webhooks/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_lists_list_id_webhooks" href="/documentation/mailchimp/reference/lists/webhooks/">
+            /lists/{list_id}/webhooks
+           </a>
+          </td>
+          <td>
+           Create a new webhook
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_webhooks" href="/documentation/mailchimp/reference/lists/webhooks/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_webhooks" href="/documentation/mailchimp/reference/lists/webhooks/">
+            /lists/{list_id}/webhooks
+           </a>
+          </td>
+          <td>
+           Get information about all webhooks for a specific list
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_lists_list_id_webhooks_webhook_id" href="/documentation/mailchimp/reference/lists/webhooks/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_lists_list_id_webhooks_webhook_id" href="/documentation/mailchimp/reference/lists/webhooks/">
+            /lists/{list_id}/webhooks/{webhook_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific webhook
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_lists_list_id_webhooks_webhook_id" href="/documentation/mailchimp/reference/lists/webhooks/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_lists_list_id_webhooks_webhook_id" href="/documentation/mailchimp/reference/lists/webhooks/">
+            /lists/{list_id}/webhooks/{webhook_id}
+           </a>
+          </td>
+          <td>
+           Update a webhook
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_lists_list_id_webhooks_webhook_id" href="/documentation/mailchimp/reference/lists/webhooks/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_lists_list_id_webhooks_webhook_id" href="/documentation/mailchimp/reference/lists/webhooks/">
+            /lists/{list_id}/webhooks/{webhook_id}
+           </a>
+          </td>
+          <td>
+           Delete a webhook
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Reports
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports" href="/documentation/mailchimp/reference/reports/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports" href="/documentation/mailchimp/reference/reports/">
+            /reports
+           </a>
+          </td>
+          <td>
+           Get campaign reports
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id" href="/documentation/mailchimp/reference/reports/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id" href="/documentation/mailchimp/reference/reports/">
+            /reports/{campaign_id}
+           </a>
+          </td>
+          <td>
+           Get a specific campaign report
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_abuse_reports" href="/documentation/mailchimp/reference/reports/abuse-reports/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_abuse_reports" href="/documentation/mailchimp/reference/reports/abuse-reports/">
+            /reports/{campaign_id}/abuse-reports
+           </a>
+          </td>
+          <td>
+           Get abuse complaints for a campaign
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_abuse_reports_report_id" href="/documentation/mailchimp/reference/reports/abuse-reports/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_abuse_reports_report_id" href="/documentation/mailchimp/reference/reports/abuse-reports/">
+            /reports/{campaign_id}/abuse-reports/{report_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific abuse report
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_advice" href="/documentation/mailchimp/reference/reports/advice/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_advice" href="/documentation/mailchimp/reference/reports/advice/">
+            /reports/{campaign_id}/advice
+           </a>
+          </td>
+          <td>
+           Get campaign feedback
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_click_details" href="/documentation/mailchimp/reference/reports/click-details/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_click_details" href="/documentation/mailchimp/reference/reports/click-details/">
+            /reports/{campaign_id}/click-details
+           </a>
+          </td>
+          <td>
+           Get campaign click details
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_click_details_link_id" href="/documentation/mailchimp/reference/reports/click-details/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_click_details_link_id" href="/documentation/mailchimp/reference/reports/click-details/">
+            /reports/{campaign_id}/click-details/{link_id}
+           </a>
+          </td>
+          <td>
+           Get click details for a specific link
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_click_details_link_id_members" href="/documentation/mailchimp/reference/reports/click-details/members/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_click_details_link_id_members" href="/documentation/mailchimp/reference/reports/click-details/members/">
+            /reports/{campaign_id}/click-details/{link_id}/members
+           </a>
+          </td>
+          <td>
+           Get information about subscribers who clicked a link
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_click_details_link_id_members_subscriber_hash" href="/documentation/mailchimp/reference/reports/click-details/members/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_click_details_link_id_members_subscriber_hash" href="/documentation/mailchimp/reference/reports/click-details/members/">
+            /reports/{campaign_id}/click-details/{link_id}/members/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Get information about a specific subscriber who clicked a link
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_domain_performance" href="/documentation/mailchimp/reference/reports/domain-performance/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_domain_performance" href="/documentation/mailchimp/reference/reports/domain-performance/">
+            /reports/{campaign_id}/domain-performance
+           </a>
+          </td>
+          <td>
+           Get domain performance stats
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_eepurl" href="/documentation/mailchimp/reference/reports/eepurl/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_eepurl" href="/documentation/mailchimp/reference/reports/eepurl/">
+            /reports/{campaign_id}/eepurl
+           </a>
+          </td>
+          <td>
+           Get Eepurl activity
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_email_activity" href="/documentation/mailchimp/reference/reports/email-activity/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_email_activity" href="/documentation/mailchimp/reference/reports/email-activity/">
+            /reports/{campaign_id}/email-activity
+           </a>
+          </td>
+          <td>
+           Get email activity
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_email_activity_subscriber_hash" href="/documentation/mailchimp/reference/reports/email-activity/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_email_activity_subscriber_hash" href="/documentation/mailchimp/reference/reports/email-activity/">
+            /reports/{campaign_id}/email-activity/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Get email activity for a specific subscriber
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_locations" href="/documentation/mailchimp/reference/reports/locations/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_locations" href="/documentation/mailchimp/reference/reports/locations/">
+            /reports/{campaign_id}/locations
+           </a>
+          </td>
+          <td>
+           Get top open locations
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_sent_to" href="/documentation/mailchimp/reference/reports/sent-to/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_sent_to" href="/documentation/mailchimp/reference/reports/sent-to/">
+            /reports/{campaign_id}/sent-to
+           </a>
+          </td>
+          <td>
+           Get information about campaign recipients
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_sent_to_subscriber_hash" href="/documentation/mailchimp/reference/reports/sent-to/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_sent_to_subscriber_hash" href="/documentation/mailchimp/reference/reports/sent-to/">
+            /reports/{campaign_id}/sent-to/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Get information about a specific campaign recipient
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_sub_reports" href="/documentation/mailchimp/reference/reports/sub-reports/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_sub_reports" href="/documentation/mailchimp/reference/reports/sub-reports/">
+            /reports/{campaign_id}/sub-reports
+           </a>
+          </td>
+          <td>
+           Get reports for child campaigns
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_unsubscribed" href="/documentation/mailchimp/reference/reports/unsubscribed/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_unsubscribed" href="/documentation/mailchimp/reference/reports/unsubscribed/">
+            /reports/{campaign_id}/unsubscribed
+           </a>
+          </td>
+          <td>
+           Get unsubscribed list members
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_reports_campaign_id_unsubscribed_subscriber_hash" href="/documentation/mailchimp/reference/reports/unsubscribed/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_reports_campaign_id_unsubscribed_subscriber_hash" href="/documentation/mailchimp/reference/reports/unsubscribed/">
+            /reports/{campaign_id}/unsubscribed/{subscriber_hash}
+           </a>
+          </td>
+          <td>
+           Get information about a specific list member who unsubscribed
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Search Campaigns
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_search_campaigns" href="/documentation/mailchimp/reference/search-campaigns/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_search_campaigns" href="/documentation/mailchimp/reference/search-campaigns/">
+            /search-campaigns
+           </a>
+          </td>
+          <td>
+           Search Campaigns
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Search Members
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_search_members" href="/documentation/mailchimp/reference/search-members/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_search_members" href="/documentation/mailchimp/reference/search-members/">
+            /search-members
+           </a>
+          </td>
+          <td>
+           Search Members
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Template Folders
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_template_folders" href="/documentation/mailchimp/reference/template-folders/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_template_folders" href="/documentation/mailchimp/reference/template-folders/">
+            /template-folders
+           </a>
+          </td>
+          <td>
+           Create a template folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_template_folders" href="/documentation/mailchimp/reference/template-folders/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_template_folders" href="/documentation/mailchimp/reference/template-folders/">
+            /template-folders
+           </a>
+          </td>
+          <td>
+           Get all template folders
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_template_folders_folder_id" href="/documentation/mailchimp/reference/template-folders/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_template_folders_folder_id" href="/documentation/mailchimp/reference/template-folders/">
+            /template-folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Get a template folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_template_folders_folder_id" href="/documentation/mailchimp/reference/template-folders/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_template_folders_folder_id" href="/documentation/mailchimp/reference/template-folders/">
+            /template-folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Update a template folder
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_template_folders_folder_id" href="/documentation/mailchimp/reference/template-folders/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_template_folders_folder_id" href="/documentation/mailchimp/reference/template-folders/">
+            /template-folders/{folder_id}
+           </a>
+          </td>
+          <td>
+           Delete a template folder
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <h3>
+       Templates
+      </h3>
+      <div class="mc-table-wrap">
+       <table class="link-to-action mc-table">
+        <tbody>
+         <tr>
+          <th>
+           HTTP method
+          </th>
+          <th>
+           Endpoint
+          </th>
+          <th>
+           Function
+          </th>
+         </tr>
+         <tr>
+          <td>
+           <a class="method create" data-content="create-post_templates" href="/documentation/mailchimp/reference/templates/">
+            POST
+           </a>
+          </td>
+          <td>
+           <a data-content="create-post_templates" href="/documentation/mailchimp/reference/templates/">
+            /templates
+           </a>
+          </td>
+          <td>
+           Create a new template
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_templates" href="/documentation/mailchimp/reference/templates/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_templates" href="/documentation/mailchimp/reference/templates/">
+            /templates
+           </a>
+          </td>
+          <td>
+           Get all templates
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_templates_template_id" href="/documentation/mailchimp/reference/templates/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_templates_template_id" href="/documentation/mailchimp/reference/templates/">
+            /templates/{template_id}
+           </a>
+          </td>
+          <td>
+           Get information about a specific template
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method edit" data-content="edit-patch_templates_template_id" href="/documentation/mailchimp/reference/templates/">
+            PATCH
+           </a>
+          </td>
+          <td>
+           <a data-content="edit-patch_templates_template_id" href="/documentation/mailchimp/reference/templates/">
+            /templates/{template_id}
+           </a>
+          </td>
+          <td>
+           Update an existing template
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method delete" data-content="delete-delete_templates_template_id" href="/documentation/mailchimp/reference/templates/">
+            DELETE
+           </a>
+          </td>
+          <td>
+           <a data-content="delete-delete_templates_template_id" href="/documentation/mailchimp/reference/templates/">
+            /templates/{template_id}
+           </a>
+          </td>
+          <td>
+           Delete a specific template
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a class="method read" data-content="read-get_templates_template_id_default_content" href="/documentation/mailchimp/reference/templates/default-content/">
+            GET
+           </a>
+          </td>
+          <td>
+           <a data-content="read-get_templates_template_id_default_content" href="/documentation/mailchimp/reference/templates/default-content/">
+            /templates/{template_id}/default-content
+           </a>
+          </td>
+          <td>
+           Get the default content for a template
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </section>
+    </article>
+   </div>
+   <a class="hide-print" href="#top" id="to-top">
+    <span class="freddicon menu-up">
+    </span>
+    Back to top
+   </a>
+   <footer class="alignc dim-el pad-lv6 pad-lr0 mc-content">
+    <div class="line">
+     <div class="lastUnit size1of1&gt;">
+      <a href="http://mailchimp.com" id="mailchimp-scripty-footer-link" tabindex="-1" target="_blank">
+       <img alt="MailChimp logo" class="inline-block" height="32" src="/documentation/mailchimp/img/scripty-dark.svg"/>
+      </a>
+     </div>
+    </div>
+    <div class="line relative">
+     <div class="unit size1of2 centered">
+      <p class="small-meta below18">
+       ©2001-2017 All Rights Reserved. MailChimp® is a registered trademark of The Rocket Science Group.
+      </p>
+     </div>
+     <div class="lastUnit size1of2 centered hide-print">
+      <p class="small-meta nomargin">
+       <a class="pad-lv2 pad-tb0 pad-l0 noborder fwb" href="http://mailchimp.com" id="mailchimp-footer-link">
+        MailChimp
+       </a>
+       <a class="pad-lv2 pad-tb0 pad-l0 noborder fwb" href="/documentation/mailchimp/" id="documentation-footer-link">
+        Documentation
+       </a>
+       <a class="pad-lv2 pad-tb0 pad-l0 noborder fwb" href="https://us1.api.mailchimp.com/playground/" id="playground-footer-link">
+        Playground
+       </a>
+       <a class="pad-lv2 pad-tb0 pad-l0 noborder fwb" href="/status/" id="status-footer-link">
+        API Status
+       </a>
+       <a class="pad-lv2 pad-tb0 pad-l0 noborder fwb" href="http://mailchimp.com/contact/feedback/" id="feedback-footer-link">
+        Feedback
+       </a>
+      </p>
+     </div>
+    </div>
+   </footer>
+  </div>
+ </body>
+</html>

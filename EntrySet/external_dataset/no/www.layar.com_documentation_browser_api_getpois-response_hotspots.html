@@ -1,0 +1,2421 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   hotspots – Layar Developer Documentation
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="" name="description"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/favicon.008a69ff80a7.png" rel="icon"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/css/base.8a1b3d2c89f8.css" rel="stylesheet"/>
+  <link href="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/css/documentation.f81faeb73433.css" rel="stylesheet"/>
+  <!--[if lte IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+  <!-- ♥ -->
+ </head>
+ <body data-syntaxhighligher-base-url="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jquery-syntaxhighlighter">
+  <header>
+   <div class="header-wrap">
+    <h1>
+     <a class="hide-text" href="/documentation/">
+      Layar Developer Documentation
+     </a>
+    </h1>
+    <a class="back" href="/">
+     <span>
+      ◀
+     </span>
+     Back to layar.com
+    </a>
+   </div>
+  </header>
+  <div class="wrap">
+   <nav class="main">
+    <ul>
+     <li class="selected">
+      <a href="/documentation/browser/">
+       API &amp; Platform
+      </a>
+     </li>
+     <li>
+      <a href="/documentation/connect/">
+       Connect
+      </a>
+     </li>
+     <li>
+      <a href="/documentation/layar-sdk/">
+       SDK
+      </a>
+     </li>
+    </ul>
+    <form action="//www.google.com/search" class="search" method="GET">
+     <input name="sitesearch" type="hidden" value="layar.com/documentation"/>
+     <input name="q" placeholder="Search in documentation…" required="required" type="text"/>
+     <button class="hide-text" type="submit">
+      Submit
+     </button>
+    </form>
+   </nav>
+   <aside class="side-nav">
+    <nav>
+     <ul>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/layar-platform-overview/">
+        Layar Platform Overview
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/layar-platform-overview/layer-service-provider/">
+          Layer Service Provider
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/layar-platform-overview/terminology/">
+          Terminology
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="child-selected">
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/api/">
+        API Documentation
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/getpois-request/">
+          GetPOIs Request
+         </a>
+        </li>
+        <li class="child-selected">
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/getpois-response/">
+          GetPOIs Response
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/changes-84/">
+            API v8.4 Changes
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/api-v85-changes/">
+            API v8.5  Changes
+           </a>
+          </li>
+          <li class="selected">
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/hotspots/">
+            hotspots
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/objects/">
+            object
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/actions/">
+            actions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/animations/">
+            animations
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/api/getpois-response/referenceimages/">
+            reference Images
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/api/layar-intent/">
+          Layar Intent
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/publishing-site/">
+        Publishing Site
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/publishing-site/test-layer/">
+          Test a Layer
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/publishing-site/test-layer/layer-testing-instructions/">
+            layer testing instructions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/publishing-site/test-layer/best-practices-cool-layers/">
+            best practices for creating cool layers
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/howtos/">
+        HowTo's
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/layar-vision-doc/">
+          Layar Vision
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/enable-layar-vision-layer/">
+            Enable Layar Vision in a layer
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/page-best-practices/">
+            Page best practices
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/howtos/layar-vision-doc/layar-vision-faqs/">
+            Layar Vision FAQs
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/html-widgets/">
+          HTML widgets
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/geolocation-layer/">
+          Geo Layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/how-to-actions/">
+          Actions
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/2d-and-3d-objects/">
+          2D and 3D objects
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/filter-settings/">
+          Filter settings
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/user-authentication/">
+          User Authentication
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/sharing-screenshot-developer-defined-url/">
+          Sharing a screenshot to a developer defined URL
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/howtos/oauth-signing/">
+          OAuth signing
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/3d-content-creation/">
+        3D Content Creation
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/">
+          3D Model Converter
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/">
+            How to Use 3D Model Converter
+           </a>
+           <ul>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/editing-opacity-blending-and-shader/">
+              editing opacity, blending and shader
+             </a>
+            </li>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/create-texture-animated-3d-models/">
+              create texture animated 3D models
+             </a>
+            </li>
+            <li>
+             <span class="in-out">
+             </span>
+             <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/how-to-use-3d-model-converter/positioning-3d-model/">
+              positioning  3D model
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/3d-content-creation/3d-model-converter-copy/model-converter-release-history/">
+            Model Converter Release History
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/3d-content-creation/blender-addon/">
+          Blender add-on
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/tutorials-tools/">
+        Tutorials &amp; Tools
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/create-simple-vision-layer/">
+          Create a simple vision layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/create-simple-geo-location-layer/">
+          Create a simple Geo-location layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-with-actions/">
+          Layer with Actions
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-1d-icons-2d-images-and-3d-objects/">
+          Layer with 1d icons, 2d images and 3d objects
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/layer-filter-settings/">
+          layer with filter settings
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/placing-pois-evenly-relative-users-current-location/">
+          Placing POis evenly relative to user's current location
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/add-animations-layer/">
+          Add animations to a layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/implement-user-authentication-layer/">
+          Implement user authentication in a layer
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/tutorials-tools/third-party/">
+          Third Party Tutorials &amp; Tools
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <span class="in-out">
+       </span>
+       <a href="/documentation/browser/archived/">
+        Archived
+       </a>
+       <ul>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/changes-83/">
+          API v8.3 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/getpois-response/">
+          GetPOIs Response v7.1
+         </a>
+         <ul>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/hotspots/">
+            hotspots
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/actions/">
+            actions
+           </a>
+          </li>
+          <li>
+           <span class="in-out">
+           </span>
+           <a href="/documentation/browser/archived/getpois-response/animations/">
+            animations
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/changes-71/">
+          API v7.1 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/api-v70-changes/">
+          API v7.0 Changes
+         </a>
+        </li>
+        <li>
+         <span class="in-out">
+         </span>
+         <a href="/documentation/browser/archived/getpois-response-v62/">
+          GetPOIs Response v6.2
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </nav>
+   </aside>
+   <article>
+    <h1>
+     hotspots
+    </h1>
+    <p class="g-notice-yellow">
+     Please NOTE that this documentation describes the getPOIs API v8.3. The API v8.3 is backward compatible with previous versions of the Layar Reality Browser (v7.0 and higher on Android and iPhone).
+    </p>
+    <img src="http://custom.layar.nl/~ioannis/tests/Layer%20API%20JSON%20graph_hotspot.png" usemap="#image-map"/>
+    <map name="image-map">
+     <area alt="id" coords="259,19,420,36" href="#hotspots-id" shape="rect" title="id">
+     </area>
+     <area alt="anchor" coords="263,45,414,59" href="#hotspots-anchor" shape="rect" title="anchor">
+     </area>
+     <area alt="text" coords="257,184,424,196" href="#hotspots-text" shape="rect" title="text">
+     </area>
+     <area alt="actions" coords="258,210,427,226" href="#root-actions" shape="rect" title="actions">
+     </area>
+     <area alt="imageURL" coords="260,236,416,252" href="#hotspots-imageURL" shape="rect" title="imageURL">
+     </area>
+     <area alt="showSmallBiw" coords="258,265,428,279" href="#hotspots-showSmallBiw" shape="rect" title="showSmallBiw">
+     </area>
+     <area alt="showBiwOnClick" coords="257,286,423,304" href="#hotspots-showBiwOnClick" shape="rect" title="showBiwOnClick">
+     </area>
+     <area alt="biwStyle" coords="255,313,425,331" href="#hotspots-biwStyle" shape="rect" title="biwStyle">
+     </area>
+     <area alt="icon" coords="256,343,426,357" href="#hotspots-icon" shape="rect" title="icon">
+     </area>
+     <area alt="transform" coords="259,414,413,432" href="#hotspots-transform" shape="rect" title="transform">
+     </area>
+     <area alt="aniamtions" coords="259,551,420,565" href="#hotspots-animations" shape="rect" title="aniamtions">
+     </area>
+     <area alt="inFocus" coords="259,578,422,588" href="#hotspots-inFocus" shape="rect" title="inFocus">
+     </area>
+     <area alt="handlers" coords="257,668,418,684" href="#hotspots-handlers" shape="rect" title="handlers">
+     </area>
+     <h3>
+      JSON Response - hotspots object
+     </h3>
+     <table id="hotspots-id">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          id
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th style="width: 100%;">
+         The unique id for the POI
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v2.1
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         mandatory
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         The unique id which identifies a POI in the getPOIs response. This is used to track the POIs when refreshing the layer.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"id" : "ae22826e16829a6f"</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-anchor">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          anchor
+         </tt>
+        </th>
+        <th>
+         Type: string or json dictionary
+        </th>
+        <th>
+         Placement of the POI.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v6.0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         mandatory
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         Placement of the POI. Can either be a geolocation or the key of a reference image in Layar Vision. For geolocation, alt is optional but lat and lon are mandatory.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"anchor": { "referenceImage": "myFirstImage" }
+"anchor": { "geolocation": { "lat": 52.3, "lon": 4.5 } }
+"anchor": "geo:52.3,4.5"</pre>
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-anchor-geolocation">
+         <tt>
+          geolocation
+         </tt>
+        </th>
+        <th>
+         json dictionary
+        </th>
+        <th>
+         The geo coordinates of a POI.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.anchor
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         The geo location coordinates of a POI, alt is optional but lat and lon are mandatory.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre> "geolocation": { "lat": 52.3, "lon": 4.5, "alt": 20 }</pre>
+        </td>
+       </tr>
+       <tr>
+        <td id="hotspots-anchor-geolocation-lat">
+         <strong>
+          <tt>
+           lat
+          </tt>
+         </strong>
+        </td>
+        <td>
+         decimal
+        </td>
+        <td>
+         The decimal GPS coordinate value of the latitude for the POI.
+        </td>
+       </tr>
+       <tr>
+        <td id="hotspots-anchor-geolocation-lon">
+         <strong>
+          <tt>
+           lon
+          </tt>
+         </strong>
+        </td>
+        <td>
+         decimal
+        </td>
+        <td>
+         The decimal GPS coordinate value of the longitude for the POI.
+        </td>
+       </tr>
+       <tr>
+        <td id="hotspots-anchor-geolocation-alt">
+         <strong>
+          <tt>
+           alt
+          </tt>
+         </strong>
+        </td>
+        <td>
+         decimal
+        </td>
+        <td>
+         The decimal GPS coordinate value of the altitude for the POI.
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-anchor-referenceImage">
+         <tt>
+          referenceImage
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         the key of a reference image.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.anchor
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         The image key of the reference image uploaded to the publishing site.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"referenceImage": "myFirstImage"</pre>
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-anchor-geolocation-string">
+         <tt>
+          geolocation
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         The geo coordinates of a User.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v8.3
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.anchor
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Fixed Value:
+         </strong>
+        </td>
+        <td colspan="3">
+         user
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         This is mostly used when POIs are tied to user's location (experience domes)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre> "geolocation":  "user" </pre>
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-anchor-poi">
+         <tt>
+          poi
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         The id of a POI.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v8.3
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.anchor
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         Support of POI anchors was introduced in 8.3 Users can attach one poi on another one by defining it's id as POI value.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre> "anchor": { "poi": my_poi_id }</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-text">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          text
+         </tt>
+        </th>
+        <th>
+         json dictionary
+        </th>
+        <th>
+         Geo Layer Only: Descriptive text about the POI displayed in the BIW.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v6.0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         mandatory for Geo layer/
+         <em>
+          deprecated for Vision layer
+         </em>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         For Geo layers, each POI has a brief information widget (BIW) which can be used to provide some text to describe the POI (no HTML is supported). It contains three parameters, title, description and footnote. The structure of the "text" object looks like follows:
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"text": {
+  "title": "Layar office",
+  "description": "The location of the Layar HQ in Amsterdam",
+  "footnote": "Powered by Layar" 
+}</pre>
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-text-title">
+         <tt>
+          title
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         The title of the POI
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         mandatory
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.text
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         This is the first line in the BIW dialog on the client. It has larger font and uses the Banner text color defined under the "Look &amp; feel" tab of the publishing site. The recommended maximum string length is 60 characters and it will be wrapped over 2 lines.
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-text-description">
+         <tt>
+          description
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         the main content of the BIW.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         null
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.text
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         Some text can be used to explain the POI. It has normal font and uses the BIW Text Color defined under the "Look &amp; feel" tab of the publishing site. The recommended maximum string length is 140 characters and it will be wrapped over 3 lines.
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-text-footnote">
+         <tt>
+          footnote
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         The last line in the BIW.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         null
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.text
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         One line of string at the bottom part of the BIW. It has small font and uses the BIW Title Color defined under "Look &amp; feel" tab of the publishing site. The recommended maximum string length is 45 characters without wrapping. Extra characters will be cut off on the screen.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="root-actions">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          actions
+         </tt>
+        </th>
+        <th>
+         array of action objects
+        </th>
+        <th>
+         Defines actions on POI level.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v2.1; modified in later API versions.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         empty array, []
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         This enables actions on the POI level. Each POI can have its own actions. They will appear on the expanded BIW dialog. See details on the
+         <a href="/documentation/browser/archived/getpois-response/actions/">
+          actions
+         </a>
+         page.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"actions": [{ 
+  "contentType":"text/plain",  
+  "method":"GET",    
+  "uri":"http://mylayer.com/account/?online=true&amp;",  
+  "params": ["lat","lon"],  
+  "label":"Go online",  
+  "activityType":3}]</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-imageURL">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          imageURL
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         Geo Layer Only: an image displayed in the BIW of a POI.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v2.1
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional for Geo layer/
+         <em>
+          deprecated for Vision layer
+         </em>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         null
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         The location of the image to be displayed inside the BIW. If the image is too large, it will be resized to fit within a bounding box of 100x75 pixels, preserving aspect ratio.
+         <strong>
+          NOTE
+         </strong>
+         : the image file size should be smaller than 100kb, otherwise, the image will not be loaded.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"imageURL" : "http:\/\/94.100.16.70\/1790001\/2346232\/1344536_5_7u7.jpeg"</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-showSmallBiw">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          showSmallBiw
+         </tt>
+        </th>
+        <th>
+         boolean
+        </th>
+        <th>
+         Geo Layer Only: decides whether a small BIW dialog should be shown
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v4.0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional for Geo layer /
+         <em>
+          deprecated for Vision layer
+         </em>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         true
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         This tells the layar client whether or not a small BIW (the one at the bottom of the screen) should be shown when the POI is in focus.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"showSmallBiw" : false</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-showBiwOnClick">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          showBiwOnClick
+         </tt>
+        </th>
+        <th>
+         boolean
+        </th>
+        <th>
+         Geo Layer Only: decides whether a detailed BIW dialog together with actions list should be shown
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v4.0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional for Geo layer /
+         <em>
+          deprecated for Vision layer
+         </em>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         true
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         This tells the client whether or not a detailed BIW (the big one in the middle of the screen) should be shown when the user clicks on the POI or on the small BIW. If the value is false, the first action from the list of actions will be fired instead.
+         <strong>
+          NOTE:
+         </strong>
+         This means there is no way for the user to manually access the actions. The first one is triggered by a user click, one other action can be activated by using autoTrigger settings. More than 2 actions won't be used.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"showBiwOnClick": false</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-biwStyle">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          biwStyle
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         Geo Layer Only: specifies the BIW display style.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v6.0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional for Geo layer /
+         <em>
+          deprecated for Vision layer
+         </em>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         "classic"
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         This tells the client which BIW style should be used, classic or collapsed. "classic" style displays the entire "text" object when a POI is in focus while "collapsed" style only shows the text.title parameter. This POI level "biwStyle" will overrule the "biwStyle" defined on the layer level.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"biwStyle": "collapsed"</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-icon">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          icon
+         </tt>
+        </th>
+        <th>
+         json dictionary
+        </th>
+        <th>
+         Geo Layer Only: defines the CIW icon representation for a POI in the Camera view.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v6.0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional for Geo layer/
+         <em>
+          deprecated for Vision layer
+         </em>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         A POI can be represented by an icon defined in the "url" parameter below or the POI icon sets defined on the publishing site. If a few POIs serve the same kind of purpose and can be represented by the same icon set, it is recommended to use the CIW icon sets. You can check
+         <a href="https://dashboard.layar.com/documentation/browser/howtos/2d-and-3d-objects/">
+          here
+         </a>
+         to learn more on how Layar client renders POIs in the Camera view.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"icon": {
+  "url": "http://example.com/icon.png",
+  "type": 2  // this value corresponds to the POI icon set defined in the publishing environment
+}</pre>
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-icon-url">
+         <tt>
+          url
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         The URL to the icon image
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         null
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.icon
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         Each POI can be represented by an image defined in this url
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-icon-type">
+         <tt>
+          type
+         </tt>
+        </th>
+        <th>
+         integer
+        </th>
+        <th>
+         The type of CIW set
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.icon
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         On the publishing site, CIW icon set can be defined under the "Look &amp; feel" tab. Each CIW icon set will have a type value. In the JSON response, you can fill in the right type value to determine which CIW icon set should be used to represent a POI.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-transform">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          transform
+         </tt>
+        </th>
+        <th>
+         json dictionary
+        </th>
+        <th colspan="3">
+         Enhanced control of positioning objects.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Introduced API:
+         </strong>
+        </td>
+        <td colspan="3">
+         v3.0; modified in API v6.0 and 8.3
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         A few factors can be used to transform objects in Camera view, for instance scale, rotation and translate.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"transform":  {
+  "rotate": {  
+     "rel": true,    
+     "axis": { "x": 0, "y": 0, "z": 1 },
+     "angle": 0   
+  },  
+  "translate": { "x": 0, "y": -0.075, "z": 0 },  
+  "scale": 0.01
+}</pre>
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-transform-rotate">
+         <tt>
+          rotate
+         </tt>
+        </th>
+        <th>
+         json dictionary
+        </th>
+        <th colspan="3">
+         Rotates object over the given axis in its own local coordinate system.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.transform
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"rotate": {  
+  "rel": true,    
+  "axis": { "x": 0, "y": 0, "z": 1 },
+  "angle": 0   
+}</pre>
+        </td>
+       </tr>
+       <tr>
+        <td id="hotspots-transform-rotate-rel">
+         <strong>
+          <tt>
+           rel
+          </tt>
+         </strong>
+        </td>
+        <td>
+         boolean,
+        </td>
+        <td valign="top">
+         optional, false by default
+        </td>
+        <td>
+         Means the rotation is relative to the user around z-axis. On layar client, "axis" and "angle" are applied after "rel" has been applied. If "rel" is set to true, the Geo-location or Vision enabled POI will rotate over the Z-axis to face the user first, then it will rotate around the defined "axis" with a certain degrees defined in "angle" parameter. From then on, the rotation is relative to the user around z-axis.
+        </td>
+       </tr>
+       <tr>
+        <td id="hotspots-transform-rotate-axis">
+         <strong>
+          <tt>
+           axis
+          </tt>
+         </strong>
+        </td>
+        <td>
+         json dictionary
+        </td>
+        <td valign="top">
+         mandatory
+        </td>
+        <td>
+         Each axis has a type of float.
+        </td>
+       </tr>
+       <tr>
+        <td id="hotspots-transform-rotate-angle">
+         <strong>
+          <tt>
+           angle
+          </tt>
+         </strong>
+        </td>
+        <td>
+         decimal
+        </td>
+        <td valign="top">
+         mandatory
+        </td>
+        <td>
+         Rotation angle in degrees to rotate the object around the z-axis. The rotation direction is determined by the usual right-hand thumb rule (positive angle: counter clock-wise in the x-y plane).
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-transform-translate">
+         <tt>
+          translate
+         </tt>
+        </th>
+        <th>
+         json dictionary
+        </th>
+        <th colspan="3">
+         Translate the POI to another location from its anchor point.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional. If used, all the axes are mandatory and the type should be decimal.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.transform
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         This can be used to position the object at another location within the coordinate system. The distance unit is meter. NOTE that "transform.translate.z" parameter is applied to object's altitude. If you want to place a POI always relative to user's latitude (object's initial anchor point), do not provide "alt" in anchor dictionary in the getPOI response and just specify this "transform.translate.z" parameter.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"translate": { 
+  "x": 0, 
+  "y": -0.075, 
+  "z": 0 
+} </pre>
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-transform-scale">
+         <tt>
+          scale
+         </tt>
+        </th>
+        <th>
+         decimal
+        </th>
+        <th colspan="3">
+         The multiplication factor to scale the object. (Uniform)
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         1.0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.scale
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"scale": { 2.0} </pre>
+        </td>
+       </tr>
+       <tr>
+        <th id="hotspots-transform-scale">
+         <tt>
+          scale
+         </tt>
+        </th>
+        <th>
+         json dictionary
+        </th>
+        <th colspan="3">
+         The multiplication factor to scale the object. (Non Uniform)
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional.If used, all the axes are mandatory and the type should be decimal.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         1.0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots.scale
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"scale": { 
+  "x": 1.0, 
+  "y": 1.0, <br/>  "z": 1.0 <br/>} </pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-animations">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          animations
+         </tt>
+        </th>
+        <th>
+         string or json dictionary
+        </th>
+        <th>
+         Animations can be applied to a POI.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         Optional
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         null
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         This defines the animation for this specific POI. If defined, it overrides the default animations definition on layer root level. Please read
+         <a href="/documentation/browser/archived/getpois-response/animations/">
+          here
+         </a>
+         for detailed specification.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"animations": {
+  "onClick": [ 
+    {
+      "interpolation": "overshoot",
+      "to": 2,
+      "length": 2000,
+      "from": 0,
+      "delay": 0,
+      "repeat": false,
+      "type": "scale",
+      "axis": {  "y": 1, "x": 1, "z": 1 },
+      "persist": true
+   }]
+}</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-inFocus">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          inFocus
+         </tt>
+        </th>
+        <th>
+         boolean
+        </th>
+        <th>
+         Geo Layer Only: specifies whether a POI should be locked initially in the AR view.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional for Geo layer/
+         <em>
+          deprecated for Vision layer
+         </em>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         false
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.hotspots
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         A value of True indicates to the client that this particular POI should be locked directly when the POIs are shown. Only one POI can have this flag set to true in the getPOIs response. If more than one POI has this value set to True, the client will pick one (no guarantee which). By default, it is false.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"inFocus": true</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table id="hotspots-handlers">
+      <tbody>
+       <tr>
+        <th>
+         <tt>
+          handlers
+         </tt>
+        </th>
+        <th>
+         string
+        </th>
+        <th>
+         Allows for actions or POI updates to be triggered at certain events.
+        </th>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Mandatory/Optional:
+         </strong>
+        </td>
+        <td colspan="3">
+         optional
+         <em>
+          the event handler should be defined
+         </em>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Default value:
+         </strong>
+        </td>
+        <td colspan="3">
+         false
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Path:
+         </strong>
+        </td>
+        <td colspan="3">
+         root.handlers
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Detailed Description:
+         </strong>
+        </td>
+        <td colspan="3">
+         Contains the reaction of the handler. Enables developers to add more complex functionality to their experiences, e.g. sequencing of videos, but also dynamic content without server interaction.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <strong>
+          Example:
+         </strong>
+        </td>
+        <td colspan="3">
+         <pre>"handlers": {	"doSomething":{</pre>
+         <pre>		 "update":{			"hotspots":[{...}]	
+                                   }}</pre>
+         <pre>}</pre>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <h4>
+      Complete JSON Response Example
+     </h4>
+     <ul>
+      <li>
+       <strong>
+        When Vision POIs are returned
+       </strong>
+      </li>
+     </ul>
+     <pre>{"hotspots": [{
+   "id": "test_1",
+   "anchor": { "referenceImage": "my_reference_image",  
+   "actions": [{<br/>     "uri": "tel:215-862-1996",<br/>     "autoTrigger": true,<br/>     "autoTriggerOnly": true,<br/>     "contentType": "application\/vnd.layar.internal",<br/>     "method": "POST",<br/>     "showActivity": false,<br/>     "activityMessage": "calling layar"<br/>    }], 
+    "object": {<br/>      "contentType": "model/vnd.layar.l3d",<br/>      "url": "http://example.com/example_full.l3d",   <br/>      "size": 2<br/>    },<br/>    "transform":  {<br/>      "rotate": {  <br/>      "rel": true,    <br/>      "axis": { "x": 0, "y": 0, "z": 1 },<br/>      "angle": 0   },  <br/>      "translate": { "x": 0, "y": -0.075, "z": 0 },  <br/>      "scale": 0.01<br/>    } 
+ }], 
+ "layer": "snowy4",
+ "errorString": "ok", 
+ "errorCode": 0
+} 
+    </pre>
+     <ul>
+      <li>
+       <strong>
+        When Geo-location POIs are returned
+       </strong>
+      </li>
+     </ul>
+     <pre>{"hotspots": [{
+   "id": "test_1",
+   "anchor": { "geolocation": { "lat": 52.3729, "lon": 4.93 } },  
+   "text": {
+     "title": "The Layar Office", 
+     "description": "The Location of the Layar Office", 
+     "footnote": "Powered by Layar" },
+   "imageURL": "http:\/\/custom.layar.nl\/layarimage.jpeg",
+   "actions": [{
+     "label": "Contact Layar",
+     "uri": "http:\/\/layar.com\/company\/contact\/",
+     "autoTriggerRange": 5000,
+     "autoTriggerOnly": true,
+     "contentType": "text\/plain",
+     "method": "GET",
+     "activityType": 1,
+     "params": [
+       "lat",
+       "lon"
+     ],
+     "closeBiw": false,
+     "showActivity": true,
+     "activityMessage": "contact layar"
+    }]
+ }], 
+ "layer": "snowy4",
+ "errorString": "ok", 
+ "errorCode": 0
+} 
+    </pre>
+     <div class="related">
+      <h3>
+       Related topics
+      </h3>
+      <p>
+       <a href="/documentation/browser/archived/getpois-response/">
+        Layar Developer API - GetPOIs Response
+       </a>
+       <a href="https://www.layar.com/documentation/browser/archived/getpois-response/actions/">
+        Layar Developer API - GetPOIs Response - actions
+       </a>
+       <a href="/documentation/browser/archived/getpois-response/animations/">
+        Layar Developer API - GetPOIs Response - animations
+       </a>
+       <a href="/documentation/browser/howtos/geolocation-layer/">
+        Howto - Geolocation layer explanation
+       </a>
+       <a href="/documentation/browser/tutorials-tools/create-simple-geo-location-layer/">
+        First Tutorial - Create a simple Geo-location layer
+       </a>
+      </p>
+     </div>
+    </map>
+   </article>
+  </div>
+  <footer>
+   <span class="copyright">
+    © 2017 Layar, All Rights Reserved
+   </span>
+   <a class="feedback" href="http://devsupport.layar.com/">
+    Dev Support
+   </a>
+  </footer>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jqbrowser.5d3867015613.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/jquery-syntaxhighlighter/js/jquery-syntaxhighlighter.min.be0a493e40d1.js">
+  </script>
+  <script src="https://d2nd2hlya8il3c.cloudfront.net/static/documentation/js/documentation.a223dad8bb9b.js">
+  </script>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-WC63SX" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WC63SX');
+  </script>
+  <!-- End Google Tag Manager -->
+ </body>
+</html>

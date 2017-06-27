@@ -1,0 +1,38 @@
+<html>
+ <head>
+ </head>
+ <body>
+  POST https://api.sandbox.ebay.com/sell/account/v1/payment_policy
+
+{
+  "categoryTypes": [
+    {
+      "name": "ALL_EXCLUDING_MOTORS_VEHICLES",
+      "default": true
+    }
+  ],
+  "name": "default payment policy",
+  "description": "Standard payment policy, PP &amp; CC payments",
+  "marketplaceId": "EBAY_US",
+  "immediatePay": false,
+  "paymentMethods": [
+    {
+      "paymentMethodType": "PAYPAL",
+      "recipientAccountReference": {
+        "referenceId": "lenrice@paypal.example.com",
+        "referenceType": "PAYPAL_EMAIL"
+      }
+    },
+    {
+      "paymentMethodType": "CREDIT_CARD",
+      "brands": [
+        "AMERICAN_EXPRESS",
+        "DISCOVER",
+        "MASTERCARD",
+        "VISA"
+      ]
+    }
+  ]
+}
+ </body>
+</html>

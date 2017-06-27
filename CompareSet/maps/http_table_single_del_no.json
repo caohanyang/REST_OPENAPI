@@ -1,0 +1,15 @@
+{
+  "basePath": "/maps/documentation/timezone/get-api-key",
+  "paths": {
+    "/": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "developers.google.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

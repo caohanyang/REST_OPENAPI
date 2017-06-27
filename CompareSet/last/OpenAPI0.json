@@ -1,0 +1,57 @@
+{
+  "basePath": "/2.0/",
+  "paths": {
+    "?method=user.getWeeklyChartList": {
+      "GET": {}
+    },
+
+    "?method=user.getRecentTracks": {
+      "GET": {}
+    },
+
+    "?method=user.getWeeklyTrackChart": {
+      "GET": {}
+    },
+    "?method=user.getTopTags": {
+      "GET": {}
+    },
+    "?method=user.getWeeklyAlbumChart": {
+      "GET": {}
+    },
+    "?method=user.getArtistTracks": {
+      "GET": {}
+    },
+
+    "?method=user.getWeeklyArtistChart": {
+      "GET": {}
+    },
+    "?method=user.getFriends": {
+      "GET": {}
+    },
+
+    "?method=user.getTopArtists": {
+      "GET": {}
+    },
+    "?method=user.getTopAlbums": {
+      "GET": {}
+    },
+
+
+    "?method=user.getLovedTracks": {
+      "GET": {}
+    },
+    "?method=user.getPersonalTags": {
+      "GET": {}
+    },
+    "?method=user.getTopTracks": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "ws.audioscrobbler.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,175 @@
+{
+  "paths": {
+    "http://4.bp.blogspot.com/-GAeMYT8SZoI/TtBTK209xMI/AAAAAAAAWts/5nmvpm": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "avatar_url",
+            "description": "string — URL to valid JPG/PNG/GIF image. URL will be converted into an image service link (http://i.groupme.com/....)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string — Name must be of the form FirstName LastName",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "email",
+            "description": "string — Email address. Must be in name@domain.com form.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "zip_code",
+            "description": "string — Zip code.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://example.com/bots/callback\",": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bot_id required",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "text required",
+            "description": "string",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture_url",
+            "description": "string — Image must be processed through image service .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {},
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bot_id required",
+            "description": "",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://i.groupme.com/123456789": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "results_id required",
+            "description": "string — This is the guid that's returned from an add request.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer — Page number",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer — Number of chats per page",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://i.groupme.com/123456789\",": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user required",
+            "description": "string — your user id.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "otherUser required",
+            "description": "string — user id of person you want to block.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/AVATAR\",": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "membership_id required",
+            "description": "string — Please note that this isn't the same as the user ID. In the members key in the group JSON, this is the id value, not the user_id .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/200x200.jpeg.abcdef\",": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "other_user_id required",
+            "description": "string — The other participant in the conversation.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "before_id",
+            "description": "string — Returns 20 messages created before the given message ID",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "since_id",
+            "description": "string — Returns 20 messages created after the given message ID",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "i.groupme.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

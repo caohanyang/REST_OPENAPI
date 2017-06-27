@@ -1,0 +1,52 @@
+{
+  "basePath": "/",
+  "paths": {
+    "gp/offer-listing/B00KOKTZLQ": {
+      "GET": {}
+    },
+    "reviews/iframe": {
+      "GET": {},
+      "Get": {}
+    },
+    "PlayStation-3-Dualshock-Wireless-Controller/dp/B0015AARJI%3FAWSAccessKeyId%3D": {
+      "GET": {}
+    },
+    "Journeys-Lifetime-Worlds-Greatest-Trips/dp/1426201257%3FAWSAccessKeyId%3D": {
+      "GET": {}
+    },
+    "Mammoth-Book-Tattoos-Lal-Hardy/dp/076243631X%3FAWSAccessKeyId%3D": {
+      "GET": {}
+    },
+    "gp/redirect.html": {
+      "GET": {},
+      "Get": {}
+    },
+    "Samsung-GT-P1010CWAXAR-Galaxy-Tab-Wi-Fi/dp/B004U9USEA%3FAWSAccessKeyId%3D": {
+      "GET": {}
+    },
+    "Settlers-Catan-Player-Extension/dp/B000W7JWYG%3FAWSAccessKeyId%3D": {
+      "GET": {}
+    },
+    "gp/cart/aws-merge.html": {
+      "GET": {},
+      "Get": {},
+      "put": {}
+    },
+    "Toy-Story-3-Tom-Hanks/dp/B00275EHJG%3FAWSAccessKeyId%3D": {
+      "GET": {}
+    },
+    "Bob-Dylans-Greatest-Hits/dp/B00136LUWW%3FAWSAccessKeyId%3D": {
+      "GET": {}
+    },
+    "Harry-Potter-Deathly-Hallows-Book/dp/0545139708%3FAWSAccessKeyId%3D": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.amazon.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

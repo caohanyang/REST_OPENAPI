@@ -1,0 +1,21 @@
+{
+  "basePath": "/books/v1",
+  "paths": {
+    "/mylibrary/bookshelves": {
+      "PUT": {},
+      "put": {}
+    },
+    "/": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,60 @@
+{
+  "basePath": "/bing/v5.0/search",
+  "paths": {
+    "/": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "The call succeeded.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "One of the query parameters is missing or not valid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "401",
+            "description": "The subscription key is missing or is not valid.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "403",
+            "description": "The user is authenticated (for example, used a valid subscription key) but they don’t have permission to the requested resource.\n\nIf the caller exceeded their queries per month quota, Bing may also return this status.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "410",
+            "description": "The request used HTTP instead of the HTTPS protocol. HTTPS is the only supported protocol.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "429",
+            "description": "The caller exceeded their queries per second quota.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "api.cognitive.microsoft.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

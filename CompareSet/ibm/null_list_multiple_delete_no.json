@@ -1,0 +1,76 @@
+{
+  "paths": {
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}/synonyms/{synonym}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}/synonyms": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}/examples": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/counterexamples": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}/examples/{text}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/message": {
+      "POST": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/counterexamples/{text}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/logs": {
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values": {
+      "POST": {},
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,29 @@
+<html>
+ <head>
+ </head>
+ <body>
+  PUT https://api.sandbox.ebay.com/sell/account/v1/return_policy/5487698000
+
+{
+  "name": "detailed return policy",
+  "description": "Policy specifies restocking fee and handling for remorse return items.",
+  "marketplaceId": "EBAY_US",
+  "categoryTypes": [
+    {
+      "name": "ALL_EXCLUDING_MOTORS_VEHICLES",
+      "default": "true"
+    }
+  ],
+  "returnsAccepted": true,
+  "returnPeriod": {
+    "value": 60,
+    "unit": "DAY"
+  },
+  "restockingFeePercentage": "10.0",
+  "refundMethod": "MONEY_BACK",
+  "returnMethod": "EXCHANGE",
+  "returnShippingCostPayer": "BUYER",
+  "returnInstructions": "Buyer pays for return shipping. Store credit for remorse returns."
+}
+ </body>
+</html>

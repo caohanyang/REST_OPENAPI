@@ -1,0 +1,60 @@
+{
+  "basePath": "/v2/search",
+  "paths": {
+    "/&current_page=1&per_page=50&sort=date_asc&start_date=2014-05-06..2014-11-06&exclude_children=true&api_key=xxxxxxx": {
+      "GET": {}
+    },
+    "/details": {
+      "post": {},
+      "GET": {}
+    },
+    "/Clinics": {
+      "POST": {}
+    },
+    "/2013&lengthOfStay=2&api_key=myAPIKey,": {
+      "GET": {}
+    },
+    "/campsites": {
+      "GET": {}
+    },
+    "/provincial": {
+      "GET": {}
+    },
+    "/campsiteSearch.do": {
+      "GET": {}
+    },
+    "/Service": {
+      "GET": {}
+    },
+    "/click.track": {
+      "GET": {}
+    },
+    "/campgrounds": {
+      "GET": {},
+      "Get": {}
+    },
+    "/api.amp.ac": {
+      "GET": {}
+    },
+    "/affiliates.": {
+      "GET": {}
+    },
+    "/Los_Angeles\",": {
+      "POST": {},
+      "get": {}
+    },
+    "/campgrou": {
+      "GET": {}
+    },
+    "/latlong": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.amp.active.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

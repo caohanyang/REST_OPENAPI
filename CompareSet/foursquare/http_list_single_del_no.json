@@ -1,0 +1,34 @@
+{
+  "paths": {
+    "https://api.foursquare.com/v2": {
+      "post": {},
+      "POST": {},
+      "Post": {},
+      "GET": {},
+      "del": {}
+    },
+    "https://swarmapp.com/c": {
+      "GET": {}
+    },
+    "http://nymag.com/listings": {
+      "GET": {}
+    },
+    "http://nyt.com": {
+      "POST": {}
+    },
+    "http://www.mercurylounge.com": {
+      "post": {},
+      "POST": {}
+    },
+    "http://your.site.com/path": {
+      "post": {},
+      "POST": {}
+    },
+    "http://blog.zagat.com/fast-food-survey-results-are-here": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

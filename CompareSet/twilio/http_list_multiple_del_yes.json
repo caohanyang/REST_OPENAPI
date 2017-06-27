@@ -1,0 +1,583 @@
+{
+  "paths": {
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CAe1644a7eed5088b159577c5802d8be38": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds/PNe905d7e6b410746a0fb08c57e5a186f3": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e": {
+      "post": {},
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ConnectApps": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AuthorizedConnectApps/CN47260e643654388faabe8aaa18ea6756": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CAe03b7cd806070d1f32bdb7f1046a41c0/Feedback": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings": {
+      "GET": {},
+      "get": {},
+      "put": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions/TR8c61027b709ffb038236612dc5af8723": {
+      "GET": {},
+      "get": {},
+      "del": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists/AL32a3c49700934481addd5ce1659f04d2": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.example.com/": {
+      "GET": {},
+      "geT": {},
+      "Get": {},
+      "get": {},
+      "put": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "https://demo.twilio.com/welcome": {
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "put": {}
+    },
+    "https://www.myapp.com/events": {
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "put": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/CredentialLists/CL32a3c49700934481addd5ce1659f04d2/Credentials/SC32a3c49700934481addd5ce1659f04d2": {
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "del": {}
+    },
+    "https://www.twilio.com/docs/libraries/csh": {
+      "GET": {},
+      "get": {}
+    },
+    "http://requestb.in/1234abcd'": {
+      "GET": {},
+      "Get": {}
+    },
+    "http.NameValuePair": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.mycompany.com": {
+      "post": {},
+      "POST": {}
+    },
+    "https://www.twilio.com/docs/libr": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec/Media/ME557ce644e5ab84fa21cc21112e22c485": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.example.com/sipdial.xml": {
+      "GET": {},
+      "Get": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/GB/Mobile": {
+      "GET": {},
+      "get": {}
+    },
+    "https://www.example.com/monthly-usage-trigger": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "Get": {},
+      "put": {}
+    },
+    "http://demo.twilio.com/docs/sms.xml": {
+      "GET": {},
+      "get": {},
+      "Get": {},
+      "put": {}
+    },
+    "/": {
+      "DEL": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists/AL32a3c49700934481addd5ce1659f04d2/IpAddresses": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/ShortCodes": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages/SM800f449d0399ed014aae2bcc0cc2f2ec": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX": {
+      "POST": {},
+      "GET": {},
+      "Get": {},
+      "get": {}
+    },
+    "https://handler.twilio.com/twiml/EH8ccdbd7f0b8fe34357da8ce87ebe5a16'": {
+      "Get": {},
+      "DEL": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a": {
+      "POST": {},
+      "Get": {},
+      "del": {},
+      "PUT": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ConnectApps/CNb989fdd207b04d16aee578018ef5fd93": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/Daily": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.twilio.com/docs/errors/21215": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe4632a3c49700934481addd5ce1659/Participants/CA386025c9bf5d6052a1d1ea42b4d16662": {
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "del": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/CredentialLists/CL32a3c49700934481addd5ce1659f04d2/Credentials": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.example.com": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com": {
+      "POST": {},
+      "DEL": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/CredentialLists/CL32a3c49700934481addd5ce1659f04d2": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACa9b8c7d6e5f43120a9b8c7d6e5f43120/Messages/SM1f2e3d4c5b6a70891f2e3d4c5b6a7089/Feedback": {
+      "GET": {}
+    },
+    "https://messaging.twilio.com/v1/Service": {
+      "DEL": {}
+    },
+    "ilio.com/2010-04-01/Accounts/AC25e16e9a716a4a1786a7c83f58e30482/Conferences/CF203597f9bc241da2c1e9387946b89a63/Participants/'": {
+      "POST": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU5ef8732a3c49700934481addd5ce1659/Members": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.tommypi.com": {
+      "post": {},
+      "POST": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tokens": {
+      "GET": {},
+      "get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88dccf16f8859a1a8b25'": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed014aae2bcc0cc2f2ec": {
+      "post": {},
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists/AL32a3c49700934481addd5ce1659f04d2/IpAddresses/IP32a3c49700934481addd5ce1659f04d2": {
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "del": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU5ef8732a3c49700934481addd5ce1659/Members/CA386025c9bf5d6052a1d1ea42b4d16662": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.example.com/feedback": {
+      "GET": {},
+      "get": {},
+      "Get": {},
+      "put": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/US/Local": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AuthorizedConnectApps": {
+      "GET": {},
+      "get": {}
+    },
+    "http.message.BasicNameValuePair": {
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "put": {}
+    },
+    "http://demo.twilio.com/docs/voice.xml'": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://demo.twilio.com/sipdial.xml": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe4632a3c49700934481addd5ce1659/Participants": {
+      "GET": {},
+      "get": {}
+    },
+    "https://messaging.twilio.com/v1/Servi": {
+      "DEL": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Keys": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/US/TollFree": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers/UT33c6aeeba34e48f38d6899ea5b765ad4": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe46ff1274e283f7e3ac1df0072ab39": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/IpAccessControlListMappings/AL95a47094615fe05b7c17e62a7877836c": {
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "del": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU5ef8732a3c49700934481addd5ce1659": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/Today": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AvailablePhoneNumbers/GB/Local": {
+      "GET": {},
+      "get": {}
+    },
+    "https://www.twilio.com/console": {
+      "DEL": {},
+      "del": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders/AIc781610ec0b3400c9e0cab8e757da937": {
+      "POST": {},
+      "GET": {},
+      "DEL": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy/IncomingPhoneNumbers/PNyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences": {
+      "GET": {},
+      "get": {}
+    },
+    "http://demo.twilio.com/docs/sms.xml'": {
+      "PUT": {},
+      "put": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA42ed11f93dc08b952027ffbc406d0868": {
+      "GET": {},
+      "get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN557ce644e5ab84fa21cc21112e22c485'": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls": {
+      "GET": {},
+      "get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders/AIc781610ec0b3400c9e0cab8e757da937'": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/AC25e16e9a716a4a1786a7c83f58e30482/Conferences/CF203597f9bc241da2c1e9387946b89a63/Participants/CA386025c9bf5d6052a1d1ea42b4d16662": {
+      "POST": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.twilio.com/docs/errors/21201": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://www.twilio.com/docs/li": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.twilio.com/docs/errors/21602": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88dccf16f8859a1a8b25": {
+      "POST": {},
+      "del": {},
+      "put": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/FeedbackSummary/FSa346467ca321c71dbd5e12f627deb854": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes'": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "http://twimlets.com/message": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/LastMonth": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/CredentialListMappings": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "http://www.google.com": {
+      "POST": {}
+    },
+    "https://www.mycompany.com/connect_deauthorize": {
+      "post": {},
+      "POST": {}
+    },
+    "http://demo.twilio.com/docs/voice.xml": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "Get": {},
+      "put": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses": {
+      "GET": {},
+      "get": {}
+    },
+    "http://myapp.com/awesome'": {
+      "POST": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions": {
+      "GET": {},
+      "get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers'": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU32a3c49700934481addd5ce1659f04d2": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c49700934481addd5ce1659f04d2/CredentialListMappings/CL32a3c49700934481addd5ce1659f04d2": {
+      "Get": {},
+      "DEL": {},
+      "del": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Keys/SK2a0747eba6abf96b7e3c3ff0b4530f6e": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses/AD2a0747eba6abf96b7e3c3ff0b4530f6e/DependentPhoneNumbers": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages": {
+      "POST": {},
+      "GET": {},
+      "get": {}
+    },
+    "https://dundermifflin.example.com/twilio/app.php": {
+      "POST": {},
+      "GET": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/CredentialLists": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts": {
+      "GET": {},
+      "get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/ShortCodes/SC6b20cb705c1e8f00210049b20b70fce2": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds/PNe536d32a3c49700934481addd5ce1659": {
+      "GET": {},
+      "Get": {},
+      "del": {}
+    },
+    "ilio.com/2010-04-01/Accounts/AC22ef5e6f64bf40a6ac84123ae4fb9fa7/Calls": {
+      "POST": {}
+    },
+    "https://www.example.com'": {
+      "POST": {}
+    },
+    "https://demo.twilio.com/welcome'": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://www.twilio.com/docs/errors/21421": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e": {
+      "POST": {},
+      "put": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RE557ce644e5ab84fa21cc21112e22c485": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://www.twilio.com/docs/librar": {
+      "GET": {},
+      "get": {}
+    },
+    "http://www.example.com/sipdial.xml'": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2": {
+      "DEL": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Applications": {
+      "GET": {},
+      "get": {}
+    },
+    "http://smsapp.com/fallback": {
+      "GET": {}
+    },
+    "https://www.twilio.com/docs/libraries/csharp#installation": {
+      "GET": {},
+      "Get": {},
+      "Del": {}
+    },
+    "http://reques": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN557ce644e5ab84fa21cc21112e22c485": {
+      "GET": {},
+      "del": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders'": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Applications/AP2a0747eba6abf96b7e3c3ff0b4530f6e": {
+      "GET": {},
+      "get": {}
+    },
+    "http://m.twil.io": {
+      "GET": {}
+    },
+    "https://www.myapp.com/events'": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a'": {
+      "DEL": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA8dfedb55c129dd4d6bd1f59af9d11080/Recordings": {
+      "GET": {},
+      "Get": {}
+    },
+    "ilio.com/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers": {
+      "GET": {},
+      "get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.tw",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

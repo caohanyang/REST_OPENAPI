@@ -1,0 +1,144 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/tips/49f083e770c603bbe81f8eb4": {
+      "DELETE": {}
+    },
+    "https://www.swarmapp.com/c/fcP5m3yn7AL": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The check-in associated with this shortId.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://foursquare.com/user": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user",
+            "description": "A user .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://irs0.4sqi.net/img/general": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "description": "A unique string identifier for this photo. ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "createdAt",
+            "description": "Seconds since epoch when this photo was created. ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "prefix",
+            "description": "Start of the URL for this photo. ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "suffix",
+            "description": "Ending of the URL for this photo.\n\nTo assemble a resolvable photo URL, take prefix + size + suffix , e.g. https://irs0.4sqi.net/img/general/ 300x500 /2341723_vt1Kr-SfmRmdge-M7b4KNgX2_PHElyVbYL65pMnxEQw.jpg .\n\nsize can be one of the following, where XX or YY is one of 36 , 100 , 300 , or 500 . XXxYY\noriginal : the original photo's size\ncapXX : cap the photo with a width or height of XX (whichever is larger). Scales the other, smaller dimension proportionally\nwidthXX : forces the width to be XX and scales the height proportionally\nheightYY : forces the height to be YY and scales the width proportionally\n✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "visibility",
+            "description": "Can be one of \"public\" (everybody can see, including on the venue page), \"friends\" (only the poster's friends can see), or \"private\" (only the poster can see) ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "If present, the name and url for the application that created this photo. ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "user",
+            "description": "If the user is not clear from context, then a compact user is present. ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "venue",
+            "description": "If the venue is not clear from context, then a compact venue is present. ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "tip",
+            "description": "If the tip is not clear from context, then a compact tip is present. ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "If the checkin is not clear from context, then a compact checkin is present. ○",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/": {
+      "POST": {},
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venue",
+            "description": "A complete venue .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "An array of compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "delete": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

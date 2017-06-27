@@ -1,0 +1,22 @@
+{
+  "basePath": "/123456789",
+  "paths": {
+    "\",": {
+      "POST": {},
+      "GET": {}
+    },
+    "https://api.groupme.com/v3/groups": {
+      "POST": {}
+    },
+    "/": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "i.groupme.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

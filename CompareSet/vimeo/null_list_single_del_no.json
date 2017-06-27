@@ -1,0 +1,20 @@
+{
+  "paths": {
+    "/me/likes/[video_id]": {
+      "PUT": {}
+    },
+    "/videos/[video_id]": {
+      "PATCH": {}
+    },
+    "/me/albums": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,177 @@
+{
+  "basePath": "/2.0/",
+  "paths": {
+    "?method=user.getWeeklyChartList": {
+      "GET": {}
+    },
+    "?method=artist.removeTag": {
+      "GET": {}
+    },
+    "?method=auth.getMobileSession": {
+      "GET": {}
+    },
+    "?method=tag.getWeeklyChartList": {
+      "GET": {}
+    },
+    "?method=track.getInfo": {
+      "GET": {}
+    },
+    "?method=track.getSimilar": {
+      "GET": {}
+    },
+    "?method=user.getRecentTracks": {
+      "GET": {}
+    },
+    "?method=album.getInfo": {
+      "GET": {}
+    },
+    "?method=tag.getTopAlbums": {
+      "GET": {}
+    },
+    "?method=chart.getTopTracks": {
+      "GET": {}
+    },
+    "?method=album.addTags": {
+      "POST": {}
+    },
+    "?method=artist.getCorrection": {
+      "GET": {}
+    },
+    "?method=tag.getTopTags": {
+      "GET": {}
+    },
+    "?method=track.getCorrection": {
+      "GET": {}
+    },
+    "?method=artist.search": {
+      "GET": {}
+    },
+    "?method=user.getInfo": {
+      "GET": {}
+    },
+    "?method=artist.addTags": {
+      "POST": {}
+    },
+    "?method=track.addTags": {
+      "POST": {}
+    },
+    "?method=tag.getSimilar": {
+      "GET": {}
+    },
+    "?method=track.search": {
+      "GET": {}
+    },
+    "?method=tag.getInfo": {
+      "GET": {}
+    },
+    "?method=track.removeTag": {
+      "GET": {}
+    },
+    "?method=auth.getSession": {
+      "GET": {}
+    },
+    "?method=user.getWeeklyTrackChart": {
+      "GET": {}
+    },
+    "?method=album.getTopTags": {
+      "GET": {}
+    },
+    "?method=chart.getTopTags": {
+      "GET": {}
+    },
+    "?method=user.getTopTags": {
+      "GET": {}
+    },
+    "?method=album.removeTag": {
+      "GET": {}
+    },
+    "?method=geo.getTopArtists": {
+      "GET": {}
+    },
+    "?method=album.getTags": {
+      "GET": {}
+    },
+    "?method=user.getWeeklyAlbumChart": {
+      "GET": {}
+    },
+    "?method=user.getArtistTracks": {
+      "GET": {}
+    },
+    "?method=geo.getTopTracks": {
+      "GET": {}
+    },
+    "?method=artist.getTopAlbums": {
+      "GET": {}
+    },
+    "?method=user.getWeeklyArtistChart": {
+      "GET": {}
+    },
+    "?method=chart.getTopArtists": {
+      "GET": {}
+    },
+    "?method=user.getFriends": {
+      "GET": {}
+    },
+    "?method=tag.getTopArtists": {
+      "GET": {}
+    },
+    "?method=user.getTopArtists": {
+      "GET": {}
+    },
+    "?method=user.getTopAlbums": {
+      "GET": {}
+    },
+    "?method=track.getTags": {
+      "GET": {}
+    },
+    "?method=artist.getTopTracks": {
+      "GET": {}
+    },
+    "?method=track.getTopTags": {
+      "GET": {}
+    },
+    "?method=artist.getSimilar": {
+      "GET": {}
+    },
+    "?method=album.search": {
+      "GET": {}
+    },
+    "?method=artist.getTags": {
+      "GET": {}
+    },
+    "?method=user.getLovedTracks": {
+      "GET": {}
+    },
+    "?method=artist.getInfo": {
+      "GET": {}
+    },
+    "?method=auth.getToken": {
+      "GET": {}
+    },
+    "?method=user.getPersonalTags": {
+      "GET": {}
+    },
+    "?method=library.getArtists": {
+      "GET": {}
+    },
+    "?method=tag.getTopTracks": {
+      "GET": {}
+    },
+    "?method=user.getTopTracks": {
+      "GET": {}
+    },
+    "?method=track.updateNowPlaying": {
+      "GET": {}
+    },
+    "?method=artist.getTopTags": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "ws.audioscrobbler.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

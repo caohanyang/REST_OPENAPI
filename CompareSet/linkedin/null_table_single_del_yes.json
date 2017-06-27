@@ -1,0 +1,94 @@
+{
+  "basePath": "/profile/view",
+  "paths": {
+    "/oauth/v2/accessToken": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "grant_type",
+            "description": "The value of this field should always be:  authorization_code\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "code",
+            "description": "The authorization code you received from Step 2.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "redirect_uri",
+            "description": "The same 'redirect_uri' value that you passed in the previous step.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "client_id",
+            "description": "The \"API Key\" value generated Step 1.\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "client_secret\nThe",
+            "description": "\nThe \"Secret Key\" value generated in Step 1.\n\nFollow the Best Practices guide for handing your client_secret value.\n\n",
+            "type": "integer",
+            "required": "Yes"
+          }
+        ]
+      }
+    },
+    "/uas/oauth2/accessToken": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "response_type",
+            "description": "The value of this field should always be:  code",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "client_id",
+            "description": "The \"API Key\" value generated when you registered your application.",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "redirect_uri\nThe",
+            "description": "\nThe URI your users will be sent back to after authorization.  This value must match one of the defined OAuth 2.0 Redirect URLs in your application configuration .\n\n\ne.g. https://www.example.com/auth/linkedin\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "state\nA",
+            "description": "\nA unique string value of your choice that is hard to guess. Used to prevent CSRF .\n\n\ne.g. state=DCEeFWf45A53sdfKef424\n",
+            "type": "integer",
+            "required": "Yes"
+          },
+          {
+            "in": "query",
+            "name": "scope\nA",
+            "description": "\nA URL-encoded, space delimited list of member permissions your application is requesting on behalf of the user.  If you do not specify a scope in your call, we will fall back to using the default member permissions you defined in your application configuration .\n\n\ne.g. scope=r_fullprofile%20r_emailaddress%20w_share\n\nSee Understanding application permissions and the Best practices guide for additional information about scopes.\n\n",
+            "type": "integer",
+            "required": "Optional"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "www.linkedin.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

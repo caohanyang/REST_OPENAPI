@@ -1,0 +1,4050 @@
+<!DOCTYPE html>
+<html class="no-js hasSidebar hasPageActions hasBreadcrumb " dir="ltr" lang="en-us">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Bing Web Search API v5 Reference" property="og:title"/>
+  <meta content="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/microsoft-header.png" property="og:image"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="@docsmsft" name="twitter:site"/>
+  <meta content="Bing Web Search API v5 Reference" name="twitter:title"/>
+  <meta content="Describes the programming elements of the Bing Web Search API." name="twitter:description"/>
+  <meta content="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/microsoft-header.png" name="twitter:image"/>
+  <meta content="Microsoft Logo" name="twitter:image:alt"/>
+  <meta content="rest-api" name="ms.devlang"/>
+  <meta content="swhite-msft" name="author"/>
+  <meta content="scottwhi" name="ms.author"/>
+  <meta content="ehansen" name="manager"/>
+  <meta content="../../breadcrumb/toc.json" name="breadcrumb_path"/>
+  <meta content="article" name="ms.topic"/>
+  <meta content="04/15/2017" name="ms.date"/>
+  <meta content="671BB898-3942-4FEF-8DD5-BC81F0A341D4" name="ms.assetid"/>
+  <meta content="Describes the programming elements of the Bing Web Search API." name="description"/>
+  <meta content="cognitive-services" name="services"/>
+  <meta content="cognitive-services" name="ms.service"/>
+  <meta content="bing-web-search" name="ms.technology"/>
+  <meta content="Docs" name="search.ms_sitename"/>
+  <meta content="AzureRestApi" name="search.ms_docsetname"/>
+  <meta content="0" name="version"/>
+  <meta content="en-us" name="locale"/>
+  <meta content="Docs" name="site_name"/>
+  <meta content="Azure" name="search.ms_product"/>
+  <meta content="Azure.AzureRestApi" name="depot_name"/>
+  <meta content="2017-05-10 11:24 AM" name="updated_at"/>
+  <meta content="https://github.com/Azure/azure-docs-rest-apis/blob/128ceeadc285428a621c362880a958068b1a15f5/docs-ref-conceptual/cognitiveservices/bing-web-api-v5-reference.md" name="gitcommit"/>
+  <meta content="https://github.com/Azure/azure-docs-rest-apis/blob/live/docs-ref-conceptual/cognitiveservices/bing-web-api-v5-reference.md" name="original_content_git_url"/>
+  <meta content="26f2ea7b-445f-0c6e-f549-dbaef2569ccd" name="document_id"/>
+  <meta content="Conceptual" name="pagetype"/>
+  <meta content="../toc.json" name="toc_rel"/>
+  <meta content="5572" name="word_count"/>
+  <meta content="Azure" name="scope"/>
+  <link href="https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-web-api-v5-reference" rel="canonical"/>
+  <title>
+   Bing Web Search API v5 Reference | Microsoft Docs
+  </title>
+  <link href="/_themes/docs.theme/master/en-us/_themes/css/d64a0f59991efe84d4b4.site.css " rel="stylesheet"/>
+  <link href="/_themes/docs.theme/master/en-us/_themes/css/d64a0f59991efe84d4b4.conceptual.css " rel="stylesheet"/>
+  <link href="/_themes/docs.theme/master/en-us/_themes/global/css/azureHeader.css?v=4" rel="stylesheet"/>
+  <link href="https://azure.microsoft.com/en-us/asset/menucss/" rel="stylesheet"/>
+  <script>
+   var msDocs = {
+		data:{
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			pathToTheme: '/_themes/docs.theme/master/en-us/_themes/',
+			brand : 'azure'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: false
+		}
+	};
+	if (!('Promise' in window && 'resolve' in window.Promise && 'reject' in window.Promise && 'all' in window.Promise && 'race' in window.Promise)) {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/bluebird.min.js"><\/script>');
+	}
+  </script>
+  <!--[if lt IE 9]>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/global/js/polyfills/all.js"></script>
+<script src="/_themes/docs.theme/master/en-us/_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>	<![endif]-->
+  <!--[if gte IE 9]><!-->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js">
+  </script>
+  <!--<![endif]-->
+  <script>
+   window.jQuery || document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')
+  </script>
+  <script src="/_themes/docs.theme/master/en-us/_themes/global/js/global.min.js?v=179">
+  </script>
+  <script src="/_themes/docs.theme/master/en-us/_themes/global/js/azureHeader/loader.js?v=4">
+  </script>
+ </head>
+ <body>
+  <div class="container cookieContainer shell-notification-holder" id="lca-cookie-notification" style="display:none;">
+   <div class="shell-notification cookieNotification">
+    <div class="shell-notification-grid-row shell-notification-clearfix">
+     <span class="notification-txt" id="cookie.consent.europe">
+     </span>
+     <span class="notification-action">
+      <a href="#" id="privacystatement-link" tabindex="1">
+      </a>
+      <a id="cookie-notification-close" tabindex="2">
+       <i class="shell-icon-close">
+       </i>
+      </a>
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="az_h default" data-bi-name="header" id="headerArea" ms.pgarea="header">
+   <div class="azure-header_holder">
+    <div class="azure-header">
+     <header class="azure-header_temp">
+      <div class="row column">
+       <a class="logo" href="https://azure.microsoft.com/en-us/" title="Microsoft Azure">
+        <svg height="20px" viewBox="0 0 165 20" width="165px" x="0px" y="0px">
+         <path d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+							h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z" fill="#29A5DE">
+         </path>
+         <path d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+							c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z" fill="#29A5DE">
+         </path>
+         <path d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+							C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+							c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z" fill="#29A5DE">
+         </path>
+         <path d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+							c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z" fill="#29A5DE">
+         </path>
+         <path d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+							c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+							c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+							c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z" fill="#29A5DE">
+         </path>
+         <path d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+							c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+							c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+							C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+							c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+							c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+							c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z" fill="#29A5DE">
+         </path>
+         <path d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+							c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+							c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+							c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z" fill="#29A5DE">
+         </path>
+         <path d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+							C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+							c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+							H97.6z" fill="#29A5DE">
+         </path>
+         <path d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+							c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z" fill="#29A5DE">
+         </path>
+         <path d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z" fill="#29A5DE">
+         </path>
+         <path d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+							c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z" fill="#29A5DE">
+         </path>
+         <path d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+							c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z" fill="#29A5DE">
+         </path>
+         <path d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+							c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+							s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+							c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z" fill="#29A5DE">
+         </path>
+        </svg>
+       </a>
+       <a class="small-search" href="#" onclick="return false">
+        <span class="icon icon-search">
+        </span>
+       </a>
+      </div>
+     </header>
+    </div>
+   </div>
+  </div>
+  <div class="container mainContainer" data-bi-name="body" dir="ltr" lang="en-us" ms.pgarea="body">
+   <main data-bi-name="content" ms.cmpgrp="content" role="main">
+    <div id="main">
+     <div class="disclaimer" id="langDisclaimer" style="display:none;">
+      <span class="icon icon-disclaimer">
+      </span>
+      <span class="disclaimertext">
+       This content is not available in your language but here is the English version.
+      </span>
+     </div>
+     <h1 id="web-search-api-v5-reference" sourceendlinenumber="16" sourcefile="docs-ref-conceptual/cognitiveservices/bing-web-api-v5-reference.md" sourcestartlinenumber="16">
+      Web Search API v5 reference
+     </h1>
+     <div class="metadata loading" data-bi-name="page info" ms.cmpgrp="page info">
+      <div>
+       <time class="date" datetime="4/15/2017 12:00:00 AM">
+        2017-4-15
+       </time>
+       <span class="reading-time">
+        27 min to read
+       </span>
+       <span class="contributors-text">
+        Contributors
+       </span>
+       <ul class="contributors" data-bi-name="contributors" ms.cmpgrp="contributors">
+        <li>
+         <a data-bi-name="contributorprofile" href="https://github.com/swhite-msft" ms.cmpnm="contributorprofile" title="Scott White">
+          <img alt="Scott White" src="https://github.com/swhite-msft.png?size=16"/>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <nav aria-label="On page navigation" class="doc-outline" data-bi-name="intopic toc" id="center-doc-outline" ms.cmpgrp="intopic toc" role="navigation">
+       <h3>
+        In this article
+       </h3>
+      </nav>
+     </div>
+     <div>
+      <div class="content">
+       <p>
+        The Web Search API lets you send a search query to Bing and get back search results that include links to webpages, images, and more. This section provides technical details about the webpages, related searches, and ranking results in addition to the query parameters that affect the search results. For examples that show how to make requests, see
+        <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/search-the-web">
+         Searching the web
+        </a>
+       </p>
+       <p>
+        For information about headers that requests should include, see
+        <a data-linktype="self-bookmark" href="#headers">
+         Request Headers
+        </a>
+        .
+       </p>
+       <p>
+        For information about query parameters that requests should include, see
+        <a data-linktype="self-bookmark" href="#query-parameters">
+         Query Parameters
+        </a>
+        .
+       </p>
+       <p>
+        For information about the JSON objects that the response may include, see
+        <a data-linktype="self-bookmark" href="#response-objects">
+         Response Body
+        </a>
+        . This reference contains JSON object specific to web answers. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search result contains the images and news answers, see the
+        <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-image-search/search-the-web">
+         Image Search API
+        </a>
+        and
+        <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-news-search/search-the-web">
+         News Search API
+        </a>
+        .
+       </p>
+       <p>
+        For information about permitted use and display of results, see
+        <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/useanddisplayrequirements">
+         Bing Search API Use and Display requirements
+        </a>
+        .
+       </p>
+       <h2 id="endpoints">
+        Endpoints
+       </h2>
+       <p>
+        To request web search results, send a GET request to:
+       </p>
+       <p>
+        <code>
+         https://api.cognitive.microsoft.com/bing/v5.0/search
+        </code>
+       </p>
+       <p>
+        The request must use the HTTPS protocol.
+       </p>
+       <div class="NOTE">
+        <h5>
+         Note
+        </h5>
+        <p>
+         The maximum URL length is 2,048 characters. To ensure that your URL length does not exceed the limit, the maximum length of your query parameters should be less than 1,500 characters. If the URL exceeds 2,048 characters, the server returns 404 Not found.
+        </p>
+       </div>
+       <h2 id="headers">
+        Headers
+       </h2>
+       <p>
+        The following are the headers that a request and response may include.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Header
+          </th>
+          <th>
+           Description
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           Accept
+          </td>
+          <td>
+           Optional request header.
+           <br/>
+           <br/>
+           The default media type is application/json. To specify that the response use
+           <a data-linktype="external" href="http://json-ld.org/">
+            JSON-LD
+           </a>
+           , set the Accept header to application/ld+json.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="acceptlanguage">
+           </a>
+           Accept-Language
+          </td>
+          <td>
+           Optional request header.
+           <br/>
+           <br/>
+           A comma-delimited list of languages to use for user interface strings. The list is in decreasing order of preference. For more information, including expected format, see
+           <a data-linktype="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">
+            RFC2616
+           </a>
+           .
+           <br/>
+           <br/>
+           This header and the
+           <a data-linktype="self-bookmark" href="#setlang">
+            setLang
+           </a>
+           query parameter are mutually exclusive—do not specify both.
+           <br/>
+           <br/>
+           If you set this header, you must also specify the
+           <a data-linktype="self-bookmark" href="#cc">
+            cc
+           </a>
+           query parameter. To to determine the market to return results for, Bing uses the first supported language it finds from the list and combines it with the
+           <code>
+            cc
+           </code>
+           parameter value. If the list does not include a supported language, Bing finds the closest language and market that supports the request or it uses an aggregated or default market for the results. To determine the market that Bing used, see the BingAPIs-Market header.
+           <br/>
+           <br/>
+           Use this header and the
+           <code>
+            cc
+           </code>
+           query parameter only if you specify multiple languages. Otherwise, use the
+           <a data-linktype="self-bookmark" href="#mkt">
+            mkt
+           </a>
+           and
+           <a data-linktype="self-bookmark" href="#setlang">
+            setLang
+           </a>
+           query parameters.
+           <br/>
+           <br/>
+           A user interface string is a string that's used as a label in a user interface. There are few user interface strings in the JSON response objects. Any links to Bing.com properties in the response objects apply the specified language.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="market">
+           </a>
+           BingAPIs-Market
+          </td>
+          <td>
+           Response header.
+           <br/>
+           <br/>
+           The market used by the request. The form is &lt;languageCode&gt;-&lt;countryCode&gt;. For example, en-US.
+           <br/>
+           <br/>
+           If you specify a market that is not listed in
+           <a data-linktype="self-bookmark" href="#market-codes">
+            Market Codes
+           </a>
+           , this value may differ from the market you specified in the
+           <a data-linktype="self-bookmark" href="#mkt">
+            mkt
+           </a>
+           query parameter. The same is true if you specify values for
+           <a data-linktype="self-bookmark" href="#cc">
+            cc
+           </a>
+           and
+           <a data-linktype="self-bookmark" href="#acceptlanguage">
+            Accept-Language
+           </a>
+           that can't be reconciled.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="traceid">
+           </a>
+           BingAPIs-TraceId
+          </td>
+          <td>
+           Response header.
+           <br/>
+           <br/>
+           The ID of the log entry that contains the details of the request. When an error occurs, capture this ID. If you are not able to determine and resolve the issue, include this ID along with the other information that you provide the Support team.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="subscriptionkey">
+           </a>
+           Ocp-Apim-Subscription-Key
+          </td>
+          <td>
+           Required request header.
+           <br/>
+           <br/>
+           The subscription key that you received when you signed up for this service in
+           <a data-linktype="external" href="https://www.microsoft.com/cognitive-services/">
+            Cognitive Services
+           </a>
+           .
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="retryafter">
+           </a>
+           Retry-After
+          </td>
+          <td>
+           Response header.
+           <br/>
+           <br/>
+           The response includes this header if you exceed the number of queries allowed per second (QPS) or per month (QPM). The header contains the number of seconds that you must wait before sending another request.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="useragent">
+           </a>
+           User-Agent
+          </td>
+          <td>
+           Optional request header.
+           <br/>
+           <br/>
+           The user agent originating the request. Bing uses the user agent to provide mobile users with an optimized experience. Although optional, you are encouraged to always specify this header.
+           <br/>
+           <br/>
+           The user-agent should be the same string that any commonly used browser sends. For information about user agents, see
+           <a data-linktype="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">
+            RFC 2616
+           </a>
+           .
+           <br/>
+           <br/>
+           The following are examples of user-agent strings.
+           <br/>
+           <ul>
+            <li>
+             Windows Phone—Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 822)
+             <br/>
+             <br/>
+            </li>
+            <li>
+             Android—Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; SCH-I500 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML; like Gecko) Version/4.0 Mobile Safari/533.1
+             <br/>
+             <br/>
+            </li>
+            <li>
+             iPhone—Mozilla/5.0 (iPhone; CPU iPhone OS 6_1 like Mac OS X) AppleWebKit/536.26 (KHTML; like Gecko) Mobile/10B142 iPhone4;1 BingWeb/3.03.1428.20120423
+             <br/>
+             <br/>
+            </li>
+            <li>
+             PC—Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko
+             <br/>
+             <br/>
+            </li>
+            <li>
+             iPad—Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53
+            </li>
+           </ul>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="clientid">
+           </a>
+           X-MSEdge-ClientID
+          </td>
+          <td>
+           Optional request and response header.
+           <br/>
+           <br/>
+           Bing uses this header to provide users with consistent behavior across Bing API calls. Bing often flights new features and improvements, and it uses the client ID as a key for assigning traffic on different flights. If you do not use the same client ID for a user across multiple requests, then Bing may assign the user to multiple conflicting flights. Being assigned to multiple conflicting flights can lead to an inconsistent user experience. For example, if the second request has a different flight assignment than the first, the experience may be unexpected. Also, Bing can use the client ID to tailor web results to that client ID’s search history, providing a richer experience for the user.
+           <br/>
+           <br/>
+           Bing also uses this header to help improve result rankings by analyzing the activity generated by a client ID. The relevance improvements help with better quality of results delivered by Bing APIs and in turn enables higher click-through rates for the API consumer.
+           <br/>
+           <br/>
+           <strong>
+            IMPORTANT:
+           </strong>
+           Although optional, you should consider this header required. Persisting the client ID across multiple requests for the same end user and device combination enables 1) the API consumer to receive a consistent user experience, and 2) higher click-through rates via better quality of results from the Bing APIs.
+           <br/>
+           <br/>
+           The following are the basic usage rules that apply to this header.
+           <br/>
+           <ul>
+            <li>
+             Each user that uses your application on the device must have a unique, Bing generated client ID.
+             <br/>
+             <br/>
+             If you do not include this header in the request, Bing generates an ID and returns it in the X-MSEdge-ClientID response header. The only time that you should NOT include this header in a request is the first time the user uses your app on that device.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             Use the client ID for each Bing API request that your app makes for this user on the device.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             Persist the client ID. To persist the ID in a browser app, use a persistent HTTP cookie to ensure the ID is used across all sessions. Do not use a session cookie. For other apps such as mobile apps, use the device's persistent storage to persist the ID.
+             <br/>
+             <br/>
+             The next time the user uses your app on that device, get the client ID that you persisted.
+            </li>
+           </ul>
+           <br/>
+           <strong>
+            NOTE:
+           </strong>
+           Bing responses may or may not include this header. If the response includes this header, capture the client ID and use it for all subsequent Bing requests for the user on that device.
+           <br/>
+           <br/>
+           <strong>
+            NOTE
+           </strong>
+           If you include the X-MSEdge-ClientID, you must not include cookies in the request.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="clientip">
+           </a>
+           X-Search-ClientIP
+          </td>
+          <td>
+           Optional request header.
+           <br/>
+           <br/>
+           The IPv4 or IPv6 address of the client device. The IP address is used to discover the user's location. Bing uses the location information to determine safe search behavior.
+           <br/>
+           <br/>
+           <strong>
+            NOTE:
+           </strong>
+           Although optional, you are encouraged to always specify this header and the X-Search-Location header.
+           <br/>
+           <br/>
+           Do not obfuscate the address (for example, by changing the last octet to 0). Obfuscating the address results in the location not being anywhere near the device's actual location, which may result in Bing serving erroneous results.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="location">
+           </a>
+           X-Search-Location
+          </td>
+          <td>
+           Optional request header.
+           <br/>
+           <br/>
+           A semicolon-delimited list of key/value pairs that describe the client's geographical location. Bing uses the location information to determine safe search behavior and to return relevant local content. Specify the key/value pair as &lt;key&gt;:&lt;value&gt;. The following are the keys that you use to specify the user's location.
+           <br/>
+           <br/>
+           <ul>
+            <li>
+             lat—Required. The latitude of the client's location, in degrees. The latitude must be greater than or equal to -90.0 and less than or equal to +90.0. Negative values indicate southern latitudes and positive values indicate northern latitudes.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             long—Required. The longitude of the client's location, in degrees. The longitude must be greater than or equal to -180.0 and less than or equal to +180.0. Negative values indicate western longitudes and positive values indicate eastern longitudes.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             re—Required. The radius, in meters, which specifies the horizontal accuracy of the coordinates. Pass the value returned by the device's location service. Typical values might be 22m for GPS/Wi-Fi, 380m for cell tower triangulation, and 18,000m for reverse IP lookup.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             ts—Optional. The UTC UNIX timestamp of when the client was at the location. (The UNIX timestamp is the number of seconds since January 1, 1970.)
+             <br/>
+             <br/>
+            </li>
+            <li>
+             head—Optional. The client's relative heading or direction of travel. Specify the direction of travel as degrees from 0 through 360, counting clockwise relative to true north. Specify this key only if the
+             <code>
+              sp
+             </code>
+             key is nonzero.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             sp—Optional. The horizontal velocity (speed), in meters per second, that the client device is traveling.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             alt—Optional. The altitude of the client device, in meters.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             are—Optional. The radius, in meters, that specifies the vertical accuracy of the coordinates. Specify this key only if you specify the
+             <code>
+              alt
+             </code>
+             key.
+             <br/>
+             <br/>
+            </li>
+           </ul>
+           <strong>
+            NOTE:
+           </strong>
+           Although many of the keys are optional, the more information that you provide, the more accurate the location results are.
+           <br/>
+           <br/>
+           <strong>
+            NOTE:
+           </strong>
+           Although optional, you are encouraged to always specify the user's geographical location. Providing the location is especially important if the client's IP address does not accurately reflect the user's physical location (for example, if the client uses VPN). For optimal results, you should include this header and the X-Search-ClientIP header, but at a minimum, you should include this header.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <div class="NOTE">
+        <h5>
+         Note
+        </h5>
+        <p>
+         Remember that the Terms of Use require compliance with all applicable laws, including regarding use of these headers. For example, in certain jurisdictions, such as Europe, there are requirements to obtain user consent before placing certain tracking devices on user devices.
+        </p>
+       </div>
+       <h2 id="query-parameters">
+        Query parameters
+       </h2>
+       <p>
+        The following is the list of query parameters that you may specify. See the Required column for required parameters. The query parameter values must be URL encoded.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+          <th>
+           Required
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="cc">
+           </a>
+           cc
+          </td>
+          <td>
+           A 2-character country code of the country where the results come from. For a list of possible values, see
+           <a data-linktype="self-bookmark" href="#market-codes">
+            Market Codes
+           </a>
+           .
+           <br/>
+           <br/>
+           If you set this parameter, you must also specify the
+           <a data-linktype="self-bookmark" href="#acceptlanguage">
+            Accept-Language
+           </a>
+           header. Bing uses the first supported language it finds in the specified languages and combines it with the country code to determine the market to return results for. If the languages list does not include a supported language, Bing finds the closest language and market that supports the request. Or, Bing may use an aggregated or default market for the results.
+           <br/>
+           <br/>
+           Use this query parameter and the
+           <code>
+            Accept-Language
+           </code>
+           header only if you specify multiple languages. Otherwise, you should use the
+           <code>
+            mkt
+           </code>
+           and
+           <code>
+            setLang
+           </code>
+           query parameters.
+           <br/>
+           <br/>
+           This parameter and the
+           <a data-linktype="self-bookmark" href="#mkt">
+            mkt
+           </a>
+           query parameter are mutually exclusive—do not specify both.
+          </td>
+          <td>
+           String
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="count">
+           </a>
+           count
+          </td>
+          <td>
+           The number of search results to return in the response. The default is 10 and the maximum value that you may specify is 50. The actual number delivered may be less than requested.
+           <br/>
+           <br/>
+           Use this parameter along with the
+           <code>
+            offset
+           </code>
+           parameter to page results. For more information, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/paging-webpages">
+            Paging Webpages
+           </a>
+           .
+           <br/>
+           <br/>
+           For example, if your user interface presents 10 search results per page, you would set
+           <code>
+            count
+           </code>
+           to 10 and
+           <code>
+            offset
+           </code>
+           to 0 to get the first page of results. For each subsequent page, you would increment
+           <code>
+            offset
+           </code>
+           by 10 (for example, 0, 10, 20). It is possible for multiple pages to include some overlap in results.
+          </td>
+          <td>
+           UnsignedShort
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="freshness">
+           </a>
+           freshness
+          </td>
+          <td>
+           Filter search results by age. Age refers to the date and time when Bing discovered the webpage. The following are the possible filter values.
+           <br/>
+           <ul>
+            <li>
+             Day—Return webpages discovered within the last 24 hours
+             <br/>
+             <br/>
+            </li>
+            <li>
+             Week—Return webpages discovered within the last 7 days
+             <br/>
+             <br/>
+            </li>
+            <li>
+             Month—Return webpages discovered within the last 30 days
+            </li>
+           </ul>
+           <br/>
+           <strong>
+            NOTE:
+           </strong>
+           This filter applies only to webpage results and not to other results such as news and images.
+          </td>
+          <td>
+           String
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="mkt">
+           </a>
+           mkt
+          </td>
+          <td>
+           The market where the results come from. Typically,
+           <code>
+            mkt
+           </code>
+           is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. The market must be in the form &lt;language code&gt;-&lt;country code&gt;. For example, en-US. The string is case insensitive. For a list of possible market values, see
+           <a data-linktype="self-bookmark" href="#market-codes">
+            Market Codes
+           </a>
+           .
+           <br/>
+           <br/>
+           <strong>
+            NOTE:
+           </strong>
+           If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. If you specify a market that is not listed in
+           <a data-linktype="self-bookmark" href="#market-codes">
+            Market Codes
+           </a>
+           , Bing uses a best fit market code based on an internal mapping that is subject to change.
+           <br/>
+           <br/>
+           This parameter and the
+           <a data-linktype="self-bookmark" href="#cc">
+            cc
+           </a>
+           query parameter are mutually exclusive—do not specify both.
+          </td>
+          <td>
+           String
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="offset">
+           </a>
+           offset
+          </td>
+          <td>
+           The zero-based offset that indicates the number of search results to skip before returning results. The default is 0. The offset should be less than (
+           <a data-linktype="self-bookmark" href="#totalmatches">
+            totalEstimatedMatches
+           </a>
+           -
+           <code>
+            count
+           </code>
+           ).
+           <br/>
+           <br/>
+           Use this parameter along with the
+           <code>
+            count
+           </code>
+           parameter to page results. For example, if your user interface presents 10 search results per page, you would set
+           <code>
+            count
+           </code>
+           to 10 and
+           <code>
+            offset
+           </code>
+           to 0 to get the first page of results. For each subsequent page, you would increment
+           <code>
+            offset
+           </code>
+           by 10 (for example, 0, 10, 20). It is possible for multiple pages to include some overlap in results.
+          </td>
+          <td>
+           Unsigned Short
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="query">
+           </a>
+           q
+          </td>
+          <td>
+           The user's search query string. The query string may not be empty.
+           <br/>
+           <br/>
+           The query string may contain
+           <a data-linktype="external" href="http://msdn.microsoft.com/library/ff795620.aspx">
+            Bing Advanced Operators
+           </a>
+           . For example, to limit results to a specific domain, use the
+           <a data-linktype="external" href="http://msdn.microsoft.com/library/ff795613.aspx">
+            site:
+           </a>
+           operator.
+          </td>
+          <td>
+           String
+          </td>
+          <td>
+           Yes
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="responsefilter">
+           </a>
+           responseFilter
+          </td>
+          <td>
+           A comma-delimited list of answers to include in the response. If you do not specify this parameter, the response includes all search answers for which there's relevant data.
+           <br/>
+           <br/>
+           The following are the possible filter values.
+           <br/>
+           <ul>
+            <li>
+             Computation
+            </li>
+            <li>
+             Images
+            </li>
+            <li>
+             News
+            </li>
+            <li>
+             RelatedSearches
+            </li>
+            <li>
+             SpellSuggestions
+            </li>
+            <li>
+             TimeZone
+            </li>
+            <li>
+             Videos
+            </li>
+            <li>
+             Webpages
+            </li>
+           </ul>
+           <br/>
+           Although you may use this filter to get a single answer, you should instead consider using the answer-specific endpoint in order to get richer results. For example, to receive only images, send the request to one of the Image API endpoints.
+           <br/>
+           <br/>
+           The RelatedSearches and SpellSuggestions answers do not support a separate endpoint like the Image Search API does.
+          </td>
+          <td>
+           String
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="safesearch">
+           </a>
+           safeSearch
+          </td>
+          <td>
+           A filter used to filter webpages for adult content. The following are the possible filter values.
+           <br/>
+           <ul>
+            <li>
+             Off—Return webpages with adult text, images, or videos.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             Moderate—Return webpages with adult text, but not adult images or videos.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             Strict—Do not return webpages with adult text, images, or videos.
+            </li>
+           </ul>
+           <br/>
+           The default is Moderate.
+           <br/>
+           <br/>
+           <strong>
+            NOTE:
+           </strong>
+           If the request comes from a market that Bing's adult policy requires that
+           <code>
+            safeSearch
+           </code>
+           is set to Strict, Bing ignores the
+           <code>
+            safeSearch
+           </code>
+           value and uses Strict.
+           <br/>
+           <br/>
+           <strong>
+            NOTE:
+           </strong>
+           If you use the
+           <code>
+            site:
+           </code>
+           query operator, there is the chance that the response may contain adult content regardless of what the
+           <code>
+            safeSearch
+           </code>
+           query parameter is set to. Use
+           <code>
+            site:
+           </code>
+           only if you are aware of the content on the site and your scenario supports the possibility of adult content.
+          </td>
+          <td>
+           String
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="setlang">
+           </a>
+           setLang
+          </td>
+          <td>
+           The language to use for user interface strings. Specify the language using the ISO 639-1 2-letter language code. For example, the language code for English is EN. The default is EN (English).
+           <br/>
+           <br/>
+           Although optional, you should always specify the language. Typically, you set
+           <code>
+            setLang
+           </code>
+           to the same language specified by
+           <code>
+            mkt
+           </code>
+           unless the user wants the user interface strings displayed in a different language.
+           <br/>
+           <br/>
+           This parameter and the
+           <a data-linktype="self-bookmark" href="#acceptlanguage">
+            Accept-Language
+           </a>
+           header are mutually exclusive—do not specify both.
+           <br/>
+           <br/>
+           A user interface string is a string that's used as a label in a user interface. There are few user interface strings in the JSON response objects. Also, any links to Bing.com properties in the response objects apply the specified language.
+          </td>
+          <td>
+           String
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="textdecorations">
+           </a>
+           textDecorations
+          </td>
+          <td>
+           A Boolean value that determines whether display strings should contain decoration markers such as hit highlighting characters. If
+           <strong>
+            true
+           </strong>
+           , the strings may include markers; otherwise,
+           <strong>
+            false
+           </strong>
+           . The default is
+           <strong>
+            false
+           </strong>
+           .
+           <br/>
+           <br/>
+           To specify whether to use Unicode characters or HTML tags as the markers, see the
+           <a data-linktype="self-bookmark" href="#textformat">
+            textFormat
+           </a>
+           query parameter.
+           <br/>
+           <br/>
+           For information about hit highlighting, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/hit-highlighting">
+            Hit Highlighting
+           </a>
+           .
+          </td>
+          <td>
+           Boolean
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="textformat">
+           </a>
+           textFormat
+          </td>
+          <td>
+           The type of markers to use for text decorations (see the
+           <code>
+            textDecorations
+           </code>
+           query parameter).
+           <br/>
+           <br/>
+           The following are the possible values.
+           <br/>
+           <ul>
+            <li>
+             Raw—Use Unicode characters to mark content that needs special formatting. The Unicode characters are in the range E000 through E019. For example, Bing uses E000 and E001 to mark the beginning and end of query terms for hit highlighting.
+             <br/>
+             <br/>
+            </li>
+            <li>
+             HTML—Use HTML tags to mark content that needs special formatting. For example, use &lt;b&gt; tags to highlight query terms in display strings.
+            </li>
+           </ul>
+           <br/>
+           The default is Raw.
+           <br/>
+           <br/>
+           For a list of markers, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/hit-highlighting">
+            Hit Highlighting
+           </a>
+           .
+           <br/>
+           <br/>
+           If
+           <code>
+            textFormat
+           </code>
+           is set to HTML, and display strings contain escapable HTML characters such as &lt;, &gt;, and &amp;, Bing escapes the characters (for example, &lt; will be escaped to &amp;lt;).
+           <br/>
+           <br/>
+           For information about processing strings with the embedded Unicode characters, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/hit-highlighting">
+            Hit Highlighting
+           </a>
+           .
+          </td>
+          <td>
+           String
+          </td>
+          <td>
+           No
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <h2 id="response-objects">
+        Response objects
+       </h2>
+       <p>
+        The following are the JSON response objects that the response may include. If the request is successful, the top-level object in the response is the
+        <a data-linktype="self-bookmark" href="#searchresponse">
+         SearchResponse
+        </a>
+        object; otherwise, it is the
+        <a data-linktype="self-bookmark" href="#errorresponse">
+         ErrorResponse
+        </a>
+        object.
+       </p>
+       <p>
+        This list contains JSON objects that are specific to web answers. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search result contains the images and news answers, see the
+        <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-image-search/searching-the-web">
+         Image API
+        </a>
+        and
+        <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-news-search/searching-the-web">
+         News API
+        </a>
+        .
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Object
+          </th>
+          <th>
+           Description
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#computation">
+            Computation
+           </a>
+          </td>
+          <td>
+           Defines an expression and its answer.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#error">
+            Error
+           </a>
+          </td>
+          <td>
+           Defines an error that occurred.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#errorresponse">
+            ErrorResponse
+           </a>
+          </td>
+          <td>
+           The top-level object that the response includes when the request fails.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#identifiable">
+            Identifiable
+           </a>
+          </td>
+          <td>
+           Defines a resource ID.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#query_obj">
+            Query
+           </a>
+          </td>
+          <td>
+           Defines a query string.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#querycontext">
+            QueryContext
+           </a>
+          </td>
+          <td>
+           Defines the query context that Bing used for the request, if the specified query string contains a spelling error.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#rankinggroup">
+            RankingGroup
+           </a>
+          </td>
+          <td>
+           Defines a search results group, such as mainline.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#rankingitem">
+            RankingItem
+           </a>
+          </td>
+          <td>
+           Defines a ranking group item to display.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#rankingresponse">
+            RankingResponse
+           </a>
+          </td>
+          <td>
+           Defines where on the search results page content should be placed and in what order.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#relatedsearchanswer">
+            RelatedSearchAnswer
+           </a>
+          </td>
+          <td>
+           Defines a list of related queries that were made by others.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#searchresponse">
+            SearchResponse
+           </a>
+          </td>
+          <td>
+           The top-level object that the response includes when the request succeeds.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#spellsuggestions">
+            SpellSuggestions
+           </a>
+          </td>
+          <td>
+           Defines a suggested query string that likely represents the user's intent.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#timezone">
+            TimeZone
+           </a>
+          </td>
+          <td>
+           Defines the date and time of one or more geographic locations.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#timezoneinfo">
+            TimeZoneInformation
+           </a>
+          </td>
+          <td>
+           Defines the time zone information about a geographical location.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#webanswer">
+            WebAnswer
+           </a>
+          </td>
+          <td>
+           Defines a list of relevant webpage links.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a data-linktype="self-bookmark" href="#webpage">
+            Webpage
+           </a>
+          </td>
+          <td>
+           Defines a webpage that is relevant to the query.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="computation">
+        </a>
+       </p>
+       <h3 id="computation">
+        Computation
+       </h3>
+       <p>
+        Defines an expression and its answer.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Element
+          </th>
+          <th>
+           Description
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="computation-expression">
+           </a>
+           expression
+          </td>
+          <td>
+           The mathematical or conversion expression.
+           <br/>
+           <br/>
+           If the query contains a request to convert units of measure (for example, meters to feet), this field contains the
+           <em>
+            from
+           </em>
+           units and
+           <code>
+            value
+           </code>
+           contains the
+           <em>
+            to
+           </em>
+           units.
+           <br/>
+           <br/>
+           If the query contains a mathematical expression such as 2+2, this field contains the expression and
+           <code>
+            value
+           </code>
+           contains the answer.
+           <br/>
+           <br/>
+           Note that mathematical expressions may be normalized. For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).
+           <br/>
+           <br/>
+           If the user's query is a mathematical question and the
+           <a data-linktype="self-bookmark" href="#textdecorations">
+            textDecorations
+           </a>
+           query parameter is set to
+           <strong>
+            true
+           </strong>
+           , the expression string may include formatting markers. For example, if the user's query is
+           <em>
+            log(2)
+           </em>
+           , the normalized expression would include the subscript markers. For more information, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/hit-highlighting">
+            Hit Highlighting
+           </a>
+           .
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="computation-value">
+           </a>
+           value
+          </td>
+          <td>
+           The expression's answer.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="error">
+        </a>
+       </p>
+       <h3 id="error">
+        Error
+       </h3>
+       <p>
+        Defines an error that occurred.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Element
+          </th>
+          <th>
+           Description
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="error-code">
+           </a>
+           code
+          </td>
+          <td>
+           The error code that identifies the error. For a list of possible codes, see
+           <a data-linktype="self-bookmark" href="#error-codes">
+            Error Codes
+           </a>
+           .
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="error-message">
+           </a>
+           message
+          </td>
+          <td>
+           A description of the error.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="error-parameter">
+           </a>
+           parameter
+          </td>
+          <td>
+           The query parameter in the request that caused the error.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="error-value">
+           </a>
+           value
+          </td>
+          <td>
+           The query parameter's value that was not valid.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="errorresponse">
+        </a>
+       </p>
+       <h3 id="errorresponse">
+        ErrorResponse
+       </h3>
+       <p>
+        The top-level object that the response includes when the request fails.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           _type
+          </td>
+          <td>
+           Type hint.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="errors">
+           </a>
+           errors
+          </td>
+          <td>
+           A list of the reasons why the request failed.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#error">
+            Error
+           </a>
+           []
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="identifiable">
+        </a>
+       </p>
+       <h3 id="identifiable">
+        Identifiable
+       </h3>
+       <p>
+        Defines the identity of a resource.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           id
+          </td>
+          <td>
+           An identifier.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="metatag">
+        </a>
+       </p>
+       <h3 id="metatag">
+        MetaTag
+       </h3>
+       <p>
+        Defines a webpage's metadata.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           content
+          </td>
+          <td>
+           The metadata.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           name
+          </td>
+          <td>
+           The name of the metadata.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="query_obj">
+        </a>
+       </p>
+       <h3 id="query">
+        Query
+       </h3>
+       <p>
+        Defines a search query.
+       </p>
+       <p>
+        The
+        <a data-linktype="self-bookmark" href="#spellsuggestions">
+         SpellSuggestions
+        </a>
+        object uses this object to suggest a query string that likely represents the user's intent. It's also used by
+        <a data-linktype="self-bookmark" href="#relatedsearchanswer">
+         RelatedSearchAnswer
+        </a>
+        to return a related query that other users have made.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="query-displaytext">
+           </a>
+           displayText
+          </td>
+          <td>
+           The display version of the query string. This version of the query string may contain special characters that highlight the search term found in the query string. The string contains the highlighting characters only if the query enabled hit highlighting (see the
+           <a data-linktype="self-bookmark" href="#textdecorations">
+            textDecorations
+           </a>
+           query parameter). For details about hit highlighting, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/hit-highlighting">
+            Hit Highlighting
+           </a>
+           .
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="query-text">
+           </a>
+           text
+          </td>
+          <td>
+           The query string. Use this string as the query string in a new search request.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="query-websearchurl">
+           </a>
+           webSearchUrl
+          </td>
+          <td>
+           The URL that takes the user to the Bing search results page for the query.
+           <br/>
+           <br/>
+           The object includes this field only for related searches.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="querycontext">
+        </a>
+       </p>
+       <h3 id="querycontext">
+        QueryContext
+       </h3>
+       <p>
+        Defines the query string that Bing used for the request if the specified query string contains a spelling mistake.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Element
+          </th>
+          <th>
+           Description
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="querycontext-adultintent">
+           </a>
+           adultIntent
+          </td>
+          <td>
+           A Boolean value that indicates whether the specified query has adult intent. The value is
+           <strong>
+            true
+           </strong>
+           if the query has adult intent.
+           <br/>
+           <br/>
+           If
+           <strong>
+            true
+           </strong>
+           , and the request's
+           <a data-linktype="self-bookmark" href="#safesearch">
+            safeSearch
+           </a>
+           query parameter is set to Strict, then the response will not contain results except for news results, if applicable.
+          </td>
+          <td>
+           Boolean
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="querycontext-alterationoverridequery">
+           </a>
+           alterationOverrideQuery
+          </td>
+          <td>
+           The query string to use to force Bing to use the original string. For example, if the query string is
+           <em>
+            saling downwind
+           </em>
+           , the override query string is
+           <em>
+            +saling downwind
+           </em>
+           . Remember to encode the query string, which results in
+           <em>
+            %2Bsaling+downwind
+           </em>
+           .
+           <br/>
+           <br/>
+           This field is included only if the original query string contains a spelling mistake.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="querycontext-alteredquery">
+           </a>
+           alteredQuery
+          </td>
+          <td>
+           The query string used by Bing to perform the query. If the original query string contained spelling mistakes, Bing uses the altered query string. For example, if the query string is
+           <code>
+            saling downwind
+           </code>
+           , the altered query string is
+           <code>
+            sailing downwind
+           </code>
+           .
+           <br/>
+           <br/>
+           This field is included only if the original query string contains a spelling mistake.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="querycontext-originalquery">
+           </a>
+           originalQuery
+          </td>
+          <td>
+           The query string as specified in the request.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="rankinggroup">
+        </a>
+       </p>
+       <h3 id="rankinggroup">
+        RankingGroup
+       </h3>
+       <p>
+        Defines a search results group, such as mainline.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="rankinggroup-items">
+           </a>
+           items
+          </td>
+          <td>
+           A list of search result items to display in the group.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#rankingitem">
+            RankingItem
+           </a>
+           []
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="rankingitem">
+        </a>
+       </p>
+       <h3 id="rankingitem">
+        RankingItem
+       </h3>
+       <p>
+        Defines a search result item to display. For more information about how to use the IDs, see
+        <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/ranking-results">
+         Using Ranking to Display Results
+        </a>
+        .
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="rankingitem-answertype">
+           </a>
+           answerType
+          </td>
+          <td>
+           The answer that contains the item to display. For example, News.
+           <br/>
+           <br/>
+           Use the type to find the answer in the
+           <a data-linktype="self-bookmark" href="#searchresponse">
+            SearchResponse
+           </a>
+           object. The type is the name of a
+           <code>
+            SearchResponse
+           </code>
+           field.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="rankingitem-resultindex">
+           </a>
+           resultIndex
+          </td>
+          <td>
+           A zero-based index of the item in the answer to display.
+           <br/>
+           <br/>
+           If the item does not include this field, display all items in the answer. For example, display all news articles in the News answer.
+          </td>
+          <td>
+           Integer
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="rankingitem-value">
+           </a>
+           value
+          </td>
+          <td>
+           The ID that identifies either an answer to display or an item of an answer to display. If the ID identifies an answer, display all items of the answer.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#identifiable">
+            Identifiable
+           </a>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="rankingresponse">
+        </a>
+       </p>
+       <h3 id="rankingresponse">
+        RankingResponse
+       </h3>
+       <p>
+        Defines where on the search results page content should be placed and in what order.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="ranking-mainline">
+           </a>
+           mainline
+          </td>
+          <td>
+           The search results that should be displayed in the mainline.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#rankinggroup">
+            RankingGroup
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="ranking-pole">
+           </a>
+           pole
+          </td>
+          <td>
+           The search results that should be afforded the most visible treatment (for example, displayed above the mainline and sidebar).
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#rankinggroup">
+            RankingGroup
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="ranking-sidebar">
+           </a>
+           sidebar
+          </td>
+          <td>
+           The search results that should be displayed in the sidebar.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#rankinggroup">
+            RankingGroup
+           </a>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="relatedsearchanswer">
+        </a>
+       </p>
+       <h3 id="relatedsearchanswer">
+        RelatedSearchAnswer
+       </h3>
+       <p>
+        Defines a list of related queries that were made by others.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           id
+          </td>
+          <td>
+           An ID that uniquely identifies the related search answer.
+           <br/>
+           <br/>
+           The object includes this field only if the Ranking answer specifies that you display all related searches in a group. For more information about how to use the ID, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/ranking-results">
+            Using Ranking to Display Results
+           </a>
+           .
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="relatedsearch-value">
+           </a>
+           value
+          </td>
+          <td>
+           A list of related queries that were made by others.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#query_obj">
+            Query
+           </a>
+           []
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="searchresponse">
+        </a>
+       </p>
+       <h3 id="searchresponse">
+        SearchResponse
+       </h3>
+       <p>
+        The response's top-level object for search requests.
+       </p>
+       <p>
+        By default, the Web Search API includes all answers unless:
+       </p>
+       <ul>
+        <li>
+         <p>
+          The query specifies the
+          <a data-linktype="self-bookmark" href="#responsefilter">
+           responseFilter
+          </a>
+          query parameter to limit the answers
+         </p>
+        </li>
+        <li>
+         <p>
+          One or more of the search components does not return results (for example, no news results are relevant to the query)
+         </p>
+        </li>
+        <li>
+         <p>
+          The subscription key does not have access to the search component.
+         </p>
+        </li>
+       </ul>
+       <p>
+        If the service suspects a denial of service attack, the request succeeds (HTTP status code is 200 OK); however, the body of the response is empty.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           _type
+          </td>
+          <td>
+           Type hint.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-computation">
+           </a>
+           computation
+          </td>
+          <td>
+           The answer to a math expression or units conversion expression.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#computation">
+            Computation
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-images">
+           </a>
+           images
+          </td>
+          <td>
+           A list of images that are relevant to the search query.
+          </td>
+          <td>
+           <a data-linktype="relative-path" href="bing-images-api-v5-reference#images">
+            Images
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-news">
+           </a>
+           news
+          </td>
+          <td>
+           A list of news articles that are relevant to the search query.
+          </td>
+          <td>
+           <a data-linktype="relative-path" href="bing-news-api-v5-reference#news">
+            News
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-querycontext">
+           </a>
+           queryContext
+          </td>
+          <td>
+           The query string that Bing used for the request.
+           <br/>
+           <br/>
+           The response includes the context only if the query string contains a spelling mistake or has adult intent.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#querycontext">
+            QueryContext
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-ranking">
+           </a>
+           rankingResponse
+          </td>
+          <td>
+           The order that Bing suggests that you display the search results in.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#rankingresponse">
+            RankingResponse
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-relatedsearches">
+           </a>
+           relatedSearches
+          </td>
+          <td>
+           A list of related queries that were made by others.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#relatedsearchanswer">
+            RelatedSearchAnswer
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-spellsuggestions">
+           </a>
+           spellSuggestions
+          </td>
+          <td>
+           The query string that likely represents the user's intent.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#spellsuggestions">
+            SpellSuggestions
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-timezone">
+           </a>
+           timeZone
+          </td>
+          <td>
+           The date and time of one or more geographic locations.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#timezone">
+            TimeZone
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchresponse-videos">
+           </a>
+           videos
+          </td>
+          <td>
+           A list of videos that are relevant to the search query.
+          </td>
+          <td>
+           <a data-linktype="relative-path" href="bing-video-api-v5-reference#videos">
+            Videos
+           </a>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="search-response-webpages">
+           </a>
+           webPages
+          </td>
+          <td>
+           A list of webpages that are relevant to the search query.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#webanswer">
+            WebAnswer
+           </a>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="spellsuggestions">
+        </a>
+       </p>
+       <h3 id="spellsuggestions">
+        SpellSuggestions
+       </h3>
+       <p>
+        Defines a suggested query string that likely represents the user's intent.
+       </p>
+       <p>
+        If Bing determines that the user may have intended to search for something different, the search results include this answer. For example, if the user searches for
+        <em>
+         alon brown
+        </em>
+        , Bing may determine that the user likely intended to search for Alton Brown instead (based on past searches by others of Alon Brown).
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           id
+          </td>
+          <td>
+           An ID that uniquely identifies the spelling suggestion answer.
+           <br/>
+           <br/>
+           You use this field when you use the
+           <a data-linktype="self-bookmark" href="#rankingresponse">
+            ranking response
+           </a>
+           to display the spelling suggestions. For more information about how to use the ID, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/ranking-results">
+            Using Ranking to Display Results
+           </a>
+           .
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="spell-value">
+           </a>
+           value
+          </td>
+          <td>
+           A list of suggested query strings that may represent the user's intention.
+           <br/>
+           <br/>
+           The array contains only one
+           <code>
+            Query
+           </code>
+           object.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#query_obj">
+            Query
+           </a>
+           []
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="timezone">
+        </a>
+       </p>
+       <h3 id="timezone">
+        TimeZone
+       </h3>
+       <p>
+        Defines the data and time of one or more geographic locations.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="othercitytimes">
+           </a>
+           otherCityTimes
+          </td>
+          <td>
+           A list of dates and times of nearby time zones.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#timezoneinfo">
+            TimeZoneInformation
+           </a>
+           []
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="primarycitytime">
+           </a>
+           primaryCityTime
+          </td>
+          <td>
+           The data and time, in UTC, of the geographic location specified in the query.
+           <br/>
+           <br/>
+           If the query specified a specific geographic location (for example, a city), this object contains the name of the geographic location and the current UTC date and time of the location.
+           <br/>
+           <br/>
+           If the query specified a general geographic location, such as a state or country, this object contains the date and time of the primary city or state found in the specified state or country. If the location contains additional time zones, the
+           <code>
+            otherCityTimes
+           </code>
+           field contains the data and time of cities or states located in the other time zones.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#timezoneinfo">
+            TimeZoneInformation
+           </a>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="timezoneinfo">
+        </a>
+       </p>
+       <h3 id="timezoneinformation">
+        TimeZoneInformation
+       </h3>
+       <p>
+        Defines a date and time for a geographical location.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="tzinfo-location">
+           </a>
+           location
+          </td>
+          <td>
+           The name of the geographical location.
+           <br/>
+           <br/>
+           For example, County; City; City, State; City, State, Country; or Time Zone.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="tzinfo-time">
+           </a>
+           time
+          </td>
+          <td>
+           The data and time specified in the form, YYYY-MM-DDThh;mm:ss.ssssssZ.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="tzinfo-utcoffset">
+           </a>
+           utcOffset
+          </td>
+          <td>
+           The offset from UTC. For example, UTC-7.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="webanswer">
+        </a>
+       </p>
+       <h3 id="webanswer">
+        WebAnswer
+       </h3>
+       <p>
+        Defines a list of relevant webpage links.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           id
+          </td>
+          <td>
+           An ID that uniquely identifies the web answer.
+           <br/>
+           <br/>
+           The object includes this field only if the Ranking answer suggests that you display all web results in a group. For more information about how to use the ID, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/ranking-results">
+            Using Ranking to Display Results
+           </a>
+           .
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="totalestimatedmatches">
+           </a>
+           totalEstimatedMatches
+          </td>
+          <td>
+           The estimated number of webpages that are relevant to the query. Use this number along with the
+           <a data-linktype="self-bookmark" href="#count">
+            count
+           </a>
+           and
+           <a data-linktype="self-bookmark" href="#offset">
+            offset
+           </a>
+           query parameters to page the results.
+          </td>
+          <td>
+           Long
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="webanswer-value">
+           </a>
+           value
+          </td>
+          <td>
+           A list of webpages that are relevant to the query.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#webpage">
+            WebPage
+           </a>
+           []
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="webanswer-websearchurl">
+           </a>
+           webSearchUrl
+          </td>
+          <td>
+           The URL to the Bing search results for the requested webpages.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="webpage">
+        </a>
+       </p>
+       <h3 id="webpage">
+        Webpage
+       </h3>
+       <p>
+        Defines a webpage that is relevant to the query.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Name
+          </th>
+          <th>
+           Value
+          </th>
+          <th>
+           Type
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           <a name="datelastcrawled">
+           </a>
+           dateLastCrawled
+          </td>
+          <td>
+           The last time that Bing crawled the webpage. The date is in the form, YYYY-MM-DDTHH:MM:SS. For example, 2015-04-13T05:23:39.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="deeplinks">
+           </a>
+           deepLinks
+          </td>
+          <td>
+           An array of
+           <a data-linktype="self-bookmark" href="#webpage">
+            Webpage
+           </a>
+           objects. Each object contains a link to related content within the website that contains this webpage.
+           <br/>
+           <br/>
+           The
+           <code>
+            Webpage
+           </code>
+           object in this context includes only the
+           <code>
+            name
+           </code>
+           ,
+           <code>
+            url
+           </code>
+           , and
+           <code>
+            snippet
+           </code>
+           fields.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#webpage">
+            Webpage
+           </a>
+           []
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="displayurl">
+           </a>
+           displayUrl
+          </td>
+          <td>
+           The display URL of the webpage. The URL is meant for display purposes only and is not well formed.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           id
+          </td>
+          <td>
+           An ID that uniquely identifies this webpage in the list of web results.
+           <br/>
+           <br/>
+           The object includes this field only if the Ranking answer specifies that you mix the webpages with the other search results. Each webpage will contain an ID that matches an ID in the Ranking answer. For more information, see
+           <a data-linktype="external" href="https://docs.microsoft.com/azure/cognitive-services/bing-web-search/ranking-results">
+            Using Ranking to Display Results
+           </a>
+           .
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="name">
+           </a>
+           name
+          </td>
+          <td>
+           The name of the webpage.
+           <br/>
+           <br/>
+           Use this name along with
+           <code>
+            url
+           </code>
+           to create a hyperlink that when clicked takes the user to the webpage.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="searchtags">
+           </a>
+           searchTags
+          </td>
+          <td>
+           A list of search tags that the webpage owner specified on the webpage. The API returns only indexed search tags.
+           <br/>
+           <br/>
+           The
+           <code>
+            name
+           </code>
+           field of the
+           <code>
+            MetaTag
+           </code>
+           object contains the indexed search tag. Search tags begin with search.* (for example, search.assetId). The
+           <code>
+            content
+           </code>
+           field contains the tag's value.
+          </td>
+          <td>
+           <a data-linktype="self-bookmark" href="#metatag">
+            MetaTag
+           </a>
+           []
+          </td>
+         </tr>
+         <tr>
+          <td>
+           snippet
+          </td>
+          <td>
+           A snippet of text from the webpage that describes its contents.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <a name="url">
+           </a>
+           url
+          </td>
+          <td>
+           The URL to the webpage.
+           <br/>
+           <br/>
+           Use this URL along with
+           <code>
+            name
+           </code>
+           to create a hyperlink that when clicked takes the user to the webpage.
+          </td>
+          <td>
+           String
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <h2 id="error-codes">
+        Error codes
+       </h2>
+       <p>
+        The following are the possible HTTP status codes that a request may return.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Status Code
+          </th>
+          <th>
+           Description
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           200
+          </td>
+          <td>
+           The call succeeded.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           400
+          </td>
+          <td>
+           One of the query parameters is missing or not valid.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           401
+          </td>
+          <td>
+           The subscription key is missing or is not valid.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           403
+          </td>
+          <td>
+           The user is authenticated (for example, used a valid subscription key) but they don’t have permission to the requested resource.
+           <br/>
+           <br/>
+           If the caller exceeded their queries per month quota, Bing may also return this status.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           410
+          </td>
+          <td>
+           The request used HTTP instead of the HTTPS protocol. HTTPS is the only supported protocol.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           429
+          </td>
+          <td>
+           The caller exceeded their queries per second quota.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        If the request fails, the body of the response will contain an
+        <code>
+         ErrorResponse
+        </code>
+        object. The response object will include an error code and description of the error. If the error is related to a parameter, the
+        <code>
+         parameter
+        </code>
+        field will identify the parameter that is the issue. And if the error is related to a parameter value, the
+        <code>
+         value
+        </code>
+        field will identify the value that is not valid.
+       </p>
+       <pre><code>{
+  "_type": "ErrorResponse", 
+  "errors": [
+    {
+      "code": "RequestParameterMissing", 
+      "message": "Required parameter is missing.", 
+      "parameter": "q" 
+    }
+  ]
+}
+
+
+{
+  "_type": "ErrorResponse", 
+  "errors": [
+    {
+      "code": "AuthorizationMissing", 
+      "message": "Authorization is required.", 
+    }
+  ]
+}
+</code></pre>
+       <p>
+        The following are the possible error codes.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Error code
+          </th>
+          <th>
+           Description
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           RequestParameterMissing
+          </td>
+          <td>
+           The request is missing a required parameter. The
+           <code>
+            parameter
+           </code>
+           field identifies the missing parameter.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           RequestParameterInvalidValue
+          </td>
+          <td>
+           The parameter value is not valid. The
+           <code>
+            parameter
+           </code>
+           field identifies the parameter that contains the invalid value, and the
+           <code>
+            value
+           </code>
+           field contains the value that is not valid.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           ResourceAccessDenied
+          </td>
+          <td>
+           The caller does not have permissions to access the resource. This error can occur if the subscription key has been disabled or has expired.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           ExceededVolume
+          </td>
+          <td>
+           The caller exceeded their queries per month (QPM) quota.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           ExceededQpsLimit
+          </td>
+          <td>
+           The caller exceeded their queries per second (QPS).
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Disabled
+          </td>
+          <td>
+           The caller does not have permissions to access the resource.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           UnexpectedError
+          </td>
+          <td>
+           An unexpected error occurred on the server. Try again later.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           DataSourceErrors
+          </td>
+          <td>
+           There was an error access the resource.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           AuthorizationMissing
+          </td>
+          <td>
+           Bing is unable to authenticate the caller. This error may occur if the
+           <code>
+            Ocp-Apim-Subscription-Key
+           </code>
+           header is missing.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           HttpNotAllowed
+          </td>
+          <td>
+           The request used the HTTP protocol instead of the HTTPS protocol; Bing supports only HTTPS.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           InvalidAuthorization
+          </td>
+          <td>
+           Bing is unable to authenticate the caller. This may occur if the subscription key is not valid.
+          </td>
+         </tr>
+         <tr>
+          <td>
+           InsufficientScope
+          </td>
+          <td>
+           The caller does not have permissions to access the resource. This error can occur if the subscription key has expired.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <h2 id="market-codes">
+        Market codes
+       </h2>
+       <p>
+        The following table lists the market code values that you may use to specify the
+        <code>
+         mkt
+        </code>
+        query parameter. Bing returns content for only these markets. The list is subject to change.
+       </p>
+       <p>
+        For a list of country codes that you may specify in the
+        <code>
+         cc
+        </code>
+        query parameter, see
+        <a data-linktype="self-bookmark" href="#countrycodes">
+         Country Codes
+        </a>
+        .
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Country/Region
+          </th>
+          <th>
+           Language
+          </th>
+          <th>
+           Market Code
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           Argentina
+          </td>
+          <td>
+           Spanish
+          </td>
+          <td>
+           es-AR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Australia
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-AU
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Austria
+          </td>
+          <td>
+           German
+          </td>
+          <td>
+           de-AT
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Belgium
+          </td>
+          <td>
+           Dutch
+          </td>
+          <td>
+           nl-BE
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Belgium
+          </td>
+          <td>
+           French
+          </td>
+          <td>
+           fr-BE
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Brazil
+          </td>
+          <td>
+           Portuguese
+          </td>
+          <td>
+           pt-BR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Canada
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-CA
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Canada
+          </td>
+          <td>
+           French
+          </td>
+          <td>
+           fr-CA
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Chile
+          </td>
+          <td>
+           Spanish
+          </td>
+          <td>
+           es-CL
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Denmark
+          </td>
+          <td>
+           Danish
+          </td>
+          <td>
+           da-DK
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Finland
+          </td>
+          <td>
+           Finnish
+          </td>
+          <td>
+           fi-FI
+          </td>
+         </tr>
+         <tr>
+          <td>
+           France
+          </td>
+          <td>
+           French
+          </td>
+          <td>
+           fr-FR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Germany
+          </td>
+          <td>
+           German
+          </td>
+          <td>
+           de-DE
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Hong Kong SAR
+          </td>
+          <td>
+           Traditional Chinese
+          </td>
+          <td>
+           zh-HK
+          </td>
+         </tr>
+         <tr>
+          <td>
+           India
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-IN
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Indonesia
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-ID
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Italy
+          </td>
+          <td>
+           Italian
+          </td>
+          <td>
+           it-IT
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Japan
+          </td>
+          <td>
+           Japanese
+          </td>
+          <td>
+           ja-JP
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Korea
+          </td>
+          <td>
+           Korean
+          </td>
+          <td>
+           ko-KR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Malaysia
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-MY
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Mexico
+          </td>
+          <td>
+           Spanish
+          </td>
+          <td>
+           es-MX
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Netherlands
+          </td>
+          <td>
+           Dutch
+          </td>
+          <td>
+           nl-NL
+          </td>
+         </tr>
+         <tr>
+          <td>
+           New Zealand
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-NZ
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Norway
+          </td>
+          <td>
+           Norwegian
+          </td>
+          <td>
+           no-NO
+          </td>
+         </tr>
+         <tr>
+          <td>
+           People's republic of China
+          </td>
+          <td>
+           Chinese
+          </td>
+          <td>
+           zh-CN
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Poland
+          </td>
+          <td>
+           Polish
+          </td>
+          <td>
+           pl-PL
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Portugal
+          </td>
+          <td>
+           Portuguese
+          </td>
+          <td>
+           pt-PT
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Republic of the Philippines
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-PH
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Russia
+          </td>
+          <td>
+           Russian
+          </td>
+          <td>
+           ru-RU
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Saudi Arabia
+          </td>
+          <td>
+           Arabic
+          </td>
+          <td>
+           ar-SA
+          </td>
+         </tr>
+         <tr>
+          <td>
+           South Africa
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-ZA
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Spain
+          </td>
+          <td>
+           Spanish
+          </td>
+          <td>
+           es-ES
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Sweden
+          </td>
+          <td>
+           Swedish
+          </td>
+          <td>
+           sv-SE
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Switzerland
+          </td>
+          <td>
+           French
+          </td>
+          <td>
+           fr-CH
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Switzerland
+          </td>
+          <td>
+           German
+          </td>
+          <td>
+           de-CH
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Taiwan
+          </td>
+          <td>
+           Traditional Chinese
+          </td>
+          <td>
+           zh-TW
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Turkey
+          </td>
+          <td>
+           Turkish
+          </td>
+          <td>
+           tr-TR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           United Kingdom
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-GB
+          </td>
+         </tr>
+         <tr>
+          <td>
+           United States
+          </td>
+          <td>
+           English
+          </td>
+          <td>
+           en-US
+          </td>
+         </tr>
+         <tr>
+          <td>
+           United States
+          </td>
+          <td>
+           Spanish
+          </td>
+          <td>
+           es-US
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <p>
+        <a name="countrycodes">
+        </a>
+       </p>
+       <h3 id="country-codes">
+        Country Codes
+       </h3>
+       <p>
+        The following are the country codes that you may specify in the
+        <code>
+         cc
+        </code>
+        query parameter. The list is subject to change.
+       </p>
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Country/Region
+          </th>
+          <th>
+           Country Code
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           Argentina
+          </td>
+          <td>
+           AR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Australia
+          </td>
+          <td>
+           AU
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Austria
+          </td>
+          <td>
+           AT
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Belgium
+          </td>
+          <td>
+           BE
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Brazil
+          </td>
+          <td>
+           BR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Canada
+          </td>
+          <td>
+           CA
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Chile
+          </td>
+          <td>
+           CL
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Denmark
+          </td>
+          <td>
+           DK
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Finland
+          </td>
+          <td>
+           FI
+          </td>
+         </tr>
+         <tr>
+          <td>
+           France
+          </td>
+          <td>
+           FR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Germany
+          </td>
+          <td>
+           DE
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Hong Kong SAR
+          </td>
+          <td>
+           HK
+          </td>
+         </tr>
+         <tr>
+          <td>
+           India
+          </td>
+          <td>
+           IN
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Indonesia
+          </td>
+          <td>
+           ID
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Italy
+          </td>
+          <td>
+           IT
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Japan
+          </td>
+          <td>
+           JP
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Korea
+          </td>
+          <td>
+           KR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Malaysia
+          </td>
+          <td>
+           MY
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Mexico
+          </td>
+          <td>
+           MX
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Netherlands
+          </td>
+          <td>
+           NL
+          </td>
+         </tr>
+         <tr>
+          <td>
+           New Zealand
+          </td>
+          <td>
+           NZ
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Norway
+          </td>
+          <td>
+           NO
+          </td>
+         </tr>
+         <tr>
+          <td>
+           People's Republic of China
+          </td>
+          <td>
+           CN
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Poland
+          </td>
+          <td>
+           PL
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Portugal
+          </td>
+          <td>
+           PT
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Republic of the Philippines
+          </td>
+          <td>
+           PH
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Russia
+          </td>
+          <td>
+           RU
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Saudi Arabia
+          </td>
+          <td>
+           SA
+          </td>
+         </tr>
+         <tr>
+          <td>
+           South Africa
+          </td>
+          <td>
+           ZA
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Spain
+          </td>
+          <td>
+           ES
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Sweden
+          </td>
+          <td>
+           SE
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Switzerland
+          </td>
+          <td>
+           CH
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Taiwan
+          </td>
+          <td>
+           TW
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Turkey
+          </td>
+          <td>
+           TR
+          </td>
+         </tr>
+         <tr>
+          <td>
+           United Kingdom
+          </td>
+          <td>
+           GB
+          </td>
+         </tr>
+         <tr>
+          <td>
+           United States
+          </td>
+          <td>
+           US
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+     <div data-bi-name="comments" id="comments-container" ms.cmpgrp="comments" role="form">
+     </div>
+    </div>
+   </main>
+   <div class="pageActions">
+    <div data-bi-name="pageactions" id="page-actions" ms.cmpgrp="pageactions" role="complementary">
+     <div id="page-actions-content">
+      <ul class="action-list">
+       <li>
+        <a data-bi-name="comments" href="#comments-container" id="comments-link" ms.cmpnm="comments">
+         <i class="icon icon-comments">
+         </i>
+         Comments
+        </a>
+       </li>
+       <li hidden="" id="contenteditbtn">
+        <a data-bi-name="edit" href="https://github.com/Azure/azure-docs-rest-apis/blob/master/docs-ref-conceptual/cognitiveservices/bing-web-api-v5-reference.md" ms.cmpnm="edit" title="Edit This Document">
+         <i class="icon icon-editor">
+         </i>
+         Edit
+        </a>
+       </li>
+       <li>
+        <a class="sharebutton" data-bi-name="share" href="#" ms.cmpnm="share" title="Share This Document">
+         <i class="icon icon-share">
+         </i>
+         Share
+        </a>
+        <div class="share-container">
+         <div>
+          <a class="share-twitter" data-bi-name="twitter" href="" ms.cmpnm="twitter">
+           <i class="icon icon-twitter">
+           </i>
+           Twitter
+          </a>
+         </div>
+         <div>
+          <a class="share-facebook" data-bi-name="facebook" href="" ms.cmpnm="facebook">
+           <i class="icon icon-facebook">
+           </i>
+           Facebook
+          </a>
+         </div>
+        </div>
+       </li>
+       <li class="typeSep">
+        |
+       </li>
+       <li>
+        <label for="theme-selector">
+         Theme
+        </label>
+        <select id="theme-selector">
+         <option class="removedOnload" value="">
+         </option>
+         <option value="">
+          Light
+         </option>
+         <option value="theme_night">
+          Dark
+         </option>
+        </select>
+       </li>
+      </ul>
+      <nav aria-label="On page navigation" class="doc-outline" data-bi-name="intopic toc" id="side-doc-outline" ms.cmpgrp="intopic toc" role="navigation">
+       <h3>
+        In this article
+       </h3>
+      </nav>
+     </div>
+    </div>
+   </div>
+   <ul aria-label="breadcrumb" class="breadcrumbs" data-bi-name="breadcrumb" ms.cmpgrp="breadcrumb" role="navigation">
+    <li>
+    </li>
+   </ul>
+   <div aria-label="main navigation" class="sidebar" data-bi-name="left toc" dir="ltr" id="sidebar" lang="en-us" ms.cmpgrp="left toc" role="navigation">
+    <div id="sidebarContent">
+     <div class="filterHolder">
+     </div>
+     <nav class="toc">
+     </nav>
+     <div class="pdfDownloadHolder">
+     </div>
+    </div>
+    <div class="tocSpace">
+    </div>
+   </div>
+   <div class="dropdown-container" dir="ltr" id="menu-nav" lang="en-us">
+    <div class="dropdown dropdown-full mobilenavi">
+     <select>
+     </select>
+    </div>
+   </div>
+  </div>
+  <div class="openfeedback-container footer-layout" id="openFeedbackContainer">
+  </div>
+  <div class="container footerContainer">
+   <footer class="footer-layout" data-bi-name="footer" id="footer" ms.pgarea="footer">
+    <div class="container" role="contentinfo">
+     <select aria-label="Change Page Language" id="locale-picker">
+     </select>
+     <ul class="links" data-bi-name="footerlinks" ms.cmpgrp="footerlinks">
+      <li>
+       <a data-bi-name="bloglink" href="https://docs.microsoft.com/teamblog" id="footer-about-link" ms.cmpnm="bloglink">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a data-bi-name="privacy" href="//privacy.microsoft.com/en-US/" id="footer-privacy-link" ms.cmpnm="privacy">
+        Privacy &amp; Cookies
+       </a>
+      </li>
+      <li>
+       <a data-bi-name="termsofuse" href="/legal/termsofuse" id="footer-term-of-use" ms.cmpnm="termsofuse">
+        Terms of Use
+       </a>
+      </li>
+      <li>
+       <a data-bi-name="feedback" href="//aka.ms/sitefeedback" ms.cmpnm="feedback">
+        Feedback
+       </a>
+      </li>
+      <li id="impressum-section">
+       <a data-bi-name="impressum" href="#" id="impressum-link" ms.cmpnm="impressum">
+        Impressum
+       </a>
+      </li>
+      <li>
+       <a data-bi-name="trademarks" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" ms.cmpnm="trademarks">
+        Trademarks
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </div>
+  <script src="/_themes/docs.theme/master/en-us/_themes/javascript/d64a0f59991efe84d4b4.conceptual.js">
+  </script>
+ </body>
+</html>

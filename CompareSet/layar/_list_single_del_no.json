@@ -1,0 +1,38 @@
+{
+  "basePath": "/focus%E5%9B%BE%E5%83%8F.png",
+  "paths": {
+    "/vnd.layar.generic": {
+      "DEL": {}
+    },
+    "//layarapi.example.net/mylayer/getpoi": {
+      "GET": {}
+    },
+    "/Optional:": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "Get": {},
+      "del": {}
+    },
+    "/vnd.layar.l3d\",": {
+      "DEL": {}
+    },
+    "//<layername>": {
+      "GET": {},
+      "get": {}
+    },
+    "/overshoot.": {
+      "GET": {}
+    },
+    "//<poiUrl>": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "custom.layar.nl",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

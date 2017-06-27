@@ -1,0 +1,90 @@
+{
+  "basePath": "/gp/cart/aws-merge.html",
+  "paths": {
+    "//webservices.amazon.com/onca/xml": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ASIN\nSpecifies",
+            "description": "ASIN\nSpecifies ASIN of item to be added to the cart where N is a positive integer between 1 and 10, inclusive. Up to ten items can be added at a time. Using an item's OfferListingId is preferred instead of the item's ASIN.\n\nType: String\n\nDefault: None\n\nValid Values: Valid ASIN\n\nConstraint: Required if an OfferListingId is not specified.\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AssociateTag\nSpecifies",
+            "description": "the Associate who is making the request. An Associate tag, also known as an Associate ID, is an automatically generated unique identifier. When you log in to the Amazon Associates website for your locale, the page that you are directed to includes a message that says \"Signed in as\" followed by your Associate tag.\n\nThe Associate tag that you used to create a cart must also be used on all other operations associated with the same cart.\n\nType: String\n\nDefault: None\n\nValid Value: The same Associate tag that was used in the related CartCreate request.\n\nConstraint:\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CartId\nAlphanumeric",
+            "description": "token returned by CartCreate that identifies a cart.\n\nType: String\n\nDefault: None\n\nValid Values: Value returned by CartCreate .\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "HMAC\nThe",
+            "description": "Hash Message Authentication Code is an encrypted alphanumeric token that is used to authenticate requests.\n\nType: String\n\nDefault: None\n\nValid Values: Value is calculated using request parameters, their values, a cryptographic function, and the Secret Key, which acts as the \"key\" for the function.\nYes",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Item",
+            "description": "Container for ASIN or OfferListingId , and Quantity . This is a SOAP only parameter.\nValid Values: An ASIN or an OfferListingId is required.\nYes (SOAP only)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Items",
+            "description": "Container for one or more Item (s). This is a SOAP only parameter.\nValid Values: Item\nYes (SOAP only)",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "MergeCart\nThis",
+            "description": "parameter is deprecated. When a customer purchases items in a remote shopping cart, the items are added to the customer’s Amazon retail shopping cart.\nDeprecated",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "OfferListingId\nAn",
+            "description": "offer listing ID is a token that uniquely identifies an item that is sold by any merchant, including Amazon. This parameter is preferred to using an ASIN to add an item to a cart.\n\nType: String\n\nDefault: None\n\nValid Values: Valid offer listing ID\n\nConstraint: Required if ASIN is not offered .\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Quantity\nSpecifies",
+            "description": "number of items to be added to the cart where N is a positive integer. The Quantity value is matched to the Item.N.ASIN value by the index number, N. For example, Item.1.ASIN is associated with Item.1.Quantity.\n\nType: String\n\nDefault: None\n\nValid Values: Positive integer between 1 and 999, inclusive.\n\nConditional Required for REST\nConditional",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ResponseGroup\nSpecifies",
+            "description": "the types of values to return. You can specify multiple response groups in one request by separating them with commas.\n\nType: String\n\nDefault: Cart\n\nValid Values: CartSimilarities | CartTopSellers | NewReleases\nNo",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "Get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.amazon.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

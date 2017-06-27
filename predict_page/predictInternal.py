@@ -34,13 +34,13 @@ if __name__ == "__main__":
     # that is used when n_jobs != 1 in GridSearchCV
 
     # the training data folder must be passed as first argument
-    name = "bal_dataset_700_NB"
+    name = "bal_dataset_200_NB"
     unbalence_data_folder = "dataset/"+name
     dataset = load_files(unbalence_data_folder, shuffle=True)
     print("n_samples: %d" % len(dataset.data))
     # split the dataset in training and test set:
     docs_train, docs_test, y_train, y_test = train_test_split(
-        dataset.data, dataset.target, test_size=0.20, random_state=None)
+        dataset.data, dataset.target, test_size=0.25, random_state=None)
 
     # TASK: Build a vectorizer / classifier pipeline that filters out tokens
     # that are too rare or too frequent

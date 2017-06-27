@@ -1,0 +1,45 @@
+{
+  "basePath": "/<",
+  "paths": {
+    "https://developers.google.com/streetview/spherical-metadata": {
+      "post": {},
+      "POST": {}
+    },
+    "https://www.facebook.com/<POST_ID>": {
+      "POST": {}
+    },
+    "http://example.com'": {
+      "POST": {},
+      "Post": {}
+    },
+    "http_method": {
+      "POST": {}
+    },
+    "API_VERSION>/204807582871020_615180368500404/insights": {
+      "POST": {}
+    },
+    "http://www.example.com'": {
+      "POST": {}
+    },
+    "http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt2015381%2F": {
+      "GET": {}
+    },
+    "video_id>": {
+      "DELETE": {}
+    },
+    "http://bit.ly/alaska'": {
+      "POST": {},
+      "Post": {}
+    },
+    "API_VERSION>/204807582871020/promotable_posts": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "graph.facebook.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

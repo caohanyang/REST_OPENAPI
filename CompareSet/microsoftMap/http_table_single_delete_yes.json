@@ -1,0 +1,172 @@
+{
+  "paths": {
+    "http://www.bing.com/maps": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.bingmapsportal.com.": {
+      "GET": {},
+      "get": {}
+    },
+    "http://schemas.m": {
+      "POST": {},
+      "Post": {}
+    },
+    "http://msdn.microsoft.com/en-us/library/ff701734.aspx": {
+      "GET": {},
+      "get": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode": {
+      "GET": {},
+      "get": {}
+    },
+    "https://spatial.virtualearth.net/REST/v1/dataflows/Geocode/5bf10c37df944083b1879fbb0556e67e/output/succeeded": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Locations": {
+      "post": {},
+      "POST": {},
+      "Get": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "\nYou",
+            "description": "can substitute a hyphen (-) for any structured URL parameter when there is no value.\n\nFor countries that do not have a structured URL template, use the Unstructured URL described below or use the Find a Location by Query API which takes location well as encode other special characters information as a single query string.\n\nFor all location values, it is a best practice to encode the URI before making the request. Encoding replaces spaces with \"%20\" and replaces other special characters with similar encoded values. For more information, see encodeURI [JavaScript] and Uri.EscapeDataString [.NET].\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://schemas.microsoft.com/search/local/2010/5/geocode": {
+      "POST": {},
+      "Post": {}
+    },
+    "/": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "output\n\no\n\nOptional",
+            "description": ". The output format for the response.\n\nOne of the following values:\n\njson [default]\n\nxml\n\nExample : output=xml\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "suppressStatus\n\nss\n\nOptional",
+            "description": ". When set to true , the HTTP Status returned is 200 OK for all responses, including when there are errors. The content of the response always contains the actual HTTP Status.\n\ntrue\n\nfalse [default]\n\nExample : suppressStatus=true\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "jsonp\n\nOptional.",
+            "description": "Name of JSON callback function that is called when the response to the request is received. The JSON object provided in the response is passed to the callback function.\n\nA string that contains the name of the callback function.\n\nExample : jsonp=MyCallbackFunction\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "jsonso\n\nOptional.",
+            "description": "The state object to pass to the JSON callback function. You can use a state object to match a response with a specific call. This value is provided as the second parameter to the callback function provided in the JSONP parameter.\n\nAny valid JavaScript string.\n\nExample : jsonso=abc3144sd\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "alearth.net/REST/V1/Imagery/Map/Road/Bellevue%20Washington": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Routes/travelMode": {
+      "GET": {},
+      "get": {}
+    },
+    "http://msdn.microsoft.com/en-us/library/cc981072.aspx": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1": {
+      "GET": {},
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "includeEntityTypes\n\nOptional",
+            "description": ". Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.\n\nA comma separated list of entity types selected from the following options.\n\nAddress\n\nNeighborhood\n\nPopulatedPlace\n\nPostcode1\n\nAdminDivision1\n\nAdminDivision2\n\nCountryRegion\n\nThese entity types are ordered from the most specific entity to the least specific entity. When entities of more than one entity type are found, only the most specific entity is returned. For example, if you specify Address and AdminDistrict1 as entity types and entities were found for both types, only the Address entity information is returned in the response. One exception to this rule is when both PopulatedPlace and Neighborhood entity types are specified and information is found for both. In this case, the information for both entity types is returned. Also, more than one Neighborhood may be returned because the area covered by two different neighborhoods can overlap.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "point\n\nRequired.",
+            "description": "The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude. For more information, see the definition of Point in Location and Area Types .\n\nA point on the Earth specified by a latitude and longitude. For more information, see the definition of Point in Location and Area Types .\n\nExample : 47.64054,-122.12934\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "includeNeighborhood\n\ninclnb\n\nOptional.",
+            "description": "Specifies to include the neighborhood in the response when it is available.\n\nOne of the following values:\n\n1: Include neighborhood information when available.\n\n0 [default] : Do not include neighborhood information.\n\nExample: Â\n\ninclnb=1\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "include\n\nincl\n\nOptional.",
+            "description": "Specifies additional values to include.\n\nThe only value for this parameter is ciso2. When you specify include=ciso2, the two-letter ISO country code is included for addresses in the response.\n\nExample: Â\n\nincl=ciso2\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://spatial.virtualearth.net/REST/v1/dataflows/geocode/e14b1d9bd65c4b9d99d267bbb8102ccf</Link>": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://windows.php.net/download": {
+      "GET": {},
+      "get": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode/\".$jobId.": {
+      "GET": {},
+      "Get": {}
+    },
+    "alearth.net/REST/v1/Locations/point": {
+      "post": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "\nYou",
+            "description": "can find the complete sample described in this section in the Code Samples section at the end of this article.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "http://schemas.microsoft.com/search/local/2010/5/geocode\">": {
+      "GET": {},
+      "get": {}
+    },
+    "alearth.net/REST/v1/Im": {
+      "GET": {},
+      "Get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "dev.virtu",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

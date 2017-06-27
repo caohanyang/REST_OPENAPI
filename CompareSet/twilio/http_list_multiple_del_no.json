@@ -1,0 +1,538 @@
+{
+  "paths": {
+    "/2010-04-01/Accounts/ACyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy/IncomingPhoneNumbers/PNyyy": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88d": {
+      "GET": {},
+      "Get": {},
+      "del": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/FeedbackSummary/FSa3": {
+      "DEL": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings/RE557ce644e5ab8": {
+      "GET": {},
+      "Get": {},
+      "DEL": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN557ce644e5ab8": {
+      "GET": {},
+      "Get": {},
+      "del": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/{TestAccountSid}/Calls": {
+      "POST": {}
+    },
+    "http://www.example.com/": {
+      "POST": {},
+      "Get": {},
+      "put": {}
+    },
+    "https://demo.twilio.com/welcome": {
+      "POST": {},
+      "Get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "https://www.myapp.com/events": {
+      "POST": {},
+      "PUT": {}
+    },
+    "http.NameValuePair": {
+      "GET": {},
+      "get": {}
+    },
+    "http://requestb.in/1234abcd'": {
+      "POST": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/LastMonth": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://myapp.com/answer,": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses/AP2a0747eba6abf9": {
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU32a3c49700934481a": {
+      "POST": {}
+    },
+    "http://www.mycompany.com": {
+      "post": {},
+      "POST": {},
+      "put": {}
+    },
+    "https://preview.twilio.com/porting/PortOrders": {
+      "POST": {},
+      "GET": {}
+    },
+    "/2010-04-01/Accounts/{AccountSid}/Keys/{API": {
+      "GET": {}
+    },
+    "http://www.example.com/sipdial.xml": {
+      "Get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses/AD2a0747eba6abf9": {
+      "POST": {},
+      "Post": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CAe03b7cd806070d1f32": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "https://www.example.com/monthly-usage-trigger": {
+      "GET": {},
+      "geT": {},
+      "Get": {},
+      "get": {},
+      "put": {}
+    },
+    "https://preview.twilio.com/porting/PortOrders/PO800f449d0399ed014aae2bcc0cc2f2ec": {
+      "GET": {}
+    },
+    "http://demo.twilio.com/docs/sms.xml": {
+      "POST": {},
+      "Get": {},
+      "deL": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/": {
+      "POST": {},
+      "Get": {},
+      "GET": {},
+      "geT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Applications/AP2a0747eba6a": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "https://handler.twilio.com/twiml/EH8ccdbd7f0b8fe34357da8ce87ebe5a16'": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Keys": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/CredentialLists/CL32a3": {
+      "POST": {},
+      "Get": {},
+      "DEL": {},
+      "Del": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/AC25e16e9a716a4a1786a7c83f58e30482/Conferences/CF203597f9bc24": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services'": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions": {
+      "del": {},
+      "PUT": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/ShortCodes/SC6b20cb705": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http://www.example.com": {
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe4632a3c49": {
+      "POST": {},
+      "DEL": {},
+      "Del": {},
+      "del": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Addresses": {
+      "Post": {},
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Tokens": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Recordings": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://www.example.com/feedback'": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACa9b8c7d6e5f43120a9b8c7d6e5f43120/Messages/SM1f2e3d4c5b6a708": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ConnectApps": {
+      "post": {},
+      "PUT": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages": {
+      "POST": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/AC5ef8732a3c49700934481addd5ce1659/Calls": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds/PNe536d3": {
+      "POST": {},
+      "DEL": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN2a0747eba6abf": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.tommypi.com": {
+      "post": {},
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes": {
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21614": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://www.example.com/feedback": {
+      "GET": {},
+      "Get": {},
+      "get": {}
+    },
+    "http://requestb.in/1234abcd": {
+      "POST": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ConnectApps/CNb989fdd207b0": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://demo.twilio.com/docs/voice.xml'": {
+      "GET": {},
+      "Get": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders/AIc781610ec0b34": {
+      "GET": {},
+      "Get": {},
+      "del": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Applications": {
+      "POST": {},
+      "GET": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21201": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Conferences/CFbbe46ff1274e": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers/UT33c6aeeba": {
+      "POST": {},
+      "GET": {},
+      "geT": {}
+    },
+    "/2010-04-01/Accounts/AC22ef5e6f64bf40a6ac84123ae4fb9fa7/Calls": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists": {
+      "POST": {}
+    },
+    "https://preview.twilio.com/porting/Loas/PX800f449d0399ed014aae2bcc0cc2f2ec": {
+      "POST": {},
+      "GET": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21602": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/CredentialLists": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA42ed11f93dc08b9520": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://www.twilio.com/console": {
+      "Post": {},
+      "GET": {},
+      "get": {},
+      "Get": {},
+      "deL": {},
+      "del": {},
+      "put": {}
+    },
+    "http://demo.twilio.com/docs/sms.xml'": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AuthorizedConnectApps/CN47": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/MM800f449d0399ed0": {
+      "POST": {},
+      "Get": {},
+      "DEL": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records": {
+      "GET": {},
+      "Get": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c4970093": {
+      "POST": {},
+      "GET": {},
+      "Get": {},
+      "DEL": {},
+      "Del": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/Daily": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers/PN2a0": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/AC25e16e9a716a4a1786a7c83f58e30482/Conferences/CF1446ceacaefd": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists.j": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes'": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http://twimlets.com/message": {
+      "Get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http:\\/\\/demo.twilio.com\\/docs/voice.xml": {
+      "GET": {}
+    },
+    "https://preview.twilio.com": {
+      "GET": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages/SM800f449d039": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Keys/SK2a0747eba6abf96b7e3": {
+      "GET": {},
+      "get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists/A": {
+      "POST": {},
+      "Get": {},
+      "DEL": {},
+      "Del": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http://www.google.com": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACa9b8c7d6e5f43120a9b8c7d6e5f43120/Messages": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds/PNe905d7": {
+      "GET": {},
+      "Del": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CAe1644a7eed5088b159": {
+      "POST": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Triggers": {
+      "POST": {},
+      "GET": {},
+      "geT": {}
+    },
+    "/2010-04-01/Accounts/{TestAccountSid}/Messages": {
+      "POST": {}
+    },
+    "http://demo.twilio.com/docs/voice.xml": {
+      "POST": {},
+      "Get": {},
+      "get": {},
+      "GET": {},
+      "put": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21421": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/FeedbackSummary": {
+      "POST": {}
+    },
+    "http://myapp.com/awesome'": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU5ef8732a3c4970093": {
+      "POST": {},
+      "Get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers'": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "https://dundermifflin.example.com/twilio/app.php": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/ShortCodes": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Usage/Records/Today": {
+      "GET": {},
+      "put": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21422": {
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SMS/Messages": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://www.example.com'": {
+      "POST": {}
+    },
+    "https://demo.twilio.com/welcome'": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://www.example.com/sipdial.xml'": {
+      "Get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls/CA8dfedb55c129dd4d6b": {
+      "GET": {},
+      "Get": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http://smsapp.com/fallback": {
+      "GET": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions/TR8c61027b7": {
+      "GET": {},
+      "DEL": {},
+      "Del": {}
+    },
+    "https://www.twilio.com/docs/libraries/csharp#installation": {
+      "get": {},
+      "Get": {},
+      "DEL": {},
+      "del": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders'": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http://m.twil.io": {
+      "DEL": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AuthorizedConnectApps": {
+      "PUT": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a'": {
+      "GET": {},
+      "Get": {},
+      "DEL": {}
+    },
+    "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/OutgoingCallerIds": {
+      "POST": {},
+      "del": {},
+      "PUT": {},
+      "put": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.twilio.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

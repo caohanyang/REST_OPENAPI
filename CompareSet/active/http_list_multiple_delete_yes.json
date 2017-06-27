@@ -1,0 +1,59 @@
+{
+  "paths": {
+    "p.active.com/camping/campsites": {
+      "GET": {},
+      "get": {}
+    },
+    "http://countrycode.org": {
+      "POST": {}
+    },
+    "http://www.tantracking.com/click.track": {
+      "GET": {}
+    },
+    "https://www.active.com/register/index.cfm": {
+      "POST": {}
+    },
+    "http://developer.active.com/affiliates.": {
+      "GET": {}
+    },
+    "/": {
+      "GET": {}
+    },
+    "p.active.com/camping/campgrounds": {
+      "GET": {},
+      "Get": {}
+    },
+    "p.active.com/camping/campground/details": {
+      "post": {},
+      "GET": {}
+    },
+    "p.active.com/search": {
+      "GET": {}
+    },
+    "http://localhost/campsiteSearch.do": {
+      "GET": {}
+    },
+    "p.ac": {
+      "GET": {}
+    },
+    "p.active.com/v2/search": {
+      "post": {},
+      "GET": {},
+      "get": {},
+      "put": {}
+    },
+    "p.active.com/c": {
+      "GET": {}
+    },
+    "p.active.com/camping/campgrou": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.am",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

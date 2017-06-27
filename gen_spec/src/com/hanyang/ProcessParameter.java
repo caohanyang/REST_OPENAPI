@@ -39,7 +39,7 @@ public class ProcessParameter {
 				// 1. we add url/action into swagger now.
 				// because here we have known that each table have match one url
 				// some urls would not be used.
-				processMe.addUrl(openAPI, url, action);
+				processMe.addUrl(openAPI, url, action, null);
 
 				try {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
@@ -308,7 +308,7 @@ public class ProcessParameter {
 				appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
 			}
 		}
-		if (Pattern.compile("(parameter)|(argument)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
+		if (Pattern.compile("(parameter)|(argument)|(field)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
 			return true;
 		}
 		return false;

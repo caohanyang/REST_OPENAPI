@@ -1,0 +1,102 @@
+{
+  "paths": {
+    "//gateway.watsonplatform.net/conversation/api/v1/workspaces": {
+      "POST": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}/synonyms/{synonym}": {
+      "POST": {},
+      "GET": {}
+    },
+    "//gateway.watsonplatform.net/conversation/api/v1/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/inte": {
+      "POST": {},
+      "DEL": {},
+      "put": {}
+    },
+    "/v1/workspaces": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values/{value}/synonyms": {
+      "POST": {},
+      "GET": {}
+    },
+    "//gateway.watsonplatform.net/conversation/api/v1/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/enti": {
+      "POST": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}/examples": {
+      "POST": {},
+      "GET": {}
+    },
+    "//gateway.watsonplatform.net/conversation/api/v1/workspaces/394927d3-bf81-40d8-8cb5-368a13f60fee": {
+      "POST": {}
+    },
+    "/v1/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/intents/hello/examples": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/workspaces/{workspace_id}/counterexamples": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/bec28d8f-18c1-4e97-8d08-9c842c658b51/logs": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/intents": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents": {
+      "POST": {},
+      "GET": {}
+    },
+    "//gateway.watsonplatform.net/conversation/api/v1/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/coun": {
+      "POST": {},
+      "DEL": {},
+      "put": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}/examples/{text}": {
+      "POST": {},
+      "GET": {},
+      "DEL": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/message": {
+      "POST": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/intents/{intent}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/counterexamples/{text}": {
+      "POST": {},
+      "GET": {},
+      "DEL": {}
+    },
+    "/v1/workspaces/{workspace_id}/logs": {
+      "GET": {}
+    },
+    "/v1/workspaces/{workspace_id}/entities/{entity}/values": {
+      "POST": {},
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

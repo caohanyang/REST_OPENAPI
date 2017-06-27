@@ -1,0 +1,32 @@
+{
+  "basePath": "/conversation/api/v1/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/in",
+  "paths": {
+    "/": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "IllegalArgumentException",
+            "description": "An illegal or null argument was passed to a method.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "UnauthorizedException",
+            "description": "Access is denied due to invalid credentials. (HTTP response code 401.)",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "gateway.watsonplatform.net",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,16 +1,65 @@
 {
+  "basePath": "/api/v2",
   "paths": {
+    "/following": {
+      "GET": {}
+    },
+    "https://api.picplz.com/api/v2/user/follow": {
+      "DEL": {}
+    },
+    "/followers": {
+      "GET": {}
+    },
     "https://api.picplz.com/api/v2/pic": {
-      "get": {}
+      "GET": {}
     },
-    "https://YOUR_REGISTERED_REDIRECT_URI": {
-      "get": {}
+    "http://api": {
+      "GET": {}
     },
-    "http://picplz.com/api/v2/feed": {
-      "get": {}
+    "/place": {
+      "GET": {}
+    },
+    "http://picplz.com": {
+      "GET": {}
+    },
+    "/feed": {
+      "GET": {}
+    },
+    "/pic": {
+      "GET": {}
+    },
+    "/user/follow": {
+      "DEL": {}
+    },
+    "https://api.picplz.com/api/v2/pic/like": {
+      "Post": {},
+      "DEL": {}
+    },
+    "https://api.picplz.com/api/v2/pic/comment": {
+      "post": {},
+      "DEL": {}
+    },
+    "http://api.picplz.com/api": {
+      "GET": {}
+    },
+    "https://api.picplz.com/api/v2/collection/pic": {
+      "DEL": {}
+    },
+    "/user": {
+      "GET": {}
+    },
+    "/city": {
+      "GET": {}
+    },
+    "/collection": {
+      "DEL": {}
     }
   },
   "produces": "application/json",
+  "host": "api.picplz.com",
+  "schemes": [
+    "http"
+  ],
   "swagger": "2.0",
   "info": "This is the information of the API"
 }

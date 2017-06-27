@@ -1,0 +1,85 @@
+{
+  "basePath": "/conversation/api/v1",
+  "paths": {
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/entities/beverage/values/orange%20juice": {
+      "POST": {},
+      "GET": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/entities/beverage/values/soda": {
+      "GET": {}
+    },
+    "/{method}": {
+      "GET": {}
+    },
+    "/workspaces/25dfa8a0-0263-471b-8980-317e68c30488/message": {
+      "GET": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/intents/hello/examples": {
+      "POST": {},
+      "DEL": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/intents": {
+      "POST": {},
+      "DEL": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/intents/hello/examples/Good%20afternoon": {
+      "POST": {},
+      "GET": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/intents/hello": {
+      "POST": {},
+      "GET": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/entities/beverage/values/orange%20juice/synonyms/OJ": {
+      "POST": {},
+      "GET": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/intents/hello/examples/hi%20there": {
+      "GET": {}
+    },
+    "/workspaces/394927d3-bf81-40d8-8cb5-368a13f60fee": {
+      "POST": {},
+      "GET": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/counterexamples": {
+      "POST": {},
+      "Del": {}
+    },
+    "/workspaces": {
+      "POST": {},
+      "Del": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/entities": {
+      "POST": {},
+      "DEL": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/counterexamples/What%20are%20you%20wearing%3F": {
+      "POST": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/entities/beverage/values": {
+      "POST": {},
+      "DEL": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/entities/beverage/values/orange%20juice/synonyms": {
+      "DEL": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/counterexamples/Make%20me%20a%20sandwich": {
+      "GET": {},
+      "Get": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/entities/beverage/values/soda/synonyms": {
+      "POST": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/entities/beverage": {
+      "POST": {},
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "gateway.watsonplatform.net",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

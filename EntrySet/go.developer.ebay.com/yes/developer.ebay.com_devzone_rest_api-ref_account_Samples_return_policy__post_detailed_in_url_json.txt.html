@@ -1,0 +1,23 @@
+<html>
+ <head>
+ </head>
+ <body>
+  POST https://api.sandbox.ebay.com/sell/account/v1/return_policy
+
+{
+  "name": "detailed return policy",
+  "marketplaceId": "EBAY_US",
+  "description": "Policy specifies restocking fee and handling for remorse return items.",
+  "returnsAccepted": true,
+  "returnPeriod": {
+    "value": 60,
+    "unit": "DAY"
+  },
+  "returnInstructions": "Buyer pays for return shipping. Store credit for remorse returns.",
+  "refundMethod": "MONEY_BACK",
+  "returnMethod": "EXCHANGE",
+  "restockingFeePercentage": "10.0",
+  "returnShippingCostPayer": "BUYER"
+}
+ </body>
+</html>

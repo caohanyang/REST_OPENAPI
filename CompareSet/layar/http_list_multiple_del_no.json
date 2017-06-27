@@ -1,0 +1,46 @@
+{
+  "basePath": "/",
+  "paths": {
+    "http://demo.com/video.mp4\",": {
+      "GET": {}
+    },
+    "http://www.example.com/music.mp3\",": {
+      "POST": {}
+    },
+    "http://\",": {
+      "GET": {}
+    },
+    "http://yourlink.com/object.l3d\",": {
+      "DEL": {}
+    },
+    "http://m.layar.com/open/<layername>": {
+      "GET": {},
+      "del": {}
+    },
+    "http://layarapi.example.net/mylayer/getpoi": {
+      "GET": {}
+    },
+    "example_full.l3d\",": {
+      "DEL": {}
+    },
+    "full_model.l3d\",": {
+      "DEL": {}
+    },
+    "http:\\/\\/custom.layar.nl\\/layarimage.jpeg": {
+      "GET": {}
+    },
+    "http://<poiUrl>": {
+      "GET": {}
+    },
+    "http://mylayer.com/account": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "example.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

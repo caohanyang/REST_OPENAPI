@@ -1,0 +1,3899 @@
+{
+  "paths": {
+    "/admin_notes": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "210",
+            "description": "User not visible",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/an_blocked_categories": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "category_ids\nlist<numeric",
+            "description": "string>\n\nList of FBIDs of categories that need to be removed from the category blocklist for this AN app\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/invitable_friends": {
+      "DEL": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "height\ninteger\n\nThe",
+            "description": "height\ninteger\n\nThe height of this picture in pixels.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "redirect\nboolean\nDefault",
+            "description": "value: true\n\nBy default the picture edge will return a picture instead of a JSON response. If you want the picture edge to return JSON that describes the image set redirect=0 when you make the request.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\nenum{small,",
+            "description": "normal, album, large, square}\n\nThe size of this picture. It can be one of the following values: small, normal, large, square.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "width\ninteger\n\nThe",
+            "description": "width\ninteger\n\nThe width of this picture in pixels.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/insights": {
+      "GET": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\ntoken",
+            "description": "with structure: ID\n\nID of the insight.\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nName",
+            "description": "of the metric.\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "period\nenum\n\nLength",
+            "description": "of the period during which the insights were collected.\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "values\nlist<InsightsValue>\n\nIndividual",
+            "description": "data points for the insight grouped by different time periods (determined by period).\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title\nstring\n\nThe",
+            "description": "title\nstring\n\nThe title of the metric\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\nstring\n\nThe",
+            "description": "full description of the metric.\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{canvas_product_set_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bottom_padding\nfloat\n\nThe",
+            "description": "padding\nfloat\n\nThe padding below the product set\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "max_items\nint64\n\nMaximum",
+            "description": "number of products to show\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nName",
+            "description": "of the product set element\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "product_set_id\nid\n\nThe",
+            "description": "product_set_id\nid\n\nThe product set id which contains a subset of products within a product catalog\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "top_padding\nfloat\n\nThe",
+            "description": "padding\nfloat\n\nThe padding above the product set\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/instagram_comments": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ad_id\nNumeric",
+            "description": "String\n\nAd id associated to this Instagram Media\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message\nstring\n\nComment",
+            "description": "text\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{user_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "emoji_color_pref\nint64\n\nemoji",
+            "description": "color_pref\nint64\n\nemoji color preference.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "firstname\nstring\n\nThis",
+            "description": "person's first name\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "label_cohort\nObject\n\nThis",
+            "description": "person's label cohort\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {
+            "in": "query",
+            "name": "lastname\nstring\n\nThis",
+            "description": "person's last name\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "local_news_megaphone_dismiss_status\nenum",
+            "description": "{YES, NO}\n\nDismisses local news megaphone\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "local_news_subscription_status\nenum",
+            "description": "{STATUS_ON, STATUS_OFF}\n\nPreference for setting local news notifications\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nUsed",
+            "description": "for test accounts only. Name for this account\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "password\nstring\n\nUsed",
+            "description": "for test accounts only. Password for this account\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{instagram_comment_id}": {
+      "DEL": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/picture": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nbottom\nunsigned",
+            "description": "int32\n\nDeprecated\n\nDeprecated\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "height\nunsigned",
+            "description": "int32\n\nPicture height in pixels. Only returned when specified as a modifier\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "is_silhouette\nbool\n\nTrue",
+            "description": "if the profile picture is the default 'silhouette' picture\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "left\nunsigned",
+            "description": "int32\n\nDeprecated\n\nDeprecated\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "right\nunsigned",
+            "description": "int32\n\nDeprecated\n\nDeprecated\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "top\nunsigned",
+            "description": "int32\n\nDeprecated\n\nDeprecated\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "url\nstring\n\nURL",
+            "description": "of the profile picture\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "width\nunsigned",
+            "description": "int32\n\nPicture width in pixels. Only returned when specified as a modifier\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/{app_request_id}": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\ntoken",
+            "description": "with structure: ID or ID or ID\n\nThe ID of an individual request\n\nCore\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "action_type\nstring\n\nRequest",
+            "description": "action_type\nstring\n\nRequest action type for structured request\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "application\nApplication\n\nThe",
+            "description": "application\nApplication\n\nThe app used to send the request\n\nCore Default\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "created_time\ndatetime\n\nTimestamp",
+            "description": "when the request was sent\n\nCore Default\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "data\nstring\n\nOptional",
+            "description": "data\nstring\n\nOptional data passed with the request for tracking purposes\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "from\nUser\n\nThe",
+            "description": "user who sent the request. This is not present for app-to-user requests made with the Graph API\n\nCore Default\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message\nstring\n\nThe",
+            "description": "message\nstring\n\nThe message included with the request\n\nCore Default\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "object\nOpenGraphObject:generic\n\nOpen",
+            "description": "GraphObject:generic\n\nOpen Graph object for structured request. Note the type of object should belong to this app\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "to\nUser\n\nThe",
+            "description": "user who received the request\n\nCore Default\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/milestones": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "start_time\ndatetime\n\nTime",
+            "description": "\nTime of the Milestone\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "description": "\nTitle\nRequired\n"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/an_blocked_apps": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "dso_ids\nlist<numeric",
+            "description": "string>\n\nDigital store object ids for apps to be removed from app blocklist for this AN app\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/canvas_elements": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/comments": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "368",
+            "description": "The action attempted has been deemed abusive or is otherwise disallowed",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "1705",
+            "description": "There was an error during posting.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "190",
+            "description": "Invalid OAuth 2.0 Access Token",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/activit": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "159",
+            "description": "Invalid protocol, must be https",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/leadgen_whitelisted_users": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user_id\nint\n\nID",
+            "description": "of the user to be whitelisted for the page.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/video_copyright_rule": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "condition_groups\nlist<Condition",
+            "description": "Group>\n\nA list of condition groups that specify conditions for an action.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "action\nenum",
+            "description": "{ALLOW, MANUAL_REVIEW, TRACK, BLOCK, TAKEDOWN, MONETIZE, ACQUIRE_VIEWS_AND_MONETIZE}\n\nThe action to be performed on a match if any of the conditions pass.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "conditions\nlist<Condition>\n\nA",
+            "description": "list<Condition>\n\nA list of conditions to be evaluated.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\nenum",
+            "description": "{GEO, MONITORING_TYPE, OVERLAP_DURATION, MATCH_OVERLAP_PERCENTAGE, REFERENCE_OVERLAP_PERCENTAGE, PRIVACY}\n\nThe type of condition to be evaluated.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "operator\nenum",
+            "description": "{IS, IS_NOT, IN_SET, NOT_IN_SET, LESS_THAN, GREATER_THAN}\n\nThe operator for the evaluation, which varies depending on the condition type.\nCONTENT_TYPE : IS\nGEO : IN_SET, NOT_IN_SET\nOVERLAP_DURATION : GREATER_THAN, LESS_THAN\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "value\narray<string>",
+            "description": "| int | string\n\nThe value for this condition, which varies depending on the condition type.\nCONTENT_TYPE : One or more of VIDEO_ONLY, AUDIO_ONLY or VIDEO_AND_AUDIO\nGEO : A string array of ISO 3166 format country codes\nOVERLAP_DURATION : An integer representing milliseconds of overlap\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nThe",
+            "description": "name\nstring\n\nThe name of the rule, as specified by the user.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\nnumeric",
+            "description": "string\n\nThe id of video copyright rules object\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "condition_groups\nlist<VideoCopyrightConditionGroup>\n\nGroups",
+            "description": "of conditions on the rules object\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "copyrights\nlist<numeric",
+            "description": "string>\n\nCopyrights associated with this copyright rules object\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "created_date\ndatetime\n\nThe",
+            "description": "date\ndatetime\n\nThe date on which the rule was created\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "creator\nUser\n\nThe",
+            "description": "person who created the match rule\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "is_in_migration\nbool\n\nWether",
+            "description": "or not the rule is in migration\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nName",
+            "description": "of the video copyright rules object\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/saved_message_respons": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/video_lists": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\nnumeric",
+            "description": "string\n\nVideo playlist ID\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "creation_time\ndatetime\n\nThe",
+            "description": "time\ndatetime\n\nThe time when the playlist was created\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\nstring\n\nDescription",
+            "description": "of the playlist\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "last_modified\ndatetime\n\nThe",
+            "description": "time\n\nThe time when the contents of the playlist was last changed\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "owner\nUser|Page\n\nOwner",
+            "description": "of the playlist\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "season_number\nint32\n\nNumber",
+            "description": "of Season which this episode belongs to\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "thumbnail\nstring\n\nThumbnail",
+            "description": "of the playlist\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title\nstring\n\nTitle",
+            "description": "of the playlist\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "videos_count\nint32\n\nNumber",
+            "description": "of Videos in the playlist\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "video_ids\nlist<numeric",
+            "description": "string or integer>\n\nIDs of videos to be removed from the video list\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "video_list_id\nnumeric",
+            "description": "string or integer\n\nID of the video list to be deleted\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/paymentaccountphones": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "country_code\nstring\n\ncountry",
+            "description": "code\nstring\n\ncountry code\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {
+            "in": "query",
+            "name": "raw_input\nstring\n\nraw",
+            "description": "input\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/thumbnails": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/<POST_ID>": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\ncall_to_action\n\nObject",
+            "description": "that specifies a Call to Action button. This should be the action you want people to take when they see your post. Clicking on this button will take people to the link you specify.\n\nobject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\n\nDetermines",
+            "description": "the call to action button text. One of allowed values:\n\nBOOK_TRAVEL . Call to action shows up as Book Now.\n\nBUY_NOW . Call to action shows up as Buy Now. Only used for desktop app ads for virtual goods .\n\nCALL_NOW . Call to action shows up as Call Now. Only used for local awareness ads .\n\nDOWNLOAD . Call to action shows up as Download.\n\nGET_DIRECTIONS . Call to action shows up as Get Directions. Must specify coordinates on the link field. Only used for local awareness ads .\n\nGET_QUOTE . Call to action shows up as Get Quote for lead generation .\n\nINSTALL_APP . Call to action shows up as Install Now.\n\nINSTALL_MOBILE_APP . Call to action shows up as Install Now. Only used for mobile app ads .\n\nLEARN_MORE . Call to action shows up as Learn More.\n\nLIKE_PAGE . Call to action shows up as Like Page. Only used for ads in Page Likes objective .\n\nLISTEN_MUSIC . Call to action shows up as Listen Music.\n\nMESSAGE_PAGE . Call to action shows up as Send Message. Only used for local awareness ads .\n\nNO_BUTTON . No call to action shows up.\n\nOPEN_LINK . Call to action shows up as Open Link. Only used for ads in Website Clicks objective .\n\nPLAY_GAME . Call to action shows up as Play Game. Only used for desktop app ads .\n\nSHOP_NOW . Call to action shows up as Shop Now. Only used for ads in Website Conversions objective .\n\nSIGN_UP . Call to action shows up as Sign Up.\n\nSUBSCRIBE . Call to action shows up as Subscribe for lead generation .\n\nUSE_APP . Call to action shows up as Use App.\n\nUSE_MOBILE_APP . Only used for mobile app ads .\n\nWATCH_MORE . Call to action shows up as Watch More.\n\nWATCH_VIDEO . Call to action shows up as Watch Video.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "value\n\nSupporting",
+            "description": "data for the Call to Action button\n\nobject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link\n\nURL",
+            "description": "that the Call to Action button will link to. For link page post this must be the same as the link value of the post. Only external shares are allowed. The CTA link cannot link to facebook.com/.. but can link to apps.facebook.com/app-id.. and other external links.\nWhen Call to Action button is GET_DIRECTIONS or CALL_NOW , link format differs. Please refer to local awareness docs for more detail.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_caption\n\nSpecifies",
+            "description": "the caption used for the link which appears below the description. Default is the host name from the link. For example www.example.com. Overwrites captions specified in other fields.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_format\n\nSpecifies",
+            "description": "the format for the link. For example VIDEO_LPP for video page posts with call to action.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "link_title\n\nUsed",
+            "description": "ink_title\n\nUsed in carousel ads and is the title of the link of an individual story within the child_attachment.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page\n\nPage",
+            "description": "ID when type is LIKE_PAGE\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/{comment-id}": {
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nmessage\n\nThe",
+            "description": "comment text. One of attachment_url , attachment_id , message or source must be provided when publishing.\n\nWhen a Page is publishing the comment, this message parameter can contain mentions of other Facebook Pages using the following syntax:\n@[page-id]\n\nFor example the following message would mention the Facebook Developers page inline:\nTest message @[19292868552] tag\n\nUsage of this feature is subject to review but by using Pages you are an admin of (both to make the API call, and to be used in a mention), and an app you are a developer of, you can test it for yourself before review.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "attachment_id\n\nAn",
+            "description": "optional ID of a unpublished photo (see no_story field in /{user-id}/photos ) uploaded to Facebook to include as a photo comment. One of attachment_url , attachment_id , message or source must be provided when publishing.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "attachment_url\n\nThe",
+            "description": "URL of an image to include as a photo comment. One of attachment_url , attachment_id , message or source must be provided when publishing.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source\n\nA",
+            "description": "photo, encoded as form data, to use as a photo comment. One of attachment_url , attachment_id , message or source must be provided when publishing.\n\nmultipart/form-data\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/app-id..": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nNo",
+            "description": "optional image parameters\n\nImage is sourced from the contents of the Link\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture",
+            "description": "parameter supplied\n\nstring\n\nURL for the image\n\nImage is sourced from the URL supplied in picture\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "thumbnail",
+            "description": "parameter supplied\n\nfile\n\nImage file to be uploaded. Accepts .jpg .jpeg .gif or .png\n\nImage is sourced from the file uploaded in thumbnail\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/moments_link_invite_convert": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "encoded_invite_id\nstring\n\nEncoded",
+            "description": "invite_id\nstring\n\nEncoded invite id of the invite to convert to a membership\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "invite_nonce\nstring\n\nNonce",
+            "description": "of the invite object to be used when converting the invite to amembership\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/{page_call_to_action_id}": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "210",
+            "description": "User not visible",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{canvas_carousel_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nchild_elements\nlist<CanvasPhoto>\n\nThe",
+            "description": "child_elements\nlist<CanvasPhoto>\n\nThe child elements of the carousel\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id\nnumeric",
+            "description": "string\n\nThe id of the element\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "bottom_padding\nnumeric",
+            "description": "string\n\nThe padding below the element\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "element_type\nenum\n\nThe",
+            "description": "type\nenum\n\nThe type of the element\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nThe",
+            "description": "name\nstring\n\nThe name of the element\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "style\nenum\n\nThe",
+            "description": "presentation style of the carousel\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "top_padding\nnumeric",
+            "description": "string\n\nThe padding above the element\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/notifications": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filtering\nlist<enum{groups,",
+            "description": "ema}>\n\nNotification filters to apply.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "href\n\nThe",
+            "description": "relative path and GET params used in the a2u target url.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "notif_ids\nlist<string>\n\nThe",
+            "description": "notification ids to act on.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "read\nboolean\n\nIndicates",
+            "description": "that the provided notification ids should be marked as read\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ref\nstring\n\nA",
+            "description": "reference param used for logging.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "seen\nboolean\n\nIndicates",
+            "description": "that the provided notification ids should be marked as seen\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "template\n\nUsed",
+            "description": "for creating a2u notifications.\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\nenum{generic,",
+            "description": "content_update}\n\nNotification type.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/an_blocked_domains": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "domain_ids\nlist<numeric",
+            "description": "string>\n\nList of FBIDs of domains that need to be removed from the domain blocklist for this AN app\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/insights)": {
+      "DEL": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "3001",
+            "description": "Invalid query",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "190",
+            "description": "Invalid OAuth 2.0 Access Token",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{saved_message_response_id}": {
+      "DEL": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "image\nnumeric",
+            "description": "string or integer\n\nA MESSAGE_IMAGE ID to use with the saved response. File upload is also supported\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message\nstring\n\nThe",
+            "description": "actual message of the saved response\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "remove_image\nboolean\nDefault",
+            "description": "value: false\n\nSet to true to remove the response image\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title\nstring\n\nA",
+            "description": "title\nstring\n\nA title for the saved response (optional). Shown to admins only\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{canvas_text_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "210",
+            "description": "User not visible",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/live_videos": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/{page_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "210",
+            "description": "User not visible",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "370",
+            "description": "Invalid call to update this page",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "371",
+            "description": "Invalid Page location update",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "320",
+            "description": "Photo edit failure",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "368",
+            "description": "The action attempted has been deemed abusive or is otherwise disallowed",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "190",
+            "description": "Invalid OAuth 2.0 Access Token",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "374",
+            "description": "Invalid store location descriptor update since this Page is not a location Page.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/nativeofferviews": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ad_account\nnumeric",
+            "description": "string or integer\n\nOptional ID of an ad account, matched to the ad_image_hashes.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ad_image_hashes\nlist<string>\n\nOptional",
+            "description": "array of ad image hashes, matched to the ad_account. Only one of ad_image_hashes, photos, urls, and multipart attachments should be specified.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "carousel_captions\nlist<string>\n\nOptional",
+            "description": "array of strings to be used as carousel captions.Makes carousel_links a required field; the number of items in each array must also match.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "carousel_links\nlist<string>\n\nOptional",
+            "description": "array of urls to be used as carousel captions.Makes carousel_captions a required field; the number of items in each array must also match.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "image_crops\nlist<dictionary",
+            "description": "{ enum{191x100, 100x72, 400x150, 600x360, 100x100, 400x500} : <list<list<int64>>> }>\n\nOptional array of image crop parameters\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message\nstring\n\nThe",
+            "description": "main body of the post, otherwise called the status message. Required if either published_ads or published is true.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "photos\nlist<numeric",
+            "description": "string or integer>\n\nOptional array containing IDs of existing Photo objects. Only one of ad_image_hashes, photos, urls, and multipart attachments should be specified.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "published\nboolean\n\nWhether",
+            "description": "to create and show a story about this native offer view. Only one of published_ads and published should be specified.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "published_ads\nboolean\n\nWhether",
+            "description": "to create a story for use in ads. Only one of published_ads and published should be specified.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "urls\nlist<URL>\n\nOptional",
+            "description": "array of URLs for publicly accessible photos.Only one of ad_image_hashes, photos, urls, and multipart attachments should be specified.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "videos\nlist<numeric",
+            "description": "string or integer>\n\nOptional array of IDs for videos already owned by the page. Currently only one video is allowed per view.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/nativeoffers": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "262",
+            "description": "Incorrect permission to publish pages",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2825",
+            "description": "The given page is not eligible for Offers at this time.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2826",
+            "description": "The barcode service returned an error; please try again later, or try different type and value parameters.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2831",
+            "description": "This offer requires a redemption_link URL.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/{canvas_header_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{post-id}": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nlink\n\nThe",
+            "description": "link\n\nThe link field is still supported, but its sub-fields have been deprecated.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture\n\nDetermines",
+            "description": "the preview image associated with the link.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\n\nOverwrites",
+            "description": "the title of the link preview.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "caption\n\nOverwrites",
+            "description": "the caption under the title in the link preview.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\n\nOverwrites",
+            "description": "the description in the link preview\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "Post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nlink\n\nThe",
+            "description": "link\n\nThe link field is still supported, but its sub-fields have been deprecated.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "picture\n\nDetermines",
+            "description": "the preview image associated with the link.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\n\nOverwrites",
+            "description": "the title of the link preview.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "caption\n\nOverwrites",
+            "description": "the caption under the title in the link preview.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\n\nOverwrites",
+            "description": "the description in the link preview\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "description_tags\n\nProfiles",
+            "description": "description_tags\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "media\n\nMedia",
+            "description": "media\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "image\n\nAn",
+            "description": "image\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "height\n\nHeight",
+            "description": "height\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "src\n\nURI",
+            "description": "src\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "width\n\nWidth",
+            "description": "width\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "target\n\nObject",
+            "description": "target\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id\n\nID.\n\nnumeric",
+            "description": "id\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "description": "url\n"
+          },
+          {
+            "in": "query",
+            "name": "title\n\nTitle",
+            "description": "title\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\n\nType",
+            "description": "type\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "url\n\nURL",
+            "description": "url\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/publisher_space": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sections\nlist<Object>\n\nThe",
+            "description": "sections\nlist<Object>\n\nThe sections to show, each with title and list of urls\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {}
+        ]
+      },
+      "POST": {}
+    },
+    "/businesses": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user_id\nnumeric",
+            "description": "string\n\nID of the user to be removed from whitelist for the page.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/call_to_actions": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "210",
+            "description": "User not visible",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/locations": {
+      "post": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "city_id\nunsigned",
+            "description": "int32\n\nCity ID. Any city identified is also a city you can use for targeting ads.\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {
+            "in": "query",
+            "name": "country_code\nstring\n\nCountry",
+            "description": "code\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {
+            "in": "query",
+            "name": "located_in\nid\n\nThe",
+            "description": "parent location if this location is located within another location\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {},
+          {},
+          {
+            "in": "query",
+            "name": "region_id\nunsigned",
+            "description": "int32\n\nRegion ID. Specifies a geographic region, such as California. An identified region is the same as one you can use to target ads.\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {},
+          {
+            "in": "query",
+            "name": "zip\nstring\n\nZip",
+            "description": "code\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {},
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "location_page_id\nPage",
+            "description": "ID\n\nPage ID for the page to delete\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "store_number\nint64\n\nStore",
+            "description": "number\nint64\n\nStore number for the page to delete\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/page_backed_in": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/user_properties": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "105",
+            "description": "The number of parameters exceeded the maximum for this operation",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/{video_copyright_rule_id}": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{page-id}": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\n\nPage",
+            "description": "ID.\n\nstring\n\nyes\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "metric\n\nMetric",
+            "description": "being requested.\n\nSee available metrics below\n\nyes\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "period\n\nPeriod",
+            "description": "of time over which the metric is aggregated.\n\nenum{day, week, days_28, month, lifetime}\n\nyes\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "since\n\nLower",
+            "description": "bound of the time range to consider. Default value: 2 weeks ago\n\ndatetime\n\nno\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "until\n\nUpper",
+            "description": "bound of the time range to consider. Default value: Current time\n\ndatetime\n\nno\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "breakdown\n\nSeparate",
+            "description": "results by which platform (iOS or Android) that the metric occured on. If not specified, results include both platforms.\n\nenum{platform}\n\nno\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{photo_id}": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "android_key_hash\nstring\n\nAndroid",
+            "description": "key_hash\nstring\n\nAndroid key hash\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "backdated_time\ndatetime\n\nA",
+            "description": "user-specified creation time for this photo\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "backdated_time_granularity\nenum{year,",
+            "description": "month, day, hour, min, none}\nDefault value: none\n\nUse only the part of the backdated_time parameter to the specified granularity\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "checkin_entry_point\nenum",
+            "description": "{BRANDING_CHECKIN, BRANDING_STATUS, BRANDING_PHOTO, BRANDING_OTHER}\nDefault value: BRANDING_OTHER\n\nThe method that the user used to add a place tag to their story.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "composer_session_id\nstring\n\nComposer",
+            "description": "session_id\nstring\n\nComposer session ID\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "direct_share_status\nint64\n\nThe",
+            "description": "status\nint64\n\nThe status to allow sponsor directly boost the post.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ios_bundle_id\nstring\n\niOS",
+            "description": "Bundle ID\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "is_checkin\nboolean\nDefault",
+            "description": "value: false\n\nIs this photo a checkin?\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "is_cropped\nboolean\n\nIs",
+            "description": "this photo cropped?\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "is_explicit_location\nboolean\nDefault",
+            "description": "value: false\n\nIs this an explicit location?\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_action_type_id\nnumeric",
+            "description": "string or integer\n\nThe Open Graph action type\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_icon_id\nnumeric",
+            "description": "string or integer\n\nThe Open Graph icon\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_object_id\nOG",
+            "description": "object_id\nOG object ID or URL string\n\nThe Open Graph object ID\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_phrase\nstring\n\nThe",
+            "description": "Open Graph phrase\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_set_profile_badge\nboolean\nDefault",
+            "description": "value: false\n\nFlag to set if the post should create a profile badge\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_suggestion_mechanism\nstring\n\nThe",
+            "description": "Open Graph suggestion\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "place\nplace",
+            "description": "tag\n\nPage ID of a place associated with the photo\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "privacy\nPrivacy",
+            "description": "Parameter\n\nDetermines the privacy settings of the photo. If not supplied, this defaults to the privacy level granted to the app in the Login dialog. This field cannot be used to set a more open privacy setting than the one granted\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "prompt_id\nstring\n\nThe",
+            "description": "prompt_id\nstring\n\nThe prompt id if the post is generated from prompt\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "prompt_tracking_string\nstring\n\nThe",
+            "description": "prompt_tracking_string\nstring\n\nThe prompt tracking string if the post is generated from prompt\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "proxied_app_id\nnumeric",
+            "description": "string or integer\n\nProxied app ID\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "published\nboolean\n\nSet",
+            "description": "to false if you don't want the photo to be published immediately\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "referenced_sticker_id\nnumeric",
+            "description": "string or integer\n\nSticker id of the sticker in the post\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "sponsor_id\nnumeric",
+            "description": "string or integer\n\nFacebook Page id that is tagged as sponsor in the photo post\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "sponsor_relationship\nint64\n\nSponsor",
+            "description": "Relationship, such as Presented By or Paid PartnershipWith\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "tags\nlist<int>\n\nTags",
+            "description": "on this photo\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "target\n\nSets",
+            "description": "the object that this photo is attached to. Only relavant when publishing an unpublished photo\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "target_post\npost_id\n\nSets",
+            "description": "the post this photo is attached to. Only relavant when publishing an unpublished photo\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "time_since_original_post\nint64\n\nSame",
+            "description": "as backdated_time but with a time delta instead of absolute time\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/accounts": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "installed\nboolean\n\nAutomatically",
+            "description": "installs the app for the test user once it is created or associated\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "minor\nboolean\n\nIs",
+            "description": "this test user a minor\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nThe",
+            "description": "name\nstring\n\nThe name for the test user. When left blank, a random name will be automatically generated\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "owner_access_token\nstring\n\nWhen",
+            "description": "associating existing test users with other apps, this is the app access token of any app that is already associated with the test user. The {app-id} in the publishing request in this case should be the app that will is the target to associate with the test user. The API request should also be signed with the app access token of that target app. Required when associating test users, but should not be used when creating new test users\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "permissions\nList<Permission>\nDefault",
+            "description": "value: Set\n\nList of permissions that are automatically granted for the app when it is created or associated\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {
+            "in": "query",
+            "name": "uid\nint\n\nID",
+            "description": "of an existing test user to associate with another app. Required when associating test users, but should not be used when creating new test users\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2901",
+            "description": "Invalid test account id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2902",
+            "description": "Cannot remove test account from this app",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/permissi": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nPermission status\n",
+            "description": "declined}\n\nPermission status\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/paymentaccountemails": {
+      "post": {
+        "parameters": [
+          {},
+          {
+            "in": "query",
+            "name": "user_input_email\nstring\n\nuser",
+            "description": "input_email\nstring\n\nuser input email\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/settings": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "option\nObject\n\nOption",
+            "description": "is a JSON dictionary with a key for the setting and any arguments as values for that key. Keys listed as 'value-only' don't take extra options and can only be changed by passing true/false as a value . Note that only the first option is meaningful when changing a setting. Any later options will be dropped. If you want to change more than one setting, you must make more than one call\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "PAGE_MODERATION_BLACKLIST\nstring\n\nComma-separated",
+            "description": "list of words blacklisted from this Page. When updating, this must be passed as an option\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "USERS_CAN_POST\nboolean\n\nValue-only.",
+            "description": "If value is true , people can post to this Page's timeline\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "REVIEW_POSTS_BY_OTHER\nboolean\n\nValue-only.",
+            "description": "If value is true , posts by others are hidden by default. If false , posts are visible by default\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "USERS_CAN_MESSAGE\nboolean\n\nValue-only.",
+            "description": "If true , people can message this Page via a message button\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "USERS_CAN_POST_PHOTOS\nboolean\n\nValue-only.",
+            "description": "If value is true , people can post photos and videos to this Page\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "USERS_CAN_TAG_PHOTOS\nboolean\n\nValue-only.",
+            "description": "If value is true , people who like this page can tag people in photos posted by this Page\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "WALL_COMBINED_POSTS\nboolean\n\nDeprecated.",
+            "description": "Has no effect\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "PLATFORM_OPTOUTS_CAN_POST\nboolean\n\nValue-only.",
+            "description": "If value is true , prevent people who have turned off page management apps from posting to this Page\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "SHOW_RECENT_POSTS_BY_OTHERS\nboolean\n\nValue-only.",
+            "description": "If value is true , show recent posts by others\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "APPEARS_IN_RELATED_PAGES\nboolean\n\nValue-only.",
+            "description": "If value is true , suggest this Page in Related Pages\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "SHOW_PARENT_POSTS_ON_LOCATIONS\nenum{Always",
+            "description": "show, Only show on location Pages that don't publish their own posts, Never show}\n\nIf the option is set to any valid values, show posts from this Page on location Pages based on this setting\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AGE_RESTRICTIONS\nenum{Anyone",
+            "description": "(13+), People 17 and over, People 18 and over, People 19 and over, People 21 and over, Alcohol-Related}\n\nIf the option is set to any valid values, restrict access to this Page based on the restriction\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "PROFANITY_FILTER\nenum{Off,",
+            "description": "Medium, Strong}\n\nIf the option is set to any valid values, prevent profanity on this Page based on the level\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "SHOW_LOCATIONS_TAB\nenum{Allow,",
+            "description": "Allow, Allow on mobile only, Don't allow}\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "COUNTRY_RESTRICTIONS\nObject\n\nSet",
+            "description": "option to a JSON-encoded object with any country restrictions included below\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "restriction_type\nenum{blacklist,",
+            "description": "whitelist}\n\nType of restriction\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "countries\nlist<enum{AF,",
+            "description": "AX, AL, DZ, AS, AD, AO, AI, AQ, AG, AR, AM, AW, AU, AT, AZ, BS, BH, BD, BB, BY, BE, BZ, BJ, BM, BT, BO, BQ, BA, BW, BV, BR, IO, BN, BG, BF, BI, KH, CM, CA, CV, KY, CF, TD, CL, CN, CX, CC, CO, KM, CG, CD, CK, CR, CI, HR, CU, CW, CY, CZ, DK, DJ, DM, DO, EC, EG, SV, GQ, ER, EE, ET, FK, FO, FJ, FI, FR, GF, PF, TF, GA, GM, GE, DE, GH, GI, GR, GL, GD, GP, GU, GT, GG, GN, GW, GY, HT, HM, VA, HN, HK, HU, IS, IN, ID, IR, IQ, IE, IM, IL, IT, JM, JP, JE, JO, KZ, KE, KI, KP, KR, KW, KG, LA, LV, LB, LS, LR, LY, LI, LT, LU, MO, MK, MG, MW, MY, MV, ML, MT, MH, MQ, MR, MU, YT, MX, FM, MD, MC, MN, ME, MS, MA, MZ, MM, NA, NR, NP, NL, AN, NC, NZ, NI, NE, NG, NU, NF, MP, NO, OM, PK, PW, PS, PA, PG, PY, PE, PH, PN, PL, PT, PR, QA, RE, RO, RU, RW, BL, SH, KN, LC, MF, PM, VC, WS, SM, ST, SA, SN, RS, SC, SL, SG, SX, SK, SI, SB, SO, ZA, GS, SS, ES, LK, SD, SR, SJ, SZ, SE, CH, SY, TW, TJ, TZ, TH, TL, TG, TK, TO, TT, TN, TR, TM, TC, TV, UG, UA, AE, GB, UK, US, UM, UY, UZ, VU, VE, VN, VG, VI, WF, EH, YE, ZM, ZW}>\n\nList of countries\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AUTO_PUBLISH_PAGE_INFO_UPDATES\nboolean\n\nValue-only.",
+            "description": "If value is true , Posts will be created when you update the Page buttons, description, phone number, address, business hours or website.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/sharedposts": {
+      "POST": {}
+    },
+    "/activities": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "advertiser_id\nstring\n\nApple's",
+            "description": "Advertising Identifier (IDFA) or Google Android's advertising ID. You can see how Facebook fetches this on iOS or on Android\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "advertiser_tracking_enabled\nboolean\n\nA",
+            "description": "person can choose to enable ad tracking on iOS 6+, and that choice is stored within the phone. You should fetch that and return it to Facebook so we know not to use the data for optimization. We will, however, use the data to report on a conversion. See here for an example of how Facebook fetches that variable. For devices running less than iOS 6, this query parameter can default to 1. Use 0 for disabled, 1 for enabled\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "anon_id\nstring\n\nThe",
+            "description": "ID of a person who has installed the app anonymously\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "application_tracking_enabled\nboolean\n\nA",
+            "description": "person can choose to enable ad tracking on an app level. Your SDK should allow an app developer to put an opt-out setting into their app. Use this field to specify the person's choice. Use 0 for disabled, 1 for enabled\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "attribution\nstring\n\nmobile_cookie",
+            "description": "from the person's device. Use this only on Android or iOS devices before iOS 6. The format for this should look something like DDDECD0A-C076-4050-8CE8-C20EC3FC2BD3\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auto_publish\nboolean\n\nUsed",
+            "description": "internally by Facebook's SDK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "bundle_id\nstring\n\nUsed",
+            "description": "internally by Facebook's SDK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "bundle_short_version\nstring\n\nUsed",
+            "description": "internally by Facebook's SDK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "bundle_version\nstring\n\nUsed",
+            "description": "internally by Facebook's SDK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "consider_views\nboolean\n\nSpecifies",
+            "description": "that view through data should be considered when determining the ad to attribute this install to. Clicks will always be considered first before views and views will only be returned if there was not a click on an ad for the app.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "custom_events\nlist<CustomEvent>\n\nCustom",
+            "description": "events\nlist<CustomEvent>\n\nCustom events reported, required with CUSTOM_APP_EVENTS events. Please see our app events documentation for iOS and Android for more information\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "_eventName\nstring\n\nName",
+            "description": "of the App Event\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "_valueToSum\nfloat\n\nValues",
+            "description": "to Sum\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "_logTime\nint64\n\nTime",
+            "description": "to Log\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "_implicitlyLogged\nint64\n\nWhether",
+            "description": "this is implicitly logged\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "_isTimedEvent\nboolean\n\nWhether",
+            "description": "this is a timed event\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {},
+          {
+            "in": "query",
+            "name": "custom_events_file\nfile\n\nCustom",
+            "description": "file, encoded as JSON that describes the event. Please encode as UTF-8 and attach with the mime type application/json or content/unknown\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "event\nenum",
+            "description": "{MOBILE_APP_INSTALL, CUSTOM_APP_EVENTS, DEFERRED_APP_LINK}\n\nEvent type, one of MOBILE_APP_INSTALL , CUSTOM_APP_EVENTS or DEFERRED_APP_LINK . If you are reporting a MOBILE_APP_INSTALL event, you must include either attribution or advertiser_id in the request\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "extinfo\nlist<string>\n\nUsed",
+            "description": "internally by Facebook's SDK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "installer_package\nstring\n\nUsed",
+            "description": "internally by the Android SDKs\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "migration_bundle\nstring\n\nUsed",
+            "description": "internally by the iOS and Android SDKs\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page_id\nint64\n\nSpecifies",
+            "description": "the Page ID associated with the messenger bot that logs the event.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page_scoped_user_id\nint64\n\nSpecifies",
+            "description": "the page scoped User ID associated with the messenger bot that logs the event.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "url_schemes\nlist<string>\n\nUsed",
+            "description": "internally by the iOS and Android SDKs\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/instagram_comme": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\ncomment_type\nenum\n\nEnum",
+            "description": "indicating the type of comment {CAPTION, NORMAL, UNKNOWN}\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "created_at\ndatetime\n\nCreation",
+            "description": "time\n\nCreation time of the comment in milliseconds\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "id\nstring\n\nBase",
+            "description": "64 encoded string of instagram_media_id and instagram_comment_id\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "instagram_comment_id\nnumeric",
+            "description": "string\n\nId of the comment in instagram\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "instagram_user\nInstagramUser\n\nInstagram",
+            "description": "user\nInstagramUser\n\nInstagram user who made the comment\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "mentioned_instagram_users\nlist<InstagramUser>\n\nInstagram",
+            "description": "users\nlist<InstagramUser>\n\nInstagram users that are mentioned in the comment\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message\nstring\n\nTextual",
+            "description": "message\nstring\n\nTextual message content of the Instagram comment\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/permissions": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "2903",
+            "description": "Cannot delete this test account",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2904",
+            "description": "Cannot delete the OG Test User",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "240",
+            "description": "Desktop applications cannot call this function for other users",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/instant_articles": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\ntotal_count\nunsigned",
+            "description": "int32\n\nThe total number of instant articles associated with this Page\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/blocked": {
+      "post": {
+        "parameters": [
+          {},
+          {}
+        ]
+      },
+      "POST": {},
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user_ids\nlist<int>\n\nID",
+            "description": "of users that the label will be unattached from\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/advideos": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "composer_session_id\nstring\n\ncomposer",
+            "description": "session_id\nstring\n\ncomposer session id\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\nUTF-8",
+            "description": "string\n\ndescription\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "file_size\nint64\n\nThe",
+            "description": "size\nint64\n\nThe size of the video file in bytes. Using during chunked upload .\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "file_url\nstring\n\nfile",
+            "description": "url\nstring\n\nfile url\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "is_explicit_share\nboolean\n\nis",
+            "description": "explicit_share\nboolean\n\nis explicit share\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "manual_privacy\nboolean\nDefault",
+            "description": "value: false\n\nmanual privacy\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nThe",
+            "description": "name\nstring\n\nThe name of the video in the library.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_action_type_id\nnumeric",
+            "description": "string or integer\n\nog action type id\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_icon_id\nnumeric",
+            "description": "string or integer\n\nog icon id\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_object_id\nOG",
+            "description": "object_id\nOG object ID or URL string\n\nog object id\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_phrase\nstring\n\nog",
+            "description": "phrase\nstring\n\nog phrase\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "og_suggestion_mechanism\nstring\n\nog",
+            "description": "suggestion_mechanism\nstring\n\nog suggestion mechanism\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "original_projection_type\nenum",
+            "description": "{equirectangular, cubemap}\n\nOriginal Projection type of the video being uploaded\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "referenced_sticker_id\nnumeric",
+            "description": "string or integer\n\nreferenced sticker id\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "slideshow_spec\nJSON",
+            "description": "object\n\nAn object required for slideshow video .\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "images_urls\nlist<URL>\n\nA",
+            "description": "3-7 element array of the URLs of the images. Required.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "duration_ms\ninteger\n\nThe",
+            "description": "duration_ms\ninteger\n\nThe duration in milliseconds of each image. Default value is 1000.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "transition_ms\ninteger\n\nThe",
+            "description": "duration in milliseconds of the crossfade transition between images. Default value is 1000.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "source\nstring\n\nThe",
+            "description": "video, encoded as form data. See the Video Format doc for more details on video formats.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "start_offset\nint64\n\nThe",
+            "description": "start_offset\nint64\n\nThe start position in byte of the chunk that is being sent, inclusive. Used during chunked upload .\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "time_since_original_post\nint64\n\ntime",
+            "description": "since_original_post\nint64\n\ntime since original post\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "title\nUTF-8",
+            "description": "string\n\nThe name of the video being uploaded.\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "unpublished_content_type\nenum",
+            "description": "{SCHEDULED, DRAFT, ADS_POST}\n\nunpublished content type\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "upload_phase\nenum",
+            "description": "{start, transfer, finish, cancel}\n\nThe phase during chunked upload. Using during chunked upload .\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "upload_session_id\nnumeric",
+            "description": "string or integer\n\nThe session ID of this chunked upload. Using during chunked upload .\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "video_file_chunk\nstring\n\nThe",
+            "description": "chunk\nstring\n\nThe chunk of the video, between start_offset and end_offset . Using during chunked upload .\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/subscribed_apps": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nobject\n\nIndicates",
+            "description": "the object type that this subscription applies to.\n\nenum{user, page, permissions, payments}\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "callback_url\n\nThe",
+            "description": "URL that will receive the POST request when an update is triggered, and a GET request when attempting this publish operation. See our guide to constructing a callback URL page .\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "fields\n\nOne",
+            "description": "or more of the set of valid fields in this object to subscribe to.\n\nstring[]\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "verify_token\n\nAn",
+            "description": "arbitrary string that can be used to confirm to your server that the request is valid.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "business\nnumeric",
+            "description": "string or integer\n\nThe business which owns this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "email\nstring\n\nEmail",
+            "description": "ID of the user\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "user\nint\n\nID",
+            "description": "of the user who is being assigned a role on app\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{canvas_photo_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{page_label_id}": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{photo-id}": {
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nsource\n\nThe",
+            "description": "photo, encoded as form data . Either this or url field is required, but both should not be used together.\n\nmultipart/form-data\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "url\n\nThe",
+            "description": "URL of a photo that is already uploaded to the internet. Either this or source is required, but both should not be used together.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message\n\nThe",
+            "description": "description of the photo, used as the accompanying status message in any feed story.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{application_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "an_platforms\nlist<enum",
+            "description": "{IOS, ANDROID, MOBILE_WEB, INSTANT_ARTICLES, UNKNOWN}>\n\nThe platforms associated with the app in the AudienceNetwork product\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "app_domains\nlist<string>\n\nSpecifies",
+            "description": "app_domains\nlist<string>\n\nSpecifies a list of domains that correspond to this app. Subdomains of domains in this array are also considered to belong to this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "app_name\nstring\n\nApp",
+            "description": "name\nstring\n\nApp name\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "app_type\nboolean\n\nApp",
+            "description": "type\nboolean\n\nApp type\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_dialog_data_help_url\nURL\n\nThe",
+            "description": "URL\n\nThe URL of a special landing page that helps users begin publishing Open Graph activity\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_dialog_headline\nstring\n\nOne",
+            "description": "line\nstring\n\nOne line description of this app that appears in the Login Dialog\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_dialog_perms_explanation\nstring\n\nThe",
+            "description": "text to explain why an app needs additional permissions. This appears in the Login Dialog\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_referral_default_activity_privacy\nstring\n\nThe",
+            "description": "default_activity_privacy\nstring\n\nThe default privacy setting selected for Open Graph activities in the Auth Dialog\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_referral_enabled\nboolean\n\nEnables",
+            "description": "or disables Authenticated Referrals\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_referral_extended_perms\nlist<string>\n\nExtended",
+            "description": "permissions that a person can choose to grant when Authenticated Referrals are enabled\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_referral_friend_perms\nlist<string>\n\nBasic",
+            "description": "friends permissions that a person must grant when Authenticated Referrals are enabled\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_referral_response_type\nstring\n\nThe",
+            "description": "format of the authentication token this app receives from the Login Dialog\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "auth_referral_user_perms\nlist<string>\n\nBasic",
+            "description": "permissions that a person must grant when Authenticated Referrals are enabled\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "canvas_fluid_height\nboolean\n\nIndicates",
+            "description": "whether this app uses fluid or settable height values for Canvas\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "canvas_fluid_width\nboolean\n\nIndicates",
+            "description": "whether this app uses fluid or fixed width values for Canvas\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "canvas_url\nURL\n\nThe",
+            "description": "non-secure URL from which Canvas app content is loaded\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "category\nstring\n\nThe",
+            "description": "category\nstring\n\nThe category of this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "configured_ios_sso\nboolean\n\nEnables",
+            "description": "or disables SSO on iOS for this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "contact_email\nstring\n\nEmail",
+            "description": "address users can use to contact developers\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "created_time\ntime\n\nTimestamp",
+            "description": "that indicates when this app was created\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "deauth_callback_url\nURL\n\nURL",
+            "description": "that is pinged whenever a person removes this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ipad_app_store_id\nstring\n\nID",
+            "description": "of this app in the iPad App Store\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "iphone_app_store_id\nstring\n\nID",
+            "description": "of this app in the iPhone App Store\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "migrations\nJSON-encoded",
+            "description": "string\n\nUpdate the status of each platform migration\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "mobile_web_url\nURL\n\nURL",
+            "description": "that mobile users will be directed to when using this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "namespace\nstring\n\nThe",
+            "description": "string\n\nThe string appended to apps.facebook.com/ to navigate to this app's Canvas page\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page_tab_default_name\nstring\n\nThe",
+            "description": "title of this app as it appears in a Page Tab\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page_tab_url\nURL\n\nThe",
+            "description": "non-secure URL from which Page Tab app content is loaded\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "privacy_policy_url\nURL\n\nThe",
+            "description": "URL\n\nThe URL that links to a privacy policy for this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "restrictions\nJSON-encoded",
+            "description": "string\n\nUpdate demographic restrictions for this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "secure_canvas_url\nURL\n\nThe",
+            "description": "secure_canvas_url\nURL\n\nThe secure URL from which Canvas app content is loaded\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "secure_page_tab_url\nURL\n\nThe",
+            "description": "secure_page_tab_url\nURL\n\nThe secure URL from which Page Tab app content is loaded\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "server_ip_whitelist\nlist<string>\n\nApp",
+            "description": "requests must originate from this comma-separated list of IP addresses\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "social_discovery\nboolean\n\nIndicates",
+            "description": "whether app stories show up in ticker or News Feed\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "subcategory\nstring\n\nThe",
+            "description": "subcategory\nstring\n\nThe subcategory this app can be found under\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "terms_of_service_url\nURL\n\nURL",
+            "description": "to Terms of Service that appears in the Login Dialog\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "user_support_email\nstring\n\nMain",
+            "description": "contact email for this app where people can receive support\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "user_support_url\nURL\n\nURL",
+            "description": "shown in the Canvas footer that people can visit to get support for this app\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "website_url\nURL\n\nURL",
+            "description": "of a website that integrates with this app\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/media_fingerprints": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/thread_settings": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "account_linking_url\nURL\n\nAccount",
+            "description": "linking_url\nURL\n\nAccount linking URL\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "call_to_actions\nlist<Object>\n\nCTAs",
+            "description": "for null state or structured menu\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {
+            "in": "query",
+            "name": "title\nUTF-8",
+            "description": "string\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\nenum",
+            "description": "{PHONE_NUMBER, WEB_URL, POSTBACK, ACCOUNT_LINK, ACCOUNT_UNLINK, PIN_PROTECTION, PAGE_SHARE, ELEMENT_SHARE, PAYMENT, NESTED, GAME_PLAY, OPEN_NATIVE}\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "payload\nUTF-8",
+            "description": "string\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "webview_height_ratio\nenum",
+            "description": "{COMPACT, TALL, FULL}\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "webview_share_button\nenum",
+            "description": "{HIDE, SHOW}\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {},
+          {
+            "in": "query",
+            "name": "domain_action_type\nenum",
+            "description": "{ADD, REMOVE}\n\nAction type for the whitelisted domain setting update. Default to override if not set.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "greeting\nObject\n\nGreeting",
+            "description": "text for the nux\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "text\nUTF-8",
+            "description": "string\nSupports Emoji\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "payment_dev_mode_action\nenum",
+            "description": "{ADD, REMOVE}\n\nif \"ADD\", adds users in \"payment_testers\" in dev mode for payments, these users won't be charged. if \"REMOVE\", users are taken out of test mode\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "payment_privacy_url\nURL\n\nPayment",
+            "description": "privacy_url\nURL\n\nPayment privacy URL for messenger extensions feature\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "payment_public_key\nstring\n\npublic",
+            "description": "key\nstring\n\npublic key for encrypting discover token and stripe/paypal response\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "payment_testers\nlist<numeric",
+            "description": "string or integer>\n\nUsers to be add in dev mode to test payments\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "setting_type\nenum",
+            "description": "{ACCOUNT_LINKING, CALL_TO_ACTIONS, GREETING, DOMAIN_WHITELISTING, PAYMENT}\n\nSetting type\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "thread_state\nenum",
+            "description": "{NEW_THREAD, EXISTING_THREAD}\n\nState of thread, new thread or an existing thread\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "whitelisted_domains\nlist<URL>\n\nA",
+            "description": "listed_domains\nlist<URL>\n\nA list of domains allowed for messenger extensions feature or pre-checked plugins\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/form-data": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nsource\n\nThe",
+            "description": "photo, encoded as form data . Either this or url field is required, but both should not be used together.\n\nmultipart/form-data\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "url\n\nThe",
+            "description": "URL of a photo that is already uploaded to the internet. Either this or source is required, but both should not be used together.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message\n\nThe",
+            "description": "description of the photo, used as the accompanying status message in any feed story.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "place\n\nPage",
+            "description": "ID of a place associated with the Photo.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "no_story\n\nIf",
+            "description": "set to true , this will suppress the feed story that is automatically generated on a person's profile when they upload a photo using your app.\n\nboolean\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/uploads": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/{video_copyright_id}": {
+      "DEL": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{media_fingerprint_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{canvas_button_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/instant_articles_publish": {
+      "DEL": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{canvas_footer_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "background_color\nstring\n\nBackground",
+            "description": "color\nstring\n\nBackground color of the button\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "child_elements\nlist<id>\n\nThe",
+            "description": "child_elements\nlist<id>\n\nThe child elements inside a footer\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nName",
+            "description": "of the footer element\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/page_backed_instagram_accounts": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/achievements": {
+      "DEL": {},
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\n\nID",
+            "description": "of this particular achievement.\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "from\n\nThe",
+            "description": "user who achieved this.\n\nUser\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "publish_time\n\nTime",
+            "description": "at which this was achieved.\n\ndatetime\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "application\n\nThe",
+            "description": "application\n\nThe app in which the user achieved this.\n\nApp\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "data\n\nInformation",
+            "description": "about the achievement type this instance is connected with.\n\nobject\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "achievement\n\nThe",
+            "description": "achievement\n\nThe achievement type that the user achieved.\n\nAchievementType\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "importance\n\nA",
+            "description": "weighting given to each achievement type by the app.\n\nint\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type\n\nAlways",
+            "description": "game.achievement .\n\nstring\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "no_feed_story\n\nIndicates",
+            "description": "whether gaining the achievement published a feed story for the user.\n\nboolean\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/featured_videos_collection": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "video_id\nnumeric",
+            "description": "string or integer\n\nID of the video to be unfeatured from the Page.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/unknown": {
+      "DEL": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "2610",
+            "description": "You need to provide an account id",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "190",
+            "description": "Invalid OAuth 2.0 Access Token",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/moments_link_invite": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/captions": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{canvas_video_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\nnumeric",
+            "description": "string\n\nThe id of the element\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "bottom_padding\nnumeric",
+            "description": "string\n\nThe padding below the element\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "element_type\nenum\n\nThe",
+            "description": "type\nenum\n\nThe type of the element\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nThe",
+            "description": "name\nstring\n\nThe name of the element\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "style\nenum\n\nThe",
+            "description": "presentation style of the video\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "top_padding\nnumeric",
+            "description": "string\n\nThe padding above the element\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "video\nVideo\n\nThe",
+            "description": "facebook video node\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{video_id}": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "210",
+            "description": "User not visible",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "Permissions error",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/{canvas_store_locator_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "header_background_color\nstring\n\nHeader",
+            "description": "background_color\nstring\n\nHeader background color for the store locator\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "name\nstring\n\nName",
+            "description": "of the store locator element\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "page_set_id\nid\n\nThe",
+            "description": "page_set_id\nid\n\nThe page set id used for the store locator\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "typeface\nstring\n\nFont",
+            "description": "used to display info about the store\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/sample.mp4": {
+      "DEL": {},
+      "Del": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/apprelease": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "changelog\nstring\n\nRelease",
+            "description": "changelog\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "release_name\nstring\n\nRelease",
+            "description": "name\nstring\n\nRelease name\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/video_copyrights": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "\nid\nnumeric",
+            "description": "string\n\nThe video copyright ID\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "copyright_content_id\nnumeric",
+            "description": "string\n\nThe copyright content ID\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "creator\nUser\n\nThe",
+            "description": "account that created the copyright\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "in_conflict\nbool\n\nWhether",
+            "description": "ther the video copyright is in active conflict with another rights owner's video copyright.\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "monitoring_status\nenum\n\nWhether",
+            "description": "ther the video is monitored successfully for copyright. The status could be NOT_EXAMED, COPYRIGHTED, and ERROR.\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "monitoring_type\nstring\n\nWhether",
+            "description": "ther the video is monitored for video, audio, or both\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ops_override_monitoring_type\nstring\n\nWhether",
+            "description": "ops_override_monitoring_type\nstring\n\nWhether ops changed the monitoring type to video, audio or both\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "ownership_countries\nVideoCopyrightGeoGate\n\nA",
+            "description": "string array of ISO 3166 format country codes , where the owner owns the rights of the content\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "reference_file_disabled_by_ops\nbool\n\nWhether",
+            "description": "ther the reference file has been disabled by ops.\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "reference_owner_id\nstring\n\nThe",
+            "description": "ID of the reference video owner\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "rule_ids\nlist<VideoCopyrightRule>\n\nA",
+            "description": "list<VideoCopyrightRule>\n\nA list of matching rules applied to the copyrighted content\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "whitelisted_ids\nlist<numeric",
+            "description": "string>\n\nA list of page IDs or user IDs, who are allowed to use the copyrighted content.\n\nDefault\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/favorite_requests": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "api_version\nenum{unversioned,",
+            "description": "v1.0, v2.0, v2.1, v2.2, v2.3, v2.4, v2.5, v2.6, v2.7, v2.8, v2.9, v2.10, v3.0}\n\nGraph API version of the stored request\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "description\nstring\n\nDescription",
+            "description": "of the favorite request\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "graph_path\nstring\n\nGraph",
+            "description": "path\nstring\n\nGraph path of the stored request\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "http_method\nenum{GET,",
+            "description": "POST, DELETE}\n\nHTTP method of the stored request.\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "post_params\ndictionary",
+            "description": "{ string : <string> }\n\nParameters of the stored POST request\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "query_params\ndictionary",
+            "description": "{ string : <string> }\n\nQuery parameters of the stored GET request\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/featured_vide": {
+      "DEL": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "100",
+            "description": "Invalid parameter",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/instagram_co": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ad_id\nNumeric",
+            "description": "String\n\nAd id associated to this Instagram Media\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "message\nstring\n\nComment",
+            "description": "text\nRequired\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "graph.facebook.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -25,7 +25,7 @@
   <link href="/css/highlight-default.css" rel="stylesheet" type="text/css"/>
   <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
   <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/awsdocs.css?v=20170615" rel="stylesheet" type="text/css"/>
   <script src="/js/highlight.pack.js" type="text/javascript">
   </script>
   <script src="/js/jquery.min.js" type="text/javascript">
@@ -36,7 +36,7 @@
   </script>
   <script src="/js/jquery.colorbox.js" type="text/javascript">
   </script>
-  <script src="/js/awsdocs.min.js" type="text/javascript">
+  <script src="/js/awsdocs.min.js?v=20170615" type="text/javascript">
   </script>
   <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript">
   </script>
@@ -1778,7 +1778,7 @@
              AWS Documentation
             </a>
             »
-            <a href="uri">
+            <a href="http://aws.amazon.com/archives/Product%20Advertising%20API">
              Amazon Product Advertising API Docs
             </a>
             »
@@ -1813,9 +1813,12 @@
          ItemSearch
         </a>
         into bins. For example, a set of bins can be a set of
-                        price ranges for a product. In the case of women’s shoes, you might have a bin that returns
-                        ASINs for shoes that cost between $0 and $50, a second bin for shoes that cost $50 to $100, and
-                        a third bin for shoes that cost more than $100. The basis on which the items are split into bins
+                        price ranges for a product. In the case of women’s shoes, you might have a bin that
+                        returns
+                        ASINs for shoes that cost between $0 and $50, a second bin for shoes that cost $50
+                        to $100, and
+                        a third bin for shoes that cost more than $100. The basis on which the items are split
+                        into bins
                         is specified by the
         <a href="RG_SearchBins.html#NarrowBy">
          NarrowBy
@@ -1878,7 +1881,8 @@
         <a href="RG_SearchBins.html#NarrowBy">
          NarrowBy
         </a>
-        values nor can you specify the values they encompass. When SearchBins is included as a Response Group in a request,
+        values nor can you specify the values they encompass. When SearchBins is included
+                        as a Response Group in a request,
         <code class="code">
          ItemSearch
         </code>
@@ -1902,25 +1906,26 @@
            <code class="code">
             ItemSearch
            </code>
-           . For example, searching for books about dogs returns, in the Subject bins, BrowseNodes for "Home &amp; Garden," "Animal Care
-                                 &amp; Pets," "Dogs," and "Educational."
+           . For example, searching for books about dogs returns, in the Subject bins, BrowseNodes
+                                 for "Home &amp; Garden," "Animal Care &amp; Pets," "Dogs," and "Educational."
           </p>
          </li>
          <li class="listitem">
           <p>
-           BrandName—Brands, such as Levi's, Reebok, and Nike, that create the item. Use the name of a brand to filter out similar items
-                                 made by other companies.
+           BrandName—Brands, such as Levi's, Reebok, and Nike, that create the item. Use the
+                                 name of a brand to filter out similar items made by other companies.
           </p>
          </li>
          <li class="listitem">
           <p>
-           PriceRange—Minimum and maximum prices for a bin of items. Use the minimum and maximum price values in each bin to filter out
-                                 items outside of the price range you want.
+           PriceRange—Minimum and maximum prices for a bin of items. Use the minimum and maximum
+                                 price values in each bin to filter out items outside of the price range you want.
           </p>
          </li>
          <li class="listitem">
           <p>
-           PercentageOff—Percentage off required on items returned. Use the values returned with MinPercentageOff key to refine the results
+           PercentageOff—Percentage off required on items returned. Use the values returned with
+                                 MinPercentageOff key to refine the results
           </p>
          </li>
         </ul>
@@ -2162,7 +2167,8 @@
         Element Tags in a Bin
        </h2>
        <p>
-        The element tags in a bin vary according to the bin. For example, in bins based on price, the elements and Name values are:
+        The element tags in a bin vary according to the bin. For example, in bins based on
+                        price, the elements and Name values are:
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">&lt;BinName&gt;
  &lt;BinItemCount&gt;
@@ -2173,11 +2179,12 @@
   &lt;Name&gt;MaximumPrice&lt;/Name&gt;
   &lt;Value&gt;</code></pre>
        <p>
-        The elements show the minimum and maximum price for items in that bin, and the number of items in that bin.
+        The elements show the minimum and maximum price for items in that bin, and the number
+                        of items in that bin.
        </p>
        <p>
-        Other NarrowBy values use other element tags in their bins. For example, when NarrowBy is “Brand,” the element tags and Name
-                        values are:
+        Other NarrowBy values use other element tags in their bins. For example, when NarrowBy
+                        is “Brand,” the element tags and Name values are:
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">&lt;Bin&gt;
  &lt;BinName&gt;
@@ -2196,7 +2203,8 @@
         <code class="code">
          ItemSearch
         </code>
-        query to filter out of the response items that are outside of that bin. To narrow the search
+        query to filter out of the response items that are outside of that bin. To narrow
+                        the search
                         results to shirts that cost between $0 and $25, for example, you would add the following
                         Name and its corresponding value as additional parameters in the original ItemSearch
                         request:
@@ -2204,7 +2212,8 @@
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">&amp;MinimumPrice=0
 &amp;MaximumPrice=2499</code></pre>
        <p>
-        You could narrow the search results even further by adding an additional parameter to
+        You could narrow the search results even further by adding an additional parameter
+                        to
                         the query. For example, you could specify
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">&amp;Brand=Levi’s</code></pre>
@@ -2213,7 +2222,8 @@
                         continue to drill down by adding additional parameters to the request.
        </p>
        <p>
-        Notice that in each case the results were narrowed down by adding the value tagged with
+        Notice that in each case the results were narrowed down by adding the value tagged
+                        with
                         Name and its corresponding value to the original
         <code class="code">
          ItemSearch
@@ -2276,7 +2286,8 @@
         </ul>
        </div>
        <p>
-        SearchBins also returns the elements that all response groups return, as described in
+        SearchBins also returns the elements that all response groups return, as described
+                        in
         <a href="CommonResponseElements.html">
          Elements Common to All Response Groups
         </a>
@@ -2335,7 +2346,8 @@ Version=2013-08-01
         Sample Response Snippet
        </h3>
        <p>
-        The following response snippet shows the elements returned by SearchBins. Notice that the NarrowBy value is PriceRange.
+        The following response snippet shows the elements returned by SearchBins. Notice that
+                        the NarrowBy value is PriceRange.
        </p>
        <pre class="programlisting"><div class="btn-copy-code-container"><div class="btn btn-copy-code">Copy</div></div><code class="nohighlight ">&lt;Item&gt;
   &lt;ASIN&gt;B00005R2GR&lt;/ASIN&gt;
@@ -2548,7 +2560,8 @@ Version=2013-08-01
          Javascript is disabled or is unavailable in your browser.
         </strong>
         <br/>
-        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.
+        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's
+                        Help pages for instructions.
        </div>
       </div>
      </div>

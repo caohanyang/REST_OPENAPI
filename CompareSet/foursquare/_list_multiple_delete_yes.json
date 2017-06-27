@@ -1,0 +1,188 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/setsinglelocation": {
+      "GET": {}
+    },
+    "/removevenue": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/nextvenues": {
+      "GET": {}
+    },
+    "/friends": {
+      "GET": {}
+    },
+    "/setpings": {
+      "POST": {}
+    },
+    "/VENUE_ID": {
+      "GET": {}
+    },
+    "/notifications": {
+      "GET": {}
+    },
+    "/fcP5m3yn7AL": {
+      "GET": {}
+    },
+    "/deleteitem": {
+      "DELETE": {},
+      "POST": {},
+      "delete": {}
+    },
+    "/SPECIAL_ID": {
+      "GET": {}
+    },
+    "/geolong": {
+      "GET": {}
+    },
+    "/updateitem": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/addcomment": {
+      "POST": {}
+    },
+    "/approve": {
+      "POST": {}
+    },
+    "/managed": {
+      "GET": {}
+    },
+    "/49f083e770c603bbe81f8eb4": {
+      "DELETE": {}
+    },
+    "/suggestcompletion": {
+      "GET": {}
+    },
+    "/LIST_ID": {
+      "DELETE": {}
+    },
+    "/addvenue": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/checkins": {
+      "GET": {}
+    },
+    "/marknotificationsread": {
+      "POST": {}
+    },
+    "/explore": {
+      "GET": {}
+    },
+    "/unfriend": {
+      "POST": {}
+    },
+    "/additem": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/GROUP_ID": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/categories": {
+      "POST": {},
+      "GET": {}
+    },
+    "/venuelikes": {
+      "GET": {}
+    },
+    "/SETTING_ID": {
+      "GET": {}
+    },
+    "/PHOTO_ID": {
+      "GET": {}
+    },
+    "/suggestphoto": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/addpost": {
+      "post": {},
+      "POST": {}
+    },
+    "/mayorships": {
+      "GET": {},
+      "get": {}
+    },
+    "/trending": {
+      "GET": {}
+    },
+    "/resolve": {
+      "post": {},
+      "POST": {}
+    },
+    "/venuehistory": {
+      "GET": {}
+    },
+    "/followers": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/EVENT_ID": {
+      "GET": {}
+    },
+    "/suggesttip": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/proposeedit": {
+      "POST": {}
+    },
+    "/UPDATE_ID": {
+      "GET": {}
+    },
+    "/requests": {
+      "GET": {}
+    },
+    "/dislike": {
+      "POST": {}
+    },
+    "/CHECKIN_ID": {
+      "POST": {},
+      "GET": {}
+    },
+    "/moveitem": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/suggestvenues": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/deletecomment": {
+      "POST": {}
+    },
+    "/herenow": {
+      "GET": {}
+    },
+    "/setrole": {
+      "POST": {}
+    },
+    "/ITEM_ID": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/unfollow": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/similar": {
+      "GET": {}
+    },
+    "/timeseries": {
+      "GET": {},
+      "delete": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

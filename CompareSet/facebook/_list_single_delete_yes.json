@@ -1,0 +1,393 @@
+{
+  "paths": {
+    "/an_blocked_categories": {
+      "DELETE": {}
+    },
+    "/insights": {
+      "post": {},
+      "GET": {}
+    },
+    "/{canvas_product_set_id}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/instagram_comments": {
+      "post": {},
+      "POST": {}
+    },
+    "/{user_id}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/{instagram_comment_id}": {
+      "POST": {}
+    },
+    "/picture": {
+      "post": {},
+      "POST": {}
+    },
+    "/{app_request_id}": {
+      "DELETE": {}
+    },
+    "/an_blocked_apps": {
+      "DELETE": {}
+    },
+    "/leadgen_whitelisted_users": {
+      "POST": {}
+    },
+    "/saved_message_respons": {
+      "POST": {}
+    },
+    "/thumbnails": {
+      "post": {},
+      "POST": {}
+    },
+    "/<POST_ID>": {
+      "post": {},
+      "POST": {}
+    },
+    "/{comment-id}": {
+      "POST": {},
+      "delete": {}
+    },
+    "/app-id..": {
+      "GET": {}
+    },
+    "/{page_call_to_action_id}": {
+      "GET": {}
+    },
+    "/{canvas_carousel_id}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/an_blocked_domains": {
+      "DELETE": {}
+    },
+    "/{saved_message_response_id}": {
+      "POST": {}
+    },
+    "/live_videos": {
+      "post": {},
+      "POST": {}
+    },
+    "/{question-opt": {
+      "GET": {}
+    },
+    "/nativeofferviews": {
+      "POST": {}
+    },
+    "/nativeoffers": {
+      "post": {},
+      "POST": {}
+    },
+    "/{post-id}": {
+      "DELETE": {},
+      "post": {},
+      "Post": {},
+      "delete": {}
+    },
+    "/publisher_space": {
+      "POST": {}
+    },
+    "/locations": {
+      "DELETE": {},
+      "post": {},
+      "POST": {},
+      "delete": {}
+    },
+    "/user_properties": {
+      "POST": {}
+    },
+    "/{video_copyright_rule_id}": {
+      "DELETE": {}
+    },
+    "/{page-id}": {
+      "Post": {},
+      "GET": {}
+    },
+    "/{photo_id}": {
+      "POST": {}
+    },
+    "/accounts": {
+      "DELETE": {},
+      "post": {}
+    },
+    "/settings": {
+      "post": {},
+      "POST": {}
+    },
+    "/activities": {
+      "POST": {}
+    },
+    "/promotable_posts": {
+      "post": {},
+      "POST": {},
+      "get": {}
+    },
+    "/instant_articles": {
+      "post": {},
+      "POST": {}
+    },
+    "/uploaded": {
+      "GET": {},
+      "get": {}
+    },
+    "/advideos": {
+      "post": {},
+      "POST": {}
+    },
+    "/{canvas_photo_id}": {
+      "POST": {}
+    },
+    "/{photo-id}": {
+      "DELETE": {}
+    },
+    "/{application_id}": {
+      "POST": {}
+    },
+    "/media_fingerprints": {
+      "post": {},
+      "POST": {}
+    },
+    "/thread_settings": {
+      "post": {},
+      "POST": {}
+    },
+    "/form-data": {
+      "DELETE": {},
+      "post": {}
+    },
+    "/uploads": {
+      "POST": {}
+    },
+    "/{video_copyright_id}": {
+      "POST": {}
+    },
+    "/sharedpost": {
+      "POST": {}
+    },
+    "/{canvas_button_id}": {
+      "POST": {}
+    },
+    "/instant_articles_publish": {
+      "POST": {}
+    },
+    "/{canvas_footer_id}": {
+      "POST": {}
+    },
+    "/{video-id}": {
+      "DELETE": {}
+    },
+    "/www.example.com'": {
+      "POST": {}
+    },
+    "/moments_link_invite": {
+      "POST": {}
+    },
+    "/{canvas_video_id}": {
+      "POST": {}
+    },
+    "/apprelease": {
+      "POST": {}
+    },
+    "/saved_message_responses": {
+      "post": {},
+      "POST": {}
+    },
+    "/video_copyrights": {
+      "post": {},
+      "POST": {}
+    },
+    "/favorite_requests": {
+      "post": {},
+      "POST": {}
+    },
+    "/admin_notes": {
+      "post": {},
+      "POST": {}
+    },
+    "/{user-id}": {
+      "GET": {}
+    },
+    "/milestones": {
+      "post": {},
+      "POST": {},
+      "delete": {}
+    },
+    "/canvas_elements": {
+      "post": {},
+      "POST": {}
+    },
+    "/comments": {
+      "DELETE": {},
+      "post": {},
+      "Post": {}
+    },
+    "/{test-user-id}": {
+      "DELETE": {}
+    },
+    "/activit": {
+      "POST": {}
+    },
+    "/video_copyright_rule": {
+      "post": {},
+      "POST": {}
+    },
+    "/video_lists": {
+      "DELETE": {},
+      "post": {},
+      "POST": {},
+      "delete": {}
+    },
+    "/paymentaccountphones": {
+      "POST": {}
+    },
+    "/moments_link_invite_convert": {
+      "POST": {}
+    },
+    "/video_insights": {
+      "POST": {}
+    },
+    "/reactions": {
+      "POST": {}
+    },
+    "/notifications": {
+      "POST": {}
+    },
+    "/{metric}": {
+      "POST": {}
+    },
+    "/app_insights": {
+      "POST": {}
+    },
+    "/{canvas_text_id}": {
+      "POST": {}
+    },
+    "/{page_id}": {
+      "POST": {}
+    },
+    "/{status-id}": {
+      "POST": {}
+    },
+    "/{canvas_header_id}": {
+      "POST": {}
+    },
+    "/businesses": {
+      "DELETE": {}
+    },
+    "/call_to_actions": {
+      "post": {},
+      "POST": {}
+    },
+    "/alaska'": {
+      "POST": {},
+      "Post": {}
+    },
+    "/attachm": {
+      "POST": {}
+    },
+    "/page_backed_in": {
+      "POST": {}
+    },
+    "/attachments": {
+      "post": {},
+      "POST": {}
+    },
+    "/{from.id}": {
+      "DELETE": {}
+    },
+    "/message": {
+      "GET": {}
+    },
+    "/paymentaccountemails": {
+      "POST": {}
+    },
+    "/sharedposts": {
+      "POST": {}
+    },
+    "/instagram_comme": {
+      "POST": {}
+    },
+    "/permissions": {
+      "DELETE": {},
+      "delete": {}
+    },
+    "/lifetime\",": {
+      "post": {},
+      "POST": {},
+      "Post": {}
+    },
+    "/blocked": {
+      "DELETE": {},
+      "post": {},
+      "POST": {}
+    },
+    "/subscribed_apps": {
+      "DELETE": {},
+      "post": {},
+      "GET": {}
+    },
+    "/{page_label_id}": {
+      "DELETE": {}
+    },
+    "/private_replies": {
+      "POST": {}
+    },
+    "/{media_fingerprint_id}": {
+      "POST": {}
+    },
+    "/{question-id}": {
+      "post": {},
+      "POST": {}
+    },
+    "/{custom_audience_i": {
+      "POST": {}
+    },
+    "/{link-id}": {
+      "DELETE": {}
+    },
+    "/{page-id}_{po": {
+      "POST": {}
+    },
+    "/page_backed_instagram_accounts": {
+      "post": {},
+      "POST": {}
+    },
+    "/featured_videos_collection": {
+      "DELETE": {}
+    },
+    "/achievements": {
+      "DELETE": {}
+    },
+    "/captions": {
+      "DELETE": {},
+      "POST": {},
+      "delete": {}
+    },
+    "/{video_id}": {
+      "DELETE": {},
+      "post": {},
+      "POST": {}
+    },
+    "/{canvas_store_locator_id}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/platform": {
+      "POST": {}
+    },
+    "/graph.faceb": {
+      "POST": {}
+    },
+    "/instagram_co": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "graph.facebook.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

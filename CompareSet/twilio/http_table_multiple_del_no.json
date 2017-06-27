@@ -1,0 +1,356 @@
+{
+  "basePath": "/2010-04-01/Accounts",
+  "paths": {
+    "http://demo.twilio.com/docs/voice.xml": {
+      "POST": {},
+      "GET": {},
+      "Get": {},
+      "put": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21201": {
+      "PUT": {},
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageSize",
+            "description": "How many resources to return in each list page. The default is 50, and the maximum is 1000.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21421": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services'": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers'": {
+      "POST": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes/SC3f94c94562ac88d": {
+      "GET": {},
+      "Get": {},
+      "del": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/AlphaSenders": {
+      "GET": {},
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AlphaSender",
+            "description": "An Alphanumeric Sender ID string, up to 11 characters. Valid characters are A-Z, a-z, 0-9, space and dash ( - ). An Alphanumeric Sender ID string cannot be comprised of only numbers.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers": {
+      "GET": {},
+      "Get": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21602": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN557ce644e5ab8": {
+      "GET": {},
+      "Get": {},
+      "del": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/IncomingPhoneNumbers": {
+      "POST": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21422": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://www.twilio.com/console": {
+      "get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Calls": {
+      "POST": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AuthorizedConnectApps/CN47": {
+      "PUT": {},
+      "put": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/Domains/SD32a3c4970093": {
+      "POST": {},
+      "GET": {},
+      "Get": {},
+      "DEL": {},
+      "Del": {}
+    },
+    "http.NameValuePair": {
+      "GET": {},
+      "get": {}
+    },
+    "http://requestb.in/1234abcd'": {
+      "POST": {
+        "parameters": []
+      },
+      "Get": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/AuthorizedConnectApps": {
+      "PUT": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions": {
+      "del": {},
+      "PUT": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Queues/QU5ef8732a3c4970093": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/PhoneNumbers/PN2a0747eba6abf": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.tommypi.com": {
+      "post": {},
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes": {
+      "GET": {},
+      "Get": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/SIP/IpAccessControlLists/A": {
+      "POST": {},
+      "Get": {},
+      "DEL": {},
+      "Del": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/{TestAccountSid}/Calls": {
+      "POST": {}
+    },
+    "http://www.mycompany.com": {
+      "post": {},
+      "POST": {}
+    },
+    "https://preview.twilio.com/porting/PortOrders": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "number",
+            "description": "Porting phone number in E.164 format, e.g., +16175551212.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "iso_country",
+            "description": "The ISO 3166-1 alpha-2 country code in the service address associated with the porting phone number, e.g., US.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "region",
+            "description": "Name of the region in the service address associated with the porting phone number. This can be a 2 letter state code in US, e.g., CA.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "city",
+            "description": "Name of the city in the service address associated with the porting phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "postal_code",
+            "description": "Zip code or postal code in the service address associated with the porting phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "street",
+            "description": "Name of the street in the service address associated with the porting phone number.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "first_name",
+            "description": "First name of the person that owns the porting phone number. Please note that this is the name we will use to populate the “First Name” field in the LOA associated with this port request, and that this person must be the one who is authorized to and will sign the LOA.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "last_name",
+            "description": "Last name of the person that owns the porting phone number. Please note that this is the name we will use to populate the “Last Name” field in the LOA associated with this port request, and that this person must be the one who is authorized to and will sign the LOA.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "email",
+            "description": "Email address of the person that owns the porting phone number. Please note that this person must be the one who is authorized to and will sign the LOA.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{TestAccountSid}/Messages": {
+      "POST": {}
+    },
+    "https://messaging.twilio.com/v1/Services/MG2172dd2db502e20dd981ef0d67850e1a/ShortCodes'": {
+      "POST": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/{TestAccountSid}/IncomingPhoneNumbers": {
+      "POST": {}
+    },
+    "http:\\/\\/www.twilio.com\\/docs\\/errors\\/21614": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://www.example.com/feedback": {
+      "GET": {},
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "StartDate",
+            "description": "The first date for which feedback entries are included in this Feedback Summary, formatted as YYYY-MM-DD. All dates are in UTC.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "EndDate",
+            "description": "The last date for which feedback entries are included in this Feedback Summary, formatted as YYYY-MM-DD. All dates are in UTC.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "AccountSid",
+            "description": "The Account that reported the feedback entry.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "IncludeSubaccounts",
+            "description": "true if the feedback summary includes subaccounts, false otherwise.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Status",
+            "description": "The status of the feedback summary can be queued, in-progress, completed, or failed.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallCount",
+            "description": "The total number of calls.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "CallFeedbackCount",
+            "description": "The total number of calls with a feedback entry.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreAverage",
+            "description": "The average QualityScore of the feedback entries.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreMedian",
+            "description": "The median QualityScore of the feedback entries.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "QualityScoreStandardDeviation",
+            "description": "The standard deviation of the quality scores.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "Issues",
+            "description": "A list of all the issues experienced. The list includes the issue name, the number of occurrences and percentage of calls that experienced this issue.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://requestb.in/1234abcd": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://www.twilio.com/docs/libraries/csharp#installation": {
+      "Get": {},
+      "DEL": {},
+      "del": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Transcriptions/TR8c61027b7": {
+      "GET": {},
+      "DEL": {},
+      "Del": {}
+    },
+    "https://handler.twilio.com/twiml/EH8ccdbd7f0b8fe34357da8ce87ebe5a16'": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AnsweredBy",
+            "description": "The result of answering machine detection. If Enable was specified, results can be: machine_start , human , fax , unknown . If DetectMessageEnd was specified, results can be: machine_end_beep , machine_end_silence , machine_end_other , human , fax , unknown .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "http://demo.twilio.com/docs/voice.xml'": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://m.twil.io": {
+      "DEL": {}
+    },
+    "/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.twilio.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,11 @@
+{
+  "basePath": "/services/rest",
+  "paths": {
+
+  "host": "flickr.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,0 +1,257 @@
+{
+  "basePath": "/REST",
+  "paths": {
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Routes": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Imagery/BasicMetadata/imagerySet/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Metadata/Aerial/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Locations": {
+      "post": {},
+      "POST": {}
+    },
+    "/v1/Imagery/Metadata/Road/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/imagerySet/Routes/travelMode": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://spatial.virtualearth.net/REST/v1/dataflows/geocode/e14b1d9bd65c4b9d99d267bbb8102ccf": {
+      "GET": {},
+      "get": {}
+    },
+    "/V1/Imagery/Metadata/Road": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Imagery/Map/imagerySet/query": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Routes\";": {
+      "POST": {}
+    },
+    "/v1/Locations/point": {
+      "GET": {},
+      "Get": {},
+      "get": {}
+    },
+    "/v1/Imagery/Metadata/AerialWithLabels/47.23,-122.3": {
+      "PUT": {},
+      "put": {}
+    },
+    "/V1/Routes/FromMajorRoads": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Locations/47.64054,-122.12934": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Imagery/Map/AerialWithLabels": {
+      "GET": {},
+      "Get": {}
+    },
+    "/V1/Imagery/Metadata/Aerial/40.714550167322159,-74.007124900817871": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map\";": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Imagery/Map/Road/Routes": {
+      "GET": {},
+      "get": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode/jobID": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Locations/1%20Microsoft%20Way%20Redmond%20WA%2098052": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Locations/CA/adminDistrict/postalCode/locality/addressLine": {
+      "post": {},
+      "POST": {}
+    },
+    "/v1/Imagery/Map/imagerySet/centerPoint/zoomLevel/Routes/travelMode": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/Road/51.506666,-0.129436/15": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/imagerySet": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://www.bing.com/api/maps/sdk/mapcontrol/isdk": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/AerialWithLabels/eiffel%20tower": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Imagery/Metadata/BirdseyeWithLabels/47.23,-122.3": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Imagery/Map/Road/47.6156352,-122.2043549/12": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Imagery/Metadata/imagerySet/centerPoint": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://msdn.microsoft.com/en-us/library/ff701734.aspx": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Imagery/Metadata/Birdseye/47.23,-122.3": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Locations/locationQuery": {
+      "PUT": {},
+      "put": {}
+    },
+    "https://www.bingmapsportal.com": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode/e14b1d9bd65c4b9d99d267bbb8102ccf": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Imagery/Map/Road": {
+      "POST": {}
+    },
+    "http:\\/\\/schemas.microsoft.com\\/search\\/local\\/ws\\/rest\\/v1\",": {
+      "GET": {},
+      "geT": {}
+    },
+    "/V1/Imagery/Map/road": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Locations/countryRegion/adminDistrict/postalCode/locality/addressLin": {
+      "post": {},
+      "POST": {}
+    },
+    "/V1/Routes/Driving": {
+      "PUT": {},
+      "put": {}
+    },
+    "/V1/Imagery/Map/Road/Routes/Transit": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Imagery/Metadata/imagerySet": {
+      "GET": {},
+      "Get": {}
+    },
+    "http://msdn.microsoft.com/en-us/library/cc981072.aspx": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/Road/47.619048,-122.35384/15": {
+      "GET": {},
+      "get": {},
+      "Get": {}
+    },
+    "http://schemas.microsoft.com/search/local/2010/5/geocode\">": {
+      "PUT": {},
+      "put": {}
+    },
+    "/V1/Imagery/Map/Road/Bellevue%20Washington": {
+      "GET": {},
+      "get": {}
+    },
+    "/V1/Imagery/Metadata/Birdseye/37.779160067439079,-122.42004945874214": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Locations/US/WA/98052/Redmond/1%20Microsoft%20Way": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Imagery/Map/imagerySet/centerPoint/zoomLevel=zoomLevel&mapSize=mapSi": {
+      "GET": {},
+      "get": {}
+    },
+    "/v1/Locations/BÃ¶rsenplatz%201%20Frankfurt%20am%20Main%20Hessen%2060313": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Imagery/Metadata/Road": {
+      "Get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http://schemas.microsoft.com/search/local/2010/5/geocode": {
+      "get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "http:\\/\\/ecn.t2.tiles.virtualearth.net\\/tiles\\/a0212300322.jpeg": {
+      "GET": {},
+      "Get": {}
+    },
+    "https://spatial.virtualearth.net/REST/v1/dataflows/Geocode/5bf10c37df944083b1879fbb0556e67e/output/succe": {
+      "PUT": {},
+      "put": {}
+    },
+    "http://www.wampserver.com),": {
+      "GET": {}
+    },
+    "http://www.w3.org/2001/XMLSchema-instance": {
+      "get": {},
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Locations\";": {
+      "POST": {}
+    },
+    "http://spatial.virtualearth.net/REST/v1/Dataflows/Geocode/\".$jobId.": {
+      "PUT": {},
+      "put": {}
+    },
+    "/v1/Imagery/Map/imagerySet/centerPoint/zoomLevel": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/Road/47.677006,-122.125526/admindivision1": {
+      "GET": {},
+      "Get": {}
+    },
+    "/v1/Imagery/Map/Road/47.678559869527817,-122.13099449872971/14/Routes": {
+      "GET": {},
+      "get": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "dev.virtualearth.net",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

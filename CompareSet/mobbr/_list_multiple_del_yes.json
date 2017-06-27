@@ -1,0 +1,96 @@
+{
+  "basePath": "/mobbr/mobbr-api-v1",
+  "paths": {
+    "/claimable": {
+      "GET": {}
+    },
+    "/register_user_send_login_link": {
+      "PUT": {}
+    },
+    "/currencies": {
+      "GET": {}
+    },
+    "/payment_providers": {
+      "GET": {}
+    },
+    "/preview": {
+      "POST": {}
+    },
+    "/oauth_id": {
+      "PUT": {}
+    },
+    "/public_id": {
+      "PUT": {}
+    },
+    "/happening_right_n": {
+      "GET": {}
+    },
+    "/update_password": {
+      "POST": {}
+    },
+    "/update_user": {
+      "POST": {}
+    },
+    "/new_account_address": {
+      "PUT": {}
+    },
+    "/send_login_link": {
+      "GET": {}
+    },
+    "/pledged": {
+      "DEL": {}
+    },
+    "/payments": {
+      "GET": {}
+    },
+    "/methods": {
+      "GET": {}
+    },
+    "/upload_identity_proof": {
+      "POST": {}
+    },
+    "/happening_right_now": {
+      "GET": {}
+    },
+    "/oauth_providers": {
+      "GET": {}
+    },
+    "/deposit": {
+      "POST": {}
+    },
+    "/password_login": {
+      "PUT": {}
+    },
+    "/id_providers": {
+      "GET": {}
+    },
+    "/api_connection": {
+      "GET": {}
+    },
+    "/languages": {
+      "GET": {}
+    },
+    "/event_types": {
+      "GET": {}
+    },
+    "/unclaimed_shares": {
+      "DEL": {}
+    },
+    "/withdraw": {
+      "POST": {}
+    },
+    "/countries": {
+      "GET": {}
+    },
+    "/withdraw_fee": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "github.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

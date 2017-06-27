@@ -1,0 +1,54 @@
+{
+  "paths": {
+    ".facebook.com/<user_id>/invitable_friends": {
+      "DEL": {}
+    },
+    "https://www.facebook.com/<POST_ID>": {
+      "post": {},
+      "POST": {}
+    },
+    "http://www.example.com'": {
+      "POST": {}
+    },
+    ".facebook.com/<video_id>": {
+      "DEL": {}
+    },
+    "http://bit.ly/alaska'": {
+      "POST": {},
+      "Post": {}
+    },
+    "http%3A%2F%2Fexample.com%": {
+      "POST": {}
+    },
+    "https://developers.google.com/streetview/spherical-metadata": {
+      "post": {},
+      "POST": {}
+    },
+    "-video.facebook.com/<API_VERSION>/<PAGE_ID>/videos": {
+      "POST": {}
+    },
+    "http%3A%2F%2Fexample.c": {
+      "DEL": {}
+    },
+    "https://developers.facebook.com/docs/graph-api/reference/insights)": {
+      "DEL": {},
+      "Del": {}
+    },
+    ".facebook.com/<API_VERSION>/<PAGE_ID>/feed": {
+      "POST": {}
+    },
+    ".facebook.com/<API_VERSION>/204807582871020_615180368500404/insights": {
+      "POST": {}
+    },
+    "http%3A%2F%": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "graph",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

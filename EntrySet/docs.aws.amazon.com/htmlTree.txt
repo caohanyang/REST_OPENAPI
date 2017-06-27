@@ -283,8 +283,8 @@
                                                    |
                                                    |--/OrderPipeline.html
                                                    |
-                                                   |--/OtherItemIdentifiers.html
--- /docs.aws.amazon.com/AWSECommerceService/latest/DG
+-- /docs.aws.amazon.com/AWSECommerceService/latest/DG-/OtherItemIdentifiers.html
+                                                   |
                                                    |--/OtherOperations.html
                                                    |
                                                    |--/PagingandSortingThroughResults.html
@@ -567,6 +567,4 @@
                                                    |
                                                    |--/minimum-advertised-price.html
                                                    |
-                                                   |--/rest-signature.html
-                                                   |
-                                                    \-/uri
+                                                    \-/rest-signature.html

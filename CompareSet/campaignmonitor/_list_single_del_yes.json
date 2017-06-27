@@ -1,0 +1,278 @@
+{
+  "basePath": "/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\",",
+  "paths": {
+    "/test.{xml|json}": {
+      "post": {},
+      "GET": {}
+    },
+    "/admins.{xml|json}": {
+      "POST": {},
+      "Get": {},
+      "Del": {},
+      "del": {},
+      "Put": {}
+    },
+    "/unschedule.{xml|json}": {
+      "POST": {}
+    },
+    "/opens.{xml|json}": {
+      "GET": {}
+    },
+    "/people.{xml|json}": {
+      "POST": {},
+      "Get": {},
+      "Del": {},
+      "del": {},
+      "Put": {}
+    },
+    "/unsubscribes.{xml|json}": {
+      "GET": {}
+    },
+    "/templates.{xml|json}": {
+      "GET": {}
+    },
+    "/listsfor": {
+      "GET": {}
+    },
+    "/setpaygbilling.{xml|json}": {
+      "PUT": {}
+    },
+    "/customfields.{xml|json}": {
+      "Post": {},
+      "GET": {},
+      "get": {}
+    },
+    "/{custom": {
+      "DEL": {}
+    },
+    "/string>": {
+      "DEL": {}
+    },
+    "/setmonthlybilling.{xml|json}": {
+      "PUT": {}
+    },
+    "/suppress.{xml|json}": {
+      "POST": {}
+    },
+    "/activate.{xml|json}": {
+      "PUT": {}
+    },
+    "/unsubscribe.{xml|json}": {
+      "POST": {}
+    },
+    "/clicks.{xml|json}": {
+      "GET": {}
+    },
+    "/{campaignid}.{xml|json}": {
+      "DEL": {},
+      "Del": {}
+    },
+    "/{:messageID}": {
+      "GET": {},
+      "get": {}
+    },
+    "/primarycontact.{xml|json}": {
+      "GET": {}
+    },
+    "/active.{xml|js": {
+      "GET": {}
+    },
+    "/history.{x": {
+      "GET": {}
+    },
+    "/webhooks.{xml|json}": {
+      "POST": {}
+    },
+    "/timezones.{xml|json}": {
+      "GET": {}
+    },
+    "/smartEmail": {
+      "GET": {},
+      "get": {}
+    },
+    "/bounced.{xml|json}": {
+      "GET": {}
+    },
+    "/PrimaryContact>": {
+      "GET": {}
+    },
+    "/sendpreview.{xml|json}": {
+      "POST": {},
+      "get": {}
+    },
+    "/deleted.{xml|json}": {
+      "DEL": {},
+      "del": {}
+    },
+    "/suppressionlist.{x": {
+      "GET": {}
+    },
+    "/campaigns.{xml|json}": {
+      "GET": {}
+    },
+    "/segments.{xml|json}": {
+      "GET": {},
+      "Get": {}
+    },
+    "/{templateid}.{xml|json}": {
+      "Del": {},
+      "del": {},
+      "PUT": {}
+    },
+    "/fromtemplate.{xml|json}": {
+      "POST": {}
+    },
+    "/unconfirmed.{xml|json}": {
+      "GET": {}
+    },
+    "/bounces.{xml|json}": {
+      "GET": {},
+      "get": {}
+    },
+    "/credits.{xml|json}": {
+      "POST": {}
+    },
+    "/stats.{xml|json}": {
+      "GET": {},
+      "del": {}
+    },
+    "/listsandsegments.{xml|json}": {
+      "GET": {}
+    },
+    "/options.{xml|json}": {
+      "GET": {}
+    },
+    "/import.{xml|json}": {
+      "POST": {}
+    },
+    "/scheduled.{xml|": {
+      "GET": {}
+    },
+    "/RuleGroups>": {
+      "GET": {}
+    },
+    "/externalsession.{xml|json}": {
+      "get": {},
+      "PUT": {}
+    },
+    "/{:smartEmailID}": {
+      "GET": {}
+    },
+    "/send.{xml|json}": {
+      "POST": {},
+      "get": {}
+    },
+    "/statistics": {
+      "DEL": {}
+    },
+    "/rules.{xml|json}": {
+      "POST": {}
+    },
+    "/{clientid}.{xml|json}": {
+      "Post": {},
+      "GET": {},
+      "Get": {},
+      "Del": {},
+      "del": {}
+    },
+    "/spam.{xml|json}": {
+      "GET": {}
+    },
+    "/clients": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "del": {}
+    },
+    "/lists.{xml|json}": {
+      "GET": {}
+    },
+    "/systemdate.{xml|json}": {
+      "GET": {}
+    },
+    "/summary.{xml|json}": {
+      "GET": {}
+    },
+    "/drafts.{xml|json}": {
+      "GET": {}
+    },
+    "/active.{xml|json}": {
+      "GET": {}
+    },
+    "/setbasics.{xml|json}": {
+      "PUT": {}
+    },
+    "/Result>": {
+      "GET": {},
+      "del": {}
+    },
+    "/deactivate.{xml|json}": {
+      "PUT": {}
+    },
+    "/countries.{xml|json}": {
+      "GET": {}
+    },
+    "/{webhookid}.{xml|json}": {
+      "DEL": {}
+    },
+    "/primarycontact.{xml": {
+      "GET": {}
+    },
+    "/{customfieldkey}.{xml|json}": {
+      "get": {},
+      "Del": {},
+      "PUT": {}
+    },
+    "/taxonomy-apiresources.php": {
+      "GET": {},
+      "get": {}
+    },
+    "/unsuppress.{xml|json}": {
+      "PUT": {}
+    },
+    "/Payload>": {
+      "POST": {},
+      "GET": {},
+      "Get": {}
+    },
+    "/emailclientusage.{xml|json}": {
+      "GET": {}
+    },
+    "/{listid}.{xml|json}": {
+      "GET": {},
+      "Get": {},
+      "Del": {},
+      "del": {},
+      "Put": {}
+    },
+    "/unsubscribed.{xml|json}": {
+      "GET": {}
+    },
+    "/options.{xml|json": {
+      "PUT": {}
+    },
+    "/billingdetails.{xml|json}": {
+      "GET": {}
+    },
+    "/{segmentid}.{xml|json}": {
+      "Get": {},
+      "del": {},
+      "Del": {},
+      "PUT": {}
+    },
+    "/recipients.{xml|json}": {
+      "GET": {},
+      "get": {}
+    },
+    "/messages": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.campaignmonitor.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

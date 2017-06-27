@@ -1,0 +1,47 @@
+{
+  "paths": {
+    ".com/reduced_model.l3d\",": {
+      "DELETE": {}
+    },
+    "_reduced.l3d\",": {
+      "PUT": {}
+    },
+    "http://yourlink.com/object.l3d\",": {
+      "GET": {}
+    },
+    "http://m.layar.com/open/<layername>": {
+      "GET": {}
+    },
+    "http%3A%2F%2Fcustom.layar.nl%2F&description=check%20out%20this%20layer&service=facebook\",": {
+      "GET": {}
+    },
+    "http://layarapi.example.net/mylayer/getpoi": {
+      "GET": {}
+    },
+    "http://devsupport.layar.com.": {
+      "GET": {}
+    },
+    "http://www.example.com/yourcard.vcf\",": {
+      "GET": {}
+    },
+    "http://www.iana.org/assignments/media-types.Please": {
+      "GET": {}
+    },
+    "http:\\/\\/layar.com\\/company\\/contact\\/\",": {
+      "GET": {}
+    },
+    "http:\\/\\/custom.layar.nl\\/layarimage.jpeg": {
+      "GET": {}
+    },
+    "http://mylayer.com/account": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "example",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

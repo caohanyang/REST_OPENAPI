@@ -1,0 +1,13 @@
+{
+  "paths": {
+    "https://www.mediawiki.org/w/index.php": {
+      "GET": {}
+    },
+    "https://en.wikipedia.org/api/rest_v1": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

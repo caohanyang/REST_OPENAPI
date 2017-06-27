@@ -24,7 +24,7 @@
   <link href="/css/highlight-default.css" rel="stylesheet" type="text/css"/>
   <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
   <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/awsdocs.css?v=20170615" rel="stylesheet" type="text/css"/>
   <script src="/js/highlight.pack.js" type="text/javascript">
   </script>
   <script src="/js/jquery.min.js" type="text/javascript">
@@ -35,7 +35,7 @@
   </script>
   <script src="/js/jquery.colorbox.js" type="text/javascript">
   </script>
-  <script src="/js/awsdocs.min.js" type="text/javascript">
+  <script src="/js/awsdocs.min.js?v=20170615" type="text/javascript">
   </script>
   <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript">
   </script>
@@ -1777,7 +1777,7 @@
              AWS Documentation
             </a>
             »
-            <a href="uri">
+            <a href="http://aws.amazon.com/archives/Product%20Advertising%20API">
              Amazon Product Advertising API Docs
             </a>
             »
@@ -1817,7 +1817,8 @@
          ItemLookup
         </a>
         request. For example, related
-                        items could be all of the Unbox episodes in a TV season that are sold separately, or all of the
+                        items could be all of the Unbox episodes in a TV season that are sold separately,
+                        or all of the
                         MP3Download tracks on an MP3 album.
        </p>
        <p>
@@ -1825,12 +1826,13 @@
         <code class="code">
          RelatedItems
         </code>
-        is limited to ASINs and ItemAttributes.  This remains true even if you add additional response groups, such as Large, that
-                        would otherwise return additional data.
+        is limited to ASINs and ItemAttributes.  This remains true even if you add additional
+                        response groups, such as Large, that would otherwise return additional data.
        </p>
        <p>
-        The relationship between items is unidirectional.  One item is the parent and one item is the child.  Items, however, can
-                        have multiple children or multiple parents for a given relationship type.
+        The relationship between items is unidirectional.  One item is the parent and one
+                        item is the child.  Items, however, can have multiple children or multiple parents
+                        for a given relationship type.
        </p>
        <p>
         The way in which the items are related  is specified by the
@@ -1841,15 +1843,17 @@
         <code class="code">
          RelatedItems
         </code>
-        response group. Some values include Episode, Season, Tracks, and Variation. For a list of all relationship types, go to the
+        response group. Some values include Episode, Season, Tracks, and Variation. For a
+                        list of all relationship types, go to the
         <a href="ItemLookup.html">
          ItemLookup
         </a>
         page.
        </p>
        <p>
-        The relationship type is usually named after the child item in the relationship.  For example, an MP3 Track is related to
-                        an  MP3 album and the type of relationship is  Tracks. In this relationship, the album is the parent.  If you did an
+        The relationship type is usually named after the child item in the relationship. 
+                        For example, an MP3 Track is related to an  MP3 album and the type of relationship
+                        is  Tracks. In this relationship, the album is the parent.  If you did an
         <code class="code">
          ItemLookup
         </code>
@@ -1861,7 +1865,8 @@
         <code class="code">
          RelationshipType
         </code>
-        , you would receive the parent album (or albums) for that Track.  Conversely, looking up an album using Tracks as the
+        , you would receive the parent album (or albums) for that Track.  Conversely, looking
+                        up an album using Tracks as the
         <code class="code">
          RelationshipType
         </code>
@@ -1936,7 +1941,8 @@
         <code class="code">
          RelatedItems
         </code>
-        also returns the elements that all response groups return. For more information, go to
+        also returns the elements that all response groups return. For more information,
+                        go to
         <a href="CommonResponseElements.html">
          Elements Common to All Response Groups
         </a>
@@ -2153,7 +2159,8 @@ Version=2013-08-01
          Javascript is disabled or is unavailable in your browser.
         </strong>
         <br/>
-        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.
+        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's
+                        Help pages for instructions.
        </div>
       </div>
      </div>

@@ -1,0 +1,43 @@
+{
+  "basePath": "/conversation/api/v1",
+  "paths": {
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/en": {
+      "POST": {},
+      "GET": {}
+    },
+    "/workspaces/bec28d8f-18c1-4e97-8d08-9c842c658b51/lo": {
+      "GET": {}
+    },
+    "/workspaces/25dfa8a0-0263-471b-8980-317e68c30488/me": {
+      "PUT": {},
+      "put": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/co": {
+      "POST": {},
+      "GET": {},
+      "DEL": {},
+      "put": {}
+    },
+    "/workspaces/394927d3-bf81-40d8-8cb5-368a13f60fee": {
+      "POST": {},
+      "GET": {}
+    },
+    "/workspaces/9978a49e-ea89-4493-b33d-82298d3db20d/in": {
+      "POST": {},
+      "GET": {},
+      "DEL": {},
+      "put": {}
+    },
+    "/workspaces": {
+      "POST": {},
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "gateway.watsonplatform.net",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

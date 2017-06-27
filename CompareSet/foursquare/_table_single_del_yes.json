@@ -1,0 +1,795 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/setsinglelocation": {
+      "GET": {}
+    },
+    "/removevenue": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Success",
+            "description": "code or error message",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/nextvenues": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "nextVenues",
+            "description": "A count and items where items are compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/friends": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "friends",
+            "description": "A count and items of compact user objects .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/setpings": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user",
+            "description": "A user object for the user.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/VENUE_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venue",
+            "description": "A complete venue .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/notifications": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "notifications",
+            "description": "The user's notification updates .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/fcP5m3yn7AL": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The check-in associated with this shortId.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/deleteitem": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "tip",
+            "description": "The tip being acted on.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/SPECIAL_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "special",
+            "description": "A complete special .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/geolong": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "An array of compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/updateitem": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "item The updated list item .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/addcomment": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "comment",
+            "description": "The newly-created comment.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/approve": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user",
+            "description": "A user object for the approved user.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/managed": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "A count and items of compact venues the user manages.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/49f083e770c603bbe81f8eb4": {
+      "DEL": {}
+    },
+    "/suggestcompletion": {
+      "GET": {
+        "parameters": []
+      }
+    },
+    "/addvenue": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Success",
+            "description": "code or error message",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/checkins": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkins",
+            "description": "A count and items of check-ins .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/marknotificationsread": {
+      "POST": {}
+    },
+    "/explore": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Presents an object with a text field that contains a warning message (i.e. not enough results, try doing X).",
+            "description": "(optional) Presents an object with a text field that contains a warning message (i.e. not enough results, try doing X).",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "An array of objects representing groups of recommendations. Each group contains a type such as \"recommended,\" a human-readable (eventually localized) name such as \"Recommended Places,\" and an array items of recommendation objects, which have an ordered list of objects which contain reasons and venue . The reasons are count and items , where each item has a type such as \"social\" and a message about why this place may be of interest to the acting user. The venues are compact venues that include stats and hereNow data.\nWe encourage clients to be robust against the introduction or removal of group types by treating the groups as opaque objects to be displayed or by placing unfamiliar groups in a catchall group.",
+            "description": "An array of objects representing groups of recommendations. Each group contains a type such as \"recommended,\" a human-readable (eventually localized) name such as \"Recommended Places,\" and an array items of recommendation objects, which have an ordered list of objects which contain reasons and venue . The reasons are count and items , where each item has a type such as \"social\" and a message about why this place may be of interest to the acting user. The venues are compact venues that include stats and hereNow data.\nWe encourage clients to be robust against the introduction or removal of group types by treating the groups as opaque objects to be displayed or by placing unfamiliar groups in a catchall group.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "If no radius was specified in the request, presents the radius that was used for the query (based upon the density of venues in the query area).",
+            "description": "(optional) If no radius was specified in the request, presents the radius that was used for the query (based upon the density of venues in the query area).",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "A text name for the location the user searched, e.g. \"SoHo\".",
+            "description": "A text name for the location the user searched, e.g. \"SoHo\".",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "A full text name for the location the user searched, e.g. \"SoHo, New York\".",
+            "description": "A full text name for the location the user searched, e.g. \"SoHo, New York\".",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "A message to the user based on their current context, e.g. \"Suggestions for Tuesday afternoon\".",
+            "description": "A message to the user based on their current context, e.g. \"Suggestions for Tuesday afternoon\".",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/unfriend": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user",
+            "description": "A user .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/additem": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "item The list item that was just added.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/GROUP_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venuegroup",
+            "description": "A venue group object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/categories": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venue",
+            "description": "The venue that was just created.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": []
+      }
+    },
+    "/venuelikes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "A count and items of objects containing a beenHere count and venue compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/SETTING_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "value",
+            "description": "The value for this setting for the acting user.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/PHOTO_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "photo",
+            "description": "A complete photo object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/suggestphoto": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "photos",
+            "description": "Returns groups user and others containing lists (a count and items of photo s) of photos uploaded by this user and uploaded by other users.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/mayorships": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "mayorships",
+            "description": "A count and items of objects which currently only contain compact venue objects .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "description": "A unique identifier for this user. ✓ ✓ ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "firstName",
+            "description": "A user's first name. ✓ ✓ ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "lastName",
+            "description": "A user's last name. ✓ ✓ ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "photo",
+            "description": "Contains prefix and suffix , similar to the format for photo . Accepted sizes are 36x36, 100x100, 300x300, and 500x500 . ✓ ✓ ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "relationship",
+            "description": "The relationship of the acting user (me) to this user (them). One of self , friend , pendingMe (user has sent a friend request that acting user has not accepted), pendingThem (acting user has sent a friend request to the user but they have not accepted), or followingThem (acting user is following a celebrity or page). If there is no relationship or pending request between the two users, the node is absent. If the acting user is a celebrity, does not indicate whether the user is following them.\n\nIf pendingme , applications will want to the acting user to an approve/ignore action. If pendingthem , applications will want to show the acting user a \"pending\" message. ○ ○ ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "friends",
+            "description": "Contains count of friends for this user and groups of users who are friends. Right now will only contain a group where type is friends , but it's subject to change. Groups are omitted when viewing self The full set of friends is at users/XXX/friends . ○ ○ ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "Present for non-standard user types. One of page , chain , celebrity , or venuePage . Pages are brand pages, such as Bravo , chains are pages that own a set of venues, like Starbucks , celebrities are users that other users can follow, like Mario Batali , and venuePages represent single venues creating content, such as My ArenA creating updates. venuePage's do not really have a user profile, show the veue page instead. ○ ○ ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "venue",
+            "description": "For venuePage users, this field just contains an id for the relevant venue. ○ ○ ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "homeCity",
+            "description": "User's home city ✓ ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "gender",
+            "description": "male , female , or none ✓ ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "contact",
+            "description": "An object containing none, some, or all of twitter , facebook , email , and phone . Both are strings. ✓ ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "bio",
+            "description": "A short bio for the user. ○ ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "tips",
+            "description": "In compact users, if present, contains the count of tips from this user. In full users, contains count and an array of selected tips as items , which may or may not be empty. Full set of items at users/XXX/tips ○ ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "lists",
+            "description": "If this user has lists, groups contains created for lists created by this user. In compact, just the count is provided, and in full, some sample lists are included. In full form, lists also contains a count of the lists created and followed by this user. Full set of items at users/XXX/lists ○ ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "followers",
+            "description": "If this user can have followers (i.e. it's a celebrity, venue, or page), contains count of followers for this user in compact, and, in detail, groups of users who follow this user, split into friends and others . ○ ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "following",
+            "description": "groups of pages this user has followed. ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "mayorships",
+            "description": "Contains the count of mayorships for this user and an items array that for now is empty. Use users/XXX/mayorships to get actual mayorships. ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "photos",
+            "description": "Contains the count of photos this user has. May contain an array of selected photos as items , full set of items at users/XXX/photos , but only visible to self. ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "scores",
+            "description": "Contains recent , max , checkinsCount , and goal for showing user's current game status. ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "checkins",
+            "description": "Contains the count of checkins by this user. May contain the most recent checkin as an array items containing a single element, if the user is a friend. Users can fetch users/XXX/checkins for their own complete history. ✓",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "pageInfo",
+            "description": "Contains a detailed page , if they are a page. ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "pings",
+            "description": "Whether we receive pings from this user, if we have a relationship. ○",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "requests",
+            "description": "Contains count of pending friend requests for this user. ○",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/trending": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "An array of venues that are currently trending, with their hereNow populated.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/venuehistory": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "A count and items of objects containing a beenHere count and venue compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/followers": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "followers",
+            "description": "Returns a pageable list of compact user .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/EVENT_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "event",
+            "description": "A complete event object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/suggesttip": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "tips",
+            "description": "Returns groups user and others containing lists (a count and items of tip s) of tips created by this user and created by other users.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/proposeedit": {
+      "POST": {}
+    },
+    "/UPDATE_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "notification",
+            "description": "A update .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pageUpdate",
+            "description": "A page update object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/requests": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "requests",
+            "description": "An array of compact user objects .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/dislike": {
+      "POST": {}
+    },
+    "/CHECKIN_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "A complete check-in object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/moveitem": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "The list that was just edited.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/suggestvenues": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "suggestedVenues",
+            "description": "An array of compact venue s that may be appropriate for this list.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/deletecomment": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The checkin, minus this comment.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/herenow": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "hereNow",
+            "description": "A count and items where items are checkins .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/setrole": {
+      "POST": {}
+    },
+    "/ITEM_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "An item object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/unfollow": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "The list that was just unfollowed.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/similar": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "similarVenues",
+            "description": "A count and items of similar venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/timeseries": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "timeseries",
+            "description": "An array of venue time series data objects, one for each venue.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

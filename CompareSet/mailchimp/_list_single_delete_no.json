@@ -1,0 +1,409 @@
+{
+  "paths": {
+    "/reports/{campaign_id}/domain-performance": {
+      "GET": {}
+    },
+    "/ecommerce/stores/{store_id}/products/{product_id}/variants": {
+      "GET": {},
+      "Get": {}
+    },
+    "/ecommerce/stores/{store_id}/products": {
+      "GET": {}
+    },
+    "/lists/{list_id}/clients": {
+      "GET": {}
+    },
+    "/search-campaigns": {
+      "GET": {}
+    },
+    "/file-manager/folders": {
+      "GET": {}
+    },
+    "/batch-webhooks/{batch_webhook_id}": {
+      "Delete": {},
+      "DELETE": {},
+      "PATCH": {}
+    },
+    "/lists/{list_id}/segments": {
+      "POST": {},
+      "GET": {}
+    },
+    "/ecommerce/stores": {
+      "GET": {},
+      "Get": {}
+    },
+    "/lists/{list_id}/locations": {
+      "GET": {}
+    },
+    "/campaigns/{campaign_id}/actions/unschedule": {
+      "GET": {}
+    },
+    "/campaigns/{campaign_id}/actions/resume": {
+      "POST": {}
+    },
+    "/reports/{campaign_id}/sent-to": {
+      "GET": {}
+    },
+    "/reports": {
+      "GET": {}
+    },
+    "/templates/{template_id}": {
+      "Delete": {},
+      "Get": {},
+      "PATCH": {}
+    },
+    "/ecommerce/stores/{store_id}/customers": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}/abuse-reports/{report_id}": {
+      "GET": {}
+    },
+    "/automations/{workflow_id}/actions/pause-all-emails": {
+      "POST": {}
+    },
+    "/automations/{workflow_id}": {
+      "POST": {}
+    },
+    "/ecommerce/stores/{store_id}/orders/{order_id}": {
+      "DELETE": {},
+      "POST": {},
+      "PATCH": {}
+    },
+    "/lists/{list_id}/growth-history/{month}": {
+      "POST": {}
+    },
+    "/lists/{list_id}/abuse-reports": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}/sent-to/{subscriber_hash}": {
+      "GET": {}
+    },
+    "/automations": {
+      "GET": {}
+    },
+    "/file-manager/files": {
+      "GET": {},
+      "Get": {}
+    },
+    "/lists/{list_id}/interest-categories/{interest_category_id}/interests": {
+      "POST": {},
+      "Get": {}
+    },
+    "/lists/{list_id}/segments/{segment_id}/members/{subscriber_hash}": {
+      "DELETE": {}
+    },
+    "/lists/{list_id}/webhooks/{webhook_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/lists/{list_id}/signup-forms": {
+      "POST": {},
+      "GET": {}
+    },
+    "/ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}": {
+      "POST": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/lists/{list_id}/members/{subscriber_hash}/goals": {
+      "GET": {}
+    },
+    "/lists/{list_id}/members": {
+      "GET": {}
+    },
+    "/automations/{workflow_id}/emails/{workflow_email_id}/actions/pause": {
+      "POST": {}
+    },
+    "/campaigns/{campaign_id}": {
+      "Delete": {},
+      "POST": {},
+      "PATCH": {}
+    },
+    "/lists/{list_id}/interest-categories/{interest_category_id}/interests/{interest_id}": {
+      "Delete": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/reports/{campaign_id}/sub-reports": {
+      "GET": {}
+    },
+    "/conversations/{conversation_id}/messages/{message_id}": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}/unsubscribed": {
+      "GET": {}
+    },
+    "/campaign-folders": {
+      "GET": {},
+      "Get": {}
+    },
+    "/lists/{list_id}/merge-fields/{merge_id}": {
+      "DELETE": {},
+      "POST": {},
+      "PATCH": {}
+    },
+    "/ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/batches/{batch_id}": {
+      "Delete": {},
+      "DELETE": {}
+    },
+    "/reports/{campaign_id}/advice": {
+      "GET": {}
+    },
+    "/authorized-apps": {
+      "GET": {},
+      "Get": {}
+    },
+    "/templates": {
+      "GET": {},
+      "Get": {}
+    },
+    "/automations/{workflow_id}/emails": {
+      "GET": {}
+    },
+    "/templates/{template_id}/default-content": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}": {
+      "GET": {}
+    },
+    "/campaigns/{campaign_id}/actions/test": {
+      "POST": {}
+    },
+    "/lists/{list_id}/interest-categories": {
+      "GET": {}
+    },
+    "/lists/{list_id}/abuse-reports/{report_id}": {
+      "GET": {}
+    },
+    "/authorized-apps/{app_id}": {
+      "GET": {}
+    },
+    "/lists/{list_id}/webhooks": {
+      "GET": {}
+    },
+    "/file-manager/folders/{folder_id}": {
+      "DELETE": {},
+      "PATCH": {}
+    },
+    "/lists/{list_id}/segments/{segment_id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/conversations/{conversation_id}/messages": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}/email-activity": {
+      "GET": {}
+    },
+    "/automations/{workflow_id}/emails/{workflow_email_id}/queue": {
+      "GET": {}
+    },
+    "/ecommerce/stores/{store_id}": {
+      "POST": {},
+      "PATCH": {}
+    },
+    "/ecommerce/stores/{store_id}/carts": {
+      "GET": {}
+    },
+    "/ecommerce/stores/{store_id}/customers/{customer_id}": {
+      "DELETE": {},
+      "POST": {},
+      "PATCH": {},
+      "PUT": {}
+    },
+    "/automations/{workflow_id}/actions/start-all-emails": {
+      "GET": {}
+    },
+    "/lists/{list_id}/segments/{segment_id}/members": {
+      "GET": {},
+      "Get": {}
+    },
+    "/campaigns/{campaign_id}/feedback/{feedback_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/ecommerce/stores/{store_id}/orders/{order_id}/lines": {
+      "GET": {}
+    },
+    "/lists/{list_id}/members/{subscriber_hash}/notes/{note_id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/reports/{campaign_id}/click-details/{link_id}/members/{subscriber_hash}": {
+      "GET": {}
+    },
+    "/batch-webhooks": {
+      "GET": {}
+    },
+    "/campaigns/{campaign_id}/actions/send": {
+      "POST": {}
+    },
+    "/ecommerce/stores/{store_id}/products/{product_id}": {
+      "DELETE": {},
+      "POST": {},
+      "PATCH": {}
+    },
+    "/conversations/{conversation_id}": {
+      "POST": {}
+    },
+    "/lists/{list_id}/members/{subscriber_hash}/activity": {
+      "GET": {}
+    },
+    "/campaign-folders/{folder_id}": {
+      "Delete": {},
+      "POST": {},
+      "PATCH": {}
+    },
+    "/automations/{workflow_id}/emails/{workflow_email_id}/actions/start": {
+      "POST": {}
+    },
+    "/ecommerce/stores/{store_id}/products/{product_id}/images": {
+      "GET": {},
+      "Get": {}
+    },
+    "/campaigns/{campaign_id}/actions/replicate": {
+      "POST": {}
+    },
+    "/campaigns/{campaign_id}/send-checklist": {
+      "GET": {}
+    },
+    "/lists/{list_id}/members/{subscriber_hash}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {},
+      "PUT": {}
+    },
+    "/reports/{campaign_id}/abuse-reports": {
+      "GET": {}
+    },
+    "/template-folders/{folder_id}": {
+      "Delete": {},
+      "POST": {},
+      "PATCH": {}
+    },
+    "/campaigns/{campaign_id}/actions/cancel-send": {
+      "POST": {}
+    },
+    "/ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}": {
+      "Delete": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/file-manager/files/{file_id}": {
+      "DELETE": {},
+      "PATCH": {}
+    },
+    "/lists/{list_id}/growth-history": {
+      "GET": {}
+    },
+    "/batches": {
+      "GET": {},
+      "Get": {}
+    },
+    "/campaigns/{campaign_id}/actions/schedule": {
+      "POST": {}
+    },
+    "/campaigns/{campaign_id}/actions/pause": {
+      "POST": {}
+    },
+    "/reports/{campaign_id}/click-details/{link_id}/members": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}/unsubscribed/{subscriber_hash}": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}/email-activity/{subscriber_hash}": {
+      "GET": {}
+    },
+    "/lists/{list_id}/members/{subscriber_hash}/notes": {
+      "GET": {}
+    },
+    "/conversations": {
+      "GET": {}
+    },
+    "/campaigns/{campaign_id}/feedback": {
+      "GET": {}
+    },
+    "/automations/{workflow_id}/emails/{workflow_email_id}/queue/{subscriber_hash}": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}/click-details": {
+      "GET": {}
+    },
+    "/automations/{workflow_id}/removed-subscribers": {
+      "GET": {}
+    },
+    "/ecommerce/stores/{store_id}/carts/{cart_id}/lines": {
+      "GET": {}
+    },
+    "/reports/{campaign_id}/locations": {
+      "GET": {}
+    },
+    "/lists/{list_id}/activity": {
+      "GET": {}
+    },
+    "/ecommerce/stores/{store_id}/carts/{cart_id}": {
+      "DELETE": {},
+      "POST": {},
+      "PATCH": {}
+    },
+    "/reports/{campaign_id}/eepurl": {
+      "GET": {}
+    },
+    "/campaigns": {
+      "GET": {},
+      "Get": {}
+    },
+    "/ecommerce/stores/{store_id}/orders": {
+      "GET": {}
+    },
+    "/automations/{workflow_id}/emails/{workflow_email_id}": {
+      "GET": {}
+    },
+    "/campaigns/{campaign_id}/content": {
+      "POST": {},
+      "PUT": {}
+    },
+    "/lists/{list_id}": {
+      "GET": {},
+      "Get": {},
+      "PATCH": {}
+    },
+    "/lists/{list_id}/interest-categories/{interest_category_id}": {
+      "POST": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/reports/{campaign_id}/click-details/{link_id}": {
+      "GET": {}
+    },
+    "/template-folders": {
+      "GET": {},
+      "Get": {}
+    },
+    "/search-members": {
+      "POST": {}
+    },
+    "/ecommerce/stores/{store_id}/products/{product_id}/images/{image_id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/lists/{list_id}/merge-fields": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

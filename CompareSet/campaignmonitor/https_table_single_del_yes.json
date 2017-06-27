@@ -1,0 +1,46 @@
+{
+  "basePath": "/api/v3.1",
+  "paths": {
+    "https://api.createsend.com/oauth/token": {
+      "POST": {}
+    },
+    "https://external1.createsend.com/cd/create/ABCDEF12/DEADBEEF": {
+      "GET": {}
+    },
+    "https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\",": {
+      "GET": {}
+    },
+    "https://mywebapp.com/newpwd": {
+      "GET": {}
+    },
+    "/clients": {
+      "POST": {},
+      "GET": {},
+      "get": {},
+      "Get": {},
+      "del": {},
+      "put": {}
+    },
+    "/clients.xml": {
+      "GET": {}
+    },
+    "/": {
+      "post": {},
+      "Post": {},
+      "GET": {},
+      "Get": {},
+      "get": {},
+      "Del": {},
+      "del": {},
+      "Put": {},
+      "PUT": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.createsend.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

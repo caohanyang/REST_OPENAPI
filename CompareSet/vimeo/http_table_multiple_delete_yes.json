@@ -1,0 +1,102 @@
+{
+  "paths": {
+    "https://api.v": {
+      "GET": {}
+    },
+    "meo.co": {
+      "GET": {}
+    },
+    "meo.c": {
+      "PATCH": {}
+    },
+    "https://a": {
+      "GET": {}
+    },
+    "meo.": {
+      "GET": {}
+    },
+    "meo": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "304",
+            "description": "Not Modified\nIf no videos were created by this user since the provided If-Modified-Since header.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "meo.com": {
+      "DELETE": {},
+      "post": {},
+      "POST": {},
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf the `uris` batch parameter is supplied with filtering or sorting arguments.\n\nError Code: 2101\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf there is a problem with the batch request.\n\nError Code: 2204\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "503",
+            "description": "Service Unavailable\nIf search is disabled.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "503",
+            "description": "Service Unavailable\nIf there was an internal error with our search infrastructure.\n\nError Code: 7300\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "PUT": {},
+      "PATCH": {}
+    },
+    "m": {
+      "GET": {}
+    },
+    "https://api.": {
+      "GET": {}
+    },
+    "/": {
+      "GET": {},
+      "PUT": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vi",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

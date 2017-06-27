@@ -24,7 +24,7 @@
   <link href="/css/highlight-default.css" rel="stylesheet" type="text/css"/>
   <link href="/css/jquery-ui.theme.css" rel="stylesheet" type="text/css"/>
   <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-  <link href="/css/awsdocs.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/awsdocs.css?v=20170615" rel="stylesheet" type="text/css"/>
   <script src="/js/highlight.pack.js" type="text/javascript">
   </script>
   <script src="/js/jquery.min.js" type="text/javascript">
@@ -35,7 +35,7 @@
   </script>
   <script src="/js/jquery.colorbox.js" type="text/javascript">
   </script>
-  <script src="/js/awsdocs.min.js" type="text/javascript">
+  <script src="/js/awsdocs.min.js?v=20170615" type="text/javascript">
   </script>
   <script src="https://a0.awsstatic.com/target/1.0.67/aws-target-mediator.js" type="text/javascript">
   </script>
@@ -1777,7 +1777,7 @@
              AWS Documentation
             </a>
             »
-            <a href="uri">
+            <a href="http://aws.amazon.com/archives/Product%20Advertising%20API">
              Amazon Product Advertising API Docs
             </a>
             »
@@ -1814,7 +1814,8 @@
        </p>
        <p>
         The Request Validation segment has error information if there was an error in the
-                        request. It is also the last segment that Product Advertising API returns in a response if there was an
+                        request. It is also the last segment that Product Advertising API returns in a response
+                        if there was an
                         error.
        </p>
        <p>
@@ -1831,7 +1832,8 @@
          IsValid
         </code>
         element pertains only to the validity of the request. It
-                        reports if all of the required elements of a request are present, parameter restrictions and
+                        reports if all of the required elements of a request are present, parameter restrictions
+                        and
                         constraints have been obeyed, and parameter values are legal.
         <code class="code">
          IsValid
@@ -1857,7 +1859,7 @@
        </p>
        <div class="informaltable">
         <div class="informaltable-contents">
-         <table id="w28aab7c19c21c25c17">
+         <table id="w68aab7c19c22c25c17">
           <tbody>
            <tr>
             <th>
@@ -1972,9 +1974,12 @@
              Partial request errors
             </td>
             <td>
-             Product Advertising API returns as much information as possible. For example, if you use a
-                                    batch request and Product Advertising API finds items for one request but not the other,
-                                    Product Advertising API returns all of the information for the found item and an error message
+             Product Advertising API returns as much information as possible. For example, if you
+                                    use a
+                                    batch request and Product Advertising API finds items for one request but not the
+                                    other,
+                                    Product Advertising API returns all of the information for the found item and an error
+                                    message
                                     for the other request.
             </td>
            </tr>
@@ -2022,7 +2027,8 @@
 &lt;/Errors&gt;</code></pre>
        <p>
         The more difficult error to assess is a request that is valid and processed, but
-                        contains an error in logic. For example, a request might use default values such that only
+                        contains an error in logic. For example, a request might use default values such that
+                        only
                         items in new condition are returned when the requester meant to return items in all
                         conditions.
        </p>
@@ -2123,7 +2129,8 @@
          Javascript is disabled or is unavailable in your browser.
         </strong>
         <br/>
-        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.
+        To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's
+                        Help pages for instructions.
        </div>
       </div>
      </div>

@@ -1,0 +1,630 @@
+{
+  "basePath": "/v2",
+  "paths": {
+    "/setsinglelocation": {
+      "GET": {}
+    },
+    "/removevenue": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Success",
+            "description": "code or error message",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/nextvenues": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "nextVenues",
+            "description": "A count and items where items are compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/friends": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "friends",
+            "description": "A count and items of compact user objects .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/setpings": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user",
+            "description": "A user object for the user.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/VENUE_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venue",
+            "description": "A complete venue .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/notifications": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "notifications",
+            "description": "The user's notification updates .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/fcP5m3yn7AL": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The check-in associated with this shortId.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/deleteitem": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "tip",
+            "description": "The tip being acted on.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/SPECIAL_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "special",
+            "description": "A complete special .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/geolong": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "An array of compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/updateitem": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "item The updated list item .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/addcomment": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "comment",
+            "description": "The newly-created comment.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/approve": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user",
+            "description": "A user object for the approved user.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/managed": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "A count and items of compact venues the user manages.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/49f083e770c603bbe81f8eb4": {
+      "DELETE": {}
+    },
+    "/suggestcompletion": {
+      "GET": {
+        "parameters": []
+      }
+    },
+    "/addvenue": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Success",
+            "description": "code or error message",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/checkins": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkins",
+            "description": "A count and items of check-ins .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/marknotificationsread": {
+      "POST": {}
+    },
+    "/explore": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Presents an object with a text field that contains a warning message (i.e. not enough results, try doing X).",
+            "description": "(optional) Presents an object with a text field that contains a warning message (i.e. not enough results, try doing X).",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "An array of objects representing groups of recommendations. Each group contains a type such as \"recommended,\" a human-readable (eventually localized) name such as \"Recommended Places,\" and an array items of recommendation objects, which have an ordered list of objects which contain reasons and venue . The reasons are count and items , where each item has a type such as \"social\" and a message about why this place may be of interest to the acting user. The venues are compact venues that include stats and hereNow data.\nWe encourage clients to be robust against the introduction or removal of group types by treating the groups as opaque objects to be displayed or by placing unfamiliar groups in a catchall group.",
+            "description": "An array of objects representing groups of recommendations. Each group contains a type such as \"recommended,\" a human-readable (eventually localized) name such as \"Recommended Places,\" and an array items of recommendation objects, which have an ordered list of objects which contain reasons and venue . The reasons are count and items , where each item has a type such as \"social\" and a message about why this place may be of interest to the acting user. The venues are compact venues that include stats and hereNow data.\nWe encourage clients to be robust against the introduction or removal of group types by treating the groups as opaque objects to be displayed or by placing unfamiliar groups in a catchall group.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "If no radius was specified in the request, presents the radius that was used for the query (based upon the density of venues in the query area).",
+            "description": "(optional) If no radius was specified in the request, presents the radius that was used for the query (based upon the density of venues in the query area).",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "A text name for the location the user searched, e.g. \"SoHo\".",
+            "description": "A text name for the location the user searched, e.g. \"SoHo\".",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "A full text name for the location the user searched, e.g. \"SoHo, New York\".",
+            "description": "A full text name for the location the user searched, e.g. \"SoHo, New York\".",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "A message to the user based on their current context, e.g. \"Suggestions for Tuesday afternoon\".",
+            "description": "A message to the user based on their current context, e.g. \"Suggestions for Tuesday afternoon\".",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/unfriend": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "user",
+            "description": "A user .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/additem": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "item The list item that was just added.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/GROUP_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venuegroup",
+            "description": "A venue group object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/categories": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venue",
+            "description": "The venue that was just created.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": []
+      }
+    },
+    "/venuelikes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "A count and items of objects containing a beenHere count and venue compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/SETTING_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "value",
+            "description": "The value for this setting for the acting user.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/PHOTO_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "photo",
+            "description": "A complete photo object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/suggestphoto": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "photos",
+            "description": "Returns groups user and others containing lists (a count and items of photo s) of photos uploaded by this user and uploaded by other users.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/mayorships": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "mayorships",
+            "description": "A count and items of objects which currently only contain compact venue objects .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/trending": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "An array of venues that are currently trending, with their hereNow populated.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/venuehistory": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "venues",
+            "description": "A count and items of objects containing a beenHere count and venue compact venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/followers": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "followers",
+            "description": "Returns a pageable list of compact user .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/EVENT_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "event",
+            "description": "A complete event object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/suggesttip": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "tips",
+            "description": "Returns groups user and others containing lists (a count and items of tip s) of tips created by this user and created by other users.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/proposeedit": {
+      "POST": {}
+    },
+    "/UPDATE_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "notification",
+            "description": "A update .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "Get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pageUpdate",
+            "description": "A page update object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/requests": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "requests",
+            "description": "An array of compact user objects .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/dislike": {
+      "POST": {}
+    },
+    "/CHECKIN_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "A complete check-in object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/moveitem": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "The list that was just edited.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/suggestvenues": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "suggestedVenues",
+            "description": "An array of compact venue s that may be appropriate for this list.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/deletecomment": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "checkin",
+            "description": "The checkin, minus this comment.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/herenow": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "hereNow",
+            "description": "A count and items where items are checkins .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/setrole": {
+      "POST": {}
+    },
+    "/ITEM_ID": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "An item object.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/unfollow": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "list",
+            "description": "The list that was just unfollowed.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/similar": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "similarVenues",
+            "description": "A count and items of similar venues .",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/timeseries": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "timeseries",
+            "description": "An array of venue time series data objects, one for each venue.",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "api.foursquare.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

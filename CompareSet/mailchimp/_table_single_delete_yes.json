@@ -1,0 +1,279 @@
+{
+  "paths": {
+    "/templat": {
+      "PATCH": {}
+    },
+    "/{cart_id}": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/{interest": {
+      "PATCH": {}
+    },
+    "/{list_i": {
+      "GET": {}
+    },
+    "/{app_id}": {
+      "GET": {},
+      "Get": {}
+    },
+    "/{interest_c": {
+      "GET": {}
+    },
+    "/customers": {
+      "POST": {}
+    },
+    "/{batch_webhoo": {
+      "GET": {}
+    },
+    "/{batch_webhook_id}": {
+      "Delete": {},
+      "GET": {}
+    },
+    "/default-content": {
+      "GET": {},
+      "Get": {}
+    },
+    "/feedback": {
+      "GET": {}
+    },
+    "/{workflow_email_id}": {
+      "GET": {}
+    },
+    "/start-all-emails": {
+      "GET": {}
+    },
+    "/campaig": {
+      "PATCH": {}
+    },
+    "/file-ma": {
+      "PATCH": {}
+    },
+    "/{line_id}": {
+      "Delete": {},
+      "POST": {}
+    },
+    "/{store_id}": {
+      "GET": {},
+      "Get": {}
+    },
+    "/{variant_id}": {
+      "Delete": {},
+      "PUT": {}
+    },
+    "/{file_id}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/sent-to": {
+      "GET": {}
+    },
+    "/{interest_id}": {
+      "DELETE": {}
+    },
+    "/template-folder": {
+      "POST": {},
+      "PATCH": {}
+    },
+    "/variants": {
+      "POST": {},
+      "Get": {}
+    },
+    "/domain-perfor": {
+      "GET": {}
+    },
+    "/{conversation_id}": {
+      "GET": {}
+    },
+    "/folders": {
+      "GET": {}
+    },
+    "/{segment_id}": {
+      "POST": {},
+      "PATCH": {}
+    },
+    "/unsubscribed": {
+      "GET": {}
+    },
+    "/{template_id}": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/{store_i": {
+      "POST": {}
+    },
+    "/products": {
+      "POST": {}
+    },
+    "/locations": {
+      "GET": {}
+    },
+    "/segments": {
+      "POST": {},
+      "Get": {}
+    },
+    "/webhooks": {
+      "POST": {}
+    },
+    "/{folder_id}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {},
+      "Get": {},
+      "PATCH": {}
+    },
+    "/{link_id}": {
+      "GET": {}
+    },
+    "/{campaign": {
+      "GET": {}
+    },
+    "/automati": {
+      "GET": {}
+    },
+    "/{message_id}": {
+      "GET": {}
+    },
+    "/{report_id}": {
+      "GET": {},
+      "Get": {}
+    },
+    "/cancel-send": {
+      "POST": {}
+    },
+    "/{product_id}": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/{campaign_id}": {
+      "POST": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/interest-categories": {
+      "POST": {}
+    },
+    "/{merge_id}": {
+      "GET": {}
+    },
+    "/{campaign_i": {
+      "GET": {}
+    },
+    "/interests": {
+      "GET": {}
+    },
+    "/{subscriber_h": {
+      "POST": {}
+    },
+    "/{interest_category_id": {
+      "GET": {}
+    },
+    "/template-fol": {
+      "DELETE": {}
+    },
+    "/{order_id}": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/sub-reports": {
+      "GET": {}
+    },
+    "/conversations": {
+      "GET": {}
+    },
+    "/{customer_id}": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/{workflow_id}": {
+      "GET": {}
+    },
+    "/{list_id}": {
+      "POST": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/abuse-reports": {
+      "GET": {},
+      "Get": {}
+    },
+    "/campaign-folders": {
+      "POST": {}
+    },
+    "/{folder_i": {
+      "GET": {}
+    },
+    "/merge-fields": {
+      "GET": {}
+    },
+    "/{batch_id}": {
+      "Delete": {},
+      "DELETE": {},
+      "GET": {},
+      "Get": {}
+    },
+    "/{webhook_id}": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/content": {
+      "PUT": {}
+    },
+    "/{workflow_email_": {
+      "POST": {}
+    },
+    "/campaigns": {
+      "GET": {}
+    },
+    "/{feedback_id}": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/send-checklist": {
+      "GET": {}
+    },
+    "/{month}": {
+      "GET": {}
+    },
+    "/members": {
+      "GET": {},
+      "Get": {}
+    },
+    "/{subscriber_hash}": {
+      "GET": {},
+      "Get": {},
+      "PATCH": {}
+    },
+    "/templates": {
+      "GET": {}
+    },
+    "/pause-all-": {
+      "POST": {}
+    },
+    "/{campaig": {
+      "POST": {}
+    },
+    "/{interest_category_id}": {
+      "DELETE": {}
+    },
+    "/actions": {
+      "POST": {}
+    },
+    "/{product_i": {
+      "PATCH": {}
+    },
+    "/{campai": {
+      "GET": {}
+    },
+    "/messages": {
+      "POST": {},
+      "Get": {}
+    },
+    "/removed-subscribers": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}
