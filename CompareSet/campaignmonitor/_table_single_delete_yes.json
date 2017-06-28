@@ -1,266 +1,313 @@
 {
-  "basePath": "/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\",",
+  "basePath": "/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\", \"Type\": \"application/pdf\" } ], \"Data\": { \"new_password_url\": \"https://mywebapp.com/newpwd",
   "paths": {
     "/test.{xml|json}": {
-      "post": {},
-      "GET": {}
-    },
-    "/admins.{xml|json}": {
-      "Delete": {},
-      "POST": {},
-      "Get": {},
-      "delete": {},
-      "Put": {}
-    },
-    "/unschedule.{xml|json}": {
       "POST": {}
     },
-    "/opens.{xml|json}": {
+    "/ Result >": {
       "GET": {}
     },
-    "/people.{xml|json}": {
-      "Delete": {},
-      "POST": {},
-      "Get": {},
-      "delete": {},
-      "Put": {}
-    },
-    "/unsubscribes.{xml|json}": {
-      "GET": {}
-    },
-    "/templates.{xml|json}": {
-      "GET": {}
-    },
-    "/listsfor": {
-      "GET": {}
-    },
-    "/setpaygbilling.{xml|json}": {
-      "PUT": {}
+    "/BCC. This setting can be overridden when sending a message.": {
+      "POST": {}
     },
     "/customfields.{xml|json}": {
-      "Post": {},
-      "GET": {},
-      "get": {}
+      "GET": {}
     },
     "/string>": {
-      "DELETE": {}
-    },
-    "/setmonthlybilling.{xml|json}": {
+      "DELETE": {},
+      "GET": {},
       "PUT": {}
     },
-    "/suppress.{xml|json}": {
-      "POST": {}
+    "/Subscriber>": {
+      "GET": {}
     },
-    "/activate.{xml|json}": {
-      "PUT": {}
-    },
-    "/unsubscribe.{xml|json}": {
-      "POST": {}
-    },
-    "/clicks.{xml|json}": {
+    "/Clients>": {
       "GET": {}
     },
     "/{campaignid}.{xml|json}": {
-      "Delete": {},
       "DELETE": {}
     },
     "/{:messageID}": {
+      "GET": {}
+    },
+    "/Administrators>": {
+      "GET": {}
+    },
+    "/1.1 200 OK": {
+      "DELETE": {},
+      "POST": {},
       "GET": {},
-      "get": {}
+      "PUT": {}
     },
-    "/primarycontact.{xml|json}": {
-      "GET": {}
-    },
-    "/active.{xml|js": {
-      "GET": {}
-    },
-    "/history.{x": {
-      "GET": {}
-    },
-    "/webhooks.{xml|json}": {
-      "POST": {}
-    },
-    "/timezones.{xml|json}": {
+    "/BillingDetails>": {
       "GET": {}
     },
     "/smartEmail": {
-      "GET": {},
-      "get": {}
-    },
-    "/bounced.{xml|json}": {
       "GET": {}
     },
     "/PrimaryContact>": {
-      "GET": {}
-    },
-    "/sendpreview.{xml|json}": {
-      "POST": {},
-      "get": {}
-    },
-    "/deleted.{xml|json}": {
-      "DELETE": {},
-      "delete": {}
-    },
-    "/suppressionlist.{x": {
-      "GET": {}
-    },
-    "/campaigns.{xml|json}": {
-      "GET": {}
-    },
-    "/segments.{xml|json}": {
       "GET": {},
-      "Get": {}
-    },
-    "/{templateid}.{xml|json}": {
-      "Delete": {},
-      "delete": {},
       "PUT": {}
     },
-    "/fromtemplate.{xml|json}": {
+    "/{templateid}.{xml|json}": {
+      "DELETE": {}
+    },
+    "/AddAdministratorResponse>": {
+      "PUT": {}
+    },
+    "/integrate": {
       "POST": {}
     },
-    "/unconfirmed.{xml|json}": {
+    "/Templates>": {
+      "PUT": {}
+    },
+    "/ListsAndSegments>": {
       "GET": {}
-    },
-    "/bounces.{xml|json}": {
-      "GET": {},
-      "get": {}
-    },
-    "/credits.{xml|json}": {
-      "POST": {}
     },
     "/stats.{xml|json}": {
-      "GET": {},
-      "delete": {}
+      "DELETE": {}
     },
-    "/listsandsegments.{xml|json}": {
-      "GET": {}
+    "/PagedResult>": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {},
+      "PUT": {}
     },
     "/options.{xml|json}": {
       "GET": {}
     },
-    "/import.{xml|json}": {
-      "POST": {}
-    },
-    "/scheduled.{xml|": {
+    "/transactional endpoints support only JSON and are subject to rate limiting .": {
       "GET": {}
+    },
+    "/Person>": {
+      "DELETE": {}
     },
     "/RuleGroups>": {
       "GET": {}
     },
-    "/externalsession.{xml|json}": {
-      "get": {},
-      "PUT": {}
+    "/Administrator>": {
+      "DELETE": {}
     },
     "/{:smartEmailID}": {
       "GET": {}
     },
-    "/send.{xml|json}": {
-      "POST": {},
-      "get": {}
-    },
-    "/statistics": {
-      "GET": {}
-    },
     "/rules.{xml|json}": {
-      "POST": {}
+      "DELETE": {}
     },
-    "/{clientid}.{xml|json}": {
-      "Delete": {},
-      "Post": {},
-      "GET": {},
-      "Get": {},
-      "delete": {}
-    },
-    "/spam.{xml|json}": {
+    "/or segments you’d like it to be eventually sent to. You can find the template ID you want to use by get": {
       "GET": {}
+    },
+    "/EmailClients>": {
+      "GET": {}
+    },
+    "/TimeZones>": {
+      "GET": {}
+    },
+    "/or segments contain no subscribers": {
+      "POST": {}
     },
     "/clients": {
       "POST": {},
-      "GET": {},
-      "get": {}
-    },
-    "/lists.{xml|json}": {
       "GET": {}
     },
-    "/systemdate.{xml|json}": {
+    "/UpdatePersonResponse>": {
       "GET": {}
+    },
+    "/Summary>": {
+      "GET": {}
+    },
+    "/1.1 200 OK X-Total-Count: 321 [ { \"MessageID\": \"ddc697c7-0788-4df3-a71a-a7cb935f00bd\", \"Status\": \"Delivered\", \"SentAt\": \"2014-01-15T16:09:19-05:00\", \"Recipient\": \"Joe Smith <joesmith@example.com>\", \"From\": \"Team <team@company.com>\", \"Subject\": \"Your password has been reset\", \"TotalOpens\": 2, \"TotalClicks\": 4, \"CanBeResent\": true }, { \"MessageID\": \"ddc697c7-0788-4df3-a71a-a7cb935f00bd\", \"Status\": \"Delivered\", \"SentAt\": \"2014-01-15T16:09:19-05:00\", \"Recipient\": \"Joe Smith <joesmith@example.com>\", \"From\": \"Team <team@company.com>\", \"Subject\": \"Your password has been reset\", \"TotalOpens\": 2, \"TotalClicks\": 4, \"CanBeResent\": true, \"Group\": \"Password Reset\", }, { \"MessageID\": \"ddc697c7-0788-4df3-a71a-a7cb935f00bd\", \"Status\": \"Delivered\", \"SentAt\": \"2014-01-15T16:09:19-05:00\", \"Recipient\": \"Joe Smith <joesmith@example.com>\", \"From\": \"Team <team@company.com>\", \"Subject\": \"Your password has been reset\", \"TotalOpens\": 2, \"TotalClicks\": 4, \"CanBeResent\": true, \"SmartEmailID\": \"123123123123\" }, ... ]": {
+      "GET": {}
+    },
+    "/1.1 202 Accepted [ { \"Status\": \"Accepted\", \"Recipient\": \"Joe Smith <joesmith@example.com>\", \"MessageID\": \"549f114b-aa76-11e4-8b24-2fa9fbbe36ff\" }, ... ]": {
+      "GET": {}
+    },
+    "/example.org\" } ], \"Date\": \"2010-12-14 11:32:00\", \"EmailAddress\": \"test@example.org\", \"Name\": \"Test Subscriber\", \"Type\": \"Deactivate\", \"State\": \"Unsubscribed\" } ], \"ListID\": \"96c0bbdaa54760c8d9e62a2b7ffa2e13\" } POST": {
+      "POST": {}
     },
     "/summary.{xml|json}": {
       "GET": {}
     },
-    "/drafts.{xml|json}": {
-      "GET": {}
-    },
-    "/active.{xml|json}": {
-      "GET": {}
-    },
-    "/setbasics.{xml|json}": {
-      "PUT": {}
+    "/index.html\", \"Geolocation\": { \"Latitude\": -33.8683, \"Longitude\": 151.2086, \"City\": \"Sydney\", \"Region\": \"New South Wales\", \"CountryCode\": \"AU\", \"CountryName\": \"Australia\" } }, ... ] }": {
+      "POST": {}
     },
     "/Result>": {
+      "DELETE": {},
+      "POST": {},
       "GET": {},
-      "delete": {}
+      "PUT": {}
+    },
+    "/SubscriberHistory>": {
+      "POST": {}
+    },
+    "/{customfieldkey}.{xml|json}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/1.1 202 Accepted [ { \"Status\": \"Accepted\", \"MessageID\": \"ddc697c7-0788-4df3-a71a-a7cb935f00bd\", \"Recipient\": \"Joe Smith <joesmith@example.com>\" }, ... ]": {
+      "POST": {}
+    },
+    "/ListWebhooks>": {
+      "POST": {}
+    },
+    "/Payload>": {
+      "POST": {},
+      "GET": {}
+    },
+    "/TransferCreditsResult>": {
+      "DELETE": {}
+    },
+    "/time they marked the campaign as spam. You have complete control over how results should be returned including page size, sort order and sort direction.": {
+      "GET": {}
+    },
+    "/messages": {
+      "GET": {}
+    },
+    "/Client>": {
+      "POST": {},
+      "GET": {}
+    },
+    "/admins.{xml|json}": {
+      "DELETE": {}
+    },
+    "/people.{xml|json}": {
+      "DELETE": {}
+    },
+    "/People>": {
+      "GET": {}
+    },
+    "/activate.{xml|json}": {
+      "PUT": {}
+    },
+    "/Template>": {
+      "POST": {}
+    },
+    "/> tag. You'll need one of these tags so you can add content to any repeating items.": {
+      "DELETE": {},
+      "PUT": {}
+    },
+    "/taxonomy-apiresources.php on line 137": {
+      "GET": {}
+    },
+    "/taxonomy-apiresources.php on line 136": {
+      "GET": {}
+    },
+    "/integrate#access_token=abc123&expires_in=1209600 Errors during OAuth exchange": {
+      "POST": {}
+    },
+    "/CustomFields>": {
+      "GET": {}
+    },
+    "/xml; charset=utf-8”.": {
+      "GET": {}
+    },
+    "/time and IP address from which they clicked the link. When possible, the latitude, longitude, city, region, country code, and country name as geocoded from the IP address, are also returned. You have complete control over how results should be returned including page size, sort order and sort direction.": {
+      "GET": {}
+    },
+    "/example.org\" } ], \"Date\": \"2010-12-14 11:32:00\", \"EmailAddress\": \"test@example.org\", \"Name\": \"Test Subscriber\", \"SignupIPAddress\": \"53.78.123.243\", \"Type\": \"Subscribe\" } ], \"ListID\": \"96c0bbdaa54760c8d9e62a2b7ffa2e13\" } POST": {
+      "POST": {}
+    },
+    "/sendpreview.{xml|json}": {
+      "GET": {}
+    },
+    "/deleted.{xml|json}": {
+      "DELETE": {}
+    },
+    "/time and IP address from which they opened the campaign. When possible, the latitude, longitude, city, region, country code, and country name as geocoded from the IP address, are also returned. You have complete control over how results should be returned including page size, sort order and sort direction.": {
+      "GET": {}
+    },
+    "/type” link below your list name.": {
+      "POST": {}
+    },
+    "/1.1 202 Accepted { \"Status\": \"Accepted\", \"Recipient\": \"Joe Smith <joesmith@example.com>\", \"MessageID\": \"cfb5e081-ef66-4bc4-a1c0-48493b34e694\" }": {
+      "GET": {}
+    },
+    "/Countries>": {
+      "GET": {}
+    },
+    "/bounces.{xml|json}": {
+      "GET": {}
+    },
+    "/listsandsegments.{xml|json}": {
+      "GET": {}
+    },
+    "/AddPersonResponse>": {
+      "PUT": {}
+    },
+    "/time and IP address they unsubscribed from. You have complete control over how results should be returned including page size, sort order and sort direction.": {
+      "GET": {}
+    },
+    "/externalsession.{xml|json}": {
+      "GET": {}
+    },
+    "/Segments>": {
+      "GET": {}
+    },
+    "/send.{xml|json}": {
+      "GET": {}
+    },
+    "/example.org\" } ], \"Date\": \"2010-12-14 11:32:00\", \"OldEmailAddress\": \"test@example.org\", \"EmailAddress\": \"test@example.org\", \"Name\": \"Test Subscriber Renamed\", \"Type\": \"Update\", \"State\": \"Active\" } ], \"ListID\": \"96c0bbdaa54760c8d9e62a2b7ffa2e13\" } POST": {
+      "POST": {}
+    },
+    "/statistics": {
+      "GET": {}
+    },
+    "/{clientid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/Drafts>": {
+      "GET": {}
+    },
+    "/json in your header, or append all requests with ": {
+      "GET": {}
+    },
+    "/Segment>": {
+      "GET": {}
+    },
+    "/unsubscribe> tag. You'll need to add this before the unsubscribe link will work.": {
+      "POST": {}
+    },
+    "/ScheduledCampaigns>": {
+      "GET": {}
+    },
+    "/json; charset=utf-8”.": {
+      "GET": {}
     },
     "/deactivate.{xml|json}": {
       "PUT": {}
     },
-    "/countries.{xml|json}": {
-      "GET": {}
-    },
     "/{webhookid}.{xml|json}": {
       "DELETE": {}
     },
-    "/primarycontact.{xml": {
+    "/or segments you’d like it to be eventually sent to. We’ll automatically move all CSS inline for the HTML component.": {
       "GET": {}
     },
-    "/{customfieldkey}.{xml|json}": {
-      "Delete": {},
-      "get": {},
-      "PUT": {}
+    "/BCC. You must have permission from your recipients before adding them to a subscriber list to send them marketing email.": {
+      "GET": {}
     },
-    "/taxonomy-apiresources.php": {
-      "GET": {},
-      "get": {}
+    "/Campaigns>": {
+      "GET": {}
     },
-    "/unsuppress.{xml|json}": {
-      "PUT": {}
-    },
-    "/Payload>": {
-      "POST": {},
-      "GET": {},
-      "Get": {}
+    "/inactive state, and any custom field data.": {
+      "DELETE": {}
     },
     "/emailclientusage.{xml|json}": {
       "GET": {}
     },
-    "/{listid}.{xml|json}": {
-      "Delete": {},
-      "GET": {},
-      "Get": {},
-      "delete": {},
-      "Put": {}
-    },
-    "/unsubscribed.{xml|json}": {
+    "/1.1 429 Forbidden Date: Tue, 20 Jan 2014 14:50:41 GMT Status: 429 Forbidden X-RateLimit-Limit: 60 X-RateLimit-Remaining: 0 X-RateLimit-Reset: 348 { \"Code\": 429, \"Message\": \"Rate limit exceeded\" }": {
       "GET": {}
     },
-    "/options.{xml|json": {
-      "PUT": {}
+    "/{listid}.{xml|json}": {
+      "DELETE": {}
     },
-    "/billingdetails.{xml|json}": {
+    "/UpdateAdministratorResponse>": {
       "GET": {}
     },
     "/{segmentid}.{xml|json}": {
-      "Delete": {},
-      "Get": {},
-      "delete": {},
-      "PUT": {}
+      "DELETE": {}
     },
     "/recipients.{xml|json}": {
-      "GET": {},
-      "get": {}
-    },
-    "/messages": {
       "GET": {}
     }
   },

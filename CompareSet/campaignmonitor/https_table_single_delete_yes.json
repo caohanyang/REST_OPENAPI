@@ -1,38 +1,267 @@
 {
-  "basePath": "/api/v3.1",
   "paths": {
-    "https://api.createsend.com/oauth/token": {
+    "/api/v3.1/transactional/classicEmail/groups": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/activate.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/lists/{listid}/deleted.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/clients/{clientid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/opens.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}.{xml|json}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/api/v3.1/subscribers/{listid}/history.{xml|json}": {
       "POST": {}
+    },
+    "/api/v3.1/lists/{clientid}.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/unsubscribes.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/setbasics.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/test.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/segments/{listid}.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/clients/{clientid}/people.{xml|json}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/clients/{clientid}/scheduled.{xml|json}": {
+      "GET": {}
+    },
+    "https://sender.example.com/integrate": {
+      "POST": {}
+    },
+    "https://sender.example.com/integrate#access_token=abc123&expires_in=1209600 Errors during OAuth exchange": {
+      "POST": {}
+    },
+    "/api/v3.1/admins.{xml|json}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/unschedule.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/bounces.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/customfields/{customfieldkey}.{xml|json}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/api/v3.1/segments/{segmentid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/summary.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/billingdetails.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/systemdate.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/sendpreview.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/segments/{segmentid}/active.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/clients/{clientid}/suppress.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/transactional/smartEmail/{:smartEmailID}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients": {
+      "POST": {},
+      "GET": {}
+    },
+    "/api/v3.1/templates/{templateid}.{xml|json}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/api/v3.1/clients/{clientid}/primarycontact.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/smartEmail": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/spam.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients.xml": {
+      "POST": {},
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/setmonthlybilling.{xml|json}": {
+      "POST": {}
+    },
+    "/oauth": {
+      "POST": {}
+    },
+    "/api/v3.1/lists/{listid}/webhooks/{webhookid}.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/recipients.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/unconfirmed.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/messages/{:messageID}": {
+      "GET": {}
+    },
+    "/api/v3.1/subscribers/{listid}/unsubscribe.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/lists/{listid}/segments.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/messages": {
+      "GET": {}
+    },
+    "/api/v3.1/templates/{clientid}.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/campaigns/{clientid}/fromtemplate.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/subscribers/{listid}/import.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/countries.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/suppressionlist.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/primarycontact.{xml|json}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/externalsession.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/clicks.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/segments/{segmentid}/rules.{xml|json}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/campaigns.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/drafts.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/bounced.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/clients/{clientid}/listsforemail.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/customfields.{xml|json}": {
+      "GET": {}
+    },
+    "/oauth/token": {
+      "POST": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/listsandsegments.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/subscribers/{listid}.{xml|json}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/api/v3.1/lists/{listid}/customfields/{customfieldkey}/options.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/webhooks.{xml|json}": {
+      "POST": {},
+      "GET": {}
     },
     "https://external1.createsend.com/cd/create/ABCDEF12/DEADBEEF": {
       "GET": {}
     },
-    "https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\",": {
+    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/deactivate.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/emailclientusage.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/unsuppress.{xml|json}": {
       "GET": {}
     },
     "https://mywebapp.com/newpwd": {
-      "GET": {}
-    },
-    "/clients": {
       "POST": {},
-      "GET": {},
-      "get": {},
-      "Get": {},
-      "put": {}
-    },
-    "/clients.xml": {
       "GET": {}
     },
-    "/": {
-      "Delete": {},
-      "post": {},
-      "Post": {},
-      "GET": {},
-      "Get": {},
-      "get": {},
-      "delete": {},
-      "Put": {},
+    "/api/v3.1/transactional/messages/{:messageID}/resend": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/credits.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/clients/{clientid}/templates.{xml|json}": {
       "PUT": {}
+    },
+    "/api/v3.1/clients/{clientid}/setpaygbilling.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/clients/{clientid}/lists.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/stats.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/transactional/statistics": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/segments.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/send.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/timezones.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{clientid}.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/active.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/unsubscribed.{xml|json}": {
+      "GET": {}
     }
   },
   "produces": "application/json",

@@ -58,6 +58,10 @@ public class ProcessBaseUrl {
 		if (!urlList.isEmpty()) {
 			// 2. find the common url
 			String commonUrl = combineUrl(urlList);
+			// https://api.createsend.com/api/v3.1/ => https://api.createsend.com/api/v3.1
+			if (commonUrl.endsWith("/")) {
+				commonUrl = commonUrl.substring(0, commonUrl.length() -1 );
+			}
 			// 3. adjust specification
 			openAPI = adjustSpec(openAPI, mode, commonUrl);
 		}

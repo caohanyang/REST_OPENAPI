@@ -1,49 +1,292 @@
 {
   "paths": {
-    "http://example.org": {
+    "/api/v3.1/transactional/classicEmail/groups": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/activate.{xml|json}": {
+      "PUT": {}
+    },
+    "http://example.com/\"}],\"Multilines\":[{\"Content\":\"<p>Thisisexample</p><p>multiline <a href=\"http": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/deleted.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/clients/{clientid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/opens.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/subscribers/{listid}/history.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{clientid}.{xml|json}": {
       "POST": {}
     },
-    "/api/v3.1": {
-      "Delete": {},
-      "Post": {},
+    "/api/v3.1/campaigns/{campaignid}/unsubscribes.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/setbasics.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/test.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/segments/{listid}.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/clients/{clientid}/people.{xml|json}": {
+      "DELETE": {},
+      "POST": {},
       "GET": {},
-      "Get": {},
-      "get": {},
-      "delete": {},
-      "Put": {}
+      "PUT": {}
+    },
+    "/api/v3.1/clients/{clientid}/scheduled.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/admins.{xml|json}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/unschedule.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/bounces.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/customfields/{customfieldkey}.{xml|json}": {
+      "DELETE": {},
+      "PUT": {}
+    },
+    "/api/v3.1/segments/{segmentid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/summary.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/billingdetails.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/systemdate.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/sendpreview.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/segments/{segmentid}/active.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/classicEmail/send": {
+      "POST": {}
+    },
+    "/api/v3.1/clients/{clientid}/suppress.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/transactional/smartEmail/{:smartEmailID}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients": {
+      "POST": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/templates/{templateid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "http://siteaddress.createsend.com/path/text/preview\",\"HtmlPreviewUrl\":\"http://siteaddress.createsend.c": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/primarycontact.{xml|json}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "http://example.com/campaigncontent/index.html\", \"ListIDs\": [ \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\", \"a1a1a1": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/smartEmail": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/spam.{xml|json}": {
+      "GET": {}
     },
     "/api/v3.1/clients.xml": {
       "POST": {},
       "GET": {}
     },
-    "http://example.com": {
-      "PUT": {},
-      "put": {}
-    },
-    "/api/v3.1/clients": {
-      "POST": {},
-      "GET": {},
-      "get": {},
-      "put": {}
-    },
-    "http://example.com/campaigncontent/index.html\",": {
-      "GET": {}
+    "/api/v3.1/clients/{clientid}/setmonthlybilling.{xml|json}": {
+      "PUT": {}
     },
     "/oauth": {
       "POST": {},
       "GET": {}
     },
-    "http://siteaddress.createsend.com/path/text/preview\",": {
+    "/api/v3.1/lists/{listid}/webhooks/{webhookid}.{xml|json}": {
+      "DELETE": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/recipients.{xml|json}": {
       "GET": {}
     },
-    "http://example.com/": {
+    "/api/v3.1/lists/{listid}/unconfirmed.{xml|json}": {
       "GET": {}
     },
-    "https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://ww": {
+    "/api/v3.1/transactional/messages/{:messageID}": {
+      "GET": {}
+    },
+    "/api/v3.1/subscribers/{listid}/unsubscribe.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/lists/{listid}/segments.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/messages": {
+      "GET": {}
+    },
+    "/api/v3.1/templates/{clientid}.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/campaigns/{clientid}/fromtemplate.{xml|json}": {
+      "POST": {}
+    },
+    "http://example.com\" }, { \"Key\": \"interests\", \"Value\": \"magic\" }, { \"Key\": \"interests\", \"Value\": \"romanti": {
+      "PUT": {}
+    },
+    "/api/v3.1/subscribers/{listid}/import.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/countries.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/suppressionlist.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/primarycontact.{xml|json}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/externalsession.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/clicks.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/segments/{segmentid}/rules.{xml|json}": {
+      "DELETE": {},
+      "POST": {}
+    },
+    "/api/v3.1/clients/{clientid}/campaigns.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/drafts.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/bounced.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/smartEmail/{:smartEmailID}/send": {
+      "POST": {}
+    },
+    "/api/v3.1/clients/{clientid}/listsforemail.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/customfields.{xml|json}": {
+      "POST": {},
       "GET": {}
     },
     "/oauth/token": {
       "POST": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/listsandsegments.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/subscribers/{listid}.{xml|json}": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/api/v3.1/lists/{listid}/customfields/{customfieldkey}/options.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/lists/{listid}/webhooks.{xml|json}": {
+      "POST": {},
+      "GET": {}
+    },
+    "http://example.org\" } ], \"Date\": \"2010-12-14 11:32:00\", \"EmailAddress\": \"test@example.org\", \"Name\": \"Tes": {
+      "POST": {}
+    },
+    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/deactivate.{xml|json}": {
+      "PUT": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/emailclientusage.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/unsuppress.{xml|json}": {
+      "PUT": {}
+    },
+    "https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://ww": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/messages/{:messageID}/resend": {
+      "POST": {}
+    },
+    "/api/v3.1/clients/{clientid}/credits.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/clients/{clientid}/templates.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/setpaygbilling.{xml|json}": {
+      "PUT": {}
+    },
+    "http://example.com\" }, { \"Key\": \"interests\", \"Value\": \"magic\" }, { \"Key\": \"interests\", \"Value\": \"dungeon": {
+      "PUT": {}
+    },
+    "/api/v3.1/clients/{clientid}/lists.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/stats.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/transactional/statistics": {
+      "GET": {}
+    },
+    "/api/v3.1/clients/{clientid}/segments.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/clients.{xml|json}": {
+      "POST": {},
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{campaignid}/send.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/timezones.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/campaigns/{clientid}.{xml|json}": {
+      "POST": {}
+    },
+    "/api/v3.1/lists/{listid}/active.{xml|json}": {
+      "GET": {}
+    },
+    "/api/v3.1/lists/{listid}/unsubscribed.{xml|json}": {
+      "GET": {}
     }
   },
   "produces": "application/json",

@@ -50,7 +50,7 @@ public class ProcessMethod {
 		url = cleanUrl(url);
 		url = cleanUrl(url);
 		
-		if (url.contains(".jpg")|url.contains(".gif")|url.contains(".png")|url.contains(".txt")) {
+		if (url.contains(".jpg")|url.contains(".gif")|url.contains(".png")|url.contains(".txt")|url.contains(".pdf")) {
 			return false;
 		}
 		
@@ -112,8 +112,12 @@ public class ProcessMethod {
 			urlString = urlString.split("\\?")[0].trim();
 		}
 		// user/user-id authentication => user/user-id
-		if (urlString.contains(" ")) {
-			urlString = urlString.split(" ")[0].trim();
+//		if (urlString.contains(" ")) {
+//			urlString = urlString.split(" ")[0].trim();
+//		}
+		// user/user-id \n => user/user-id
+		if (urlString.contains("\n")) {
+			urlString = urlString.split("\n")[0].trim();
 		}
 		// user/user-id/ => user/user-id
 		if (urlString.endsWith("/")) {
@@ -220,5 +224,19 @@ public class ProcessMethod {
 		}
 		
 		
+	}
+
+	public String compressUrl(String urlString) {
+		// Compress URL
+		// https://api.createsend.com/api/v3.1 /externalsession.{xml|json} => https://api.createsend.com/api/v3.1/externalsession.{xml|json}
+		int index = urlString.lastIndexOf("/");
+		String frontPart = null;
+		if (index > 0) {
+			frontPart = urlString.substring(0, index);
+			frontPart = frontPart.replaceAll("\\s+", "").trim();
+			return frontPart + urlString.substring(index);
+		}
+		
+		return urlString;
 	}
 }

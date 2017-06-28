@@ -324,6 +324,7 @@ public class ExtractInformation {
 					urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
 					// handle url, make it short and clean
 					urlString = processMe.cleanUrl(urlString);
+					urlString = processMe.compressUrl(urlString);
 
 					// Out.prln("==========real ADDRESS============");
 					// Out.prln(strAll.substring(uLocation, uLocation + 100));
@@ -352,6 +353,7 @@ public class ExtractInformation {
 //					urlString = new StringBuilder(endpointMatcher.group()).reverse().toString();
 					
 					urlString = processMe.cleanUrl(urlString);
+					urlString = processMe.compressUrl(urlString);
 
 					// Out.prln("==========real ADDRESS============");
 					// Out.prln(strAll.substring(uLocation, uLocation + 100));
