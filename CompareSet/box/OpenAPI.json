@@ -1,0 +1,436 @@
+{
+  "paths": {
+    "com/2.0/files/file_id/tasks": {
+      "GET": {}
+    },
+    "https://www.box.com\" , \"created_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"l": {
+      "POST": {},
+      "PUT": {}
+    },
+    "com/2.0/files/file_id/copy": {
+      "POST": {}
+    },
+    "com/2.0/file_version_retentions": {
+      "GET": {}
+    },
+    "com/2.0/users/user_id/memberships": {
+      "GET": {}
+    },
+    "https://upload.box.com/api/2.0/files/upload_sessions": {
+      "POST": {}
+    },
+    "com/2.0/folders/folder_id/metadata": {
+      "GET": {}
+    },
+    "com/2.0/webhooks/ webhook_id": {
+      "GET": {}
+    },
+    "com/2.0/task_assignments/ task_assignment_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/folders/0": {
+      "GET": {}
+    },
+    "com/2.0/legal_hold_policies_assignments": {
+      "GET": {}
+    },
+    "com/2.0/folders/FOLDER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"name\":\"New Folder Name!\"}": {
+      "GET": {}
+    },
+    "https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/commit \\ -H 'author": {
+      "POST": {}
+    },
+    "com/2.0/task_assignments": {
+      "POST": {}
+    },
+    "com/2.0/folders": {
+      "POST": {}
+    },
+    "com/2.0/invites": {
+      "POST": {}
+    },
+    "https://upload.box.com/api/2.0/files/upload_sessions/sessionId/commit": {
+      "POST": {}
+    },
+    "com/2.0/users \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Ned Stark\", \"is_platform_acce": {
+      "DEL": {}
+    },
+    "com/2.0/metadata_templates/scope/template/schema": {
+      "GET": {},
+      "PUT": {}
+    },
+    "com/2.0/webhooks": {
+      "GET": {},
+      "PUT": {}
+    },
+    "https://upload.box.com/api/2.0/files/upload_sessions/sessionId/parts": {
+      "GET": {}
+    },
+    "com/2.0/collaborations": {
+      "POST": {},
+      "GET": {}
+    },
+    "com/2.0/events": {
+      "GET": {}
+    },
+    "com/2.0/groups/group_id/collaborations": {
+      "GET": {}
+    },
+    "net/2.0/legal_hold_policy_assignments -H \"Authorization: Bearer \" \\ -d '{ \"policy_id\" : ": {
+      "GET": {}
+    },
+    "com/2.0/file_version_legal_holds/ id": {
+      "GET": {}
+    },
+    "com/2.0/files/file_id/metadata/scope/ template": {
+      "POST": {},
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/device_pinners/ device_pin_id": {
+      "GET": {}
+    },
+    "com/2.0/folders/folder_id/watermark": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/users/user_id/email_aliases/ email_alias_id": {
+      "DEL": {}
+    },
+    "com/2.0/users/user_id": {
+      "PUT": {}
+    },
+    "com/2.0/collections": {
+      "GET": {}
+    },
+    "com/2.0/folders/folder_id/items": {
+      "GET": {}
+    },
+    "com/2.0/recent_items": {
+      "GET": {}
+    },
+    "https://upload.box.com/api/2.0/files/upload_sessions/ sessionId": {
+      "GET": {},
+      "PUT": {}
+    },
+    "com/2.0/users/me": {
+      "GET": {}
+    },
+    "com/2.0/groups/group_id/memberships": {
+      "GET": {}
+    },
+    "com/2.0/files/5010739061/metadata/enterprise/marketingCollateral \\ -H \"Authorization: Bea": {
+      "PATCH": {}
+    },
+    "https://www.box.com/api/avatar/large/181216415\" , \"is_exempt_from_device_limits\" : false , \"is_exempt_fro": {
+      "PUT": {}
+    },
+    "com/2.0/files/file_id/watermark": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/users/user_id/email_aliases": {
+      "POST": {},
+      "GET": {}
+    },
+    "com/2.0/events \\ -H \"Authorization: Bearer ": {
+      "GET": {}
+    },
+    "com/2.0/webhooks\\-H\"Authorization:Bearer\"\\-H\"Content-Type:application/json\" -X P": {
+      "GET": {}
+    },
+    "https://www.box.com/s/vspke7y05sb214wjokpk\" , \"download_url\" : null , \"vanity_url\" : null , \"is_password_": {
+      "POST": {},
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/legal_hold_policies/ policy_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/oauth2/token \\ -d 'grant_type=authorization_code' \\ -d 'code=<MY_AUTH_CODE>' \\ -d 'cl": {
+      "GET": {}
+    },
+    "com/2.0/retention_policy_assignments": {
+      "POST": {}
+    },
+    "com/2.0/folders/trash/items": {
+      "GET": {}
+    },
+    "com/2.0/tasks": {
+      "POST": {}
+    },
+    "https://upload.box.com/api/2.0/files/content , handles uploads. This API uses the multipart post method t": {
+      "POST": {}
+    },
+    "com/2.0/collections/collection_id/items": {
+      "GET": {}
+    },
+    "com/oauth2/revoke \\ -d 'client_id=MY_CLIENT_ID' \\ -d 'client_secret=MY_CLIENT_SECRET' \\ -": {
+      "PUT": {}
+    },
+    "com/2.0/files/file_id/versions/ id": {
+      "DEL": {}
+    },
+    "com/2.0/folders/folder_id/copy": {
+      "POST": {}
+    },
+    "com/2.0/web_links/ web_link_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "com/2.0/files/file_id/comments": {
+      "GET": {}
+    },
+    "com/2.0/files/file_id/versions/file_version_id": {
+      "GET": {}
+    },
+    "com/2.0/retention_policies/policy_id/assignments": {
+      "GET": {}
+    },
+    "com/2.0/files/FILE_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -d '{\"lock\": null}' \\ -": {
+      "PUT": {}
+    },
+    "com/2.0/groups": {
+      "POST": {},
+      "GET": {}
+    },
+    "com/2.0/groups/ group_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/file_version_retentions/ file_version_retention_id": {
+      "GET": {}
+    },
+    "com/2.0/events \\ -H \"Authorization: Bearer \" \\ -X OPTIONS": {
+      "GET": {}
+    },
+    "com/2.0/users/USER_ID -H \"Authorization: Bearer ": {
+      "GET": {}
+    },
+    "https://www.box.com/s/rh935iit6ewrmw0unyul\",\"download_url\":\"https://www.box.com/shared/static/rh935ii": {
+      "POST": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "https://upload.box.com/api/2.0/files/upload_sessions \\ -H 'authorization: Bearer fEw9FPUVT3SJGaSBu4Q07VFy": {
+      "POST": {}
+    },
+    "com/2.0/endpoint/id/trash": {
+      "GET": {}
+    },
+    "com/2.0/collaborations/COLLAB_ID \\ -H \"Authorization: Bearer ": {
+      "GET": {}
+    },
+    "com/2.0/files/file_id/versions/current": {
+      "POST": {}
+    },
+    "https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/parts \\ -H 'authori": {
+      "GET": {}
+    },
+    "com/2.0/files/ file_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "https://blosserdemoaccount.box.com/s/7mcmdlavtye5o5i0ue8xmtwh2sx5bv8p\",\"download_url\":\"https://blosse": {
+      "PUT": {}
+    },
+    "com/2.0/search": {
+      "GET": {}
+    },
+    "https://notification.example.net\" , \"triggers\" : [ \"FILE.PREVIEWED\" , \"FILE.DOWNLOADED\" ] }": {
+      "GET": {}
+    },
+    "https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD \\ -H 'authorization": {
+      "GET": {},
+      "PUT": {}
+    },
+    "com/2.0/users/ user_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "https://upload.box.com/api/2.0/files/file_id/content": {
+      "POST": {}
+    },
+    "com/2.0/collaborations/ collab_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/legal_hold_policy_assignments/ assignment_id": {
+      "GET": {},
+      "DEL": {}
+    },
+    "com/2.0/comments/ comment_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/metadata_templates/schema": {
+      "POST": {}
+    },
+    "com/2.0/enterprises/enterprise_id/device_pinners": {
+      "GET": {}
+    },
+    "com/2.0/files/file_id/collaborations": {
+      "GET": {}
+    },
+    "https://seanrose.box.com/s/ebgti08mtmhbpb4vlp55\",\"download_url\":\"https://seanrose.box.com/shared/stat": {
+      "POST": {}
+    },
+    "com/2.0/users/user_id/folders/ folder_id": {
+      "PUT": {}
+    },
+    "com/2.0/group_memberships/ group_membership_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/files/file_id/versions": {
+      "GET": {}
+    },
+    "com/2.0/folders/folder_id/collaborations": {
+      "GET": {}
+    },
+    "https://www.box.com/api/avatar/large/187273718\" }": {
+      "POST": {}
+    },
+    "com/2.0/comments": {
+      "POST": {}
+    },
+    "https://dev.name/box-notification\" , \"triggers\" : [ \"FILE.SHARED\" , \"COMMENT.UPDATED\" ]}": {
+      "GET": {}
+    },
+    "com/2.0/legal_hold_policies": {
+      "POST": {},
+      "GET": {}
+    },
+    "com/2.0/endpoint/ id": {
+      "POST": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "com/2.0/files/file_id/thumbnail. extension": {
+      "GET": {}
+    },
+    "com/2.0/retention_policies/ policy_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "com/2.0/files/file_id/content": {
+      "GET": {}
+    },
+    "com/2.0/retention_policies": {
+      "POST": {},
+      "GET": {}
+    },
+    "com/2.0/webhooks/{ID}\\-H\"Authorization:Bearer\"\\-d'{\"address\":\"https://notificat": {
+      "GET": {}
+    },
+    "https://docs.box.com/reference#marker-based-paging": {
+      "GET": {}
+    },
+    "com/2.0/files/content \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Wolves owners.ppt\", ": {
+      "GET": {}
+    },
+    "com/oauth2/revoke": {
+      "POST": {}
+    },
+    "com/2.0/users \\ -H \"Authorization: Bearer \" \\ -d '{\"login\": \"eddard@box.com\", \"name\": \"Ne": {
+      "DEL": {}
+    },
+    "https://me.example.net/actions/file_changed\", \"triggers\": [\"FILE.DOWNLOADED\", \"FILE.PREVIEWED\"] }": {
+      "GET": {}
+    },
+    "com/2.0/tasks/task_id/assignments": {
+      "GET": {}
+    },
+    "com/2.0/files/file_id/metadata": {
+      "GET": {}
+    },
+    "com/2.0/web_links": {
+      "POST": {}
+    },
+    "com/2.0/shared_items": {
+      "GET": {}
+    },
+    "com/2.0/metadata_templates/ scope": {
+      "GET": {}
+    },
+    "com/oauth2/token' , { method : 'POST' , body : `grant_type=${ grantType }&code=${ code }&": {
+      "POST": {}
+    },
+    "https://app.box.com/preview/expiring_embed/[HASH]": {
+      "GET": {}
+    },
+    "com/2.0/file_version_legal_holds": {
+      "GET": {}
+    },
+    "com/2.0/files/FILE_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"lock\": { \"type\": \"lock\",\"expi": {
+      "PUT": {}
+    },
+    "com/2.0/group_memberships": {
+      "POST": {}
+    },
+    "com/2.0/folders/FOLDER_ID/items": {
+      "GET": {}
+    },
+    "com/2.0/tasks/ task_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "com/2.0/legal_hold_policies \\ -H \"Authorization: Bearer \" \\ -d '{ \"policy_name\" : \"Policy": {
+      "GET": {}
+    },
+    "com/2.0/files/FILE_ID": {
+      "GET": {},
+      "PUT": {}
+    },
+    "https://dev.name/actions/file_changed\" , \"triggers\" : [ \"FILE.DOWNLOADED\" , \"FILE.UPLOADED\" ] }": {
+      "GET": {}
+    },
+    "com/2.0/retention_policy_assignments/ retention_policy_assignment_id": {
+      "GET": {}
+    },
+    "https://upload.box.com/api/2.0/files/content": {
+      "POST": {}
+    },
+    "com/2.0/users": {
+      "POST": {},
+      "GET": {}
+    },
+    "com/2.0/legal_hold_policy_assignments": {
+      "POST": {},
+      "GET": {}
+    },
+    "com/2.0/folders/ folder_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "com/2.0/invites \\ -H \"Authorization: Bearer \" \\ -d '{ \"enterprise\" : { \"id\" : \"42500\" } ,": {
+      "GET": {}
+    },
+    "com/2.0/folders/folder_id/metadata/scope/ template": {
+      "POST": {},
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.box.",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -82,6 +82,7 @@ public class ProcessBaseUrl {
 			// for a string , find the most frequence match common string
 			Map<String, Integer> tmpFrequency = new HashMap<String, Integer>();
 			String tmpUrl = urlList.get(i);
+			
 			for (int j = 0; j < urlList.size(); j++) {
 				String compareUrl = urlList.get(j);
 				if (tmpUrl.equals(compareUrl))
@@ -110,25 +111,17 @@ public class ProcessBaseUrl {
 				}
 			}
 
-			// put them in the whole map
-			if (maxCommon != null && maxCommon.length() > basePath.length()) {
+			// make sure the common url is valid
+			if (isValidCommon(maxCommon)) {
 				allFrequency.put(maxCommon, maxNum);
 			}
 		}
 
+		
 		// Step 2 most length
 
 		int num = 0;
 		Out.prln(allFrequency);
-		for (Iterator<Map.Entry<String, Integer>> it = allFrequency.entrySet().iterator(); it.hasNext();) {
-			// make sure the key is url
-			// remove the non validate one, too small
-			Map.Entry<String, Integer> entry = it.next();
-			if (entry.getKey().length() < "https://www.a".length()) {
-				it.remove();
-			}
-
-		}
 
 		ProcessMethod processMe = new ProcessMethod();
 		Map<String, Integer> sortedMap = processMe.sortByValues(allFrequency);
@@ -179,6 +172,14 @@ public class ProcessBaseUrl {
 		Out.prln(basePath);
 		return basePath;
 
+	}
+
+	private boolean isValidCommon(String maxCommon) {
+		// make sure the common url is valid
+		if (maxCommon != null && maxCommon.length() > "https://www.a".length() && !maxCommon.endsWith(".")) {
+			return true;
+		}
+		return false;
 	}
 
 	public String greatestCommonPrefix(String a, String b) {
