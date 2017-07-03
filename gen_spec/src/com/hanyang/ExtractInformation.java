@@ -48,15 +48,15 @@ public class ExtractInformation {
 	private static String FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
 	// "https", "http", "null", "/"
-	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https"));
+	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https", "http", "null", "/"));
 	// "no", "yes"
-	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no"));
+	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no", "yes"));
 	// "table", "list"
-	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table"));
+	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table", "list"));
 	// "single", "multiple"
-	private static List<String> NUMBER = new ArrayList<String>(Arrays.asList("single"));
+	private static List<String> NUMBER = new ArrayList<String>(Arrays.asList("single", "multiple"));
 	// "del", "delete"
-	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del"));
+	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del", "delete"));
 
 	public static void main(String[] args) throws GateException, JSONException, IOException {
 //		System.out.close();

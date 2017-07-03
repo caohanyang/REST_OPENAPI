@@ -1,0 +1,62 @@
+{
+  "basePath": "/2.0 /files/ file_id",
+  "paths": {
+    "/folders/{id}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/files/{id}?fields=modified_at,path_collection,name": {
+      "GET": {}
+    },
+    "?method=Input/Output Format": {
+      "PUT": {}
+    },
+    "/api/2.0/webhooks?limit=3": {
+      "GET": {}
+    },
+    "/users/USER_ID": {
+      "GET": {}
+    },
+    "/files/{id}/comments": {
+      "GET": {}
+    },
+    "/folders/{id}/items": {
+      "GET": {}
+    },
+    "/folders/{id}?fields=shared_link": {
+      "GET": {}
+    },
+    "/files/{id}/collaborations": {
+      "GET": {}
+    },
+    "/files/{id}/content": {
+      "POST": {}
+    },
+    "/folders/{id}/collaborations": {
+      "GET": {}
+    },
+    "/files/content": {
+      "POST": {}
+    },
+    "/api/2.0/webhooks": {
+      "POST": {}
+    },
+    "/api/2.0/webhooks/4137": {
+      "GET": {}
+    },
+    "/files/{id}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/files/{id}?fields=shared_link": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": " api.box.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

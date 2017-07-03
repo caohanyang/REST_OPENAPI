@@ -39,8 +39,8 @@
       "GET": {}
     },
     "/2.0/legal_hold_policies/policy_id": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/retention_policy_assignments": {
@@ -60,8 +60,8 @@
       "POST": {}
     },
     "/2.0/legal_hold_policy_assignments/assignment_id": {
-      "GET": {},
-      "DEL": {}
+      "DELETE": {},
+      "GET": {}
     },
     "/2.0/folders/folder_id/metadata": {
       "GET": {}
@@ -74,8 +74,8 @@
       "POST": {}
     },
     "/2.0/group_memberships/group_membership_id": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/legal_hold_policy_assignments": {
@@ -83,20 +83,25 @@
       "GET": {}
     },
     "/2.0/groups/group_id": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/file_version_retentions": {
+      "DELETE": {},
       "GET": {}
     },
     "/2.0/folders/folder_id/copy": {
       "POST": {}
     },
+    "/2.0/legal_hold_policies/166921 \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
+      "DELETE": {}
+    },
     "https://upload.box.com/api/2.0/files/upload_sessions/sessionId/commit": {
       "POST": {}
     },
     "/2.0/webhooks/webhook_id": {
+      "DELETE": {},
       "GET": {}
     },
     "/2.0/group_memberships": {
@@ -109,6 +114,7 @@
       "GET": {}
     },
     "/2.0/web_links/web_link_id": {
+      "DELETE": {},
       "GET": {},
       "PUT": {}
     },
@@ -137,9 +143,12 @@
       "GET": {}
     },
     "/2.0/collaborations/collab_id": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
+    },
+    "/2.0/folders/998951261/metadata/enterprise/documentFlow \\ -H \"Authorization: Bearer ": {
+      "DELETE": {}
     },
     "/2.0/files/FILE_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -d '{\"lock\": null}' \\ -": {
       "PUT": {}
@@ -154,13 +163,13 @@
       "GET": {}
     },
     "/2.0/comments/comment_id": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/folders/folder_id/watermark": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/endpoint/id": {
@@ -169,6 +178,7 @@
       "PUT": {}
     },
     "/2.0/endpoint/id/trash": {
+      "DELETE": {},
       "GET": {}
     },
     "/2.0/groups": {
@@ -179,29 +189,30 @@
       "GET": {}
     },
     "/2.0/files/file_id/metadata/scope/template": {
+      "DELETE": {},
       "POST": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "https://www.box.com/api/avatar/large/181216415\" , \"is_exempt_from_device_limits\" : false , \"is_exempt_fro": {
+      "DELETE": {},
       "PUT": {}
     },
     "/2.0/recent_items": {
       "GET": {}
     },
     "/2.0/users \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Ned Stark\", \"is_platform_acce": {
-      "DEL": {}
+      "DELETE": {}
     },
     "https://www.box.com/s/vspke7y05sb214wjokpk\" , \"download_url\" : null , \"vanity_url\" : null , \"is_password_": {
+      "DELETE": {},
       "POST": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/tasks/task_id": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/folders": {
@@ -213,28 +224,34 @@
     "https://upload.box.com/api/2.0/files/content , handles uploads. This API uses the multipart post method t": {
       "POST": {}
     },
+    "/2.0/webhooks/{ID} \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
+      "DELETE": {}
+    },
     "/2.0/users/user_id/email_aliases": {
       "POST": {},
       "GET": {}
     },
     "/2.0/folders/folder_id/metadata/scope/template": {
+      "DELETE": {},
       "POST": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/files/file_id/watermark": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "/2.0/retention_policies": {
       "POST": {},
       "GET": {}
     },
+    "/2.0/retention_policies \\ -H \"Authorization: Bearer \" \\ -d '{\"policy_name\": \"POLICY_NA": {
+      "DELETE": {}
+    },
     "https://www.box.com/s/rh935iit6ewrmw0unyul\",\"download_url\":\"https://www.box.com/shared/static/rh935ii": {
+      "DELETE": {},
       "POST": {},
-      "DEL": {},
       "PUT": {}
     },
     "https://upload.box.com/api/2.0/files/upload_sessions \\ -H 'authorization: Bearer fEw9FPUVT3SJGaSBu4Q07VFy": {
@@ -247,10 +264,10 @@
       "GET": {}
     },
     "/2.0/users \\ -H \"Authorization: Bearer \" \\ -d '{\"login\": \"eddard@box.com\", \"name\": \"Ne": {
-      "DEL": {}
+      "DELETE": {}
     },
     "/2.0/users/user_id/email_aliases/email_alias_id": {
-      "DEL": {}
+      "DELETE": {}
     },
     "/2.0/comments": {
       "POST": {}
@@ -277,6 +294,7 @@
       "GET": {}
     },
     "https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD \\ -H 'authorization": {
+      "DELETE": {},
       "GET": {},
       "PUT": {}
     },
@@ -284,6 +302,7 @@
       "GET": {}
     },
     "/2.0/files/5010739061/metadata/enterprise/marketingCollateral \\ -H \"Authorization: Bea": {
+      "DELETE": {},
       "PATCH": {}
     },
     "/2.0/legal_hold_policies_assignments": {
@@ -296,6 +315,7 @@
       "POST": {}
     },
     "/2.0/users/user_id": {
+      "DELETE": {},
       "GET": {},
       "PUT": {}
     },
@@ -329,6 +349,9 @@
     "https://www.box.com/api/avatar/large/187273718\" }": {
       "POST": {}
     },
+    "/2.0/retention_policies/POLICY_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"policy_name\":": {
+      "DELETE": {}
+    },
     "https://dev.name/box-notification\" , \"triggers\" : [ \"FILE.SHARED\" , \"COMMENT.UPDATED\" ]}": {
       "GET": {}
     },
@@ -352,6 +375,7 @@
       "PUT": {}
     },
     "/2.0/folders/folder_id": {
+      "DELETE": {},
       "GET": {},
       "PUT": {}
     },
@@ -359,9 +383,10 @@
       "POST": {}
     },
     "/2.0/files/file_id/versions/id": {
-      "DEL": {}
+      "DELETE": {}
     },
     "/2.0/files/file_id": {
+      "DELETE": {},
       "GET": {},
       "PUT": {}
     },
@@ -383,6 +408,9 @@
     "https://app.box.com/preview/expiring_embed/[HASH]": {
       "GET": {}
     },
+    "/2.0/metadata_templates/schema \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: appli": {
+      "DELETE": {}
+    },
     "/2.0/tasks/task_id/assignments": {
       "GET": {}
     },
@@ -390,10 +418,12 @@
       "POST": {}
     },
     "https://upload.box.com/api/2.0/files/upload_sessions/sessionId": {
+      "DELETE": {},
       "GET": {},
       "PUT": {}
     },
     "/2.0/device_pinners/device_pin_id": {
+      "DELETE": {},
       "GET": {}
     },
     "/2.0/webhooks\\-H\"Authorization:Bearer\"\\-H\"Content-Type:application/json\" -X P": {
@@ -411,16 +441,22 @@
     "https://upload.box.com/api/2.0/files/content": {
       "POST": {}
     },
+    "/2.0/folders/FOLDER_ID": {
+      "DELETE": {}
+    },
     "/2.0/folders/folder_id/collaborations": {
       "GET": {}
     },
     "/2.0/task_assignments/task_assignment_id": {
+      "DELETE": {},
       "GET": {},
-      "DEL": {},
       "PUT": {}
     },
     "https://api.box.net/2.0/legal_hold_policy_assignments -H \"Authorization: Bearer \" \\ -d '{ \"policy_id\" : ": {
       "GET": {}
+    },
+    "/2.0/comments/COMMENT_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -X DELETE": {
+      "DELETE": {}
     }
   },
   "produces": "application/json",

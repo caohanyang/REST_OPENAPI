@@ -228,13 +228,24 @@ public class ProcessMethod {
 
 	public String compressUrl(String urlString) {
 		// Compress URL
-		// https://api.createsend.com/api/v3.1 /externalsession.{xml|json} => https://api.createsend.com/api/v3.1/externalsession.{xml|json}
+		
 		int index = urlString.lastIndexOf("/");
-		String frontPart = null;
+		String frontPart, lastPart = null;
 		if (index > 0) {
+			// 1. compress the front part
+			// https://api.createsend.com/api/v3.1 /externalsession.{xml|json} => https://api.createsend.com/api/v3.1/externalsession.{xml|json}
 			frontPart = urlString.substring(0, index);
 			frontPart = frontPart.replaceAll("\\s+", "").trim();
-			return frontPart + urlString.substring(index);
+			
+			// 2. compress the last part
+			// only remove the front space:
+			// /2.0/retention_policies/ policy_id => /2.0/retention_policies/ policy_id
+			// /2.0/events \\ -H don't change
+			lastPart = urlString.substring(index + 1);
+			while (lastPart.startsWith(" ")) {
+				lastPart = lastPart.trim();
+			}
+			return frontPart + '/' + lastPart;
 		}
 		
 		return urlString;

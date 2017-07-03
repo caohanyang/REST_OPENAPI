@@ -1,0 +1,580 @@
+{
+  "basePath": "/2.0 /files/ file_id",
+  "paths": {
+    "/api instead of api.box.com .": {
+      "DEL": {}
+    },
+    "/folders/{id}": {
+      "GET": {}
+    },
+    "/users/USER_ID to retrieve the login email address.": {
+      "GET": {}
+    },
+    "/error response, exponential back-off should be used in retries. Server disconnects should be handled": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/file_version_retentions": {
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD \\ -H 'authorization:": {
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/folders/trash/items": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/tasks/task_id/assignments": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/users/user_id/email_aliases/email_alias_id": {
+      "DEL": {}
+    },
+    "//api.box.com/2.0/groups/group_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/api/2.0/webhooks/4137HTTP/1.1": {
+      "GET": {}
+    },
+    "/api/2.0/webhooksHTTP/1.1 Host: me.example.net Authorization: Bearer kn6F8iARsLkKlfftIC67WK6zxlC0vcJ": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/group_memberships": {
+      "POST": {}
+    },
+    "/me/memberships endpoint.": {
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/file_id/content": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/file_version_retentions/file_version_retention_id": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/retention_policies/policy_id/assignments": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/groups": {
+      "POST": {},
+      "GET": {}
+    },
+    "/or folders contained within this collection. Collection item lists behave a lot like getting a folde": {
+      "GET": {}
+    },
+    "/MjcSEFLag9bWmpJkgmN80Je4VIESdo=Box-Signature-Secondary:1UbiiKS7/2o5vNIlyMh7e5QGCHq8lflWFgEF+YWBugI": {
+      "DEL": {}
+    },
+    "//api.box.com/oauth2/token' , { method : 'POST' , body : `grant_type=${ grantType }&code=${ code }&cl": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/files/FILE_ID": {
+      "GET": {}
+    },
+    "/files/{id}/content endpoint. Italicized attributes are not returned by default and must be retrieved": {
+      "GET": {}
+    },
+    "/events endpoint and repeat the long poll process.": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/legal_hold_policy_assignments/assignment_id": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/events API. Long polling means opening an HTTP request and keeping it open until the server sends a": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/folders/FOLDER_ID/items": {
+      "GET": {}
+    },
+    "//www.box.com/api/avatar/large/181216415\" , \"is_exempt_from_device_limits\" : false , \"is_exempt_from_": {
+      "PUT": {}
+    },
+    "//api.box.com/2.0/web_links/web_link_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/folders/folder_id/metadata": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/file_id/versions/current": {
+      "POST": {}
+    },
+    "//developers.box.com/docs/#errors\" , \"message\" : \"\\\"displayName\\\" is required and not set\" , \"request": {
+      "POST": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/files/file_id/content": {
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/upload_sessions \\ -H 'authorization: Bearer fEw9FPUVT3SJGaSBu4Q07VFyqd": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/file_version_legal_holds/id": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/webhooks": {
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/file_version_legal_holds": {
+      "GET": {}
+    },
+    "/files/{id}orPUT/folders/{id} and pass null as the value of the shared_link field.": {
+      "PUT": {}
+    },
+    "//upload.box.com/api/2.0/files/upload_sessions/sessionId/commit": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/shared_items": {
+      "GET": {}
+    },
+    "//developers.box.com/docs/#errors\" , \"message\" : \"Not Found\" , \"request_id\" : \"15905304615893a9426ae1": {
+      "GET": {}
+    },
+    "/folders/{id} and pass the new shared link object as the value of the shared_link field. If you pass": {
+      "PUT": {}
+    },
+    "//api.box.com/2.0/users/user_id/folders/folder_id": {
+      "PUT": {}
+    },
+    "//api.box.com/2.0/files/file_id/tasks": {
+      "GET": {}
+    },
+    "/folders/{id} API and set the shared_link field to the shared link object .": {
+      "PUT": {}
+    },
+    "//app.box.com/preview/expiring_embed/[HASH]": {
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/content": {
+      "POST": {}
+    },
+    "//developers.box.com/docs/#errors\" , \"message\" : \"Not Found\" , \"request_id\" : \"12576614995893a4c6a019": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/endpoint/id/trash": {
+      "GET": {}
+    },
+    "//api.box.com/oauth2/revoke": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/files/file_id/thumbnail. extension": {
+      "GET": {}
+    },
+    "/folders/{id} and pass null as the value of the shared_link field.": {
+      "PUT": {}
+    },
+    "//api.box.com/2.0/legal_hold_policies/policy_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/folders/{id} API.": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/search": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/5010739061/metadata/enterprise/marketingCollateral \\ -H \"Authorization: Beare": {
+      "PATCH": {}
+    },
+    "//api.box.com/2.0/legal_hold_policies_assignments": {
+      "GET": {}
+    },
+    "//seanrose.box.com/s/ebgti08mtmhbpb4vlp55\",\"download_url\":\"https://seanrose.box.com/shared/static": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/tasks": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/webhooks/{ID}\\-H\"Authorization:Bearer\"\\-d'{\"address\":\"https://notificatio": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/file_id/versions/file_version_id": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/groups/group_id/memberships": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/groups/group_id/collaborations": {
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/parts \\ -H 'authoriza": {
+      "GET": {}
+    },
+    "/files/{id}DELETE/files/{id}PUT/folders/{id}DELETE/folders/{id}": {
+      "DEL": {}
+    },
+    "//api.box.com/2.0/folders/folder_id/items": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/users \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Ned Stark\", \"is_platform_access": {
+      "DEL": {}
+    },
+    "/RemoveAPIhandlingwillcheckallIDspassedinbeforeperforminganyadd/removal operations. If an": {
+      "PUT": {}
+    },
+    "//api.box.com/2.0/folders/folder_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/files/file_id/comments": {
+      "GET": {}
+    },
+    "/files/{id}/collaborationsorGET/folders/{id}/collaborations . A complete list of the user’s pendin": {
+      "GET": {}
+    },
+    "//www.box.com/s/vspke7y05sb214wjokpk\" , \"download_url\" : null , \"vanity_url\" : null , \"is_password_en": {
+      "POST": {},
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/retention_policy_assignments": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/invites": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/files/file_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/file_version_legal_holds": {
+      "GET": {}
+    },
+    "/files/{id}orPUT/folders/{id} and pass the new shared link object as the value of the shared_link": {
+      "PUT": {}
+    },
+    "/value pairs set by the user’s admin": {
+      "PUT": {}
+    },
+    "/api/2.0/webhooks": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/enterprises/enterprise_id/device_pinners": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/users/user_id/email_aliases": {
+      "POST": {},
+      "GET": {}
+    },
+    "/files/{id}": {
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/commit \\ -H 'authoriz": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/files/file_id/collaborations": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/collections/collection_id/items": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/folders/folder_id/watermark": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/events API.": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/webhooks/webhook_id": {
+      "GET": {}
+    },
+    "/104857600)": {
+      "PUT": {}
+    },
+    "//blosserdemoaccount.box.com/s/7mcmdlavtye5o5i0ue8xmtwh2sx5bv8p\",\"download_url\":\"https://blosserd": {
+      "PUT": {}
+    },
+    "/folders/{id}DELETE/folders/{id}": {
+      "GET": {}
+    },
+    "//dev.name/box-notification\" , \"triggers\" : [ \"FILE.SHARED\" , \"COMMENT.UPDATED\" ]}": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/collaborations/collab_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/ or \\, names with trailing spaces, and the special names “.” and “..”.": {
+      "GET": {}
+    },
+    "/users{id} endpoint also returns a limited set of information for external users who are collaborated": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/users \\ -H \"Authorization: Bearer \" \\ -d '{\"login\": \"eddard@box.com\", \"name\": \"Ned": {
+      "DEL": {}
+    },
+    "/invites/{invite_id}.": {
+      "GET": {}
+    },
+    "/*Optional.Stuffspecifictotheindividualerror*/}, \"request_id\" : \"abcdef\" }": {
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/upload_sessions/sessionId/parts": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/recent_items": {
+      "GET": {}
+    },
+    "//api.box.net/2.0/legal_hold_policy_assignments -H \"Authorization: Bearer \" \\ -d '{ \"policy_id\" : \"16": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/users/me": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/FILE_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -d '{\"lock\": null}' \\ -X": {
+      "PUT": {}
+    },
+    "//api.box.com/2.0/folders/FOLDER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"name\":\"New Folder Name!\"}'": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/folders": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/comments": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/folders/folder_id/collaborations": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/file_id/watermark": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/files/{id}GET/folders/{id}GET/shared_items": {
+      "GET": {}
+    },
+    "/files/{id}/content APIs.": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/metadata_templates/scope": {
+      "GET": {}
+    },
+    "//www.box.com/s/rh935iit6ewrmw0unyul\",\"download_url\":\"https://www.box.com/shared/static/rh935iit6": {
+      "POST": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/task_assignments": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/folders/folder_id/copy": {
+      "POST": {}
+    },
+    "/files/{id}/comments ).": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/comments/comment_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/webhooks\\-H\"Authorization:Bearer\"\\-H\"Content-Type:application/json\" -X POS": {
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/content , handles uploads. This API uses the multipart post method to": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/events \\ -H \"Authorization: Bearer \" \\ -X OPTIONS": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/retention_policies/policy_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/users/user_id/memberships": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/task_assignments/task_assignment_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "//www.box.com\" , \"created_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"log": {
+      "POST": {},
+      "PUT": {}
+    },
+    "/folders/{id}/items to get the IDs of the items in the folder. You can then access any of those items": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/users/user_id": {
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/legal_hold_policy_assignments": {
+      "POST": {},
+      "GET": {}
+    },
+    "/files/content,andPOST/files/{id}/content APIs.": {
+      "POST": {}
+    },
+    "/events,POST/files/content,andPOST/files/{id}/content APIs.": {
+      "POST": {}
+    },
+    "/Los_Angeles\" , \"space_amount\" : 5368709120 , \"space_used\" : 0 , \"max_upload_size\" : 16106127360 , \"s": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/legal_hold_policies \\ -H \"Authorization: Bearer \" \\ -d '{ \"policy_name\" : \"Policy 3": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/metadata_templates/scope/template/schema": {
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/device_pinners/device_pin_id": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/events": {
+      "GET": {}
+    },
+    "/events endpoint with the last known stream_position. After the server sends this response it closes": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/legal_hold_policies": {
+      "POST": {},
+      "GET": {}
+    },
+    "//upload.box.com/api/2.0/files/upload_sessions/sessionId": {
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/metadata_templates/schema": {
+      "POST": {}
+    },
+    "/folders/{id}/collaborations . A complete list of the user’s pending collaborations can also be retri": {
+      "GET": {}
+    },
+    "//api.box.com/oauth2/revoke \\ -d 'client_id=MY_CLIENT_ID' \\ -d 'client_secret=MY_CLIENT_SECRET' \\ -d": {
+      "PUT": {}
+    },
+    "//docs.box.com/reference#marker-based-paging": {
+      "GET": {}
+    },
+    "/deleted for an existing metadata template instance associated with a file or folder": {
+      "DEL": {}
+    },
+    "//api.box.com/2.0/collections": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/group_memberships/group_membership_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/endpoint/id": {
+      "POST": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/tasks/task_id": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "//api.box.com/2.0/retention_policies": {
+      "POST": {},
+      "GET": {}
+    },
+    "/files/{id} ).": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/retention_policy_assignments/retention_policy_assignment_id": {
+      "GET": {}
+    },
+    "/Output Format": {
+      "PUT": {}
+    },
+    "//dev.name/actions/file_changed\" , \"triggers\" : [ \"FILE.DOWNLOADED\" , \"FILE.UPLOADED\" ] }": {
+      "GET": {}
+    },
+    "/Los_Angeles\" , \"space_amount\" : 5368709120 , \"space_used\" : 0 , \"max_upload_size\" : 2147483648 , \"st": {
+      "POST": {}
+    },
+    "/files/{id}orGET/folders/{id} API.": {
+      "GET": {}
+    },
+    "/files/{id}/contentPUT/files/{id}DELETE/files/{id}PUT/folders/{id}DELETE/folders/{id}": {
+      "DEL": {}
+    },
+    "//api.box.com/oauth2/token \\ -d 'grant_type=authorization_code' \\ -d 'code=<MY_AUTH_CODE>' \\ -d 'clie": {
+      "GET": {}
+    },
+    "/folders/{id}GET/shared_items": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/folders/folder_id/metadata/scope/template": {
+      "POST": {},
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "/files/{file id} endpoint and set or clear the lock properties on the file.": {
+      "PUT": {}
+    },
+    "//api.box.com/2.0/web_links": {
+      "POST": {}
+    },
+    "//developers.box.com/docs/#errors\" , \"message\" : \"Bad Request\" , \"request_id\" : \"18327826535893a67aae": {
+      "GET": {}
+    },
+    "/shared_items": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/file_id/metadata/scope/template": {
+      "POST": {},
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "//developers.box.com/docs/#errors\" , \"message\" : \"Item with the same name already exists\" , \"request_": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/file_id/versions": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/file_id/versions/id": {
+      "DEL": {}
+    },
+    "//upload.box.com/api/2.0/files/upload_sessions": {
+      "POST": {}
+    },
+    "/files/{id}orPUT/folders/{id} API and set the shared_link field to the shared link object .": {
+      "PUT": {}
+    },
+    "//api.box.com/2.0/users": {
+      "POST": {},
+      "GET": {}
+    },
+    "//notification.example.net\" , \"triggers\" : [ \"FILE.PREVIEWED\" , \"FILE.DOWNLOADED\" ] }": {
+      "GET": {}
+    },
+    "//developers.box.com/docs/#errors\" , \"message\" : \"Bad Request\" , \"request_id\" : \"8645764015893a8336ed": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/collaborations": {
+      "POST": {},
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/file_id/metadata": {
+      "GET": {}
+    },
+    "//api.box.com/2.0/files/file_id/copy": {
+      "POST": {}
+    },
+    "//api.box.com/2.0/events \\ -H \"Authorization: Bearer ": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": " api.box.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}
