@@ -45,37 +45,39 @@ public class ProcessMethod {
 	}
 
 	public boolean isRealUrl(String url) {
-		
-		//clean two times
+
+		// clean two times
 		url = cleanUrl(url);
 		url = cleanUrl(url);
-		
-		if (url.contains(".jpg")|url.contains(".gif")|url.contains(".png")|url.contains(".txt")|url.contains(".pdf")) {
+
+		if (url.contains(".jpg") | url.contains(".gif") | url.contains(".png") | url.contains(".txt")
+				| url.contains(".pdf")) {
 			return false;
 		}
-		
-		if (url.startsWith("http")|url.startsWith("/")) {
-			
+
+		if (url.startsWith("http") | url.startsWith("/")) {
+
 			int spaces = url == null ? 0 : url.length() - url.replace(" ", "").length();
 			if (spaces > 2) {
 				// too much space in the url, should not be a valid url
 				return false;
 			}
-			
+
 			if (url.contains(";") | url.contains("+") | url.contains("</") | url.contains(">")) {
 				return false;
 			}
-			
+
 			// url minimum length
 			if (url.length() > "http://".length()) {
 				return true;
 			}
 		}
-			
+
 		return false;
 	}
 
-	public void addNoParaUrl(JSONObject openAPI, String strAll, List<JSONObject> infoJson, String reverse) throws JSONException {
+	public void addNoParaUrl(JSONObject openAPI, String strAll, List<JSONObject> infoJson, String reverse)
+			throws JSONException {
 		// choose the most proper url/action pair
 		Pair<String, String> properPair = solveConflicts(strAll, infoJson, reverse);
 		// handle it badly, need to fix:
@@ -84,7 +86,8 @@ public class ProcessMethod {
 		addUrl(openAPI, url, action, null);
 	}
 
-	public Pair<String, String> solveConflicts(String strAll, List<JSONObject> infoJson, String reverse) throws JSONException {
+	public Pair<String, String> solveConflicts(String strAll, List<JSONObject> infoJson, String reverse)
+			throws JSONException {
 		// if the are no parameter table in the page
 		// if one URL have two actions, solve the conflicts
 		Pair<String, String> properPair = null;
@@ -98,19 +101,18 @@ public class ProcessMethod {
 			int acLocation = acObject.getInt(actionFinal);
 			int urlLocation = urObject.getInt(urlFinal);
 
-			if (reverse == "no") {			
+			if (reverse == "no") {
 				if (Math.abs(acLocation - urlLocation) < miniMum) {
 					miniMum = Math.abs(acLocation - urlLocation);
 					properPair = Pair.of(actionFinal, urlFinal);
 				}
 			} else {
 				if (Math.abs(urlLocation - acLocation) < miniMum) {
-					miniMum = Math.abs(urlLocation - acLocation );
+					miniMum = Math.abs(urlLocation - acLocation);
 					properPair = Pair.of(actionFinal, urlFinal);
 				}
 			}
-			
-			
+
 		}
 
 		return properPair;
@@ -123,9 +125,9 @@ public class ProcessMethod {
 			urlString = urlString.split("\\?")[0].trim();
 		}
 		// user/user-id authentication => user/user-id
-//		if (urlString.contains(" ")) {
-//			urlString = urlString.split(" ")[0].trim();
-//		}
+		// if (urlString.contains(" ")) {
+		// urlString = urlString.split(" ")[0].trim();
+		// }
 		// user/user-id \n => user/user-id
 		if (urlString.contains("\n")) {
 			urlString = urlString.split("\n")[0].trim();
@@ -134,23 +136,23 @@ public class ProcessMethod {
 		if (urlString.endsWith("/")) {
 			urlString = urlString.substring(0, urlString.lastIndexOf("/"));
 		}
-		
+
 		// www.docusign.com/restapi" => www.docusign.com/restapi
 		if (urlString.endsWith("\"")) {
 			urlString = urlString.substring(0, urlString.lastIndexOf("\""));
 		}
-		
+
 		// mmed.jpg\ => mmed.jpg
 		if (urlString.endsWith("\\")) {
 			urlString = urlString.substring(0, urlString.lastIndexOf("\\"));
 		}
-		
+
 		// user/user-id.json => user/user-id
 		// String urlEnd = urlString.substring(urlString.lastIndexOf("/"));
 		if (urlString.lastIndexOf(".json") != -1) {
 			urlString = urlString.substring(0, urlString.lastIndexOf(".json"));
 		}
-		
+
 		return urlString;
 	}
 
@@ -184,25 +186,26 @@ public class ProcessMethod {
 	}
 
 	public boolean isUrlPath(String urlText, Annotation anno, String strAll, String aPI_NAME, String abbrev) {
-		//case 1: flickr.activity.userComments
+		// case 1: flickr.activity.userComments
 		if (anno.getType().equals("h1")) {
 			if (urlText.contains(aPI_NAME)) {
 				return true;
-			} else if (urlText.contains("add") | urlText.contains("remove") | urlText.contains("update") | urlText.contains("get")
-					| urlText.contains("search") | urlText.contains("post") | urlText.contains("put") | urlText.contains("patch")) {
+			} else if (urlText.contains("add") | urlText.contains("remove") | urlText.contains("update")
+					| urlText.contains("get") | urlText.contains("search") | urlText.contains("post")
+					| urlText.contains("put") | urlText.contains("patch")) {
 				return true;
 			}
 			return false;
 		} else if (anno.getType().equals("code")) {
-			//case 2: flickr.activity.userComments \s(\/.*\/)
-			String regexUrlPath = "(?i)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(\\/.*\\/)" ;
+			// case 2: flickr.activity.userComments \s(\/.*\/)
+			String regexUrlPath = "(?i)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(\\/.*\\/)";
 			Pattern pUrl = Pattern.compile(regexUrlPath);
 			Matcher matcherUrl = pUrl.matcher(urlText);
-			
+
 			if (matcherUrl.lookingAt()) {
 				return true;
 			}
-			
+
 		}
 		return false;
 	}
@@ -224,46 +227,48 @@ public class ProcessMethod {
 		}
 	}
 
-	public void addAllParaURL(JSONObject openAPI, String strAll, List<JSONObject> infoJson, String reverse, String scheme) throws JSONException {
+	public void addAllParaURL(JSONObject openAPI, String strAll, List<JSONObject> infoJson, String reverse,
+			String scheme) throws JSONException {
 		// choose the most proper url/action pair
 		for (int i = 0; i < infoJson.size(); i++) {
 			JSONObject acObject = infoJson.get(i).getJSONObject("action");
 			JSONObject urObject = infoJson.get(i).getJSONObject("url");
 			String actionFinal = acObject.keys().next().toString();
 			String urlFinal = urObject.keys().next().toString();
-				
+
 			addUrl(openAPI, urlFinal, actionFinal, scheme);
 		}
-		
-		
+
 	}
 
 	public String compressUrl(String urlString) {
 		// Compress URL
-		
+
 		int index = urlString.lastIndexOf("/");
 		String frontPart, lastPart = null;
 		if (index > 0) {
 			// 1. compress the front part
-			// https://api.createsend.com/api/v3.1 /externalsession.{xml|json} => https://api.createsend.com/api/v3.1/externalsession.{xml|json}
+			// https://api.createsend.com/api/v3.1 /externalsession.{xml|json}
+			// => https://api.createsend.com/api/v3.1/externalsession.{xml|json}
 			frontPart = urlString.substring(0, index);
 			frontPart = frontPart.replaceAll("\\s+", "").trim();
-			
+
 			// 2. compress the last part
 			// only remove the front space:
-			// 3.1. /2.0/retention_policies/ policy_id => /2.0/retention_policies/ policy_id
+			// 3.1. /2.0/retention_policies/ policy_id =>
+			// /2.0/retention_policies/ policy_id
 			lastPart = urlString.substring(index + 1);
 			if (lastPart.startsWith(" ")) {
 				lastPart = lastPart.trim();
 			}
-			
+
 			// 3.2. /2.0/events \\ -H don't change
 			if (lastPart.contains(" ")) {
 				lastPart = lastPart.substring(0, lastPart.indexOf(" "));
 			}
 			return frontPart + '/' + lastPart;
 		}
-		
+
 		return urlString;
 	}
 }

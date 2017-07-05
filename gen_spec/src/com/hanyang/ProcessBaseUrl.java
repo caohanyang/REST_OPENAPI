@@ -58,9 +58,10 @@ public class ProcessBaseUrl {
 		if (!urlList.isEmpty()) {
 			// 2. find the common url
 			String commonUrl = combineUrl(urlList);
-			// https://api.createsend.com/api/v3.1/ => https://api.createsend.com/api/v3.1
+			// https://api.createsend.com/api/v3.1/ =>
+			// https://api.createsend.com/api/v3.1
 			if (commonUrl.endsWith("/")) {
-				commonUrl = commonUrl.substring(0, commonUrl.length() -1 );
+				commonUrl = commonUrl.substring(0, commonUrl.length() - 1);
 			}
 			// 3. adjust specification
 			openAPI = adjustSpec(openAPI, mode, commonUrl);
@@ -82,7 +83,7 @@ public class ProcessBaseUrl {
 			// for a string , find the most frequence match common string
 			Map<String, Integer> tmpFrequency = new HashMap<String, Integer>();
 			String tmpUrl = urlList.get(i);
-			
+
 			for (int j = 0; j < urlList.size(); j++) {
 				String compareUrl = urlList.get(j);
 				if (tmpUrl.equals(compareUrl))
@@ -117,7 +118,6 @@ public class ProcessBaseUrl {
 			}
 		}
 
-		
 		// Step 2 most length
 
 		int num = 0;
@@ -267,7 +267,6 @@ public class ProcessBaseUrl {
 
 			String originStr = null, retainStr = null;
 
-			
 			// if url contains commonUrl
 			if (keyUrl.equals(baseUrl)) {
 				retainStr = "/";
@@ -302,19 +301,21 @@ public class ProcessBaseUrl {
 		// define the list of baseUrl
 		List<String> baseUrlList = new ArrayList<String>();
 		ProcessMethod processMe = new ProcessMethod();
-		
-		//direct model
-		baseUrlList = searchUrlMode1(listFiles, API_NAME, baseUrlList, processMe, "(?si)API root URL.{1,18}((http)|(https)){1}://");
+
+		// direct model
+		baseUrlList = searchUrlMode1(listFiles, API_NAME, baseUrlList, processMe,
+				"(?si)API root URL.{1,18}((http)|(https)){1}://");
 		if (baseUrlList.size() != 0) {
 			// if matched, return directly
 			return baseUrlList.get(0);
 		}
-		baseUrlList = searchUrlMode1(listFiles, API_NAME, baseUrlList, processMe, "(?si)REST API along with.{1,100}((http)|(https)){1}://");
+		baseUrlList = searchUrlMode1(listFiles, API_NAME, baseUrlList, processMe,
+				"(?si)REST API along with.{1,100}((http)|(https)){1}://");
 		if (baseUrlList.size() != 0) {
 			// if matched, return directly
 			return baseUrlList.get(0);
 		}
-        
+
 		baseUrlList = searchUrlMode2(listFiles, API_NAME, baseUrlList, processMe);
 
 		if (baseUrlList.isEmpty()) {
@@ -334,7 +335,8 @@ public class ProcessBaseUrl {
 
 					// 4.1 search for the GET https
 					String strAll = textAll.toString();
-					// Fix 1: suppose the len(content between get and http) < 40 +
+					// Fix 1: suppose the len(content between get and http) < 40
+					// +
 					// "://"
 					String regexHttp = "(?si)((http)|(https)){1}://";
 					// first find the page which contains REST + request
@@ -354,10 +356,9 @@ public class ProcessBaseUrl {
 				}
 			}
 		}
-		
-		
+
 		Out.prln(baseUrlList);
-		
+
 		// find the base url
 		Map<Object, Long> counts = baseUrlList.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
 
@@ -373,18 +374,18 @@ public class ProcessBaseUrl {
 			Object[] sortedArray = sortedMap.keySet().toArray();
 			List<String> apiArray = new ArrayList<String>();
 			// first, select all the URL who contains APIs
-			for (int i = 0; i< sortedArray.length; i++) {
+			for (int i = 0; i < sortedArray.length; i++) {
 				if (sortedArray[i].toString().contains("api")) {
 					apiArray.add(sortedArray[i].toString());
 				}
 			}
-			
-			if (apiArray.size()!=0) {
+
+			if (apiArray.size() != 0) {
 				// select from api array
-				for (int j = 0; j < apiArray.size(); j++ ){
+				for (int j = 0; j < apiArray.size(); j++) {
 					String[] apiUrl = apiArray.get(j).toString().split("/");
 					// end with version
-					if (apiUrl[apiUrl.length-1].matches("(?si)v\\d+")) {
+					if (apiUrl[apiUrl.length - 1].matches("(?si)v\\d+")) {
 						return apiArray.get(j).toString();
 					}
 				}
@@ -397,7 +398,6 @@ public class ProcessBaseUrl {
 					}
 				}
 			}
-			
 
 			// if they don't contain api, just return the first one
 			return sortedArray[0].toString();
@@ -406,8 +406,7 @@ public class ProcessBaseUrl {
 
 	private List<String> searchUrlMode1(File[] listFiles, String API_NAME, List<String> baseUrlList,
 			ProcessMethod processMe, String regexRoot) throws MalformedURLException, ResourceInstantiationException {
-		
-		
+
 		for (int i = 0; i < listFiles.length; i++) {
 			// print the file name
 			// Out.prln("=============File name=======================");
@@ -430,7 +429,7 @@ public class ProcessBaseUrl {
 				Pattern rRest = Pattern.compile(regexRoot);
 				Matcher matcherRoot = rRest.matcher(strAll);
 				while (matcherRoot.find()) {
-					
+
 					// Fix 2: suppose the URL length < 40
 					String matchStrNull = strAll.substring(matcherRoot.start()).split("\n")[0].trim();
 					// final API endpoint must contain API_NAME
@@ -443,13 +442,13 @@ public class ProcessBaseUrl {
 
 			}
 		}
-		
+
 		return baseUrlList;
 	}
 
-	private List<String> searchUrlMode2(File[] listFiles, String API_NAME, List<String> baseUrlList, ProcessMethod processMe)
-			throws MalformedURLException, ResourceInstantiationException {
-		
+	private List<String> searchUrlMode2(File[] listFiles, String API_NAME, List<String> baseUrlList,
+			ProcessMethod processMe) throws MalformedURLException, ResourceInstantiationException {
+
 		for (int i = 0; i < listFiles.length; i++) {
 			// print the file name
 			// Out.prln("=============File name=======================");
@@ -490,27 +489,28 @@ public class ProcessBaseUrl {
 
 			}
 		}
-		
+
 		return baseUrlList;
 	}
 
 	public String cleanBaseUrl(String baseUrl) {
-		// in the case the baseUrl contains path templating 
+		// in the case the baseUrl contains path templating
 		// https://graph.facebook.com/<API_VERSION>/<PAGE_ID>/feed
-		if (baseUrl == null) return baseUrl;
-		
+		if (baseUrl == null)
+			return baseUrl;
+
 		String[] urlPart = baseUrl.split("/");
 		if (urlPart.length != 0) {
 			for (int i = 0; i < urlPart.length; i++) {
 				String part = urlPart[i];
 				// part contain < | {
 				if (part.startsWith("<") | part.startsWith("{")) {
-					// return the 
-					return baseUrl.substring(0, baseUrl.indexOf(part)-1);
+					// return the
+					return baseUrl.substring(0, baseUrl.indexOf(part) - 1);
 				}
 			}
 		}
-		
+
 		return baseUrl;
 	}
 

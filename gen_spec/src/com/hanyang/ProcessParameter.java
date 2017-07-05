@@ -53,7 +53,7 @@ public class ProcessParameter {
 					e.printStackTrace();
 				}
 			}
-			
+
 		}
 
 		return openAPI;
@@ -298,7 +298,7 @@ public class ProcessParameter {
 			// check the pre-text, if it contains parameter | argument
 			if (templateLocation <= 50) {
 				appendTemplateText = strAll.substring(templateLocation, templateLocation + 100);
-			} else {				
+			} else {
 				appendTemplateText = strAll.substring(templateLocation - 50, templateLocation + 100);
 			}
 		} else {
@@ -308,7 +308,8 @@ public class ProcessParameter {
 				appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
 			}
 		}
-		if (Pattern.compile("(parameter)|(argument)|(field)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
+		if (Pattern.compile("(parameter)|(argument)|(field)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
+				.find()) {
 			return true;
 		}
 		return false;
