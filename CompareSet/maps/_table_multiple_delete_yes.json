@@ -1,7 +1,10 @@
 {
-  "basePath": "/maps/api/timezone/json'",
+  "basePath": "/maps/api/directions/json",
   "paths": {
-    "/get-api-key": {
+    "/New_York\".": {
+      "GET": {}
+    },
+    "/ output": {
       "GET": {}
     }
   },

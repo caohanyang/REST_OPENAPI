@@ -1,17 +1,35 @@
 {
-  "basePath": "/maps/api/timezone/json'",
+  "basePath": "/maps/api/directions/json",
   "paths": {
-    "//maps.googleapis.com/maps/api": {
+    "/New_York\".": {
+      "DEL": {}
+    },
+    "//maps.googleapis.com/maps/api/directions/outputFormat": {
       "PUT": {}
     },
     "//developers.google.com/maps/documentation/timezone/get-api-key": {
       "GET": {}
     },
+    "//Fortestingpurposes,allowuserinputfortheURL.//If": {
+      "PUT": {}
+    },
+    "//maps.googleapis.com/maps/api/directions/json": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "//compute": {
+      "GET": {}
+    },
     "//maps.googleapis.com/maps/api/timezone/json": {
       "DEL": {}
     },
-    "/status>": {
+    "//maps.googleapis.com/maps/api/service/output": {
       "PUT": {}
+    },
+    "/or its affiliates.": {
+      "GET": {},
+      "DEL": {}
     }
   },
   "produces": "application/json",

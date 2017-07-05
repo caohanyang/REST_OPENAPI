@@ -1,12 +1,22 @@
 {
-  "basePath": "/maps/documentation/timezone/get-api-key",
+  "basePath": "/maps/api",
   "paths": {
-    "/": {
+    "https://developers.google.com/maps/documentation/timezone/get-api-key": {
       "GET": {}
+    },
+    "/directions/json": {
+      "GET": {},
+      "DEL": {}
+    },
+    "/geocode/json": {
+      "PUT": {}
+    },
+    "/service/output": {
+      "PUT": {}
     }
   },
   "produces": "application/json",
-  "host": "developers.google.com",
+  "host": "maps.googleapis.com",
   "schemes": [
     "https"
   ],

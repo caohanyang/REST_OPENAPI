@@ -1,5 +1,5 @@
 {
-  "basePath": "/maps/api/timezone/json'",
+  "basePath": "/maps/api/directions/json",
   "paths": {},
   "produces": "application/json",
   "host": "maps.googleapis.com",

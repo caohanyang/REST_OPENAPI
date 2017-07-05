@@ -25,6 +25,9 @@
 # https://msdn.microsoft.com/en-us/library/ff701713.aspx  https://msdn.microsoft.com/en-us/library/ff
 # https://developer.box.com/reference
 
+# https://developers.google.com/maps/documentation/directions
+# https://developers.google.com/analytics/devguides/config/mgmt/v3/mgmtReference/
+
 # python ./predict_page/predictExternalTest.py $1
 
 

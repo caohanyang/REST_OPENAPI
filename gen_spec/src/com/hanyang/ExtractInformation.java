@@ -322,17 +322,9 @@ public class ExtractInformation {
 					Out.prln("urlStart： " + endpointMatcher.start());
 					int uLocation = startIndex + endpointMatcher.start();
 					urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
+					
 					// handle url, make it short and clean
-					urlString = processMe.cleanUrl(urlString);
-					urlString = processMe.compressUrl(urlString);
-
-					// Out.prln("==========real ADDRESS============");
-					// Out.prln(strAll.substring(uLocation, uLocation + 100));
-					Out.prln("==========URL ADDRESS============");
-					Out.prln(urlString);
-					JSONObject urJson = new JSONObject();
-					urJson.put(urlString, uLocation);
-					sectionJson.put("url", urJson);
+					sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
 				}
 			} else {
 				endpointMatcher = endpoint.matcher(new StringBuilder(matchStr).reverse().toString());
@@ -350,18 +342,9 @@ public class ExtractInformation {
 					//if offset < 0, next run
 					if (urOffset < 0) continue;
 					urlString = matchStr.substring(urOffset).split("\n")[0].trim();
-//					urlString = new StringBuilder(endpointMatcher.group()).reverse().toString();
-					
-					urlString = processMe.cleanUrl(urlString);
-					urlString = processMe.compressUrl(urlString);
 
-					// Out.prln("==========real ADDRESS============");
-					// Out.prln(strAll.substring(uLocation, uLocation + 100));
-					Out.prln("==========URL ADDRESS============");
-					Out.prln(urlString);
-					JSONObject urJson = new JSONObject();
-					urJson.put(urlString, urLocation);
-					sectionJson.put("url", urJson);
+					//writeUrl
+					sectionJson = writeUrl(processMe, urlString, sectionJson, urLocation);
 				}
 			}
 			
@@ -369,7 +352,6 @@ public class ExtractInformation {
 
 			// Write into openAPI
 			// After matching table, we write url/action into openAPI
-			// processMe.addUrl(openAPI, urlString, actionStr);
 			infoJson.add(sectionJson);
 		}
 
@@ -393,6 +375,19 @@ public class ExtractInformation {
 			// 5.3 get list annotation
 			handleTemplate(openAPI, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
 		}
+	}
+
+	private static JSONObject writeUrl(ProcessMethod processMe, String urlString, JSONObject sectionJson, int uLocation)
+			throws JSONException {
+		urlString = processMe.cleanUrl(urlString);
+		urlString = processMe.compressUrl(urlString);
+		Out.prln("==========URL ADDRESS============");
+		Out.prln(urlString);
+		JSONObject urJson = new JSONObject();
+		urJson.put(urlString, uLocation);
+		sectionJson.put("url", urJson);
+        
+		return sectionJson;
 	}
 
 	private static void handleTemplate(JSONObject openAPI, String number, String template, Document doc,

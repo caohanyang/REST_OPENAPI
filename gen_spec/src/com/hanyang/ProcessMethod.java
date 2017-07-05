@@ -55,6 +55,17 @@ public class ProcessMethod {
 		}
 		
 		if (url.startsWith("http")|url.startsWith("/")) {
+			
+			int spaces = url == null ? 0 : url.length() - url.replace(" ", "").length();
+			if (spaces > 2) {
+				// too much space in the url, should not be a valid url
+				return false;
+			}
+			
+			if (url.contains(";") | url.contains("+") | url.contains("</") | url.contains(">")) {
+				return false;
+			}
+			
 			// url minimum length
 			if (url.length() > "http://".length()) {
 				return true;
@@ -139,6 +150,7 @@ public class ProcessMethod {
 		if (urlString.lastIndexOf(".json") != -1) {
 			urlString = urlString.substring(0, urlString.lastIndexOf(".json"));
 		}
+		
 		return urlString;
 	}
 
@@ -239,11 +251,15 @@ public class ProcessMethod {
 			
 			// 2. compress the last part
 			// only remove the front space:
-			// /2.0/retention_policies/ policy_id => /2.0/retention_policies/ policy_id
-			// /2.0/events \\ -H don't change
+			// 3.1. /2.0/retention_policies/ policy_id => /2.0/retention_policies/ policy_id
 			lastPart = urlString.substring(index + 1);
-			while (lastPart.startsWith(" ")) {
+			if (lastPart.startsWith(" ")) {
 				lastPart = lastPart.trim();
+			}
+			
+			// 3.2. /2.0/events \\ -H don't change
+			if (lastPart.contains(" ")) {
+				lastPart = lastPart.substring(0, lastPart.indexOf(" "));
 			}
 			return frontPart + '/' + lastPart;
 		}
