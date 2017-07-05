@@ -48,11 +48,11 @@ public class ExtractInformation {
 	private static String FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
 	// "https", "http", "null", "/"
-	private static List<String> MODE = new ArrayList<String>(Arrays.asList("/"));
+	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https"));
 	// "no", "yes"
-	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no", "yes"));
+	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no"));
 	// "table", "list"
-	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table", "list"));
+	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table"));
 	// "single", "multiple"
 	private static List<String> NUMBER = new ArrayList<String>(Arrays.asList("single", "multiple"));
 	// "del", "delete"
@@ -173,7 +173,7 @@ public class ExtractInformation {
 			DocumentContent textAll, ProcessMethod processMe, String baseUrl, String aPI_NAME, String reverse,
 			String scheme) throws JSONException {
 		String strAll = textAll.toString();
-		
+
 		List<JSONObject> infoJson = new ArrayList<JSONObject>();
 		// 1 get original markups
 		doc.setMarkupAware(true);
@@ -192,6 +192,9 @@ public class ExtractInformation {
 
 		// 3. handle template to find parameter
 		handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
+
+		// 4. handle code template
+		handleCodeTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 
 	}
 
@@ -245,7 +248,7 @@ public class ExtractInformation {
 		doc.setMarkupAware(true);
 
 		AnnotationSet annoOrigin = doc.getAnnotations("Original markups");
-		
+
 		// 2 generate info json
 		getInfoJsonHttp(abbrev, processMe, scheme, reverse, strAll, infoJson);
 
@@ -254,8 +257,9 @@ public class ExtractInformation {
 
 		// 3 handle info json
 		handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
-		
-		
+
+		// 4. handle code template
+		handleCodeTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
 	private static void getInfoJsonHttp(String abbrev, ProcessMethod processMe, String scheme, String reverse,
@@ -369,14 +373,40 @@ public class ExtractInformation {
 			ProcessMethod processMe, String scheme, String reverse, String strAll, List<JSONObject> infoJson,
 			AnnotationSet annoOrigin) throws JSONException {
 		if (template == "table") {
-			// 5.2 get table annotation
+			// 1 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
 			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
 		} else if (template == "list") {
 			AnnotationSet annoList = annoOrigin.get("dl");
-			// 5.3 get list annotation
+			// 2 get list annotation
 			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
 		}
+	}
+
+	private static void handleCodeTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
+		// find code example in the code
+		AnnotationSet annoPre = annoOrigin.get("pre");
+		searchCode(openAPI, doc, processMe, strAll, infoJson, annoPre);
+	}
+
+	private static void searchCode(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoCode) throws JSONException {
+		// 5.3 for each page, set findParaTable = False
+		boolean findCodeTemplate = false;
+		// 5.3.1 Test if the page contains multiple parameter table or not
+		Iterator<Annotation> codeIter = annoCode.iterator();
+
+		while (codeIter.hasNext()) {
+			Annotation anno = (Annotation) codeIter.next();
+			String codeText = gate.Utils.stringFor(doc, anno);
+			ProcessResponse processRe = new ProcessResponse();
+			if (processRe.isResponseTemplate(codeText, anno, strAll)) {
+				findCodeTemplate = true;
+				processRe.generateResponse(openAPI, codeText, strAll, infoJson, anno, doc, processMe,annoCode);
+			}
+		}
+
 	}
 
 	private static JSONObject writeUrl(ProcessMethod processMe, String urlString, JSONObject sectionJson, int uLocation)
