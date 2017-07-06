@@ -152,6 +152,10 @@ public class ProcessMethod {
 		if (urlString.lastIndexOf(".json") != -1) {
 			urlString = urlString.substring(0, urlString.lastIndexOf(".json"));
 		}
+		
+		if (urlString.lastIndexOf(".format") != -1) {
+			urlString = urlString.substring(0, urlString.lastIndexOf(".format"));
+		}
 
 		return urlString;
 	}

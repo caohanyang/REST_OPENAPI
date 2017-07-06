@@ -27,7 +27,7 @@ public class ProcessParameter {
 			Annotation anno, Document doc, ProcessMethod processMe, String templateNumber, String template)
 			throws JSONException {
 
-		JSONObject sectionJson = matchURL(paraStr, fullText, infoJson, anno.getStartNode().getOffset(), templateNumber);
+		JSONObject sectionJson = matchURL(paraStr, fullText, infoJson, anno.getStartNode().getOffset(), templateNumber, doc, "parameter");
 
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {
@@ -249,19 +249,45 @@ public class ProcessParameter {
 	}
 
 	public JSONObject matchURL(String paraStr, String fullText, List<JSONObject> infoJson, Long paraLocation,
-			String templateNumber) throws JSONException {
+			String templateNumber, Document doc, String mode) throws JSONException {
 		JSONObject sectionObject = new JSONObject();
 		int minimumDistance = Integer.MAX_VALUE;
 		Out.prln("----------para location-------");
 		Out.prln(paraLocation);
 		for (JSONObject it : infoJson) {
+			
+			// Rule 1: action that not far from "example..."
+			JSONObject entryAction = it.getJSONObject("action");
+			Iterator keysAction = entryAction.keys();
+			if (keysAction.hasNext()) {
+				Long standard = null;
+				if (mode == "parameter") {
+					//parameter
+					standard = entryAction.getLong(keysAction.next().toString());
+				} else {
+					//example ???
+					standard = entryAction.getLong(keysAction.next().toString());
+
+				}
+				
+				Long head = standard;
+				String headStr = gate.Utils.stringFor(doc, head - 50, head).toLowerCase();
+				Long bottom = standard + paraStr.length();
+				String bottomStr = gate.Utils.stringFor(doc, bottom, bottom + 50).toLowerCase();
+				if (headStr.contains("example") | bottomStr.contains("example")) {
+					sectionObject.put("action", it.getJSONObject("action").keys().next());
+					sectionObject.put("url", it.getJSONObject("url").keys().next());
+					break;
+				}
+			}
+			
+			
+			// Rule 2: search the nearest url
 			JSONObject entry = it.getJSONObject("url");
 			Iterator keys = entry.keys();
 			if (keys.hasNext()) {
-				String key = (String) keys.next();
-				// Rule 1: url that not far from "example..." ???
-
-				// Rule 2: search the nearest url
+				String key = (String) keys.next();           
+				
 				if (templateNumber.matches("single")) {
 					// if it's a single page, search from all the text
 					if (Math.abs(paraLocation - entry.getInt(key)) < minimumDistance) {

@@ -59,7 +59,7 @@ public class ProcessResponse {
 	public JSONObject generateResponse(JSONObject openAPI, String codeText, String strAll, List<JSONObject> infoJson,
 			Annotation anno, Document doc, ProcessMethod processMe, AnnotationSet annoCode) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();
-		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, anno.getStartNode().getOffset(), "multiple");
+		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, anno.getStartNode().getOffset(), "multiple", doc, "example");
 		
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {
@@ -76,10 +76,29 @@ public class ProcessResponse {
 //				JsonElement jelement = parser.parse(codeText);
 //				Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
 				
+					
+				if (openAPI.getJSONObject("paths").has(url)) {
+					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
+					JSONObject actionObject;
+					
+					if (urlObject.has(action)) {
+						actionObject = urlObject.getJSONObject(action);
+						JSONObject defaultObject = new JSONObject();
+						defaultObject.put("description", "deault description");
+						
+						JSONObject schemaObject = new JSONObject();
+						schemaObject.put("$ref", codeText);
+						defaultObject.put("schema", schemaObject);
+						
+						JSONObject resObject = new JSONObject();
+						resObject.put("default", defaultObject);
+						
+						actionObject.put("responses", resObject);
+					}
+					
+				}
+								
 				
-				JSONObject actionObject = openAPI.getJSONObject("paths").getJSONObject(url).getJSONObject(action);
-				// 1. find the action
-				actionObject.put("responses", codeText);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
