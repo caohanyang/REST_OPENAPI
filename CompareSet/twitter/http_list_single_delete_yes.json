@@ -1,0 +1,380 @@
+{
+  "basePath": "/1.1",
+  "paths": {
+    "/lists/members/show": {
+      "GET": {}
+    },
+    "/lists/subscribers/destroy": {
+      "POST": {}
+    },
+    "/lists/ownerships": {
+      "GET": {}
+    },
+    "/friends/list": {
+      "GET": {}
+    },
+    "/collections/entries": {
+      "GET": {}
+    },
+    "/lists/update": {
+      "POST": {}
+    },
+    "/direct_messages/welcome_messages/new": {
+      "POST": {}
+    },
+    "/collections/list": {
+      "GET": {}
+    },
+    "/saved_searches/list": {
+      "GET": {}
+    },
+    "/help/configuration": {
+      "GET": {}
+    },
+    "/saved_searches/destroy/:id": {
+      "POST": {}
+    },
+    "/mutes/users/list": {
+      "GET": {}
+    },
+    "/blocks/create": {
+      "POST": {}
+    },
+    "/direct_messages/sent": {
+      "GET": {}
+    },
+    "/lists/subscribers/show": {
+      "GET": {}
+    },
+    "/direct_messages/events/list": {
+      "GET": {}
+    },
+    "https://upload.twitter.com/1.1/media/upload": {
+      "POST": {}
+    },
+    "/lists/show": {
+      "GET": {}
+    },
+    "/users/profile_banner": {
+      "GET": {}
+    },
+    "/favorites/destroy": {
+      "POST": {}
+    },
+    "/friendships/update": {
+      "POST": {}
+    },
+    "https%3A%2F%2Ftwitter.com%Interior%2Fstatus%2F507185938620219395": {
+      "GET": {}
+    },
+    "/account/update_profile_image": {
+      "POST": {}
+    },
+    "/trends/available": {
+      "GET": {}
+    },
+    "/lists/members/destroy_all": {
+      "POST": {}
+    },
+    "/lists/members/create": {
+      "POST": {}
+    },
+    "/direct_messages/events/new": {
+      "POST": {}
+    },
+    "/statuses/retweet/:id": {
+      "POST": {}
+    },
+    "/collections/entries/curate": {
+      "POST": {}
+    },
+    "/application/rate_limit_status": {
+      "GET": {}
+    },
+    "/friendships/outgoing": {
+      "GET": {}
+    },
+    "http://project.ioni.st": {
+      "POST": {}
+    },
+    "/favorites/list": {
+      "DELETE": {}
+    },
+    "/direct_messages/welcome_messages/rules/list": {
+      "GET": {}
+    },
+    "/geo/place": {
+      "POST": {}
+    },
+    "https%3A%2F%2Fexample.com%2F": {
+      "POST": {}
+    },
+    "/account/settings": {
+      "POST": {},
+      "GET": {}
+    },
+    "/trends/closest": {
+      "GET": {}
+    },
+    "/direct_messages/welcome_messages/rules/new": {
+      "POST": {}
+    },
+    "/lists/members": {
+      "GET": {}
+    },
+    "/mutes/users/create": {
+      "POST": {}
+    },
+    "/statuses/unretweet/:id": {
+      "POST": {}
+    },
+    "/saved_searches/create": {
+      "POST": {}
+    },
+    "/direct_messages/destroy": {
+      "DELETE": {}
+    },
+    "/direct_messages/welcome_messages/show": {
+      "GET": {}
+    },
+    "/geo/id/:place_id": {
+      "GET": {}
+    },
+    "/statuses/update": {
+      "POST": {},
+      "PUT": {}
+    },
+    "/followers/ids": {
+      "GET": {}
+    },
+    "/lists/statuses": {
+      "GET": {}
+    },
+    "/users/lookup": {
+      "POST": {}
+    },
+    "/friendships/lookup": {
+      "GET": {}
+    },
+    "/statuses/user_timeline": {
+      "DELETE": {}
+    },
+    "/trends/place": {
+      "GET": {}
+    },
+    "/collections/show": {
+      "GET": {}
+    },
+    "/direct_messages/welcome_messages/destroy": {
+      "DELETE": {}
+    },
+    "/search/tweets": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Solutions",
+            "description": "Build",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/lists/destroy": {
+      "POST": {}
+    },
+    "/lists/members/destroy": {
+      "POST": {}
+    },
+    "/direct_messages/events/show": {
+      "GET": {}
+    },
+    "/friendships/no_retweets/ids": {
+      "GET": {}
+    },
+    "http://twitter.com/privacy),whichgovernsourcollectionanduseofyourinformation.YouunderstandthatthroughyouruseoftheServicesyouconsenttothecollectionanduse(assetforthinthePrivacyPolicy)ofthisinformation,includingthetransferofthisinformationtotheUnitedStatesand/or": {
+      "POST": {}
+    },
+    "/geo/reverse_geocode": {
+      "GET": {}
+    },
+    "/collections/entries/remove": {
+      "POST": {}
+    },
+    "/help/privacy": {
+      "POST": {},
+      "GET": {}
+    },
+    "/users/report_spam": {
+      "POST": {}
+    },
+    "/direct_messages/welcome_messages/rules/show": {
+      "GET": {}
+    },
+    "/users/suggestions/:slug": {
+      "GET": {}
+    },
+    "https://t.co/9S8YO69xzf": {
+      "POST": {}
+    },
+    "/favorites/create": {
+      "POST": {}
+    },
+    "/users/show": {
+      "GET": {}
+    },
+    "/direct_messages/welcome_messages/rules/destroy": {
+      "DELETE": {}
+    },
+    "/collections/entries/move": {
+      "POST": {}
+    },
+    "/direct_messages": {
+      "DELETE": {}
+    },
+    "/followers/list": {
+      "GET": {}
+    },
+    "/statuses/update_with_media": {
+      "POST": {}
+    },
+    "/account/remove_profile_banner": {
+      "POST": {}
+    },
+    "/collections/destroy": {
+      "POST": {}
+    },
+    "/account/update_profile_banner": {
+      "POST": {}
+    },
+    "/help/languages": {
+      "GET": {}
+    },
+    "/statuses/destroy/:id": {
+      "POST": {}
+    },
+    "/blocks/ids": {
+      "GET": {}
+    },
+    "/mutes/users/ids": {
+      "GET": {}
+    },
+    "/statuses/retweets/:id": {
+      "GET": {}
+    },
+    "/statuses/lookup": {
+      "GET": {}
+    },
+    "/lists/subscribers": {
+      "GET": {}
+    },
+    "/friendships/incoming": {
+      "GET": {}
+    },
+    "/lists/members/create_all": {
+      "POST": {}
+    },
+    "/collections/entries/add": {
+      "POST": {}
+    },
+    "https://upload.twitter.com/1.1/media/metadata/create": {
+      "POST": {}
+    },
+    "/statuses/retweeters/ids": {
+      "GET": {}
+    },
+    "/users/suggestions": {
+      "GET": {}
+    },
+    "/mutes/users/destroy": {
+      "POST": {}
+    },
+    "/lists/list": {
+      "GET": {}
+    },
+    "/account/update_profile_background_image": {
+      "POST": {}
+    },
+    "/help/tos": {
+      "POST": {},
+      "GET": {}
+    },
+    "/statuses/retweets_of_me": {
+      "GET": {}
+    },
+    "/blocks/list": {
+      "GET": {}
+    },
+    "/friendships/show": {
+      "GET": {}
+    },
+    "/friendships/create": {
+      "POST": {}
+    },
+    "/account/verify_credentials": {
+      "GET": {}
+    },
+    "http://twitter.com/apirules)": {
+      "POST": {}
+    },
+    "/blocks/destroy": {
+      "POST": {}
+    },
+    "/users/search": {
+      "GET": {}
+    },
+    "/users/suggestions/:slug/members": {
+      "GET": {}
+    },
+    "https://si0.twimg.com/profile_banners/6253282/1347394302\"": {
+      "GET": {}
+    },
+    "/statuses/home_timeline": {
+      "DELETE": {}
+    },
+    "/statuses/show": {
+      "GET": {}
+    },
+    "/saved_searches/show/:id": {
+      "GET": {}
+    },
+    "/lists/subscribers/create": {
+      "POST": {}
+    },
+    "/direct_messages/new": {
+      "POST": {}
+    },
+    "/direct_messages/show": {
+      "GET": {}
+    },
+    "/statuses/mentions_timeline": {
+      "DELETE": {}
+    },
+    "/lists/memberships": {
+      "GET": {}
+    },
+    "/friends/ids": {
+      "GET": {}
+    },
+    "/lists/create": {
+      "POST": {}
+    },
+    "/direct_messages/welcome_messages/list": {
+      "GET": {}
+    },
+    "/lists/subscriptions": {
+      "GET": {}
+    },
+    "/geo/search": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.twitter.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

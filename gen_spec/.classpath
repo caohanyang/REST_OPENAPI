@@ -66,5 +66,6 @@
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/xpp3-1.1.4c.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/xstream-1.4.7.jar"/>
 	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib"/>
+	<classpathentry kind="lib" path="/Users/hanyangcao/Documents/paper/REST/REST_OPENAPI/gen_spec/lib/jsondiscoverer.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

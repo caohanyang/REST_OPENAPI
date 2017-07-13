@@ -83,15 +83,15 @@ public class ProcessResponse {
 					
 					if (urlObject.has(action)) {
 						actionObject = urlObject.getJSONObject(action);
-						JSONObject defaultObject = new JSONObject();
-						defaultObject.put("description", "deault description");
+						JSONObject correctObject = new JSONObject();
+						correctObject.put("description", "correct response");
 						
 						JSONObject schemaObject = new JSONObject();
 						schemaObject.put("$ref", codeText);
-						defaultObject.put("schema", schemaObject);
+						correctObject.put("schema", schemaObject);
 						
 						JSONObject resObject = new JSONObject();
-						resObject.put("default", defaultObject);
+						resObject.put("200", correctObject);
 						
 						actionObject.put("responses", resObject);
 					}

@@ -271,13 +271,17 @@ public class ProcessParameter {
 				}
 				
 				Long head = standard;
-				String headStr = gate.Utils.stringFor(doc, head - 50, head).toLowerCase();
+				String headStr = gate.Utils.stringFor(doc, Math.max(head - 50, 0), head).toLowerCase();
 				Long bottom = standard + paraStr.length();
-				String bottomStr = gate.Utils.stringFor(doc, bottom, bottom + 50).toLowerCase();
-				if (headStr.contains("example") | bottomStr.contains("example")) {
-					sectionObject.put("action", it.getJSONObject("action").keys().next());
-					sectionObject.put("url", it.getJSONObject("url").keys().next());
-					break;
+				
+				if (bottom < fullText.length()) {
+					// it should be less than the fullText length
+					String bottomStr = gate.Utils.stringFor(doc, bottom, Math.min(bottom + 50, fullText.length())).toLowerCase();
+					if (headStr.contains("example") | bottomStr.contains("example")) {
+						sectionObject.put("action", it.getJSONObject("action").keys().next());
+						sectionObject.put("url", it.getJSONObject("url").keys().next());
+						break;
+					}
 				}
 			}
 			
