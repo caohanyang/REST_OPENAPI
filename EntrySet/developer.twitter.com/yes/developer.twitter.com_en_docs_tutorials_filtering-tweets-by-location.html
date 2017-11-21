@@ -1,0 +1,1263 @@
+<html lang="en" prefix="og: http://ogp.me/ns#">
+ <head>
+ </head>
+ <body class="theme--purple page tutorial-single-page " data-analytics-component="tutorials/filtering-tweets-by-location" data-analytics-element="page" data-analytics-page="developer" data-analytics-section="docs">
+  <cq:includeclientlib categories="cq.jquery">
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+   <title>
+    Filtering Tweets by location — Twitter
+      Developers
+   </title>
+   <meta content="Learn how to filter Tweets by location." name="description"/>
+   <link href="https://developer.twitter.com/en/docs/tutorials/filtering-tweets-by-location.html" rel="canonical"/>
+   <meta content="https://developer.twitter.com/en/docs/tutorials/filtering-tweets-by-location.html" property="og:url"/>
+   <meta content="article" property="og:type"/>
+   <meta content="Filtering Tweets by location" property="og:title"/>
+   <meta content="Learn how to filter Tweets by location." property="og:description"/>
+   <meta content="summary" name="twitter:card"/>
+   <link href="https://developer.twitter.com/en/docs/tutorials/filtering-tweets-by-location.html" hreflang="en" rel="alternate"/>
+   <meta content="on" name="twitter:widgets:new-embed-design"/>
+   <meta content="on" name="twitter:widgets:csp"/>
+   <link href="https://abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+   <script id="analytics-settings" type="application/json">
+    {&quot;google&quot;:{&quot;accounts&quot;:[],&quot;options&quot;:{&quot;displayAdvertisingFeatures&quot;:false}},&quot;scribe&quot;:{&quot;scribeSectionWithImpression&quot;:false},&quot;trackingPixel&quot;:{},&quot;bing&quot;:{}}
+   </script>
+   <script src="/etc/clientlibs/dtm/developer-twitter/ac0b17d7a4556cd264c3df3fac5054e8fd5023f8/satelliteLib-bcb222e3dbd22c730c028ee768fd0b3bea0a8ea0.js" type="text/javascript">
+   </script>
+   <link href="/etc/designs/developer-twitter/public/css/critical.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/app.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/universal.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/structure.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/content.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/docs.css" media="all" rel="stylesheet"/>
+   <script src="/etc/designs/developer-twitter/public/js/common.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/critical.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/onload.js" type="text/javascript">
+   </script>
+   <div id="component-wrapper">
+    <div class="nav theme-bg-color--dark" data-current-level="0" data-hidden="true">
+     <div class="nav--wrapper">
+      <header class="nav__header">
+       <div class="nav__headeritem-left">
+        <div class="nav__headeritem-title">
+         <a class="logo-title color--neutral-white" href="https://developer.twitter.com/en.html">
+          <span class="logo">
+           <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg">
+            <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z">
+            </path>
+           </svg>
+          </span>
+          <span class="title color--neutral-white">
+           Developer
+          </span>
+         </a>
+         <a class="nav-icon" href="#">
+          <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+           <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+           </path>
+          </svg>
+         </a>
+         <a class="nav-back color--neutral-white" data-nav-back="true" href="#">
+          <span class="title color--neutral-white">
+           Back
+          </span>
+         </a>
+        </div>
+       </div>
+       <ul class="nav--menu nav--menu--root" data-currentpage="/content/developer-twitter/en/docs/tutorials" data-level="1">
+        <li class="nav--mobile-item nav--menu__list-item color--neutral-white " data-show-sub-level="false">
+         <a class="color--neutral-white" href="https://developer.twitter.com/en.html" title="Developer">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Developer
+          </span>
+         </a>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Use cases" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Use cases
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/advertise" title="Advertise">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Advertise
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/publish-and-curate" title="Publish and curate">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publish and curate
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/analyze" title="Analyze">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Analyze
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/engage" title="Engage">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Engage
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Products" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Products
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/accounts-and-users" title="Accounts and users">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Accounts and users
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/tweets" title="Tweets">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tweets
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/direct-messages" title="Direct Messages">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Direct Messages
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/metrics" title="Metrics">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Metrics
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/ad-campaigns" title="Ad campaigns">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Ad campaigns
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/publisher-tools" title="Publisher tools and SDKs">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publisher tools and SDKs
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Docs" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Docs
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/documentation" title="Documentation">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Documentation
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/api-reference-index" title="API reference index">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             API reference index
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/tutorials" title="Tutorials">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tutorials
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="More" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           More
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/case-studies" title="Case studies">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Case studies
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/enterprise" title="Enterprise data">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Enterprise data
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/developer-terms" title="Developer terms">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Developer terms
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/pricing" title="Pricing">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Pricing
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/billing-faq" title="Billing FAQ">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Billing FAQ
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/community" title="Community">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Community
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/forum" title="Forum">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Forum
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/blog" title="Blog">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Blog
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <div class="nav__headeritem-right">
+        <div class="freemium-nav" data-current-level="0" data-hidden="true">
+         <ul class="nav--menu nav--menu--root" data-level="1">
+          <!-- Handlebars template will be written here -->
+         </ul>
+        </div>
+        <!--<sly data-sly-resource="region-selector"/>-->
+        <div class="search">
+         <a class="search-icon js-nav-search" href="#">
+          <svg height="72" viewBox="0 0 56 72" width="56" xmlns="http://www.w3.org/2000/svg">
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+          </svg>
+         </a>
+        </div>
+        <div class="login-container signed-out" data-geo-country-code="ES" data-geo-location="AAAAEIClG5tuELwZJ6N6fW8Cbrj/OZN3mK6YmO4DMMCWmMcRdLNspe8J9afZMsqD0WsGT0eEQOQ=">
+         <div class="avatar">
+         </div>
+         <div class="sign-in">
+          <div class="btn-container">
+           <a href="https://twitter.com/login">
+            <button type="button">
+             Sign In
+            </button>
+           </a>
+          </div>
+         </div>
+        </div>
+        <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+         <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+         </path>
+        </svg>
+       </div>
+      </header>
+     </div>
+    </div>
+    <div class="nav__search-modal theme-bg-color--dark">
+     <div class="search-bar search-bar--js theme-color--extra-light theme-fill-color--extra-light theme-border-color--extra-light" data-search-path="/en/search-results.html">
+      <input autocomplete="off" class="search-bar__input" name="q" placeholder="Type your search here" type="search"/>
+      <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <div class="transparent-masthead">
+    </div>
+    <div class="page-wrapper tutorial-single-page">
+     <div class="c11-masthead">
+      <div class="text bg-color--neutral-white c11-masthead__bgColorWrapper ">
+       <div class="c11-masthead__contentWrapper container">
+        <p class="c11-masthead__eyebrow theme-color--dark">
+         Tutorials
+        </p>
+        <h1 class="c11-masthead__headline text color--neutral-white">
+         Filtering Tweets by location
+        </h1>
+       </div>
+      </div>
+     </div>
+     <div class="d06-anchor-link-menu">
+      <div class="tabs-nav__toc">
+       <span class="tabs-nav__toc__title">
+        Jump to on this page
+        <span class="arrow-down fill-color--neutral-light-gray">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </span>
+       <div class="tabs-nav__toc__list">
+        <p>
+         <a href="#intro">
+          Introduction
+         </a>
+        </p>
+        <p>
+         <a href="#tweet_locations">
+          Tweet locations
+         </a>
+        </p>
+        <p>
+         <a href="#tweet_location_operators">
+          Tweet location operators
+         </a>
+        </p>
+        <p>
+         <a href="#profile_locations">
+          Profile locations
+         </a>
+        </p>
+        <p>
+         <a href="#profile_location_operators">
+          Profile location operators
+         </a>
+        </p>
+        <p>
+         <a href="#other_geo_operators">
+          Other geo operators
+         </a>
+        </p>
+        <p>
+         <a href="#usage_examples">
+          Usage examples
+         </a>
+        </p>
+        <p>
+         <a href="#next">
+          Next steps
+         </a>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="s01-section">
+      <div class="s01-section__container bg-color--neutral-white">
+       <div class="container ">
+        <div class="column column-2">
+         <div class="s01-section__left">
+          <h2>
+          </h2>
+          <div>
+           <div class="c01-rich-text-editor">
+            <h4>
+             Relevant products
+            </h4>
+            <h4>
+            </h4>
+            <p>
+             <a href="https://developer.twitter.com/en/docs/tweets/search">
+              <span class="with-caret">
+               30-day and Full-Archive Search APIs
+              </span>
+             </a>
+             <br/>
+             <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime">
+              <span class="with-caret">
+               Real-time PowerTrack
+              </span>
+             </a>
+             <br/>
+             <a href="https://developer.twitter.com/en/docs/tweets/batch-historical">
+              <span class="with-caret">
+               Historical PowerTrack
+              </span>
+             </a>
+            </p>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="column column-10 ">
+         <div class="c01-rich-text-editor">
+          <h2>
+           <a name="intro">
+           </a>
+           Introduction
+          </h2>
+          <p>
+           When working with Tweet data, there are two classes of geographical metadata:
+          </p>
+          <ul>
+           <li>
+            Tweet location - Available when user shares location at time of Tweet.
+           </li>
+           <li>
+            Account Location - Based on the ‘home’ location provided by user in their public profile. This is a free-form character field and may or may not contain metadata that can be geo-referenced.
+           </li>
+          </ul>
+          <p>
+           These are described separately in the next two sections.
+          </p>
+          <p>
+           <i>
+            Important Notes:
+           </i>
+          </p>
+          <ul>
+           <li>
+            Geographical coordinates are provided in the [LONG, LAT] order. The one exception is the deprecated  ‘geo’ attribute, which has the reverse [LAT, LONG] order.
+           </li>
+           <li>
+            All PowerTrack Geo-Operators expect coordinates in the [LONG, LAT] order.
+           </li>
+          </ul>
+          <p>
+           If you are using the ‘original’ format:
+          </p>
+          <ul>
+           <li>
+            JSON parsers should use the [LONG, LAT] order and always ignore the root-level ‘geo’ attribute.
+           </li>
+          </ul>
+          <p>
+           If you are using the Activity Stream format:
+          </p>
+          <ul>
+           <li>
+            Geo-tagged tweets will have a root-level ‘geo’ attribute in the
+            <i>
+             [LAT, LONG]
+            </i>
+            order.
+           </li>
+           <li>
+            All other geographic coordinate attributes are in [LONG,LAT] order.
+           </li>
+          </ul>
+          <h2>
+           <a name="tweet_locations">
+           </a>
+           Tweet locations ("geo-tagged" Tweets)
+           <a>
+           </a>
+          </h2>
+          <p>
+           Twitter enables users to specify a location for individual Tweets. PowerTrack offers multiple ways to filter for Tweets by Tweet-specific location data through its various operators (see our documentation for
+           <a href="https://developer.twitter.com/en/docs/tweets/rules-and-filtering">
+            Twitter PowerTrack Operators
+           </a>
+           for details). Tweet-specific location information falls into two general categories:
+          </p>
+          <ul>
+           <li>
+            Tweets with a specific latitude/longitude “Point” coordinate
+           </li>
+           <li>
+            Tweets with a Twitter “Place” (see
+            <a href="https://blog.twitter.com/2010/twitter-places-more-context-your-tweets" style="background-color: rgb(255,255,255);">
+             HERE
+            </a>
+            and
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects" style="background-color: rgb(255,255,255);">
+             HERE
+            </a>
+            for more information).
+           </li>
+          </ul>
+          <p>
+           Tweets with a Point coordinate come from GPS enabled devices, and represent the exact GPS location of the Tweet in question. This type of location does not contain any contextual information about the GPS location being referenced (e.g. associated city, country, etc.), unless the exact location can be associated with a Twitter Place.
+          </p>
+          <p>
+           Tweets with a Twitter “Place” contain a polygon, consisting of 4 lon-lat coordinates that define the general area (the “Place”) from which the user is posting the Tweet. Additionally, the Place will have a display name, type (e.g. city, neighborhood), and country code corresponding to the country where the Place is located, among other fields.
+          </p>
+          <h3>
+           Twitter Place JSON
+          </h3>
+          <p>
+           Below is example JSON from a Tweet geo-tagged with the "Boulder, CO" Twitter Place.
+          </p>
+         </div>
+         <div class="d02-inline-code-snippet">
+          <pre>  <code class="d02-inline-code-snippet__copy">{
+   "place": {
+     "id": "fd70c22040963ac7",
+     "url": "https:\/\/api.twitter.com\/1.1\/geo\/id\/fd70c22040963ac7.json",
+     "place_type": "city",
+     "name": "Boulder",
+     "full_name": "Boulder, CO",
+     "country_code": "US",
+     "country": "United States",
+     "contained_within": [
+
+     ],
+     "bounding_box": {
+       "type": "Polygon",
+       "coordinates": [
+         [
+           [-105.301758, 39.964069],
+           [-105.301758, 40.094551],
+           [-105.178142, 40.094551],
+           [-105.178142, 39.964069]
+         ]
+       ]
+     },
+     "attributes": {}
+   }
+}
+</code>
+</pre>
+         </div>
+         <div class="c01-rich-text-editor">
+          <h3>
+           Exact location JSON
+          </h3>
+          <p>
+           In the case of Twitter’s original format, the root level “geo” and “coordinates” attributes provide the decimal degree coordinates for the exact location. Tweets containing this metadata can also include “Twitter Place” data described above, although the presence of both is not guaranteed.
+          </p>
+          <p>
+           Note that the “coordinates” attributes is formatted as [LONGITUDE, latitude], while the “geo” attribute is formatted as [latitude, LONGITUDE].
+          </p>
+         </div>
+         <div class="d02-inline-code-snippet">
+          <pre>  <code class="d02-inline-code-snippet__copy">{
+    "geo": {
+        "type": "Point",
+        "coordinates": [40.0160921, -105.2812196]
+    },
+    "coordinates": {
+        "type": "Point",
+        "coordinates": [-105.2812196, 40.0160921]
+    }
+}</code>
+</pre>
+         </div>
+         <div class="c01-rich-text-editor">
+          <h2>
+           <a name="tweet_location_operators">
+           </a>
+           Tweet location operators
+           <a>
+           </a>
+          </h2>
+          <h4>
+           place:
+          </h4>
+          <p>
+           Filter for specific Places by their name or ID. To discover “Places” associated with a specific area, use Twitter’s reverse_geocode endpoint in the REST API. Then use the Place IDs you find with the place: operator to track Tweets that include the specific Place being referenced. If you use the Place name rather than the numeric ID, ensure that you quote any names that include spaces or punctuation.
+          </p>
+          <h4>
+           place_contains:
+          </h4>
+          <p>
+           Rather than matching for specific Places, the place_contains: operator performs a substring match against Place names sent through from Twitter. This can accommodate concepts like place_contains:”, CO” to match Places that contain names like “Boulder, CO” or “Denver, CO”.
+          </p>
+          <h4>
+           place_country:
+          </h4>
+          <p>
+           Each Twitter “Place” comes with a country code, indicating the country in which the Place is located. The country_code: operator allows you to filter on this ISO alpha-2 character code (see HERE for country code references).
+          </p>
+          <h4>
+           has:geo
+          </h4>
+          <p>
+           The has:geo operator matches for the presence of either Point or Place geo information within the Twitter payload. Note that this does not allow you to specify specific locations or types of geo data, it simply requires that results have Tweet-specific location information of some kind.
+          </p>
+          <h4>
+           point_radius:
+          </h4>
+          <p>
+           The point_radius: operator allows you to specify a circular geographic area and match Tweets containing Tweet-specific location data that fall within that area. To use, define a central lon-lat coordinate, and then set the radius (up to 25 miles). Any Tweet containing a geo Point that falls within this region will be matched. Addtionally, Tweets containing Twitter Places will match where the geo polygon defined for the Place falls fully within the defined point-radius area. Places whose polygons fall outside the defined point-radius area to any extent will not match.
+          </p>
+          <p>
+           Usage resembles the following:  point_radius:[lon lat radius]
+          </p>
+          <h4>
+           bounding_box:
+          </h4>
+          <p>
+           The bounding_box: operator allows you to specify a 4-sided geographic area and match Tweets containing Tweet-specific location data that fall within that area. To use, define lon-lat coordinates that represent the opposite corners of the box, such that each side of the box is up to 25 miles in length. Any Tweet containing a geo Point that falls within this region will be matched. Addtionally, Tweets containing Twitter Places will match where the geo polygon defined for the Place falls fully within the defined point-radius area. Places whose polygons fall outside the defined point-radius area to any extent will not match.
+          </p>
+          <p>
+           Usage resembles the following: bounding_box:[west_long south_lat east_long north_lat]
+          </p>
+          <p>
+          </p>
+          <h2>
+           <a name="profile_locations">
+           </a>
+           Profile locations (account "home")
+           <a>
+           </a>
+          </h2>
+          <p>
+           Another option in filtering for Tweets by location information is to match for location information within a Twitter user’s profile. Several data fields fall into this category, but all represent types of information which are set by the user at the account level. These values are generally not frequently changed by the user, and do not necessarily represent the location that the user is currently Tweeting from, although they may.
+          </p>
+          <p>
+           In addition to the profile location provided by Twitter, Gnip provides an optional Profile Geo enrichment that formalizes the data in the profile location, and makes it more convenient to filter.
+          </p>
+          <h3>
+          </h3>
+          <h4>
+           Profile location metadata
+          </h4>
+         </div>
+         <div class="d02-inline-code-snippet">
+          <pre>  <code class="d02-inline-code-snippet__copy">{
+    "user": {
+        "location": "Boulder, CO",
+        "description": "By now feeling like a Colorado native",
+        "utc_offset": -25200,
+        "time_zone": "Mountain Time (US &amp; Canada)",
+    }
+}</code>
+</pre>
+         </div>
+         <div class="c01-rich-text-editor">
+          <p>
+           With the Profile Geo enrichment enabled, the above Twitter Profile Location results in the following
+           <i>
+            user.derived.locations
+           </i>
+           attribute in the root-level
+           <i>
+            user
+           </i>
+           object. Note that the
+           <i>
+            user.derived.locations
+           </i>
+           attribute is defined as an array of locations. While only one location is currently provided, the Profile Geo enrichment may in the future be able to resolve multiple locations mentioned is a user’s Profile Location. See
+           <a href="https://developer.twitter.com/en/docs/tweets/enrichments/overview/profile-geo">
+            HERE
+           </a>
+           for more information
+           <br/>
+           on the Profile Geo enrichment.
+          </p>
+          <h5>
+           Profile geo metadata
+          </h5>
+          <p>
+           <b>
+            Note:
+           </b>
+           <i>
+            that all Profile Geo coordinates are provided in the [Longitude, Latitude] order.
+           </i>
+          </p>
+         </div>
+         <div class="d02-inline-code-snippet">
+          <pre>  <code class="d02-inline-code-snippet__copy">{
+  "user": {
+    "location": "Boulder, CO",
+    "derived": {
+      "locations": [
+        {
+          "country": "United States",
+          "country_code": "US",
+          "locality": "Boulder",
+          "region": "Colorado",
+          "sub_region": "Boulder County",
+          "full_name": "Boulder, Colorado, United States",
+          "geo": {
+            "coordinates": [
+              -105.27055,
+              40.01499
+            ],
+            "type": "point"
+          }
+        }
+      ]
+    }
+  }
+}</code>
+</pre>
+         </div>
+         <div class="c01-rich-text-editor">
+          <h2>
+           <a name="profile_location_operators">
+           </a>
+           Profile location operators
+           <a>
+           </a>
+          </h2>
+          <h4>
+           Profile Geo Operators
+          </h4>
+          <p>
+           The following Operators are available for building rules if you have the Profile Geo enrichment enabled:
+          </p>
+          <h4>
+           has:profile_geo
+          </h4>
+          <p>
+           This filter matches for the presence of Profile Geo enrichment data in a specific Tweet, regardless of the value. This will only match Tweets where the user's "home" setting was successfully geo-referenced to at least the country level. For example, a Tweet from a user with an account home set to "the internet" will not match this Operator, but a home of 'USA' will.
+          </p>
+          <h4>
+           profile_point_radius: / profile_bounding_box:
+          </h4>
+          <p>
+           Matches tweets where Gnip’s Profile Geo enrichment data is available, and falls within the defined point-radius or bounding-box area. Note: this will only match Tweets where Gnip has been able to provide formal Geography information for the profile location provided by the Twitter user, consistent with the description of the enrichment here.
+          </p>
+          <p>
+           Usage resembles the following:
+          </p>
+          <p>
+           profile_point_radius:[lon lat radius]
+           <br/>
+           <br/>
+           profile_bounding_box:[west_long south_lat east_long north_lat]
+          </p>
+          <h4>
+           profile_country:
+          </h4>
+          <p>
+           Matches tweets where Gnip’s Profile Geo enrichment data is available, and contains the defined country code. Note: this will only match Tweets where Gnip has been able to provide formal Geography information for the profile location provided by the Twitter user, consistent with the description of the enrichment here.
+          </p>
+          <h4>
+           profile_region:
+          </h4>
+          <p>
+           Matches tweets where Gnip’s Profile Geo enrichment data is available, and includes the specified “region.” Note that profile_region: will perform an exact string match. This will only match Tweets where Gnip has been able to provide formal Geography information for the profile location provided by the Twitter user, consistent with the description of the enrichment here.
+          </p>
+          <h4>
+           profile_locality:
+          </h4>
+          <p>
+           Matches tweets where Gnip’s Profile Geo enrichment data is available, and includes the specified “locality.” Note that profile_locality: will perform an exact string match. This will only match Tweets where Gnip has been able to provide formal Geography information for the profile location provided by the Twitter user, consistent with the description of the enrichment here.
+          </p>
+          <h3>
+          </h3>
+          <h3>
+           Standard profile location operators
+          </h3>
+          <p>
+           The following Operators are available for filtering on location mentions in a user’s Twitter Profile Location and are not dependent on having the Profile Geo enrichment enabled:
+          </p>
+          <h4>
+           bio_location:
+          </h4>
+          <p>
+           The bio_location: operator performs a tokenized match against the user’s account-level location field. Note that this field is user-generated and does not necessarily reflect an actual location, and generally does not change from Tweet to Tweet.
+          </p>
+          <h4>
+           time_zone:
+           <br/>
+          </h4>
+          <p>
+           Matches the user’s account-level time zone, as selected in their account settings on twitter.com ([https://twitter.com/account/settings]).
+          </p>
+          <p>
+          </p>
+          <h2>
+           <a name="other_geo_operators">
+           </a>
+           Other geo operators
+           <a>
+           </a>
+          </h2>
+          <p>
+           The following additional operators filter on fields which, while not explicitly location fields, do sometimes contain account-based location information
+          </p>
+          <h4>
+           bio_contains:
+          </h4>
+          <p>
+           Performs a substring match on the user’s account-level bio, which is comprised of user-generated text and may not include location information. Available with real-time and Historical PowerTrack.
+          </p>
+          <h4>
+           bio_lang:
+          </h4>
+          <p>
+           Matches Tweets based on the account-level language associated with the user. This language is set at the account level and will be represented by an ISO 639-1 language code. Note that Twitter does not support all languages on the ISO 639-1 list, and the language may not actually reflect the user’s true language, as there are default values, and the user can change the value.
+          </p>
+          <p>
+          </p>
+          <h2>
+           <a name="usage_examples">
+           </a>
+           Usage examples
+           <a>
+           </a>
+          </h2>
+          <p>
+           In many cases, you may want to pull in as much data as possible related to a location, regardless of whether this information exists as Tweet-specific information, or information contained in the user’s account metadata. Below are examples of how the various operators can be combined in a rule to catch more types of data. In these examples, the rule is looking for mentions of the hashtag ‘#FlagstaffFire’ that contain various types of location data.
+          </p>
+          <ul>
+           <li>
+            <p>
+             Geo-tagged Tweets within a bounding box or associated with a Twitter Place that mentions “Boulder”:
+            </p>
+            <p>
+             <b>
+              #FlagstaffFire (bounding_box:[-105.301758 39.964069 -105.178505 40.09455] OR place:Boulder)
+             </b>
+            </p>
+           </li>
+           <li>
+            <p>
+             Tweets from users that have Profile Locations that mention Boulder, CO and not Boulder, NV, using
+             <b>
+              standard
+             </b>
+             Profile Location Operators:
+            </p>
+            <p>
+             <b>
+              #FlagstaffFire bio_location:boulder -(bio_location:nevada OR bio_location:", NV")
+             </b>
+            </p>
+           </li>
+           <li>
+            <p>
+             Tweets from users that have Profile Locations that mention Boulder, CO and not Boulder, NV, using
+             <b>
+              Profile Geo
+             </b>
+             Operators:
+            </p>
+            <p>
+             <b>
+              #FlagstaffFire profile_locality:boulder profile_region:colorado
+             </b>
+            </p>
+           </li>
+           <li>
+            <p>
+             Tweets that have any Activity Location (geo-tagged Tweet) with a Profile timezone set to US Mountain:
+            </p>
+            <p>
+             <b>
+              #FlagstaffFire has:geo time_zone:"Mountain Time (US &amp; Canada)"
+             </b>
+            </p>
+           </li>
+           <li>
+            <p>
+             Tweets with any hint of coming from the Boulder, CO area using
+             <b>
+              Profile Geo
+             </b>
+             Operators:
+            </p>
+            <p>
+             <b>
+              #FlagstaffFire (point_radius:[-105.292778 40.019444 25mi] OR place:"Boulder, CO" OR (profile_locality:boulder profile_region:colorado ))
+             </b>
+            </p>
+            <p>
+            </p>
+           </li>
+          </ul>
+         </div>
+         <div class="c01-rich-text-editor">
+          <h2>
+           <a name="next">
+           </a>
+           Next steps
+          </h2>
+          <p>
+           <a href="https://developer.twitter.com/en/docs/tweets/rules-and-filtering">
+            Learn more about PowerTrack operators
+           </a>
+          </p>
+          <p>
+           <a href="https://developer.twitter.com/en/docs/tweets/enrichments/overview/profile-geo">
+            Learn more about the Profile Geo enrichment
+           </a>
+          </p>
+          <p>
+          </p>
+          <p>
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="c11-masthead c13-cta-billboard">
+      <div class="text bg-color--neutral-white c11-masthead__bgColorWrapper ">
+       <div class="c11-masthead__contentWrapper container">
+        <p class="c11-masthead__eyebrow theme-color--dark">
+         Ready to build your solution?
+        </p>
+        <h1 class="c11-masthead__headline text color--neutral-white">
+         Review the documentation to get started
+        </h1>
+        <button class="c11-masthead__button">
+         <a href="https://developer.twitter.com/en/docs" target="_blank" title="Go to docs">
+          Go to docs
+         </a>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer theme-bg-color--dark">
+     <div class="footer--banner theme-bg-color--extra-light">
+      <div class="footer__row container">
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="https://developer.twitter.com/en/developer-terms" target="_blank" title="Developer policy and terms">
+         Developer policy and terms
+        </a>
+       </div>
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="http://twitter.com/twitterdev" target="_blank" title="Follow @twitterdev">
+         Follow @twitterdev
+        </a>
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+        <a class="c04-link-button c04-link-button--button theme-bg-color--extra-extra-light theme-bg-color--extra-extra-light--hover" href="https://developer.twitter.com/en/twitterdev-news-subscription" target="_self">
+         Subscribe to developer news
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="footer__row container footer__row--main">
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com" target="_blank" title="About">
+        About
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company.html" target="_blank" title="Company">
+          Company
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/values.html" target="_blank" title="Values">
+          Values
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/safety.html" target="_blank" title="Safety">
+          Safety
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/official/en_us.html" target="_blank" title="Blog">
+          Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company/brand-resources.html" target="_blank" title="Brand Resources">
+          Brand Resources
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://careers.twitter.com/en.html" target="_blank" title="Careers">
+          Careers
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://investor.twitterinc.com/" target="_blank" title="Investors">
+          Investors
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/" target="_blank" title="Business">
+        Business
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/advertising.html" target="_blank" title="About Twitter Ads">
+          About Twitter Ads
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/targeting.html" target="_blank" title="Targeting">
+          Targeting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/analytics.html" target="_blank" title="Analytics">
+          Analytics
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/help.html" target="_blank" title="Ads support">
+          Ads support
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/small-business" target="_blank" title="Business blog">
+          Business blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://ads.twitter.com/login?ref=en-btc-gobal-footer" target="_blank" title="Advertise">
+          Advertise
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/" target="_blank" title="Developers">
+        Developers
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/overview/documentation" target="_blank" title="Documentation">
+          Documentation
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twittercommunity.com/" target="_blank" title="Forums">
+          Forums
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/community" target="_blank" title="Communities">
+          Communities
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/developer" target="_blank" title="Developer blog">
+          Developer blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/" target="_blank" title="Help Center">
+        Help Center
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/215585" target="_blank" title="Using Twitter">
+          Using Twitter
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/login" target="_blank" title="My account">
+          My account
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/283" target="_blank" title="Fixing a problem">
+          Fixing a problem
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/284" target="_blank" title="Policies and reporting">
+          Policies and reporting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/safety" target="_blank" title="Safety Center">
+          Safety Center
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/" target="_blank" title="Marketing">
+        Marketing
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/insights.html" target="_blank" title="Insights">
+          Insights
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/success-stories.html" target="_blank" title="Success Stories">
+          Success Stories
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/solutions.html" target="_blank" title="Solutions">
+          Solutions
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/collections.html" target="_blank" title="Collections">
+          Collections
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/advertising" target="_blank" title="Marketing Blog">
+          Marketing Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitterflightschool.com" target="_blank" title="Flight School">
+          Flight School
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__row container">
+      <div class="footer-col">
+       <p class="footer-col__footnote type--roman-14 theme-color--extra-light">
+        © 2017 Twitter, Inc.
+       </p>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/20170520" target="_blank" title="Cookies">
+        Cookies
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/privacy" target="_blank" title="Privacy">
+        Privacy
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/tos" target="_blank" title="Terms and Conditions">
+        Terms and Conditions
+       </a>
+      </div>
+     </div>
+    </footer>
+    <!--<div class="modal_container">-->
+    <div class="c20-modal__modal module-modal" data-modal="true">
+     <div class="c20-modal__scrollable" data-modal-scroll-container="true">
+      <div class="c20-modal__details" data-modal-content-container="true">
+       <!-- template is injected here -->
+      </div>
+      <ul class="c20-modal__navigation">
+       <li aria-label="Read previous biography" class="c20-modal__navigation-prev" data-modal-nav="prev-link">
+        <span class="c20-modal__navigation-label">
+         Read Previous
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="prev-text">
+        </span>
+       </li>
+       <li aria-label="Read next biography" class="c20-modal__navigation-next" data-modal-nav="next-link">
+        <span class="c20-modal__navigation-label">
+         Read Next
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="next-text">
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="module-modal__close-container">
+     <div class="c20-modal__modal-close module-modal__close" data-trigger="close-modal">
+      <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+       <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <!--</div>-->
+   </div>
+   <script src="/etc/designs/common-twitter/dtm-footer.min.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/app.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/universal.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/structure.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/content.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/docs.js" type="text/javascript">
+   </script>
+   <script async="" src="https://platform.twitter.com/widgets.js">
+   </script>
+  </cq:includeclientlib>
+ </body>
+</html>

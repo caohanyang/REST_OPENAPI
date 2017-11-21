@@ -1,0 +1,2358 @@
+<html lang="en" prefix="og: http://ogp.me/ns#">
+ <head>
+ </head>
+ <body class="theme--purple page documentation-page " data-analytics-component="tweets/batch-historical/api-reference/historical-powertrack" data-analytics-element="page" data-analytics-page="developer" data-analytics-section="docs">
+  <cq:includeclientlib categories="cq.jquery">
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+   <title>
+    Historical PowerTrack — Twitter
+      Developers
+   </title>
+   <meta name="description"/>
+   <link href="https://developer.twitter.com/en/docs/tweets/batch-historical/api-reference/historical-powertrack.html" rel="canonical"/>
+   <meta content="https://developer.twitter.com/en/docs/tweets/batch-historical/api-reference/historical-powertrack.html" property="og:url"/>
+   <meta content="article" property="og:type"/>
+   <meta content="Historical PowerTrack" property="og:title"/>
+   <link href="https://developer.twitter.com/en/docs/tweets/batch-historical/api-reference/historical-powertrack.html" hreflang="en" rel="alternate"/>
+   <meta content="on" name="twitter:widgets:new-embed-design"/>
+   <meta content="on" name="twitter:widgets:csp"/>
+   <link href="https://abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+   <script id="analytics-settings" type="application/json">
+    {&quot;google&quot;:{&quot;accounts&quot;:[],&quot;options&quot;:{&quot;displayAdvertisingFeatures&quot;:false}},&quot;scribe&quot;:{&quot;scribeSectionWithImpression&quot;:false},&quot;trackingPixel&quot;:{},&quot;bing&quot;:{}}
+   </script>
+   <script src="/etc/clientlibs/dtm/developer-twitter/ac0b17d7a4556cd264c3df3fac5054e8fd5023f8/satelliteLib-bcb222e3dbd22c730c028ee768fd0b3bea0a8ea0.js" type="text/javascript">
+   </script>
+   <link href="/etc/designs/developer-twitter/public/css/critical.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/app.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/universal.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/structure.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/content.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/page.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/docs.css" media="all" rel="stylesheet"/>
+   <script src="/etc/designs/developer-twitter/public/js/common.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/critical.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/onload.js" type="text/javascript">
+   </script>
+   <div id="component-wrapper">
+    <div class="nav theme-bg-color--dark" data-current-level="0" data-hidden="true">
+     <div class="nav--wrapper">
+      <header class="nav__header">
+       <div class="nav__headeritem-left">
+        <div class="nav__headeritem-title">
+         <a class="logo-title color--neutral-white" href="https://developer.twitter.com/en.html">
+          <span class="logo">
+           <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg">
+            <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z">
+            </path>
+           </svg>
+          </span>
+          <span class="title color--neutral-white">
+           Developer
+          </span>
+         </a>
+         <a class="nav-icon" href="#">
+          <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+           <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+           </path>
+          </svg>
+         </a>
+         <a class="nav-back color--neutral-white" data-nav-back="true" href="#">
+          <span class="title color--neutral-white">
+           Back
+          </span>
+         </a>
+        </div>
+       </div>
+       <ul class="nav--menu nav--menu--root" data-currentpage="/content/developer-twitter/en/docs/tweets/batch-historical/api-reference" data-level="1">
+        <li class="nav--mobile-item nav--menu__list-item color--neutral-white " data-show-sub-level="false">
+         <a class="color--neutral-white" href="https://developer.twitter.com/en.html" title="Developer">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Developer
+          </span>
+         </a>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Use cases" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Use cases
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/advertise" title="Advertise">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Advertise
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/publish-and-curate" title="Publish and curate">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publish and curate
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/analyze" title="Analyze">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Analyze
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/engage" title="Engage">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Engage
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Products" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Products
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/accounts-and-users" title="Accounts and users">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Accounts and users
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/tweets" title="Tweets">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tweets
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/direct-messages" title="Direct Messages">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Direct Messages
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/metrics" title="Metrics">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Metrics
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/ad-campaigns" title="Ad campaigns">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Ad campaigns
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/publisher-tools" title="Publisher tools and SDKs">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publisher tools and SDKs
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Docs" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Docs
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/documentation" title="Documentation">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Documentation
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/api-reference-index" title="API reference index">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             API reference index
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/tutorials" title="Tutorials">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tutorials
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="More" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           More
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/case-studies" title="Case studies">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Case studies
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/enterprise" title="Enterprise data">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Enterprise data
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/developer-terms" title="Developer terms">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Developer terms
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/pricing" title="Pricing">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Pricing
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/billing-faq" title="Billing FAQ">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Billing FAQ
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/community" title="Community">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Community
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/forum" title="Forum">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Forum
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/blog" title="Blog">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Blog
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <div class="nav__headeritem-right">
+        <div class="freemium-nav" data-current-level="0" data-hidden="true">
+         <ul class="nav--menu nav--menu--root" data-level="1">
+          <!-- Handlebars template will be written here -->
+         </ul>
+        </div>
+        <!--<sly data-sly-resource="region-selector"/>-->
+        <div class="search">
+         <a class="search-icon js-nav-search" href="#">
+          <svg height="72" viewBox="0 0 56 72" width="56" xmlns="http://www.w3.org/2000/svg">
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+          </svg>
+         </a>
+        </div>
+        <div class="login-container signed-out" data-geo-country-code="ES" data-geo-location="AAAAEIC1ewh1+94Fi+p6mawpzVc++v5W3emrpSZ9KXmqcb0qu/7WMWH0IFaGqKXoyt5b0rJ554c=">
+         <div class="avatar">
+         </div>
+         <div class="sign-in">
+          <div class="btn-container">
+           <a href="https://twitter.com/login">
+            <button type="button">
+             Sign In
+            </button>
+           </a>
+          </div>
+         </div>
+        </div>
+        <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+         <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+         </path>
+        </svg>
+       </div>
+      </header>
+     </div>
+    </div>
+    <div class="nav__search-modal theme-bg-color--dark">
+     <div class="search-bar search-bar--js theme-color--extra-light theme-fill-color--extra-light theme-border-color--extra-light" data-search-path="/en/search-results.html">
+      <input autocomplete="off" class="search-bar__input" name="q" placeholder="Type your search here" type="search"/>
+      <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <div class="transparent-masthead">
+    </div>
+    <div class="page-wrapper documentation-page">
+     <div class="page-content container left-rail-container">
+      <div class="sidebar-content side-nav column column-3">
+       <span class="side-nav__close fill-color--neutral-extra-light-gray">
+        <svg height="72" viewBox="0 0 46 72" width="46" xmlns="http://www.w3.org/2000/svg">
+         <path d="M27.243 36l14.879-14.879a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0L23 31.758 8.122 16.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L18.758 36 3.879 50.879A2.998 2.998 0 0 0 6.001 56a2.99 2.99 0 0 0 2.121-.879L23 40.242l14.879 14.879A2.991 2.991 0 0 0 40 56a2.998 2.998 0 0 0 2.121-5.121L27.243 36z">
+         </path>
+        </svg>
+       </span>
+       <div class="search-bar search-bar--js search-bar--docs" data-search-path="/en/search-results.html">
+        <input autocomplete="off" class="search-bar__input" name="q" placeholder="Search all documentation..." type="search"/>
+        <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+         <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+         </path>
+         <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+         </path>
+        </svg>
+       </div>
+       <ul class="side-nav__top-level">
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/basics" title="Basics">
+          Basics
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/getting-started" title="Getting started">
+            Getting started
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/things-every-developer-should-know" title="Things every developer should know">
+            Things every developer should know
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/authentication" title="Authentication">
+            Authentication
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/rate-limits" title="Rate limits">
+            Rate limits
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/rate-limiting" title="Rate Limiting">
+            Rate Limiting
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/response-codes" title="Response Codes">
+            Response Codes
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/cursoring" title="Cursoring">
+            Cursoring
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/security-best-practices" title="Security">
+            Security
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/twitter-ids" title="Twitter IDs (snowflake)">
+            Twitter IDs (snowflake)
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/counting-characters" title="Counting characters">
+            Counting characters
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/tco" title="t.co links">
+            t.co links
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/adding-international-support-to-apps" title="Adding international support to apps">
+            Adding international support to apps
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/accounts-and-users" title="Accounts and users">
+          Accounts and users
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity" title="Subscribe to your account activity">
+            Subscribe to your account activity
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings" title="Manage account settings and profile">
+            Manage account settings and profile
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users" title="Mute, block and report users">
+            Mute, block and report users
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users" title="Follow, search, and get users">
+            Follow, search, and get users
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists" title="Create and manage lists">
+            Create and manage lists
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/user-profile-images-and-banners" title="User Profile Images and Banners">
+            User Profile Images and Banners
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="open">
+         <a data-href="/content/developer-twitter/en/docs/tweets" title="Tweets">
+          Tweets
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/post-and-engage" title="Post, retrieve and engage with Tweets">
+            Post, retrieve and engage with Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/timelines" title="Get Tweet timelines">
+            Get Tweet timelines
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/curate-a-collection" title="Curate a collection of Tweets">
+            Curate a collection of Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards" title="Optimize Tweets with Cards">
+            Optimize Tweets with Cards
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/search" title="Search Tweets">
+            Search Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime" title="Filter realtime Tweets">
+            Filter realtime Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/sample-realtime" title="Sample realtime Tweets">
+            Sample realtime Tweets
+           </a>
+          </li>
+          <li class="active">
+           <a href="https://developer.twitter.com/en/docs/tweets/batch-historical" title="Get batch historical Tweets">
+            Get batch historical Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/compliance" title="Tweet compliance">
+            Tweet compliance
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary" title="Tweet data dictionaries">
+            Tweet data dictionaries
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/rules-and-filtering" title="Rules and filtering">
+            Rules and filtering
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/enrichments" title="Premium enrichments">
+            Premium enrichments
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/tweet-updates" title="Tweet updates">
+            Tweet updates
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/direct-messages" title="Direct Messages">
+          Direct Messages
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/beta-features" title="Direct Message beta features">
+            Direct Message beta features
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving" title="Sending and receiving events">
+            Sending and receiving events
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/welcome-messages" title="Welcome Messages">
+            Welcome Messages
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/message-attachments" title="Message Attachments">
+            Message Attachments
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/quick-replies" title="Quick Replies">
+            Quick Replies
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/buttons" title="Buttons">
+            Buttons
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/conversation-management" title="Conversation management">
+            Conversation management
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/custom-profiles" title="Custom profiles">
+            Custom profiles
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/customer-feedback" title="Customer feedback cards">
+            Customer feedback cards
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/media" title="Media">
+          Media
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/media/upload-media" title="Upload media">
+            Upload media
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/media/refresh-media" title="Access Media">
+            Access Media
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/trends" title="Trends">
+          Trends
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/trends/trends-for-location" title="Get trends near a location">
+            Get trends near a location
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/trends/locations-with-trending-topics" title="Get locations with trending topics">
+            Get locations with trending topics
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/geo" title="Geo">
+          Geo
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/geo/place-information" title="Get information about a place">
+            Get information about a place
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/geo/places-near-location" title="Get places near a location">
+            Get places near a location
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/ads" title="Ads">
+          Ads
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/general" title="General">
+            General
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/analytics" title="Analytics">
+            Analytics
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/audiences" title="Audiences">
+            Audiences
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/campaign-management" title="Campaign Management">
+            Campaign Management
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/creatives" title="Creatives">
+            Creatives
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/measurement" title="Measurement">
+            Measurement
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/metrics" title="Metrics">
+          Metrics
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/metrics/get-tweet-engagement" title="Get Tweet engagement">
+            Get Tweet engagement
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/twitter-for-websites" title="Twitter for Websites">
+          Twitter for Websites
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/twitter-for-websites/twitter-for-websites" title="Twitter for Websites">
+            Twitter for Websites
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/twitter-kit" title="Twitter Kit">
+          Twitter Kit
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/twitter-kit/twitter-kit" title="Twitter Kit">
+            Twitter Kit
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/developer-utilities" title="Developer utilities">
+          Developer utilities
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/rate-limit-status" title="Get app rate limit status">
+            Get app rate limit status
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/configuration" title="Get Twitter configuration details">
+            Get Twitter configuration details
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/supported-languages" title="Get Twitter supported languages">
+            Get Twitter supported languages
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/privacy-policy" title="Get Twitter's privacy policy">
+            Get Twitter's privacy policy
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/terms-of-service" title="Get Twitter's terms of service">
+            Get Twitter's terms of service
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/usage-api" title="Get API usage metrics">
+            Get API usage metrics
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries" title="Twitter libraries">
+            Twitter libraries
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/twitter-text" title="twitter-text Parser">
+            twitter-text Parser
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/api-reference-index" title="API reference index">
+          API reference index
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/api-reference-index/api-reference-index" title="API reference index">
+            API reference index
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <div class="main-content column column-9">
+       <div>
+        <div class="main-content__header">
+         <span>
+          <svg height="72" viewBox="0 0 28 72" width="28" xmlns="http://www.w3.org/2000/svg">
+           <path d="M6.035 35l14.232-14.232a2.498 2.498 0 0 0 0-3.535 2.498 2.498 0 0 0-3.535 0l-16 16a2.498 2.498 0 0 0 0 3.535l16 16c.488.488 1.128.732 1.768.732s1.28-.244 1.768-.732a2.498 2.498 0 0 0 0-3.535L6.035 35z">
+           </path>
+          </svg>
+         </span>
+         <h1>
+          Get batch historical Tweets
+         </h1>
+        </div>
+        <div class="tabs-nav ">
+         <ul class="tabs-nav__inner">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/batch-historical/overview">
+            Overview
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/batch-historical/guides">
+            Guides
+           </a>
+          </li>
+          <li>
+           <a class="active" href="https://developer.twitter.com/en/docs/tweets/batch-historical/api-reference">
+            API Reference
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <div class="tabs-nav__toc">
+          <span class="tabs-nav__toc__title">
+           API Reference contents
+           <span class="arrow-down fill-color--neutral-light-gray">
+            <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+             <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+             </path>
+            </svg>
+           </span>
+          </span>
+          <div class="tabs-nav__toc__list">
+           <li class="active">
+            <a href="https://developer.twitter.com/en/docs/tweets/batch-historical/api-reference/historical-powertrack">
+             Historical PowerTrack
+            </a>
+           </li>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="c01-rich-text-editor">
+        <div class="main-container">
+         <div class="gnip-body-container">
+          <div>
+           <div class="row">
+            <h1>
+             Historical PowerTrack
+            </h1>
+            <div class="d06-anchor-link-menu">
+             <div class="tabs-nav__toc">
+              <span class="tabs-nav__toc__title">
+               Jump to on this page
+               <span class="arrow-down fill-color--neutral-light-gray">
+               </span>
+              </span>
+              <div class="tabs-nav__toc__list">
+               <p>
+                <a href="#Methods">
+                 Methods
+                </a>
+               </p>
+               <p>
+                <a href="#Authentication">
+                 Authentication
+                </a>
+               </p>
+               <p>
+                <a href="#Stages">
+                 Job Stages
+                </a>
+               </p>
+               <p>
+                <a href="#Create">
+                 POST /jobs
+                </a>
+               </p>
+               <p>
+                <a href="#Monitor">
+                 GET /jobs/:uuid
+                </a>
+               </p>
+               <p>
+                <a href="#AcceptReject">
+                 PUT /jobs/:uuid
+                </a>
+               </p>
+               <p>
+                <a href="#ResultsFile">
+                 GET /results
+                </a>
+               </p>
+               <p>
+                <a href="#GetActivities">
+                 Download Twitter Data Files
+                </a>
+               </p>
+               <p>
+                <a href="#AllJobs">
+                 GET /jobs
+                </a>
+               </p>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="row">
+            <div class="col-md-9">
+             <h2 id="methods">
+              Methods
+              <a class="extra-tall" id="Methods">
+              </a>
+             </h2>
+             <table class="table table-hover">
+              <tbody>
+               <tr>
+                <th>
+                 Method
+                </th>
+                <th>
+                 Description
+                </th>
+               </tr>
+               <tr>
+                <td>
+                 <a href="#Create">
+                  POST /jobs
+                 </a>
+                </td>
+                <td>
+                 Create a new Historical PowerTrack job
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 <a href="#Monitor">
+                  GET /jobs/:uuid
+                 </a>
+                </td>
+                <td>
+                 Monitor the status of a single Historical PowerTrack job
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 <a href="#AcceptReject">
+                  PUT /jobs/:uuid
+                 </a>
+                </td>
+                <td>
+                 Accept or reject a Historical PowerTrack job that has been estimated
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 <a href="#UrlList">
+                  GET /results
+                 </a>
+                </td>
+                <td>
+                 Retrieve the list of URLs for a finished job. These URLs can then be used to download the data files.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 <a href="#GetActivities">
+                  Download Twitter Data Files
+                 </a>
+                </td>
+                <td>
+                 Download the Twitter data files generated for a complete Historical PowerTrack job.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 <a href="#AllJobs">
+                  GET /jobs
+                 </a>
+                </td>
+                <td>
+                 Check the status of all your Historical PowerTrack jobs
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <p>
+              <br/>
+             </p>
+             <p>
+              For examples demonstrating how to send the types of HTTP requests described below, see the below links to code examples:
+             </p>
+             <ul>
+              <li>
+               <a href="https://github.com/gnip/support/releases">
+                Download script
+               </a>
+               (bash)
+               <ul>
+                <li>
+                 The bash script above can be used to download Historical PowerTrack data files
+                </li>
+               </ul>
+              </li>
+              <li>
+               <a href="https://github.com/jimmoffitt/rbHistoricalPT">
+                rbHistoricalPT
+               </a>
+               (ruby)
+              </li>
+             </ul>
+             <h2 id="authentication">
+              Authentication
+              <a class="tall" id="Authentication">
+              </a>
+             </h2>
+             <p>
+              All requests to the Historical PowerTrack API must use HTTP Basic Authentication, constructed from a valid email address and password combination used to log into your account at console.gnip.com. Credentials must be passed as the Authorization header for each request. Make sure your client is adding the “Authentication: Basic” HTTP header (with encoded credentials over HTTPS) to all API requests.
+             </p>
+             <h2 id="job-stages">
+              Job Stages
+              <a class="tall" id="Stages">
+              </a>
+             </h2>
+             <p>
+              Below are the stages that a job may have as it goes through the life cycle. Job status messages returned by the API may vary from the table below.
+             </p>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 Status
+                </th>
+                <th>
+                 Status Message(s)
+                </th>
+               </tr>
+               <tr>
+                <td>
+                 opened
+                </td>
+                <td>
+                 Waiting on quote from Gnip.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 estimating
+                </td>
+                <td>
+                 <ul>
+                  <li>
+                   Generating a job quote.
+                  </li>
+                  <li>
+                   Request to auto-estimate queued.
+                  </li>
+                  <li>
+                   Auto-estimate job is running.
+                  </li>
+                  <li>
+                   Auto-estimate job has run, time to do some math.
+                  </li>
+                 </ul>
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 quoted
+                </td>
+                <td>
+                 Job quoted and awaiting customer acceptance.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 accepted
+                </td>
+                <td>
+                 Job accepted and ready to be queued.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 rejected
+                </td>
+                <td>
+                 Job quote rejected by customer.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 running
+                </td>
+                <td>
+                 <ul>
+                  <li>
+                   Job is being processed.
+                  </li>
+                  <li>
+                   Job completed and being validated prior to customer delivery.
+                  </li>
+                  <li>
+                   Job paused.
+                  </li>
+                 </ul>
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 completed
+                </td>
+                <td>
+                 Job completed and awaiting validation.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 delivered
+                </td>
+                <td>
+                 Job delivered and available for download
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 failed
+                </td>
+                <td>
+                 <ul>
+                  <li>
+                   Job completed but failed validation. Gnip investigating.
+                  </li>
+                  <li>
+                   Failure running job. Gnip investigating
+                  </li>
+                  <li>
+                   Auto-estimate job has failed. Gnip investigating
+                  </li>
+                 </ul>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <p>
+              <em>
+               Example Job Timeline:
+              </em>
+             </p>
+             <p>
+              2017-03-07 19:42 UTC  Job Created
+              <br/>
+              2017-03-07 19:50 UTC  Estimation Completed
+              <br/>
+              2017-03-07 19:51 UTC  Quoted
+              <br/>
+              2017-03-07 19:52 UTC  Accepted
+              <br/>
+              2017-03-07 19:53 UTC  Started Running 
+2017-03-07 21:21 UTC  Completed Running
+2017-03-22 21:21 UTC  Expires
+             </p>
+             <h4 id="important-note">
+              Important Note:
+             </h4>
+             <p>
+              “Failed” jobs should not be resubmitted. The Gnip team will fix this. If you resubmit a failed job, you’ll end up with two jobs and pay for the data twice. Assume that a failed job has the team’s attention and Gnip will fix it.
+             </p>
+             <h2 id="post-jobs">
+              POST /jobs
+              <a class="tall" id="Create">
+              </a>
+             </h2>
+             <p>
+              Creates a new Historical PowerTrack job.
+             </p>
+             <h4 id="request-specifications">
+              Request Specifications
+             </h4>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 HTTP Method
+                </th>
+                <td>
+                 POST
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 URL
+                </th>
+                <td>
+                 <pre>
+https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs.json
+            </pre>
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 Content-Type
+                </th>
+                <td>
+                 "application/json"
+                 <br/>
+                 <br/>
+                 <i>
+                  Note:
+                 </i>
+                 This should be specified in the header of the request.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 Request Body Format
+                </th>
+                <td>
+                 JSON
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 Request Body Size Limit
+                </th>
+                <td>
+                 1000 rules
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 Rate Limits
+                </th>
+                <td>
+                 A maximum of 60 Jobs can be created per (UTC) day.
+                 <br/>
+                 A maximum of 30 Jobs can be created per hour.
+                 <br/>
+                 A maximum of 2 Jobs can be estimating concurrently.
+                 <br/>
+                 A maximum of 2 Jobs can be running concurrently.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <p>
+              <br/>
+             </p>
+             <h4 id="request-body-elements">
+              Request Body Elements
+             </h4>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 Parameter
+                </th>
+                <th>
+                 Example
+                </th>
+                <th>
+                 Comment
+                </th>
+               </tr>
+               <tr>
+                <td>
+                 publisher
+                </td>
+                <td>
+                 <pre>
+"publisher":"twitter"
+            </pre>
+                </td>
+                <td>
+                 The data publisher you want the historical job to use.  Currently Twitter only.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 dataFormat
+                </td>
+                <td>
+                 <pre>
+"dataFormat":"activity_streams"
+            </pre>
+                </td>
+                <td>
+                 The data format to use for the job. To request data in the Publisher's original/native format use "dataFormat":"original".
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 fromDate
+                </td>
+                <td>
+                 <pre>
+"fromDate":"201201010000"
+            </pre>
+                </td>
+                <td>
+                 A timestamp indicating the start time of the period of interest. Timestamp is specified in the
+                 <b>
+                  UTC time zone
+                 </b>
+                 and has a 'YYYYMMDDHHMM' format (minute granularity).  This date is inclusive, meaning the minute specified will be included in the job.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 toDate
+                </td>
+                <td>
+                 <pre>
+"toDate":"201201020000"
+            </pre>
+                </td>
+                <td>
+                 A timestamp indicating the end time of the period of interest. Timestamp is specified in the
+                 <b>
+                  UTC time zone
+                 </b>
+                 and has a 'YYYYMMDDHHMM' format (minute granularity).  This is **NOT** inclusive, so a time of 00:00 will return data through 23:59 of previous day.  I.e. the specified minute will not be included in the job, but the minute immediately preceding it will In the UTC time zone.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 title
+                </td>
+                <td>
+                 <pre>
+"title":"my_job123"
+            </pre>
+                </td>
+                <td>
+                 A title for the historical job.  This must be unique and jobs with duplicate titles will be rejected.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 rules
+                </td>
+                <td>
+                 <pre>
+"rules":
+[
+    {
+        "value":"cow"
+    },
+    {
+        "value":"dog",
+        "tag":"pets"
+    }
+]
+            </pre>
+                </td>
+                <td>
+                 The rules which will determine what data is returned by your job. Historical PowerTrack jobs support up to 1000 PowerTrack rules.  For information on PowerTrack rules, see our documentation
+                 <a href="/apis/powertrack2.0/rules.html">
+                  here
+                 </a>
+                 , and be sure to consider the caveats listed
+                 <a href="/apis/historical_api2.0/overview.html#Caveats">
+                  here
+                 </a>
+                 .
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <h4 id="specifying-the-correct-time-window">
+              Specifying the Correct Time Window
+             </h4>
+             <p>
+              To ensure that your Historical PowerTrack job retrieves
+              <em>
+               all
+              </em>
+              the data you need, you should ensure that your app correctly applies the fromDate and toDate parameters. A common customer error is to set the toDate one minute earlier than it should be, resulting in the job failing to retrieve the last minute of data desired. This is because toDate is
+              <em>
+               exclusive
+              </em>
+              , where fromDate is
+              <em>
+               inclusive
+              </em>
+              .
+             </p>
+             <p>
+              To further illustrate, consider the following example, in which the customer desires to retrieve data from minutes 55, 56, 57, 58, and 59 of a given hour. The customer must use
+              <strong>
+               06:00
+              </strong>
+              as the toDate to ensure that they capture Tweets from minute 59. Tweets from 06:00 are not included in the Twitter data that is delivered.
+             </p>
+             <p>
+              <img src="/assets/img/historical_dates.png"/>
+             </p>
+             <p>
+              To extend this to a more practical example, imagine a Historical PowerTrack job that required data for every minute of January 1, 2014. To capture each of these minutes, the job should have a fromDate of 201401010000 (01-01-2014 00:00), and a toDate of 201401020000 (01-02-2014 00:00 – minute 0 of January 2). This will ensure minutes 00:00-23:59 are delivered in the results.
+             </p>
+             <h4 id="understanding-number-of-historical-powertrack-days">
+              Understanding Number of “Historical Powertrack Days”
+             </h4>
+             <p>
+              A “Historical Powertrack Day” starts at UTC 0000 and ends at 2359.  Inclusion of any minute of a “Historical Powertrack Day” in a job would count as a day.
+             </p>
+             <p>
+              A job with “fromDate”:”201201010000” and “toDate”:”201201020000” would count as 1 day.
+              <br/>
+              A job with “fromDate”:”201201010001” and “toDate”:”201201020001” would count as 2 days.
+              <br/>
+              A job with “fromDate”:”201201010000” and “toDate”:”201201020001” would count as 2 days.
+             </p>
+             <h4 id="request-body-example">
+              Request Body Example
+             </h4>
+             <pre>{
+    "publisher":"Twitter",
+    "dataFormat":"activity_streams",
+    "fromDate":"201201010000",
+    "toDate":"201201010001",
+    "title":"my_job123",
+    "rules":
+        [
+            {
+                "value":"cat"
+            }
+        ]
+}
+</pre>
+             <h4 id="example-curl-request">
+              Example cURL Request
+             </h4>
+             <pre>curl -v POST -uexample@customer.com 'https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs.json' -H 'Content-type: application/json' -d '{"publisher":"twitter","dataFormat":"activity_streams","fromDate":"201609212359", "toDate":"201609230000","title":"testjob12345","rules":[{"tag":"tag_name","value":"rule"}]}'
+</pre>
+             <h4 id="response-example">
+              Response Example
+             </h4>
+             <pre>{
+    "title":"my_job",
+    "account":"gnip-customer",
+    "publisher":"Twitter",
+    "streamType":"track_v2",
+    "format":"activity_streams",
+    "fromDate":"201201010000",
+    "toDate":"201201010001",
+    "requestedBy":"foo@gnip-customer.com",
+    "requestedAt":"2012-06-13T22:43:27Z",
+    "status": "open",
+    "statusMessage": "Waiting on quote from Gnip.",
+    "jobURL": "https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json"
+}
+</pre>
+             <p>
+              <br/>
+             </p>
+             <h2 id="get-jobsuuid">
+              GET /jobs/uuid
+              <a class="tall" id="Monitor">
+              </a>
+             </h2>
+             <p>
+              Monitors the status of a historical job.
+             </p>
+             <p>
+              After a job is created, you can use this request to monitor the current status of the specific job.
+             </p>
+             <p>
+              When the job is in the process of generating an estimate of expected order of magnitude of activity volume and time required, this request provides insight into the progress in the estimating process.  Once this estimate is complete, the response will indicate the volume and time estimates referenced.
+             </p>
+             <p>
+              After the job has been accepted, the response can be used to track its progress as the data files are generated.
+             </p>
+             <h4 id="request-specifications-1">
+              Request Specifications
+             </h4>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 HTTP Method
+                </th>
+                <td>
+                 GET
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 URL
+                </th>
+                <td>
+                 https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 Rate Limit
+                </th>
+                <td>
+                 5 requests per 5 seconds aggregated across all GET requests.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <h4 id="estimate-fields">
+              Estimate Fields
+             </h4>
+             <p>
+              These fields are returned in the response for this request after a job has been estimated. They should be used to evaluate whether or not to accept the job and run it to completion.
+             </p>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 costDollars
+                </th>
+                <td>
+                 The cost of the job.  Note that "costDollars" will not be present if you have a subscription to Historical PowerTrack, as the cost is already included in your subscription.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 expiresAt
+                </th>
+                <td>
+                 Indicates how long this job will be available for you to either accept or reject it.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 estimatedActivityCount
+                </th>
+                <td>
+                 An order-of-magnitude estimate of the number of results (tweets) this job is expected to return if accepted. The minimum value is 100 activities. If the sample used to generate the estimate returns no matches, this value will be 100 activities.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 estimatedDurationHours
+                </th>
+                <td>
+                 An estimate of the amount of time that will be required to run the full job, if accepted.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 estimatedFileSizeMb
+                </th>
+                <td>
+                 An estimate of the total compressed file size for the entire job after it is completed.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <h4 id="response-examples">
+              Response Examples
+             </h4>
+             <p>
+              <strong>
+               After the Estimate is Completed:
+              </strong>
+             </p>
+             <pre>{
+    "title":"my_job",
+    "account":"gnip-customer",
+    "publisher":"Twitter",
+    "streamType":"track_v2",
+    "format":"activity_streams",
+    "fromDate":"201201010000",
+    "toDate":"201201010001",
+    "requestedBy":"foo@gnip-customer.com",
+    "requestedAt":"2012-06-13T22:43:27Z",
+    "status": "quoted",
+    "statusMessage": "Job quoted and awaiting customer approval.",
+    "jobURL":"https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json",
+    "quote": {
+        "costDollars": 5000,
+        "estimatedActivityCount":10000,
+        "estimatedDurationHours":72,
+        "estimatedFileSizeMb": 10.0,
+        "expiresAt": "2012-06-16T22:43:00Z"
+    },
+    "percentComplete": 0
+}
+</pre>
+             <p>
+              <strong>
+               While the Accepted Job is Running
+              </strong>
+             </p>
+             <pre>{
+    "title":"my_job",
+    "account":"gnip-customer",
+    "publisher":"Twitter",
+    "streamType":"track_v2",
+    "format":"activity_streams",
+    "fromDate":"201201010000",
+    "toDate":"201201010001",
+    "requestedBy":"foo@gnip-customer.com",
+    "requestedAt":"2012-06-13T22:43:27Z",
+    "status": "delivered",
+    "statusMessage": "Job delivered and available for download.",
+    "jobURL":"https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json",
+    "quote":
+    {
+        "costDollars": 5000,
+        "estimatedActivityCount":10000,
+        "estimatedDurationHours":72,
+        "estimatedFileSizeMb": 10.0,
+        "expiresAt": "2012-06-16T22:43:00Z"
+    },
+    "acceptedBy": "foo@gnip-customer.com",
+    "acceptedAt": "2012-06-14T22:43:27Z",
+    "percentComplete": 100,
+    "results":
+    {
+        "completedAt":"2012-06 17T22:43:27Z",
+        "activityCount":1200,
+        "fileCount":1000,
+        "fileSizeMb":10.0,
+        "dataURL":"https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json"
+        "expiresAt": "2012-06-30T22:43:00Z"
+    }
+}
+</pre>
+             <p>
+              <br/>
+             </p>
+             <h2 id="put-jobsuuid">
+              PUT /jobs/uuid
+              <a class="tall" id="AcceptReject">
+              </a>
+             </h2>
+             <p>
+              Accepts or rejects a historical job in the “quoted” stage.
+             </p>
+             <p>
+              <b>
+               IMPORTANT:
+              </b>
+              Accepted jobs will be run by Gnip’s system, and cannot be stopped after acceptance. Rejected jobs cannot be recovered.
+             </p>
+             <h4 id="request-specifications-2">
+              Request Specifications
+             </h4>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 HTTP Method
+                </th>
+                <td>
+                 PUT
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 URL
+                </th>
+                <td>
+                 https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 Content-Type
+                </th>
+                <td>
+                 "application/json"
+                 <br/>
+                 <br/>
+                 <i>
+                  Note:
+                 </i>
+                 This should be specified in the header of the request.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <h4 id="accept-request-body-example">
+              Accept Request Body Example
+             </h4>
+             <pre>{
+  "status"<strong>:</strong>"accept"
+}
+</pre>
+             <h4 id="reject-request-body-example">
+              Reject Request Body Example
+             </h4>
+             <pre>{
+  "status"<strong>:</strong>"reject"
+}
+</pre>
+             <h4 id="response">
+              Response
+             </h4>
+             <p>
+              After a job is either accepted or rejected, the job will include an “acceptedAt” field, which indicates the time of that action. This field records the date regardless of whether the job was accepted or rejected, and should not be interpreted as an indicator of the type of action you took on it. The proper field for this type of info is the “status” field.
+             </p>
+             <p>
+              <strong>
+               Response Example
+              </strong>
+             </p>
+             <pre>{
+     "title":"my_job",
+     "account":"gnip-customer",
+     "publisher":"Twitter",
+     "streamType":"track_v2",
+     "format":"activity_streams",
+     "fromDate":"201201010000",
+     "toDate":"201201010001",
+     "requestedBy":"foo@gnip-customer.com",
+     "requestedAt":"2012-06-13T22:43:27Z",
+     "status": "accepted",
+     "statusMessage": "Job accepted and ready to be queued.",
+     "jobURL":"https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json",
+     "quote": {
+           "costDollars": 5000,
+           "estimatedActivityCount":10000,
+           "estimatedDurationHours":72,
+           "estimatedFileSizeMb": 10.0,
+           "expiresAt": "2012-06-16T22:43:00Z"
+      },
+     "acceptedBy": "foo@gnip-customer.com",
+     "acceptedAt": "2012-06-14T22:43:27Z",
+     "percentComplete": 0
+}
+</pre>
+             <p>
+              <br/>
+             </p>
+             <h2 id="get-results">
+              GET /results
+              <a class="tall" id="ResultsFile">
+              </a>
+             </h2>
+             <p>
+              Retrieves information about a completed Historical PowerTrack job, including a list of URLs which correspond to the data files generated for a completed historical job. These URLs will be used to download the Twitter data files.
+             </p>
+             <p>
+              Note: Results must be downloaded within 15 days of job completion.  Expired jobs are not recoverable.
+             </p>
+             <h4 id="request-specifications-3">
+              Request Specifications
+             </h4>
+             <table class="table">
+              <tbody>
+               <tr>
+                <td>
+                 <strong>
+                  Request Method
+                 </strong>
+                </td>
+                <td>
+                 HTTP GET
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 <strong>
+                  URL
+                 </strong>
+                </td>
+                <td>
+                 Found in the 'dataURL' field returned in the response from the GET /jobs/:uuid request for a completed job. The URL resembles the following structure:
+                 <br/>
+                 <br/>
+                 <pre>
+https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}/results.json
+            </pre>
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 <strong>
+                  Response Format
+                 </strong>
+                </td>
+                <td>
+                 JSON
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 Rate Limit
+                </th>
+                <td>
+                 5 requests per 5 seconds aggregated across all GET requests.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <p>
+              <br/>
+             </p>
+             <h4 id="response-elements">
+              Response Elements
+             </h4>
+             <p>
+              For a completed job, the response for this request will include the following elements in the JSON payload.
+             </p>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 urlCount
+                </th>
+                <td>
+                 The number of data files from the job.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 urlList
+                </th>
+                <td>
+                 A list of urls representing each data file from the job. Each file represents a 10-minute period of data during the job’s requested timeframe. If a there was no matching data for a 10-minute period, the file representing that period will be omitted from the list.
+                 <br/>
+                 <br/>
+                 These URLs should be used when downloading the Twitter data for the job.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 totalFileSizeBytes
+                </th>
+                <td>
+                 The total file size of the data files in bytes.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 suspectMinutesURL(optional)
+                </th>
+                <td>
+                 There are minute periods in Gnip’s historical corpus where there might not be 100% data fidelity due to unexpected occurrences like Twitter downtime or Twitter connectivity/API issues. This suspectMinutesURL field will only be present in the payload if there are suspect minutes during the job’s specified timeframe. If this field is present, a GET request with your Gnip Console credentials will return a list of the suspect minutes within the timeframe.
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 expiresAt
+                </th>
+                <td>
+                 This is the time at which the results for this job will no longer be available for download.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <h4 id="response-example-1">
+              Response Example
+             </h4>
+             <pre>{
+    "urlCount":5,
+    "urlList":[
+        "https://archive.replay.historical.review.s3.amazonaws.com/historical/twitter/track/original/gnip-customer/2012/08/29/20120701-20120701_jbmfgctzw5/2012/07/01/00/10_activities.json.gz?...",
+        "https://archive.replay.historical.review.s3.amazonaws.com/historical/twitter/track/original/gnip-customer/2012/08/29/20120701-20120701_jbmfgctzw5/2012/07/01/00/10_activities.json.gz?...",
+        "https://archive.replay.historical.review.s3.amazonaws.com/historical/twitter/track/original/gnip-customer/2012/08/29/20120701-20120701_jbmfgctzw5/2012/07/01/00/10_activities.json.gz?...",
+        "https://archive.replay.historical.review.s3.amazonaws.com/historical/twitter/track/original/gnip-customer/2012/08/29/20120701-20120701_jbmfgctzw5/2012/07/01/00/10_activities.json.gz?...",
+        "https://archive.replay.historical.review.s3.amazonaws.com/historical/twitter/track/original/gnip-customer/2012/08/29/20120701-20120701_jbmfgctzw5/2012/07/01/00/10_activities.json.gz?..."
+    ],
+    "totalFileSizeBytes":1146952,
+    "suspectMinutesUrl":
+    "https://archive.replay.historical.review.s3.amazonaws.com/customers/gnip-biz/20120101-20120101_5zzax1awxq/suspectMinutes.json?..."
+    "expiresAt":"2012-11-24T18:53:23Z"
+}
+</pre>
+             <p>
+              <br/>
+             </p>
+             <p>
+              In addition to the JSON file, we also generate a CSV version that can be used where more convenient. The CSV file contains a series of lines separated by 'n', where each line is a local file name for the job file, the tab ('t') character, and the S3 url for the file.
+             </p>
+             <p>
+              The CSV can be used for the same purpose as the JSON version when downloading the historical job. In the
+              <a href="#Downloading">
+               “downloading”
+              </a>
+              section below, example curl commands use the csv version, rather than the JSON version, but both types will deliver the same results. This list can also be downloaded by navigating to the “dataURL” in your browser while logged in to the Gnip console.
+             </p>
+             <p>
+              <em>
+               Note: All data generated by Historical PowerTrack are in JSON format. The CSV format referenced here refers only to the list of download links, not the actual Twitter data itself.
+              </em>
+             </p>
+             <h2 id="download-twitter-data-files">
+              Download Twitter Data Files
+              <a class="tall" id="GetActivities">
+              </a>
+             </h2>
+             <p>
+              Downloads a Gzip compressed JSON file of Twitter data for a completed Historical PowerTrack job.
+             </p>
+             <p>
+              Historical PowerTrack jobs generate 1 file for each 10-minute segment of time covered by the job, except where there is no matching Twitter data found within that 10-minute segment. For example, a Historical PowerTrack job covering 1 hour would contain 6 separate files, which would each need to be downloaded via separate requests.
+             </p>
+             <p>
+              The response to the GET /results request will include a ‘urlCount’ field that indicates the total number of files to download, and the URLs corresponding to each file. The request described below must be repeated for each file URL listed in the ‘results’ response, although the requests can be made in parallel. Upon completion of all downloads, your app should ensure that the number of files downloaded matches the ‘urlCount’ from the ‘results’ response..
+             </p>
+             <p>
+              Historical data files are available for 15 days from when the job is accepted. After 15 days the data will no longer be accessible. To maximize download speeds, we recommend downloading all of these files in parallel, to a source as close to the Amazon - West Coast data center as possible.
+             </p>
+             <p>
+              For details on the format of the Tweets, click
+              <a href="/sources/twitter/">
+               here
+              </a>
+              .
+             </p>
+             <h4 id="request-specifications-4">
+              Request Specifications
+             </h4>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 HTTP Method
+                </th>
+                <td>
+                 GET
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 URL
+                </th>
+                <td>
+                 URLs for each file are provided in the response to the
+                 <a href="#ResultsFile">
+                  GET /results
+                 </a>
+                 method for a completed job. The request must be repeated for each file URL listed there.
+                </td>
+               </tr>
+               <tr>
+                <td>
+                 <strong>
+                  File Compression
+                 </strong>
+                </td>
+                <td>
+                 Gzip
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <h4 id="downloading-files-with-curl">
+              Downloading Files with cURL
+             </h4>
+             <p>
+              cURL is a simple command line tool for sending HTTP requests, and provides an easy way to download files for Historical PowerTrack jobs. cURL is native to Linux and Mac OS, and may be installed on Windows in combination with the CygWin package. See our article
+              <a href="http://support.gnip.com/articles/unixonwindows_cygwin.html">
+               here
+              </a>
+              for details on this.
+             </p>
+             <h4 id="download-all-files---example">
+              Download All Files - Example
+             </h4>
+             <p>
+              This command performs both the GET /results and GET /activities requests to download all the Twitter data files for a Historical PowerTrack job. Downloading of the files is performed in parallel into a local directory.  As each file is downloaded, the command will print the command being used.
+             </p>
+             <p>
+              When using this command, be sure to use the CSV form of the results file (results.csv), rather than the JSON results file (results.json). The ‘name’ column of all_files.csv is used to name the individual files.
+             </p>
+             <pre>curl -sS -u&lt;consoleuser&gt;:&lt;password&gt; https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}/results.csv | xargs -P 8 -t -n2 curl -o
+</pre>
+             <p>
+              If you experience issues with the above command, it is often useful to try downloading just the first data file to help debug. Again, when using this command, be sure to use the CSV form of the results file (results.csv), rather than the JSON results file (results.json).
+             </p>
+             <pre>curl -sS -u&lt;user&gt;:&lt;password&gt; https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}/results.csv | head -1 | xargs -P 8 -t -n2 curl -o
+</pre>
+             <p>
+              <br/>
+             </p>
+             <h4 id="downloading-files-with-a-bash-script">
+              Downloading Files with a Bash Script
+             </h4>
+             <p>
+              This
+              <a href="https://github.com/gnip/support/releases">
+               bash script
+              </a>
+              is another option for downloading Historical PowerTrack data files. One advantage of using this script is that it has ‘smarts’ when restarting a download cycle. If your download cycle gets interrupted for any reason, the script will inspect what files it has already downloaded and download only the files that are not available locally. The script writes files to a ‘downloads’ folder so it is important to keep files there until all the files have been downloaded.
+             </p>
+             <h2 id="get-jobs">
+              GET /jobs
+              <a class="tall" id="AllJobs">
+              </a>
+             </h2>
+             <p>
+              Retrieves details for all historical PowerTrack jobs which are not expired for the given account.
+             </p>
+             <p>
+              This request can be used to pull the list of all Historical PowerTrack jobs for the customer’s account, as well as aggregate metrics related to Historical PowerTrack usage. Expired jobs are not included in the list of jobs returned. Jobs which are not accepted expire 15 days after being estimated. Jobs that are accepted will expire in 15 days after acceptance.
+             </p>
+             <p>
+              For aggregate usage data, see the delivered, jobCount, jobDaysRun, and activityCount fields.
+             </p>
+             <h4 id="request-specifications-5">
+              Request Specifications
+             </h4>
+             <table class="table">
+              <tbody>
+               <tr>
+                <th>
+                 HTTP Method
+                </th>
+                <td>
+                 GET
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 URL
+                </th>
+                <td>
+                 https://gnip-api.gnip.com/historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs.json
+                </td>
+               </tr>
+               <tr>
+                <th>
+                 Rate Limit
+                </th>
+                <td>
+                 5 requests per 5 seconds aggregated across all GET requests.
+                </td>
+               </tr>
+              </tbody>
+             </table>
+             <h4 id="example-response">
+              Example Response
+             </h4>
+             <pre>{
+    "jobs":[{
+        "title": "my_job1",
+        "jobURL":"https://gnip-api.gnip.com /historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json",
+        "status": "running",
+        "publisher":"Twitter",
+        "streamType":"track_v2",
+        "fromDate":"201201010000",
+        "toDate":"201201010001"
+        "percentComplete": 40
+        "expiresAt":"2012-11-14T21:21:15Z"
+        },{
+        "title": "my_job2",
+        "jobURL":"https://gnip-api.gnip.com /historical/powertrack/accounts/{ACCOUNT_NAME}/publishers/twitter/jobs/{JOB_UUID}.json",
+        "status": "delivered",
+        "publisher":"Twitter",
+        "streamType":"track_v2",
+        "fromDate":"201201010000",
+        "toDate":"201201010001",
+        "percentComplete": 100
+        "expiresAt":"2012-11-16T10:15:03Z"
+        }],
+        "delivered":{
+        "jobCount":3,
+        "jobDaysRun":73,
+        "activityCount":15958
+    }
+}
+</pre>
+             <p>
+              <br/>
+             </p>
+             <hr/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer theme-bg-color--dark">
+     <div class="footer--banner theme-bg-color--extra-light">
+      <div class="footer__row container">
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="https://developer.twitter.com/en/developer-terms" target="_blank" title="Developer policy and terms">
+         Developer policy and terms
+        </a>
+       </div>
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="http://twitter.com/twitterdev" target="_blank" title="Follow @twitterdev">
+         Follow @twitterdev
+        </a>
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+        <a class="c04-link-button c04-link-button--button theme-bg-color--extra-extra-light theme-bg-color--extra-extra-light--hover" href="https://developer.twitter.com/en/twitterdev-news-subscription" target="_self">
+         Subscribe to developer news
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="footer__row container footer__row--main">
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com" target="_blank" title="About">
+        About
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company.html" target="_blank" title="Company">
+          Company
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/values.html" target="_blank" title="Values">
+          Values
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/safety.html" target="_blank" title="Safety">
+          Safety
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/official/en_us.html" target="_blank" title="Blog">
+          Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company/brand-resources.html" target="_blank" title="Brand Resources">
+          Brand Resources
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://careers.twitter.com/en.html" target="_blank" title="Careers">
+          Careers
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://investor.twitterinc.com/" target="_blank" title="Investors">
+          Investors
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/" target="_blank" title="Business">
+        Business
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/advertising.html" target="_blank" title="About Twitter Ads">
+          About Twitter Ads
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/targeting.html" target="_blank" title="Targeting">
+          Targeting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/analytics.html" target="_blank" title="Analytics">
+          Analytics
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/help.html" target="_blank" title="Ads support">
+          Ads support
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/small-business" target="_blank" title="Business blog">
+          Business blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://ads.twitter.com/login?ref=en-btc-gobal-footer" target="_blank" title="Advertise">
+          Advertise
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/" target="_blank" title="Developers">
+        Developers
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/overview/documentation" target="_blank" title="Documentation">
+          Documentation
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twittercommunity.com/" target="_blank" title="Forums">
+          Forums
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/community" target="_blank" title="Communities">
+          Communities
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/developer" target="_blank" title="Developer blog">
+          Developer blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/" target="_blank" title="Help Center">
+        Help Center
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/215585" target="_blank" title="Using Twitter">
+          Using Twitter
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/login" target="_blank" title="My account">
+          My account
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/283" target="_blank" title="Fixing a problem">
+          Fixing a problem
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/284" target="_blank" title="Policies and reporting">
+          Policies and reporting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/safety" target="_blank" title="Safety Center">
+          Safety Center
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/" target="_blank" title="Marketing">
+        Marketing
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/insights.html" target="_blank" title="Insights">
+          Insights
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/success-stories.html" target="_blank" title="Success Stories">
+          Success Stories
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/solutions.html" target="_blank" title="Solutions">
+          Solutions
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/collections.html" target="_blank" title="Collections">
+          Collections
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/advertising" target="_blank" title="Marketing Blog">
+          Marketing Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitterflightschool.com" target="_blank" title="Flight School">
+          Flight School
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__row container">
+      <div class="footer-col">
+       <p class="footer-col__footnote type--roman-14 theme-color--extra-light">
+        © 2017 Twitter, Inc.
+       </p>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/20170520" target="_blank" title="Cookies">
+        Cookies
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/privacy" target="_blank" title="Privacy">
+        Privacy
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/tos" target="_blank" title="Terms and Conditions">
+        Terms and Conditions
+       </a>
+      </div>
+     </div>
+    </footer>
+    <!--<div class="modal_container">-->
+    <div class="c20-modal__modal module-modal" data-modal="true">
+     <div class="c20-modal__scrollable" data-modal-scroll-container="true">
+      <div class="c20-modal__details" data-modal-content-container="true">
+       <!-- template is injected here -->
+      </div>
+      <ul class="c20-modal__navigation">
+       <li aria-label="Read previous biography" class="c20-modal__navigation-prev" data-modal-nav="prev-link">
+        <span class="c20-modal__navigation-label">
+         Read Previous
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="prev-text">
+        </span>
+       </li>
+       <li aria-label="Read next biography" class="c20-modal__navigation-next" data-modal-nav="next-link">
+        <span class="c20-modal__navigation-label">
+         Read Next
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="next-text">
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="module-modal__close-container">
+     <div class="c20-modal__modal-close module-modal__close" data-trigger="close-modal">
+      <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+       <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <!--</div>-->
+   </div>
+   <script src="/etc/designs/common-twitter/dtm-footer.min.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/app.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/universal.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/structure.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/content.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/docs.js" type="text/javascript">
+   </script>
+   <script async="" src="https://platform.twitter.com/widgets.js">
+   </script>
+  </cq:includeclientlib>
+ </body>
+</html>

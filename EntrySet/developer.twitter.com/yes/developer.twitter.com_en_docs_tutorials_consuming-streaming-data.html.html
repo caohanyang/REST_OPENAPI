@@ -1,0 +1,1052 @@
+<html lang="en" prefix="og: http://ogp.me/ns#">
+ <head>
+ </head>
+ <body class="theme--purple page tutorial-single-page " data-analytics-component="tutorials/consuming-streaming-data" data-analytics-element="page" data-analytics-page="developer" data-analytics-section="docs">
+  <cq:includeclientlib categories="cq.jquery">
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+   <title>
+    Consuming streaming data — Twitter
+      Developers
+   </title>
+   <meta content="Tips for consuming streaming data." name="description"/>
+   <link href="https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data.html" rel="canonical"/>
+   <meta content="https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data.html" property="og:url"/>
+   <meta content="article" property="og:type"/>
+   <meta content="Consuming streaming data" property="og:title"/>
+   <meta content="Tips for consuming streaming data." property="og:description"/>
+   <meta content="summary" name="twitter:card"/>
+   <link href="https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data.html" hreflang="en" rel="alternate"/>
+   <meta content="on" name="twitter:widgets:new-embed-design"/>
+   <meta content="on" name="twitter:widgets:csp"/>
+   <link href="https://abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+   <script id="analytics-settings" type="application/json">
+    {&quot;google&quot;:{&quot;accounts&quot;:[],&quot;options&quot;:{&quot;displayAdvertisingFeatures&quot;:false}},&quot;scribe&quot;:{&quot;scribeSectionWithImpression&quot;:false},&quot;trackingPixel&quot;:{},&quot;bing&quot;:{}}
+   </script>
+   <script src="/etc/clientlibs/dtm/developer-twitter/ac0b17d7a4556cd264c3df3fac5054e8fd5023f8/satelliteLib-bcb222e3dbd22c730c028ee768fd0b3bea0a8ea0.js" type="text/javascript">
+   </script>
+   <link href="/etc/designs/developer-twitter/public/css/critical.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/app.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/universal.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/structure.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/content.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/docs.css" media="all" rel="stylesheet"/>
+   <script src="/etc/designs/developer-twitter/public/js/common.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/critical.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/onload.js" type="text/javascript">
+   </script>
+   <div id="component-wrapper">
+    <div class="nav theme-bg-color--dark" data-current-level="0" data-hidden="true">
+     <div class="nav--wrapper">
+      <header class="nav__header">
+       <div class="nav__headeritem-left">
+        <div class="nav__headeritem-title">
+         <a class="logo-title color--neutral-white" href="https://developer.twitter.com/en.html">
+          <span class="logo">
+           <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg">
+            <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z">
+            </path>
+           </svg>
+          </span>
+          <span class="title color--neutral-white">
+           Developer
+          </span>
+         </a>
+         <a class="nav-icon" href="#">
+          <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+           <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+           </path>
+          </svg>
+         </a>
+         <a class="nav-back color--neutral-white" data-nav-back="true" href="#">
+          <span class="title color--neutral-white">
+           Back
+          </span>
+         </a>
+        </div>
+       </div>
+       <ul class="nav--menu nav--menu--root" data-currentpage="/content/developer-twitter/en/docs/tutorials" data-level="1">
+        <li class="nav--mobile-item nav--menu__list-item color--neutral-white " data-show-sub-level="false">
+         <a class="color--neutral-white" href="https://developer.twitter.com/en.html" title="Developer">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Developer
+          </span>
+         </a>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Use cases" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Use cases
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/advertise" title="Advertise">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Advertise
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/publish-and-curate" title="Publish and curate">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publish and curate
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/analyze" title="Analyze">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Analyze
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/engage" title="Engage">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Engage
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Products" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Products
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/accounts-and-users" title="Accounts and users">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Accounts and users
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/tweets" title="Tweets">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tweets
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/direct-messages" title="Direct Messages">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Direct Messages
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/metrics" title="Metrics">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Metrics
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/ad-campaigns" title="Ad campaigns">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Ad campaigns
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/publisher-tools" title="Publisher tools and SDKs">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publisher tools and SDKs
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Docs" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Docs
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/documentation" title="Documentation">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Documentation
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/api-reference-index" title="API reference index">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             API reference index
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/tutorials" title="Tutorials">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tutorials
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="More" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           More
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/case-studies" title="Case studies">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Case studies
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/enterprise" title="Enterprise data">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Enterprise data
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/developer-terms" title="Developer terms">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Developer terms
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/pricing" title="Pricing">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Pricing
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/billing-faq" title="Billing FAQ">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Billing FAQ
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/community" title="Community">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Community
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/forum" title="Forum">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Forum
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/blog" title="Blog">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Blog
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <div class="nav__headeritem-right">
+        <div class="freemium-nav" data-current-level="0" data-hidden="true">
+         <ul class="nav--menu nav--menu--root" data-level="1">
+          <!-- Handlebars template will be written here -->
+         </ul>
+        </div>
+        <!--<sly data-sly-resource="region-selector"/>-->
+        <div class="search">
+         <a class="search-icon js-nav-search" href="#">
+          <svg height="72" viewBox="0 0 56 72" width="56" xmlns="http://www.w3.org/2000/svg">
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+          </svg>
+         </a>
+        </div>
+        <div class="login-container signed-out" data-geo-country-code="ES" data-geo-location="AAAAEIBZe3IBvkij8tzr/eSxZaPVJHOMn4aNiNNuSy9E9GefHo5FxZU8WVpbz9n9EIHfrJRBlgg=">
+         <div class="avatar">
+         </div>
+         <div class="sign-in">
+          <div class="btn-container">
+           <a href="https://twitter.com/login">
+            <button type="button">
+             Sign In
+            </button>
+           </a>
+          </div>
+         </div>
+        </div>
+        <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+         <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+         </path>
+        </svg>
+       </div>
+      </header>
+     </div>
+    </div>
+    <div class="nav__search-modal theme-bg-color--dark">
+     <div class="search-bar search-bar--js theme-color--extra-light theme-fill-color--extra-light theme-border-color--extra-light" data-search-path="/en/search-results.html">
+      <input autocomplete="off" class="search-bar__input" name="q" placeholder="Type your search here" type="search"/>
+      <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <div class="transparent-masthead">
+    </div>
+    <div class="page-wrapper tutorial-single-page">
+     <div class="c11-masthead">
+      <div class="text bg-color--neutral-white c11-masthead__bgColorWrapper ">
+       <div class="c11-masthead__contentWrapper container">
+        <p class="c11-masthead__eyebrow theme-color--dark">
+         Tutorials
+        </p>
+        <h1 class="c11-masthead__headline text color--neutral-white">
+         Consuming streaming data
+        </h1>
+       </div>
+      </div>
+     </div>
+     <div class="d06-anchor-link-menu">
+      <div class="tabs-nav__toc">
+       <span class="tabs-nav__toc__title">
+        Jump to on this page
+        <span class="arrow-down fill-color--neutral-light-gray">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </span>
+       <div class="tabs-nav__toc__list">
+        <p>
+         <a href="#overview">
+          Overview
+         </a>
+        </p>
+        <p>
+         <a href="#consuming-the-stream">
+          Consuming the stream
+         </a>
+        </p>
+        <p>
+         <a href="#disconnections">
+          Disconnections
+         </a>
+        </p>
+        <p>
+         <a href="#reconnecting">
+          Reconnecting
+         </a>
+        </p>
+        <p>
+         <a href="#replay-streams">
+          Replay streams
+         </a>
+        </p>
+        <p>
+         <a href="#recovery">
+          Recovery
+         </a>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="s01-section">
+      <div class="s01-section__container bg-color--neutral-white">
+       <div class="container ">
+        <div class="column column-2">
+         <div class="s01-section__left">
+          <h2>
+          </h2>
+          <div>
+           <div class="c01-rich-text-editor">
+            <h4>
+             Relevant products
+            </h4>
+            <h4>
+            </h4>
+            <p>
+             <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime">
+              <span class="with-caret">
+               Real-time PowerTrack
+              </span>
+             </a>
+             <br/>
+             <a href="https://developer.twitter.com/en/docs/tweets/sample-realtime">
+              <span class="with-caret">
+               Volume Streams
+              </span>
+             </a>
+             <br/>
+             <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/powertrack_recovery_and_redundancy_features#replay">
+              <span class="with-caret">
+               Replay Streams
+              </span>
+             </a>
+            </p>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="column column-10 ">
+         <div class="c01-rich-text-editor">
+          <h2>
+           <a name="overview">
+           </a>
+           Overview
+          </h2>
+          <p>
+           PowerTrack, Volume (e.g. Decahose), and Replay streams utilize Streaming HTTP protocol to deliver data through an open, streaming API connection. Rather than delivering data in batches through repeated requests by your client app, as might be expected from a REST API, a single connection is opened between your app and the API, with new results being sent through that connection whenever new matches occur. This results in a low-latency delivery mechanism that can support very high throughput.
+           <a>
+           </a>
+          </p>
+          <p>
+           The overall interaction between your app and Twitter’s API for these streams is described as follows:
+          </p>
+         </div>
+         <div class="c02-image-single">
+          <div class="image image--single centered " style="height: 600px;">
+           <img height="auto" src="/content/dam/developer-twitter/des-images/powertrack_flow.png.img.fullhd.medium.png" width="auto"/>
+          </div>
+         </div>
+         <div class="d02-inline-code-snippet">
+          <pre>  <code class="d02-inline-code-snippet__copy">{"error":{"message":"Forced Disconnect: Too many connections. (Allowed Connections = 2)","sent":"2017-01-11T18:12:52+00:00"}}</code>
+</pre>
+         </div>
+         <div class="d02-inline-code-snippet">
+          <pre>  <code class="d02-inline-code-snippet__copy">{"error":{"message":"Invalid date format for query parameter 'fromDate'. Expected format is 'yyyyMMddHHmm'. For example, '201701012315' for January 1st, 11:15 pm 2017 UTC.\n\n","sent":"2017-01-11T17:04:13+00:00"}}</code>
+</pre>
+         </div>
+         <div class="d02-inline-code-snippet">
+          <pre>  <code class="d02-inline-code-snippet__copy">{"error":{"message":"Force closing connection to &lt;description of connection&gt; because it reached the maximum allowed backup (buffer size is &lt;size&gt;).","sent":"2017-01-11T17:04:13+00:00"}}</code>
+</pre>
+         </div>
+         <div class="c01-rich-text-editor">
+          <h4>
+          </h4>
+          <h4>
+           Keep-alive signals
+          </h4>
+          <p>
+           At least every 10 seconds, the stream will send a keep-alive signal, or heartbeat in the form of an \r\n carriage return through the open connection to prevent your client from timing out. Your client application should be tolerant of the \r\n characters in the stream.
+          </p>
+          <p>
+           If your client properly implements a read timeout on your HTTP library as described
+           <a href="http://support.gnip.com/apis/powertrack2.0/api_reference.html">
+            here
+           </a>
+           , your app will be able to rely on the HTTP protocol and your HTTP library to throw an event if no data is read within this period, and you will not need to explicitly monitor for the \r\n character.
+          </p>
+          <p>
+           This event will typically be an exception being thrown or some other event depending on the HTTP library used. It is highly recommended to wrap your HTTP methods with error/event handlers to detect these timeouts. On timeout, your application should attempt to reconnect.
+          </p>
+          <h4>
+           Gzip compression
+          </h4>
+          <p>
+           Streams are delivered in compressed Gzip format. Your client will need to decompress the data as it’s read off the line. If you consume a low-volume stream, some libraries (e.g. Java’s GZIPInputStream or many Ruby stream consumers) handle decompression of incoming data poorly, and will need to be overridden in order to decompress the Tweets as they are received, without waiting for a set threshold of data to be received. As an example of this, see our Java code
+           <a href="https://github.com/gnip/support/blob/master/Premium%20Stream%20Connection/Java/StreamingGZIPInputStream.java" target="_blank">
+            HERE
+           </a>
+           .
+          </p>
+          <h4>
+           Chunked encoding
+          </h4>
+          <p>
+           Streaming API connections will be encoded using chunked transfer encoding, as indicated by the presence of a Transfer-Encoding: chunked HTTP header in the response. Because most HTTP libraries deal with chunked transfer encoding transparently, this document will assume that your code has access to the reassembled HTTP stream and does not have to deal with this encoding.
+          </p>
+          <p>
+           If this is not the case, note that Tweets and other streamed messages will not necessarily fall on HTTP chunk boundaries – be sure to use the delimiter defined above to determine activity boundaries when reassembling the stream.
+          </p>
+          <h4>
+           <a name="backup-buffering">
+           </a>
+           Backup buffering
+           <a>
+           </a>
+          </h4>
+          <p>
+           The stream will send data to you as fast as it arrives from the source firehose, which can result in high volumes in many cases. If Twitter’s system cannot write new data to the stream right away (for example if your client is not reading fast enough, or there is a network bottleneck, etc), it will buffer the content on its end to allow your client to catch up. However, when this buffer is full, a forced disconnect will be initiated to drop the connection, and the buffered Tweets will be dropped and not resent. See below for more details.
+          </p>
+          <p>
+           One way to identify times where your app is falling behind is to compare the timestamp of the Tweets being received with the current time, and track this over time.
+          </p>
+          <p>
+           Although stream backups cannot ever be completely eliminated due to potential latency and hiccups over the public internet, they can be largely eliminated through proper configuration of your app. To minimize the occurrence of backups:
+          </p>
+          <ul>
+           <li>
+            Ensure that your client is reading the stream fast enough. Typically you should not do any real processing work as you read the stream. Read the stream and hand the activity to another thread/process/data store to do your processing asynchronously.
+           </li>
+           <li>
+            Ensure that your data center has inbound bandwidth sufficient to accomodate large sustained data volumes as well as significantly larger spikes (e.g. 3-4x normal volume). For filtered streams like PowerTrack, the volume and corresponding bandwidth required on your end are wholly dependent on what you are tracking, and how many Tweets those filters match.
+           </li>
+          </ul>
+          <p>
+           A simple way to test the speed of your app is to connect to the stream using your app, while also connecting in parallel via a redundant connection using
+           <a href="https://curl.haxx.se/" target="_blank">
+            curl
+           </a>
+           . The curl connection will provide insight into the type of performance that would occur with your app code taken out of the chain, and allowing you to eliminate variables as you debug.
+          </p>
+          <h4>
+           Volume monitoring
+          </h4>
+          <p>
+           Consider monitoring your stream data volumes for unexpected deviations. A data volume decrease may be symptomatic of a different issue than a stream disconnection. In such a situation, a stream would still be receiving the keep-alive signal and probably some new activity data. However, a significantly decreased number of Tweets should lead you to investigate whether there is anything causing the decrease in inbound data volume to your application or network, check
+           <a href="http://status.gnip.com/">
+            status.gnip.com
+           </a>
+           for any related notices.
+          </p>
+          <p>
+           To create such monitoring, you could track the number of new Tweets you expect to see in a set amount of time. If a stream’s data volume falls far enough below the specified threshold, and does not recover within a set period of time, then alerts and notifications should be initiated. You may also want to monitor for a large increase in data volume, particularly if you are in the process of modifying rules in a PowerTrack stream, or if an event occurs that produces a spike in Tweet activity.
+          </p>
+          <p>
+           Because each of our customers have very different expectations around what “normal” data volume should be for their streams, we do not have a general recommendation for a specific percentage decrease/increase or period of time. We recommend that each of our customers determine their own metrics to use for this type of monitoring.
+          </p>
+          <p>
+           Furthermore, for PowerTrack streams, in order to keep a close watch and tight control over the volume of data your app is pulling in, your app should monitor the volume being consumed on a rule-by-rule basis in realtime or near-realtime. Additionally, we encourage you to implement measures within your app that will alert your team if the volume passes a pre-set threshold, and to possibly introduce other measures such as automated deletion of rules that are bringing in too much data, or disconnecting from the stream completely in extreme circumstances. These steps will help prevent the “runaway volume” scenario that could result in large data bills.
+          </p>
+          <h2>
+           <a name="disconnections">
+           </a>
+           Disconnections
+           <a>
+           </a>
+          </h2>
+          <p>
+           For Twitter’s purposes, stream disconnections are grouped into two categories – client disconnections and forced disconnections.
+          </p>
+          <h4>
+           Client disconnects
+          </h4>
+          <p>
+           Client disconnects occur when your application independently terminates the connection to the data stream, whether because your code actively closes the connection, or where network settings or conditions terminate the connection.
+          </p>
+          <p>
+           Common issues in client code that can create this behavior include:
+          </p>
+          <ul>
+           <li>
+            Closing the connection, rather than allowing it to remain open indefinitely
+           </li>
+           <li>
+            Timing out the connection even though data (activities, system messages, or keep-alive signals) are still being sent through the conneciton
+           </li>
+           <li>
+            Decompressing the compressed stream using incorrect evaluation of chunk sizes
+           </li>
+           <li>
+            Network or firewall restrictions in your infrastructure can close your connection to the data stream (e.g. firewall session limits) – be sure to check for anything along these lines that might sever existing connections from time to time.
+           </li>
+           <li>
+            Again, using curl and comparing disconnect behavior can be a productive exercise. If your app is experiencing client-side disconnects, yet your curl connection persists, then your code needs some attention. If curl and your app disconnect at the same approximate time, then perhaps your network is timing out your connection.
+           </li>
+          </ul>
+          <h4>
+           Forced disconnects
+           <a>
+           </a>
+          </h4>
+          <p>
+           Forced Disconnections occur when our system actively disconnects your app from the stream. There are 3 different types of forced disconnects.
+          </p>
+          <ul>
+           <li>
+            Full Buffer – your app is not reading the data fast enough, or a network bottleneck is slowing data flow.
+           </li>
+           <li>
+            Too many connections – your app established too many simultaneous connections to the data stream. When this occurs, Twitter will wait 1 minute, and then disconnect the most recently established connection if the limit is still being exceeded.
+           </li>
+           <li>
+            Server Maintenance – the Twitter team deployed a change or update to the system servers. This will be accompanied by a “Twitter is closing for operational reasons” message. These deploys happen on an approximately every-two-weeks cadence, and are announced at this
+            <a href="https://status.gnip.com/">
+             status page
+            </a>
+            .
+           </li>
+          </ul>
+          <p>
+           Forced disconnects close your connection by sending a zero byte chunk in accordance with standard HTTP chunked-encoding practice. See Section 9 of this page for reference: http://www.httpwatch.com/httpgallery/chunked. Note that in the case of a full buffer, our app sends out the zero byte chunk, but your app may never receive it due to whatever is causing the data backup in the internet or within your app.
+          </p>
+          <p>
+           To account for this situation, be sure that your app is set to timeout/reconnect if it does not see any data (either a Tweet activity or our keep alive signal) for more than 30 seconds. They are registered as a “force disconnect” on your console/dashboard, in contrast to a “client disconnect” which is not initiated by Twitter’s servers.
+          </p>
+          <p>
+           To minimize forced disconnects for a full buffer, see
+           <a href="#backup-buffering">
+            Backup buffering
+           </a>
+           above.
+          </p>
+          <h2>
+           <a name="reconnecting">
+           </a>
+           Reconnecting
+           <a>
+           </a>
+          </h2>
+          <p>
+           When an established connection drops, attempt to reconnect immediately. If the initial reconnect attempt is unsuccessful, your client should continue attempting to reconnect using an exponential back-off pattern until it successfully reconnects.
+          </p>
+          <p>
+           Regardless of how your client gets disconnected, you should configure your app to reconnect immediately. If your first reconnection attempt is unsuccessful, we recommend that your app implement an exponential back-off pattern in subsequent reconnection attempts (e.g. wait 1 second, then 2 seconds, then 4, 8, 16, etc), with some reasonable upper limit. If this upper limit is reached, you should configure your client to notify your team so that you can investigate further.
+          </p>
+          <p>
+           Be sure that your app can handle all of the following scenarios:
+          </p>
+          <ul>
+           <li>
+            Connection is closed by something on your end (client disconnect)
+           </li>
+           <li>
+            Connection is closed by Twitter with a zero-byte chunk (forced disconnect)
+           </li>
+           <li>
+            Your app has received zero data through the connection – i.e. no new Tweets AND no keep-alive carriage return signals – for more than 30 seconds. Your app must allow the connection to time out in this situation – note that by default, some clients persistent connections can remain open even without new data unless your code tells it to close based on an absence of the above signals. Note that unlike the third scenario above, if you are still receiving the keep-alive signal, but no new data, your app should remain connected – there may be an issue on the Twitter side preventing data from being sent down the wire, or there may just not be any new activities that match your filters. Remaining connected as long as you are at least receiving the keep-alive signal ensures that you will receive new matching Tweets when they are received by Twitter. This is typically accomplished by setting the read timeout on your client to something beyond 30 seconds.
+           </li>
+          </ul>
+          <h4>
+           Missing data from disconnections
+          </h4>
+          <p>
+           Any time you disconnect from the stream, you are potentially missing data that would be sent through at that time. However, Twitter provides multiple ways to mitigate these disconnects and recover data when they occur. See below for more information.
+          </p>
+          <ul>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/powertrack_recovery_and_redundancy_features#redundant-connections">
+             Redundant Connections
+            </a>
+            - Consume the stream from multiple servers to prevent missed data when one is disconnected.
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/powertrack_recovery_and_redundancy_features#backfill">
+             Backfill
+            </a>
+            - Reconnect within 5 minutes and request a backfill of missed data.
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/powertrack_recovery_and_redundancy_features#replay">
+             Replay
+            </a>
+            - Recover data from within the last 5 days using a separate stream.
+           </li>
+          </ul>
+          <h2>
+           <a name="replay-streams">
+           </a>
+           Special considerations for Replay streams
+           <a>
+           </a>
+          </h2>
+          <p>
+           Replay allows Gnip customers to recover activities missed due to technical hiccups from a rolling window of historical data, and uses the Streaming API for data delivery. Full documentation for the Replay API can be found
+           <a href="http://support.gnip.com/apis/recovery2.0/recovery.html#Replay">
+            HERE
+           </a>
+           .
+          </p>
+          <p>
+           However, your client must take into account the following requirements and special considerations when consuming data from a Replay stream.
+          </p>
+          <h4>
+           Reconnections
+          </h4>
+          <p>
+           Note that If you are disconnected from the stream during a Replay request, your app should
+           <b>
+            not
+           </b>
+           reconnect to the same URL used to initiate the request without altering the fromDate. Doing so will restart the request from the beginning and repeat the portion of time covered prior to disconnecting. Instead, upon being disconnected prior to the completion of a request, your client must adjust the fromDate and toDate in the URL to begin at the minute of the last activity you collected prior to the disconnection, to pick up from the same minute you left off, minimizing the amount of overlap.
+          </p>
+          <h4>
+           Duplicates
+          </h4>
+          <p>
+           We will not omit activities you may already have from a prior request, or your normal Power Track stream when delivering the results of a Replay request, and your app should deduplicate accordingly. Note, however, that for billing purposes, we deduplicate your activity counts across PowerTrack Replay requests that occur on the same day (based on UTC time) to ensure you are only billed once for each unique activity delivered via Replay. Activities delivered via the realtime Power Track stream are counted separately from those delivered via Replay.
+          </p>
+          <h2>
+           <a name="recovery">
+           </a>
+           Recovery
+           <a>
+           </a>
+          </h2>
+          <p>
+           As mentioned above, PowerTrack and Volume Streams provide important features to help with realtime streams. See our documentation on Additional Streams, Redundant Connections, Replay Streams, and Backfill
+           <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/powertrack_recovery_and_redundancy_features">
+            HERE
+           </a>
+           .
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="c11-masthead c13-cta-billboard">
+      <div class="text bg-color--neutral-white c11-masthead__bgColorWrapper ">
+       <div class="c11-masthead__contentWrapper container">
+        <p class="c11-masthead__eyebrow theme-color--dark">
+         Ready to build your solution?
+        </p>
+        <h1 class="c11-masthead__headline text color--neutral-white">
+         Review the documentation to get started.
+        </h1>
+        <button class="c11-masthead__button">
+         <a href="https://developer.twitter.com/en/docs" target="_blank" title="Go to docs">
+          Go to docs
+         </a>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer theme-bg-color--dark">
+     <div class="footer--banner theme-bg-color--extra-light">
+      <div class="footer__row container">
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="https://developer.twitter.com/en/developer-terms" target="_blank" title="Developer policy and terms">
+         Developer policy and terms
+        </a>
+       </div>
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="http://twitter.com/twitterdev" target="_blank" title="Follow @twitterdev">
+         Follow @twitterdev
+        </a>
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+        <a class="c04-link-button c04-link-button--button theme-bg-color--extra-extra-light theme-bg-color--extra-extra-light--hover" href="https://developer.twitter.com/en/twitterdev-news-subscription" target="_self">
+         Subscribe to developer news
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="footer__row container footer__row--main">
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com" target="_blank" title="About">
+        About
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company.html" target="_blank" title="Company">
+          Company
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/values.html" target="_blank" title="Values">
+          Values
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/safety.html" target="_blank" title="Safety">
+          Safety
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/official/en_us.html" target="_blank" title="Blog">
+          Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company/brand-resources.html" target="_blank" title="Brand Resources">
+          Brand Resources
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://careers.twitter.com/en.html" target="_blank" title="Careers">
+          Careers
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://investor.twitterinc.com/" target="_blank" title="Investors">
+          Investors
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/" target="_blank" title="Business">
+        Business
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/advertising.html" target="_blank" title="About Twitter Ads">
+          About Twitter Ads
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/targeting.html" target="_blank" title="Targeting">
+          Targeting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/analytics.html" target="_blank" title="Analytics">
+          Analytics
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/help.html" target="_blank" title="Ads support">
+          Ads support
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/small-business" target="_blank" title="Business blog">
+          Business blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://ads.twitter.com/login?ref=en-btc-gobal-footer" target="_blank" title="Advertise">
+          Advertise
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/" target="_blank" title="Developers">
+        Developers
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/overview/documentation" target="_blank" title="Documentation">
+          Documentation
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twittercommunity.com/" target="_blank" title="Forums">
+          Forums
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/community" target="_blank" title="Communities">
+          Communities
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/developer" target="_blank" title="Developer blog">
+          Developer blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/" target="_blank" title="Help Center">
+        Help Center
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/215585" target="_blank" title="Using Twitter">
+          Using Twitter
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/login" target="_blank" title="My account">
+          My account
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/283" target="_blank" title="Fixing a problem">
+          Fixing a problem
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/284" target="_blank" title="Policies and reporting">
+          Policies and reporting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/safety" target="_blank" title="Safety Center">
+          Safety Center
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/" target="_blank" title="Marketing">
+        Marketing
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/insights.html" target="_blank" title="Insights">
+          Insights
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/success-stories.html" target="_blank" title="Success Stories">
+          Success Stories
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/solutions.html" target="_blank" title="Solutions">
+          Solutions
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/collections.html" target="_blank" title="Collections">
+          Collections
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/advertising" target="_blank" title="Marketing Blog">
+          Marketing Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitterflightschool.com" target="_blank" title="Flight School">
+          Flight School
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__row container">
+      <div class="footer-col">
+       <p class="footer-col__footnote type--roman-14 theme-color--extra-light">
+        © 2017 Twitter, Inc.
+       </p>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/20170520" target="_blank" title="Cookies">
+        Cookies
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/privacy" target="_blank" title="Privacy">
+        Privacy
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/tos" target="_blank" title="Terms and Conditions">
+        Terms and Conditions
+       </a>
+      </div>
+     </div>
+    </footer>
+    <!--<div class="modal_container">-->
+    <div class="c20-modal__modal module-modal" data-modal="true">
+     <div class="c20-modal__scrollable" data-modal-scroll-container="true">
+      <div class="c20-modal__details" data-modal-content-container="true">
+       <!-- template is injected here -->
+      </div>
+      <ul class="c20-modal__navigation">
+       <li aria-label="Read previous biography" class="c20-modal__navigation-prev" data-modal-nav="prev-link">
+        <span class="c20-modal__navigation-label">
+         Read Previous
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="prev-text">
+        </span>
+       </li>
+       <li aria-label="Read next biography" class="c20-modal__navigation-next" data-modal-nav="next-link">
+        <span class="c20-modal__navigation-label">
+         Read Next
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="next-text">
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="module-modal__close-container">
+     <div class="c20-modal__modal-close module-modal__close" data-trigger="close-modal">
+      <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+       <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <!--</div>-->
+   </div>
+   <script src="/etc/designs/common-twitter/dtm-footer.min.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/app.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/universal.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/structure.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/content.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/docs.js" type="text/javascript">
+   </script>
+   <script async="" src="https://platform.twitter.com/widgets.js">
+   </script>
+  </cq:includeclientlib>
+ </body>
+</html>

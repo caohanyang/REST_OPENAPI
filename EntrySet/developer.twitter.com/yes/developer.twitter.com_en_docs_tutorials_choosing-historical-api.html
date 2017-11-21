@@ -1,0 +1,1069 @@
+<html lang="en" prefix="og: http://ogp.me/ns#">
+ <head>
+ </head>
+ <body class="theme--purple page tutorial-single-page " data-analytics-component="tutorials/choosing-historical-api" data-analytics-element="page" data-analytics-page="developer" data-analytics-section="docs">
+  <cq:includeclientlib categories="cq.jquery">
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+   <title>
+    Choosing a historical API — Twitter
+      Developers
+   </title>
+   <meta content="Learn how to create moments of delight informed by customer context. " name="description"/>
+   <link href="https://developer.twitter.com/en/docs/tutorials/choosing-historical-api.html" rel="canonical"/>
+   <meta content="https://developer.twitter.com/en/docs/tutorials/choosing-historical-api.html" property="og:url"/>
+   <meta content="article" property="og:type"/>
+   <meta content="Choosing a historical API" property="og:title"/>
+   <meta content="Learn how to create moments of delight informed by customer context. " property="og:description"/>
+   <meta content="summary" name="twitter:card"/>
+   <link href="https://developer.twitter.com/en/docs/tutorials/choosing-historical-api.html" hreflang="en" rel="alternate"/>
+   <meta content="on" name="twitter:widgets:new-embed-design"/>
+   <meta content="on" name="twitter:widgets:csp"/>
+   <link href="https://abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+   <script id="analytics-settings" type="application/json">
+    {&quot;google&quot;:{&quot;accounts&quot;:[],&quot;options&quot;:{&quot;displayAdvertisingFeatures&quot;:false}},&quot;scribe&quot;:{&quot;scribeSectionWithImpression&quot;:false},&quot;trackingPixel&quot;:{},&quot;bing&quot;:{}}
+   </script>
+   <script src="/etc/clientlibs/dtm/developer-twitter/ac0b17d7a4556cd264c3df3fac5054e8fd5023f8/satelliteLib-bcb222e3dbd22c730c028ee768fd0b3bea0a8ea0.js" type="text/javascript">
+   </script>
+   <link href="/etc/designs/developer-twitter/public/css/critical.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/app.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/universal.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/structure.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/content.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/docs.css" media="all" rel="stylesheet"/>
+   <script src="/etc/designs/developer-twitter/public/js/common.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/critical.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/onload.js" type="text/javascript">
+   </script>
+   <div id="component-wrapper">
+    <div class="nav theme-bg-color--dark" data-current-level="0" data-hidden="true">
+     <div class="nav--wrapper">
+      <header class="nav__header">
+       <div class="nav__headeritem-left">
+        <div class="nav__headeritem-title">
+         <a class="logo-title color--neutral-white" href="https://developer.twitter.com/en.html">
+          <span class="logo">
+           <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg">
+            <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z">
+            </path>
+           </svg>
+          </span>
+          <span class="title color--neutral-white">
+           Developer
+          </span>
+         </a>
+         <a class="nav-icon" href="#">
+          <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+           <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+           </path>
+          </svg>
+         </a>
+         <a class="nav-back color--neutral-white" data-nav-back="true" href="#">
+          <span class="title color--neutral-white">
+           Back
+          </span>
+         </a>
+        </div>
+       </div>
+       <ul class="nav--menu nav--menu--root" data-currentpage="/content/developer-twitter/en/docs/tutorials" data-level="1">
+        <li class="nav--mobile-item nav--menu__list-item color--neutral-white " data-show-sub-level="false">
+         <a class="color--neutral-white" href="https://developer.twitter.com/en.html" title="Developer">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Developer
+          </span>
+         </a>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Use cases" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Use cases
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/advertise" title="Advertise">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Advertise
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/publish-and-curate" title="Publish and curate">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publish and curate
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/analyze" title="Analyze">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Analyze
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/engage" title="Engage">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Engage
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Products" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Products
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/accounts-and-users" title="Accounts and users">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Accounts and users
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/tweets" title="Tweets">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tweets
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/direct-messages" title="Direct Messages">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Direct Messages
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/metrics" title="Metrics">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Metrics
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/ad-campaigns" title="Ad campaigns">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Ad campaigns
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/publisher-tools" title="Publisher tools and SDKs">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publisher tools and SDKs
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Docs" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Docs
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/documentation" title="Documentation">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Documentation
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/api-reference-index" title="API reference index">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             API reference index
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/tutorials" title="Tutorials">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tutorials
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="More" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           More
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/case-studies" title="Case studies">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Case studies
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/enterprise" title="Enterprise data">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Enterprise data
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/developer-terms" title="Developer terms">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Developer terms
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/pricing" title="Pricing">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Pricing
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/billing-faq" title="Billing FAQ">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Billing FAQ
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/community" title="Community">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Community
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/forum" title="Forum">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Forum
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/blog" title="Blog">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Blog
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <div class="nav__headeritem-right">
+        <div class="freemium-nav" data-current-level="0" data-hidden="true">
+         <ul class="nav--menu nav--menu--root" data-level="1">
+          <!-- Handlebars template will be written here -->
+         </ul>
+        </div>
+        <!--<sly data-sly-resource="region-selector"/>-->
+        <div class="search">
+         <a class="search-icon js-nav-search" href="#">
+          <svg height="72" viewBox="0 0 56 72" width="56" xmlns="http://www.w3.org/2000/svg">
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+          </svg>
+         </a>
+        </div>
+        <div class="login-container signed-out" data-browser-language="en,*" data-geo-location="AAAAEIDejsYokoNXEB2rg70oOr+sVFIkM1RkJF2P5KSMDEofcnENEPTiXX8T2OQABw==">
+         <div class="avatar">
+         </div>
+         <div class="sign-in">
+          <div class="btn-container">
+           <a href="https://twitter.com/login">
+            <button type="button">
+             Sign In
+            </button>
+           </a>
+          </div>
+         </div>
+        </div>
+        <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+         <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+         </path>
+        </svg>
+       </div>
+      </header>
+     </div>
+    </div>
+    <div class="nav__search-modal theme-bg-color--dark">
+     <div class="search-bar search-bar--js theme-color--extra-light theme-fill-color--extra-light theme-border-color--extra-light" data-search-path="/en/search-results.html">
+      <input autocomplete="off" class="search-bar__input" name="q" placeholder="Type your search here" type="search"/>
+      <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <div class="transparent-masthead">
+    </div>
+    <div class="page-wrapper tutorial-single-page">
+     <div class="c11-masthead">
+      <div class="text bg-color--neutral-white c11-masthead__bgColorWrapper ">
+       <div class="c11-masthead__contentWrapper container">
+        <p class="c11-masthead__eyebrow theme-color--dark">
+         Tutorials
+        </p>
+        <h1 class="c11-masthead__headline text color--neutral-white">
+         Choosing a historical API
+        </h1>
+       </div>
+      </div>
+     </div>
+     <div class="d06-anchor-link-menu">
+      <div class="tabs-nav__toc">
+       <span class="tabs-nav__toc__title">
+        Jump to on this page
+        <span class="arrow-down fill-color--neutral-light-gray">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </span>
+       <div class="tabs-nav__toc__list">
+        <p>
+         <a href="#intro">
+          Introduction
+         </a>
+        </p>
+        <p>
+         <a href="#product_differences">
+          Product differences
+         </a>
+        </p>
+        <p>
+         <a href="#selecting_product">
+          Selecting historical produc
+         </a>
+         t
+        </p>
+        <p>
+         <a href="#next_steps">
+          Next steps
+         </a>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="s01-section">
+      <div class="s01-section__container bg-color--neutral-white">
+       <div class="container ">
+        <div class="column column-2">
+         <div class="s01-section__left">
+          <h2>
+          </h2>
+          <div>
+           <div class="c01-rich-text-editor">
+            <h4>
+             Relevant products
+            </h4>
+            <h4>
+            </h4>
+            <p>
+             <a href="https://developer.twitter.com/en/docs/tweets/search">
+              <span class="with-caret">
+               Full-Archive Search
+              </span>
+             </a>
+             <br/>
+             <a href="https://developer.twitter.com/en/docs/tweets/batch-historical">
+              <span class="with-caret">
+               Historical PowerTrack
+              </span>
+             </a>
+            </p>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="column column-10 ">
+         <div class="c01-rich-text-editor">
+          <h2>
+           <a name="intro">
+           </a>
+           Introduction
+           <a>
+           </a>
+          </h2>
+          <p>
+           Both Historical PowerTrack and Full-Archive Search provide access to any publicly available Tweet, starting with
+           <a href="https://twitter.com/jack/status/20">
+            the first Tweet from March 2006
+           </a>
+           . Deciding which product better suits your use case can be key in getting the data you want when you need it. This article highlights the differences between the two historical products, with a goal of helping you determine which one to use for generating your next historical Tweet dataset.
+          </p>
+          <p>
+           Both historical products scan a Tweet archive, examine each Tweet posted during the time of interest, and generate a set of Tweets matching your query. However, Historical PowerTrack and Full-Archive Search are based on significantly different archive architectures, resulting in fundamental product differences. These differences include supported PowerTrack operators, the number of rules/filters per request, how estimates are provided, and how the data is delivered.
+          </p>
+          <p>
+           We’ll start off by providing an overview of Historical PowerTrack and the Full-Archive Search API, then discuss these differences in detail. We’ll wrap up the discussion with general guidance for selecting a historical product.
+          </p>
+          <h4>
+           Historical PowerTrack
+           <a>
+           </a>
+          </h4>
+          <p>
+           Historical PowerTrack (HPT) is built to deliver Tweets at scale using a batch, Job-based design where the API is used to move a Job through multiple phases. These phases include volume estimation, Job acceptance/rejection, getting Job status, and downloading potentially many thousands of data files. Depending on the length of the request time period, Jobs can take hours or days to generate. A data file is generated for each 10-minute period that contains at least one Tweet. Therefore, a 30-day datasets will commonly consists of approximately 4,300 files regardless of the number of matched Tweets.
+          </p>
+          <p>
+           Historical PowerTrack, launched in 2012 by Gnip, was built on top of a file-based archive, with each file containing a short duration of the real-time Tweet firehose. As Historical PowerTrack generates your dataset, it performs file operations as it opens each file, and examines each Tweet in the file. During this process, Historical PowerTrack accesses all sections of the JSON payload that have an associated PowerTrack operator. Historical PowerTrack supports the full set of PowerTrack operators supported by real-time PowerTrack.
+          </p>
+          <h4>
+           Full-Archive Search
+           <a>
+           </a>
+          </h4>
+          <p>
+           Full-Archive Search (FAS) delivers matched Tweets in a manner analogous to Google Search. When you search for a particular term, Google Search does not return or display the potentially millions of matching results all at once. Rather, it delivers a small number of results per scrollable page and allows you to click “Next” for the subsequent page of results… and so on, until all of the matching items are returned. Full-Archive Search works in a similar way, responding with a subset of Tweets, with the ability to paginate for more Tweets as needed.
+          </p>
+          <p>
+           Full-Archive Search is designed using the classic RESTful request/response pattern, where a single PowerTrack rule is submitted and a response with matching Tweets is immediately provided. Full-Archive Search can provide a maximum of 500 Tweets per response, and a ‘next’ token is provided to paginate until all Tweets for a query are received. The more Tweets that matches your query the longer it will take you to retrieve all of that data through the Search API. This is because you will need to stitch together the paginated result sets, one after the other, to create the complete set of all returned data.
+          </p>
+          <p>
+           Many use cases focus on the number of Tweets associated with a query, rather than the actual Tweet messages themselves. Full-Archive Search supports a ‘counts’ endpoint that returns a time-series of the number of matched Tweets. These Tweet counts are returned in a time-series of minute-by-minute, hourly, or daily totals.
+          </p>
+          <p>
+           Note that Twitter also provides a 30-Day Search API. If you only need data from the last 30 days, this API is likely the best match for your use case.
+          </p>
+          <h2>
+           Product differences
+           <a>
+           </a>
+          </h2>
+          <p>
+           Here are the fundamental differences between Historical PowerTrack and Full-Archive Search:
+          </p>
+          <ul>
+           <li>
+            <p>
+             <b>
+              Number of rules supported per request
+             </b>
+            </p>
+            <ul>
+             <li>
+              A Historical PowerTrack Job can support up to 1,000 rules.
+             </li>
+             <li>
+              <p>
+               Full-Archive Search accepts a single rule per request.
+              </p>
+             </li>
+             <li>
+              Note: With each product a single rule can contain up to 2,048 characters.
+             </li>
+            </ul>
+           </li>
+          </ul>
+          <ul>
+           <li>
+            <p>
+             <b>
+              How data is delivered
+             </b>
+            </p>
+            <ul>
+             <li>
+              Historical PowerTrack generates a time-series of data files, each covering a ten-minute period. For example, each hour of data is provided in six 10-minute data files (assuming each 10-minute period has at least one Tweet. If not, no file is generated). So, once a Historical PowerTrack ‘Job’ is finished, the next step is downloading the data files. Inside each Historical PowerTrack file, the JSON Tweet payloads are written in an atomic fashion, and are not presented in an JSON array. File contents need to be parsed using newline characters as a delimiter.
+             </li>
+             <li>
+              With Full-Archive Search, Tweets in each response are arranged in a “results” array. A maximum of 500 Tweets are available per response and a ‘next’ token is provided if more Tweets are available. For example, if a 60-day request for a single PowerTrack rule matches 10,000 Tweets, at least 20 requests must be made of the Search API.
+             </li>
+            </ul>
+           </li>
+          </ul>
+          <ul>
+           <li>
+            <p>
+             <b>
+              Supported PowerTrack operators
+             </b>
+            </p>
+            <ul>
+             <li>
+              While the majority of Operators supported by HPT are also supported by FAS, there are a set of operators not available in FAS:
+             </li>
+            </ul>
+           </li>
+          </ul>
+          <table>
+           <tbody>
+            <tr>
+             <td>
+              bio:
+             </td>
+             <td>
+              profile_bounding_box:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              bio_location:
+             </td>
+             <td>
+              profile_point_radius:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              bio_name:
+             </td>
+             <td>
+              profile_subregion:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              contains:
+             </td>
+             <td>
+              retweets_of_status_id:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              is:quote
+             </td>
+             <td>
+              sample:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              followers_count:
+             </td>
+             <td>
+              source:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              friends_count:
+             </td>
+             <td>
+              statuses_count:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              has:lang
+             </td>
+             <td>
+              url_contains:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              in_reply_to_status_id:
+             </td>
+             <td>
+              url_description:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              listed_count:
+             </td>
+             <td>
+              url_title:
+             </td>
+            </tr>
+            <tr>
+             <td>
+              time_zone:
+             </td>
+             <td>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+          </p>
+          <ul>
+           <li>
+            For a complete list of operators for each product see here:
+            <ul>
+             <li>
+              <a href="https://developer.twitter.com/en/docs/tweets/search/overview/full-archive-search#AvailableOperators">
+               Search operator List
+              </a>
+             </li>
+             <li>
+              <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/overview/powertrack-api#AvailableOperators">
+               Historical PowerTrack operator List
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            See
+            <a href="https://developer.twitter.com/en/docs/tweets/rules-and-filtering/overview/operators-by-product">
+             HERE
+            </a>
+            for a side-by-side comparison of available operators.
+           </li>
+          </ul>
+          <ul>
+           <li>
+            <p>
+             <b>
+              Data volume estimates
+             </b>
+            </p>
+            <ul>
+             <li>
+              <p>
+               Full-Archive Search provides a ‘counts’ endpoint that is used to generate a minutely, hourly, or daily time-series of matching Tweets. For use cases that benefit from knowing about data
+               <i>
+                volumes
+               </i>
+               , in addtion to the actual data, the Full-Archive Search ‘counts’ endpoint is the tool of choice. Note that the ‘counts’ endpoint is a measure of
+               <i>
+                pre-compliant
+               </i>
+               matched Tweets. Pre-compliant means the Tweet totals do not take into account deleted and protected Tweets. Data requests will not include deleted or private Tweets.
+              </p>
+             </li>
+             <li>
+              <p>
+               The Historical PowerTrack API provides an
+               <i>
+                order of magnitude
+               </i>
+               estimate for the number of Tweets a Job will match. These estimates are based on a sampling of the time period to be covered, and should be treated as a directionally accurate guide to the amount of data a historical Job will return. A Historical PowerTrack estimate will help answer whether a Job will match 100,000 or 1,000,000 Tweets. The goal is to provide reasonable expectations around the amount of data a request will return, and the Historical PowerTrack API should not be used as an estimate tool.
+              </p>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <p>
+             <b>
+              Product licensing and pricing
+             </b>
+            </p>
+           </li>
+          </ul>
+          <p>
+           Both the Full-Archive Search and Historical PowerTrack APIs are available with 12-month subscriptions. In addition, Historical PowerTrack is available on a
+           <i>
+            ‘one-off’
+           </i>
+           basis. So if you need historical Tweet data for a one-time project or ad hoc research, Historical PowerTrack will be better suited to your needs.
+          </p>
+          <h2>
+           <a name="selecting_product">
+           </a>
+           Selecting a historical product
+           <a>
+           </a>
+          </h2>
+          <p>
+           Full-Archive Search is best for collecting lower-volume datasets, while Historical PowerTrack is more appropriate for higher-volume datasets. Our general recommendation is that Full-Archive Search is best suited for datasets of a few million Tweets or less. This recommendation is intentionally vague as there is no real technical reason why Full-Archive Search could not be used for very large data requests. However, depending on how you plan to retrieve the data and utilize API rate limits, there actually is a threshold where Historical PowerTrack actually processes the data faster than Full-Archive Search. Say a Historical PowerTrack Job delivers 8 million Tweets in 6 hours. To pull 8 million Tweets via Full-Archive Search, it would require a minimum of 16,000 search requests. If you also assume 2-second response times and an app that paginates with a single thread, it would actually take Full-Archive Search longer to retrieve this 8 million Tweet dataset.
+          </p>
+          <p>
+           Beyond data volume considerations and comparing completion times, there are other reasons why one historical product is best suited for your use case. Historical PowerTrack is the right product if you require any of the operators that are not currently supported in Full-Archive Search (see above). Historical PowerTrack is great for less time sensitive research. Historical PowerTrack is also better suited for large query rulesets, as the Search API products only support a single PowerTrack rule per request. Historical PowerTrack, on the other hand, supports up to one thousand (1,000) rules. Finally, Historical PowerTrack is a great choice for use cases where receiving, in real-time, new Tweet attributes of interest (e.g. hashtags, mentions and URLs) trigger a historical request. Since Historical PowerTrack supports the same full set of operators as real-time PowerTrack, you can always ‘plug in’ the corresponding real-time rules into a Historical PowerTrack Job.
+          </p>
+          <p>
+           On the other hand, Full-Archive Search is a better choice if you are building tools that depend on near-instant results and data volume estimates. Quick responses are key if you are building historical Tweet results into a dashboard or user application. Full-Archive Search has been built into many systems that enable users to create filters and instantly inspect Tweets that match. Depending on initial responses, users can continue to paginate through the results, or instead broaden or narrow the filter and retry. Since Full-Archive Search provides more accurate volume estimates with its ‘counts’ endpoint, another common Search use case is experimenting with filters before adding them to a real-time stream.
+          </p>
+          <h2>
+           <a name="next_steps">
+           </a>
+           Next steps
+           <a>
+           </a>
+          </h2>
+          <ul>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/batch-historical">
+             Learn more about Historical PowerTrack
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/search">
+             Learn more about the Full-Archive Search API
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides/tweet-timeline">
+             Learn more about the evolution of Tweet metadata
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/batch-historical/guides/hpt-timeline">
+             Learn more about Historical PowerTrack and its metadata and filtering timeline
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/search/guides/fas-timeline">
+             Learn more about the Full-Archive Search API and its metadata and filtering timeline
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="c11-masthead c13-cta-billboard">
+      <div class="text bg-color--neutral-white c11-masthead__bgColorWrapper ">
+       <div class="c11-masthead__contentWrapper container">
+        <p class="c11-masthead__eyebrow theme-color--dark">
+         Ready to build your solution?
+        </p>
+        <h1 class="c11-masthead__headline text color--neutral-white">
+         Review the documentation to get started
+        </h1>
+        <button class="c11-masthead__button">
+         <a href="https://developer.twitter.com/en/docs" target="_blank" title="Go to docs">
+          Go to docs
+         </a>
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer theme-bg-color--dark">
+     <div class="footer--banner theme-bg-color--extra-light">
+      <div class="footer__row container">
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="https://developer.twitter.com/en/developer-terms" target="_blank" title="Developer policy and terms">
+         Developer policy and terms
+        </a>
+       </div>
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="http://twitter.com/twitterdev" target="_blank" title="Follow @twitterdev">
+         Follow @twitterdev
+        </a>
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+        <a class="c04-link-button c04-link-button--button theme-bg-color--extra-extra-light theme-bg-color--extra-extra-light--hover" href="https://developer.twitter.com/en/twitterdev-news-subscription" target="_self">
+         Subscribe to developer news
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="footer__row container footer__row--main">
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com" target="_blank" title="About">
+        About
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company.html" target="_blank" title="Company">
+          Company
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/values.html" target="_blank" title="Values">
+          Values
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/safety.html" target="_blank" title="Safety">
+          Safety
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/official/en_us.html" target="_blank" title="Blog">
+          Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company/brand-resources.html" target="_blank" title="Brand Resources">
+          Brand Resources
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://careers.twitter.com/en.html" target="_blank" title="Careers">
+          Careers
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://investor.twitterinc.com/" target="_blank" title="Investors">
+          Investors
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/" target="_blank" title="Business">
+        Business
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/advertising.html" target="_blank" title="About Twitter Ads">
+          About Twitter Ads
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/targeting.html" target="_blank" title="Targeting">
+          Targeting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/analytics.html" target="_blank" title="Analytics">
+          Analytics
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/help.html" target="_blank" title="Ads support">
+          Ads support
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/small-business" target="_blank" title="Business blog">
+          Business blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://ads.twitter.com/login?ref=en-btc-gobal-footer" target="_blank" title="Advertise">
+          Advertise
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/" target="_blank" title="Developers">
+        Developers
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/overview/documentation" target="_blank" title="Documentation">
+          Documentation
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twittercommunity.com/" target="_blank" title="Forums">
+          Forums
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/community" target="_blank" title="Communities">
+          Communities
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/developer" target="_blank" title="Developer blog">
+          Developer blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/" target="_blank" title="Help Center">
+        Help Center
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/215585" target="_blank" title="Using Twitter">
+          Using Twitter
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/login" target="_blank" title="My account">
+          My account
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/283" target="_blank" title="Fixing a problem">
+          Fixing a problem
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/284" target="_blank" title="Policies and reporting">
+          Policies and reporting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/safety" target="_blank" title="Safety Center">
+          Safety Center
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/" target="_blank" title="Marketing">
+        Marketing
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/insights.html" target="_blank" title="Insights">
+          Insights
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/success-stories.html" target="_blank" title="Success Stories">
+          Success Stories
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/solutions.html" target="_blank" title="Solutions">
+          Solutions
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/collections.html" target="_blank" title="Collections">
+          Collections
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/advertising" target="_blank" title="Marketing Blog">
+          Marketing Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitterflightschool.com" target="_blank" title="Flight School">
+          Flight School
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__row container">
+      <div class="footer-col">
+       <p class="footer-col__footnote type--roman-14 theme-color--extra-light">
+        © 2017 Twitter, Inc.
+       </p>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/20170520" target="_blank" title="Cookies">
+        Cookies
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/privacy" target="_blank" title="Privacy">
+        Privacy
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/tos" target="_blank" title="Terms and Conditions">
+        Terms and Conditions
+       </a>
+      </div>
+     </div>
+    </footer>
+    <!--<div class="modal_container">-->
+    <div class="c20-modal__modal module-modal" data-modal="true">
+     <div class="c20-modal__scrollable" data-modal-scroll-container="true">
+      <div class="c20-modal__details" data-modal-content-container="true">
+       <!-- template is injected here -->
+      </div>
+      <ul class="c20-modal__navigation">
+       <li aria-label="Read previous biography" class="c20-modal__navigation-prev" data-modal-nav="prev-link">
+        <span class="c20-modal__navigation-label">
+         Read Previous
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="prev-text">
+        </span>
+       </li>
+       <li aria-label="Read next biography" class="c20-modal__navigation-next" data-modal-nav="next-link">
+        <span class="c20-modal__navigation-label">
+         Read Next
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="next-text">
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="module-modal__close-container">
+     <div class="c20-modal__modal-close module-modal__close" data-trigger="close-modal">
+      <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+       <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <!--</div>-->
+   </div>
+   <script src="/etc/designs/common-twitter/dtm-footer.min.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/app.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/universal.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/structure.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/content.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/docs.js" type="text/javascript">
+   </script>
+   <script async="" src="https://platform.twitter.com/widgets.js">
+   </script>
+  </cq:includeclientlib>
+ </body>
+</html>

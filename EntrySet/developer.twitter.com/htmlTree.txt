@@ -1,0 +1,1324 @@
+
+                           /-/docs
+                          |
+                          |     /-/api-reference-index
+                          |    |
+                          |    |--/documentation
+                          |    |
+                          |    |--/tutorials
+                          |    |
+                          |    |--/tweets
+                          |    |
+                          |    |                   /-/create-manage-lists
+                          |    |                  |
+                          |    |                  |--/follow-search-get-users
+                          |    |                  |
+                          |    |                  |--/manage-account-settings
+                          |    |                  |
+                          |    |                  |--/mute-block-report-users
+                          |    |                  |
+                          |    |                  |--/subscribe-account-activity
+                          |    |                  |
+                          |    |                  |--/user-profile-images-and-banners
+                          |    |                  |
+                          |    |                  |                    /-/api-reference
+                          |    |                  |                   |
+                          |    |                  |                   |--/overview
+                          |    |                  |                   |
+                          |    |                  |                   |              /-/get-lists-list
+                          |    |                  |                   |             |
+                          |    |                  |                   |             |--/get-lists-members
+                          |    |                  |                   |             |
+                          |    |                  |                   |             |--/get-lists-members-show
+                          |    |                  |                   |             |
+                          |    |                  |                   |             |--/get-lists-memberships
+                          |    |                  |-/create-manage-lists            |
+                          |    |                  |                   |             |--/get-lists-ownerships
+                          |    |                  |                   |             |
+                          |    |                  |                   |             |--/get-lists-show
+                          |    |                  |                   |             |
+                          |    |                  |                   |             |--/get-lists-statuses
+                          |    |                  |                   |             |
+                          |    |                  |                   |             |--/get-lists-subscribers
+                          |    |                  |                   |             |
+                          |    |                  |                   |             |--/get-lists-subscribers-show
+                          |    |                  |                   |             |
+                          |    |                  |                    \/api-reference-/get-lists-subscriptions
+                          |    |                  |                                 |
+                          |    |                  |                                 |--/post-lists-create
+                          |    |                  |                                 |
+                          |    |                  |                                 |--/post-lists-destroy
+                          |    |                  |                                 |
+                          |    |                  |                                 |--/post-lists-members-create
+                          |    |                  |                                 |
+                          |    |                  |                                 |--/post-lists-members-create_all
+                          |    |                  |                                 |
+                          |    |                  |                                 |--/post-lists-members-destroy
+                          |    |                  |                                 |
+                          |    |                  |                                 |--/post-lists-members-destroy_all
+                          |    |                  |                                 |
+                          |    |                  |                                 |--/post-lists-subscribers-create
+                          |    |                  |                                 |
+                          |    |                  |                                 |--/post-lists-subscribers-destroy
+                          |    |                  |                                 |
+                          |    |                  |                                  \-/post-lists-update
+                          |    |                  |
+                          |    |                  |                        /-/api-reference
+                          |    |                  |                       |
+                          |    |                  |                       |--/overview
+                          |    |                  |                       |
+                          |    |                  |                       |              /-/get-followers-ids
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-followers-list
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-friends-ids
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-friends-list
+                          |    |                  |-/follow-search-get-users            |
+                          |    |                  |                       |             |--/get-friends-list.html
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-friendships-incoming
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-friendships-lookup
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-friendships-no_retweets-ids
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-friendships-outgoing
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-friendships-show
+                          |    |                  |                        \/api-reference
+                          |    |                  |                                     |--/get-users-lookup
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/get-users-lookup.html
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/get-users-search
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/get-users-show
+                          |    |-/accounts-and-users                                    |
+                          |    |                  |                                     |--/get-users-suggestions
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/get-users-suggestions-slug
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/get-users-suggestions-slug-members
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-friendships-create
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-friendships-destroy
+                          |    |                  |                                     |
+                          |    |                  |                                      \-/post-friendships-update
+                          |    |                  |
+                          |    |                  |                        /-/api-reference
+                          |    |                  |                       |
+                          |    |                  |                       |--/overview
+                          |    |                  |                       |
+                          |    |                  |                       |              /-/get-account-settings
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-account-verify_credentials
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-account-verify_credentials.html
+                          |    |                  |-/manage-account-settings            |
+                          |    |                  |                       |             |--/get-saved_searches-list
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-saved_searches-show-id
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-users-profile_banner
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/post-account-remove_profile_banner
+                          |    |                  |                       |             |
+                          |    |                  |                        \/api-reference-/post-account-settings
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-account-update_profile
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-account-update_profile_background_image
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-account-update_profile_banner
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-account-update_profile_banner.html
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-account-update_profile_image
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-saved_searches-create
+                          |    |                  |                                     |
+                          |    |                  |                                      \-/post-saved_searches-destroy-id
+                          |    |                  |
+                          |    |                  |                        /-/api-reference
+                          |    |                  |                       |
+                          |    |                  |                       |--/overview
+                          |    |                  |                       |
+                          |    |                  |                       |              /-/get-blocks-ids
+                          |    |                  |                       |             |
+                          |    |                  |-/mute-block-report-users            |--/get-blocks-list
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-mutes-users-ids
+                          |    |                  |                       |             |
+                          |    |                  |                       |             |--/get-mutes-users-list
+                          |    |                  |                       |             |
+                          |    |                  |                        \/api-reference-/post-blocks-create
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-blocks-destroy
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-mutes-users-create
+                          |    |                  |                                     |
+                          |    |                  |                                     |--/post-mutes-users-destroy
+                          |    |                  |                                     |
+                          |    |                  |                                      \-/post-users-report_spam
+                          |    |                  |
+                          |    |                  |                           /-/api-reference
+                          |    |                  |                          |
+                          |    |                  |                          |--/guides
+                          |    |                  |                          |
+                          |    |                  |                          |--/overview
+                          |    |                  |                          |
+                          |    |                  |                          |--/overview.html
+                          |    |                  |                          |
+                          |    |                  |                          |              /-/delete-subscription
+                          |    |                  |                          |             |
+                          |    |                  |                          |             |--/delete-webhook-config
+                          |    |                  |                          |             |
+                          |    |                  |                          |             |--/get-subscription
+                          |    |                  |                          |             |
+                          |    |                  |                          |             |--/get-subscriptions-list
+                          |    |                  |                          |             |
+                          |    |                   \/subscribe-account-activity            |--/get-webhook-config
+                          |    |                                             |-/api-reference
+                          |    |                                             |             |--/new-subscription
+                          |    |                                             |             |
+                          |    |                                             |             |--/new-webhook-config
+                          |    |                                             |             |
+                          |    |                                             |             |--/site-stream
+                          |    |                                             |             |
+                          |    |                                             |             |--/user-stream
+                          |    |                                             |             |
+                          |    |                                             |              \-/validate-webhook-config
+                          |    |                                             |
+                          |    |                                             |       /-/authenticating-users
+                          |    |                                             |      |
+                          |    |                                             |      |--/getting-started-with-webhooks
+                          |    |                                             |      |
+                          |    |                                              \/guides-/managing-webhooks-and-subscriptions
+                          |    |                                                    |
+                          |    |                                                    |--/receiving-events
+                          |    |                                                    |
+                          |    |                                                     \-/securing-webhooks
+                          |    |
+                          |    |    /-/analytics
+                          |    |   |
+                          |    |   |--/audiences
+                          |    |   |
+                          |    |   |--/campaign-management
+                          |    |   |
+                          |    |   |--/creatives
+                          |    |   |
+                          |    |   |--/general
+                          |    |   |
+                          |    |   |--/measurement
+                          |    |   |
+                          |    |   |          /-/api-reference
+                          |    |   |         |
+                          |    |   |         |--/overview
+                          |    |   |         |
+                          |    |   |         |--/overview.html
+                          |    |   |         |
+                          |    |   |         |              /-/asynchronous
+                          |    |   |         |             |
+                          |    |   |         |             |--/asynchronous.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/auction-insights
+                          |    |   |         |-/api-reference
+                          |    |   |-/analytics            |--/reach
+                          |    |   |         |             |
+                          |    |   |         |             |--/synchronous
+                          |    |   |         |             |
+                          |    |   |         |              \-/synchronous.html
+                          |    |   |         |
+                          |    |   |         |         /-/best-practices
+                          |    |   |         |        |
+                          |    |   |         |        |--/best-practices.html
+                          |    |   |         |        |
+                          |    |   |         |        |--/metrics-and-segmentation
+                          |    |   |         |        |
+                          |    |   |          \/overview-/metrics-and-segmentation.html
+                          |    |   |                  |
+                          |    |   |                  |--/metrics-by-objective
+                          |    |   |                  |
+                          |    |   |                  |--/metrics-by-objective.html
+                          |    |   |                  |
+                          |    |   |                   \-/metrics-derived
+                          |    |   |
+                          |    |   |          /-/api-reference
+                          |    |   |         |
+                          |    |   |         |--/guides
+                          |    |   |         |
+                          |    |   |         |--/overview
+                          |    |   |         |
+                          |    |   |         |--/overview.html
+                          |    |   |         |
+                          |    |   |         |              /-/global-opt-out
+                          |    |   |         |             |
+                          |    |   |         |             |--/global-opt-out.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/insights
+                          |    |   |         |             |
+                          |    |   |         |             |--/keyword-insights
+                          |    |   |         |             |
+                          |    |   |         |             |--/real-time
+                          |    |   |         |             |
+                          |    |   |         |             |--/real-time.html
+                          |    |   |         |-/api-reference
+                          |    |   |         |             |--/tailored-audience-changes
+                          |    |   |-/audiences            |
+                          |    |   |         |             |--/tailored-audience-changes.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/tailored-audience-permissions
+                          |    |   |         |             |
+                          |    |   |         |             |--/tailored-audience-permissions.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/tailored-audiences
+                          |    |   |         |             |
+                          |    |   |         |              \-/tailored-audiences.html
+                          |    |   |         |
+                          |    |   |         |       /-/ta-realtime-integration-guide
+                          |    |   |         |-/guides
+                          |    |   |         |       \-/ta-realtime-integration-guide.html
+                          |    |   |         |
+                          |    |   |         |         /-/audience-insights
+                          |    |   |         |        |
+                          |    |   |         |        |--/crm
+                          |    |   |         |        |
+                          |    |   |         |        |--/faq
+                          |    |   |         |        |
+                          |    |   |         |        |--/file-data
+                          |    |   |          \/overview
+                          |    |   |                  |--/file-data.html
+                          |    |   |                  |
+                          |    |   |                  |--/id-sync
+                          |    |   |                  |
+                          |    |   |                  |--/ton-upload
+                          |    |   |                  |
+                          |    |   |                   \-/web
+                          |    |   |
+                          |    |   |                    /-/api-reference
+                          |    |   |                   |
+                          |    |   |                   |--/guides
+                          |    |   |                   |
+                          |    |   |                   |--/overview
+                          |    |   |                   |
+                          |    |   |                   |              /-/accounts
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/accounts.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/authenticated-user-access
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/bidding_rules
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/campaigns
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/campaigns.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/features
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/features.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/funding-instruments
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/funding-instruments.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/iab-categories
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/iab_categories
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/line-item-apps
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/line-item-placements
+-- /developer.twitter.com/en   |   |                   |             |
+                          |    |   |                   |             |--/line-item-placements.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/line-items
+                          |    |   |                   |             |
+                          |    |   |                   |-/api-reference-/line-items.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/media-creatives
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/promotable-users
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/promotable-users.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/promoted-accounts
+                          |    |   |-/campaign-management            |
+                          |    |   |                   |             |--/promoted-tweets
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/promoted-tweets.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/reach-estimate
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/reach-estimate.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/recommendations
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/scheduled-promoted-tweets
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/scheduled-promoted-tweets.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/targeting-criteria
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/targeting-criteria.html
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/targeting-options
+                          |    |   |                   |             |
+                          |    |   |                   |             |--/targeting-options.html
+                          |    |-/ads                  |             |
+                          |    |   |                   |              \-/targeting-suggestions
+                          |    |   |                   |
+                          |    |   |                   |       /-/keyword-targeting-timelines
+                          |    |   |                   |      |
+                          |    |   |                   |      |--/twitter-audience-platform-mobile-app-promotion
+                          |    |   |                   |      |
+                          |    |   |                   |      |--/twitter-audience-platform-website-clicks
+                          |    |   |                   |-/guides
+                          |    |   |                   |      |--/video-views-midroll-objective
+                          |    |   |                   |      |
+                          |    |   |                   |      |--/video-views-preroll-objective
+                          |    |   |                   |      |
+                          |    |   |                   |       \-/video-views-preroll-objective.html
+                          |    |   |                   |
+                          |    |   |                   |         /-/budget-pacing
+                          |    |   |                   |        |
+                          |    |   |                   |        |--/funding-instruments
+                          |    |   |                   |        |
+                          |    |   |                   |        |--/objective-based-campaigns
+                          |    |   |                   |        |
+                          |    |   |                   |        |--/objective-based-campaigns.html
+                          |    |   |                   |        |
+                          |    |   |                   |        |--/placements
+                          |    |   |                   |        |
+                          |    |   |                    \/overview-/pmfi
+                          |    |   |                            |
+                          |    |   |                            |--/target-bidding
+                          |    |   |                            |
+                          |    |   |                            |--/targeting
+                          |    |   |                            |
+                          |    |   |                            |--/targeting-country-requirements
+                          |    |   |                            |
+                          |    |   |                            |--/targeting-country-requirements.html
+                          |    |   |                            |
+                          |    |   |                             \-/targeting.html
+                          |    |   |
+                          |    |   |          /-/api-reference
+                          |    |   |         |
+                          |    |   |         |--/guides
+                          |    |   |         |
+                          |    |   |         |--/overview
+                          |    |   |         |
+                          |    |   |         |              /-/account-media
+                          |    |   |         |             |
+                          |    |   |         |             |--/image-app-download
+                          |    |   |         |             |
+                          |    |   |         |             |--/image-app-download.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/image-conversation
+                          |    |   |         |             |
+                          |    |   |         |             |--/image-conversation.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/image-direct-message
+                          |    |   |         |             |
+                          |    |   |         |             |--/image-direct-message.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/preroll-call-to-actions
+                          |    |   |         |             |
+                          |    |   |         |             |--/scheduled-tweets
+                          |    |   |         |             |
+                          |    |   |         |             |--/scheduled-tweets.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/tweets
+                          |    |   |         |             |
+                          |    |   |         |             |--/tweets.html
+                          |    |   |-/creatives/api-reference
+                          |    |   |         |             |--/video-app-download
+                          |    |   |         |             |
+                          |    |   |         |             |--/video-app-download.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/video-conversation
+                          |    |   |         |             |
+                          |    |   |         |             |--/video-conversation.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/video-direct-message
+                          |    |   |         |             |
+                          |    |   |         |             |--/video-direct-message.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/video-website
+                          |    |   |         |             |
+                          |    |   |         |             |--/video-website.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/videos
+                          |    |   |         |             |
+                          |    |   |         |             |--/videos.html
+                          |    |   |         |             |
+                          |    |   |         |             |--/website
+                          |    |   |         |             |
+                          |    |   |         |              \-/website.html
+                          |    |   |         |
+                          |    |   |         |-/guides-/scheduled-tweets-guide
+                          |    |   |         |
+                          |    |   |         |         /-/promoted-video-overview
+                          |    |   |         |        |
+                          |    |   |         |        |--/promoted-video-overview.html
+                          |    |   |          \/overview
+                          |    |   |                  |--/revenue-cards
+                          |    |   |                  |
+                          |    |   |                   \-/revenue-cards.html
+                          |    |   |
+                          |    |   |        /-/guides
+                          |    |   |       |
+                          |    |   |       |--/overview
+                          |    |   |       |
+                          |    |   |       |       /-/getting-started
+                          |    |   |       |      |
+                          |    |   |       |      |--/migration-guide-v0-v1
+                          |    |   |       |      |
+                          |    |   |       |      |--/mobile-app-promotion-guide
+                          |    |   |       |      |
+                          |    |   |       |      |--/obtaining-ads-account-access
+                          |    |   |       |      |
+                          |    |   |       |      |--/pagination
+                          |    |   |       |-/guides
+                          |    |   |       |      |--/partner-inbounds
+                          |    |   |       |      |
+                          |    |   |       |      |--/rate-limiting
+                          |    |   |-/general     |
+                          |    |   |       |      |--/response-codes
+                          |    |   |       |      |
+                          |    |   |       |      |--/sorting
+                          |    |   |       |      |
+                          |    |   |       |       \-/timezones
+                          |    |   |       |
+                          |    |   |       |         /-/ad-groups-faq
+                          |    |   |       |        |
+                          |    |   |       |        |--/ads-api-sandbox
+                          |    |   |       |        |
+                          |    |   |       |        |--/api-vs-ui
+                          |    |   |       |        |
+                          |    |   |       |        |--/beta-policy
+                          |    |   |       |        |
+                          |    |   |       |        |--/brands
+                          |    |   |       |        |
+                          |    |   |       |        |--/content-approval-status
+                          |    |   |        \/overview
+                          |    |   |                |--/direct-response
+                          |    |   |                |
+                          |    |   |                |--/enums
+                          |    |   |                |
+                          |    |   |                |--/enums.html
+                          |    |   |                |
+                          |    |   |                |--/guidelines
+                          |    |   |                |
+                          |    |   |                |--/mobile-app-promotion
+                          |    |   |                |
+                          |    |   |                 \-/versions
+                          |    |   |
+                          |    |   |            /-/api-reference
+                          |    |   |           |
+                          |    |   |           |--/guides
+                          |    |   |           |
+                          |    |   |           |--/overview
+                          |    |   |           |
+                          |    |   |           |              /-/app-event-provider-configurations
+                          |    |   |           |             |
+                          |    |   |           |             |--/app-event-provider-configurations.html
+                          |    |   |           |             |
+                          |    |   |           |             |--/app-event-tags
+                          |    |   |           |             |
+                          |    |   |           |             |--/app-event-tags.html
+                          |    |   |           |             |
+                          |    |   |           |             |--/app-lists
+                          |    |   |           |             |
+                          |    |    \/measurement/api-reference-/conversion-attribution
+                          |    |               |             |
+                          |    |               |             |--/conversion-attribution.html
+                          |    |               |             |
+                          |    |               |             |--/conversion-event
+                          |    |               |             |
+                          |    |               |             |--/conversion-event.html
+                          |    |               |             |
+                          |    |               |             |--/web-event-tags
+                          |    |               |             |
+                          |    |               |              \-/web-event-tags.html
+                          |    |               |
+                          |    |               |-/guides-/mact-integration-guide
+                          |    |               |
+                          |    |               |         /-/conversion-tracking
+                          |    |               |        |
+                          |    |               |        |--/mact-overview
+                          |    |                \/overview
+                          |    |                        |--/twitter-audience-platform
+                          |    |                        |
+                          |    |                         \-/twitter-audience-platform.html
+                          |    |
+                          |    |-/api-reference-index-/api-reference-index
+                          |    |
+                          |    |       /-/adding-international-support-to-apps
+                          |    |      |
+                          |    |      |--/authentication
+                          |    |      |
+                          |    |      |--/counting-characters
+                          |    |      |
+                          |    |      |--/counting-characters.html
+                          |    |      |
+                          |    |      |--/cursoring
+                          |    |      |
+                          |    |      |--/getting-started
+                          |    |      |
+                          |    |      |--/rate-limiting
+                          |    |      |
+                          |    |      |--/rate-limiting.html
+                          |    |      |
+                          |    |      |--/rate-limits
+                          |    |      |
+                          |    |      |--/rate-limits.html
+                          |    |      |
+                          |    |      |--/response-codes
+                          |    |      |
+                          |    |      |--/response-codes.html
+                          |    |      |
+                          |    |      |--/security-best-practices
+                          |    |      |
+                          |    |      |--/tco
+                          |    |      |
+                          |    |      |--/tco.html
+                          |    |      |
+                          |    |      |--/things-every-developer-should-know
+                          |    |      |
+                          |    |-/basics-/twitter-ids
+                          |    |      |
+                          |    |      |--/twitter-ids.html
+                          |    |      |
+                          |    |      |               /-/api-reference
+                          |    |      |              |
+                          |    |      |              |--/guides
+                          |    |      |              |
+                          |    |      |              |--/overview
+                          |    |      |              |
+                          |    |      |              |              /-/access_token
+                          |    |      |              |             |
+                          |    |      |              |             |--/authenticate
+                          |    |      |              |             |
+                          |    |      |              |             |--/authenticate.html
+                          |    |      |              |             |
+                          |    |      |              |             |--/authorize
+                          |    |      |              |             |
+                          |    |      |              |-/api-reference-/authorize.html
+                          |    |      |              |             |
+                          |    |      |              |             |--/invalidate_token
+                          |    |      |              |             |
+                          |    |      |              |             |--/request_token
+                          |    |      |              |             |
+                          |    |      |              |             |--/request_token.html
+                          |    |      |              |             |
+                          |    |      |              |              \-/token
+                          |    |      |              |
+                          |    |      |              |       /-/access-tokens
+                          |    |      |              |      |
+                          |    |      |              |      |--/access-tokens.html
+                          |    |      |              |      |
+                          |    |      |              |      |--/authorizing-a-request
+                          |    |       \/authentication     |
+                          |    |                     |      |--/creating-a-signature
+                          |    |                     |      |
+                          |    |                     |      |--/creating-a-signature.html
+                          |    |                     |      |
+                          |    |                     |-/guides-/oauth-faq
+                          |    |                     |      |
+                          |    |                     |      |--/percent-encoding-parameters
+                          |    |                     |      |
+                          |    |                     |      |--/percent-encoding-parameters.html
+                          |    |                     |      |
+                          |    |                     |      |--/single-user
+                          |    |                     |      |
+                          |    |                     |      |--/tls
+                          |    |                     |      |
+                          |    |                     |       \-/tls.html
+                          |    |                     |
+                          |    |                     |         /-/3-legged-oauth
+                          |    |                     |        |
+                          |    |                     |        |--/3-legged-oauth.html
+                          |    |                     |        |
+                          |    |                     |        |--/application-only
+                          |    |                     |        |
+                          |    |                     |        |--/application-only.html
+                          |    |                     |        |
+                          |    |                     |        |--/application-permission-model
+                          |    |                     |        |
+                          |    |                     |        |--/authentication-and-authorization
+                          |    |                     |        |
+                          |    |                     |        |--/authentication-and-authorization.html
+                          |    |                      \/overview
+                          |    |                              |--/basic-auth
+                          |    |                              |
+                          |    |                              |--/basic-auth.html
+                          |    |                              |
+                          |    |                              |--/oauth
+                          |    |                              |
+                          |    |                              |--/oauth-echo
+                          |    |                              |
+                          |    |                              |--/oauth.html
+                          |    |                              |
+                           \/docs                             |--/pin-based-oauth
+                               |                              |
+                               |                               \-/using-oauth
+                               |
+                               |                    /-/configuration
+                               |                   |
+                               |                   |--/privacy-policy
+                               |                   |
+                               |                   |--/rate-limit-status
+                               |                   |
+                               |                   |--/supported-languages
+                               |                   |
+                               |                   |--/terms-of-service
+                               |                   |
+                               |                   |--/twitter-libraries
+                               |                   |
+                               |                   |--/twitter-libraries.html
+                               |                   |
+                               |                   |--/twitter-text
+                               |                   |
+                               |                   |--/twitter-text.html
+                               |                   |
+                               |                   |--/usage-api
+                               |                   |
+                               |                   |              /-/api-reference
+                               |                   |             |
+                               |                   |             |--/overview
+                               |                   |-/configuration
+                               |                   |             |--/overview.html
+                               |                   |             |
+                               |                   |              \/api-reference-/get-help-configuration
+                               |                   |
+                               |-/developer-utilities              /-/api-reference
+                               |                   |              |
+                               |                   |-/privacy-policy-/overview
+                               |                   |              |
+                               |                   |               \/api-reference-/get-help-privacy
+                               |                   |
+                               |                   |                  /-/api-reference
+                               |                   |                 |
+                               |                   |                 |--/overview
+                               |                   |-/rate-limit-status
+                               |                   |                 |--/overview.html
+                               |                   |                 |
+                               |                   |                  \/api-reference-/get-application-rate_limit_status
+                               |                   |
+                               |                   |                    /-/api-reference
+                               |                   |                   |
+                               |                   |-/supported-languages-/overview
+                               |                   |                   |
+                               |                   |                    \/api-reference-/get-help-languages
+                               |                   |
+                               |                   |                 /-/api-reference
+                               |                   |                |
+                               |                   |-/terms-of-service-/overview
+                               |                   |                |
+                               |                   |                 \/api-reference-/get-help-tos
+                               |                   |
+                               |                   |          /-/api-reference
+                               |                   |         |
+                               |                   |         |--/overview
+                               |                    \/usage-api
+                               |                             |--/overview.html
+                               |                             |
+                               |                              \/api-reference-/get-usage
+                               |
+                               |                /-/beta-features
+                               |               |
+                               |               |--/buttons
+                               |               |
+                               |               |--/conversation-management
+                               |               |
+                               |               |--/custom-profiles
+                               |               |
+                               |               |--/customer-feedback
+                               |               |
+                               |               |--/message-attachments
+                               |               |
+                               |               |--/quick-replies
+                               |               |
+                               |               |--/sending-and-receiving
+                               |               |
+                               |               |--/welcome-messages
+                               |               |
+                               |               |        /-/api-reference
+                               |               |       |
+                               |               |-/buttons-/overview
+                               |               |       |
+                               |               |        \/api-reference-/buttons
+                               |               |
+                               |               |                        /-/api-reference
+                               |               |                       |
+                               |               |                       |--/guides
+                               |               |-/conversation-management
+                               |               |                       |--/overview
+                               |               |                       |
+                               |               |                       |       /-/initiated-via
+                               |               |                        \/guides
+                               |               |                               \-/source-app
+                               |               |
+                               |               |                    /-/guides
+                               |               |                   |
+                               |               |-/message-attachments-/overview
+                               |               |                   |
+                               |               |                   |       /-/attaching-location
+                               |               |                    \/guides
+                               |               |                           \-/attaching-media
+                               |               |
+                               |               |              /-/api-reference
+                               |               |             |
+                               |               |             |--/overview
+                               |-/direct-messages/quick-replies
+                               |               |             |              /-/location
+                               |               |             |             |
+                               |               |              \/api-reference-/options
+                               |               |                           |
+                               |               |                            \-/text-input
+                               |               |
+                               |               |                      /-/api-reference
+                               |               |                     |
+                               |               |                     |--/guides
+                               |               |                     |
+                               |               |                     |--/overview
+                               |               |                     |
+                               |               |                     |              /-/delete-message
+                               |               |                     |             |
+                               |               |                     |             |--/get-event
+                               |               |                     |             |
+                               |               |                     |             |--/get-message
+                               |               |                     |             |
+                               |               |                     |             |--/get-message.html
+                               |               |-/sending-and-receiving            |
+                               |               |                     |             |--/get-messages
+                               |               |                     |-/api-reference
+                               |               |                     |             |--/get-sent-message
+                               |               |                     |             |
+                               |               |                     |             |--/list-events
+                               |               |                     |             |
+                               |               |                     |             |--/new-event
+                               |               |                     |             |
+                               |               |                     |             |--/new-event.html
+                               |               |                     |             |
+                               |               |                     |              \-/new-message
+                               |               |                     |
+                               |               |                      \/guides-/message-create-object
+                               |               |
+                               |               |                 /-/api-reference
+                               |               |                |
+                               |               |                |--/guides
+                               |               |                |
+                               |               |                |--/overview
+                               |               |                |
+                               |               |                |              /-/delete-welcome-message
+                               |               |                |             |
+                               |               |                |             |--/delete-welcome-message-rule
+                               |               |                |             |
+                               |               |                |             |--/get-welcome-message
+                               |                \/welcome-messages            |
+                               |                                |             |--/get-welcome-message-rule
+                               |                                |-/api-reference
+                               |                                |             |--/list-welcome-message-rules
+                               |                                |             |
+                               |                                |             |--/list-welcome-messages
+                               |                                |             |
+                               |                                |             |--/new-welcome-message
+                               |                                |             |
+                               |                                |              \-/new-welcome-message-rule
+                               |                                |
+                               |                                |       /-/deeplinking-to-welcome-message
+                               |                                 \/guides
+                               |                                        \-/setting-default-welcome-message
+                               |
+                               |    /-/place-information
+                               |   |
+                               |   |--/places-near-location
+                               |   |
+                               |   |                  /-/api-reference
+                               |   |                 |
+                               |-/geo/place-information-/overview
+                               |   |                 |
+                               |   |                  \/api-reference-/get-geo-id-place_id
+                               |   |
+                               |   |                     /-/api-reference
+                               |   |                    |
+                               |   |                    |--/overview
+                               |    \/places-near-location
+                               |                        |              /-/get-geo-reverse_geocode
+                               |                        |             |
+                               |                        |             |--/get-geo-reverse_geocode.html
+                               |                         \/api-reference
+                               |                                      |--/get-geo-search
+                               |                                      |
+                               |                                       \-/get-geo-search.html
+                               |
+                               |      /-/upload-media
+                               |     |
+                               |     |             /-/api-reference
+                               |     |            |
+                               |     |            |--/overview
+                               |     |            |
+                               |     |            |--/uploading-media
+                               |     |            |
+                               |-/media           |--/uploading-media.html
+                               |     |            |
+                               |     |            |              /-/get-media-upload-status
+                               |     |            |             |
+                               |     |            |             |--/post-media-metadata-create
+                               |     |            |             |
+                               |     |            |             |--/post-media-upload
+                               |     |            |             |
+                               |     |            |             |--/post-media-upload-append
+                               |      \/upload-media            |
+                               |                  |             |--/post-media-upload-append.html
+                               |                  |-/api-reference
+                               |                  |             |--/post-media-upload-finalize
+                               |                  |             |
+                               |                  |             |--/post-media-upload-finalize.html
+                               |                  |             |
+                               |                  |             |--/post-media-upload-init
+                               |                  |             |
+                               |                  |             |--/post-media-upload-init.html
+                               |                  |             |
+                               |                  |              \-/post-media-upload.html
+                               |                  |
+                               |                  |                /-/chunked-media-upload
+                               |                  |               |
+                               |                   \/uploading-media-/chunked-media-upload.html
+                               |                                  |
+                               |                                   \-/media-best-practices
+                               |
+                               |        /-/get-tweet-engagement
+                               |       |
+                               |       |                     /-/api-reference
+                               |       |                    |
+                               |       |                    |--/guides
+                               |-/metrics                   |
+                               |       |                    |--/overview
+                               |       |                    |
+                               |       |                    |--/overview.html
+                               |       |                    |
+                               |        \/get-tweet-engagement             /-/post-insights-engagement
+                               |                            |-/api-reference
+                               |                            |              \-/post-insights-engagement.html
+                               |                            |
+                               |                            |       /-/dev-getting-started-engagement-api
+                               |                            |      |
+                               |                            |      |--/key-characteristics
+                               |                            |      |
+                               |                             \/guides-/key-characteristics.html
+                               |                                   |
+                               |                                   |--/selecting-engagement-endpoint
+                               |                                   |
+                               |                                    \-/understanding-recent-changes-to-eapi-metrics
+                               |
+                               |       /-/locations-with-trending-topics
+                               |      |
+                               |      |--/trends-for-location
+                               |      |
+                               |      |                               /-/api-reference
+                               |      |                              |
+                               |      |-/locations-with-trending-topics-/overview
+                               |-/trends                             |
+                               |      |                              |              /-/get-trends-available
+                               |      |                               \/api-reference
+                               |      |                                             \-/get-trends-closest
+                               |      |
+                               |      |                    /-/api-reference
+                               |      |                   |
+                               |       \/trends-for-location-/overview
+                               |                          |
+                               |                           \/api-reference-/get-trends-place
+                               |
+                               |          /-/ads-api-hierarchy-terminology
+                               |         |
+                               |         |--/build-with-the-latest-enterprise-API-offerings
+                               |         |
+                               |         |--/choosing-historical-api
+                               |         |
+                               |         |--/consuming-streaming-data
+                               |         |
+                               |         |--/consuming-streaming-data.html
+                               |         |
+                               |         |--/filtering-tweets-by-location
+                               |         |
+                               |-/tutorials-/high-performance-web-widgets
+                               |         |
+                               |         |--/telling-great-stories-with-tweets
+                               |         |
+                               |         |--/translating-plain-language-to-pt-rules
+                               |         |
+                               |         |--/tweet-geo-metadata
+                               |         |
+                               |         |--/uploading-media
+                               |         |
+                               |         |--/usage-monitoring-and-management
+                               |         |
+                               |          \-/using-twurl
+                               |
+                               |       /-/batch-historical
+                               |      |
+                               |      |--/compliance
+                               |      |
+                               |      |--/curate-a-collection
+                               |      |
+                               |      |--/data-dictionary
+                               |      |
+                               |      |--/enrichments
+                               |      |
+                               |      |--/filter-realtime
+                               |      |
+                               |      |--/optimize-with-cards
+                               |      |
+                               |      |--/post-and-engage
+                               |      |
+                               |      |--/rules-and-filtering
+                               |      |
+                               |      |--/sample-realtime
+                               |      |
+                               |      |--/search
+                               |      |
+                               |      |--/timelines
+                               |      |
+                               |      |--/tweet-updates
+                               |      |
+                               |      |                 /-/api-reference
+                               |      |                |
+                               |      |                |--/guides
+                               |      |                |
+                               |      |                |--/overview
+                               |      |                |
+                               |      |                |--/overview.html
+                               |      |-/batch-historical
+                               |      |                |              /-/historical-powertrack
+                               |      |                |-/api-reference
+                               |      |                |              \-/historical-powertrack.html
+                               |      |                |
+                               |      |                |       /-/downloading-hpt-files
+                               |      |                |      |
+                               |      |                 \/guides-/historical_powertrack_rules_and_filtering
+                               |      |                       |
+                               |      |                        \-/hpt-timeline
+                               |      |
+                               |      |           /-/api-reference
+                               |      |          |
+                               |      |          |--/api-reference.html
+                               |      |          |
+                               |      |          |--/guides
+                               |      |          |
+                               |      |          |--/overview
+                               |      |-/compliance
+                               |      |          |-/api-reference-/compliance-firehose
+                               |      |          |
+                               |      |          |       /-/compliance-best-practices
+                               |      |          |      |
+                               |      |          |      |--/consuming-streaming-data
+                               |      |          |      |
+                               |      |           \/guides-/consuming-streaming-data.html
+                               |      |                 |
+                               |      |                 |--/honoring-user-intent
+                               |      |                 |
+                               |      |                  \-/integrating-compliance-firehose
+                               |      |
+                               |      |                    /-/api-reference
+                               |      |                   |
+                               |      |                   |--/overview
+                               |      |                   |
+                               |      |                   |              /-/get-collections-entries
+                               |      |                   |             |
+                               |      |                   |             |--/get-collections-list
+                               |      |                   |             |
+                               |      |                   |             |--/get-collections-show
+                               |      |                   |             |
+                               |      |                   |             |--/post-collections-create
+                               |      |                   |             |
+                               |      |                   |             |--/post-collections-destroy
+                               |      |-/curate-a-collection/api-reference
+                               |      |                   |             |--/post-collections-entries-add
+                               |      |                   |             |
+                               |      |                   |             |--/post-collections-entries-curate
+                               |      |                   |             |
+                               |      |                   |             |--/post-collections-entries-move
+                               |      |                   |             |
+                               |      |                   |             |--/post-collections-entries-remove
+                               |      |                   |             |
+                               |      |                   |              \-/post-collections-update
+                               |      |                   |
+                               |      |                   |         /-/about_collections
+                               |      |                   |        |
+                               |      |                    \/overview-/overview
+                               |      |                            |
+                               |      |                             \-/response_structures
+                               |      |
+                               |      |                /-/guides
+                               |      |               |
+                               |      |               |--/overview
+                               |      |               |
+                               |      |               |-/guides-/tweet-timeline
+                               |      |               |
+                               |      |               |         /-/entities-object
+                               |      |-/data-dictionary       |
+                               |      |               |        |--/extended-entities-object
+                               |      |               |        |
+                               |      |               |        |--/geo-objects
+                               |      |               |        |
+                               |      |               |        |--/geo-objects.html
+                               |      |               |        |
+                               |      |               |        |--/intro-to-tweet-json
+                               |      |                \/overview
+                               |      |                        |--/intro-to-tweet-json.html
+                               |      |                        |
+                               |      |                        |--/tweet-object
+                               |      |                        |
+                               |      |                        |--/tweet-object.html
+                               |      |                        |
+                               |      |                        |--/user-object
+                               |      |                        |
+                               |      |                         \-/user-object.html
+                               |      |
+                               |      |            /-/overview
+                               |      |           |
+                               |      |           |         /-/expanded-and-enhanced-urls
+                               |      |-/enrichments       |
+                               |      |           |        |--/klout
+                               |      |           |        |
+                               |      |           |        |--/matching-rules
+                               |      |            \/overview
+                               |      |                    |--/matching-rules.html
+                               |      |                    |
+                               |      |                    |--/poll-metadata
+                               |      |                    |
+                               |      |                     \-/profile-geo
+                               |      |
+                               |      |                /-/api-reference
+                               |      |               |
+                               |      |               |--/guides
+                               |      |               |
+                               |      |               |--/overview
+                               |      |               |
+                               |      |               |--/relevant-tutorials
+                               |      |               |
+                               |      |               |              /-/post-statuses-filter
+                               |      |               |             |
+                               |      |               |-/api-reference-/post-statuses-filter.html
+                               |      |               |             |
+                               |      |               |              \-/powertrack-stream
+                               |      |               |
+                               |      |               |       /-/basic-stream-parameters
+                               |      |               |      |
+                               |      |               |      |--/connecting
+                               |      |               |      |
+                               |      |               |      |--/connecting.html
+                               |      |               |      |
+                               |      |-/filter-realtime     |--/disconnections-explained
+                               |      |               |      |
+                               |      |               |      |--/high-volume-social-data-events
+                               |      |               |      |
+                               |      |               |      |--/integrating_with_powertrack
+                               |      |               |-/guides
+                               |      |               |      |--/powertrack_recovery_and_redundancy_features
+                               |      |               |      |
+                               |      |               |      |--/powertrack_rules_and_filtering
+                               |      |               |      |
+                               |      |               |      |--/premium-operators
+                               |      |               |      |
+                               |      |               |      |--/premium-operators.html
+                               |      |               |      |
+                               |      |               |      |--/rule-limits
+                               |      |               |      |
+                               |      |               |       \-/streaming-message-types
+                               |      |               |
+                               |      |               |         /-/powertrack-api
+                               |-/tweets              |        |
+                               |      |                \/overview-/powertrack-api.html
+                               |      |                        |
+                               |      |                         \-/statuses-filter
+                               |      |
+                               |      |                    /-/guides
+                               |      |                   |
+                               |      |                   |--/overview
+                               |      |                   |
+                               |      |                   |       /-/cms-integration
+                               |      |                   |      |
+                               |      |                   |      |--/getting-started
+                               |      |                   |-/guides
+                               |      |                   |      |--/player-card-approval
+                               |      |                   |      |
+                               |      |-/optimize-with-cards      \-/troubleshooting-cards
+                               |      |                   |
+                               |      |                   |         /-/abouts-cards
+                               |      |                   |        |
+                               |      |                   |        |--/app-card
+                               |      |                   |        |
+                               |      |                   |        |--/app-card.html
+                               |      |                   |        |
+                               |      |                   |        |--/markup
+                               |      |                   |        |
+                               |      |                    \/overview-/player-card
+                               |      |                            |
+                               |      |                            |--/player-card.html
+                               |      |                            |
+                               |      |                            |--/summary
+                               |      |                            |
+                               |      |                            |--/summary-card-with-large-image
+                               |      |                            |
+                               |      |                             \-/summary-card-with-large-image.html
+                               |      |
+                               |      |                /-/api-reference
+                               |      |               |
+                               |      |               |--/api-reference.html
+                               |      |               |
+                               |      |               |--/guides
+                               |      |               |
+                               |      |               |--/overview
+                               |      |               |
+                               |      |               |              /-/get-favorites-list
+                               |      |               |             |
+                               |      |               |             |--/get-statuses-lookup
+                               |      |               |             |
+                               |      |               |             |--/get-statuses-lookup.html
+                               |      |               |             |
+                               |      |               |             |--/get-statuses-oembed
+                               |      |               |             |
+                               |      |               |             |--/get-statuses-retweeters-ids
+                               |      |               |             |
+                               |      |               |             |--/get-statuses-retweets-id
+                               |      |               |             |
+                               |      |-/post-and-engage            |--/get-statuses-retweets_of_me
+                               |      |               |             |
+                               |      |               |             |--/get-statuses-show-id
+                               |      |               |-/api-reference
+                               |      |               |             |--/post-favorites-create
+                               |      |               |             |
+                               |      |               |             |--/post-favorites-destroy
+                               |      |               |             |
+                               |      |               |             |--/post-statuses-destroy-id
+                               |      |               |             |
+                               |      |               |             |--/post-statuses-retweet-id
+                               |      |               |             |
+                               |      |               |             |--/post-statuses-unretweet-id
+                               |      |               |             |
+                               |      |               |             |--/post-statuses-update
+                               |      |               |             |
+                               |      |               |             |--/post-statuses-update.html
+                               |      |               |             |
+                               |      |               |              \-/post-statuses-update_with_media
+                               |      |               |
+                               |      |               |       /-/post-tweet-geo-guide
+                               |      |                \/guides
+                               |      |                       \-/tweet-availability
+                               |      |
+                               |      |                    /-/guides
+                               |      |                   |
+                               |      |                   |--/overview
+                               |      |                   |
+                               |      |                   |--/overview.html
+                               |      |                   |
+                               |      |                   |       /-/build-standard-queries
+                               |      |                   |      |
+                               |      |                   |      |--/how-to-build-a-query
+                               |      |-/rules-and-filtering/guides
+                               |      |                   |      |--/using-premium-operators
+                               |      |                   |      |
+                               |      |                   |       \-/using-premium-operators.html
+                               |      |                   |
+                               |      |                   |         /-/all-operators
+                               |      |                   |        |
+                               |      |                   |        |--/basic-operators
+                               |      |                   |        |
+                               |      |                   |        |--/basic-operators.html
+                               |      |                    \/overview
+                               |      |                            |--/operators-by-product
+                               |      |                            |
+                               |      |                            |--/premium-operators
+                               |      |                            |
+                               |      |                             \-/standard-operators
+                               |      |
+                               |      |                /-/api-reference
+                               |      |               |
+                               |      |               |--/overview
+                               |      |               |
+                               |      |               |              /-/decahose
+                               |      |-/sample-realtime/api-reference
+                               |      |               |              \-/get-statuses-sample
+                               |      |               |
+                               |      |               |         /-/GET_statuse_sample
+                               |      |               |        |
+                               |      |               |        |--/decahose
+                               |      |                \/overview
+                               |      |                        |--/decahose.html
+                               |      |                        |
+                               |      |                         \-/streaming-likes
+                               |      |
+                               |      |       /-/api-reference
+                               |      |      |
+                               |      |      |--/guides
+                               |      |      |
+                               |      |      |--/overview
+                               |      |      |
+                               |      |      |--/overview.html
+                               |      |      |
+                               |      |      |              /-/enterprise-search
+                               |      |      |             |
+                               |      |      |             |--/enterprise-search.html
+                               |      |      |             |
+                               |      |      |             |--/get-search-tweets
+                               |      |      |-/api-reference
+                               |      |      |             |--/get-search-tweets.html
+                               |      |      |             |
+                               |      |      |             |--/premium-search
+                               |      |      |             |
+                               |      |      |              \-/premium-search.html
+                               |      |      |
+                               |      |-/search      /-/build-standard-query
+                               |      |      |      |
+                               |      |      |      |--/enterprise-search-operators
+                               |      |      |      |
+                               |      |      |      |--/fas-timeline
+                               |      |      |      |
+                               |      |      |      |--/fas-timeline.htm
+                               |      |      |      |
+                               |      |      |-/guides-/integrating-premium
+                               |      |      |      |
+                               |      |      |      |--/premium-operators
+                               |      |      |      |
+                               |      |      |      |--/premium-operators.html
+                               |      |      |      |
+                               |      |      |      |--/standard-operators
+                               |      |      |      |
+                               |      |      |       \-/tweets-by-place
+                               |      |      |
+                               |      |      |         /-/enterprise
+                               |      |      |        |
+                               |      |       \/overview-/premium
+                               |      |               |
+                               |      |                \-/standard
+                               |      |
+                               |      |          /-/api-reference
+                               |      |         |
+                               |      |         |--/guides
+                               |      |         |
+                               |      |         |--/overview
+                               |      |         |
+                               |      |         |              /-/get-statuses-home_timeline
+                               |      |         |             |
+                               |      |         |             |--/get-statuses-home_timeline.html
+                               |       \/timelines            |
+                               |                |             |--/get-statuses-mentions_timeline
+                               |                |-/api-reference
+                               |                |             |--/get-statuses-mentions_timeline.html
+                               |                |             |
+                               |                |             |--/get-statuses-user_timeline
+                               |                |             |
+                               |                |              \-/get-statuses-user_timeline.html
+                               |                |
+                               |                |       /-/working-with-timelines
+                               |                 \/guides
+                               |                        \-/working-with-timelines.html
+                               |
+                               |-/twitter-for-websites-/twitter-for-websites
+                               |
+                                \/twitter-kit-/twitter-kit

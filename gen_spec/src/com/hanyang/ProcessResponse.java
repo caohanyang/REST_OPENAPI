@@ -72,10 +72,8 @@ public class ProcessResponse {
 				//remove all the whitespace 
 				codeText = codeText.replaceAll(" ", "");
 				Out.prln(codeText);
-//				JsonParser parser = new JsonParser();
-//				JsonElement jelement = parser.parse(codeText);
-//				Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
 				
+				JSONObject codeObj = new JSONObject(codeText);
 					
 				if (openAPI.getJSONObject("paths").has(url)) {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
@@ -87,7 +85,7 @@ public class ProcessResponse {
 						correctObject.put("description", "correct response");
 						
 						JSONObject schemaObject = new JSONObject();
-						schemaObject.put("$ref", codeText);
+						schemaObject.put("$ref", codeObj);
 						correctObject.put("schema", schemaObject);
 						
 						JSONObject resObject = new JSONObject();

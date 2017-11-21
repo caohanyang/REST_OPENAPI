@@ -48,15 +48,15 @@ public class ExtractInformation {
 	private static String FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
 	// "https", "http", "null", "/"
-	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https", "http"));
+	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https"));
 	// "no", "yes"
-	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no", "yes"));
+	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no"));
 	// "table", "list"
-	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table", "list"));
+	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table"));
 	// "single", "multiple"
-	private static List<String> NUMBER = new ArrayList<String>(Arrays.asList("single", "multiple"));
+	private static List<String> NUMBER = new ArrayList<String>(Arrays.asList("single"));
 	// "del", "delete"
-	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del", "delete"));
+	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("delete"));
 
 	public static void main(String[] args) throws GateException, JSONException, IOException {
 		// System.out.close();
@@ -259,7 +259,7 @@ public class ExtractInformation {
 		handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
 
 		// 4. handle code template
-//		handleCodeTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		handleCodeTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
 	private static void getInfoJsonHttp(String abbrev, ProcessMethod processMe, String scheme, String reverse,
@@ -392,7 +392,7 @@ public class ExtractInformation {
 
 	private static void searchCode(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
 			List<JSONObject> infoJson, AnnotationSet annoCode) throws JSONException {
-		// 5.3 for each page, set findParaTable = False
+		// 5.3 for each page, set findCodeTemplate = False
 		boolean findCodeTemplate = false;
 		// 5.3.1 Test if the page contains multiple parameter table or not
 		Iterator<Annotation> codeIter = annoCode.iterator();

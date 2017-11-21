@@ -1,0 +1,1837 @@
+<html lang="en" prefix="og: http://ogp.me/ns#">
+ <head>
+ </head>
+ <body class="theme--purple page documentation-page " data-analytics-component="tweets/data-dictionary/guides/tweet-timeline" data-analytics-element="page" data-analytics-page="developer" data-analytics-section="docs">
+  <cq:includeclientlib categories="cq.jquery">
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+   <title>
+    Tweet Metadata Timeline — Twitter
+      Developers
+   </title>
+   <meta name="description"/>
+   <link href="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides/tweet-timeline.html" rel="canonical"/>
+   <meta content="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides/tweet-timeline.html" property="og:url"/>
+   <meta content="article" property="og:type"/>
+   <meta content="Tweet Metadata Timeline" property="og:title"/>
+   <link href="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides/tweet-timeline.html" hreflang="en" rel="alternate"/>
+   <meta content="on" name="twitter:widgets:new-embed-design"/>
+   <meta content="on" name="twitter:widgets:csp"/>
+   <link href="https://abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+   <script id="analytics-settings" type="application/json">
+    {&quot;google&quot;:{&quot;accounts&quot;:[],&quot;options&quot;:{&quot;displayAdvertisingFeatures&quot;:false}},&quot;scribe&quot;:{&quot;scribeSectionWithImpression&quot;:false},&quot;trackingPixel&quot;:{},&quot;bing&quot;:{}}
+   </script>
+   <script src="/etc/clientlibs/dtm/developer-twitter/ac0b17d7a4556cd264c3df3fac5054e8fd5023f8/satelliteLib-bcb222e3dbd22c730c028ee768fd0b3bea0a8ea0.js" type="text/javascript">
+   </script>
+   <link href="/etc/designs/developer-twitter/public/css/critical.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/app.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/universal.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/structure.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/content.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/page.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/docs.css" media="all" rel="stylesheet"/>
+   <script src="/etc/designs/developer-twitter/public/js/common.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/critical.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/onload.js" type="text/javascript">
+   </script>
+   <div id="component-wrapper">
+    <div class="nav theme-bg-color--dark" data-current-level="0" data-hidden="true">
+     <div class="nav--wrapper">
+      <header class="nav__header">
+       <div class="nav__headeritem-left">
+        <div class="nav__headeritem-title">
+         <a class="logo-title color--neutral-white" href="https://developer.twitter.com/en.html">
+          <span class="logo">
+           <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg">
+            <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z">
+            </path>
+           </svg>
+          </span>
+          <span class="title color--neutral-white">
+           Developer
+          </span>
+         </a>
+         <a class="nav-icon" href="#">
+          <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+           <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+           </path>
+          </svg>
+         </a>
+         <a class="nav-back color--neutral-white" data-nav-back="true" href="#">
+          <span class="title color--neutral-white">
+           Back
+          </span>
+         </a>
+        </div>
+       </div>
+       <ul class="nav--menu nav--menu--root" data-currentpage="/content/developer-twitter/en/docs/tweets/data-dictionary/guides" data-level="1">
+        <li class="nav--mobile-item nav--menu__list-item color--neutral-white " data-show-sub-level="false">
+         <a class="color--neutral-white" href="https://developer.twitter.com/en.html" title="Developer">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Developer
+          </span>
+         </a>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Use cases" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Use cases
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/advertise" title="Advertise">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Advertise
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/publish-and-curate" title="Publish and curate">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publish and curate
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/analyze" title="Analyze">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Analyze
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/engage" title="Engage">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Engage
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Products" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Products
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/accounts-and-users" title="Accounts and users">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Accounts and users
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/tweets" title="Tweets">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tweets
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/direct-messages" title="Direct Messages">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Direct Messages
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/metrics" title="Metrics">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Metrics
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/ad-campaigns" title="Ad campaigns">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Ad campaigns
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/publisher-tools" title="Publisher tools and SDKs">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publisher tools and SDKs
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Docs" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Docs
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/documentation" title="Documentation">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Documentation
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/api-reference-index" title="API reference index">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             API reference index
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/tutorials" title="Tutorials">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tutorials
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="More" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           More
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/case-studies" title="Case studies">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Case studies
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/enterprise" title="Enterprise data">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Enterprise data
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/developer-terms" title="Developer terms">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Developer terms
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/pricing" title="Pricing">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Pricing
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/billing-faq" title="Billing FAQ">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Billing FAQ
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/community" title="Community">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Community
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/forum" title="Forum">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Forum
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/blog" title="Blog">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Blog
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <div class="nav__headeritem-right">
+        <div class="freemium-nav" data-current-level="0" data-hidden="true">
+         <ul class="nav--menu nav--menu--root" data-level="1">
+          <!-- Handlebars template will be written here -->
+         </ul>
+        </div>
+        <!--<sly data-sly-resource="region-selector"/>-->
+        <div class="search">
+         <a class="search-icon js-nav-search" href="#">
+          <svg height="72" viewBox="0 0 56 72" width="56" xmlns="http://www.w3.org/2000/svg">
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+          </svg>
+         </a>
+        </div>
+        <div class="login-container signed-out" data-geo-country-code="ES" data-geo-location="AAAAEIBXJSACRkbjmh1wMJEyw2hA2+eaWNd8HDPYIi+SzbqoLPwAG+rf3gXsGON2ft8TmpgnV9w=">
+         <div class="avatar">
+         </div>
+         <div class="sign-in">
+          <div class="btn-container">
+           <a href="https://twitter.com/login">
+            <button type="button">
+             Sign In
+            </button>
+           </a>
+          </div>
+         </div>
+        </div>
+        <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+         <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+         </path>
+        </svg>
+       </div>
+      </header>
+     </div>
+    </div>
+    <div class="nav__search-modal theme-bg-color--dark">
+     <div class="search-bar search-bar--js theme-color--extra-light theme-fill-color--extra-light theme-border-color--extra-light" data-search-path="/en/search-results.html">
+      <input autocomplete="off" class="search-bar__input" name="q" placeholder="Type your search here" type="search"/>
+      <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <div class="transparent-masthead">
+    </div>
+    <div class="page-wrapper documentation-page">
+     <div class="page-content container left-rail-container">
+      <div class="sidebar-content side-nav column column-3">
+       <span class="side-nav__close fill-color--neutral-extra-light-gray">
+        <svg height="72" viewBox="0 0 46 72" width="46" xmlns="http://www.w3.org/2000/svg">
+         <path d="M27.243 36l14.879-14.879a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0L23 31.758 8.122 16.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L18.758 36 3.879 50.879A2.998 2.998 0 0 0 6.001 56a2.99 2.99 0 0 0 2.121-.879L23 40.242l14.879 14.879A2.991 2.991 0 0 0 40 56a2.998 2.998 0 0 0 2.121-5.121L27.243 36z">
+         </path>
+        </svg>
+       </span>
+       <div class="search-bar search-bar--js search-bar--docs" data-search-path="/en/search-results.html">
+        <input autocomplete="off" class="search-bar__input" name="q" placeholder="Search all documentation..." type="search"/>
+        <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+         <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+         </path>
+         <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+         </path>
+        </svg>
+       </div>
+       <ul class="side-nav__top-level">
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/basics" title="Basics">
+          Basics
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/getting-started" title="Getting started">
+            Getting started
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/things-every-developer-should-know" title="Things every developer should know">
+            Things every developer should know
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/authentication" title="Authentication">
+            Authentication
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/rate-limits" title="Rate limits">
+            Rate limits
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/rate-limiting" title="Rate Limiting">
+            Rate Limiting
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/response-codes" title="Response Codes">
+            Response Codes
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/cursoring" title="Cursoring">
+            Cursoring
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/security-best-practices" title="Security">
+            Security
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/twitter-ids" title="Twitter IDs (snowflake)">
+            Twitter IDs (snowflake)
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/counting-characters" title="Counting characters">
+            Counting characters
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/tco" title="t.co links">
+            t.co links
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/adding-international-support-to-apps" title="Adding international support to apps">
+            Adding international support to apps
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/accounts-and-users" title="Accounts and users">
+          Accounts and users
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity" title="Subscribe to your account activity">
+            Subscribe to your account activity
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings" title="Manage account settings and profile">
+            Manage account settings and profile
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users" title="Mute, block and report users">
+            Mute, block and report users
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users" title="Follow, search, and get users">
+            Follow, search, and get users
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists" title="Create and manage lists">
+            Create and manage lists
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/user-profile-images-and-banners" title="User Profile Images and Banners">
+            User Profile Images and Banners
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="open">
+         <a data-href="/content/developer-twitter/en/docs/tweets" title="Tweets">
+          Tweets
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/post-and-engage" title="Post, retrieve and engage with Tweets">
+            Post, retrieve and engage with Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/timelines" title="Get Tweet timelines">
+            Get Tweet timelines
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/curate-a-collection" title="Curate a collection of Tweets">
+            Curate a collection of Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards" title="Optimize Tweets with Cards">
+            Optimize Tweets with Cards
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/search" title="Search Tweets">
+            Search Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime" title="Filter realtime Tweets">
+            Filter realtime Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/sample-realtime" title="Sample realtime Tweets">
+            Sample realtime Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/batch-historical" title="Get batch historical Tweets">
+            Get batch historical Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/compliance" title="Tweet compliance">
+            Tweet compliance
+           </a>
+          </li>
+          <li class="active">
+           <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary" title="Tweet data dictionaries">
+            Tweet data dictionaries
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/rules-and-filtering" title="Rules and filtering">
+            Rules and filtering
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/enrichments" title="Premium enrichments">
+            Premium enrichments
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/tweet-updates" title="Tweet updates">
+            Tweet updates
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/direct-messages" title="Direct Messages">
+          Direct Messages
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/beta-features" title="Direct Message beta features">
+            Direct Message beta features
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving" title="Sending and receiving events">
+            Sending and receiving events
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/welcome-messages" title="Welcome Messages">
+            Welcome Messages
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/message-attachments" title="Message Attachments">
+            Message Attachments
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/quick-replies" title="Quick Replies">
+            Quick Replies
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/buttons" title="Buttons">
+            Buttons
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/conversation-management" title="Conversation management">
+            Conversation management
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/custom-profiles" title="Custom profiles">
+            Custom profiles
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/customer-feedback" title="Customer feedback cards">
+            Customer feedback cards
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/media" title="Media">
+          Media
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/media/upload-media" title="Upload media">
+            Upload media
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/media/refresh-media" title="Access Media">
+            Access Media
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/trends" title="Trends">
+          Trends
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/trends/trends-for-location" title="Get trends near a location">
+            Get trends near a location
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/trends/locations-with-trending-topics" title="Get locations with trending topics">
+            Get locations with trending topics
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/geo" title="Geo">
+          Geo
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/geo/place-information" title="Get information about a place">
+            Get information about a place
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/geo/places-near-location" title="Get places near a location">
+            Get places near a location
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/ads" title="Ads">
+          Ads
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/general" title="General">
+            General
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/analytics" title="Analytics">
+            Analytics
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/audiences" title="Audiences">
+            Audiences
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/campaign-management" title="Campaign Management">
+            Campaign Management
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/creatives" title="Creatives">
+            Creatives
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/measurement" title="Measurement">
+            Measurement
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/metrics" title="Metrics">
+          Metrics
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/metrics/get-tweet-engagement" title="Get Tweet engagement">
+            Get Tweet engagement
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/twitter-for-websites" title="Twitter for Websites">
+          Twitter for Websites
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/twitter-for-websites/twitter-for-websites" title="Twitter for Websites">
+            Twitter for Websites
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/twitter-kit" title="Twitter Kit">
+          Twitter Kit
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/twitter-kit/twitter-kit" title="Twitter Kit">
+            Twitter Kit
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/developer-utilities" title="Developer utilities">
+          Developer utilities
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/rate-limit-status" title="Get app rate limit status">
+            Get app rate limit status
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/configuration" title="Get Twitter configuration details">
+            Get Twitter configuration details
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/supported-languages" title="Get Twitter supported languages">
+            Get Twitter supported languages
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/privacy-policy" title="Get Twitter's privacy policy">
+            Get Twitter's privacy policy
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/terms-of-service" title="Get Twitter's terms of service">
+            Get Twitter's terms of service
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/usage-api" title="Get API usage metrics">
+            Get API usage metrics
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries" title="Twitter libraries">
+            Twitter libraries
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/twitter-text" title="twitter-text Parser">
+            twitter-text Parser
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/api-reference-index" title="API reference index">
+          API reference index
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/api-reference-index/api-reference-index" title="API reference index">
+            API reference index
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <div class="main-content column column-9">
+       <div>
+        <div class="main-content__header">
+         <span>
+          <svg height="72" viewBox="0 0 28 72" width="28" xmlns="http://www.w3.org/2000/svg">
+           <path d="M6.035 35l14.232-14.232a2.498 2.498 0 0 0 0-3.535 2.498 2.498 0 0 0-3.535 0l-16 16a2.498 2.498 0 0 0 0 3.535l16 16c.488.488 1.128.732 1.768.732s1.28-.244 1.768-.732a2.498 2.498 0 0 0 0-3.535L6.035 35z">
+           </path>
+          </svg>
+         </span>
+         <h1>
+          Tweet data dictionaries
+         </h1>
+        </div>
+        <div class="tabs-nav ">
+         <ul class="tabs-nav__inner">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview">
+            Overview
+           </a>
+          </li>
+          <li>
+           <a class="active" href="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides">
+            Guides
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <div class="tabs-nav__toc">
+          <span class="tabs-nav__toc__title">
+           Guides contents
+           <span class="arrow-down fill-color--neutral-light-gray">
+            <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+             <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+             </path>
+            </svg>
+           </span>
+          </span>
+          <div class="tabs-nav__toc__list">
+           <li class="active">
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides/tweet-timeline">
+             Tweet Metadata Timeline
+            </a>
+           </li>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="bl19-no-edit-wrap">
+        <div class="c15-column-container js-column-container">
+         <div class="container--mini container--mobile">
+          <div class="column column-3">
+          </div>
+          <div class="column column-6">
+           <div class="c01-rich-text-editor">
+            <h1>
+             Tweet metadata timeline
+            </h1>
+           </div>
+           <div class="d06-anchor-link-menu">
+            <div class="tabs-nav__toc">
+             <span class="tabs-nav__toc__title">
+              Jump to on this page
+              <span class="arrow-down fill-color--neutral-light-gray">
+               <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+                </path>
+               </svg>
+              </span>
+             </span>
+             <div class="tabs-nav__toc__list">
+              <p>
+               <a href="#intro">
+                Introduction
+               </a>
+              </p>
+              <p>
+               <a href="#key_concepts">
+                Key concepts
+               </a>
+              </p>
+              <p>
+               <a href="#twitter_timeline">
+                Twitter timeline
+               </a>
+              </p>
+              <p>
+               <a href="#filtering_tips">
+                Filtering tips
+               </a>
+              </p>
+              <p>
+               <a href="#next">
+                Next steps
+               </a>
+              </p>
+             </div>
+            </div>
+           </div>
+           <div class="c01-rich-text-editor">
+            <div class="gnip-body-container">
+             <div class="container">
+              <div class="help-article-content-wrapper">
+               <div class="row">
+                <div class="col-md-8">
+                 <div class="row">
+                  <h2 class="thin">
+                   <span style="color: rgb(20,23,26);">
+                    Introduction
+                   </span>
+                  </h2>
+                 </div>
+                </div>
+               </div>
+               <div class="row">
+                <div class="col-md-8">
+                 <p>
+                  At its core, Twitter is a public, real-time, and global communication network. Since 2006, Twitter’s evolution has been driven by both user use-patterns and conventions and new product features and enhancements. If you are using Twitter data for historical research, understanding the timeline of this evolution is important for surfacing Tweets of interest from the data archive.
+                 </p>
+                 <p>
+                  Twitter was launched as a simple SMS mobile app, and has grown into a comprehensive communication platform. A platform with a complete set of APIs. APIs have always been a pillar of the Twitter network. The
+                  <a href="https://blog.twitter.com/2006/introducing-the-twitter-api" style="background-color: rgb(238,238,238);">
+                   first API hit the streets soon after Twitter was launched
+                  </a>
+                  . When geo-tagging Tweets was first introduced in 2009, it was made available through a
+                  <a href="https://blog.twitter.com/2009/think-globally-tweet-locally" style="background-color: rgb(238,238,238);">
+                   Geo API
+                  </a>
+                  (and later the ability to ‘geo-tag’ a Tweet was integrated into the Twitter.com user-interface). Today, Twitter’s APIs drive the two-way communication network that has become the source of breaking news and sharing information. The opportunities to build on top of this global, real-time communication channel are endless.
+                  <br/>
+                 </p>
+                 <p>
+                  Twitter makes available two historical APIs that provide access to every publicly available Tweet:
+                  <a href="https://developer.twitter.com/en/docs/tweets/batch-historical" style="background-color: rgb(238,238,238);">
+                   Historical PowerTrack
+                  </a>
+                  and the
+                  <a href="https://developer.twitter.com/en/docs/tweets/search" style="background-color: rgb(238,238,238);">
+                   Full-Archive Search API
+                  </a>
+                  . Both APIs provide a set of
+                  <i style="">
+                   operators
+                  </i>
+                  used to query and collect Tweets of interest. These operators match on a variety of attributes associated with every Tweet, hundreds of attributes such as the Tweet’s text content, the author’s account name, and links shared in the Tweet. Tweets and their attributes are encoded in JSON, a common text-based data-interchange format. So as new features were introduced, new JSON attributes appeared, and typically new API operators were introduced to match on those attributes. If your use-case includes a need to
+                  <i style="">
+                   listen
+                  </i>
+                  to what the world has said on Twitter, the better you understand when operators started having JSON metadata to match on, the more effective your historical PowerTrack filters can be.
+                  <br/>
+                 </p>
+                 <p>
+                  Next we will introduce some key concepts that set the stage for understanding how updates in Tweet metadata affect finding your data signal of interest.
+                  <br/>
+                 </p>
+                 <h2>
+                  Key concepts
+                  <a class="tall">
+                  </a>
+                 </h2>
+                 <h4>
+                  From user-conventions to Twitter
+                  <i>
+                   first-class objects
+                  </i>
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  Twitter users organically introduced new, and now fundamental, communication patterns to the Twitter network. A seminal example is the hashtag, now nearly universally used across all social networks. Hashtags were introduced as a way to organize conversations and topics. On a network with hundreds of millions messages a day, tools to find Tweets of interest are key, and hashtags have become a fundamental method. Soon after the use of hashtags grew, they received official status and support from Twitter. As hashtags became a
+                  <i>
+                   ‘first-class’ object
+                  </i>
+                  , this meant many things. It meant hashtags became clickable/searchable in the Twitter.com user interface. It also meant hashtags became a member of the Twitter
+                  <i>
+                   entities
+                  </i>
+                  family, along with @mentions, attached media, stock symbols, and shared links. These entities are conveniently encoded in a pre-parsed JSON array, making it easier for developers to process, scan, and store them.
+                 </p>
+                 <p>
+                  Retweets are another example of user-driven conventions becoming official objects. Retweeting emerged as a way of ‘forwarding’ content to others. It started as a manual process of copying/pasting a Tweet and prepending it with a “RT @” pattern. This process was eventually automated via a new Retweet button, complete with new JSON metadata. The ‘official’ Retweet was born. Other examples include ‘mentions’, sharing of media and web links, and sharing a location with your Tweet. Each of these use-patterns resulted in new
+                  <a href="https://twitter.com/" style="background-color: rgb(238,238,238);">
+                   twitter.com
+                  </a>
+                  user-interface features, new supporting JSON, and thus new ways to match on Tweets. All of these fundamental Tweet attributes have resulted in PowerTrack Operators used to match on them.
+                  <br/>
+                 </p>
+                 <h4>
+                  Tweet metadata, mutability, updates, and currency
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  While Tweet messages can be up to a fixed number of characters long, the JSON description of a Tweet consists of over 100 attributes. Attributes such as who posted, at what time, whether it’s an original Tweet or a Retweet, and an array of first-class objects such as hashtags, mentions, and shared links. For the account that posted, there is a User (or Actor) object with a variety of attributes that provide the user’s Profile and other account metadata. Profiles include a short biographical description, a home location (freeform text), preferred language, display time zone, and an optional web site link.
+                 </p>
+                 <p>
+                  Most account metadata is static, but some change slowly over time. People change jobs and move. Companies updates their information. When you are collecting historical Tweets, it is important to understand how some metadata is
+                  <i style="">
+                   as it was when Tweeted
+                  </i>
+                  , and other metadata is
+                  <i style="">
+                   as it is when the query is submitted
+                  </i>
+                  . The metadata that is potentially updated depends on the historical API.
+                  <br/>
+                 </p>
+                 <p>
+                  With the Search APIs, the user profile metadata reflects the current values at the time of query. If you request a 2006 Tweet posted by Twitter co-founder @biz, you’ll see that the encapsulated user bio mentions being an advisor at Pinterest, which did not exist in 2006.
+                 </p>
+                 <p>
+                  If you pull those same Tweets with Historical PowerTrack you’ll see @biz account metadata as it was in September 2011, when the HPT archive was first constructed. Note that all Tweets since September 2011 contain the user profile as it was at the time the Tweet was posted.
+                  <br/>
+                 </p>
+                 <h4>
+                  “Native” media
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  Twitter.com and Twitter mobile apps support adding photos and videos to Tweets by clicking a button and browsing your photo galleries. Now that they are integrated as first-class actions, videos and photos shared this way are referred to as ‘native’ media.
+                 </p>
+                 <p>
+                  Many querying Operators work with these ‘native’ resources, including
+                  <code style="">
+                   has:videos
+                  </code>
+                  ,
+                  <code style="">
+                   has:images
+                  </code>
+                  , and
+                  <code style="">
+                   has:media
+                  </code>
+                  . These will match only on media content that was shared via Twitter features. To match on other media hosted off of the Twitter platform, you’ll want to use Operators that match on URL metadata.
+                  <br/>
+                 </p>
+                 <p>
+                  So, before we dig into the Historical PowerTrack and Full-Archive Search product details, let’s take a tour of how Twitter, as a product and platform, evolved over time.
+                  <br/>
+                 </p>
+                 <h2>
+                  Twitter timeline
+                  <a class="tall">
+                  </a>
+                 </h2>
+                 <p>
+                  Below you will find a select
+                  <i>
+                   timeline
+                  </i>
+                  of Twitter. Most of these Twitter updates in some way fundamentally affected either user behavior, Tweet JSON contents, query Operators, or all three. Looking at Twitter as a API platform, the following events in some way affected the JSON payloads that are used to encode Tweets. In turn, those JSON details affect how Twitter historical API match on them.
+                 </p>
+                 <p>
+                  Note that this timeline list is generally precise and not exhaustive.
+                  <br/>
+                 </p>
+                 <h4>
+                  2006
+                 </h4>
+                 <ul>
+                  <li>
+                   October
+                   <ul>
+                    <li>
+                     @replies becomes a convention.
+                    </li>
+                    <li>
+                     $cashtags first emerge, but using for stock ticker mentions does not become common until early 2009. $Cashtags became a clickable/searchable link in June 2012.
+                    </li>
+                   </ul>
+                  </li>
+                  <li>
+                   November - Favorites introduced.
+                  </li>
+                 </ul>
+                 <h4>
+                  2007
+                 </h4>
+                 <ul>
+                  <li>
+                   January - @replies become a first-class object with a UI reply button with
+                   <code>
+                    in_reply_to
+                   </code>
+                   metadata.
+                  </li>
+                  <li>
+                   April - Retweets become a convention.
+                  </li>
+                  <li>
+                   August - #hashtags emerge as a primary tool for searching and organizing Tweets.
+                  </li>
+                 </ul>
+                 <h4>
+                  2009
+                 </h4>
+                 <ul>
+                  <li>
+                   February - $cashtags become a common convention for discussing stock ticker symbols.
+                  </li>
+                  <li>
+                   May - Retweet ‘beta’ is introduced with “Via @” prepended to Tweet body.
+                  </li>
+                  <li>
+                   June - Verified accounts introduced.
+                  </li>
+                  <li>
+                   August - Retweets a first-class object with “RT @” pattern and new
+                   <code>
+                    retweet_status
+                   </code>
+                   metadata.
+                  </li>
+                  <li>
+                   October - List feature launched.
+                  </li>
+                  <li>
+                   November -
+                   <a href="https://blog.twitter.com/2009/think-globally-tweet-locally">
+                    Tweet Geotagging API is launched
+                   </a>
+                   , providing first method for users to share location via third-party apps.
+                  </li>
+                 </ul>
+                 <h4>
+                  2010
+                 </h4>
+                 <ul>
+                  <li>
+                   June - Twitter Places introduced for geo-tagging Tweets.
+                  </li>
+                  <li>
+                   August - Tweet button for web sites is launched. Made sharing links easier.
+                  </li>
+                 </ul>
+                 <h4>
+                  2011
+                 </h4>
+                 <ul>
+                  <li>
+                   May - Follow button introduced, making it easier to follow accounts associated with web sites.
+                  </li>
+                  <li>
+                   August - Native photos introduced.
+                  </li>
+                 </ul>
+                 <h4>
+                  2012
+                 </h4>
+                 <ul>
+                  <li>
+                   June - $Cashtags become a clickable/searchable link.
+                  </li>
+                 </ul>
+                 <h4>
+                  2014
+                 </h4>
+                 <ul>
+                  <li>
+                   March -
+                   <a href="https://blog.twitter.com/2014/photos-just-got-more-social">
+                    Photo tagging and up to four photos supported
+                   </a>
+                   .
+                   <i>
+                    Extended
+                   </i>
+                   Twitter Entities metadata was introduced.
+                  </li>
+                  <li>
+                   April - Emojis are natively supported in Twitter UI. Emojis were commonly used in Tweets since at least 2008.
+                  </li>
+                 </ul>
+                 <h4>
+                  2015
+                 </h4>
+                 <ul>
+                  <li>
+                   April - A change in Twitter’s ‘post Tweet’ user-interface design results in fewer Tweets being geo-tagged.
+                  </li>
+                  <li>
+                   October -
+                   <a href="https://blog.twitter.com/2015/introducing-twitter-polls">
+                    Twitter Polls introduced
+                   </a>
+                   . Polls originally supported two choices with a 24-hour voting period. In November, Polls started supporting four choices with voting periods from 5 minutes to seven days. Poll metadata made available (‘original’ format only) in February 2017.
+                  </li>
+                 </ul>
+                 <h4>
+                  2016
+                 </h4>
+                 <ul>
+                  <li>
+                   February -
+                   <a href="https://blog.twitter.com/2016/introducing-gif-search-on-twitter">
+                    Searchable GIFs natively hosted in Tweet compose
+                   </a>
+                   .
+                  </li>
+                  <li>
+                   May -
+                   <a href="https://blog.twitter.com/express-even-more-in-140-characters">
+                    “Doing More with 140”
+                   </a>
+                   (dmw140) announced, stating plans for new ways of handling Replies and attached media with respect to a Tweet’s 140-character message.
+                  </li>
+                  <li>
+                   June -
+                   <a href="https://blog.twitter.com/official/en_us/a/2016/new-ways-to-tap-into-video-on-twitter.html">
+                    Native video support
+                   </a>
+                  </li>
+                  <li>
+                   June - Quoted Retweets generally available.
+                  </li>
+                  <li>
+                   June -
+                   <a href="https://blog.twitter.com/2016/introducing-stickers-on-twitter">
+                    Stickers introduced for adding to photos
+                   </a>
+                   .
+                  </li>
+                  <li>
+                   September -
+                   <a href="https://twitter.com/Twitter/status/777915304261193728">
+                    ‘Native attachments’ introduced
+                   </a>
+                   with trailing URL not counted towards 140 characters (“dmw140, part 1”).
+                  </li>
+                 </ul>
+                 <h4>
+                  2017
+                 </h4>
+                 <ul>
+                  <li>
+                   February - Twitter Poll metadata included in Tweet metadata (‘original’ format only).
+                  </li>
+                  <li>
+                   April -
+                   <a href="https://blog.twitter.com/2017/now-on-twitter-140-characters-for-your-replies">
+                    ‘Simplified Replies’
+                   </a>
+                   introduced with replied-to-accounts not counted towards 140 characters (“dmw140, part 2”).
+                  </li>
+                 </ul>
+                 <h2>
+                  Filtering tips
+                  <a class="tall">
+                  </a>
+                 </h2>
+                 <p>
+                  Being familiar with the Twitter timeline of when and how new features were added can help you create more effective queries. Here, a query means a
+                  <i>
+                   filter
+                  </i>
+                  or
+                  <i>
+                   rule
+                  </i>
+                  that is applied by the Twitter historical APIs to the Tweet archive, using PowerTrack Operators to match on Tweet JSON. An example is the
+                  <code>
+                   lang:
+                  </code>
+                  Operator, which is used to match Tweets in a specified language. Twitter provides a language classification service (supporting over 50 languages), and Twitter APIs provide this metadata in the JSON that is generated for every Tweet. So, if a Tweet is written in Spanish the “lang” JSON attribute is set to “es”. So, if you build a filter with the
+                  <code>
+                   lang:es
+                  </code>
+                  clause, it will only match on Tweet messages classified as Spanish.
+                 </p>
+                 <p>
+                  The timeline information can also help better interpret the Tweet data received. Say you were researching the sharing of content about the 2008 and 2012 Summer Olympics. If you applied only the
+                  <code style="">
+                   is:retweet
+                  </code>
+                  Operator to match on Retweets, no data would match in 2008. However, for 2012 there would likely be millions of Retweets. From this you potentially could erroneously conclude that in 2008 Retweets were not a user convention, or that simply no one Retweeted about those Olympics. Since Retweets became a first-class object in 2009, you need to add a
+                  <code style="">
+                   ”RT @”
+                  </code>
+                  rule clause to help identify them in 2008.
+                  <br/>
+                 </p>
+                 <p>
+                  Both Retweets and Tweet language classifying are examples of Tweet attributes with a long history and many product details. Below we will discuss more details of these and other attribute classes important to matching on and understanding Twitter Data.
+                  <br/>
+                 </p>
+                 <h4>
+                  Recognizing false negatives
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  When it comes to writing filters, one important takeaway is that the metadata Operators match on all have “born on” dates. If you build a filter with an Operator that acts on metadata introduced after the Tweet was posted, you’ll have a false negative. For example, say you are interested in all Tweets that mention ‘snow’ and share a video. If you build a rule with the
+                  <code>
+                   has:videos
+                  </code>
+                  Operator, which matches on Tweets with
+                  <i>
+                   native
+                  </i>
+                  videos, that clause will not match any Tweets before 2015.
+                 </p>
+                 <p>
+                  However, sharing of videos has been common on Twitter long before 2015. Before then users shared links to videos hosted elsewhere, but in 2015, Twitter built new ‘sharing video’ features directly into the platform. For finding these earlier Tweets of interest, you would include a rule clause such as
+                  <code style="">
+                   url:”youtube.com”
+                  </code>
+                  .
+                  <br/>
+                 </p>
+                 <p>
+                  Note, with the Search APIs, there are some examples of metadata being ‘backfilled’ as its index was rebuilt. One good example are $cashtags, which became widely used to discuss stock symbols in 2009. After the $cashtag operator was introduced in 2015, the Search index was rebuilt, and in the process the symbol entity was extracted from all Tweet bodies, including early 2006 when
+                  <code style="">
+                   $
+                  </code>
+                  was used mainly for slang; “I hope it $now$ $oon!”.
+                  <br/>
+                 </p>
+                 <h4>
+                  Identifying and filtering on Tweet attributes important to your use-case
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  Some metadata, such as Twitter account numeric IDs, have existed since day one (and are an example of account metadata that never changes). Other metadata was not introduced until well after Twitter started in 2006. Examples of new metadata being introduced include Retweets metadata, Tweet locations, URL titles and descriptions, and ‘native’ media. Below are some of the most common types of Tweet attributes that have been fundamentally affected by these Twitter platform updates.
+                 </p>
+                 <p>
+                  Filtering/matching behavior for these depends, in most cases, on which historical Tweet API is used. To help determine which product is the best fit for your research and use-case, the attribute details provided below include high-level product information.
+                  <br/>
+                 </p>
+                 <h4>
+                  Twitter Profiles
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  Since at its core Twitter is a global real-time communication channel, research with Tweet data commonly has an emphasis on who is communicating. Often it is helpful to know where a Twitter user calls home. Often knowing that an account bio includes mentions of interests and hobbies can lead you to Tweets of interest. It is very common to want to listen for Tweets from accounts of interest. Profile attributes are key to all of these use-cases.
+                 </p>
+                 <p>
+                  Every account on Twitter has a Profile that includes metadata such as Twitter @handle, display name, a short bio, home location (freeform text entered by user), number of followers, timezone and many others. Some attributes never change, such as numeric user ID and when the account was created. Others usually change day-to-day, week-to-week, or month-to-month, such as number of Tweets posted and number of accounts followed and followers. Other account attributes can also change at anytime, but tend to change less frequently: display name, home location, and bio.
+                  <br/>
+                 </p>
+                 <p>
+                  The JSON payload for every Tweet includes
+                  <i style="">
+                   account profile
+                  </i>
+                  metadata for the Tweet’s author. If it is a Retweet, it also includes profile metadata for the account that posted the original Tweet.
+                  <br/>
+                 </p>
+                 <p>
+                  The mutability of a Tweet’s profile metadata depends entirely on the historical product used. The Search APIs serve up historical Tweets with the profile settings
+                  <i>
+                   as it is at the time of retrieval
+                  </i>
+                  . For Historical PowerTrack, the profile is
+                  <i>
+                   as it was at the time the Tweet was posted
+                  </i>
+                  , except for data before 2011. For Tweets older than 2011, the profile metadata reflects the profile as it was in September 2011.
+                 </p>
+                 <h4>
+                  Original Tweets and Retweets
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  Retweets are another example of user-driven conventions becoming official objects. Retweeting emerged as a way of ‘forwarding’ content to others. It started as a manual process of copying/pasting a Tweet and prepending it with a “RT @” pattern. This process was eventually automated via a new Retweet button, complete with new JSON metadata. The ‘official’ Retweet was born and the action of retweeting became a first-class Tweet event. Along with the new Retweet button, new metadata was introduced such as the complete payload of the original Tweet.
+                 </p>
+                 <p>
+                  Whether a Tweet is original or shared is a common filtering ‘switch.’ In some cases only original content is needed. In other cases, Tweet engagement is of primary importance so Retweets are key. The PowerTrack
+                  <code style="">
+                   is:retweet
+                  </code>
+                  Operator enables users to either include or exclude Retweets. If pulling data from before August 2009, users need to have
+                  <i style="">
+                   two
+                  </i>
+                  strategies for Retweet matching (or not matching). Before August 2009, the Tweet message itself needs to be checked, using exact phrase matching, for matches on the “@RT ” pattern. For periods after August 2009, the
+                  <code style="">
+                   is:retweet
+                  </code>
+                  Operator is available.
+                  <br/>
+                 </p>
+                 <h4>
+                  Tweet language classifications
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  The language a Tweet is written in is a common interest. Tweet language can help infer a Tweet’s location and often only a specific language is needed for analysis or display. (Twitter profiles also have a preferred language setting.)
+                 </p>
+                 <p>
+                  Tweet language classification was introduced as a Gnip data enrichment in March 2012. The Gnip classification was made available only in the Gnip Tweet format referred to as the
+                  <b style="">
+                   Activity Stream
+                  </b>
+                  format. In March 2013, Twitter later introduced its separate, native language classification. The Twitter language classification was available in the
+                  <b style="">
+                   original
+                  </b>
+                  Tweet format, while the Activity Stream format contained both classifications. When
+                  <a href="https://blog.twitter.com/2016/gnip-2-is-here" style="background-color: rgb(238,238,238);">
+                   Gnip 2.0 was launched in 2016
+                  </a>
+                  , the Gnip language classification was deprecated, along with the
+                  <code style="">
+                   twitter_lang:
+                  </code>
+                  Operator, and the Twitter language classification was made available in both formats.
+                  <br/>
+                 </p>
+                 <p>
+                  For filtering on a Tweet’s language classification, Twitter’s historical products are quite different. When the Search archive was built, all Tweets were backfilled with the Twitter language classification. Therefore the
+                  <code style="">
+                   lang:
+                  </code>
+                  Operator is available for the entire Tweet archive. With Historical PowerTrack, Twitter’s language classification metadata is available in the archive beginning on March 26, 2013. Note that the Gnip Language classification metadata is in the Activity Stream payload between March 2012. However, with the release of Gnip 2.0 there is no longer an Operator available to match on the Gnip language classification.
+                  <br/>
+                 </p>
+                 <h4>
+                  Geo-referencing Tweets
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  Being able to tell where a Tweet was posted (i.e., geo-referencing it) is important to many use-cases. There are three primary methods for geo-referencing Tweets:
+                 </p>
+                 <ul>
+                  <li>
+                   Geographical references in Tweet message
+                  </li>
+                  <li>
+                   Tweets geo-tagged by the user.
+                  </li>
+                  <li>
+                   Account profile ‘home’ location set by user
+                  </li>
+                 </ul>
+                 <p>
+                  If geo-referencing is key to your use-case, be sure to review
+                  <a href="http://support.gnip.com/articles/tags/location.html">
+                   these support articles on filtering Twitter data by location
+                  </a>
+                  .
+                 </p>
+                 <h5>
+                  Geographical references in Tweet message
+                 </h5>
+                 <p>
+                  Matching on geographic references in the Tweet message, while often the most challenging method since it depends on local knowledge, is an option for the entire Tweet archive. Here is an example geo-referenced match from 2006 for the San Francisco area based on a ‘golden gate’ filter:
+                 </p>
+                 <p>
+                  https://twitter.com/biz/statuses/28311
+                 </p>
+                 <h5>
+                  Tweets geo-tagged by the user
+                 </h5>
+                 <p>
+                  In November 2009 Twitter introduced its Tweet Geotagging API that enabled Tweets to be geo-tagged with an exact location. In June 2010 Twitter introduced Twitter Places that represent a geographic area on the venue, neighborhood, or town scale. Approximately 1-2% of Tweets are geo-tagged using either method.
+                 </p>
+                 <p>
+                  The available geo-tagging history is dependent on the Historical API you are using. With the Search APIs the ability to start matching on Tweets with some Geo Operators started in March 2010, and with others on February 2015. If you are using Historical PowerTrack, geo-referencing starts on September 1, 2011. When the Historical PowerTrack archive was built, all geo-tagging before this date was not included.
+                  <br/>
+                 </p>
+                 <h5>
+                  Account profile ‘home’ location set by user
+                 </h5>
+                 <p>
+                  All Twitter users have the opportunity to set their Profile Location, indicating their home location. Millions of Twitter users provide this information, and it significantly increases the amount of geodata in the Twitter Firehose. This location metadata is a non-normalized, user-generated, free-form string. Approximately 30% of accounts have Profile Geo metadata that can be resolved to the country level.
+                 </p>
+                 <p>
+                  As with Tweet geo, the methods to match and the time periods available depends on the Historical API you are using. Historical PowerTrack enables users to attempt their own custom matching on these free-form strings. To help make that process easier, Twitter also provides a
+                  <a href="http://support.gnip.com/enrichments/profile_geo.html" style="background-color: rgb(238,238,238);">
+                   Profile Geo Enrichment
+                  </a>
+                  that performs the geocoding where possible, providing normalized metadata and corresponding Operators. Profile Geo Operators are available in both Historical PowerTrack and the Search APIs. With Historical PowerTrack, these Profile Geo metadata is available starting in June 2014. With the Search APIs, these metadata is available starting in February 2015.
+                  <br/>
+                 </p>
+                 <h4>
+                  Shared links and media
+                  <a class="tall">
+                  </a>
+                 </h4>
+                 <p>
+                  Sharing web page links, photos and videos have always been a fundamental Twitter use-case. Early in its history, all of these actions involved including a URL link in the Tweet message itself. In 2011 Twitter integrated sharing photos directly into its user-interface. In 2016, native videos were added.
+                 </p>
+                 <p>
+                  Given this history, there are a variety of filtering Operators used for matching on this content. There are a set of Operators that match on whether Tweets have shared links, photos, and videos. Also, since most URLs shared on Twitter are shortened to use up fewer of a Tweet’s characters (e.g. generated by a service such as bitly or tinyurl), Twitter provides data enrichments that generate a complete, expanded URL that can be matched on. For example, if you wanted to match on Tweets that included links discussing Twitter and Early-warning systems, a filter that references ‘severe weather communication’ would match a Tweet containing this
+                  <a href="http://bit.ly/1XV1tG4" style="background-color: rgb(238,238,238);">
+                   http://bit.ly/1XV1tG4
+                  </a>
+                  URL.
+                  <br/>
+                 </p>
+                 <p>
+                  In March 2012, the
+                  <a href="http://support.gnip.com/enrichments/expanded_urls.html" style="background-color: rgb(238,238,238);">
+                   expanded URL enrichment
+                  </a>
+                  was introduced. Before this time, the Tweet payloads included only the URL as provided by the user. So, if the user included a shortened URL it can be challenging to match on (expanded) URLs of interest. With both Historical PowerTrack and the Search APIs, these metadata are available starting in March 2012.
+                  <br/>
+                 </p>
+                 <p>
+                  In July 2016, the
+                  <a href="http://support.gnip.com/enrichments/enhanced_urls.html" style="background-color: rgb(238,238,238);">
+                   enhanced URL enrichment
+                  </a>
+                  was introduced. This enhanced version provides a web site’s HTML title and description in the Tweet payload, along with Operators for matching on those. With Historical PowerTrack, these metadata become available in July 2016. With the Search APIs, these metadata begin emerging in December 2014.
+                  <br/>
+                 </p>
+                 <p>
+                  In September 2016 Twitter introduced ‘native attachments’ where a trailing shared link is not counted against the 140 Tweet character limit. Both URL enrichments still apply to these shared links.
+                  <br/>
+                 </p>
+                 <p>
+                  For other URL product-specific details on URL filtering, see the corresponding articles for more information.
+                 </p>
+                 <h2>
+                  Next steps
+                  <a class="tall">
+                  </a>
+                 </h2>
+                 <p>
+                  Now that we’ve explored the timeline of when key Twitter features were introduced, and learned how these metadata changes affect filtering at a high-level, the next step is to get into the many product-specific details:
+                 </p>
+                 <ul>
+                  <li>
+                   <a href="https://developer.twitter.com/en/docs/tweets/batch-historical/guides/hpt-timeline">
+                    Learn more about the Historical PowerTrack API and its metadata and filtering timeline
+                   </a>
+                  </li>
+                  <li>
+                   <a href="https://developer.twitter.com/en/docs/tweets/search/guides/fas-timeline">
+                    Learn more about the Full-Archive Search API and its metadata and filtering timeline
+                   </a>
+                  </li>
+                  <li>
+                   <a href="https://developer.twitter.com/en/docs/tutorials/choosing-historical-api">
+                    Choosing between Historical PowerTrack and Full-Archive Search APIs
+                   </a>
+                  </li>
+                 </ul>
+                 <hr/>
+                </div>
+               </div>
+               <div class="row">
+                <h4 class="thin muted">
+                </h4>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="column column-3 last">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer theme-bg-color--dark">
+     <div class="footer--banner theme-bg-color--extra-light">
+      <div class="footer__row container">
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="https://developer.twitter.com/en/developer-terms" target="_blank" title="Developer policy and terms">
+         Developer policy and terms
+        </a>
+       </div>
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="http://twitter.com/twitterdev" target="_blank" title="Follow @twitterdev">
+         Follow @twitterdev
+        </a>
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+        <a class="c04-link-button c04-link-button--button theme-bg-color--extra-extra-light theme-bg-color--extra-extra-light--hover" href="https://developer.twitter.com/en/twitterdev-news-subscription" target="_self">
+         Subscribe to developer news
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="footer__row container footer__row--main">
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com" target="_blank" title="About">
+        About
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company.html" target="_blank" title="Company">
+          Company
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/values.html" target="_blank" title="Values">
+          Values
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/safety.html" target="_blank" title="Safety">
+          Safety
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/official/en_us.html" target="_blank" title="Blog">
+          Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company/brand-resources.html" target="_blank" title="Brand Resources">
+          Brand Resources
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://careers.twitter.com/en.html" target="_blank" title="Careers">
+          Careers
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://investor.twitterinc.com/" target="_blank" title="Investors">
+          Investors
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/" target="_blank" title="Business">
+        Business
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/advertising.html" target="_blank" title="About Twitter Ads">
+          About Twitter Ads
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/targeting.html" target="_blank" title="Targeting">
+          Targeting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/analytics.html" target="_blank" title="Analytics">
+          Analytics
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/help.html" target="_blank" title="Ads support">
+          Ads support
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/small-business" target="_blank" title="Business blog">
+          Business blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://ads.twitter.com/login?ref=en-btc-gobal-footer" target="_blank" title="Advertise">
+          Advertise
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/" target="_blank" title="Developers">
+        Developers
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/overview/documentation" target="_blank" title="Documentation">
+          Documentation
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twittercommunity.com/" target="_blank" title="Forums">
+          Forums
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/community" target="_blank" title="Communities">
+          Communities
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/developer" target="_blank" title="Developer blog">
+          Developer blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/" target="_blank" title="Help Center">
+        Help Center
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/215585" target="_blank" title="Using Twitter">
+          Using Twitter
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/login" target="_blank" title="My account">
+          My account
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/283" target="_blank" title="Fixing a problem">
+          Fixing a problem
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/284" target="_blank" title="Policies and reporting">
+          Policies and reporting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/safety" target="_blank" title="Safety Center">
+          Safety Center
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/" target="_blank" title="Marketing">
+        Marketing
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/insights.html" target="_blank" title="Insights">
+          Insights
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/success-stories.html" target="_blank" title="Success Stories">
+          Success Stories
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/solutions.html" target="_blank" title="Solutions">
+          Solutions
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/collections.html" target="_blank" title="Collections">
+          Collections
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/advertising" target="_blank" title="Marketing Blog">
+          Marketing Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitterflightschool.com" target="_blank" title="Flight School">
+          Flight School
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__row container">
+      <div class="footer-col">
+       <p class="footer-col__footnote type--roman-14 theme-color--extra-light">
+        © 2017 Twitter, Inc.
+       </p>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/20170520" target="_blank" title="Cookies">
+        Cookies
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/privacy" target="_blank" title="Privacy">
+        Privacy
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/tos" target="_blank" title="Terms and Conditions">
+        Terms and Conditions
+       </a>
+      </div>
+     </div>
+    </footer>
+    <!--<div class="modal_container">-->
+    <div class="c20-modal__modal module-modal" data-modal="true">
+     <div class="c20-modal__scrollable" data-modal-scroll-container="true">
+      <div class="c20-modal__details" data-modal-content-container="true">
+       <!-- template is injected here -->
+      </div>
+      <ul class="c20-modal__navigation">
+       <li aria-label="Read previous biography" class="c20-modal__navigation-prev" data-modal-nav="prev-link">
+        <span class="c20-modal__navigation-label">
+         Read Previous
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="prev-text">
+        </span>
+       </li>
+       <li aria-label="Read next biography" class="c20-modal__navigation-next" data-modal-nav="next-link">
+        <span class="c20-modal__navigation-label">
+         Read Next
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="next-text">
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="module-modal__close-container">
+     <div class="c20-modal__modal-close module-modal__close" data-trigger="close-modal">
+      <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+       <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <!--</div>-->
+   </div>
+   <script src="/etc/designs/common-twitter/dtm-footer.min.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/app.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/universal.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/structure.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/content.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/docs.js" type="text/javascript">
+   </script>
+   <script async="" src="https://platform.twitter.com/widgets.js">
+   </script>
+  </cq:includeclientlib>
+ </body>
+</html>

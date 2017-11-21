@@ -1,0 +1,3664 @@
+<html lang="en" prefix="og: http://ogp.me/ns#">
+ <head>
+ </head>
+ <body class="theme--purple page documentation-page " data-analytics-component="tweets/data-dictionary/overview/entities-object" data-analytics-element="page" data-analytics-page="developer" data-analytics-section="docs">
+  <cq:includeclientlib categories="cq.jquery">
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+   <title>
+    Entities object — Twitter
+      Developers
+   </title>
+   <meta name="description"/>
+   <link href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object.html" rel="canonical"/>
+   <meta content="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object.html" property="og:url"/>
+   <meta content="article" property="og:type"/>
+   <meta content="Entities object" property="og:title"/>
+   <meta content="summary" name="twitter:card"/>
+   <link href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object.html" hreflang="en" rel="alternate"/>
+   <meta content="on" name="twitter:widgets:new-embed-design"/>
+   <meta content="on" name="twitter:widgets:csp"/>
+   <link href="https://abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+   <script id="analytics-settings" type="application/json">
+    {&quot;google&quot;:{&quot;accounts&quot;:[],&quot;options&quot;:{&quot;displayAdvertisingFeatures&quot;:false}},&quot;scribe&quot;:{&quot;scribeSectionWithImpression&quot;:false},&quot;trackingPixel&quot;:{},&quot;bing&quot;:{}}
+   </script>
+   <script src="/etc/clientlibs/dtm/developer-twitter/ac0b17d7a4556cd264c3df3fac5054e8fd5023f8/satelliteLib-bcb222e3dbd22c730c028ee768fd0b3bea0a8ea0.js" type="text/javascript">
+   </script>
+   <link href="/etc/designs/developer-twitter/public/css/critical.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/app.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/universal.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/structure.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/content.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/page.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/docs.css" media="all" rel="stylesheet"/>
+   <script src="/etc/designs/developer-twitter/public/js/common.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/critical.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/onload.js" type="text/javascript">
+   </script>
+   <div id="component-wrapper">
+    <div class="nav theme-bg-color--dark" data-current-level="0" data-hidden="true">
+     <div class="nav--wrapper">
+      <header class="nav__header">
+       <div class="nav__headeritem-left">
+        <div class="nav__headeritem-title">
+         <a class="logo-title color--neutral-white" href="https://developer.twitter.com/en.html">
+          <span class="logo">
+           <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg">
+            <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z">
+            </path>
+           </svg>
+          </span>
+          <span class="title color--neutral-white">
+           Developer
+          </span>
+         </a>
+         <a class="nav-icon" href="#">
+          <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+           <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+           </path>
+          </svg>
+         </a>
+         <a class="nav-back color--neutral-white" data-nav-back="true" href="#">
+          <span class="title color--neutral-white">
+           Back
+          </span>
+         </a>
+        </div>
+       </div>
+       <ul class="nav--menu nav--menu--root" data-currentpage="/content/developer-twitter/en/docs/tweets/data-dictionary/overview" data-level="1">
+        <li class="nav--mobile-item nav--menu__list-item color--neutral-white " data-show-sub-level="false">
+         <a class="color--neutral-white" href="https://developer.twitter.com/en.html" title="Developer">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Developer
+          </span>
+         </a>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Use cases" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Use cases
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/advertise" title="Advertise">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Advertise
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/publish-and-curate" title="Publish and curate">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publish and curate
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/analyze" title="Analyze">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Analyze
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/engage" title="Engage">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Engage
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Products" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Products
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/accounts-and-users" title="Accounts and users">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Accounts and users
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/tweets" title="Tweets">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tweets
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/direct-messages" title="Direct Messages">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Direct Messages
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/metrics" title="Metrics">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Metrics
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/ad-campaigns" title="Ad campaigns">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Ad campaigns
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/publisher-tools" title="Publisher tools and SDKs">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publisher tools and SDKs
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Docs" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Docs
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/documentation" title="Documentation">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Documentation
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/api-reference-index" title="API reference index">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             API reference index
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/tutorials" title="Tutorials">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tutorials
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="More" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           More
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/case-studies" title="Case studies">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Case studies
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/enterprise" title="Enterprise data">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Enterprise data
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/developer-terms" title="Developer terms">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Developer terms
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/pricing" title="Pricing">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Pricing
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/billing-faq" title="Billing FAQ">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Billing FAQ
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/community" title="Community">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Community
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/forum" title="Forum">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Forum
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/blog" title="Blog">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Blog
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <div class="nav__headeritem-right">
+        <div class="freemium-nav" data-current-level="0" data-hidden="true">
+         <ul class="nav--menu nav--menu--root" data-level="1">
+          <!-- Handlebars template will be written here -->
+         </ul>
+        </div>
+        <!--<sly data-sly-resource="region-selector"/>-->
+        <div class="search">
+         <a class="search-icon js-nav-search" href="#">
+          <svg height="72" viewBox="0 0 56 72" width="56" xmlns="http://www.w3.org/2000/svg">
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+          </svg>
+         </a>
+        </div>
+        <div class="login-container signed-out" data-browser-language="en,*" data-geo-location="AAAAEIA1WdvEue2M7ZbxgPFpoPNx6k1bNymOzQPAqaSHYL2SK1w52/zvQs3znJ6PXA==">
+         <div class="avatar">
+         </div>
+         <div class="sign-in">
+          <div class="btn-container">
+           <a href="https://twitter.com/login">
+            <button type="button">
+             Sign In
+            </button>
+           </a>
+          </div>
+         </div>
+        </div>
+        <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+         <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+         </path>
+        </svg>
+       </div>
+      </header>
+     </div>
+    </div>
+    <div class="nav__search-modal theme-bg-color--dark">
+     <div class="search-bar search-bar--js theme-color--extra-light theme-fill-color--extra-light theme-border-color--extra-light" data-search-path="/en/search-results.html">
+      <input autocomplete="off" class="search-bar__input" name="q" placeholder="Type your search here" type="search"/>
+      <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <div class="transparent-masthead">
+    </div>
+    <div class="page-wrapper documentation-page">
+     <div class="page-content container left-rail-container">
+      <div class="sidebar-content side-nav column column-3">
+       <span class="side-nav__close fill-color--neutral-extra-light-gray">
+        <svg height="72" viewBox="0 0 46 72" width="46" xmlns="http://www.w3.org/2000/svg">
+         <path d="M27.243 36l14.879-14.879a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0L23 31.758 8.122 16.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L18.758 36 3.879 50.879A2.998 2.998 0 0 0 6.001 56a2.99 2.99 0 0 0 2.121-.879L23 40.242l14.879 14.879A2.991 2.991 0 0 0 40 56a2.998 2.998 0 0 0 2.121-5.121L27.243 36z">
+         </path>
+        </svg>
+       </span>
+       <div class="search-bar search-bar--js search-bar--docs" data-search-path="/en/search-results.html">
+        <input autocomplete="off" class="search-bar__input" name="q" placeholder="Search all documentation..." type="search"/>
+        <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+         <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+         </path>
+         <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+         </path>
+        </svg>
+       </div>
+       <ul class="side-nav__top-level">
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/basics" title="Basics">
+          Basics
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/getting-started" title="Getting started">
+            Getting started
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/things-every-developer-should-know" title="Things every developer should know">
+            Things every developer should know
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/authentication" title="Authentication">
+            Authentication
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/rate-limits" title="Rate limits">
+            Rate limits
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/rate-limiting" title="Rate Limiting">
+            Rate Limiting
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/response-codes" title="Response Codes">
+            Response Codes
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/cursoring" title="Cursoring">
+            Cursoring
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/security-best-practices" title="Security">
+            Security
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/twitter-ids" title="Twitter IDs (snowflake)">
+            Twitter IDs (snowflake)
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/counting-characters" title="Counting characters">
+            Counting characters
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/tco" title="t.co links">
+            t.co links
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/adding-international-support-to-apps" title="Adding international support to apps">
+            Adding international support to apps
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/accounts-and-users" title="Accounts and users">
+          Accounts and users
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity" title="Subscribe to your account activity">
+            Subscribe to your account activity
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings" title="Manage account settings and profile">
+            Manage account settings and profile
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users" title="Mute, block and report users">
+            Mute, block and report users
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users" title="Follow, search, and get users">
+            Follow, search, and get users
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists" title="Create and manage lists">
+            Create and manage lists
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/user-profile-images-and-banners" title="User Profile Images and Banners">
+            User Profile Images and Banners
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="open">
+         <a data-href="/content/developer-twitter/en/docs/tweets" title="Tweets">
+          Tweets
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/post-and-engage" title="Post, retrieve and engage with Tweets">
+            Post, retrieve and engage with Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/timelines" title="Get Tweet timelines">
+            Get Tweet timelines
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/curate-a-collection" title="Curate a collection of Tweets">
+            Curate a collection of Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards" title="Optimize Tweets with Cards">
+            Optimize Tweets with Cards
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/search" title="Search Tweets">
+            Search Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime" title="Filter realtime Tweets">
+            Filter realtime Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/sample-realtime" title="Sample realtime Tweets">
+            Sample realtime Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/batch-historical" title="Get batch historical Tweets">
+            Get batch historical Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/compliance" title="Tweet compliance">
+            Tweet compliance
+           </a>
+          </li>
+          <li class="active">
+           <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary" title="Tweet data dictionaries">
+            Tweet data dictionaries
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/rules-and-filtering" title="Rules and filtering">
+            Rules and filtering
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/enrichments" title="Premium enrichments">
+            Premium enrichments
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/tweet-updates" title="Tweet updates">
+            Tweet updates
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/direct-messages" title="Direct Messages">
+          Direct Messages
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/beta-features" title="Direct Message beta features">
+            Direct Message beta features
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving" title="Sending and receiving events">
+            Sending and receiving events
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/welcome-messages" title="Welcome Messages">
+            Welcome Messages
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/message-attachments" title="Message Attachments">
+            Message Attachments
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/quick-replies" title="Quick Replies">
+            Quick Replies
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/buttons" title="Buttons">
+            Buttons
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/conversation-management" title="Conversation management">
+            Conversation management
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/custom-profiles" title="Custom profiles">
+            Custom profiles
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/customer-feedback" title="Customer feedback cards">
+            Customer feedback cards
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/media" title="Media">
+          Media
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/media/upload-media" title="Upload media">
+            Upload media
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/media/refresh-media" title="Access Media">
+            Access Media
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/trends" title="Trends">
+          Trends
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/trends/trends-for-location" title="Get trends near a location">
+            Get trends near a location
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/trends/locations-with-trending-topics" title="Get locations with trending topics">
+            Get locations with trending topics
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/geo" title="Geo">
+          Geo
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/geo/place-information" title="Get information about a place">
+            Get information about a place
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/geo/places-near-location" title="Get places near a location">
+            Get places near a location
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/ads" title="Ads">
+          Ads
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/general" title="General">
+            General
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/analytics" title="Analytics">
+            Analytics
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/audiences" title="Audiences">
+            Audiences
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/campaign-management" title="Campaign Management">
+            Campaign Management
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/creatives" title="Creatives">
+            Creatives
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/measurement" title="Measurement">
+            Measurement
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/metrics" title="Metrics">
+          Metrics
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/metrics/get-tweet-engagement" title="Get Tweet engagement">
+            Get Tweet engagement
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/twitter-for-websites" title="Twitter for Websites">
+          Twitter for Websites
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/twitter-for-websites/twitter-for-websites" title="Twitter for Websites">
+            Twitter for Websites
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/twitter-kit" title="Twitter Kit">
+          Twitter Kit
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/twitter-kit/twitter-kit" title="Twitter Kit">
+            Twitter Kit
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/developer-utilities" title="Developer utilities">
+          Developer utilities
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/rate-limit-status" title="Get app rate limit status">
+            Get app rate limit status
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/configuration" title="Get Twitter configuration details">
+            Get Twitter configuration details
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/supported-languages" title="Get Twitter supported languages">
+            Get Twitter supported languages
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/privacy-policy" title="Get Twitter's privacy policy">
+            Get Twitter's privacy policy
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/terms-of-service" title="Get Twitter's terms of service">
+            Get Twitter's terms of service
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/usage-api" title="Get API usage metrics">
+            Get API usage metrics
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries" title="Twitter libraries">
+            Twitter libraries
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/twitter-text" title="twitter-text Parser">
+            twitter-text Parser
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/api-reference-index" title="API reference index">
+          API reference index
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/api-reference-index/api-reference-index" title="API reference index">
+            API reference index
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <div class="main-content column column-9">
+       <div>
+        <div class="main-content__header">
+         <span>
+          <svg height="72" viewBox="0 0 28 72" width="28" xmlns="http://www.w3.org/2000/svg">
+           <path d="M6.035 35l14.232-14.232a2.498 2.498 0 0 0 0-3.535 2.498 2.498 0 0 0-3.535 0l-16 16a2.498 2.498 0 0 0 0 3.535l16 16c.488.488 1.128.732 1.768.732s1.28-.244 1.768-.732a2.498 2.498 0 0 0 0-3.535L6.035 35z">
+           </path>
+          </svg>
+         </span>
+         <h1>
+          Tweet data dictionaries
+         </h1>
+        </div>
+        <div class="tabs-nav ">
+         <ul class="tabs-nav__inner">
+          <li>
+           <a class="active" href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview">
+            Overview
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides">
+            Guides
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <div class="tabs-nav__toc">
+          <span class="tabs-nav__toc__title">
+           Overview contents
+           <span class="arrow-down fill-color--neutral-light-gray">
+            <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+             <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+             </path>
+            </svg>
+           </span>
+          </span>
+          <div class="tabs-nav__toc__list">
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json">
+             Introduction to Tweet JSON
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object">
+             Tweet object
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object">
+             User object
+            </a>
+           </li>
+           <li class="active">
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object">
+             Entities object
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object">
+             Extended Entities object
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects">
+             Geo objects
+            </a>
+           </li>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="c01-rich-text-editor">
+        <h2>
+         Twitter Entities
+        </h2>
+       </div>
+       <div class="d06-anchor-link-menu">
+        <div class="tabs-nav__toc">
+         <span class="tabs-nav__toc__title">
+          Jump to on this page
+          <span class="arrow-down fill-color--neutral-light-gray">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </span>
+         <div class="tabs-nav__toc__list">
+          <p>
+           <a href="#intro">
+            Introduction
+           </a>
+          </p>
+          <p>
+           <a href="#entities-object" style="background-color: rgb(238,238,238);">
+            Entities object
+           </a>
+          </p>
+          <p>
+           -
+           <a href="#hashtags">
+            Hashtag object
+           </a>
+          </p>
+          <p>
+           -
+           <a href="#media">
+            Media object
+           </a>
+           <br/>
+          </p>
+          <p>
+           -
+           <a href="#media-size">
+            Media size object
+           </a>
+           <br/>
+          </p>
+          <p>
+           -
+           <a href="#urls">
+            URL object
+           </a>
+          </p>
+          <p>
+           -
+           <a href="#mentions">
+            User mention object
+           </a>
+          </p>
+          <p>
+           -
+           <a href="#symbols">
+            Symbol object
+           </a>
+          </p>
+          <p>
+           -
+           <a href="#polls">
+            Poll object
+           </a>
+          </p>
+          <p>
+           <a href="#retweets-quotes">
+            Retweet and Quote Tweet details
+           </a>
+          </p>
+          <p>
+           <a href="#entities-user">
+            Entities in User objects
+           </a>
+          </p>
+          <p>
+           <a href="#entities-dm">
+            Entities in Direct Messages
+           </a>
+          </p>
+          <p>
+           <a href="#next" style="background-color: rgb(238,238,238);">
+            Next Steps
+           </a>
+           <br/>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="c01-rich-text-editor">
+        <p>
+         Notice that Retweets are really made up of two Tweet objects (and two sets of child objects), with the ‘top level’ (Re)Tweet containing the original Tweet under the “retweeted_status” attribute.
+        </p>
+        <p>
+         The same is true of Quoted Tweets, where the original Tweet being Quoted is contained under a “quoted_status” attribute. (Check out
+         <a href="https://developer.twitter.com/en/docs/tutorials/Identifying-understanding-retweets-quote-tweets">
+          this article on identifying Retweets and Quote Tweets
+         </a>
+         .)
+        </p>
+        <h2>
+         <a name="dictionaries">
+         </a>
+         Data dictionaries
+        </h2>
+        <p>
+         Whatever your Twitter use case, understanding what these JSON-encoded Tweet objects and attributes
+         <i>
+          represent
+         </i>
+         is critical to successfully finding your data signals of interest. To help in that effort, there are a set of
+         <i>
+          Data Dictionaries
+         </i>
+         for these fundamental Twitter objects.
+        </p>
+        <p>
+         Reflecting the JSON hierachy above, here are links and further descriptions of these Objects:
+        </p>
+        <ul>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object">
+           Tweet
+          </a>
+          - Also referred to as a ‘Status’ object, has many ‘root-level’ attributes,
+          <i>
+           parent
+          </i>
+          of other objects.
+          <ul>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object">
+             User
+            </a>
+            - Twitter Account level metadata. Will include any available account-level enrichments, such as
+            <a href="http://support.gnip.com/enrichments/profile_geo.html">
+             Profile geo
+            </a>
+            and
+            <a href="http://support.gnip.com/enrichments/klout.html">
+             Klout
+            </a>
+            .
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object">
+             Entities
+            </a>
+            - Contains object arrays of #hashtags, @mentions, $symbols, URLs, and media.
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object">
+             Extended Entities
+            </a>
+            - Contains up to four native photos, or one video or animated GIF.
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects">
+             Places
+            </a>
+            - Parent to ‘coordinates’ object.
+           </li>
+          </ul>
+         </li>
+        </ul>
+        <h2>
+         <a name="best-practices">
+         </a>
+         Parsing best-practices
+         <br/>
+        </h2>
+        <ul>
+         <li>
+          Twitter JSON is encoded using UTF-8 characters.
+         </li>
+         <li>
+          Parsers should tolerate variance in ordering of fields with ease. It should be assumed that Tweet JSON is served as an unordered hash of data.
+         </li>
+         <li>
+          Parsers should tolerate the addition of 'new' fields. The Twitter platform has continually evolved since 2006, so
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides/tweet-timeline">
+           there is a long history of new metadata being added to Tweets
+          </a>
+          .
+         </li>
+         <li>
+          JSON parsers must be tolerant of ‘missing’ fields, since not all fields appear in all contexts.
+         </li>
+         <li>
+          It is generally safe to consider a nulled field, an empty set, and the absence of a field as the same thing.
+         </li>
+        </ul>
+        <h2>
+         <a name="important-notes">
+         </a>
+         Important notes
+         <br/>
+        </h2>
+        <h3>
+         Product details
+        </h3>
+        <p>
+         These JSON attribute dictionaries are specifically for the Tweets delivered by the following Twitter products:
+        </p>
+        <ul>
+         <li>
+          Volume Streams (
+          <a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose">
+           Decahose
+          </a>
+          )
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/overview/powertrack-api">
+           Real-time PowerTrack
+          </a>
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/batch-historical/overview">
+           Historical PowerTrack
+          </a>
+         </li>
+         <li>
+          Twitter Search APIs (
+          <a href="https://developer.twitter.com/en/docs/tweets/search/overview/historical-search-tweets">
+           Full-Archive Search
+          </a>
+          and
+          <a href="https://developer.twitter.com/en/docs/tweets/search/overview/historical-search-tweets">
+           30-Day Search
+          </a>
+          )
+         </li>
+        </ul>
+        <p>
+         Please note that Tweets sourced elsewhere may vary somewhat in structure from this document.
+        </p>
+        <h3>
+         Tweet JSON formats
+         <br/>
+        </h3>
+        <p>
+         Note that there are currently two JSON formats used to encode Tweets: Original (‘native firehose’) and Activity Stream (AS). Gnip started encoding Tweets in the Activity Stream format in 2010, and until 2016 was the only source for a set of data enrichments including
+         <a href="https://developer.twitter.com/en/docs/tweets/enrichments/overview/profile-geo">
+          Profile geo
+         </a>
+         ,
+         <a href="https://developer.twitter.com/en/docs/tweets/enrichments/overview/matching-rules">
+          matching rules
+         </a>
+         , and
+         <a href="https://developer.twitter.com/en/docs/tweets/enrichments/overview/expanded-and-enhanced-urls">
+          Exhanced URLs
+         </a>
+         .
+        </p>
+        <p>
+         When Gnip 2.0 was released in 2016, these data enrichments were included in the ‘native’ format for the first time. With enrichments available in the ‘native’ format, the prominent distinction of the AS format was ended. As new Tweet metadata becomes available, note that it will be available only in the ‘native’ format. A first example of this is
+         <a href="https://developer.twitter.com/en/docs/tweets/enrichments/overview/poll-metadata">
+          Twitter Polls metadata
+         </a>
+         , which is now available in ‘native’ format, but not in the AS format.
+        </p>
+        <h2>
+         <a name="next">
+         </a>
+         Next steps
+        </h2>
+        <ul>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object">
+           Tweet object and data dictionary
+          </a>
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object">
+           User object and data dictionary
+          </a>
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object">
+           Entities object and data dictionary
+          </a>
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object">
+           Extended Entities object and data dictionary
+          </a>
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects">
+           Tweet location objects and data dictionaries
+          </a>
+         </li>
+         <li>
+          Learn about
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/guides/tweet-timeline">
+           how Tweets have evolved since 2006
+          </a>
+          .
+         </li>
+         <li>
+          Learn about what
+          <a href="https://developer.twitter.com/en/docs/tweets/rules-and-filtering/overview/operators-by-product">
+           JSON attribute filters are available in Twitter Products
+          </a>
+          .
+         </li>
+        </ul>
+       </div>
+       <div class="c01-rich-text-editor">
+        <div class="gnip-body-container">
+         <div class="container">
+          <div class="row">
+           <div class="col-md-9">
+            <h2>
+             Introduction
+            </h2>
+           </div>
+          </div>
+          <div class="row">
+           <div class="col-md-12">
+            <h3>
+             Twitter Entities
+            </h3>
+            <p>
+             Entities provide metadata and additional contextual information about content posted on Twitter. The
+             <code>
+              entities
+             </code>
+             section provides arrays of common things included in Tweets: hashtags, user mentions, links, stock tickers (symbols), Twitter polls, and attached media. These arrays are convenient for developers when ingesting Tweets, since Twitter has essentially pre-processed, or pre-parsed, the text body. Instead of needing to explicitly search and find these entities in the Tweet body, your parser can go straight to this JSON section and there they are.
+            </p>
+            <p>
+             Beyond providing parsing conveniences, the
+             <code>
+              entities
+             </code>
+             section also provides useful ‘value-add’ metadata. For example, if you are using the
+             <a href="https://developer.twitter.com/en/docs/tweets/enrichments/overview/expanded-and-enhanced-urls">
+              Enhanced URLs enrichment
+             </a>
+             , URL metadata include fully-expanded URLs, as well as associated website titles and descriptions. Another example is when there are user mentions, the entities metadata include the numeric user ID, which are useful when making requests to many Twitter APIs.
+            </p>
+            <p>
+             Every Tweet JSON payload includes an
+             <code>
+              entities
+             </code>
+             section, with the minimum set of
+             <code>
+              hashtags
+             </code>
+             ,
+             <code>
+              urls
+             </code>
+             ,
+             <code>
+              user_mentions
+             </code>
+             , and
+             <code>
+              symbols
+             </code>
+             attributes, even if none of those entities are part of the Tweet message. For example, if you examine the JSON for a Tweet with a body of “Hello World!” and no attached media, the Tweet’s JSON will include the following content with entity arrays containing zero items:
+            </p>
+            <pre><code class="language-json">"entities": {
+    "hashtags": [
+    ],
+    "urls": [
+    ],
+    "user_mentions": [
+    ],
+    "symbols": [
+    ]
+  }</code>
+</pre>
+            <p>
+             Notes:
+            </p>
+            <ul>
+             <li>
+              media and polls entities will only appear when that type of content is part of the Tweet.
+             </li>
+             <li>
+              if you are working with native media (photos, videos, or GIFs), the
+              <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object">
+               Extended Entities object
+              </a>
+              is the way to go.
+             </li>
+            </ul>
+            <h2>
+             Entities Object
+             <a class="tall">
+             </a>
+            </h2>
+            <p>
+             The
+             <code>
+              entities
+             </code>
+             and
+             <code>
+              extended_entities
+             </code>
+             sections are both made up of arrays of entity
+             <i>
+              objects
+             </i>
+             . Below you will find descriptions for each of these entity objects, including data dictionaries that describe the object attribute names, types, and short description. We’ll also indicate which PowerTrack Operators match these attributes, and include some sample JSON payloads.
+            </p>
+            <p>
+             A collection of common entities found in Tweets, including hashtags, links, and user mentions. This
+             <code>
+              entities
+             </code>
+             object does include a
+             <code>
+              media
+             </code>
+             attribute, but its implementation in the
+             <code>
+              entiites
+             </code>
+             section is only completely accurate for Tweets with a single photo. For all Tweets with more than one photo, a video, or animated GIF, the reader is directed to the
+             <code>
+              extended_entities
+             </code>
+             section.
+            </p>
+            <h3>
+             Entities Data Dictionary
+            </h3>
+            <p>
+             The entities object is a holder of arrays of other entity sub-objects. After illustrating the
+             <code>
+              entities
+             </code>
+             structure, data dictionaries for these sub-objects, and the Operators that match them, will be provided.
+            </p>
+            <table border="1" class="docutils">
+             <colgroup>
+              <col width="33%">
+              </col>
+              <col width="33%">
+              </col>
+              <col width="33%">
+              </col>
+             </colgroup>
+             <thead valign="bottom">
+              <tr class="row-odd">
+               <th class="head">
+                Field
+               </th>
+               <th class="head">
+                Type
+               </th>
+               <th class="head">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody valign="top">
+              <tr class="row-even">
+               <td>
+                hashtags
+               </td>
+               <td>
+                Array of
+                <a class="reference external" href="#hashtag">
+                 Hashtag Objects
+                </a>
+               </td>
+               <td>
+                <p class="first">
+                 Represents hashtags which have been parsed out of the Tweet text. Example:
+                </p>
+                <div class="code javascript last highlight-python">
+                 <div class="highlight">
+                  <pre>
+<span></span>{
+  "hashtags": [
+    {
+      "indices": [
+        32,
+        38
+      ],
+      "text": "nodejs"
+    }
+  ]
+}
+</pre>
+                 </div>
+                </div>
+               </td>
+              </tr>
+              <tr class="row-odd">
+               <td>
+                media
+               </td>
+               <td>
+                Array of
+                <a class="reference external" href="#media">
+                 Media Objects
+                </a>
+               </td>
+               <td>
+                <p class="first">
+                 Represents media elements uploaded with the Tweet. Example:
+                </p>
+                <div class="code javascript last highlight-python">
+                 <div class="highlight">
+                  <pre>
+<span></span>{
+  "media": [
+    {
+      "type": "photo",
+      "sizes": {
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        },
+        "large": {
+          "h": 238,
+          "resize": "fit",
+          "w": 226
+        },
+        "medium": {
+          "h": 238,
+          "resize": "fit",
+          "w": 226
+        },
+        "small": {
+          "h": 238,
+          "resize": "fit",
+          "w": 226
+        }
+      },
+      "indices": [
+        15,
+        35
+      ],
+      "url": "http://t.co/rJC5Pxsu",
+      "media_url": "http://p.twimg.com/AZVLmp-CIAAbkyy.jpg",
+      "display_url": "pic.twitter.com/rJC5Pxsu",
+      "id": 1.1408049304097e+17,
+      "id_str": "114080493040967680",
+      "expanded_url": "http://twitter.com/yunorno/status/114080493036773378/photo/1",
+      "media_url_https": "https://p.twimg.com/AZVLmp-CIAAbkyy.jpg"
+    }
+  ]
+}
+</pre>
+                 </div>
+                </div>
+               </td>
+              </tr>
+              <tr class="row-even">
+               <td>
+                urls
+               </td>
+               <td>
+                Array of
+                <a class="reference external" href="#urls">
+                 URL Objects
+                </a>
+               </td>
+               <td>
+                <p class="first">
+                 Represents URLs included in the text of a Tweet.
+                </p>
+                <p>
+                 Example (without Enhanced URLs enrichment enabled):
+                </p>
+                <div class="code javascript highlight-python">
+                 <div class="highlight">
+                  <pre>
+<span></span>{
+  "urls": [
+    {
+      "indices": [
+        32,
+        52
+      ],
+      "url": "http://t.co/IOwBrTZR",
+      "display_url": "youtube.com/watch?v=oHg5SJ…",
+      "expanded_url": "http://www.youtube.com/watch?v=oHg5SJYRHA0"
+    }
+  ]
+}
+</pre>
+                 </div>
+                </div>
+                <p>
+                 Example (with Enhanced URLs enrichment enabled):
+                </p>
+                <div class="code javascript last highlight-python">
+                 <div class="highlight">
+                  <pre>
+<span></span>{"urls": [
+      {
+        "url": "https://t.co/D0n7a53c2l",
+        "expanded_url": "http://bit.ly/18gECvy",
+        "display_url": "bit.ly/18gECvy",
+        "unwound": {
+          "url": "https://www.youtube.com/watch?v=oHg5SJYRHA0",
+          "status": 200,
+          "title": "RickRoll'D",
+          "description": "http://www.facebook.com/rickroll548 As long as trolls are still trolling, the Rick will never stop rolling."
+        },
+        "indices": [
+          62,
+          85
+        ]
+      }
+    ]
+}
+</pre>
+                 </div>
+                </div>
+               </td>
+              </tr>
+              <tr class="row-odd">
+               <td>
+                user_mentions
+               </td>
+               <td>
+                Array of
+                <a class="reference external" href="#mentions">
+                 User Mention Objects
+                </a>
+               </td>
+               <td>
+                <p class="first">
+                 Represents other Twitter users mentioned in the text of the Tweet. Example:
+                </p>
+                <div class="code javascript last highlight-python">
+                 <div class="highlight">
+                  <pre>
+<span></span>{
+  "user_mentions": [
+    {
+      "name": "Twitter API",
+      "indices": [
+        4,
+        15
+      ],
+      "screen_name": "twitterapi",
+      "id": 6253282,
+      "id_str": "6253282"
+    }
+  ]
+}
+</pre>
+                 </div>
+                </div>
+               </td>
+              </tr>
+              <tr class="row-odd">
+               <td>
+                symbols
+               </td>
+               <td>
+                Array of
+                <a class="reference external" href="#symbols">
+                 Symbol Objects
+                </a>
+               </td>
+               <td>
+                <p class="first">
+                 Represents symbols, i.e. $cashtags, included in the text of the Tweet. Example:
+                </p>
+                <div class="code javascript last highlight-python">
+                 <div class="highlight">
+                  <pre>
+<span></span>{
+  "symbols": [
+    {
+      "indices": [
+        12,
+        17
+      ],
+      "text": "twtr"
+    }
+  ]
+}
+</pre>
+                 </div>
+                </div>
+               </td>
+              </tr>
+              <tr class="row-odd">
+               <td>
+                polls
+               </td>
+               <td>
+                Array of
+                <a class="reference external" href="#polls">
+                 Poll Objects
+                </a>
+               </td>
+               <td>
+                <p class="first">
+                 Represents Twitter Polls included in the Tweet. Example:
+                </p>
+                <div class="code javascript last highlight-python">
+                 <div class="highlight">
+                  <pre>
+<span></span>{"polls": [
+      {
+        "options": [
+          {
+            "position": 1,
+            "text": "I read documentation once."
+          },
+          {
+            "position": 2,
+            "text": "I read documentation twice."
+          },
+          {
+            "position": 3,
+            "text": "I read documentation over and over again."
+          }
+        ],
+        "end_datetime": "Thu May 25 22:20:27 +0000 2017",
+        "duration_minutes": 60
+      }
+    ]
+  }
+</pre>
+                 </div>
+                </div>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <h3>
+             <a name="hashtags">
+             </a>
+             Hashtag Object
+             <a class="tall">
+             </a>
+            </h3>
+            <p>
+             The
+             <code>
+              entities
+             </code>
+             section will contain a
+             <code>
+              hashtags
+             </code>
+             array containing an object for every hashtag included in the Tweet body, and include an empty array if no hashtags are present.
+            </p>
+            <p>
+             The PowerTrack
+             <code>
+              #
+             </code>
+             Operator is used to match on the
+             <code>
+              text
+             </code>
+             attribute. The
+             <code>
+              has:hashtags
+             </code>
+             Operator will match if there is at least one item in the array.
+            </p>
+            <div>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 Field
+                </td>
+                <td>
+                 Type
+                </td>
+                <td>
+                 Description
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 indices
+                </td>
+                <td>
+                 Array of Int
+                </td>
+                <td>
+                 <p class="first">
+                  An array of integers indicating the offsets within the Tweet text where the hashtag begins and ends. The first integer represents the location of the # character in the Tweet text string. The second integer represents the location of the first character after the hashtag. Therefore the difference between the two numbers will be the length of the hashtag name plus one (for the ‘#’ character). Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"indices":[32,38]
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 text
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Name of the hashtag, minus the leading ‘#’ character. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"text":"nodejs"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <h3>
+             <a name="media">
+             </a>
+             Media Object
+             <a class="tall">
+             </a>
+            </h3>
+            <p>
+             The
+             <code>
+              entities
+             </code>
+             section will contain a
+             <code>
+              media
+             </code>
+             array containing a single media object if any media object has been ‘attached’ to the Tweet. If no native media has been attached, there will be no
+             <code>
+              media
+             </code>
+             array in the
+             <code>
+              entities
+             </code>
+             . For the following reasons the
+             <code>
+              extended_entities
+             </code>
+             section should be used to process Tweet native media:
+             <br/>
+             + Media
+             <code>
+              type
+             </code>
+             will always indicate ‘photo’ even in cases of a video and GIF being attached to Tweet.
+             <br/>
+             + Even though up to four photos can be attached, only the first one will be listed in the
+             <code>
+              entities
+             </code>
+             section.
+            </p>
+            <p>
+             The
+             <code>
+              has:media
+             </code>
+             Operator will match if this array is populated.
+            </p>
+            <div>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 Field
+                </td>
+                <td>
+                 Type
+                </td>
+                <td>
+                 Description
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 display_url
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  URL of the media to display to clients. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"display_url":"pic.twitter.com/rJC5Pxsu"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 expanded_url
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  An expanded version of display_url. Links to the media display page. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"expanded_url": "http://twitter.com/yunorno/status/114080493036773378/photo/1"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 id
+                </td>
+                <td>
+                 Int64
+                </td>
+                <td>
+                 <p class="first">
+                  ID of the media expressed as a 64-bit integer. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"id":114080493040967680
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 id_str
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  ID of the media expressed as a string. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"id_str":"114080493040967680"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 indices
+                </td>
+                <td>
+                 Array of Int
+                </td>
+                <td>
+                 <p class="first">
+                  An array of integers indicating the offsets within the Tweet text where the URL begins and ends. The first integer represents the location of the first character of the URL in the Tweet text. The second integer represents the location of the first non-URL character occurring after the URL (or the end of the string if the URL is the last part of the Tweet text). Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"indices":[15,35]
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 media_url
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  An
+                  <a class="reference external">
+                   http://
+                  </a>
+                  URL pointing directly to the uploaded media file. Example:
+                 </p>
+                 <div class="code javascript highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"media_url":"http://p.twimg.com/AZVLmp-CIAAbkyy.jpg"
+</pre>
+                  </div>
+                 </div>
+                 <p class="last">
+                  For media in direct messages,
+                  <code class="docutils literal">
+                   <span class="pre">
+                    media_url
+                   </span>
+                  </code>
+                  is the same https URL as
+                  <code class="docutils literal">
+                   <span class="pre">
+                    media_url_https
+                   </span>
+                  </code>
+                  and must be accessed via an authenticated twitter.com session or by signing a request with the user’s access token using OAuth 1.0A. It is not possible to directly embed these images in a web page.
+                 </p>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 media_url_https
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  An
+                  <a class="reference external">
+                   https://
+                  </a>
+                  URL pointing directly to the uploaded media file, for embedding on https pages. Example:
+                 </p>
+                 <div class="code javascript highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"media_url_https":"https://p.twimg.com/AZVLmp-CIAAbkyy.jpg"
+</pre>
+                  </div>
+                 </div>
+                 <p class="last">
+                  For media in direct messages,
+                  <code class="docutils literal">
+                   <span class="pre">
+                    media_url_https
+                   </span>
+                  </code>
+                  must be accessed via an authenticated twitter.com session or by signing a request with the user’s access token using OAuth 1.0A. It is not possible to directly embed these images in a web page.
+                 </p>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 sizes
+                </td>
+                <td>
+                 <a class="reference external" href="#size">
+                  Size Object
+                 </a>
+                </td>
+                <td>
+                 <p class="first">
+                  An object showing available sizes for the media file. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>{
+  "sizes": {
+    "thumb": {
+      "h": 150,
+      "resize": "crop",
+      "w": 150
+    },
+    "large": {
+      "h": 238,
+      "resize": "fit",
+      "w": 226
+    },
+    "medium": {
+      "h": 238,
+      "resize": "fit",
+      "w": 226
+    },
+    "small": {
+      "h": 238,
+      "resize": "fit",
+      "w": 226
+    }
+  }
+}
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 source_status_id
+                </td>
+                <td>
+                 Int64
+                </td>
+                <td>
+                 <p class="first">
+                  Nullable. For Tweets containing media that was originally associated with a different tweet, this ID points to the original Tweet. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"source_status_id": 205282515685081088
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 source_status_id_str
+                </td>
+                <td>
+                 Int64
+                </td>
+                <td>
+                 <p class="first">
+                  Nullable. For Tweets containing media that was originally associated with a different tweet, this string-based ID points to the original Tweet. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"source_status_id_str": "205282515685081088"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 type
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Type of uploaded media. Possible types include photo, video, and animated_gif. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"type":"photo"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 url
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Wrapped URL for the media link. This corresponds with the URL embedded directly into the raw Tweet text, and the values for the
+                  <code class="docutils literal">
+                   <span class="pre">
+                    indices
+                   </span>
+                  </code>
+                  parameter. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"url":"http://t.co/rJC5Pxsu"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <h3>
+            </h3>
+            <h3>
+             <a name="media-size">
+             </a>
+             Media Size Objects
+            </h3>
+            <p>
+             All Tweets with native media (photos, video, and GIFs) will include a set of ‘thumb’, ‘small’, ‘medium’, and ‘large’ sizes with height and width pixel sizes.
+            </p>
+            <h4>
+             Sizes Object
+             <a>
+             </a>
+            </h4>
+            <p>
+            </p>
+            <table border="1">
+             <tbody>
+              <tr>
+               <td>
+                Field
+               </td>
+               <td>
+                Type
+               </td>
+               <td>
+                Description
+               </td>
+              </tr>
+              <tr>
+               <td>
+                thumb
+               </td>
+               <td>
+                <a href="#size">
+                 Size Object
+                </a>
+               </td>
+               <td>
+                <p>
+                 Information for a thumbnail-sized version of the media. Example:
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                 "thumb":{"h":150, "resize":"crop", "w":150}
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                large
+               </td>
+               <td>
+                <a href="#size">
+                 Size Object
+                </a>
+               </td>
+               <td>
+                <p>
+                 Information for a large-sized version of the media. Example:
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                 "large":{"h":238, "resize":"fit", "w":226}
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                medium
+               </td>
+               <td>
+                <a href="#size">
+                 Size Object
+                </a>
+               </td>
+               <td>
+                <p>
+                 Information for a medium-sized version of the media. Example:
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                 "medium":{"h":238, "resize":"fit", "w":226}
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                small
+               </td>
+               <td>
+                <a href="#size">
+                 Size Object
+                </a>
+               </td>
+               <td>
+                <p>
+                 Information for a small-sized version of the media. Example:
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                 "small":{"h":238, "resize":"fit", "w":226}
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+            </p>
+            <h4>
+             <a name="size">
+             </a>
+             Size Object
+             <a>
+             </a>
+            </h4>
+            <p>
+            </p>
+            <table border="1">
+             <tbody>
+              <tr>
+               <td>
+                Field
+               </td>
+               <td>
+                Type
+               </td>
+               <td>
+                Description
+               </td>
+              </tr>
+              <tr>
+               <td>
+                w
+               </td>
+               <td>
+                Int
+               </td>
+               <td>
+                <p>
+                 Width in pixels of this size. Example:
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                 "w":150
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                h
+               </td>
+               <td>
+                Int
+               </td>
+               <td>
+                <p>
+                 Height in pixels of this size. Example:
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                 "h":150
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                resize
+               </td>
+               <td>
+                String
+               </td>
+               <td>
+                <p>
+                 Resizing method used to obtain this size. A value of
+                 <i>
+                  fit
+                 </i>
+                 means that the media was resized to fit one dimension, keeping its native aspect ratio. A value of
+                 <i>
+                  crop
+                 </i>
+                 means that the media was cropped in order to fit a specific resolution. Example:
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                 "resize":"crop"
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+            </p>
+            <h3>
+            </h3>
+            <h3>
+             <a name="urls">
+             </a>
+             URL Object
+            </h3>
+            <p>
+             The
+             <code>
+              entities
+             </code>
+             section will contain a
+             <code>
+              urls
+             </code>
+             array containing an object for every link included in the Tweet body, and include an empty array if no links are present.
+            </p>
+            <p>
+             The
+             <code>
+              has:links
+             </code>
+             Operator will match if there is at least one item in the array. The
+             <code>
+              url:
+             </code>
+             Operator is used to match on the
+             <code>
+              expanded_url
+             </code>
+             attribute. If you are using the
+             <a href="http://support.gnip.com/enrichments/expanded_urls.html">
+              Expanded URL enrichment
+             </a>
+             , the
+             <code>
+              url:
+             </code>
+             Operator is used to match on the
+             <code>
+              unwound.url
+             </code>
+             (fully unwound URL) attribute. If you are using the
+             <a href="http://support.gnip.com/enrichments/enhanced_urls.html">
+              Exhanced URL enrichment
+             </a>
+             , the
+             <code>
+              url_title:
+             </code>
+             and
+             <code>
+              url_decription:
+             </code>
+             Operators are used to match on the
+             <code>
+              unwound.title
+             </code>
+             and
+             <code>
+              unwound.description
+             </code>
+             attributes.
+            </p>
+            <div>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 Field
+                </td>
+                <td>
+                 Type
+                </td>
+                <td>
+                 Description
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 display_url
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  URL pasted/typed into Tweet. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"display_url":"bit.ly/2so49n2"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 expanded_url
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Expanded version of `` display_url`` . Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"expanded_url":"http://bit.ly/2so49n2"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 indices
+                </td>
+                <td>
+                 Array of Int
+                </td>
+                <td>
+                 <p class="first">
+                  An array of integers representing offsets within the Tweet text where the URL begins and ends. The first integer represents the location of the first character of the URL in the Tweet text. The second integer represents the location of the first non-URL character after the end of the URL. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"indices":[30,53]
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 url
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Wrapped URL, corresponding to the value embedded directly into the raw Tweet text, and the values for the indices parameter. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"url":"https://t.co/yzocNFvJuL"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p>
+             If you are using the Expanded and/or Enhanced URL enrichments, the following metadata is available under the
+             <code>
+              unwound
+             </code>
+             attribute:
+            </p>
+            <div>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 Field
+                </td>
+                <td>
+                 Type
+                </td>
+                <td>
+                 Description
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 url
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  The fully unwound version of the link included in the Tweet. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"url":"https://blog.twitter.com/en_us/topics/insights/2016/using-twitter-as-a-go-to-communication-channel-during-severe-weather-events.html"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 status
+                </td>
+                <td>
+                 Int
+                </td>
+                <td>
+                 <p class="first">
+                  Final HTTP status of the unwinding process, a '200' indicating success. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>200
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 title
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  HTML title for the link. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"title":"Using Twitter as a ‘go-to’ communication channel during severe weather"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 description
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  HTML description for the link. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"description":"Using Twitter as a ‘go-to’ communication channel during severe weather"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <h3>
+             <a name="mentions">
+             </a>
+             User Mention Object
+             <a class="tall">
+             </a>
+            </h3>
+            <p>
+             The
+             <code>
+              entities
+             </code>
+             section will contain a
+             <code>
+              user_mentions
+             </code>
+             array containing an object for every user mention included in the Tweet body, and include an empty array if no user mention is present.
+            </p>
+            <p>
+             The PowerTrack
+             <code>
+              @
+             </code>
+             Operator is used to match on the
+             <code>
+              screen_name
+             </code>
+             attribute. The
+             <code>
+              has:mentions
+             </code>
+             Operator will match if there is at least one item in the array.
+            </p>
+            <div>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 Field
+                </td>
+                <td>
+                 Type
+                </td>
+                <td>
+                 Description
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 id
+                </td>
+                <td>
+                 Int64
+                </td>
+                <td>
+                 <p class="first">
+                  ID of the mentioned user, as an integer. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"id":6253282
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 id_str
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  If of the mentioned user, as a string. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"id_str":"6253282"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 indices
+                </td>
+                <td>
+                 Array of Int
+                </td>
+                <td>
+                 <p class="first">
+                  An array of integers representing the offsets within the Tweet text where the user reference begins and ends. The first integer represents the location of the ‘@’ character of the user mention. The second integer represents the location of the first non-screenname character following the user mention. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"indices":[4,15]
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 name
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Display name of the referenced user. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"name":"Twitter API"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 screen_name
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Screen name of the referenced user. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"screen_name":"twitterapi"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p>
+            </p>
+            <h3>
+             <a name="symbols">
+             </a>
+             Symbol Object
+             <a class="tall">
+             </a>
+            </h3>
+            <p>
+             The
+             <code>
+              entities
+             </code>
+             section will contain a
+             <code>
+              symbols
+             </code>
+             array containing an object for every $cashtag included in the Tweet body, and include an empty array if no symbol is present.
+            </p>
+            <p>
+             The PowerTrack
+             <code>
+              $
+             </code>
+             Operator is used to match on the
+             <code>
+              text
+             </code>
+             attribute. The
+             <code>
+              has:symbols
+             </code>
+             Operator will match if there is at least one item in the array.
+            </p>
+            <div>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 Field
+                </td>
+                <td>
+                 Type
+                </td>
+                <td>
+                 Description
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 indices
+                </td>
+                <td>
+                 Array of Int
+                </td>
+                <td>
+                 <p class="first">
+                  An array of integers indicating the offsets within the Tweet text where the symbol/cashtag begins and ends. The first integer represents the location of the $ character in the Tweet text string. The second integer represents the location of the first character after the cashtag. Therefore the difference between the two numbers will be the length of the hashtag name plus one (for the ‘$’ character). Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"indices":[12,17]
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 text
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Name of the cashhtag, minus the leading ‘$’ character. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"text":"twtr"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <h3>
+             <a name="polls">
+             </a>
+             Poll Object
+            </h3>
+            <p>
+             The
+             <code style="font-weight: normal;">
+              entities
+             </code>
+             <span style="font-weight: normal;">
+              section will contain a
+             </span>
+             <code style="font-weight: normal;">
+              polls
+             </code>
+             <span style="font-weight: normal;">
+              array containing a single
+             </span>
+             <code style="font-weight: normal;">
+              poll
+             </code>
+             <span style="font-weight: normal;">
+              object if the Tweet contains a poll. If no poll is included, there will be no
+             </span>
+             <code style="font-weight: normal;">
+              polls
+             </code>
+             <span style="font-weight: normal;">
+              array in the
+             </span>
+             <code style="font-weight: normal;">
+              entities
+             </code>
+             section.
+            </p>
+            <p>
+             Note that these Poll metadata are only available with the following Enterprise APIs:
+            </p>
+            <ul>
+             <li>
+              Volume streams (
+              <a href="https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose">
+               Decahose
+              </a>
+              )
+             </li>
+             <li>
+              <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime/overview/powertrack-api">
+               Real-time PowerTrack
+              </a>
+             </li>
+             <li>
+              <a href="https://developer.twitter.com/en/docs/tweets/batch-historical/overview">
+               Historical PowerTrack
+              </a>
+             </li>
+             <li>
+              Twitter Search APIs (
+              <a href="https://developer.twitter.com/en/docs/tweets/search/overview/full-archive-search">
+               Full-Archive Search
+              </a>
+              and
+              <a href="https://developer.twitter.com/en/docs/tweets/search/overview/30-day-search">
+               30-Day Search
+              </a>
+              )
+             </li>
+            </ul>
+            <p>
+            </p>
+            <div>
+             <table border="1" class="docutils">
+              <colgroup>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+               <col width="33%">
+               </col>
+              </colgroup>
+              <tbody valign="top">
+               <tr class="row-odd">
+                <td>
+                 Field
+                </td>
+                <td>
+                 Type
+                </td>
+                <td>
+                 Description
+                </td>
+               </tr>
+               <tr class="row-even">
+                <td>
+                 options
+                </td>
+                <td>
+                 Array of Option Object
+                </td>
+                <td>
+                 <p class="first">
+                  An array of options, each having a poll position, and the text for that position. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>{"options": [
+          {
+            "position": 1,
+            "text": "I read documentation once."
+          }
+      ]
+}
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 end_datetime
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Time stamp (UTC) of when poll ends. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"end_datetime": "Thu May 25 22:20:27 +0000 2017"
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+               <tr class="row-odd">
+                <td>
+                 duration_minutes
+                </td>
+                <td>
+                 String
+                </td>
+                <td>
+                 <p class="first">
+                  Duration of poll in minutes. Example:
+                 </p>
+                 <div class="code javascript last highlight-python">
+                  <div class="highlight">
+                   <pre>
+<span></span>"duration_minutes": 60
+</pre>
+                  </div>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <h2>
+             Retweet and Quote Tweet details
+            </h2>
+            <p>
+             From the Twitter API perspective, Retweet and Quote Tweets are special kinds of Tweets that contain the original Tweet as an embedded object. So Retweets and Quote Tweet objects are parents of a child 'original' Tweet (and thus double the size). Retweets have a top-level "retweeted_status" object, and Quoted Tweets have a "quoted_status" object. For consistency, these top-level Retweet and Quote Tweet objects also have a text property and associated entities. However, the entities at the top level can differ from the entities provided by the embedded 'original' entities. In case of Retweets, new text is prepended to the original Tweet body. For Quoted Tweets, new text is appended to the Tweet body.
+            </p>
+            <p>
+             In general, the best practice is to retrieve the text, entities, original author and date from the original Tweet in retweeted_status whenever this exists. An exception is getting Twitter entities that are part of the additive Quote. (example?) See below for more details and tips.
+            </p>
+            <h3>
+             Retweets
+             <br/>
+            </h3>
+            <p>
+             An important detail with Retweets is that no additional Twitter
+             <i>
+              entities
+             </i>
+             can be added to the Tweet. Users can not add hashtags, URLs or other details when they Retweet. However, the Retweet (top-level) text attribute is composed of the original Tweet text with “RT @username: ” prepended.
+            </p>
+            <p>
+             In some cases, especially with accounts with long user names, the combination of these new characters and the original Tweet body can easily exceed the original Tweet text length limit of 140 characters. In order to preserve support for 140 character based display and storage, the top-level body truncates the end of the Tweet body and adds an ellipsis (“…”).
+             <span style="">
+              Consequently, some top-level entities positioned at the end of the original Tweet might be incorrect or missing, for instance in the case of a truncated hashtag or URL entry.
+             </span>
+            </p>
+            <p>
+             [Example here? Just refer to Tweet IDs linking to examples]
+             <span style="">
+              https://twitter.com/FloodSocial/status/907974220298125312
+             </span>
+            </p>
+            <p>
+             Just another test Tweet that needs to be exactly 140 characters with trailing URL and hashtag
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <img height="1" src="https://abs.twimg.com/emoji/v2/72x72/1f4a7.png" style="" title="Droplet" width="1"/>
+             <span style="">
+             </span>
+             <a href="https://t.co/R5iMzxWelp" style="background-color: rgb(238,238,238);" title="http://wapo.st/2w8iwPQ">
+              http://wapo.st/2w8iwPQ
+             </a>
+             <span style="">
+             </span>
+             <a href="https://twitter.com/hashtag/Testing?src=hash" style="background-color: rgb(238,238,238);">
+              #Testing
+             </a>
+             <br/>
+            </p>
+            <p>
+             In the above example, both the URL and hashtag were affected. Since the hashtag was completely truncated and the URL partially truncated, these are missing from the the top-level entities. You will also notice the additional user_mentions top-level entity coming from the “RT @floodsocial: ” prefix on the text field.
+            </p>
+            <p>
+             However, the Tweet text and entities in retweeted_status perfectly reflect the original Tweet with no truncation or incorrect entities, hence our recommendation to rely on the nested
+             <i>
+              retweeted_status
+             </i>
+             <span style="">
+              object for Retweets.
+             </span>
+            </p>
+            <p>
+            </p>
+            <h3>
+             Quote Tweets
+            </h3>
+            <p>
+             Quote Tweets were introduced in 2016, and differ from Retweets in that
+             <i>
+              when you "quote" a Tweet you are adding new content "on top" of a shared Tweet.
+             </i>
+             This new content can include nearly anything an original Tweet can have, including new text, hashtags, mentions, and URLs. One important exception is that no native media (photos, videos, and GIFs) can be added.
+            </p>
+            <p>
+             Since Twitter entities can be added, the Quote entities are likely different from the original entities.
+            </p>
+            <p>
+             In this example, a new URL and hashtag were positioned at the end of the Quote Tweet.
+            </p>
+            <p>
+             [Example here? Just refer to Tweet IDs linking to examples] https://twitter.com/FloodSocial/status/907983973225160704
+            </p>
+            <p>
+             strange and equally tragic when islands flood... trans-atlantic testing of quote tweets |
+             <a href="https://twitter.com/andypiper" style="background-color: rgb(238,238,238);">
+              @this
+             </a>
+             user
+             <a href="https://twitter.com/johnd" style="background-color: rgb(238,238,238);">
+              @thatuser
+             </a>
+             <span style="">
+             </span>
+             <a href="https://t.co/fzFgMhWlPO" style="background-color: rgb(238,238,238);" title="http://bit.ly/2vMMDuu">
+              http://bit.ly/2vMMDuu
+             </a>
+             <span style="">
+             </span>
+             <a href="https://twitter.com/hashtag/testing?src=hash" style="background-color: rgb(238,238,238);">
+              #testing
+             </a>
+             <br/>
+            </p>
+            <p>
+             In this case, the top-level entities do not reflect the Quote details.
+            </p>
+            <p>
+             --&gt;  truncated:true /quoted_status_id: 907974220298125312 / quoted_status (original) /
+             <span style="">
+              extended_tweet (quote)
+             </span>
+            </p>
+            <p>
+             However, the Tweet text and entities in extended_tweet perfectly reflect the Quote Tweet with no truncation or incorrect entities, hence our recommendation to rely on the nested
+             <i>
+              extended_tweet
+             </i>
+             <span style="">
+              object for Quote Tweets.
+             </span>
+            </p>
+            <p>
+            </p>
+            <h2>
+            </h2>
+            <h2>
+             <a name="entities-user">
+             </a>
+             Entities for User object
+            </h2>
+            <p>
+             Entities for User Objects describe URLs that appear in the user defined profile URL and description fields. They do not describe hashtags or user_mentions. Unlike Tweet entities, user entities can apply to multiple fields within its parent object — to disambiguate, you will find a parent nodes called url and description that indicate which field contains the entitized URL.
+            </p>
+            <p>
+             In this example, the user url field contains a t.co link that is fully expanded within the entities/url/urls[0] node of the response. The user does not have a wrapped URL in their description.
+            </p>
+            <p>
+            </p>
+            <h3>
+             JSON Example
+            </h3>
+            <p>
+            </p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="d02-inline-code-snippet">
+        <pre>  <code class="d02-inline-code-snippet__copy">{
+  "id": 6253282,
+  "id_str": "6253282",
+  "name": "Twitter API",
+  "screen_name": "twitterapi",
+  "location": "San Francisco, CA",
+  "description": "The Real Twitter API. I tweet about API changes, service issues and happily answer questions about Twitter and our API. Don't get an answer? It's on my website.",
+  "url": "http:\/\/t.co\/78pYTvWfJd",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "url": "http:\/\/t.co\/78pYTvWfJd",
+          "expanded_url": "http:\/\/dev.twitter.com",
+          "display_url": "dev.twitter.com",
+          "indices": [
+            0,
+            22
+          ]
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        
+      ]
+    }
+  }
+}</code>
+</pre>
+       </div>
+       <div class="c01-rich-text-editor">
+        <h2>
+         <a name="entities-dm">
+         </a>
+         Entities for Direct Messages
+        </h2>
+        <p>
+         Entities for Direct Messages are very similar to entities for Tweets. However, there are a few differences concerning the media entities.
+        </p>
+        <p>
+         Unlike media shared in Tweets, media shared in Direct Messages requires authorization to view. This authorization can be presented via an authenticated twitter.com session or by signing a request with the User’s access token using OAuth 1.0A.
+        </p>
+        <p>
+         Also, in Tweets, media URLs are only in the media entities, but in Direct Messages, media URLs are in both media and URLs entities.
+        </p>
+        <p>
+        </p>
+        <h3>
+         JSON Example
+        </h3>
+       </div>
+       <div class="d02-inline-code-snippet">
+        <pre>  <code class="d02-inline-code-snippet__copy">{
+  "id": 411031503817039874,
+  "id_str": "411031503817039874",
+  "text": "test $TWTR @twitterapi #hashtag http:\/\/t.co\/p5dOtmnZyu https:\/\/t.co\/ZSvIEMOPb8",
+  "created_at": "Thu Dec 12 07:15:21 +0000 2013",
+  "entities": {
+    "hashtags": [
+      {
+        "text": "hashtag",
+        "indices": [
+          23,
+          31
+        ]
+      }
+    ],
+    "symbols": [
+      {
+        "text": "TWTR",
+        "indices": [
+          5,
+          10
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "url": "http:\/\/t.co\/p5dOtmnZyu",
+        "expanded_url": "http:\/\/dev.twitter.com",
+        "display_url": "dev.twitter.com",
+        "indices": [
+          32,
+          54
+        ]
+      },
+      {
+        "url": "https:\/\/t.co\/ZSvIEMOPb8",
+        "expanded_url": "https:\/\/ton.twitter.com\/1.1\/ton\/data\/dm\/411031503817039874\/411031503833792512\/cOkcq9FS.jpg",
+        "display_url": "pic.twitter.com\/ZSvIEMOPb8",
+        "indices": [
+          55,
+          78
+        ]
+      }
+    ],
+    "user_mentions": [
+      {
+        "screen_name": "twitterapi",
+        "name": "Twitter API",
+        "id": 6253282,
+        "id_str": "6253282",
+        "indices": [
+          11,
+          22
+        ]
+      }
+    ],
+    "media": [
+      {
+        "id": 411031503833792512,
+        "id_str": "411031503833792512",
+        "indices": [
+          55,
+          78
+        ],
+        "media_url": "https:\/\/ton.twitter.com\/1.1\/ton\/data\/dm\/411031503817039874\/411031503833792512\/cOkcq9FS.jpg",
+        "media_url_https": "https:\/\/ton.twitter.com\/1.1\/ton\/data\/dm\/411031503817039874\/411031503833792512\/cOkcq9FS.jpg",
+        "url": "https:\/\/t.co\/ZSvIEMOPb8",
+        "display_url": "pic.twitter.com\/ZSvIEMOPb8",
+        "expanded_url": "https:\/\/ton.twitter.com\/1.1\/ton\/data\/dm\/411031503817039874\/411031503833792512\/cOkcq9FS.jpg",
+        "type": "photo",
+        "sizes": {
+          "medium": {
+            "w": 600,
+            "h": 450,
+            "resize": "fit"
+          },
+          "large": {
+            "w": 1024,
+            "h": 768,
+            "resize": "fit"
+          },
+          "thumb": {
+            "w": 150,
+            "h": 150,
+            "resize": "crop"
+          },
+          "small": {
+            "w": 340,
+            "h": 255,
+            "resize": "fit"
+          }
+        }
+      }
+    ]
+  }
+}</code>
+</pre>
+       </div>
+       <div class="c01-rich-text-editor">
+        <h2>
+         <br/>
+         <br/>
+        </h2>
+        <h2>
+         <img src="/etc/clientlibs/granite/coralui2/optional/rte/resources/images/blank.png"/>
+         <a name="next">
+         </a>
+         Next Steps
+         <br/>
+        </h2>
+        <p>
+         Explore other Tweet JSON objects and data dictionaries:
+        </p>
+        <ul>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/extended-entities-object">
+           Extended Entities object and data dictionary
+          </a>
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object">
+           Tweet object and data dictionary
+          </a>
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object">
+           User object and data dictionary
+          </a>
+         </li>
+         <li>
+          <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects">
+           Tweet geo objects and data dictionaries
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer theme-bg-color--dark">
+     <div class="footer--banner theme-bg-color--extra-light">
+      <div class="footer__row container">
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="https://developer.twitter.com/en/developer-terms" target="_blank" title="Developer policy and terms">
+         Developer policy and terms
+        </a>
+       </div>
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="http://twitter.com/twitterdev" target="_blank" title="Follow @twitterdev">
+         Follow @twitterdev
+        </a>
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+        <a class="c04-link-button c04-link-button--button theme-bg-color--extra-extra-light theme-bg-color--extra-extra-light--hover" href="https://developer.twitter.com/en/twitterdev-news-subscription" target="_self">
+         Subscribe to developer news
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="footer__row container footer__row--main">
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com" target="_blank" title="About">
+        About
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company.html" target="_blank" title="Company">
+          Company
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/values.html" target="_blank" title="Values">
+          Values
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/safety.html" target="_blank" title="Safety">
+          Safety
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/official/en_us.html" target="_blank" title="Blog">
+          Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company/brand-resources.html" target="_blank" title="Brand Resources">
+          Brand Resources
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://careers.twitter.com/en.html" target="_blank" title="Careers">
+          Careers
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://investor.twitterinc.com/" target="_blank" title="Investors">
+          Investors
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/" target="_blank" title="Business">
+        Business
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/advertising.html" target="_blank" title="About Twitter Ads">
+          About Twitter Ads
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/targeting.html" target="_blank" title="Targeting">
+          Targeting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/analytics.html" target="_blank" title="Analytics">
+          Analytics
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/help.html" target="_blank" title="Ads support">
+          Ads support
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/small-business" target="_blank" title="Business blog">
+          Business blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://ads.twitter.com/login?ref=en-btc-gobal-footer" target="_blank" title="Advertise">
+          Advertise
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/" target="_blank" title="Developers">
+        Developers
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/overview/documentation" target="_blank" title="Documentation">
+          Documentation
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twittercommunity.com/" target="_blank" title="Forums">
+          Forums
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/community" target="_blank" title="Communities">
+          Communities
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/developer" target="_blank" title="Developer blog">
+          Developer blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/" target="_blank" title="Help Center">
+        Help Center
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/215585" target="_blank" title="Using Twitter">
+          Using Twitter
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/login" target="_blank" title="My account">
+          My account
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/283" target="_blank" title="Fixing a problem">
+          Fixing a problem
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/284" target="_blank" title="Policies and reporting">
+          Policies and reporting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/safety" target="_blank" title="Safety Center">
+          Safety Center
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/" target="_blank" title="Marketing">
+        Marketing
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/insights.html" target="_blank" title="Insights">
+          Insights
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/success-stories.html" target="_blank" title="Success Stories">
+          Success Stories
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/solutions.html" target="_blank" title="Solutions">
+          Solutions
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/collections.html" target="_blank" title="Collections">
+          Collections
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/advertising" target="_blank" title="Marketing Blog">
+          Marketing Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitterflightschool.com" target="_blank" title="Flight School">
+          Flight School
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__row container">
+      <div class="footer-col">
+       <p class="footer-col__footnote type--roman-14 theme-color--extra-light">
+        © 2017 Twitter, Inc.
+       </p>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/20170520" target="_blank" title="Cookies">
+        Cookies
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/privacy" target="_blank" title="Privacy">
+        Privacy
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/tos" target="_blank" title="Terms and Conditions">
+        Terms and Conditions
+       </a>
+      </div>
+     </div>
+    </footer>
+    <!--<div class="modal_container">-->
+    <div class="c20-modal__modal module-modal" data-modal="true">
+     <div class="c20-modal__scrollable" data-modal-scroll-container="true">
+      <div class="c20-modal__details" data-modal-content-container="true">
+       <!-- template is injected here -->
+      </div>
+      <ul class="c20-modal__navigation">
+       <li aria-label="Read previous biography" class="c20-modal__navigation-prev" data-modal-nav="prev-link">
+        <span class="c20-modal__navigation-label">
+         Read Previous
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="prev-text">
+        </span>
+       </li>
+       <li aria-label="Read next biography" class="c20-modal__navigation-next" data-modal-nav="next-link">
+        <span class="c20-modal__navigation-label">
+         Read Next
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="next-text">
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="module-modal__close-container">
+     <div class="c20-modal__modal-close module-modal__close" data-trigger="close-modal">
+      <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+       <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <!--</div>-->
+   </div>
+   <script src="/etc/designs/common-twitter/dtm-footer.min.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/app.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/universal.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/structure.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/content.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/docs.js" type="text/javascript">
+   </script>
+   <script async="" src="https://platform.twitter.com/widgets.js">
+   </script>
+  </cq:includeclientlib>
+ </body>
+</html>

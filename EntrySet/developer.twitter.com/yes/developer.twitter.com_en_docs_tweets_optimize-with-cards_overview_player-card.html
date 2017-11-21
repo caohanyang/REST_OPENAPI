@@ -1,0 +1,2018 @@
+<html lang="en" prefix="og: http://ogp.me/ns#">
+ <head>
+ </head>
+ <body class="theme--purple page documentation-page " data-analytics-component="tweets/optimize-with-cards/overview/player-card" data-analytics-element="page" data-analytics-page="developer" data-analytics-section="docs">
+  <cq:includeclientlib categories="cq.jquery">
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+   <title>
+    Player card — Twitter
+      Developers
+   </title>
+   <meta name="description"/>
+   <link href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/player-card.html" rel="canonical"/>
+   <meta content="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/player-card.html" property="og:url"/>
+   <meta content="article" property="og:type"/>
+   <meta content="Player card" property="og:title"/>
+   <link href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/player-card.html" hreflang="en" rel="alternate"/>
+   <meta content="on" name="twitter:widgets:new-embed-design"/>
+   <meta content="on" name="twitter:widgets:csp"/>
+   <link href="https://abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+   <script id="analytics-settings" type="application/json">
+    {&quot;google&quot;:{&quot;accounts&quot;:[],&quot;options&quot;:{&quot;displayAdvertisingFeatures&quot;:false}},&quot;scribe&quot;:{&quot;scribeSectionWithImpression&quot;:false},&quot;trackingPixel&quot;:{},&quot;bing&quot;:{}}
+   </script>
+   <script src="/etc/clientlibs/dtm/developer-twitter/ac0b17d7a4556cd264c3df3fac5054e8fd5023f8/satelliteLib-bcb222e3dbd22c730c028ee768fd0b3bea0a8ea0.js" type="text/javascript">
+   </script>
+   <link href="/etc/designs/developer-twitter/public/css/critical.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/app.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/universal.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/structure.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/content.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/page.css" media="all" rel="stylesheet"/>
+   <link href="/etc/designs/developer-twitter/public/css/docs.css" media="all" rel="stylesheet"/>
+   <script src="/etc/designs/developer-twitter/public/js/common.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/critical.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/onload.js" type="text/javascript">
+   </script>
+   <div id="component-wrapper">
+    <div class="nav theme-bg-color--dark" data-current-level="0" data-hidden="true">
+     <div class="nav--wrapper">
+      <header class="nav__header">
+       <div class="nav__headeritem-left">
+        <div class="nav__headeritem-title">
+         <a class="logo-title color--neutral-white" href="https://developer.twitter.com/en.html">
+          <span class="logo">
+           <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg">
+            <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z">
+            </path>
+           </svg>
+          </span>
+          <span class="title color--neutral-white">
+           Developer
+          </span>
+         </a>
+         <a class="nav-icon" href="#">
+          <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+           <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+           </path>
+          </svg>
+         </a>
+         <a class="nav-back color--neutral-white" data-nav-back="true" href="#">
+          <span class="title color--neutral-white">
+           Back
+          </span>
+         </a>
+        </div>
+       </div>
+       <ul class="nav--menu nav--menu--root" data-currentpage="/content/developer-twitter/en/docs/tweets/optimize-with-cards/overview" data-level="1">
+        <li class="nav--mobile-item nav--menu__list-item color--neutral-white " data-show-sub-level="false">
+         <a class="color--neutral-white" href="https://developer.twitter.com/en.html" title="Developer">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Developer
+          </span>
+         </a>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Use cases" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Use cases
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/advertise" title="Advertise">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Advertise
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/publish-and-curate" title="Publish and curate">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publish and curate
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/analyze" title="Analyze">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Analyze
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/use-cases/engage" title="Engage">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Engage
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Products" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Products
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/accounts-and-users" title="Accounts and users">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Accounts and users
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/tweets" title="Tweets">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tweets
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/direct-messages" title="Direct Messages">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Direct Messages
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/metrics" title="Metrics">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Metrics
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/ad-campaigns" title="Ad campaigns">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Ad campaigns
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/products/publisher-tools" title="Publisher tools and SDKs">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Publisher tools and SDKs
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="Docs" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           Docs
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/documentation" title="Documentation">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Documentation
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/api-reference-index" title="API reference index">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             API reference index
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/docs/tutorials" title="Tutorials">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Tutorials
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav--menu__list-item " data-show-sub-level="false">
+         <a class="color--neutral-white " data-navtitle="More" href="#">
+          <span class="nav--menu__list-item-text color--neutral-white">
+           More
+          </span>
+          <span class="nav--menu__list-item-arrow">
+           <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+            </path>
+           </svg>
+          </span>
+         </a>
+         <ul class="nav--menu" data-level="2">
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/case-studies" title="Case studies">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Case studies
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/enterprise" title="Enterprise data">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Enterprise data
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/developer-terms" title="Developer terms">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Developer terms
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/pricing" title="Pricing">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Pricing
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/billing-faq" title="Billing FAQ">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Billing FAQ
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/community" title="Community">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Community
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/forum" title="Forum">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Forum
+            </span>
+           </a>
+          </li>
+          <li class="nav--menu__list-item ">
+           <a class="color--neutral-white" href="https://developer.twitter.com/en/blog" title="Blog">
+            <span class="nav--menu__list-item-text color--neutral-black">
+             Blog
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+       <div class="nav__headeritem-right">
+        <div class="freemium-nav" data-current-level="0" data-hidden="true">
+         <ul class="nav--menu nav--menu--root" data-level="1">
+          <!-- Handlebars template will be written here -->
+         </ul>
+        </div>
+        <!--<sly data-sly-resource="region-selector"/>-->
+        <div class="search">
+         <a class="search-icon js-nav-search" href="#">
+          <svg height="72" viewBox="0 0 56 72" width="56" xmlns="http://www.w3.org/2000/svg">
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+           <path d="M51.644 53.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757 19.3 19.3 0 0 0-13.739-5.688 19.347 19.347 0 0 0-13.772 5.708c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 48.37 61c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM34.939 30.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+           </path>
+          </svg>
+         </a>
+        </div>
+        <div class="login-container signed-out" data-geo-country-code="ES" data-geo-location="AAAAEICxY/IXTwAhxNcni5YAq3nqMrhJ59LRh6CjevqzUlJ/5Kt8netPyZ9/L40x1rV+Pw37JY0=">
+         <div class="avatar">
+         </div>
+         <div class="sign-in">
+          <div class="btn-container">
+           <a href="https://twitter.com/login">
+            <button type="button">
+             Sign In
+            </button>
+           </a>
+          </div>
+         </div>
+        </div>
+        <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+         <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+         </path>
+        </svg>
+       </div>
+      </header>
+     </div>
+    </div>
+    <div class="nav__search-modal theme-bg-color--dark">
+     <div class="search-bar search-bar--js theme-color--extra-light theme-fill-color--extra-light theme-border-color--extra-light" data-search-path="/en/search-results.html">
+      <input autocomplete="off" class="search-bar__input" name="q" placeholder="Type your search here" type="search"/>
+      <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+       <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <div class="transparent-masthead">
+    </div>
+    <div class="page-wrapper documentation-page">
+     <div class="page-content container left-rail-container">
+      <div class="sidebar-content side-nav column column-3">
+       <span class="side-nav__close fill-color--neutral-extra-light-gray">
+        <svg height="72" viewBox="0 0 46 72" width="46" xmlns="http://www.w3.org/2000/svg">
+         <path d="M27.243 36l14.879-14.879a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0L23 31.758 8.122 16.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L18.758 36 3.879 50.879A2.998 2.998 0 0 0 6.001 56a2.99 2.99 0 0 0 2.121-.879L23 40.242l14.879 14.879A2.991 2.991 0 0 0 40 56a2.998 2.998 0 0 0 2.121-5.121L27.243 36z">
+         </path>
+        </svg>
+       </span>
+       <div class="search-bar search-bar--js search-bar--docs" data-search-path="/en/search-results.html">
+        <input autocomplete="off" class="search-bar__input" name="q" placeholder="Search all documentation..." type="search"/>
+        <svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+         <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+         </path>
+         <path d="M48.644 42.096l-7.409-7.409a4.606 4.606 0 0 0-3.915-1.295l-2.328-2.328a19.306 19.306 0 0 0 3.894-11.628 19.295 19.295 0 0 0-5.69-13.757A19.3 19.3 0 0 0 19.457-.009 19.347 19.347 0 0 0 5.685 5.699c-7.58 7.583-7.581 19.917-.004 27.495a19.31 19.31 0 0 0 13.743 5.693 19.28 19.28 0 0 0 11.639-3.893l2.327 2.327c-.193 1.389.227 2.847 1.295 3.915l7.409 7.409A4.627 4.627 0 0 0 45.37 50c1.185 0 2.37-.452 3.274-1.357a4.627 4.627 0 0 0 0-6.547zM31.939 19.439c0 6.904-5.596 12.5-12.5 12.5s-12.5-5.596-12.5-12.5 5.596-12.5 12.5-12.5 12.5 5.596 12.5 12.5z">
+         </path>
+        </svg>
+       </div>
+       <ul class="side-nav__top-level">
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/basics" title="Basics">
+          Basics
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/getting-started" title="Getting started">
+            Getting started
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/things-every-developer-should-know" title="Things every developer should know">
+            Things every developer should know
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/authentication" title="Authentication">
+            Authentication
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/rate-limits" title="Rate limits">
+            Rate limits
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/rate-limiting" title="Rate Limiting">
+            Rate Limiting
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/response-codes" title="Response Codes">
+            Response Codes
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/cursoring" title="Cursoring">
+            Cursoring
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/security-best-practices" title="Security">
+            Security
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/twitter-ids" title="Twitter IDs (snowflake)">
+            Twitter IDs (snowflake)
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/counting-characters" title="Counting characters">
+            Counting characters
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/tco" title="t.co links">
+            t.co links
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/basics/adding-international-support-to-apps" title="Adding international support to apps">
+            Adding international support to apps
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/accounts-and-users" title="Accounts and users">
+          Accounts and users
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity" title="Subscribe to your account activity">
+            Subscribe to your account activity
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/manage-account-settings" title="Manage account settings and profile">
+            Manage account settings and profile
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/mute-block-report-users" title="Mute, block and report users">
+            Mute, block and report users
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users" title="Follow, search, and get users">
+            Follow, search, and get users
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/create-manage-lists" title="Create and manage lists">
+            Create and manage lists
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/accounts-and-users/user-profile-images-and-banners" title="User Profile Images and Banners">
+            User Profile Images and Banners
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="open">
+         <a data-href="/content/developer-twitter/en/docs/tweets" title="Tweets">
+          Tweets
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/post-and-engage" title="Post, retrieve and engage with Tweets">
+            Post, retrieve and engage with Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/timelines" title="Get Tweet timelines">
+            Get Tweet timelines
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/curate-a-collection" title="Curate a collection of Tweets">
+            Curate a collection of Tweets
+           </a>
+          </li>
+          <li class="active">
+           <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards" title="Optimize Tweets with Cards">
+            Optimize Tweets with Cards
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/search" title="Search Tweets">
+            Search Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/filter-realtime" title="Filter realtime Tweets">
+            Filter realtime Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/sample-realtime" title="Sample realtime Tweets">
+            Sample realtime Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/batch-historical" title="Get batch historical Tweets">
+            Get batch historical Tweets
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/compliance" title="Tweet compliance">
+            Tweet compliance
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary" title="Tweet data dictionaries">
+            Tweet data dictionaries
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/rules-and-filtering" title="Rules and filtering">
+            Rules and filtering
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/enrichments" title="Premium enrichments">
+            Premium enrichments
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/tweet-updates" title="Tweet updates">
+            Tweet updates
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/direct-messages" title="Direct Messages">
+          Direct Messages
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/beta-features" title="Direct Message beta features">
+            Direct Message beta features
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving" title="Sending and receiving events">
+            Sending and receiving events
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/welcome-messages" title="Welcome Messages">
+            Welcome Messages
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/message-attachments" title="Message Attachments">
+            Message Attachments
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/quick-replies" title="Quick Replies">
+            Quick Replies
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/buttons" title="Buttons">
+            Buttons
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/conversation-management" title="Conversation management">
+            Conversation management
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/custom-profiles" title="Custom profiles">
+            Custom profiles
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/direct-messages/customer-feedback" title="Customer feedback cards">
+            Customer feedback cards
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/media" title="Media">
+          Media
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/media/upload-media" title="Upload media">
+            Upload media
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/media/refresh-media" title="Access Media">
+            Access Media
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/trends" title="Trends">
+          Trends
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/trends/trends-for-location" title="Get trends near a location">
+            Get trends near a location
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/trends/locations-with-trending-topics" title="Get locations with trending topics">
+            Get locations with trending topics
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/geo" title="Geo">
+          Geo
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/geo/place-information" title="Get information about a place">
+            Get information about a place
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/geo/places-near-location" title="Get places near a location">
+            Get places near a location
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/ads" title="Ads">
+          Ads
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/general" title="General">
+            General
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/analytics" title="Analytics">
+            Analytics
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/audiences" title="Audiences">
+            Audiences
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/campaign-management" title="Campaign Management">
+            Campaign Management
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/creatives" title="Creatives">
+            Creatives
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/ads/measurement" title="Measurement">
+            Measurement
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/metrics" title="Metrics">
+          Metrics
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/metrics/get-tweet-engagement" title="Get Tweet engagement">
+            Get Tweet engagement
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/twitter-for-websites" title="Twitter for Websites">
+          Twitter for Websites
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/twitter-for-websites/twitter-for-websites" title="Twitter for Websites">
+            Twitter for Websites
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/twitter-kit" title="Twitter Kit">
+          Twitter Kit
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/twitter-kit/twitter-kit" title="Twitter Kit">
+            Twitter Kit
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/developer-utilities" title="Developer utilities">
+          Developer utilities
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/rate-limit-status" title="Get app rate limit status">
+            Get app rate limit status
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/configuration" title="Get Twitter configuration details">
+            Get Twitter configuration details
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/supported-languages" title="Get Twitter supported languages">
+            Get Twitter supported languages
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/privacy-policy" title="Get Twitter's privacy policy">
+            Get Twitter's privacy policy
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/terms-of-service" title="Get Twitter's terms of service">
+            Get Twitter's terms of service
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/usage-api" title="Get API usage metrics">
+            Get API usage metrics
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries" title="Twitter libraries">
+            Twitter libraries
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/developer-utilities/twitter-text" title="twitter-text Parser">
+            twitter-text Parser
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a data-href="/content/developer-twitter/en/docs/api-reference-index" title="API reference index">
+          API reference index
+         </a>
+         <ul class="side-nav__second-level">
+          <li>
+           <a href="https://developer.twitter.com/en/docs/api-reference-index/api-reference-index" title="API reference index">
+            API reference index
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </div>
+      <div class="main-content column column-9">
+       <div>
+        <div class="main-content__header">
+         <span>
+          <svg height="72" viewBox="0 0 28 72" width="28" xmlns="http://www.w3.org/2000/svg">
+           <path d="M6.035 35l14.232-14.232a2.498 2.498 0 0 0 0-3.535 2.498 2.498 0 0 0-3.535 0l-16 16a2.498 2.498 0 0 0 0 3.535l16 16c.488.488 1.128.732 1.768.732s1.28-.244 1.768-.732a2.498 2.498 0 0 0 0-3.535L6.035 35z">
+           </path>
+          </svg>
+         </span>
+         <h1>
+          Optimize Tweets with Cards
+         </h1>
+        </div>
+        <div class="tabs-nav ">
+         <ul class="tabs-nav__inner">
+          <li>
+           <a class="active" href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview">
+            Overview
+           </a>
+          </li>
+          <li>
+           <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides">
+            Guides
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <div class="tabs-nav__toc">
+          <span class="tabs-nav__toc__title">
+           Overview contents
+           <span class="arrow-down fill-color--neutral-light-gray">
+            <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+             <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+             </path>
+            </svg>
+           </span>
+          </span>
+          <div class="tabs-nav__toc__list">
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">
+             About Twitter Cards
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary">
+             Summary card
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary-card-with-large-image">
+             Summary with large image
+            </a>
+           </li>
+           <li class="active">
+            <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/player-card">
+             Player card
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/app-card">
+             App card
+            </a>
+           </li>
+           <li>
+            <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup">
+             Cards markup
+            </a>
+           </li>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="bl19-no-edit-wrap">
+        <div class="c15-column-container js-column-container">
+         <div class="container--mini container--mobile">
+          <div class="column column-3">
+          </div>
+          <div class="column column-6">
+           <div class="c01-rich-text-editor">
+            <div class="col-xs-12 col-sm-9">
+             <p class="visible-xs">
+              <span style="font-size: 2.0em;">
+               <span class="smaller-h1">
+                Player Card
+               </span>
+              </span>
+             </p>
+             <div class="container-fluid">
+              <div class="rst-content">
+               <div class="document">
+                <div>
+                 <div class="section">
+                  <div class="toctree-wrapper compound">
+                  </div>
+                  <p>
+                   Video clips and audio streams have a special place on the Twitter platform thanks to the Player Card. By implementing a few HTML meta tags to your website and following the
+                   <a class="reference external" href="/overview/terms/policy">
+                    Twitter Developer Policy
+                   </a>
+                   , you can deliver your rich media to users across the globe.
+                  </p>
+                  <ol class="arabic simple">
+                   <li>
+                    <a class="reference external" href="#Player_Card_example">
+                     Player Card examples
+                    </a>
+                   </li>
+                   <li>
+                    <a class="reference external" href="#Getting_started">
+                     Getting started
+                    </a>
+                   </li>
+                   <li>
+                    <a class="reference external" href="#Testing_your_Card">
+                     Testing your Card
+                    </a>
+                    <ol class="arabic">
+                     <li>
+                      <a class="reference external" href="#On_Web">
+                       On Web
+                      </a>
+                     </li>
+                     <li>
+                      <a class="reference external" href="#On_iPhone">
+                       On iPhone
+                      </a>
+                     </li>
+                     <li>
+                      <a class="reference external" href="#On_Android">
+                       On Android
+                      </a>
+                     </li>
+                    </ol>
+                   </li>
+                   <li>
+                    <a class="reference external" href="#Submitting_your_Card_for_approval">
+                     Submitting your Card for approval
+                    </a>
+                   </li>
+                   <li>
+                    <a class="reference external" href="#What_the_approval_team_looks_for">
+                     What the approval team looks for
+                    </a>
+                   </li>
+                   <li>
+                    <a class="reference external" href="#The_Player_Card_across_platforms">
+                     The Player Card across platforms
+                    </a>
+                    <ol class="arabic">
+                     <li>
+                      <a class="reference external" href="#On_iPhone_and_Android_and_other_native_mobile_apps">
+                       On iPhone and Android (and other native mobile apps)
+                      </a>
+                     </li>
+                     <li>
+                      <a class="reference external" href="#On_twitter.com_via_desktop_browser">
+                       On twitter.com (via desktop browser)
+                      </a>
+                     </li>
+                     <li>
+                      <a class="reference external" href="#On_mobile.twitter.com_and_other_clients">
+                       On mobile.twitter.com and other clients
+                      </a>
+                     </li>
+                    </ol>
+                   </li>
+                   <li>
+                    <a class="reference external" href="#App_Downloads_and_Deep_Linking">
+                     App Downloads and Deep Linking
+                    </a>
+                   </li>
+                   <li>
+                    <a class="reference external" href="#Reference">
+                     Reference
+                    </a>
+                   </li>
+                   <li>
+                    <a class="reference external" href="#Additional_resources">
+                     Additional resources
+                    </a>
+                   </li>
+                  </ol>
+                  <div class="section">
+                   <h2>
+                    Player Card Example
+                    <a class="headerlink" href="#player-card-example" title="Permalink to this headline">
+                     ¶
+                    </a>
+                   </h2>
+                   <blockquote class="twitter-tweet">
+                    <p lang="en">
+                     The dusk and dawn light in
+                     <a href="https://twitter.com/DeathValleyNPS">
+                      @DeathValleyNPS
+                     </a>
+                     is amazing. I visit almost every year for
+                     <a href="https://twitter.com/hashtag/photography?src=hash">
+                      #photography
+                     </a>
+                     .
+                     <a href="https://t.co/Lcm76CSQrY">
+                      https://t.co/Lcm76CSQrY
+                     </a>
+                    </p>
+                    — Jonathan Cipriano (@joncipriano)
+                    <a href="https://twitter.com/joncipriano/status/701826082513616896">
+                     February 22, 2016
+                    </a>
+                   </blockquote>
+                  </div>
+                  <div class="section">
+                   <h2>
+                    Getting started
+                    <a class="headerlink" href="#getting-started" title="Permalink to this headline">
+                     ¶
+                    </a>
+                   </h2>
+                   <p>
+                    To help you get started, we’ve provided the following
+                    <a class="reference external" href="https://github.com/twitterdev/cards">
+                     Twitter Card Getting Started Bundle
+                    </a>
+                    . This bundle includes sample code and a readme with more detailed instructions. The basic steps are:
+                   </p>
+                   <ol class="arabic simple">
+                    <li>
+                     Unzip the contents into a publicly accessible path on your website
+                    </li>
+                    <li>
+                     Open the index.html file and ensure the
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:image
+                      </span>
+                     </code>
+                     ,
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:player
+                      </span>
+                     </code>
+                     and
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:player:stream
+                      </span>
+                     </code>
+                     values point to your server and file locations
+                    </li>
+                    <li>
+                     Ensure all paths are specified as secure (
+                     <a class="reference external">
+                      https://
+                     </a>
+                     )
+                    </li>
+                    <li>
+                     Test your URL (See the
+                     <a class="reference external" href="#testing">
+                      Testing your Card
+                     </a>
+                     section below)
+                    </li>
+                   </ol>
+                   <p>
+                    The Card Validator is a simulated Card experience, and it won’t be exactly what you see when your Player Card is live. (In particular, if you only supply a
+                    <code class="docutils literal">
+                     <span class="pre">
+                      twitter:player
+                     </span>
+                    </code>
+                    with no
+                    <code class="docutils literal">
+                     <span class="pre">
+                      twitter:player:stream
+                     </span>
+                    </code>
+                    , you’ll get a static, non-playable image.) We’re working on improving it. That said, it does indicate if your basic configuration works.
+                   </p>
+                  </div>
+                  <div class="section">
+                   <h2>
+                    Testing your Card
+                    <a class="headerlink" href="#testing-your-card" title="Permalink to this headline">
+                     ¶
+                    </a>
+                   </h2>
+                   <p>
+                    To further help you in building your experience, below are instructions on how to test your experience across the various platforms.
+                   </p>
+                   <div class="section">
+                    <h3>
+                     On Web
+                     <a class="headerlink" href="#on-web" title="Permalink to this headline">
+                      ¶
+                     </a>
+                    </h3>
+                    <table border="1" class="docutils">
+                     <colgroup>
+                      <col width="70%">
+                      </col>
+                      <col width="30%">
+                      </col>
+                     </colgroup>
+                     <tbody valign="top">
+                      <tr class="row-odd">
+                       <td>
+                        Enter the
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player
+                         </span>
+                        </code>
+                        URL in a browser. In the image to the right, note that the video has NOT yet begun play, takes up the entire space, and the secure browser lock (top left) is still intact. Please note that an active mixed content warning (signified by a red ‘X’ over the lock) will not be approved.
+                       </td>
+                       <td>
+                        <a class="reference internal" href="https://g.twimg.com/dev/sites/default/files/images_documentation/web_start.png">
+                         <img alt="image2" src="https://g.twimg.com/dev/sites/default/files/images_documentation/web_start.png" width="400"/>
+                        </a>
+                       </td>
+                      </tr>
+                      <tr class="row-even">
+                       <td>
+                        Secondly, in the image to the right, the video has begun play.
+                       </td>
+                       <td>
+                        <a class="reference internal" href="https://g.twimg.com/dev/sites/default/files/images_documentation/web_play.png">
+                         <img alt="image3" src="https://g.twimg.com/dev/sites/default/files/images_documentation/web_play.png" width="400"/>
+                        </a>
+                       </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                   </div>
+                   <div class="section">
+                    <h3>
+                     On iPhone
+                     <a class="headerlink" href="#on-iphone" title="Permalink to this headline">
+                      ¶
+                     </a>
+                    </h3>
+                    <table border="1" class="docutils">
+                     <colgroup>
+                      <col width="70%">
+                      </col>
+                      <col width="30%">
+                      </col>
+                     </colgroup>
+                     <tbody valign="top">
+                      <tr class="row-odd">
+                       <td>
+                        Enter the
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player
+                         </span>
+                        </code>
+                        URL in a browser on iPhone, (If implemented using
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player
+                         </span>
+                        </code>
+                        , and not
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player:stream
+                         </span>
+                        </code>
+                        .) In the image to the right, note that the video has NOT yet begun play, fits the full screen, and the secure browser lock (top left) is still intact. As noted previously, an active mixed content warning will not be approved.
+                       </td>
+                       <td>
+                        <a class="reference internal" href="https://g.twimg.com/dev/sites/default/files/images_documentation/iphone_start.png">
+                         <img alt="image6" src="https://g.twimg.com/dev/sites/default/files/images_documentation/iphone_start.png" width="400"/>
+                        </a>
+                       </td>
+                      </tr>
+                      <tr class="row-even">
+                       <td>
+                        Secondly, in the image to the right, the video has begun play.
+                       </td>
+                       <td>
+                        <a class="reference internal" href="https://g.twimg.com/dev/sites/default/files/images_documentation/iphone_play.png">
+                         <img alt="image7" src="https://g.twimg.com/dev/sites/default/files/images_documentation/iphone_play.png" width="400"/>
+                        </a>
+                       </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                   </div>
+                   <div class="section">
+                    <h3>
+                     On Android
+                     <a class="headerlink" href="#on-android" title="Permalink to this headline">
+                      ¶
+                     </a>
+                    </h3>
+                    <p>
+                     Similar to instructions for iPhone, enter the
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:player
+                      </span>
+                     </code>
+                     URL in a browser on Android. (If implemented using
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:player
+                      </span>
+                     </code>
+                     , and not
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:player:stream
+                      </span>
+                     </code>
+                     .) When opened, the video has NOT yet begun play, fits the full screen, and the secure browser lock (top left) is still intact. As noted previously, an active mixed content warning will not be approved.
+                    </p>
+                   </div>
+                  </div>
+                  <div class="section">
+                   <h2>
+                    Submitting your Card for approval
+                    <a class="headerlink" href="#submitting-your-card-for-approval" title="Permalink to this headline">
+                     ¶
+                    </a>
+                   </h2>
+                   <p>
+                    Our team is excited to bring your content to Twitter, and in a way that allows for a secure and consistent experience to all our users and across all our platforms. Our approval process includes testing your experience across the various platforms, as well as re-validating it periodically.
+                   </p>
+                   <p>
+                    After you’ve tested your Player Card via the Card Validator, you also use the Validator to submit for approval. This is done in few simple steps:
+                   </p>
+                   <ol class="arabic simple">
+                    <li>
+                     Go to the
+                     <a class="reference external" href="https://cards-dev.twitter.com/validator">
+                      Card Validator
+                     </a>
+                    </li>
+                    <li>
+                     Click on the “Validate &amp; Apply” tab
+                    </li>
+                    <li>
+                     Supply your URL and click “Go!”
+                    </li>
+                    <li>
+                     If the meta tags are all properly in place, click on “Submit for Approval”
+                    </li>
+                    <li>
+                     Fill out the form, including your e-mail address so we can contact you for updates
+                    </li>
+                   </ol>
+                   <p>
+                    Before submitting for approval, ensure that you’re using *your* content, and not the content provided in the sample code bundle.
+                   </p>
+                   <p>
+                    Player Cards are usually approved in a few business days.
+                    <b>
+                     Please be sure to check your e-mail (and spam folder) often for updates from our approval team.
+                    </b>
+                   </p>
+                  </div>
+                  <div class="section">
+                   <h2>
+                    What the approval team looks for
+                    <a class="headerlink" href="#what-the-approval-team-looks-for" title="Permalink to this headline">
+                     ¶
+                    </a>
+                   </h2>
+                   <p>
+                    We’ve published our
+                    <a class="reference external" href="/overview/terms/policy">
+                     Twitter Developer Policy
+                    </a>
+                    , which cover the broad strokes of policy when building on the Twitter platform. The below bullets make these requirements concrete for Player Cards.
+                   </p>
+                   <p>
+                    <b>
+                     Do:
+                    </b>
+                   </p>
+                   <ul class="simple">
+                    <li>
+                     Test your experience across all Twitter clients, including Twitter’s iPhone and Android apps, as well as twitter.com and mobile.twitter.com. Cards that do not work in all Twitter clients listed will not be approved.
+                    </li>
+                    <li>
+                     Build your HTML page used in the iFrame (referenced via
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:player:stream
+                      </span>
+                     </code>
+                     ) to be responsive, ensuring the video content fills the full width of any display area provided, across all clients.
+                    </li>
+                    <li>
+                     Use HTTPS for your iFrame, stream and all assets within your meta tags.
+                    </li>
+                    <li>
+                     For video and audio content,
+                     <ol class="arabic">
+                      <li>
+                       Default to ‘sound off’ for videos that automatically play content
+                      </li>
+                      <li>
+                       Content greater than 10 seconds in length must not automatically play
+                      </li>
+                      <li>
+                       Include stop, pause and play controls
+                      </li>
+                     </ol>
+                    </li>
+                    <li>
+                     Mark your Card as ‘true’ for sensitive media if such media could be displayed.
+                    </li>
+                   </ul>
+                   <p>
+                    <b>
+                     Do not:
+                    </b>
+                   </p>
+                   <ul class="simple">
+                    <li>
+                     Do not violate the
+                     <a class="reference external" href="/overview/terms/policy">
+                      Twitter Developer Policy
+                     </a>
+                     and
+                     <a class="reference external" href="https://about.twitter.com/company/display-requirements">
+                      Display Requirements
+                     </a>
+                     . As a reminder, the core principles of the Twitter Platform are:
+                     <ol class="arabic">
+                      <li>
+                       Don’t surprise users
+                      </li>
+                      <li>
+                       Don’t create or distribute spam
+                      </li>
+                      <li>
+                       Respect user privacy
+                      </li>
+                      <li>
+                       Be a good partner to Twitter
+                      </li>
+                     </ol>
+                    </li>
+                    <li>
+                     Do not circumvent the intended use of the Card. Player Cards are reserved for linear audio and video consumption only.
+                    </li>
+                    <li>
+                     Do not require users to sign-in to your experience.
+                    </li>
+                    <li>
+                     Do not attach additional interactivity outside the video or audio player (e.g., banners or non-standard buttons).
+                    </li>
+                    <li>
+                     Do not build end-to-end interactive experiences inside the video or audio player unrelated to Player Card content, such as the following: purchasing, gaming, polling, messaging, and data entry. Instead, build these interactive experiences with our other Card types or enhance your Player Card content with links to your website or mobile application.
+                    </li>
+                    <li>
+                     Do not generate active mixed content browser warnings at any point during the audio or video experience, either on load or during play. For more information, see the Troubleshooting Guide.
+                    </li>
+                   </ul>
+                  </div>
+                  <div class="section">
+                   <h2>
+                    The Player Card across platforms
+                    <a class="headerlink" href="#the-player-card-across-platforms" title="Permalink to this headline">
+                     ¶
+                    </a>
+                   </h2>
+                   <p>
+                    Due to platform capabilities, player cards work a bit differently on each client. Below is a quick rundown of the behavior across various platforms.
+                   </p>
+                   <div class="section">
+                    <h3>
+                     On iPhone and Android (and other native mobile apps)
+                     <a class="headerlink" href="#on-iphone-and-android-and-other-native-mobile-apps" title="Permalink to this headline">
+                      ¶
+                     </a>
+                    </h3>
+                    <p>
+                     On Twitter’s iPhone and Android native apps, a Player Card initially appears as the image preview (specified via twitter:image) with a “play” icon over it. When tapped, the following occurs:
+                    </p>
+                    <ul class="simple">
+                     <li>
+                      If
+                      <code class="docutils literal">
+                       <span class="pre">
+                        twitter:player:stream
+                       </span>
+                      </code>
+                      is provided AND the
+                      <code class="docutils literal">
+                       <span class="pre">
+                        twitter:player:stream:content_type
+                       </span>
+                      </code>
+                      is specified as “video/mp4”, the app plays the stream URL directly from the app.
+                     </li>
+                     <li>
+                      If no
+                      <code class="docutils literal">
+                       <span class="pre">
+                        twitter:player:stream
+                       </span>
+                      </code>
+                      is provided, the native app opens the URL specified by
+                      <code class="docutils literal">
+                       <span class="pre">
+                        twitter:player
+                       </span>
+                      </code>
+                      in a simulated browser.
+                     </li>
+                    </ul>
+                    <p>
+                     Again, specifying an MP4 file and indicating
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:player:stream:content_type
+                      </span>
+                     </code>
+                     as “video/mp4” will allow playback of the video inline in our mobile applications. See the
+                     <a class="reference external" href="#reference">
+                      Technical reference
+                     </a>
+                     section below for more details.
+                    </p>
+                   </div>
+                   <div class="section">
+                    <h3>
+                     On twitter.com (via desktop browser)
+                     <a class="headerlink" href="#on-twitter-com-via-desktop-browser" title="Permalink to this headline">
+                      ¶
+                     </a>
+                    </h3>
+                    <p>
+                     When viewing a Tweet with a Player Card on a desktop, the URL you specify via
+                     <code class="docutils literal">
+                      <span class="pre">
+                       twitter:player
+                      </span>
+                     </code>
+                     will be rendered in an iFrame in the timeline upon expand of the Tweet. (It will be shown automatically when the Tweet is pinned open on a user’s profile, or viewed on a Tweet permalink page.)
+                    </p>
+                    <p>
+                     The iFrame player will be scaled to fit the appropriate width, maintaining the original aspect ratio as provided by the twitter:player:width and twitter:player:height.
+                    </p>
+                   </div>
+                   <div class="section">
+                    <h3>
+                     On mobile.twitter.com and other clients
+                     <a class="headerlink" href="#on-mobile-twitter-com-and-other-clients" title="Permalink to this headline">
+                      ¶
+                     </a>
+                    </h3>
+                    <p>
+                     On mobile.twitter.com and other clients, the image preview is displayed, and links directly to the URL in the user’s Tweet in the default web browser of that platform.
+                    </p>
+                   </div>
+                  </div>
+                  <div class="section">
+                   <h2>
+                    Reference
+                    <a class="headerlink" href="#reference" title="Permalink to this headline">
+                     ¶
+                    </a>
+                   </h2>
+                   <table border="1" class="docutils">
+                    <colgroup>
+                     <col width="50%">
+                     </col>
+                     <col width="50%">
+                     </col>
+                    </colgroup>
+                    <tbody valign="top">
+                     <tr class="row-odd">
+                      <td>
+                       Card Property
+                      </td>
+                      <td>
+                       Required
+                      </td>
+                     </tr>
+                     <tr class="row-even">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:card
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        Must be set to a value of “player”
+                       </p>
+                      </td>
+                      <td>
+                       Yes
+                      </td>
+                     </tr>
+                     <tr class="row-odd">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:title
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        The title of your content as it should appear in the card
+                       </p>
+                      </td>
+                      <td>
+                       Yes
+                      </td>
+                     </tr>
+                     <tr class="row-even">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:site
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        The Twitter @username the card should be attributed to.
+                       </p>
+                      </td>
+                      <td>
+                       Yes
+                      </td>
+                     </tr>
+                     <tr class="row-odd">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:description
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        A description of the content in a maximum of 200 characters
+                       </p>
+                      </td>
+                      <td>
+                       No
+                      </td>
+                     </tr>
+                     <tr class="row-even">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        HTTPS URL to iFrame player. This must be a HTTPS URL which does not generate active mixed content warnings in a web browser. The audio or video player must not require plugins such as Adobe Flash.
+                       </p>
+                      </td>
+                      <td>
+                       Yes
+                      </td>
+                     </tr>
+                     <tr class="row-odd">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player:width
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        Width of iFrame specified in twitter:player in pixels
+                       </p>
+                      </td>
+                      <td>
+                       Yes
+                      </td>
+                     </tr>
+                     <tr class="row-even">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player:height
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        Height of iFrame specified in twitter:player in pixels
+                       </p>
+                      </td>
+                      <td>
+                       Yes
+                      </td>
+                     </tr>
+                     <tr class="row-odd">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:image
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        Image to be displayed in place of the player on platforms that don’t support iFrames or inline players. You should make this image the same dimensions as your player. Images with fewer than 68,600 pixels (a 262x262 square image, or a 350x196 16:9 image) will cause the player card not to render. Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are supported. Only the first frame of an animated GIF will be used. SVG is not supported.
+                       </p>
+                      </td>
+                      <td>
+                       Yes
+                      </td>
+                     </tr>
+                     <tr class="row-even">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:image:alt
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters.
+                       </p>
+                      </td>
+                      <td>
+                       No
+                      </td>
+                     </tr>
+                     <tr class="row-odd">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player:stream
+                         </span>
+                        </code>
+                       </p>
+                       <p>
+                        URL to raw stream that will be rendered in Twitter’s mobile applications directly. If provided, the stream must be delivered in the MPEG-4 container format (the .mp4 extension). The container can store a mix of audio and video with the following codecs:
+                       </p>
+                       <ul class="last simple">
+                        <li>
+                         <b>
+                          Video:
+                         </b>
+                         H.264, Baseline Profile (BP), Level 3.0, up to 640 x 480 at 30 fps.
+                        </li>
+                        <li>
+                         <b>
+                          Audio:
+                         </b>
+                         AAC, Low Complexity Profile (LC)
+                        </li>
+                       </ul>
+                      </td>
+                      <td>
+                       No
+                      </td>
+                     </tr>
+                     <tr class="row-even">
+                      <td>
+                       <p class="first">
+                        <code class="docutils literal">
+                         <span class="pre">
+                          twitter:player:stream:content_type
+                         </span>
+                        </code>
+                       </p>
+                       <p class="last">
+                        The MIME type/subtype combination that describes the content contained in twitter:player:stream. Takes the form specified in RFC 6381. Currently supported content_type values are those defined in RFC 4337 (MIME Type Registration for MP4)
+                       </p>
+                      </td>
+                      <td>
+                       Yes, if stream is provided
+                      </td>
+                     </tr>
+                    </tbody>
+                   </table>
+                  </div>
+                  <div class="section">
+                   <h2>
+                    Additional resources
+                    <a class="headerlink" href="#additional-resources" title="Permalink to this headline">
+                     ¶
+                    </a>
+                   </h2>
+                   <ul class="simple">
+                    <li>
+                     <a class="reference external" href="https://github.com/twitterdev/cards">
+                      Twitter Cards Getting Started Bundle
+                     </a>
+                    </li>
+                    <li>
+                     <a class="reference external" href="https://cards-dev.twitter.com/validator">
+                      Card Validator
+                     </a>
+                    </li>
+                    <li>
+                     <a class="reference external" href="/cards/troubleshooting">
+                      Card Troubleshooting Guide
+                     </a>
+                    </li>
+                    <li>
+                     <a class="reference external" href="/cards/app-installs-and-deep-linking">
+                      App Installs and Deep-Linking
+                     </a>
+                    </li>
+                    <li>
+                     <a class="reference external" href="https://twittercommunity.com/category/cards">
+                      Twitter Card Forums
+                     </a>
+                    </li>
+                    <li>
+                     <a class="reference external" href="/overview/terms/policy">
+                      Twitter Developer Policy
+                     </a>
+                    </li>
+                   </ul>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="column column-3 last">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer theme-bg-color--dark">
+     <div class="footer--banner theme-bg-color--extra-light">
+      <div class="footer__row container">
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="https://developer.twitter.com/en/developer-terms" target="_blank" title="Developer policy and terms">
+         Developer policy and terms
+        </a>
+       </div>
+       <div class="footer-col">
+        <a class="footer-col__footnote type--bold-14 theme-color--extra-dark theme-color--extra-dark--hover" href="http://twitter.com/twitterdev" target="_blank" title="Follow @twitterdev">
+         Follow @twitterdev
+        </a>
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+       </div>
+       <div class="footer-col">
+        <a class="c04-link-button c04-link-button--button theme-bg-color--extra-extra-light theme-bg-color--extra-extra-light--hover" href="https://developer.twitter.com/en/twitterdev-news-subscription" target="_self">
+         Subscribe to developer news
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="footer__row container footer__row--main">
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com" target="_blank" title="About">
+        About
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company.html" target="_blank" title="Company">
+          Company
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/values.html" target="_blank" title="Values">
+          Values
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/safety.html" target="_blank" title="Safety">
+          Safety
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/official/en_us.html" target="_blank" title="Blog">
+          Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/en_us/company/brand-resources.html" target="_blank" title="Brand Resources">
+          Brand Resources
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://careers.twitter.com/en.html" target="_blank" title="Careers">
+          Careers
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://investor.twitterinc.com/" target="_blank" title="Investors">
+          Investors
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/" target="_blank" title="Business">
+        Business
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/advertising.html" target="_blank" title="About Twitter Ads">
+          About Twitter Ads
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/targeting.html" target="_blank" title="Targeting">
+          Targeting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/analytics.html" target="_blank" title="Analytics">
+          Analytics
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://business.twitter.com/en/help.html" target="_blank" title="Ads support">
+          Ads support
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/small-business" target="_blank" title="Business blog">
+          Business blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://ads.twitter.com/login?ref=en-btc-gobal-footer" target="_blank" title="Advertise">
+          Advertise
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/" target="_blank" title="Developers">
+        Developers
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/overview/documentation" target="_blank" title="Documentation">
+          Documentation
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twittercommunity.com/" target="_blank" title="Forums">
+          Forums
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://dev.twitter.com/community" target="_blank" title="Communities">
+          Communities
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/developer" target="_blank" title="Developer blog">
+          Developer blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/" target="_blank" title="Help Center">
+        Help Center
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/215585" target="_blank" title="Using Twitter">
+          Using Twitter
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/login" target="_blank" title="My account">
+          My account
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/283" target="_blank" title="Fixing a problem">
+          Fixing a problem
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/categories/284" target="_blank" title="Policies and reporting">
+          Policies and reporting
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://about.twitter.com/safety" target="_blank" title="Safety Center">
+          Safety Center
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__parent type--bold-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/" target="_blank" title="Marketing">
+        Marketing
+        <span class="icon-container js-accordion theme-fill-color--extra-light">
+         <svg height="20" viewBox="0 0 34 20" width="34" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 12.758L5.121.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242l14 14a2.998 2.998 0 0 0 4.242 0l14-14C33.707 4.535 34 3.768 34 3s-.293-1.535-.879-2.121a2.998 2.998 0 0 0-4.242 0L17 12.758z">
+          </path>
+         </svg>
+        </span>
+       </a>
+       <ul class="footer-col__list">
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/insights.html" target="_blank" title="Insights">
+          Insights
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/success-stories.html" target="_blank" title="Success Stories">
+          Success Stories
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/solutions.html" target="_blank" title="Solutions">
+          Solutions
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://marketing.twitter.com/na/en/collections.html" target="_blank" title="Collections">
+          Collections
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://blog.twitter.com/advertising" target="_blank" title="Marketing Blog">
+          Marketing Blog
+         </a>
+        </li>
+        <li>
+         <a class="footer-col__link type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitterflightschool.com" target="_blank" title="Flight School">
+          Flight School
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__row container">
+      <div class="footer-col">
+       <p class="footer-col__footnote type--roman-14 theme-color--extra-light">
+        © 2017 Twitter, Inc.
+       </p>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://support.twitter.com/articles/20170520" target="_blank" title="Cookies">
+        Cookies
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/privacy" target="_blank" title="Privacy">
+        Privacy
+       </a>
+      </div>
+      <div class="footer-col">
+       <a class="footer-col__footnote type--roman-14 theme-color--extra-light theme-color--extra-light--hover" href="https://twitter.com/tos" target="_blank" title="Terms and Conditions">
+        Terms and Conditions
+       </a>
+      </div>
+     </div>
+    </footer>
+    <!--<div class="modal_container">-->
+    <div class="c20-modal__modal module-modal" data-modal="true">
+     <div class="c20-modal__scrollable" data-modal-scroll-container="true">
+      <div class="c20-modal__details" data-modal-content-container="true">
+       <!-- template is injected here -->
+      </div>
+      <ul class="c20-modal__navigation">
+       <li aria-label="Read previous biography" class="c20-modal__navigation-prev" data-modal-nav="prev-link">
+        <span class="c20-modal__navigation-label">
+         Read Previous
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="prev-text">
+        </span>
+       </li>
+       <li aria-label="Read next biography" class="c20-modal__navigation-next" data-modal-nav="next-link">
+        <span class="c20-modal__navigation-label">
+         Read Next
+        </span>
+        <span class="c20-modal__navigation-text" data-modal-nav="next-text">
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="module-modal__close-container">
+     <div class="c20-modal__modal-close module-modal__close" data-trigger="close-modal">
+      <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+       <path d="M24.242 20L39.121 5.121a2.998 2.998 0 0 0 0-4.242 2.998 2.998 0 0 0-4.242 0l-14.88 14.879L5.122.879a2.998 2.998 0 0 0-4.242 0 2.998 2.998 0 0 0 0 4.242L15.758 20 .879 34.879A2.998 2.998 0 0 0 3.001 40a2.99 2.99 0 0 0 2.121-.879L20 24.242l14.879 14.879a2.987 2.987 0 0 0 2.12.879 2.998 2.998 0 0 0 2.121-5.121L24.242 20z">
+       </path>
+      </svg>
+     </div>
+    </div>
+    <!--</div>-->
+   </div>
+   <script src="/etc/designs/common-twitter/dtm-footer.min.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/app.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/universal.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/structure.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/content.js" type="text/javascript">
+   </script>
+   <script src="/etc/designs/developer-twitter/public/js/docs.js" type="text/javascript">
+   </script>
+   <script async="" src="https://platform.twitter.com/widgets.js">
+   </script>
+  </cq:includeclientlib>
+ </body>
+</html>

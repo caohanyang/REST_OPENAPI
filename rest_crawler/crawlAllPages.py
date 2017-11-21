@@ -16,7 +16,7 @@ class Crawler(object):
     self.soup = None                               # BeautifulSoup object
     # First URL: ENDPOINT   Second URL: FILTER
     # https://www.instagram.com/developer   https://www.instagram.com/developer/endpoints
-    # https://dev.twitter.com/rest     https://dev.twitter.com/rest/reference
+    # https://developer.twitter.com/en/docs/api-reference-index https://developer.twitter.com/en/docs
     # https://www.flickr.com/services/api
     # https://developers.google.com/youtube/v3 https://developers.google.com/youtube/v3/docs
     # https://developers.facebook.com/docs/graph-api https://developers.facebook.com/docs/graph-api/reference
