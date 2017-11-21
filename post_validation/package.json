@@ -7,8 +7,10 @@
     "async": "^2.5.0",
     "curlrequest": "^1.0.1",
     "fs": "0.0.1-security",
+    "path": "^0.12.7",
     "preq": "^0.5.2",
-    "swagger-test": "^0.7.3"
+    "swagger-test": "^0.7.3",
+    "yargs": "^10.0.3"
   },
   "devDependencies": {},
   "scripts": {
