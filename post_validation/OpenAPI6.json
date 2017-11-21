@@ -1,0 +1,285 @@
+{
+  "paths": {
+    "/{user_i": {
+      "GET": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/[video_id]": {
+      "delete": {},
+      "PUT": {},
+      "PATCH": {}
+    },
+    "/{ondemand": {
+      "GET": {}
+    },
+    "/{user_id}": {
+      "DELETE": {},
+      "GET": {},
+      "Get": {},
+      "PATCH": {}
+    },
+    "/vimeo_oauth1": {
+      "POST": {}
+    },
+    "/{category}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/{preset_id}": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf the `uris` batch parameter is supplied with filtering or sorting arguments.\n\nError Code: 2101\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf there is a problem with the batch request.\n\nError Code: 2204\n\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "503",
+            "description": "Service Unavailable\nIf search is disabled.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "503",
+            "description": "Service Unavailable\nIf there was an internal error with our search infrastructure.\n\nError Code: 7300\n\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {},
+      "PATCH": {}
+    },
+    "/followin": {
+      "POST": {}
+    },
+    "/api.vimeo.co": {
+      "GET": {}
+    },
+    "/channels": {
+      "GET": {}
+    },
+    "/seasons": {
+      "GET": {}
+    },
+    "/{genre_id}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/categories": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/{portfolio_id}": {
+      "GET": {}
+    },
+    "/{background_id}": {
+      "PATCH": {}
+    },
+    "/{user_id": {
+      "DELETE": {}
+    },
+    "/{follow_user_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/portfolios": {
+      "GET": {}
+    },
+    "/{channel_id}": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf an invalid parameter is supplied.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "403",
+            "description": "Forbidden\nIf the authenticated user can not create a channel.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "400",
+            "description": "Bad Request\nIf an invalid parameter is supplied.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/{portraitset_id}": {
+      "DELETE": {}
+    },
+    "/{poster": {
+      "POST": {}
+    },
+    "/promotions": {
+      "DELETE": {},
+      "POST": {},
+      "GET": {}
+    },
+    "/{ondemand_": {
+      "GET": {}
+    },
+    "/{ticket}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/following": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{country}": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/regions": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/followers": {
+      "GET": {}
+    },
+    "/backgroun": {
+      "DELETE": {}
+    },
+    "/api.vim": {
+      "GET": {}
+    },
+    "/api.vimeo": {
+      "GET": {}
+    },
+    "/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "200",
+            "description": "OK\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "403",
+            "description": "Forbidden\nIf one of the parameters is invalid.\n",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "404",
+            "description": "Not Found\nIf the credit cannot be found.\n",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      }
+    },
+    "/pictures": {
+      "POST": {},
+      "GET": {}
+    },
+    "/{poster_id}": {
+      "POST": {}
+    },
+    "/{group_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/purchases": {
+      "GET": {}
+    },
+    "/access_token": {
+      "POST": {}
+    },
+    "/{country": {
+      "GET": {}
+    },
+    "/{video_": {
+      "GET": {}
+    },
+    "/backgrounds": {
+      "POST": {},
+      "GET": {}
+    },
+    "/api.vimeo.com": {
+      "GET": {}
+    },
+    "/presets": {
+      "GET": {}
+    },
+    "/watchlater": {
+      "GET": {}
+    },
+    "/api.vimeo.": {
+      "GET": {}
+    },
+    "/appearances": {
+      "GET": {}
+    },
+    "/{ondemand_id}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/api.vimeo.c": {
+      "PATCH": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}
