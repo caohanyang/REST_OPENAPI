@@ -46,17 +46,7 @@ public class ExtractInformation {
 	private static String API_FOLDER = "developers.google.com";
 	private static String FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
-	// "https", "http", "null", "/"
-	private static List<String> MODE = new ArrayList<String>(Arrays.asList("https"));
-	// "no", "yes"
-	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no"));
-	// "table", "list"
-	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("list"));
-	// "single", "multiple"
-	private static List<String> NUMBER = new ArrayList<String>(Arrays.asList("single"));
-	// "del", "delete"
-	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del"));
-
+	
 	public static void main(String[] args) throws GateException, JSONException, IOException {
 		// System.out.close();
 
@@ -82,19 +72,19 @@ public class ExtractInformation {
 		File compareSet = new File(CompareSet_PATH);
 
 		// 2. generate openAPI according to pattern
-		for (Iterator<String> sIterator = MODE.iterator(); sIterator.hasNext();) {
+		for (Iterator<String> sIterator = Settings.MODE.iterator(); sIterator.hasNext();) {
 			String mode = sIterator.next();
 
-			for (Iterator<String> rIterator = REVERSE.iterator(); rIterator.hasNext();) {
+			for (Iterator<String> rIterator = Settings.REVERSE.iterator(); rIterator.hasNext();) {
 				String reverse = rIterator.next();
 
-				for (Iterator<String> tIterator = TEMPLATE.iterator(); tIterator.hasNext();) {
+				for (Iterator<String> tIterator = Settings.TEMPLATE.iterator(); tIterator.hasNext();) {
 					String template = tIterator.next();
 
-					for (Iterator<String> nIterator = NUMBER.iterator(); nIterator.hasNext();) {
+					for (Iterator<String> nIterator = Settings.NUMBER.iterator(); nIterator.hasNext();) {
 						String number = nIterator.next();
 
-						for (Iterator<String> dIterator = ABBREV_DELETE.iterator(); dIterator.hasNext();) {
+						for (Iterator<String> dIterator = Settings.ABBREV_DELETE.iterator(); dIterator.hasNext();) {
 							String abbrev = dIterator.next();
 							// generate different openAPI
 							generateOpenAPI(listFiles, mode, reverse, template, number, abbrev);
@@ -112,20 +102,20 @@ public class ExtractInformation {
 
 	public static void generateOpenAPI(File[] listFiles, String mode, String reverse, String template, String number,
 			String abbrev) throws ResourceInstantiationException, JSONException, IOException, MalformedURLException {
-		// 2. initial the specification
+		// 2.1 initial the specification
 		GenerateMain mainObject = new GenerateMain();
 		JSONObject openAPI = mainObject.generateStructure();
 		ProcessBaseUrl processBa = new ProcessBaseUrl();
 		String baseUrl = null;
-		// 3. different mode
+		// 2.2. different mode
 		// if it's null mode, find the common base url first
-		if (mode == "null" | mode == "/") {
+		if (mode == "null") {
 			baseUrl = processBa.searchBaseUrl(listFiles, API_NAME);
 			baseUrl = processBa.cleanBaseUrl(baseUrl);
 			Out.prln(baseUrl);
 		}
 
-		// 4. check each html file
+		// 2.3. check each html file
 		for (int i = 0; i < listFiles.length; i++) {
 			// print the file name
 			Out.prln("=============File name=======================");
@@ -137,10 +127,10 @@ public class ExtractInformation {
 			}
 		}
 
-		// 4. prune openAPI
+		// 2.4. prune openAPI
 		openAPI = processBa.handleBaseUrl(openAPI, mode, baseUrl);
 
-		// 5. write to file
+		// 2.5. write to file
 		writeOpenAPI(openAPI, mode, template, number, abbrev, reverse);
 
 	}
@@ -153,10 +143,10 @@ public class ExtractInformation {
 		params.put("sourceUrl", u);
 		Document doc = (Document) Factory.createResource("gate.corpora.DocumentImpl", params);
 
-		// 2. get all text
+		// 2.3.1 get all text
 		DocumentContent textAll = doc.getContent();
 
-		// 3. initial openAPI
+		// 2.3.2 initial openAPI
 		ProcessMethod processMe = new ProcessMethod();
 		processMe.generateDefault(openAPI);
 
@@ -270,9 +260,11 @@ public class ExtractInformation {
 			String strAll, List<JSONObject> infoJson) throws JSONException {
 		String regexAll;
 		if (reverse == "no") {
-			regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(.*?)" + scheme;
+//			regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(.*?)" + scheme;
+			regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}"+ Settings.STUFFING + scheme;
 		} else {
-			regexAll = "(?si)" + scheme + "(.*?)\\s((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}";
+//			regexAll = "(?si)" + scheme + "(.*?)\\s((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}";
+			regexAll = "(?si)" + scheme + Settings.STUFFING +"((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}";
 		}
 		Pattern p = Pattern.compile(regexAll);
 		Matcher matcher = p.matcher(strAll);
@@ -340,6 +332,8 @@ public class ExtractInformation {
 					int uLocation = startIndex + endpointMatcher.start();
 					urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
 
+					// in some cases, you need to remove whitespace  /v2/projects/ project_id => /v2/projects/project_id
+					urlString = urlString.replace(" ", "");
 					// handle url, make it short and clean
 					sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
 				}
@@ -478,6 +472,16 @@ public class ExtractInformation {
 		Iterator<Annotation> templateIter = annoTemplate.iterator();
 		ProcessParameter processPa = new ProcessParameter();
 		
+		// put all the infoJson into openAPI first
+		if (!infoJson.isEmpty()) {
+			// In case of the method doesn't have parameter
+			// add the noPara url
+			// processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
+			// add all the url/action pair
+			processMe.addAllParaURL(openAPI, strAll, infoJson, reverse, scheme);
+		}
+		
+		// add parameters to those urls
 		while (templateIter.hasNext()) {
 			Annotation anno = (Annotation) templateIter.next();
 			String templateText = gate.Utils.stringFor(doc, anno);
@@ -490,18 +494,8 @@ public class ExtractInformation {
 			}
 		}
 
-		// 5.4 In case of the method doesn't have parameter
-		// fix then.....
-		if (!findParaTemplate) {
-			// can't find table
-			if (!infoJson.isEmpty()) {
-				// In case of the method doesn't have parameter
-				// add the noPara url
-				// processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
-				// add all the url/action pair
-				processMe.addAllParaURL(openAPI, strAll, infoJson, reverse, scheme);
-			}
-		}
+		
+		
 	}
 
 	public static void writeOpenAPI(JSONObject openAPI, String scheme, String template, String number, String abbrev,

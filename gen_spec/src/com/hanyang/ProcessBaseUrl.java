@@ -1,10 +1,12 @@
 package com.hanyang;
 
 import java.io.File;
+import java.lang.reflect.Array;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -18,6 +20,7 @@ import java.util.stream.Collectors;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.tika.Tika;
+import org.apache.tools.ant.util.CollectionUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,7 +36,7 @@ public class ProcessBaseUrl {
 	public JSONObject handleBaseUrl(JSONObject openAPI, String mode, String baseUrl)
 			throws JSONException, MalformedURLException {
 
-		if (mode == "null" | mode == "/") {
+		if (mode == "null") {
 			openAPI = nullBaseUrl(openAPI, mode, baseUrl);
 		} else {
 			openAPI = httpBaseUrl(openAPI, mode);
@@ -54,6 +57,7 @@ public class ProcessBaseUrl {
 
 	private JSONObject httpBaseUrl(JSONObject openAPI, String mode) throws JSONException, MalformedURLException {
 		// 1. first remove the unrelated url
+//	    Out.prln(openAPI.toString(4));
 		List<String> urlList = pruneUrl(openAPI);
 		if (!urlList.isEmpty()) {
 			// 2. find the common url
@@ -196,14 +200,41 @@ public class ProcessBaseUrl {
 		List<String> urlList = new ArrayList<String>();
 		JSONObject pathObject = openAPI.getJSONObject("paths");
 		Iterator<?> pathIter = pathObject.keys();
-		while (pathIter.hasNext()) {
-			String str = pathIter.next().toString();
-			Out.prln(str);
-			if (str != null && !str.isEmpty() && !str.equalsIgnoreCase("http") && !str.equalsIgnoreCase("https")) {
-				urlList.add(str);
+		
+			
+			while (pathIter.hasNext()) {
+			  
+				String str = pathIter.next().toString();
+				
+				if (Settings.EXISTREQ) {
+					
+					// if the request example exist
+					// check the request
+					JSONObject verbObject = pathObject.getJSONObject(str);
+					Iterator<?> verbIter = verbObject.keys();
+					while (verbIter.hasNext()) {
+						String verb = verbIter.next().toString();
+						JSONObject reqObject = verbObject.getJSONObject(verb);
+						if (reqObject.has("request")) {
+							str = reqObject.getString("request");
+							Out.prln(str);
+							if (str != null && !str.isEmpty() && !str.equalsIgnoreCase("http") && !str.equalsIgnoreCase("https")) {
+								urlList.add(str);
+							}
+						}
+					}	
+				} else {
+					
+					// if the request example not exist
+					// check from the path template
+					Out.prln(str);
+					if (str != null && !str.isEmpty() && !str.equalsIgnoreCase("http") && !str.equalsIgnoreCase("https")) {
+						urlList.add(str);
+					}
+				}
+				
 			}
-		}
-
+			
 		Out.prln(urlList);
 		for (int i = 0; i < urlList.size(); i++) {
 			// remove ?access_tocken.....
@@ -267,6 +298,8 @@ public class ProcessBaseUrl {
 
 			String originStr = null, retainStr = null;
 
+			int commonElement = particalContains(keyUrl, baseUrl);
+					
 			// if url contains commonUrl
 			if (keyUrl.equals(baseUrl)) {
 				retainStr = "/";
@@ -274,6 +307,18 @@ public class ProcessBaseUrl {
 			} else if (keyUrl.contains(baseUrl)) {
 				retainStr = keyUrl.substring(baseUrl.length());
 				originStr = (String) pathObject.names().get(i);
+			} else if ( commonElement > 0 ) {
+				// partical contains
+				// fix: need to fix
+				ArrayList<String> keyList = new ArrayList<String>(Arrays.asList(keyUrl.replaceFirst("^/", "").split("/", -1)));
+				while(commonElement > 0) {
+					keyList.remove(0);
+					commonElement--;
+				}
+				
+				retainStr = "/" + String.join("/", keyList);
+				originStr = (String) pathObject.names().get(i);
+				
 			} else {
 				// doestn't contain
 				continue;
@@ -294,6 +339,19 @@ public class ProcessBaseUrl {
 
 		Out.prln(pathObject);
 		return openAPI;
+	}
+
+	private Integer particalContains(String keyUrl, String baseUrl) {
+		List<String> keyList = Arrays.asList(keyUrl.split("/"));
+		List<String> baseList = Arrays.asList(baseUrl.split("/"));
+		List<String> commons = new ArrayList<String>();
+		for (String igr : keyList) {
+		    if (baseList.contains(igr) && igr != null && igr.length() != 0) {
+		        commons.add(igr);
+		    }
+		}
+		// keyList now contains the common element
+		return commons.size();
 	}
 
 	public String searchBaseUrl(File[] listFiles, String API_NAME)

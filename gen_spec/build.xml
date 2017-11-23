@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="gen_spec">
+    <property environment="env"/>
+    <property name="project_loc" value="."/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="../../../../../.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar"/>
+        <pathelement location="../../../../../.m2/repository/com/googlecode/concurrent-trees/concurrent-trees/2.6.0/concurrent-trees-2.6.0.jar"/>
+        <pathelement location="../../../../../.m2/repository/org/json/json/20090211/json-20090211.jar"/>
+        <pathelement location="../../../../../.m2/repository/org/apache/tika/tika-core/1.4/tika-core-1.4.jar"/>
+        <pathelement location="../../../../../.m2/repository/org/apache/commons/commons-lang3/3.0/commons-lang3-3.0.jar"/>
+        <pathelement location="../../../../../.m2/repository/uk/ac/gate/gate-core/6.0/gate-core-6.0.jar"/>
+        <pathelement location="../../../../../.m2/repository/commons-io/commons-io/1.4/commons-io-1.4.jar"/>
+        <pathelement location="../../../../../.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar"/>
+        <pathelement location="../../../../../.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5.jar"/>
+        <pathelement location="../../../../../.m2/repository/jdom/jdom/1.0/jdom-1.0.jar"/>
+        <pathelement location="../../../../../.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar"/>
+        <pathelement location="../../../../../.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar"/>
+        <pathelement location="../../../../../.m2/repository/uk/ac/gate/gate-asm/3.1/gate-asm-3.1.jar"/>
+    </path>
+    <path id="gen_spec.classpath">
+        <pathelement location="target/classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+        <pathelement location="lib/ant-1.9.3.jar"/>
+        <pathelement location="lib/ant-launcher-1.9.3.jar"/>
+        <pathelement location="lib/aopalliance-1.0.jar"/>
+        <pathelement location="lib/apache-mime4j-core-0.7.2.jar"/>
+        <pathelement location="lib/apache-mime4j-dom-0.7.2.jar"/>
+        <pathelement location="lib/bcmail-jdk15-1.45.jar"/>
+        <pathelement location="lib/bcprov-jdk15-1.45.jar"/>
+        <pathelement location="lib/commons-codec-1.9.jar"/>
+        <pathelement location="lib/commons-compress-1.8.1.jar"/>
+        <pathelement location="lib/commons-io-2.4.jar"/>
+        <pathelement location="lib/commons-lang-2.6.jar"/>
+        <pathelement location="lib/commons-logging-1.1.3.jar"/>
+        <pathelement location="lib/flying-saucer-core-9.0.4.jar"/>
+        <pathelement location="lib/fontbox-1.8.8.jar"/>
+        <pathelement location="lib/gate-asm-5.0.3.jar"/>
+        <pathelement location="lib/gate-compiler-jdt-4.3.2-P20140317-1600.jar"/>
+        <pathelement location="lib/gate.jar"/>
+        <pathelement location="lib/hamcrest-core-1.3.jar"/>
+        <pathelement location="lib/Information_Retrieval.jar"/>
+        <pathelement location="lib/ivy-2.3.0.jar"/>
+        <pathelement location="lib/jackson-annotations-2.3.0.jar"/>
+        <pathelement location="lib/jackson-core-2.3.2.jar"/>
+        <pathelement location="lib/jackson-databind-2.3.2.jar"/>
+        <pathelement location="lib/java-getopt-1.0.13.jar"/>
+        <pathelement location="lib/jaxen-1.1.6.jar"/>
+        <pathelement location="lib/jdom-1.1.3.jar"/>
+        <pathelement location="lib/jempbox-1.8.8.jar"/>
+        <pathelement location="lib/joda-time-2.9.2.jar"/>
+        <pathelement location="lib/junit-4.11.jar"/>
+        <pathelement location="lib/log4j-1.2.17.jar"/>
+        <pathelement location="lib/nekohtml-1.9.14.jar"/>
+        <pathelement location="lib/pdfbox-1.8.8.jar"/>
+        <pathelement location="lib/poi-3.11.jar"/>
+        <pathelement location="lib/poi-ooxml-3.11.jar"/>
+        <pathelement location="lib/poi-ooxml-schemas-3.11.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.11.jar"/>
+        <pathelement location="lib/spring-aop-2.5.6.SEC01.jar"/>
+        <pathelement location="lib/spring-beans-2.5.6.SEC01.jar"/>
+        <pathelement location="lib/spring-core-2.5.6.SEC01.jar"/>
+        <pathelement location="lib/stax2-api-3.1.1.jar"/>
+        <pathelement location="lib/tika-core-1.7.jar"/>
+        <pathelement location="lib/tika-parsers-1.7.jar"/>
+        <pathelement location="lib/woodstox-core-lgpl-4.2.0.jar"/>
+        <pathelement location="lib/xercesImpl-2.9.1.jar"/>
+        <pathelement location="lib/xmlbeans-2.6.0.jar"/>
+        <pathelement location="lib/xmlunit-1.5.jar"/>
+        <pathelement location="lib/xpp3-1.1.4c.jar"/>
+        <pathelement location="lib/xstream-1.4.7.jar"/>
+        <pathelement location="lib"/>
+        <pathelement location="lib/jsondiscoverer.jar"/>
+    </path>
+    <path id="run.ExtractInformation (1).classpath">
+        <path refid="gen_spec.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="gen_spec.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="ExtractInformation (1)">
+        <java classname="com.hanyang.ExtractInformation" failonerror="true" fork="yes">
+            <jvmarg line="-Xms1024m&#10;-Xmx8192m&#10;-Dgate.plugins.home=&quot;${project_loc}\plugins&#10;-Dgate.site.config=&quot;${project_loc}\gate.xml"/>
+            <arg line="https://developer.twitter.com/en/docs/api-reference-index"/>
+            <classpath refid="run.ExtractInformation (1).classpath"/>
+        </java>
+    </target>
+</project>

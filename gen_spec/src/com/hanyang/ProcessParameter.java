@@ -144,7 +144,7 @@ public class ProcessParameter {
 								keyObject.put("description", pArray[1]);
 								keyObject.put("in", "query");
 								keyObject.put("type", "integer");
-								keyObject.put("required", "required");
+								keyObject.put("required", true);
 								paraArray.put(keyObject);
 							}
 							
@@ -297,64 +297,68 @@ public class ProcessParameter {
 			String templateNumber, Document doc, String mode) throws JSONException {
 		JSONObject sectionObject = new JSONObject();
 		int minimumDistance = Integer.MAX_VALUE;
-		Out.prln("----------para location-------");
+		Out.prln("---------para location-------");
 		Out.prln(paraLocation);
 		for (JSONObject it : infoJson) {
 
-			// Rule 1: action that not far from "example..."
-			JSONObject entryAction = it.getJSONObject("action");
-			Iterator keysAction = entryAction.keys();
-			if (keysAction.hasNext()) {
-				Long standard = null;
-				if (mode == "parameter") {
-					// parameter
-					standard = entryAction.getLong(keysAction.next().toString());
-				} else {
-					// example ???
-					standard = entryAction.getLong(keysAction.next().toString());
+//			// Rule 1: action that not far from "example..."
+//			JSONObject entryAction = it.getJSONObject("action");
+//			Iterator keysAction = entryAction.keys();
+//			if (keysAction.hasNext()) {
+//				Long standard = null;
+//				if (mode == "parameter") {
+//					// parameter
+//					standard = entryAction.getLong(keysAction.next().toString());
+//				} else {
+//					// example ???
+//					standard = entryAction.getLong(keysAction.next().toString());
+//
+//				}
+//
+//				Long head = standard;
+//				String headStr = gate.Utils.stringFor(doc, Math.max(head - 50, 0), head).toLowerCase();
+//				Long bottom = standard + paraStr.length();
+//
+//				if (bottom < fullText.length()) {
+//					// it should be less than the fullText length
+//					String bottomStr = gate.Utils.stringFor(doc, bottom, Math.min(bottom + 50, fullText.length()))
+//							.toLowerCase();
+//					if (headStr.contains("example") | bottomStr.contains("example")) {
+//						sectionObject.put("action", it.getJSONObject("action").keys().next());
+//						sectionObject.put("url", it.getJSONObject("url").keys().next());
+//						break;
+//					}
+//				}
+//			}
 
-				}
+			if (Settings.U1P2) {
+				// Rule 2: search the nearest url
+				// first url then parameter
+				JSONObject entry = it.getJSONObject("url");
+				Iterator keys = entry.keys();
+				if (keys.hasNext()) {
+					String key = (String) keys.next();
 
-				Long head = standard;
-				String headStr = gate.Utils.stringFor(doc, Math.max(head - 50, 0), head).toLowerCase();
-				Long bottom = standard + paraStr.length();
-
-				if (bottom < fullText.length()) {
-					// it should be less than the fullText length
-					String bottomStr = gate.Utils.stringFor(doc, bottom, Math.min(bottom + 50, fullText.length()))
-							.toLowerCase();
-					if (headStr.contains("example") | bottomStr.contains("example")) {
-						sectionObject.put("action", it.getJSONObject("action").keys().next());
-						sectionObject.put("url", it.getJSONObject("url").keys().next());
-						break;
+					if (templateNumber.matches("single")) {
+						// if it's a single page, search from all the text
+						if (Math.abs(paraLocation - entry.getInt(key)) < minimumDistance) {
+							minimumDistance = (int) Math.abs((paraLocation - entry.getInt(key)));
+							sectionObject.put("action", it.getJSONObject("action").keys().next());
+							sectionObject.put("url", key);
+						}
+					} else {
+						// multiple table mode: search only in the previous context
+						if ((paraLocation - entry.getInt(key) < minimumDistance)
+								&& (paraLocation - entry.getInt(key) > 0)) {
+							minimumDistance = (int) (paraLocation - entry.getInt(key));
+							sectionObject.put("action", it.getJSONObject("action").keys().next());
+							sectionObject.put("url", key);
+						}
 					}
+
 				}
 			}
-
-			// Rule 2: search the nearest url
-			JSONObject entry = it.getJSONObject("url");
-			Iterator keys = entry.keys();
-			if (keys.hasNext()) {
-				String key = (String) keys.next();
-
-				if (templateNumber.matches("single")) {
-					// if it's a single page, search from all the text
-					if (Math.abs(paraLocation - entry.getInt(key)) < minimumDistance) {
-						minimumDistance = (int) Math.abs((paraLocation - entry.getInt(key)));
-						sectionObject.put("action", it.getJSONObject("action").keys().next());
-						sectionObject.put("url", key);
-					}
-				} else {
-					// multiple table mode: search only in the previous context
-					if ((paraLocation - entry.getInt(key) < minimumDistance)
-							&& (paraLocation - entry.getInt(key) > 0)) {
-						minimumDistance = (int) (paraLocation - entry.getInt(key));
-						sectionObject.put("action", it.getJSONObject("action").keys().next());
-						sectionObject.put("url", key);
-					}
-				}
-
-			}
+			
 		}
 		return sectionObject;
 	}
