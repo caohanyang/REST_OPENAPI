@@ -293,6 +293,76 @@ public class ProcessParameter {
 
 	}
 
+	public void handleParaTemplate(JSONObject openAPI, String template, String number, Document doc,
+			ProcessMethod processMe, String scheme, String reverse, String strAll, List<JSONObject> infoJson,
+			AnnotationSet annoOrigin) throws JSONException {
+		if (template == "table") {
+			// 1 get table annotation
+			AnnotationSet annoTable = annoOrigin.get("table");
+			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
+		} else if (template == "list") {
+			AnnotationSet annoList = annoOrigin.get("dl");
+			if (annoList.isEmpty()) {
+				// this is unordered list
+				annoList = annoOrigin.get("ul");
+			}
+			// 2 get list annotation
+			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
+		}
+	}
+	
+	public void searchParameter(JSONObject openAPI, String number, String template, Document doc,
+			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate,
+			String reverse, String scheme) throws JSONException {
+		// 5.3 for each page, set findParaTable = False
+		boolean findParaTemplate = false;
+		// 5.3.1 Test if the page contains multiple parameter table or not
+		Iterator<Annotation> testIter = annoTemplate.iterator();
+		String templateNumber = number;
+		// int numTemplate = 0;
+		// while (testIter.hasNext()) {
+		// Annotation anno = (Annotation) testIter.next();
+		// String templateText = gate.Utils.stringFor(doc, anno);
+		// ProcessParameter processPa = new ProcessParameter();
+		// if (processPa.isParaTemplate(templateText, anno, strAll)) {
+		// // numTemplate++;
+		// }
+		// }
+		// if (numTemplate > 1) {
+		// // more than one parameter template in the page
+		// multiTemplate = "multiple";
+		// }
+
+		// 5.3.2 handle the template context
+		Iterator<Annotation> templateIter = annoTemplate.iterator();
+		ProcessParameter processPa = new ProcessParameter();
+		
+		// put all the infoJson into openAPI first
+		if (!infoJson.isEmpty()) {
+			// In case of the method doesn't have parameter
+			// add the noPara url
+			// processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
+			// add all the url/action pair
+			processMe.addAllParaURL(openAPI, strAll, infoJson, reverse, scheme);
+		}
+		
+		// add parameters to those urls
+		while (templateIter.hasNext()) {
+			Annotation anno = (Annotation) templateIter.next();
+			String templateText = gate.Utils.stringFor(doc, anno);
+			if (processPa.isParaTemplate(templateText, anno, strAll)) {
+				findParaTemplate = true;
+				Out.prln("==========TABLE or LIST=================");
+				Out.prln(templateText);
+				processPa.generateParameter(openAPI, templateText, strAll, infoJson, anno, doc, processMe,
+						templateNumber, template);
+			}
+		}
+
+		
+		
+	}
+	
 	public JSONObject matchURL(String paraStr, String fullText, List<JSONObject> infoJson, Long paraLocation,
 			String templateNumber, Document doc, String mode) throws JSONException {
 		JSONObject sectionObject = new JSONObject();

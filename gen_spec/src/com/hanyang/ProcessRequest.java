@@ -1,6 +1,7 @@
 package com.hanyang;
 
 import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringEscapeUtils;
@@ -56,6 +57,27 @@ public class ProcessRequest {
 		return false;
 	}
 
+	public void handleRequestTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
+		// find request example in the code
+		String regexAll;
+		
+		regexAll = "(?i)" + "EXAMPLE REQUEST" + "\\shttp";
+
+		Pattern p = Pattern.compile(regexAll);
+		Matcher requestMatcher = p.matcher(strAll);
+		
+		while (requestMatcher.find()) {
+			Out.prln("requestStart： " + requestMatcher.start());
+			
+			String matchStr = strAll.substring( requestMatcher.start(), requestMatcher.end() + 100).trim();
+			matchStr = matchStr.substring(matchStr.indexOf("http")).split("\n")[0];
+			// handle url, make it short and clean
+			Out.prln(matchStr);
+			generateRequest(openAPI, matchStr, strAll, infoJson, doc, processMe);
+		}
+	}
+	
 	public JSONObject generateRequest(JSONObject openAPI, String requestText, String strAll, List<JSONObject> infoJson,
 			 Document doc, ProcessMethod processMe) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();

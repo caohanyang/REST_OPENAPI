@@ -180,13 +180,16 @@ public class ExtractInformation {
 		Out.prln(infoJson.toString());
 
 		// 3. handle template to find parameter
-		handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
+		ProcessParameter processPa = new ProcessParameter();
+		processPa.handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
 
 		// 4. handle code template
-		handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		ProcessResponse processRe = new ProcessResponse();
+		processRe.handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 
 		// 5. handle request template/code
-		handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		ProcessRequest processReq = new ProcessRequest();
+		processReq.handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
 	private static void genInfoJsonNull(Document doc, ProcessMethod processMe, String aPI_NAME, String strAll,
@@ -246,14 +249,17 @@ public class ExtractInformation {
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
 
-		// 3 handle info json
-		handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
+		// 3 handle parameter
+		ProcessParameter processPa = new ProcessParameter();
+		processPa.handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
 
 		// 4. handle response template
-		handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		ProcessResponse processRe = new ProcessResponse();
+		processRe.handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 		
 		// 5. handle request template/code
-		handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		ProcessRequest processReq = new ProcessRequest();
+		processReq.handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
 	private static void getInfoJsonHttp(String abbrev, ProcessMethod processMe, String scheme, String reverse,
@@ -367,70 +373,9 @@ public class ExtractInformation {
 		}
 	}
 
-	private static void handleParaTemplate(JSONObject openAPI, String template, String number, Document doc,
-			ProcessMethod processMe, String scheme, String reverse, String strAll, List<JSONObject> infoJson,
-			AnnotationSet annoOrigin) throws JSONException {
-		if (template == "table") {
-			// 1 get table annotation
-			AnnotationSet annoTable = annoOrigin.get("table");
-			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
-		} else if (template == "list") {
-			AnnotationSet annoList = annoOrigin.get("dl");
-			if (annoList.isEmpty()) {
-				// this is unordered list
-				annoList = annoOrigin.get("ul");
-			}
-			// 2 get list annotation
-			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
-		}
-	}
 
-	private static void handleResponseTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
-			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
-		// find code example in the code
-		AnnotationSet annoPre = annoOrigin.get("pre");
-		searchCode(openAPI, doc, processMe, strAll, infoJson, annoPre);
-	}
 
-	private static void searchCode(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
-			List<JSONObject> infoJson, AnnotationSet annoCode) throws JSONException {
-		// 5.3 for each page, set findCodeTemplate = False
-		boolean findCodeTemplate = false;
-		// 5.3.1 Test if the page contains multiple parameter table or not
-		Iterator<Annotation> codeIter = annoCode.iterator();
-		ProcessResponse processRe = new ProcessResponse();
-		
-		while (codeIter.hasNext()) {
-			Annotation anno = (Annotation) codeIter.next();
-			String codeText = gate.Utils.stringFor(doc, anno);			
-			if (processRe.isResponseTemplate(codeText, anno, strAll)) {
-				findCodeTemplate = true;
-				processRe.generateResponse(openAPI, codeText, strAll, infoJson, anno, doc, processMe,annoCode);
-			}
-		}
-
-	}
-
-	private static void handleRequestTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
-			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
-		// find request example in the code
-		String regexAll;
-		
-		regexAll = "(?i)" + "EXAMPLE REQUEST" + "\\shttp";
-
-		Pattern p = Pattern.compile(regexAll);
-		Matcher requestMatcher = p.matcher(strAll);
-		ProcessRequest processReq = new ProcessRequest();
-		while (requestMatcher.find()) {
-			Out.prln("requestStart： " + requestMatcher.start());
-			
-			String matchStr = strAll.substring( requestMatcher.start(), requestMatcher.end() + 100).trim();
-			matchStr = matchStr.substring(matchStr.indexOf("http")).split("\n")[0];
-			// handle url, make it short and clean
-			Out.prln(matchStr);
-			processReq.generateRequest(openAPI, matchStr, strAll, infoJson, doc, processMe);
-		}
-	}
+	
 	
 	
 	private static JSONObject writeUrl(ProcessMethod processMe, String urlString, JSONObject sectionJson, int uLocation)
@@ -446,57 +391,6 @@ public class ExtractInformation {
 		return sectionJson;
 	}
 
-	private static void searchParameter(JSONObject openAPI, String number, String template, Document doc,
-			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate,
-			String reverse, String scheme) throws JSONException {
-		// 5.3 for each page, set findParaTable = False
-		boolean findParaTemplate = false;
-		// 5.3.1 Test if the page contains multiple parameter table or not
-		Iterator<Annotation> testIter = annoTemplate.iterator();
-		String templateNumber = number;
-		// int numTemplate = 0;
-		// while (testIter.hasNext()) {
-		// Annotation anno = (Annotation) testIter.next();
-		// String templateText = gate.Utils.stringFor(doc, anno);
-		// ProcessParameter processPa = new ProcessParameter();
-		// if (processPa.isParaTemplate(templateText, anno, strAll)) {
-		// // numTemplate++;
-		// }
-		// }
-		// if (numTemplate > 1) {
-		// // more than one parameter template in the page
-		// multiTemplate = "multiple";
-		// }
-
-		// 5.3.2 handle the template context
-		Iterator<Annotation> templateIter = annoTemplate.iterator();
-		ProcessParameter processPa = new ProcessParameter();
-		
-		// put all the infoJson into openAPI first
-		if (!infoJson.isEmpty()) {
-			// In case of the method doesn't have parameter
-			// add the noPara url
-			// processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
-			// add all the url/action pair
-			processMe.addAllParaURL(openAPI, strAll, infoJson, reverse, scheme);
-		}
-		
-		// add parameters to those urls
-		while (templateIter.hasNext()) {
-			Annotation anno = (Annotation) templateIter.next();
-			String templateText = gate.Utils.stringFor(doc, anno);
-			if (processPa.isParaTemplate(templateText, anno, strAll)) {
-				findParaTemplate = true;
-				Out.prln("==========TABLE or LIST=================");
-				Out.prln(templateText);
-				processPa.generateParameter(openAPI, templateText, strAll, infoJson, anno, doc, processMe,
-						templateNumber, template);
-			}
-		}
-
-		
-		
-	}
 
 	public static void writeOpenAPI(JSONObject openAPI, String scheme, String template, String number, String abbrev,
 			String reverse) throws IOException {

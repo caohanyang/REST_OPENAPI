@@ -1,5 +1,6 @@
 package com.hanyang;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -56,6 +57,31 @@ public class ProcessResponse {
 		return false;
 	}
 
+	public void handleResponseTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
+		// find code example in the code
+		AnnotationSet annoPre = annoOrigin.get("pre");
+		searchCode(openAPI, doc, processMe, strAll, infoJson, annoPre);
+	}
+
+	public void searchCode(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoCode) throws JSONException {
+		// 5.3 for each page, set findCodeTemplate = False
+		boolean findCodeTemplate = false;
+		// 5.3.1 Test if the page contains multiple parameter table or not
+		Iterator<Annotation> codeIter = annoCode.iterator();
+		
+		while (codeIter.hasNext()) {
+			Annotation anno = (Annotation) codeIter.next();
+			String codeText = gate.Utils.stringFor(doc, anno);			
+			if (isResponseTemplate(codeText, anno, strAll)) {
+				findCodeTemplate = true;
+				generateResponse(openAPI, codeText, strAll, infoJson, anno, doc, processMe,annoCode);
+			}
+		}
+
+	}
+	
 	public JSONObject generateResponse(JSONObject openAPI, String codeText, String strAll, List<JSONObject> infoJson,
 			Annotation anno, Document doc, ProcessMethod processMe, AnnotationSet annoCode) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();
