@@ -44,7 +44,6 @@ public class ExtractInformation {
 	// www.flickr.com
 	private static String API_NAME = "google";
 	private static String API_FOLDER = "developers.google.com";
-
 	private static String FilteredSet_PATH = "FilteredSet/" + API_FOLDER;
 	private static String CompareSet_PATH = "CompareSet/" + API_NAME;
 	// "https", "http", "null", "/"
@@ -52,11 +51,11 @@ public class ExtractInformation {
 	// "no", "yes"
 	private static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no"));
 	// "table", "list"
-	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("table"));
+	private static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("list"));
 	// "single", "multiple"
 	private static List<String> NUMBER = new ArrayList<String>(Arrays.asList("single"));
 	// "del", "delete"
-	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("delete"));
+	private static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del"));
 
 	public static void main(String[] args) throws GateException, JSONException, IOException {
 		// System.out.close();
@@ -194,8 +193,10 @@ public class ExtractInformation {
 		handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
 
 		// 4. handle code template
-		handleCodeTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 
+		// 5. handle request template/code
+		handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
 	private static void genInfoJsonNull(Document doc, ProcessMethod processMe, String aPI_NAME, String strAll,
@@ -258,8 +259,11 @@ public class ExtractInformation {
 		// 3 handle info json
 		handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
 
-		// 4. handle code template
-		handleCodeTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		// 4. handle response template
+		handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		
+		// 5. handle request template/code
+		handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
 	private static void getInfoJsonHttp(String abbrev, ProcessMethod processMe, String scheme, String reverse,
@@ -378,12 +382,16 @@ public class ExtractInformation {
 			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
 		} else if (template == "list") {
 			AnnotationSet annoList = annoOrigin.get("dl");
+			if (annoList.isEmpty()) {
+				// this is unordered list
+				annoList = annoOrigin.get("ul");
+			}
 			// 2 get list annotation
 			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
 		}
 	}
 
-	private static void handleCodeTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+	private static void handleResponseTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
 			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
 		// find code example in the code
 		AnnotationSet annoPre = annoOrigin.get("pre");
@@ -396,11 +404,11 @@ public class ExtractInformation {
 		boolean findCodeTemplate = false;
 		// 5.3.1 Test if the page contains multiple parameter table or not
 		Iterator<Annotation> codeIter = annoCode.iterator();
-
+		ProcessResponse processRe = new ProcessResponse();
+		
 		while (codeIter.hasNext()) {
 			Annotation anno = (Annotation) codeIter.next();
-			String codeText = gate.Utils.stringFor(doc, anno);
-			ProcessResponse processRe = new ProcessResponse();
+			String codeText = gate.Utils.stringFor(doc, anno);			
 			if (processRe.isResponseTemplate(codeText, anno, strAll)) {
 				findCodeTemplate = true;
 				processRe.generateResponse(openAPI, codeText, strAll, infoJson, anno, doc, processMe,annoCode);
@@ -409,6 +417,28 @@ public class ExtractInformation {
 
 	}
 
+	private static void handleRequestTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
+		// find request example in the code
+		String regexAll;
+		
+		regexAll = "(?i)" + "EXAMPLE REQUEST" + "\\shttp";
+
+		Pattern p = Pattern.compile(regexAll);
+		Matcher requestMatcher = p.matcher(strAll);
+		ProcessRequest processReq = new ProcessRequest();
+		while (requestMatcher.find()) {
+			Out.prln("requestStart： " + requestMatcher.start());
+			
+			String matchStr = strAll.substring( requestMatcher.start(), requestMatcher.end() + 100).trim();
+			matchStr = matchStr.substring(matchStr.indexOf("http")).split("\n")[0];
+			// handle url, make it short and clean
+			Out.prln(matchStr);
+			processReq.generateRequest(openAPI, matchStr, strAll, infoJson, doc, processMe);
+		}
+	}
+	
+	
 	private static JSONObject writeUrl(ProcessMethod processMe, String urlString, JSONObject sectionJson, int uLocation)
 			throws JSONException {
 		urlString = processMe.cleanUrl(urlString);
@@ -439,8 +469,6 @@ public class ExtractInformation {
 		// // numTemplate++;
 		// }
 		// }
-
-		Out.prln(findParaTemplate);
 		// if (numTemplate > 1) {
 		// // more than one parameter template in the page
 		// multiTemplate = "multiple";
@@ -448,10 +476,11 @@ public class ExtractInformation {
 
 		// 5.3.2 handle the template context
 		Iterator<Annotation> templateIter = annoTemplate.iterator();
+		ProcessParameter processPa = new ProcessParameter();
+		
 		while (templateIter.hasNext()) {
 			Annotation anno = (Annotation) templateIter.next();
 			String templateText = gate.Utils.stringFor(doc, anno);
-			ProcessParameter processPa = new ProcessParameter();
 			if (processPa.isParaTemplate(templateText, anno, strAll)) {
 				findParaTemplate = true;
 				Out.prln("==========TABLE or LIST=================");

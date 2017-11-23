@@ -27,7 +27,8 @@ public class ProcessParameter {
 			Annotation anno, Document doc, ProcessMethod processMe, String templateNumber, String template)
 			throws JSONException {
 
-		JSONObject sectionJson = matchURL(paraStr, fullText, infoJson, anno.getStartNode().getOffset(), templateNumber, doc, "parameter");
+		JSONObject sectionJson = matchURL(paraStr, fullText, infoJson, anno.getStartNode().getOffset(), templateNumber,
+				doc, "parameter");
 
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {
@@ -75,40 +76,84 @@ public class ProcessParameter {
 
 	private JSONArray parseList(String paraStr, Annotation anno, Document doc) throws JSONException {
 		JSONArray paraArray = new JSONArray();
-		Long startDl = anno.getStartNode().getOffset();
-		Long endDl = anno.getEndNode().getOffset();
+		Long startL = anno.getStartNode().getOffset();
+		Long endL = anno.getEndNode().getOffset();
 
-		AnnotationSet dtSet = doc.getAnnotations("Original markups").get("dt", startDl, endDl + 1);
+		AnnotationSet listSet = doc.getAnnotations("Original markups").get("dt", startL, endL + 1);
 
-		// get dt list and sort
-		List dtList = new ArrayList(dtSet);
-		Collections.sort(dtList, new OffsetComparator());
+		if (!listSet.isEmpty()) {
 
-		// get dd
-		for (int i = 0; i < dtList.size(); i++) {
-			Annotation dtElement = (Annotation) dtList.get(i);
-			Long endDt = dtElement.getEndNode().getOffset();
+			// dl dt dd
+			Out.prln("dl dt dd list");
 
-			String dtStr = gate.Utils.stringFor(doc, dtElement);
-			if (!dtStr.isEmpty()) {
-				// find value
-				AnnotationSet ddSet = doc.getAnnotations("Original markups").get("dd", endDt, endDt + 100);
-				// get dd list and sort
-				List ddList = new ArrayList(ddSet);
-				Collections.sort(ddList, new OffsetComparator());
-				// each time get the first dd (nearest dd)
-				Annotation ddElement = (Annotation) ddList.get(0);
-				String ddStr = gate.Utils.stringFor(doc, ddElement);
-				// construct json
-				JSONObject keyObject = new JSONObject();
-				keyObject.put("name", dtStr);
-				keyObject.put("description", ddStr);
-				keyObject.put("in", "query");
-				keyObject.put("type", "integer");
-				keyObject.put("required", "required");
-				paraArray.put(keyObject);
+			// get dt list and sort
+			List dtList = new ArrayList(listSet);
+			Collections.sort(dtList, new OffsetComparator());
+
+			// get dd
+			for (int i = 0; i < dtList.size(); i++) {
+				Annotation dtElement = (Annotation) dtList.get(i);
+				Long endDt = dtElement.getEndNode().getOffset();
+
+				String dtStr = gate.Utils.stringFor(doc, dtElement);
+				if (!dtStr.isEmpty()) {
+					// find value
+					AnnotationSet ddSet = doc.getAnnotations("Original markups").get("dd", endDt, endDt + 100);
+					// get dd list and sort
+					List ddList = new ArrayList(ddSet);
+					Collections.sort(ddList, new OffsetComparator());
+					// each time get the first dd (nearest dd)
+					Annotation ddElement = (Annotation) ddList.get(0);
+					String ddStr = gate.Utils.stringFor(doc, ddElement);
+					// construct json
+					JSONObject keyObject = new JSONObject();
+					keyObject.put("name", dtStr);
+					keyObject.put("description", ddStr);
+					keyObject.put("in", "query");
+					keyObject.put("type", "integer");
+					keyObject.put("required", "required");
+					paraArray.put(keyObject);
+				}
+
 			}
+		} else {
+			
+			// we use the annotation directly
+			
+					Long startUl = anno.getStartNode().getOffset();
+					Long endUl = anno.getEndNode().getOffset();
 
+					String ulStr = gate.Utils.stringFor(doc, anno);
+					if (!ulStr.isEmpty()) {
+						// find value
+						AnnotationSet aSet = doc.getAnnotations("Original markups").getContained(startUl, endUl + 1).get("li");
+						// get dd list and sort
+						List aList = new ArrayList(aSet);
+						if (!aList.isEmpty()) {
+							
+							Collections.sort(aList, new OffsetComparator());
+							// each time get the first dd (nearest dd)
+							for (int i = 0 ; i < aList.size(); i++) {
+								
+								Annotation liElement = (Annotation) aList.get(i);
+								String liStr = gate.Utils.stringFor(doc, liElement);
+								// construct json
+								String[] pArray = liStr.split("\n");
+								JSONObject keyObject = new JSONObject();
+								keyObject.put("name", pArray[0]);
+								keyObject.put("description", pArray[1]);
+								keyObject.put("in", "query");
+								keyObject.put("type", "integer");
+								keyObject.put("required", "required");
+								paraArray.put(keyObject);
+							}
+							
+						}
+						
+					}
+
+			
+			
 		}
 
 		return paraArray;
@@ -255,28 +300,29 @@ public class ProcessParameter {
 		Out.prln("----------para location-------");
 		Out.prln(paraLocation);
 		for (JSONObject it : infoJson) {
-			
+
 			// Rule 1: action that not far from "example..."
 			JSONObject entryAction = it.getJSONObject("action");
 			Iterator keysAction = entryAction.keys();
 			if (keysAction.hasNext()) {
 				Long standard = null;
 				if (mode == "parameter") {
-					//parameter
+					// parameter
 					standard = entryAction.getLong(keysAction.next().toString());
 				} else {
-					//example ???
+					// example ???
 					standard = entryAction.getLong(keysAction.next().toString());
 
 				}
-				
+
 				Long head = standard;
 				String headStr = gate.Utils.stringFor(doc, Math.max(head - 50, 0), head).toLowerCase();
 				Long bottom = standard + paraStr.length();
-				
+
 				if (bottom < fullText.length()) {
 					// it should be less than the fullText length
-					String bottomStr = gate.Utils.stringFor(doc, bottom, Math.min(bottom + 50, fullText.length())).toLowerCase();
+					String bottomStr = gate.Utils.stringFor(doc, bottom, Math.min(bottom + 50, fullText.length()))
+							.toLowerCase();
 					if (headStr.contains("example") | bottomStr.contains("example")) {
 						sectionObject.put("action", it.getJSONObject("action").keys().next());
 						sectionObject.put("url", it.getJSONObject("url").keys().next());
@@ -284,14 +330,13 @@ public class ProcessParameter {
 					}
 				}
 			}
-			
-			
+
 			// Rule 2: search the nearest url
 			JSONObject entry = it.getJSONObject("url");
 			Iterator keys = entry.keys();
 			if (keys.hasNext()) {
-				String key = (String) keys.next();           
-				
+				String key = (String) keys.next();
+
 				if (templateNumber.matches("single")) {
 					// if it's a single page, search from all the text
 					if (Math.abs(paraLocation - entry.getInt(key)) < minimumDistance) {
@@ -322,22 +367,26 @@ public class ProcessParameter {
 		// find previous text
 		int templateLocation = anno.getStartNode().getOffset().intValue();
 		String appendTemplateText;
-		// the "parameter" string must not far from the startNode
-		if (anno.getEndNode().getOffset().intValue() - templateLocation > 100) {
-			// if the table is to big, just check the 100 character
-			// check the pre-text, if it contains parameter | argument
-			if (templateLocation <= 50) {
-				appendTemplateText = strAll.substring(templateLocation, templateLocation + 100);
-			} else {
-				appendTemplateText = strAll.substring(templateLocation - 50, templateLocation + 100);
-			}
-		} else {
-			if (templateLocation <= 50) {
-				appendTemplateText = strAll.substring(templateLocation, anno.getEndNode().getOffset().intValue());
-			} else {
-				appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
-			}
-		}
+		//1. the "parameter" string must not far from the startNode
+//		if (anno.getEndNode().getOffset().intValue() - templateLocation > 100) {
+//			// if the table is to big, just check the 100 character
+//			// check the pre-text, if it contains parameter | argument
+//			if (templateLocation <= 50) {
+//				appendTemplateText = strAll.substring(templateLocation, templateLocation + 100);
+//			} else {
+//				appendTemplateText = strAll.substring(templateLocation - 50, templateLocation + 100);
+//			}
+//		} else {
+//			if (templateLocation <= 50) {
+//				appendTemplateText = strAll.substring(templateLocation, anno.getEndNode().getOffset().intValue());
+//			} else {
+//				appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
+//			}
+//		}
+		
+		// change new method
+		appendTemplateText = strAll.substring(templateLocation - 13, templateLocation + 13);
+		
 		if (Pattern.compile("(parameter)|(argument)|(field)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
 				.find()) {
 			return true;

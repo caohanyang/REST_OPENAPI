@@ -19,9 +19,9 @@ import gate.AnnotationSet;
 import gate.Document;
 import gate.util.Out;
 
-public class ProcessResponse {
+public class ProcessRequest {
 
-	public boolean isResponseTemplate(String codeText, Annotation anno, String strAll) {
+	public boolean isRequestTemplate(String codeText, Annotation anno, String strAll) {
 		// not only check "parameter" in the table text
 		// but also need to check text just before the table
 		// maybe in the table maybe doesn't contain str "parameter"
@@ -48,7 +48,7 @@ public class ProcessResponse {
 		
 		if (codeText.startsWith("{") | codeText.startsWith("[")) {
 			
-			if (Pattern.compile("(example)|(response)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
+			if (Pattern.compile("(example)|(request)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
 					.find()) {
 				return true;
 			}
@@ -56,10 +56,10 @@ public class ProcessResponse {
 		return false;
 	}
 
-	public JSONObject generateResponse(JSONObject openAPI, String codeText, String strAll, List<JSONObject> infoJson,
-			Annotation anno, Document doc, ProcessMethod processMe, AnnotationSet annoCode) throws JSONException {
+	public JSONObject generateRequest(JSONObject openAPI, String requestText, String strAll, List<JSONObject> infoJson,
+			 Document doc, ProcessMethod processMe) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();
-		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, anno.getStartNode().getOffset(), "multiple", doc, "example");
+		JSONObject sectionJson = processPa.matchURL(requestText, strAll, infoJson, Long.valueOf(strAll.indexOf(requestText)), "multiple", doc, "example");
 		
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {
@@ -70,10 +70,10 @@ public class ProcessResponse {
 			try {
                 //need to fix
 				//remove all the whitespace 
-				codeText = codeText.replaceAll(" ", "");
-				Out.prln(codeText);
+				requestText = requestText.replaceAll(" ", "");
+				Out.prln(requestText);
 				
-				JSONObject codeObj = new JSONObject(codeText);
+//				JSONObject resObject = new JSONObject(requestText);
 					
 				if (openAPI.getJSONObject("paths").has(url)) {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
@@ -81,14 +81,8 @@ public class ProcessResponse {
 					
 					if (urlObject.has(action)) {
 						actionObject = urlObject.getJSONObject(action);
-						JSONObject correctObject = new JSONObject();
-						correctObject.put("description", "correct response");
-						correctObject.put("example", codeObj);
 						
-						JSONObject resObject = new JSONObject();
-						resObject.put("200", correctObject);
-						
-						actionObject.put("responses", resObject);
+						actionObject.put("request", requestText);
 					}
 					
 				}
