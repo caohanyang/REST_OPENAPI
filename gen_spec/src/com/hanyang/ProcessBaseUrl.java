@@ -206,7 +206,7 @@ public class ProcessBaseUrl {
 			  
 				String str = pathIter.next().toString();
 				
-				if (Settings.EXISTREQ) {
+				if (Settings.REQEXAMPLE) {
 					
 					// if the request example exist
 					// check the request

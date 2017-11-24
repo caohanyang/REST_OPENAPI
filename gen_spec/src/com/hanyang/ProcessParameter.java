@@ -461,7 +461,7 @@ public class ProcessParameter {
 		// change new method
 		appendTemplateText = strAll.substring(templateLocation - 13, templateLocation + 13);
 		
-		if (Pattern.compile("(parameter)|(argument)|(field)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
+		if (Pattern.compile(Settings.PARAKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
 				.find()) {
 			return true;
 		}

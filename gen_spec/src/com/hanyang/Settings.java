@@ -10,17 +10,29 @@ public class Settings {
 	// "\\s", "(.*?)"
 	public static String STUFFING = "\\s";	
 	// The request exists or not 
-	public static boolean EXISTREQ = true;
+	public static boolean REQEXAMPLE = true;
+	// The key word before the request
+	// EXAMPLE REQUEST
+	public static String REQKEY = "EXAMPLE REQUEST";
 	
 	// The response exists or not 
-	public static boolean EXISTRES = true;
+	public static boolean RESEXAMPLE = true;
+	// (example)|(response)
+	public static String RESKEY = "response";
+	
+	
+	// The parameters exist or not 
+	public static boolean EXISTPARA = true;
+	// (parameter)|(argument)|(field)
+	public static String PARAKEY = "(parameter)|(argument)|(field)";
 		
 	// first URL then parameters
 	public static boolean U1P2 = true;
 	
 	// parameter types
 	// Required. The location of the parameter. 
-	// Possible values are "query", "header", "path", "formData" or "body".
+	// Possible values are "query", "header", "path", "formData" or "body".     
+	// for one api, the parameters can be "mix"
 	public static String PARAIN = "query";
 	
 	// "https", "http", "null", "/"

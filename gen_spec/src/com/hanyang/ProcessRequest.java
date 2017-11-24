@@ -49,7 +49,7 @@ public class ProcessRequest {
 		
 		if (codeText.startsWith("{") | codeText.startsWith("[")) {
 			
-			if (Pattern.compile("(example)|(request)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
+			if (Pattern.compile(Settings.REQKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
 					.find()) {
 				return true;
 			}
@@ -62,7 +62,7 @@ public class ProcessRequest {
 		// find request example in the code
 		String regexAll;
 		
-		regexAll = "(?i)" + "EXAMPLE REQUEST" + "\\shttp";
+		regexAll = "(?i)" + Settings.REQKEY + "\\shttp";
 
 		Pattern p = Pattern.compile(regexAll);
 		Matcher requestMatcher = p.matcher(strAll);

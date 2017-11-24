@@ -49,7 +49,7 @@ public class ProcessResponse {
 		
 		if (codeText.startsWith("{") | codeText.startsWith("[")) {
 			
-			if (Pattern.compile("(example)|(response)", Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
+			if (Pattern.compile(Settings.RESKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
 					.find()) {
 				return true;
 			}
