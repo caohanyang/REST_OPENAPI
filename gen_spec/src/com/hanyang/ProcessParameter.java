@@ -109,7 +109,7 @@ public class ProcessParameter {
 					JSONObject keyObject = new JSONObject();
 					keyObject.put("name", dtStr);
 					keyObject.put("description", ddStr);
-					keyObject.put("in", "query");
+					keyObject.put("in", Settings.PARAIN);
 					keyObject.put("type", "integer");
 					keyObject.put("required", "required");
 					paraArray.put(keyObject);
