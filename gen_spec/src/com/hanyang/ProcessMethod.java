@@ -67,10 +67,15 @@ public class ProcessMethod {
 				return false;
 			}
 
-			// url minimum length
-			if (url.length() > "http://".length()) {
+			if (Settings.MODE == "http") {
+				// url minimum length
+				if (url.length() > "http://".length()) {
+					return true;
+				}
+			} else if (Settings.MODE == "/") {
 				return true;
 			}
+			
 		}
 
 		return false;
