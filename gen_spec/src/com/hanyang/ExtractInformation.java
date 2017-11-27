@@ -62,6 +62,10 @@ public class ExtractInformation {
 			CompareSet_PATH = "../CompareSet/" + API_NAME;
 		}
 
+		
+		// 0. get properties
+//		Settings.getPropertiesReader(API_NAME);
+		
 		// init gate
 		Gate.init();
 
@@ -100,6 +104,9 @@ public class ExtractInformation {
 		// 3. compare the json files and select the final one.
 		selectOpenAPI(compareSet);
 
+		// 4. write properties
+		Settings.writeProperties(CompareSet_PATH + "/"+ API_NAME);
+		
 	}
 
 	public static void generateOpenAPI(File[] listFiles) throws ResourceInstantiationException, JSONException, IOException, MalformedURLException {
@@ -263,7 +270,7 @@ public class ExtractInformation {
 
 	private static void getInfoJsonHttp(ProcessMethod processMe, String strAll, List<JSONObject> infoJson) throws JSONException {
 		String regexAll;
-		if (Settings.REVERSE == "no") {
+		if (Settings.REVERSE.equals("no")) {
 //			regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(.*?)" + scheme;
 			regexAll = "(?si)((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}"+ Settings.STUFFING + Settings.MODE;
 		} else {
@@ -281,7 +288,7 @@ public class ExtractInformation {
 			Out.prln("end:   " + matcher.end());
 			String matchStr;
 			try {
-				if (Settings.REVERSE == "no") {
+				if (Settings.REVERSE.equals("no")) {
 					// Fix 2: suppose the URL length < 100
 					// no reverse: get + url
 					matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
@@ -320,7 +327,7 @@ public class ExtractInformation {
 			}
 			// match endpoint
 			String regexHttp;
-			if (Settings.REVERSE == "no") {
+			if (Settings.REVERSE.equals("no")) {
 				regexHttp = Settings.MODE;
 			} else {
 				regexHttp = new StringBuilder(Settings.MODE).reverse().toString();
@@ -329,7 +336,7 @@ public class ExtractInformation {
 			Pattern endpoint = Pattern.compile(regexHttp, Pattern.CASE_INSENSITIVE);
 
 			Matcher endpointMatcher;
-			if (Settings.REVERSE == "no") {
+			if (Settings.REVERSE.equals("no")) {
 				endpointMatcher = endpoint.matcher(matchStr);
 				if (endpointMatcher.find()) {
 					Out.prln("urlStart： " + endpointMatcher.start());

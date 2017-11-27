@@ -65,9 +65,9 @@ public class ProcessParameter {
 
 		JSONArray paraArray = new JSONArray();
 
-		if (Settings.TEMPLATE == "table") {
+		if (Settings.TEMPLATE.equals("table")) {
 			paraArray = parseTable(paraStr, anno, doc);
-		} else if (Settings.TEMPLATE == "list") {
+		} else if (Settings.TEMPLATE.equals("list")) {
 			paraArray = parseList(paraStr, anno, doc);
 		}
 
@@ -296,11 +296,11 @@ public class ProcessParameter {
 	public void handleParaTemplate(JSONObject openAPI, Document doc,
 			ProcessMethod processMe, String strAll, List<JSONObject> infoJson,
 			AnnotationSet annoOrigin) throws JSONException {
-		if (Settings.TEMPLATE == "table") {
+		if (Settings.TEMPLATE.equals("table")) {
 			// 1 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
 			searchParameter(openAPI, doc, processMe, strAll, infoJson, annoTable);
-		} else if (Settings.TEMPLATE == "list") {
+		} else if (Settings.TEMPLATE.equals("list")) {
 			AnnotationSet annoList = annoOrigin.get("dl");
 			if (annoList.isEmpty()) {
 				// this is unordered list

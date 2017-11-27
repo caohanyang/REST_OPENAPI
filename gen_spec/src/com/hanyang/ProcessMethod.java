@@ -31,7 +31,7 @@ public class ProcessMethod {
 		JSONObject actionObject = new JSONObject();
 		actionObject.put(action.toUpperCase(), new JSONObject());
 
-		if (isRealUrl(url) | Settings.MODE == "/") {
+		if (isRealUrl(url) | Settings.MODE.equals("/")) {
 			if (urlObject.isNull(url)) {
 				// if url object is null, add directly for the first time
 				urlObject.put(url, actionObject);
@@ -67,12 +67,12 @@ public class ProcessMethod {
 				return false;
 			}
 
-			if (Settings.MODE == "http") {
+			if (Settings.MODE.equals("http")) {
 				// url minimum length
 				if (url.length() > "http://".length()) {
 					return true;
 				}
-			} else if (Settings.MODE == "/") {
+			} else if (Settings.MODE.equals("/")) {
 				return true;
 			}
 			
@@ -106,7 +106,7 @@ public class ProcessMethod {
 			int acLocation = acObject.getInt(actionFinal);
 			int urlLocation = urObject.getInt(urlFinal);
 
-			if (Settings.REVERSE == "no") {
+			if (Settings.REVERSE.equals("no")) {
 				if (Math.abs(acLocation - urlLocation) < miniMum) {
 					miniMum = Math.abs(acLocation - urlLocation);
 					properPair = Pair.of(actionFinal, urlFinal);

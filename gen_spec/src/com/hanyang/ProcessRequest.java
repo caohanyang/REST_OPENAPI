@@ -63,7 +63,7 @@ public class ProcessRequest {
 		// find request example in the code
 		String regexAll;
 		
-        Out.prln(openAPI.toString(4));
+//        Out.prln(openAPI.toString(4));
 		regexAll = "(?si)" + Settings.REQKEY + Settings.REQMIDDLE + Settings.REQEXAMPLE;
 
 		Pattern p = Pattern.compile(regexAll);
