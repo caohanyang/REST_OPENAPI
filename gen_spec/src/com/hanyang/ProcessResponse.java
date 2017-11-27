@@ -85,7 +85,7 @@ public class ProcessResponse {
 	public JSONObject generateResponse(JSONObject openAPI, String codeText, String strAll, List<JSONObject> infoJson,
 			Annotation anno, Document doc, ProcessMethod processMe, AnnotationSet annoCode) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();
-		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, anno.getStartNode().getOffset(), "multiple", doc, "example");
+		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, anno.getStartNode().getOffset(), doc, "example");
 		
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {
@@ -99,7 +99,13 @@ public class ProcessResponse {
 				codeText = codeText.replaceAll(" ", "");
 				Out.prln(codeText);
 				
-				JSONObject codeObj = new JSONObject(codeText);
+				Object codeObj = null;
+				if (codeText.startsWith("{")) {
+					codeObj = new JSONObject(codeText);
+				} else if (codeText.startsWith("[")) {
+					codeObj = new JSONArray(codeText);
+				}
+				
 					
 				if (openAPI.getJSONObject("paths").has(url)) {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);

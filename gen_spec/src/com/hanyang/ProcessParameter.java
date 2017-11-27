@@ -24,10 +24,10 @@ import gate.util.Out;
 
 public class ProcessParameter {
 	public JSONObject generateParameter(JSONObject openAPI, String paraStr, String fullText, List<JSONObject> infoJson,
-			Annotation anno, Document doc, ProcessMethod processMe, String templateNumber, String template)
+			Annotation anno, Document doc, ProcessMethod processMe)
 			throws JSONException {
 
-		JSONObject sectionJson = matchURL(paraStr, fullText, infoJson, anno.getStartNode().getOffset(), templateNumber,
+		JSONObject sectionJson = matchURL(paraStr, fullText, infoJson, anno.getStartNode().getOffset(),
 				doc, "parameter");
 
 		// if the sectionJson is null, showing that it doesn't match
@@ -40,14 +40,14 @@ public class ProcessParameter {
 				// 1. we add url/action into openAPI now.
 				// because here we have known that each table have match one url
 				// some urls would not be used.
-				processMe.addUrl(openAPI, url, action, null);
+				processMe.addUrl(openAPI, url, action);
 
 				try {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
 					// 1. find the action
 					JSONObject paraAll = new JSONObject();
 					// parser the parameters
-					JSONArray paraArray = parseParameter(paraStr, anno, doc, template);
+					JSONArray paraArray = parseParameter(paraStr, anno, doc);
 					paraAll.put("parameters", paraArray);
 					urlObject.put(action, paraAll);
 				} catch (Exception e) {
@@ -60,14 +60,14 @@ public class ProcessParameter {
 		return openAPI;
 	}
 
-	public JSONArray parseParameter(String paraStr, Annotation anno, Document doc, String template)
+	public JSONArray parseParameter(String paraStr, Annotation anno, Document doc)
 			throws JSONException {
 
 		JSONArray paraArray = new JSONArray();
 
-		if (template == "table") {
+		if (Settings.TEMPLATE == "table") {
 			paraArray = parseTable(paraStr, anno, doc);
-		} else if (template == "list") {
+		} else if (Settings.TEMPLATE == "list") {
 			paraArray = parseList(paraStr, anno, doc);
 		}
 
@@ -293,32 +293,31 @@ public class ProcessParameter {
 
 	}
 
-	public void handleParaTemplate(JSONObject openAPI, String template, String number, Document doc,
-			ProcessMethod processMe, String scheme, String reverse, String strAll, List<JSONObject> infoJson,
+	public void handleParaTemplate(JSONObject openAPI, Document doc,
+			ProcessMethod processMe, String strAll, List<JSONObject> infoJson,
 			AnnotationSet annoOrigin) throws JSONException {
-		if (template == "table") {
+		if (Settings.TEMPLATE == "table") {
 			// 1 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
-			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoTable, reverse, scheme);
-		} else if (template == "list") {
+			searchParameter(openAPI, doc, processMe, strAll, infoJson, annoTable);
+		} else if (Settings.TEMPLATE == "list") {
 			AnnotationSet annoList = annoOrigin.get("dl");
 			if (annoList.isEmpty()) {
 				// this is unordered list
 				annoList = annoOrigin.get("ul");
 			}
 			// 2 get list annotation
-			searchParameter(openAPI, number, template, doc, processMe, strAll, infoJson, annoList, reverse, scheme);
+			searchParameter(openAPI, doc, processMe, strAll, infoJson, annoList);
 		}
 	}
 	
-	public void searchParameter(JSONObject openAPI, String number, String template, Document doc,
-			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate,
-			String reverse, String scheme) throws JSONException {
+	public void searchParameter(JSONObject openAPI, Document doc,
+			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate) throws JSONException {
 		// 5.3 for each page, set findParaTable = False
 		boolean findParaTemplate = false;
 		// 5.3.1 Test if the page contains multiple parameter table or not
 		Iterator<Annotation> testIter = annoTemplate.iterator();
-		String templateNumber = number;
+		String templateNumber = Settings.NUMBER;
 		// int numTemplate = 0;
 		// while (testIter.hasNext()) {
 		// Annotation anno = (Annotation) testIter.next();
@@ -343,7 +342,7 @@ public class ProcessParameter {
 			// add the noPara url
 			// processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
 			// add all the url/action pair
-			processMe.addAllParaURL(openAPI, strAll, infoJson, reverse, scheme);
+			processMe.addAllParaURL(openAPI, strAll, infoJson);
 		}
 		
 		// add parameters to those urls
@@ -354,8 +353,7 @@ public class ProcessParameter {
 				findParaTemplate = true;
 				Out.prln("==========TABLE or LIST=================");
 				Out.prln(templateText);
-				processPa.generateParameter(openAPI, templateText, strAll, infoJson, anno, doc, processMe,
-						templateNumber, template);
+				processPa.generateParameter(openAPI, templateText, strAll, infoJson, anno, doc, processMe);
 			}
 		}
 
@@ -363,8 +361,7 @@ public class ProcessParameter {
 		
 	}
 	
-	public JSONObject matchURL(String paraStr, String fullText, List<JSONObject> infoJson, Long paraLocation,
-			String templateNumber, Document doc, String mode) throws JSONException {
+	public JSONObject matchURL(String paraStr, String fullText, List<JSONObject> infoJson, Long paraLocation, Document doc, String mode) throws JSONException {
 		JSONObject sectionObject = new JSONObject();
 		int minimumDistance = Integer.MAX_VALUE;
 		Out.prln("---------para location-------");
@@ -409,7 +406,7 @@ public class ProcessParameter {
 				if (keys.hasNext()) {
 					String key = (String) keys.next();
 
-					if (templateNumber.matches("single")) {
+					if (Settings.NUMBER.matches("single")) {
 						// if it's a single page, search from all the text
 						if (Math.abs(paraLocation - entry.getInt(key)) < minimumDistance) {
 							minimumDistance = (int) Math.abs((paraLocation - entry.getInt(key)));

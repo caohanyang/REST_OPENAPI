@@ -9,11 +9,16 @@ public class Settings {
 	// The things between Http verbs and Url:
 	// "\\s", "(.*?)"
 	public static String STUFFING = "\\s";	
-	// The request exists or not 
-	public static boolean REQEXAMPLE = true;
+	
 	// The key word before the request
 	// EXAMPLE REQUEST
-	public static String REQKEY = "EXAMPLE REQUEST";
+	public static String REQKEY = "request";
+	// \\s \\s(.*?)
+	public static String REQMIDDLE = "\\s.{0,20}";
+	// The request exists or not 
+	// http \\{(.*?)\\} no
+	public static String REQEXAMPLE = "\\{(.*?)\\}";
+	
 	
 	// The response exists or not 
 	public static boolean RESEXAMPLE = true;
@@ -35,14 +40,36 @@ public class Settings {
 	// for one api, the parameters can be "mix"
 	public static String PARAIN = "query";
 	
-	// "https", "http", "null", "/"
-	public static List<String> MODE = new ArrayList<String>(Arrays.asList("/"));
+	
+	
+	// in the case we don't have example http request, we need to globally search for the base url.
+	public static boolean SEARCHBASE = true;
+	
+	// for some url contains URL parameters
+	// It will present URL in different tags, which causes whitespace
+	public static String URLMIDDLE = "";
+	public static String URLAFTER = " ";
+	
+	
 	// "no", "yes"
-	public static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no"));
+	public static String REVERSE = "no";
+	// "https", "http", "/"
+	public static String MODE ="/";
 	// "table", "list"
-	public static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("list"));
+	public static String TEMPLATE = "list";
 	// "single", "multiple"
-	public static List<String> NUMBER = new ArrayList<String>(Arrays.asList("multiple"));
+	public static String NUMBER = "multiple";
 	// "del", "delete"
-	public static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("del"));
+	public static String ABBREV_DELETE = "delete";
+	
+	// "no", "yes"
+//	public static List<String> REVERSE = new ArrayList<String>(Arrays.asList("no"));
+//	// "https", "http", "/"
+//	public static List<String> MODE = new ArrayList<String>(Arrays.asList("/"));
+//	// "table", "list"
+//	public static List<String> TEMPLATE = new ArrayList<String>(Arrays.asList("list"));
+//	// "single", "multiple"
+//	public static List<String> NUMBER = new ArrayList<String>(Arrays.asList("multiple"));
+//	// "del", "delete"
+//	public static List<String> ABBREV_DELETE = new ArrayList<String>(Arrays.asList("delete"));
 }

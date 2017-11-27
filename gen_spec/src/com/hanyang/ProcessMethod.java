@@ -24,14 +24,14 @@ public class ProcessMethod {
 		return openAPI;
 	}
 
-	public JSONObject addUrl(JSONObject openAPI, String url, String action, String scheme) throws JSONException {
+	public JSONObject addUrl(JSONObject openAPI, String url, String action) throws JSONException {
 		JSONObject urlObject = openAPI.getJSONObject("paths");
 		Out.prln("---------match--action-------------");
 		Out.prln(action);
 		JSONObject actionObject = new JSONObject();
 		actionObject.put(action.toUpperCase(), new JSONObject());
 
-		if (isRealUrl(url) | scheme == "null") {
+		if (isRealUrl(url) | Settings.MODE == "/") {
 			if (urlObject.isNull(url)) {
 				// if url object is null, add directly for the first time
 				urlObject.put(url, actionObject);
@@ -76,17 +76,17 @@ public class ProcessMethod {
 		return false;
 	}
 
-	public void addNoParaUrl(JSONObject openAPI, String strAll, List<JSONObject> infoJson, String reverse)
+	public void addNoParaUrl(JSONObject openAPI, String strAll, List<JSONObject> infoJson)
 			throws JSONException {
 		// choose the most proper url/action pair
-		Pair<String, String> properPair = solveConflicts(strAll, infoJson, reverse);
+		Pair<String, String> properPair = solveConflicts(strAll, infoJson);
 		// handle it badly, need to fix:
 		String action = properPair.getKey();
 		String url = properPair.getValue();
-		addUrl(openAPI, url, action, null);
+		addUrl(openAPI, url, action);
 	}
 
-	public Pair<String, String> solveConflicts(String strAll, List<JSONObject> infoJson, String reverse)
+	public Pair<String, String> solveConflicts(String strAll, List<JSONObject> infoJson)
 			throws JSONException {
 		// if the are no parameter table in the page
 		// if one URL have two actions, solve the conflicts
@@ -101,7 +101,7 @@ public class ProcessMethod {
 			int acLocation = acObject.getInt(actionFinal);
 			int urlLocation = urObject.getInt(urlFinal);
 
-			if (reverse == "no") {
+			if (Settings.REVERSE == "no") {
 				if (Math.abs(acLocation - urlLocation) < miniMum) {
 					miniMum = Math.abs(acLocation - urlLocation);
 					properPair = Pair.of(actionFinal, urlFinal);
@@ -231,8 +231,7 @@ public class ProcessMethod {
 		}
 	}
 
-	public void addAllParaURL(JSONObject openAPI, String strAll, List<JSONObject> infoJson, String reverse,
-			String scheme) throws JSONException {
+	public void addAllParaURL(JSONObject openAPI, String strAll, List<JSONObject> infoJson) throws JSONException {
 		// choose the most proper url/action pair
 		for (int i = 0; i < infoJson.size(); i++) {
 			JSONObject acObject = infoJson.get(i).getJSONObject("action");
@@ -240,7 +239,7 @@ public class ProcessMethod {
 			String actionFinal = acObject.keys().next().toString();
 			String urlFinal = urObject.keys().next().toString();
 
-			addUrl(openAPI, urlFinal, actionFinal, scheme);
+			addUrl(openAPI, urlFinal, actionFinal);
 		}
 
 	}

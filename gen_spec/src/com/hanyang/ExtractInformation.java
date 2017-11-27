@@ -71,45 +71,46 @@ public class ExtractInformation {
 		new File(CompareSet_PATH).mkdirs();
 		File compareSet = new File(CompareSet_PATH);
 
-		// 2. generate openAPI according to pattern
-		for (Iterator<String> sIterator = Settings.MODE.iterator(); sIterator.hasNext();) {
-			String mode = sIterator.next();
+//		// 2. generate openAPI according to pattern
+//		for (Iterator<String> sIterator = Settings.MODE.iterator(); sIterator.hasNext();) {
+//			String mode = sIterator.next();
+//
+//			for (Iterator<String> rIterator = Settings.REVERSE.iterator(); rIterator.hasNext();) {
+//				String reverse = rIterator.next();
+//
+//				for (Iterator<String> tIterator = Settings.TEMPLATE.iterator(); tIterator.hasNext();) {
+//					String template = tIterator.next();
+//
+//					for (Iterator<String> nIterator = Settings.NUMBER.iterator(); nIterator.hasNext();) {
+//						String number = nIterator.next();
+//
+//						for (Iterator<String> dIterator = Settings.ABBREV_DELETE.iterator(); dIterator.hasNext();) {
+//							String abbrev = dIterator.next();
+//							// generate different openAPI
+//							generateOpenAPI(listFiles, mode, reverse, template, number, abbrev);
+//							System.gc();
+//						}
+//					}
+//				}
+//			}
+//		}
 
-			for (Iterator<String> rIterator = Settings.REVERSE.iterator(); rIterator.hasNext();) {
-				String reverse = rIterator.next();
-
-				for (Iterator<String> tIterator = Settings.TEMPLATE.iterator(); tIterator.hasNext();) {
-					String template = tIterator.next();
-
-					for (Iterator<String> nIterator = Settings.NUMBER.iterator(); nIterator.hasNext();) {
-						String number = nIterator.next();
-
-						for (Iterator<String> dIterator = Settings.ABBREV_DELETE.iterator(); dIterator.hasNext();) {
-							String abbrev = dIterator.next();
-							// generate different openAPI
-							generateOpenAPI(listFiles, mode, reverse, template, number, abbrev);
-							System.gc();
-						}
-					}
-				}
-			}
-		}
-
+		generateOpenAPI(listFiles);
+		
 		// 3. compare the json files and select the final one.
 		selectOpenAPI(compareSet);
 
 	}
 
-	public static void generateOpenAPI(File[] listFiles, String mode, String reverse, String template, String number,
-			String abbrev) throws ResourceInstantiationException, JSONException, IOException, MalformedURLException {
+	public static void generateOpenAPI(File[] listFiles) throws ResourceInstantiationException, JSONException, IOException, MalformedURLException {
 		// 2.1 initial the specification
 		GenerateMain mainObject = new GenerateMain();
 		JSONObject openAPI = mainObject.generateStructure();
 		ProcessBaseUrl processBa = new ProcessBaseUrl();
 		String baseUrl = null;
 		// 2.2. different mode
-		// if it's null mode, find the common base url first
-		if (mode == "null") {
+		// if it's search mode, find the common base url first
+		if (Settings.SEARCHBASE == true) {
 			baseUrl = processBa.searchBaseUrl(listFiles, API_NAME);
 			baseUrl = processBa.cleanBaseUrl(baseUrl);
 			Out.prln(baseUrl);
@@ -123,20 +124,19 @@ public class ExtractInformation {
 			String type = new Tika().detect(listFiles[i].getPath());
 			// only detect html
 			if (type.equals("text/html")) {
-				executeFile(listFiles[i].getPath(), openAPI, mode, template, number, abbrev, baseUrl, reverse);
+				executeFile(listFiles[i].getPath(), openAPI, baseUrl);
 			}
 		}
 
 		// 2.4. prune openAPI
-		openAPI = processBa.handleBaseUrl(openAPI, mode, baseUrl);
+		openAPI = processBa.handleBaseUrl(openAPI, baseUrl);
 
 		// 2.5. write to file
-		writeOpenAPI(openAPI, mode, template, number, abbrev, reverse);
+		writeOpenAPI(openAPI);
 
 	}
 
-	public static void executeFile(String path, JSONObject openAPI, String scheme, String template, String number,
-			String abbrev, String baseUrl, String reverse)
+	public static void executeFile(String path, JSONObject openAPI, String baseUrl)
 			throws ResourceInstantiationException, JSONException, IOException {
 		URL u = Paths.get(path).toUri().toURL();
 		FeatureMap params = Factory.newFeatureMap();
@@ -150,11 +150,11 @@ public class ExtractInformation {
 		ProcessMethod processMe = new ProcessMethod();
 		processMe.generateDefault(openAPI);
 
-		if (scheme == "null") {
-			nullMode(openAPI, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME, reverse, scheme);
-		} else {
-			httpMode(openAPI, template, number, abbrev, doc, textAll, processMe, scheme, reverse);
-		}
+//		if (mode == "null") {
+//			nullMode(openAPI, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME, reverse, mode);
+//		} else {
+			httpMode(openAPI, doc, textAll, processMe);
+//		}
 
 	}
 
@@ -181,7 +181,7 @@ public class ExtractInformation {
 
 		// 3. handle template to find parameter
 		ProcessParameter processPa = new ProcessParameter();
-		processPa.handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
+		processPa.handleParaTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 
 		// 4. handle code template
 		ProcessResponse processRe = new ProcessResponse();
@@ -233,8 +233,7 @@ public class ExtractInformation {
 		}
 	}
 
-	private static void httpMode(JSONObject openAPI, String template, String number, String abbrev, Document doc,
-			DocumentContent textAll, ProcessMethod processMe, String scheme, String reverse) throws JSONException {
+	private static void httpMode(JSONObject openAPI,  Document doc, DocumentContent textAll, ProcessMethod processMe) throws JSONException {
 		// 4.1 search for the GET https
 		String strAll = textAll.toString();
 		List<JSONObject> infoJson = new ArrayList<JSONObject>();
@@ -244,14 +243,14 @@ public class ExtractInformation {
 		AnnotationSet annoOrigin = doc.getAnnotations("Original markups");
 
 		// 2 generate info json
-		getInfoJsonHttp(abbrev, processMe, scheme, reverse, strAll, infoJson);
+		getInfoJsonHttp(processMe, strAll, infoJson);
 
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
 
 		// 3 handle parameter
 		ProcessParameter processPa = new ProcessParameter();
-		processPa.handleParaTemplate(openAPI, template, number, doc, processMe, scheme, reverse, strAll, infoJson, annoOrigin);
+		processPa.handleParaTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 
 		// 4. handle response template
 		ProcessResponse processRe = new ProcessResponse();
@@ -262,15 +261,14 @@ public class ExtractInformation {
 		processReq.handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
-	private static void getInfoJsonHttp(String abbrev, ProcessMethod processMe, String scheme, String reverse,
-			String strAll, List<JSONObject> infoJson) throws JSONException {
+	private static void getInfoJsonHttp(ProcessMethod processMe, String strAll, List<JSONObject> infoJson) throws JSONException {
 		String regexAll;
-		if (reverse == "no") {
+		if (Settings.REVERSE == "no") {
 //			regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(.*?)" + scheme;
-			regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}"+ Settings.STUFFING + scheme;
+			regexAll = "(?si)((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}"+ Settings.STUFFING + Settings.MODE;
 		} else {
 //			regexAll = "(?si)" + scheme + "(.*?)\\s((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}";
-			regexAll = "(?si)" + scheme + Settings.STUFFING +"((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}";
+			regexAll = "(?si)" +  Settings.MODE + Settings.STUFFING +"((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}";
 		}
 		Pattern p = Pattern.compile(regexAll);
 		Matcher matcher = p.matcher(strAll);
@@ -283,7 +281,7 @@ public class ExtractInformation {
 			Out.prln("end:   " + matcher.end());
 			String matchStr;
 			try {
-				if (reverse == "no") {
+				if (Settings.REVERSE == "no") {
 					// Fix 2: suppose the URL length < 100
 					// no reverse: get + url
 					matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
@@ -299,7 +297,7 @@ public class ExtractInformation {
 			Out.prln(matchStr);
 
 			// match reversed action
-			String actionRegex = "((teg)|(tsop)|(" + new StringBuilder(abbrev).reverse().toString()
+			String actionRegex = "((teg)|(tsop)|(" + new StringBuilder(Settings.ABBREV_DELETE).reverse().toString()
 					+ ")|(tup)|(hctap))";
 			Pattern action = Pattern.compile(actionRegex, Pattern.CASE_INSENSITIVE);
 			// match the reversed string, from right to left
@@ -309,7 +307,7 @@ public class ExtractInformation {
 				// find the action which is nearest to http
 				Out.prln("matchStart： " + matcherAction.start());
 				// Out.prln("==========real Action============");
-				int acOffset = matchStr.length() - matcherAction.start() - scheme.length();
+				int acOffset = matchStr.length() - matcherAction.start() - Settings.MODE.length();
 				int acLocation = startIndex + acOffset;
 				// Out.prln(strAll.substring(acLocation, matcher.end()));
 				Out.prln("==========REST Action============");
@@ -322,24 +320,37 @@ public class ExtractInformation {
 			}
 			// match endpoint
 			String regexHttp;
-			if (reverse == "no") {
-				regexHttp = scheme;
+			if (Settings.REVERSE == "no") {
+				regexHttp = Settings.MODE;
 			} else {
-				regexHttp = new StringBuilder(scheme).reverse().toString();
+				regexHttp = new StringBuilder(Settings.MODE).reverse().toString();
 			}
 
 			Pattern endpoint = Pattern.compile(regexHttp, Pattern.CASE_INSENSITIVE);
 
 			Matcher endpointMatcher;
-			if (reverse == "no") {
+			if (Settings.REVERSE == "no") {
 				endpointMatcher = endpoint.matcher(matchStr);
 				if (endpointMatcher.find()) {
 					Out.prln("urlStart： " + endpointMatcher.start());
 					int uLocation = startIndex + endpointMatcher.start();
+					
+					// handle url
 					urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
-
+                    Out.prln("raw url: " + urlString);
+					
 					// in some cases, you need to remove whitespace  /v2/projects/ project_id => /v2/projects/project_id
-					urlString = urlString.replace(" ", "");
+					if (Settings.URLMIDDLE.length()!= 0) {
+						urlString = urlString.replace(Settings.URLMIDDLE, "");
+					}
+					
+				    //	/groups Parameters => /groups
+					if (Settings.URLAFTER.length()!= 0) {
+						urlString = urlString.split(Settings.URLAFTER)[0];
+					}
+					
+					Out.prln("refine url: " + urlString);
+					
 					// handle url, make it short and clean
 					sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
 				}
@@ -351,7 +362,7 @@ public class ExtractInformation {
 					Out.prln("matchStart： " + endpointMatcher.start());
 					Out.prln("matchEnd： " + endpointMatcher.end());
 					// Out.prln("==========real Action============");
-					int urOffset = matchStr.length() - endpointMatcher.start() - scheme.length();
+					int urOffset = matchStr.length() - endpointMatcher.start() - Settings.MODE.length();
 					int urLocation = startIndex + urOffset;
 					// Out.prln(strAll.substring(urLocation,
 					// endpointMatcher.end()));
@@ -392,11 +403,10 @@ public class ExtractInformation {
 	}
 
 
-	public static void writeOpenAPI(JSONObject openAPI, String scheme, String template, String number, String abbrev,
-			String reverse) throws IOException {
+	public static void writeOpenAPI(JSONObject openAPI) throws IOException {
 
 		// Print pretty openAPI
-		String fileName = scheme + "_" + template + "_" + number + "_" + abbrev + "_" + reverse + ".json";
+		String fileName = Settings.MODE + "_" + Settings.TEMPLATE + "_" + Settings.NUMBER + "_" + Settings.ABBREV_DELETE + "_" + Settings.REVERSE + ".json";
 		writeFile(openAPI.toString(), fileName);
 	}
 

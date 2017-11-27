@@ -33,29 +33,29 @@ import gate.creole.ResourceInstantiationException;
 import gate.util.Out;
 
 public class ProcessBaseUrl {
-	public JSONObject handleBaseUrl(JSONObject openAPI, String mode, String baseUrl)
+	public JSONObject handleBaseUrl(JSONObject openAPI, String baseUrl)
 			throws JSONException, MalformedURLException {
 
-		if (mode == "null") {
-			openAPI = nullBaseUrl(openAPI, mode, baseUrl);
+		if (Settings.SEARCHBASE) {
+			openAPI = nullBaseUrl(openAPI, baseUrl);
 		} else {
-			openAPI = httpBaseUrl(openAPI, mode);
+			openAPI = httpBaseUrl(openAPI);
 		}
 
 		return openAPI;
 	}
 
-	private JSONObject nullBaseUrl(JSONObject openAPI, String mode, String baseUrl)
+	private JSONObject nullBaseUrl(JSONObject openAPI, String baseUrl)
 			throws MalformedURLException, JSONException {
 
 		// 1. adjust specification
 		if (baseUrl != null) {
-			openAPI = adjustSpec(openAPI, mode, baseUrl);
+			openAPI = adjustSpec(openAPI, baseUrl);
 		}
 		return openAPI;
 	}
 
-	private JSONObject httpBaseUrl(JSONObject openAPI, String mode) throws JSONException, MalformedURLException {
+	private JSONObject httpBaseUrl(JSONObject openAPI) throws JSONException, MalformedURLException {
 		// 1. first remove the unrelated url
 //	    Out.prln(openAPI.toString(4));
 		List<String> urlList = pruneUrl(openAPI);
@@ -68,7 +68,7 @@ public class ProcessBaseUrl {
 				commonUrl = commonUrl.substring(0, commonUrl.length() - 1);
 			}
 			// 3. adjust specification
-			openAPI = adjustSpec(openAPI, mode, commonUrl);
+			openAPI = adjustSpec(openAPI, commonUrl);
 		}
 		return openAPI;
 	}
@@ -206,7 +206,7 @@ public class ProcessBaseUrl {
 			  
 				String str = pathIter.next().toString();
 				
-				if (Settings.REQEXAMPLE) {
+				if (Settings.REQEXAMPLE.equals("http")) {
 					
 					// if the request example exist
 					// check the request
@@ -258,7 +258,7 @@ public class ProcessBaseUrl {
 
 	}
 
-	public JSONObject adjustSpec(JSONObject openAPI, String scheme, String baseUrl)
+	public JSONObject adjustSpec(JSONObject openAPI, String baseUrl)
 			throws MalformedURLException, JSONException {
 		try {
 			URL url = new URL(baseUrl);
