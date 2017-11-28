@@ -46,7 +46,7 @@ public class ProcessParameter {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
 					// 1. find the action
 					JSONObject actionObject = urlObject.getJSONObject(action);
-					JSONObject paraAll = new JSONObject();
+					
 					// parser the parameters
 					JSONArray paraArray = parseParameter(url, actionObject, paraStr, anno, doc);
 					
@@ -108,11 +108,15 @@ public class ProcessParameter {
 					String ddStr = gate.Utils.stringFor(doc, ddElement);
 					// construct json
 					JSONObject keyObject = new JSONObject();
-					keyObject.put("name", dtStr);
-					keyObject.put("description", ddStr);
-					keyObject.put("in", findParaType(url, actionObject));
+					
+					String key = dtStr.split(" ")[0];
+					String value = ddStr;
+					
+					keyObject.put("name", key);
+					keyObject.put("description", value);
+					keyObject.put("in", findParaType(url, actionObject, key));
 					keyObject.put("type", "integer");
-					keyObject.put("required", "required");
+					keyObject.put("required", true);
 					paraArray.put(keyObject);
 				}
 
@@ -141,9 +145,13 @@ public class ProcessParameter {
 								// construct json
 								String[] pArray = liStr.split("\n");
 								JSONObject keyObject = new JSONObject();
-								keyObject.put("name", pArray[0]);
-								keyObject.put("description", pArray[1]);
-								keyObject.put("in", findParaType(url, actionObject));
+								
+								String key = pArray[0];
+								String value = pArray[1];
+								
+								keyObject.put("name", key);
+								keyObject.put("description", value);
+								keyObject.put("in", findParaType(url, actionObject, key));
 								keyObject.put("type", "integer");
 								keyObject.put("required", true);
 								paraArray.put(keyObject);
@@ -160,7 +168,7 @@ public class ProcessParameter {
 		return paraArray;
 	}
 
-	private String findParaType(String url, JSONObject actionObject) throws JSONException {
+	private String findParaType(String url, JSONObject actionObject, String key) throws JSONException {
 		// find parameter type
 		// Possible values are "query", "header", "path", "formData" or "body".
 		if (actionObject.has("request")) {
@@ -168,6 +176,10 @@ public class ProcessParameter {
 			if (request.startsWith("{") | request.startsWith("[")) {
 				return "body";
 			}
+		}
+		
+		if (url.contains(key)) {
+			return "path";
 		}
 		return Settings.PARAIN;
 	}
@@ -232,9 +244,9 @@ public class ProcessParameter {
 				String value = trStr.substring(trStr.indexOf(trStr.split(" ")[1]));
 				keyObject.put("name", key);
 				keyObject.put("description", value);
-				keyObject.put("in", findParaType(url, actionObject));
+				keyObject.put("in", findParaType(url, actionObject, key));
 				keyObject.put("type", "integer");
-				keyObject.put("required", "required");
+				keyObject.put("required", true);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

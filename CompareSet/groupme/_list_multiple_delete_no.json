@@ -75,36 +75,35 @@
         "parameters": [
           {
             "in": "body",
-            "name": "name required",
+            "name": "name",
             "description": "string — Primary name of the group. Maximum 140 characters",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "description",
             "description": "string — A subheading for the group. Maximum 255 characters",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "image_url",
             "description": "string — GroupMe Image Service URL",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "share",
             "description": "boolean — If you pass a true value for share , we'll generate a share URL. Anybody with this URL can join the group.",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       },
       "GET": {
-        "request": "[ { \"id\": \"1234567890\", \"name\": \"Family\", \"type\": \"private\", \"description\": \"Coolest Family Ever\", \"image_url\": \"https://i.groupme.com/123456789\", \"creator_user_id\": \"1234567890\", \"created_at\": 1302623328, \"updated_at\": 1302623328, \"members\": [ { \"user_id\": \"1234567890\", \"nickname\": \"Jane\", \"muted\": false, \"image_url\": \"https://i.groupme.com/123456789\" } ], \"share_url\": \"https://groupme.com/join_group/1234567890/SHARE_TOKEN\", \"messages\": { \"count\": 100, \"last_message_id\": \"1234567890\", \"last_message_created_at\": 1302623328, \"preview\": { \"nickname\": \"Jane\", \"text\": \"Hello world\", \"image_url\": \"https://i.groupme.com/123456789\", \"attachments\": [ { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"location\", \"lat\": \"40.738206\", \"lng\": \"-73.993285\", \"name\": \"GroupMe HQ\" }, { \"type\": \"split\", \"token\": \"SPLIT_TOKEN\" }, { \"type\": \"emoji\", \"placeholder\": \"☃\", \"charmap\": [ [ 1, 42 ], [ 2, 34 ] ] } ] } } } ]",
         "responses": {
           "200": {
             "description": "correct response",
@@ -177,18 +176,18 @@
         },
         "parameters": [
           {
-            "in": "body",
+            "in": "query",
             "name": "page",
             "description": "integer — Fetch a particular page of results. Defaults to 1.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
-            "in": "body",
+            "in": "query",
             "name": "per_page",
             "description": "integer — Define page size. Defaults to 10.",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -220,28 +219,28 @@
             "name": "avatar_url",
             "description": "string — URL to valid JPG/PNG/GIF image. URL will be converted into an image service link (http://i.groupme.com/....)",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "name",
             "description": "string — Name must be of the form FirstName LastName",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "email",
             "description": "string — Email address. Must be in name@domain.com form.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "zip_code",
             "description": "string — Zip code.",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -252,17 +251,17 @@
         "parameters": [
           {
             "in": "body",
-            "name": "duration required",
+            "name": "duration",
             "description": "integer",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "registration_id",
             "description": "string — The push notification ID/token that should be suppressed during SMS mode. If this is omitted, both SMS and push notifications will be delivered to the device.",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -386,10 +385,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "period required",
+            "name": "period",
             "description": "string — one of: 'day', 'week', or 'month'",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -399,10 +398,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "bot_id required",
+            "name": "bot_id",
             "description": "",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -425,22 +424,21 @@
         "parameters": [
           {
             "in": "query",
-            "name": "user required",
+            "name": "user",
             "description": "string — your user id.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
-            "name": "otherUser required",
+            "name": "otherUser",
             "description": "string — user id of person you want to block.",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       },
       "GET": {
-        "request": "{ \"blocks\": [ { \"user_id\": \"1234567890\", \"blocked_user_id\": \"1234567890\", \"created_at\": 1302623328 } ] }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -459,7 +457,6 @@
     },
     "/groups/:id/join/:share_token": {
       "POST": {
-        "request": "{ \"group\": { \"id\": \"1234567890\", \"name\": \"Family\", \"type\": \"private\", \"description\": \"Coolest Family Ever\", \"image_url\": \"https://i.groupme.com/123456789\", \"creator_user_id\": \"1234567890\", \"created_at\": 1302623328, \"updated_at\": 1302623328, \"members\": [ { \"user_id\": \"1234567890\", \"nickname\": \"Jane\", \"muted\": false, \"image_url\": \"https://i.groupme.com/123456789\" } ], \"share_url\": \"https://groupme.com/join_group/1234567890/SHARE_TOKEN\", \"messages\": { \"count\": 100, \"last_message_id\": \"1234567890\", \"last_message_created_at\": 1302623328, \"preview\": { \"nickname\": \"Jane\", \"text\": \"Hello world\", \"image_url\": \"https://i.groupme.com/123456789\", \"attachments\": [ { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"location\", \"lat\": \"40.738206\", \"lng\": \"-73.993285\", \"name\": \"GroupMe HQ\" }, { \"type\": \"split\", \"token\": \"SPLIT_TOKEN\" }, { \"type\": \"emoji\", \"placeholder\": \"☃\", \"charmap\": [ [ 1, 42 ], [ 2, 34 ] ] } ] } } } }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -534,7 +531,6 @@
     },
     "/users/me": {
       "GET": {
-        "request": "{ \"id\": \"1234567890\", \"phone_number\": \"+1 2123001234\", \"image_url\": \"https://i.groupme.com/123456789\", \"name\": \"Ronald Swanson\", \"created_at\": 1302623328, \"updated_at\": 1302623328, \"email\": \"me@example.com\", \"sms\": false }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -576,10 +572,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "requests required",
+            "name": "requests",
             "description": "array — One request is object where user_id is the new owner who must be active member of a group specified by group_id . object group_id (string) required\nowner_id (string) required\n\n",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -601,7 +597,7 @@
             "name": "members",
             "description": "array — nickname is required. You must use one of the following identifiers: user_id , phone_number , or email . object nickname (string) required\nuser_id (string)\nphone_number (string)\nemail (string)\nguid (string)\n\n",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -639,11 +635,11 @@
         },
         "parameters": [
           {
-            "in": "query",
-            "name": "results_id required",
+            "in": "path",
+            "name": "results_id",
             "description": "string — This is the guid that's returned from an add request.",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -688,14 +684,14 @@
             "name": "page",
             "description": "integer — Page number",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "per_page",
             "description": "integer — Number of chats per page",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -773,10 +769,10 @@
         "parameters": [
           {
             "in": "query",
-            "name": "group_id required",
+            "name": "group_id",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -786,24 +782,24 @@
         "parameters": [
           {
             "in": "query",
-            "name": "bot_id required",
+            "name": "bot_id",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
-            "name": "text required",
+            "name": "text",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "picture_url",
             "description": "string — Image must be processed through image service .",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -895,31 +891,31 @@
         "parameters": [
           {
             "in": "body",
-            "name": "source_guid required",
+            "name": "source_guid",
             "description": "string — This is used for client-side deduplication.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
-            "name": "recipient_id required",
+            "name": "recipient_id",
             "description": "string — The GroupMe user ID of the recipient of this message.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
-            "name": "text required",
+            "name": "text",
             "description": "string — This can be omitted if at least one attachment is present.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "attachments",
             "description": "array — A polymorphic list of attachments (locations, images, etc). You may have You may have more than one of any type of attachment, provided clients can display it. object type (string) — “image” required\nurl (string) required — Must be an image service (i.groupme.com) URL\n\nobject type (string) — “location” required\nname (string) required\nlat (string) required\nlng (string) required\n\nobject type (string) — “emoji” required\nplaceholder (string) — “☃” required\ncharmap (array) — “[{pack_id},{offset}]” required\n\n",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       },
@@ -980,31 +976,30 @@
         "parameters": [
           {
             "in": "query",
-            "name": "other_user_id required",
+            "name": "other_user_id",
             "description": "string — The other participant in the conversation.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "before_id",
             "description": "string — Returns 20 messages created before the given message ID",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "since_id",
             "description": "string — Returns 20 messages created after the given message ID",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
     },
     "/groups/:group_id/likes/for_me": {
       "GET": {
-        "request": "{ \"messages\": [ { \"id\": \"1234567890\", \"source_guid\": \"GUID\", \"created_at\": 1302623328, \"user_id\": \"1234567890\", \"group_id\": \"1234567890\", \"name\": \"John\", \"avatar_url\": \"https://i.groupme.com/123456789\", \"text\": \"Hello world ☃☃\", \"system\": true, \"favorited_by\": [ \"101\", \"66\", \"1234567890\" ], \"attachments\": [ { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"location\", \"lat\": \"40.738206\", \"lng\": \"-73.993285\", \"name\": \"GroupMe HQ\" }, { \"type\": \"split\", \"token\": \"SPLIT_TOKEN\" }, { \"type\": \"emoji\", \"placeholder\": \"☃\", \"charmap\": [ [ 1, 42 ], [ 2, 34 ] ] } ] } ] }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -1143,35 +1138,35 @@
             "name": "name",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "description",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "image_url",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "office_mode",
             "description": "boolean",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "share",
             "description": "boolean — If you pass a true value for share , we'll generate a share URL. Anybody with this URL can join the group.",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -1180,11 +1175,11 @@
       "POST": {
         "parameters": [
           {
-            "in": "query",
-            "name": "membership_id required",
+            "in": "path",
+            "name": "membership_id",
             "description": "string — Please note that this isn't the same as the user ID. In the members key in the group JSON, this is the id value, not the user_id .",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -1261,11 +1256,11 @@
         },
         "parameters": [
           {
-            "in": "query",
-            "name": "id required",
+            "in": "path",
+            "name": "id",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -1278,7 +1273,6 @@
     },
     "/groups/:group_id/likes/mine": {
       "GET": {
-        "request": "{ \"messages\": [ { \"id\": \"1234567890\", \"source_guid\": \"GUID\", \"created_at\": 1302623328, \"user_id\": \"1234567890\", \"group_id\": \"1234567890\", \"name\": \"John\", \"avatar_url\": \"https://i.groupme.com/123456789\", \"text\": \"Hello world ☃☃\", \"system\": true, \"favorited_by\": [ \"101\", \"66\", \"1234567890\" ], \"attachments\": [ { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"location\", \"lat\": \"40.738206\", \"lng\": \"-73.993285\", \"name\": \"GroupMe HQ\" }, { \"type\": \"split\", \"token\": \"SPLIT_TOKEN\" }, { \"type\": \"emoji\", \"placeholder\": \"☃\", \"charmap\": [ [ 1, 42 ], [ 2, 34 ] ] } ], \"liked_at\": \"2014-05-08T18:30:31.6617Z\" } ] }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -1404,24 +1398,24 @@
         "parameters": [
           {
             "in": "body",
-            "name": "source_guid required",
+            "name": "source_guid",
             "description": "string — Client-side IDs for messages. This can be used by clients to set their own identifiers on messages, but the server also scans these for de-duplication. That is, if two messages are sent with the same source_guid within one minute of each other, the second message will fail with a 409 Conflict response. So it's important to set this to a unique value for each message.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
-            "name": "text required",
+            "name": "text",
             "description": "string — This can be omitted if at least one attachment is present. The maximum length is 1,000 characters.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "body",
             "name": "attachments",
             "description": "array — A polymorphic list of attachments (locations, images, etc). You may have You may have more than one of any type of attachment, provided clients can display it. object type (string) — “image” required\nurl (string) required — Must be an image service (i.groupme.com) URL\n\nobject type (string) — “location” required\nname (string) required\nlat (string) required\nlng (string) required\n\nobject type (string) — “split” required\ntoken (string) required\n\nobject type (string) — “emoji” required\nplaceholder (string) — “☃” required\ncharmap (array) — “[{pack_id},{offset}]” required\n\n",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       },
@@ -1492,28 +1486,28 @@
             "name": "before_id",
             "description": "string — Returns messages created before the given message ID",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "since_id",
             "description": "string — Returns most recent messages created after the given message ID",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "after_id",
             "description": "string — Returns messages created immediately after the given message ID",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "limit",
             "description": "integer — Number of messages returned. Default is 20. Max is 100.",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -1610,43 +1604,42 @@
         "parameters": [
           {
             "in": "query",
-            "name": "bot[name] required",
+            "name": "bot[name]",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
-            "name": "bot[group_id] required",
+            "name": "bot[group_id]",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "bot[avatar_url]",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "bot[callback_url]",
             "description": "string",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "bot[dm_notification]",
             "description": "boolean",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       },
       "GET": {
-        "request": "[ { \"bot_id\": \"1234567890\", \"group_id\": \"1234567890\", \"name\": \"hal9000\", \"avatar_url\": \"https://i.groupme.com/123456789\", \"callback_url\": \"http://example.com/bots/callback\", \"dm_notification\": false } ]",
         "responses": {
           "200": {
             "description": "correct response",

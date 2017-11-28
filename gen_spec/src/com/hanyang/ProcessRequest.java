@@ -72,6 +72,13 @@ public class ProcessRequest {
 		while (requestMatcher.find()) {
 			Out.prln("requestStart： " + requestMatcher.start());
 			
+			// if the text contain "response" skip this text
+			Out.prln(requestMatcher.toString());
+			if (Pattern.compile(Settings.RESKEY, Pattern.CASE_INSENSITIVE).matcher(requestMatcher.toString())
+					.find()) {
+				continue;
+			}
+			
 			String matchStr = null;
 			if (Settings.REQEXAMPLE.equals("http")) {
 				matchStr = strAll.substring( requestMatcher.start(), requestMatcher.end() + 100).trim();
@@ -115,8 +122,7 @@ public class ProcessRequest {
                 //need to fix			
 				Out.prln(requestText);
 				
-//				JSONObject resObject = new JSONObject(requestText);
-					
+				
 				if (openAPI.getJSONObject("paths").has(url)) {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
 					JSONObject actionObject;
