@@ -1,0 +1,71 @@
+{
+  "basePath": "/",
+  "paths": {
+    "export/geonamesData.js": {
+      "PUT": {}
+    },
+    "siblings": {
+      "POST": {}
+    },
+    "cities": {
+      "POST": {}
+    },
+    "postalCodeCountryInfo": {
+      "POST": {}
+    },
+    "http://www.maxmind.com/.": {
+      "POST": {}
+    },
+    "postalCodeSearch": {
+      "POST": {}
+    },
+    "countrySubdivision": {
+      "GET": {}
+    },
+    "postalCodeLookupJSON": {
+      "post": {},
+      "POST": {},
+      "get": {}
+    },
+    "srtm3": {
+      "POST": {}
+    },
+    "search": {
+      "POST": {}
+    },
+    "srtm1": {
+      "POST": {}
+    },
+    "wikipediaBoundingBox": {
+      "POST": {}
+    },
+    "neighbourhood": {
+      "POST": {}
+    },
+    "get": {
+      "POST": {}
+    },
+    "timezoneJSON": {
+      "GET": {}
+    },
+    "findNearByWeatherXML": {
+      "POST": {}
+    },
+    "postalCodeSearchJSON": {
+      "DEL": {}
+    },
+    "extendedFindNearby": {
+      "GET": {}
+    },
+    "findNearbyPostalCodes": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.geonames.org",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

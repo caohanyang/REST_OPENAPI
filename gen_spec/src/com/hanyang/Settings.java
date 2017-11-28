@@ -122,7 +122,7 @@ public class Settings {
     	Properties properties = new Properties();  
   
         try {
-        	FileInputStream fis =  new FileInputStream("config." + api); 
+        	FileInputStream fis =  new FileInputStream(api + ".config"); 
             properties.load(fis);
             setSEARCHBASE(Boolean.valueOf(properties.getProperty("SEARCHBASE")));
             setSTUFFING(properties.getProperty("STUFFING"));

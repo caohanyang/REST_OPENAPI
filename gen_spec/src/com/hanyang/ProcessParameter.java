@@ -40,16 +40,17 @@ public class ProcessParameter {
 				// 1. we add url/action into openAPI now.
 				// because here we have known that each table have match one url
 				// some urls would not be used.
-				processMe.addUrl(openAPI, url, action);
+//				processMe.addUrl(openAPI, url, action);
 
 				try {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
 					// 1. find the action
+					JSONObject actionObject = urlObject.getJSONObject(action);
 					JSONObject paraAll = new JSONObject();
 					// parser the parameters
-					JSONArray paraArray = parseParameter(paraStr, anno, doc);
-					paraAll.put("parameters", paraArray);
-					urlObject.put(action, paraAll);
+					JSONArray paraArray = parseParameter(url, actionObject, paraStr, anno, doc);
+					
+					actionObject.put("parameters", paraArray);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -60,21 +61,21 @@ public class ProcessParameter {
 		return openAPI;
 	}
 
-	public JSONArray parseParameter(String paraStr, Annotation anno, Document doc)
+	public JSONArray parseParameter(String url, JSONObject actionObject, String paraStr, Annotation anno, Document doc)
 			throws JSONException {
 
 		JSONArray paraArray = new JSONArray();
 
 		if (Settings.TEMPLATE.equals("table")) {
-			paraArray = parseTable(paraStr, anno, doc);
+			paraArray = parseTable(url, actionObject, paraStr, anno, doc);
 		} else if (Settings.TEMPLATE.equals("list")) {
-			paraArray = parseList(paraStr, anno, doc);
+			paraArray = parseList(url, actionObject, paraStr, anno, doc);
 		}
 
 		return paraArray;
 	}
 
-	private JSONArray parseList(String paraStr, Annotation anno, Document doc) throws JSONException {
+	private JSONArray parseList(String url, JSONObject actionObject, String paraStr, Annotation anno, Document doc) throws JSONException {
 		JSONArray paraArray = new JSONArray();
 		Long startL = anno.getStartNode().getOffset();
 		Long endL = anno.getEndNode().getOffset();
@@ -109,7 +110,7 @@ public class ProcessParameter {
 					JSONObject keyObject = new JSONObject();
 					keyObject.put("name", dtStr);
 					keyObject.put("description", ddStr);
-					keyObject.put("in", Settings.PARAIN);
+					keyObject.put("in", findParaType(url, actionObject));
 					keyObject.put("type", "integer");
 					keyObject.put("required", "required");
 					paraArray.put(keyObject);
@@ -142,7 +143,7 @@ public class ProcessParameter {
 								JSONObject keyObject = new JSONObject();
 								keyObject.put("name", pArray[0]);
 								keyObject.put("description", pArray[1]);
-								keyObject.put("in", "query");
+								keyObject.put("in", findParaType(url, actionObject));
 								keyObject.put("type", "integer");
 								keyObject.put("required", true);
 								paraArray.put(keyObject);
@@ -159,7 +160,19 @@ public class ProcessParameter {
 		return paraArray;
 	}
 
-	private JSONArray parseTable(String paraStr, Annotation anno, Document doc) throws JSONException {
+	private String findParaType(String url, JSONObject actionObject) throws JSONException {
+		// find parameter type
+		// Possible values are "query", "header", "path", "formData" or "body".
+		if (actionObject.has("request")) {
+			String request = actionObject.getString("request");
+			if (request.startsWith("{") | request.startsWith("[")) {
+				return "body";
+			}
+		}
+		return Settings.PARAIN;
+	}
+
+	private JSONArray parseTable(String url, JSONObject actionObject, String paraStr, Annotation anno, Document doc) throws JSONException {
 		// Here we need to get tbody, not the whole table annotation
 		List trList = getTbody(paraStr, anno, doc);
 
@@ -219,7 +232,7 @@ public class ProcessParameter {
 				String value = trStr.substring(trStr.indexOf(trStr.split(" ")[1]));
 				keyObject.put("name", key);
 				keyObject.put("description", value);
-				keyObject.put("in", "query");
+				keyObject.put("in", findParaType(url, actionObject));
 				keyObject.put("type", "integer");
 				keyObject.put("required", "required");
 			} catch (Exception e) {
@@ -336,14 +349,14 @@ public class ProcessParameter {
 		Iterator<Annotation> templateIter = annoTemplate.iterator();
 		ProcessParameter processPa = new ProcessParameter();
 		
-		// put all the infoJson into openAPI first
-		if (!infoJson.isEmpty()) {
-			// In case of the method doesn't have parameter
-			// add the noPara url
-			// processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
-			// add all the url/action pair
-			processMe.addAllParaURL(openAPI, strAll, infoJson);
-		}
+//		// put all the infoJson into openAPI first
+//		if (!infoJson.isEmpty()) {
+//			// In case of the method doesn't have parameter
+//			// add the noPara url
+//			// processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
+//			// add all the url/action pair
+//			processMe.addAllParaURL(openAPI, strAll, infoJson);
+//		}
 		
 		// add parameters to those urls
 		while (templateIter.hasNext()) {

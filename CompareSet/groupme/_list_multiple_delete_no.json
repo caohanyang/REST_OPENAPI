@@ -74,28 +74,28 @@
         },
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "name required",
             "description": "string — Primary name of the group. Maximum 140 characters",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "description",
             "description": "string — A subheading for the group. Maximum 255 characters",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "image_url",
             "description": "string — GroupMe Image Service URL",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "share",
             "description": "boolean — If you pass a true value for share , we'll generate a share URL. Anybody with this URL can join the group.",
             "type": "integer",
@@ -177,14 +177,14 @@
         },
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "page",
             "description": "integer — Fetch a particular page of results. Defaults to 1.",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "per_page",
             "description": "integer — Define page size. Defaults to 10.",
             "type": "integer",
@@ -216,28 +216,28 @@
         },
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "avatar_url",
             "description": "string — URL to valid JPG/PNG/GIF image. URL will be converted into an image service link (http://i.groupme.com/....)",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "name",
             "description": "string — Name must be of the form FirstName LastName",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "email",
             "description": "string — Email address. Must be in name@domain.com form.",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "zip_code",
             "description": "string — Zip code.",
             "type": "integer",
@@ -251,14 +251,14 @@
         "request": "{ \"duration\": 4, \"registration_id\": \"TOKEN\" }",
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "duration required",
             "description": "integer",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "registration_id",
             "description": "string — The push notification ID/token that should be suppressed during SMS mode. If this is omitted, both SMS and push notifications will be delivered to the device.",
             "type": "integer",
@@ -597,7 +597,7 @@
         },
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "members",
             "description": "array — nickname is required. You must use one of the following identifiers: user_id , phone_number , or email . object nickname (string) required\nuser_id (string)\nphone_number (string)\nemail (string)\nguid (string)\n\n",
             "type": "integer",
@@ -894,28 +894,28 @@
         },
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "source_guid required",
             "description": "string — This is used for client-side deduplication.",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "recipient_id required",
             "description": "string — The GroupMe user ID of the recipient of this message.",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "text required",
             "description": "string — This can be omitted if at least one attachment is present.",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "attachments",
             "description": "array — A polymorphic list of attachments (locations, images, etc). You may have You may have more than one of any type of attachment, provided clients can display it. object type (string) — “image” required\nurl (string) required — Must be an image service (i.groupme.com) URL\n\nobject type (string) — “location” required\nname (string) required\nlat (string) required\nlng (string) required\n\nobject type (string) — “emoji” required\nplaceholder (string) — “☃” required\ncharmap (array) — “[{pack_id},{offset}]” required\n\n",
             "type": "integer",
@@ -1139,35 +1139,35 @@
         },
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "name",
             "description": "string",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "description",
             "description": "string",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "image_url",
             "description": "string",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "office_mode",
             "description": "boolean",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "share",
             "description": "boolean — If you pass a true value for share , we'll generate a share URL. Anybody with this URL can join the group.",
             "type": "integer",
@@ -1403,21 +1403,21 @@
         },
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "source_guid required",
             "description": "string — Client-side IDs for messages. This can be used by clients to set their own identifiers on messages, but the server also scans these for de-duplication. That is, if two messages are sent with the same source_guid within one minute of each other, the second message will fail with a 409 Conflict response. So it's important to set this to a unique value for each message.",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "text required",
             "description": "string — This can be omitted if at least one attachment is present. The maximum length is 1,000 characters.",
             "type": "integer",
             "required": "required"
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "attachments",
             "description": "array — A polymorphic list of attachments (locations, images, etc). You may have You may have more than one of any type of attachment, provided clients can display it. object type (string) — “image” required\nurl (string) required — Must be an image service (i.groupme.com) URL\n\nobject type (string) — “location” required\nname (string) required\nlat (string) required\nlng (string) required\n\nobject type (string) — “split” required\ntoken (string) required\n\nobject type (string) — “emoji” required\nplaceholder (string) — “☃” required\ncharmap (array) — “[{pack_id},{offset}]” required\n\n",
             "type": "integer",

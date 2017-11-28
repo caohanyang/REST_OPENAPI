@@ -1,0 +1,131 @@
+{
+  "basePath": "/srtm3",
+  "paths": {
+    "/postalCodeCountryInfo": {
+      "POST": {}
+    },
+    "/findNearbyWikipediaRSS": {
+      "POST": {}
+    },
+    "/postalCodeSearch": {
+      "post": {},
+      "POST": {}
+    },
+    "/Address": {
+      "POST": {}
+    },
+    "/siblings": {
+      "POST": {}
+    },
+    "/findNearbyWikipedia": {
+      "POST": {}
+    },
+    "/findNearByWeatherXML": {
+      "POST": {}
+    },
+    "/wikipediaBoundingBox": {
+      "POST": {}
+    },
+    "/postalcode": {
+      "post": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "postalcode",
+            "description": "string ( postalcode or placename required) postal code",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "postalcode_startsWith",
+            "description": "string the first characters or letters of a postal code",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "placename",
+            "description": "string ( postalcode or placename required) all fields : placename,postal code, country, admin name ( Important: urlencoded utf8 )",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "placename_startsWith",
+            "description": "string the first characters of a place name",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "country",
+            "description": "string : country code, ISO-3166 (optional) Default is all countries. The country parameter may occur more than once, example: country=FR&country=GP",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "countryBias",
+            "description": "string records from the countryBias are listed first",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "maxRows",
+            "description": "integer (optional) the maximal number of rows in the document returned by the service. Default is 10",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "style",
+            "description": "string SHORT , MEDIUM , LONG , FULL (optional) verbosity of returned xml document, default = MEDIUM",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "operator",
+            "description": "string AND , OR (optional) the operator 'AND' searches for all terms in the placename parameter, the operator 'OR' searches for any term, default = AND",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "charset",
+            "description": "string (optional) default is 'UTF8', defines the encoding used for the document returned by the web service.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "isReduced",
+            "description": "true or false (optional) default is 'false', when set to 'true' only the UK outer codes are returned. Attention: the default value on the commercial servers is currently set to 'true'. It will be changed later to 'false'.",
+            "type": "integer",
+            "required": "required"
+          },
+          {
+            "in": "query",
+            "name": "east,west,north,south",
+            "description": "float (optional) bounding box, only features within the box are returned",
+            "type": "integer",
+            "required": "required"
+          }
+        ]
+      },
+      "POST": {}
+    },
+    "/script>": {
+      "PUT": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.geonames.org",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -122,9 +122,12 @@ public class ProcessRequest {
 					JSONObject actionObject;
 					
 					if (urlObject.has(action)) {
-						actionObject = urlObject.getJSONObject(action);
 						
-						actionObject.put("request", requestText);
+						JSONObject requestObject = new JSONObject();
+						
+						requestObject.put("request", requestText);
+						
+						urlObject.put(action, requestObject);
 					}
 					
 				}

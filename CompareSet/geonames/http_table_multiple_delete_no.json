@@ -1,0 +1,33 @@
+{
+  "basePath": "/",
+  "paths": {
+    "postalCodeLookupJSON": {
+      "POST": {}
+    },
+    "contains": {
+      "PUT": {}
+    },
+    "export/geonamesData.js": {
+      "GET": {}
+    },
+    "cities": {
+      "PUT": {}
+    },
+    "postalCodeCountryInfo": {
+      "POST": {}
+    },
+    "http://www.maxmind.com/.": {
+      "POST": {}
+    },
+    "citiesJSON": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.geonames.org",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -64,7 +64,7 @@ public class ExtractInformation {
 
 		
 		// 0. get properties
-//		Settings.getPropertiesReader(API_NAME);
+		Settings.getPropertiesReader(CompareSet_PATH + "/"+ API_NAME);
 		
 		// init gate
 		Gate.init();
@@ -105,7 +105,7 @@ public class ExtractInformation {
 		selectOpenAPI(compareSet);
 
 		// 4. write properties
-		Settings.writeProperties(CompareSet_PATH + "/"+ API_NAME);
+//		Settings.writeProperties(CompareSet_PATH + "/"+ API_NAME);
 		
 	}
 
@@ -249,23 +249,31 @@ public class ExtractInformation {
 
 		AnnotationSet annoOrigin = doc.getAnnotations("Original markups");
 
-		// 2 generate info json
+		// 2. generate info json
 		getInfoJsonHttp(processMe, strAll, infoJson);
 
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
 
-		// 3 handle parameter
-		ProcessParameter processPa = new ProcessParameter();
-		processPa.handleParaTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
-
-		// 4. handle response template
+		// 3. handle method url
+		if (!infoJson.isEmpty()) {
+			// add all the url/action pair
+			processMe.addAllParaURL(openAPI, strAll, infoJson);
+		}	
+		
+		// 4. handle request template/code
+		ProcessRequest processReq = new ProcessRequest();
+		processReq.handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+				
+		// 5. handle response template
 		ProcessResponse processRe = new ProcessResponse();
 		processRe.handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 		
-		// 5. handle request template/code
-		ProcessRequest processReq = new ProcessRequest();
-		processReq.handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		
+		
+		// 3 handle parameter
+		ProcessParameter processPa = new ProcessParameter();
+		processPa.handleParaTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
 	private static void getInfoJsonHttp(ProcessMethod processMe, String strAll, List<JSONObject> infoJson) throws JSONException {
