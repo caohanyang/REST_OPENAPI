@@ -1,0 +1,1479 @@
+[
+  {
+    "request": {
+      "url": "/groups",
+      "method": "POST",
+      "body": {
+        "name": "Family",
+        "share": true,
+        "image_url": "https://i.groupme.com/123456789"
+      }
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "creator_user_id": "1234567890",
+        "updated_at": 1302623328,
+        "image_url": "https://i.groupme.com/123456789",
+        "share_url": "https://groupme.com/join_group/1234567890/SHARE_TOKEN",
+        "members": [
+          {
+            "user_id": "1234567890",
+            "image_url": "https://i.groupme.com/123456789",
+            "nickname": "Jane",
+            "muted": false
+          }
+        ],
+        "name": "Family",
+        "description": "CoolestFamilyEver",
+        "created_at": 1302623328,
+        "messages": {
+          "preview": {
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "image_url": "https://i.groupme.com/123456789",
+            "nickname": "Jane",
+            "text": "Helloworld"
+          },
+          "last_message_id": "1234567890",
+          "count": 100,
+          "last_message_created_at": 1302623328
+        },
+        "id": "1234567890",
+        "type": "private"
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": [
+        {
+          "creator_user_id": "1234567890",
+          "updated_at": 1302623328,
+          "image_url": "https://i.groupme.com/123456789",
+          "share_url": "https://groupme.com/join_group/1234567890/SHARE_TOKEN",
+          "members": [
+            {
+              "user_id": "1234567890",
+              "image_url": "https://i.groupme.com/123456789",
+              "nickname": "Jane",
+              "muted": false
+            }
+          ],
+          "name": "Family",
+          "description": "CoolestFamilyEver",
+          "created_at": 1302623328,
+          "messages": {
+            "preview": {
+              "attachments": [
+                {
+                  "type": "image",
+                  "url": "https://i.groupme.com/123456789"
+                },
+                {
+                  "type": "image",
+                  "url": "https://i.groupme.com/123456789"
+                },
+                {
+                  "lng": "-73.993285",
+                  "name": "GroupMeHQ",
+                  "type": "location",
+                  "lat": "40.738206"
+                },
+                {
+                  "type": "split",
+                  "token": "SPLIT_TOKEN"
+                },
+                {
+                  "placeholder": "☃",
+                  "charmap": [
+                    [
+                      1,
+                      42
+                    ],
+                    [
+                      2,
+                      34
+                    ]
+                  ],
+                  "type": "emoji"
+                }
+              ],
+              "image_url": "https://i.groupme.com/123456789",
+              "nickname": "Jane",
+              "text": "Helloworld"
+            },
+            "last_message_id": "1234567890",
+            "count": 100,
+            "last_message_created_at": 1302623328
+          },
+          "id": "1234567890",
+          "type": "private"
+        }
+      ]
+    }
+  },
+  {
+    "request": {
+      "url": "/messages/:conversation_id/:message_id/unlike",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/users/update",
+      "method": "POST",
+      "body": {
+        "avatar_url": "http://4.bp.blogspot.com/-GAeMYT8SZoI/TtBTK209xMI/AAAAAAAAWts/5nmvpmmvoWo/s1600/TopGun_059Pyxurz.jpg",
+        "name": "Tom Skerritt",
+        "email": "viper@topgun.usaf.mil",
+        "zip_code": "92145"
+      }
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "updated_at": 1302623328,
+        "image_url": "https://i.groupme.com/123456789",
+        "name": "RonaldSwanson",
+        "sms": false,
+        "created_at": 1302623328,
+        "phone_number": "+12123001234",
+        "id": "1234567890",
+        "email": "me@example.com"
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/users/sms_mode",
+      "method": "POST",
+      "body": {
+        "duration": 4,
+        "registration_id": "TOKEN"
+      }
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:id/destroy",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/blocks/delete",
+      "method": "DELETE",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/likes",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "messages": [
+          {
+            "source_guid": "GUID",
+            "system": true,
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "avatar_url": "https://i.groupme.com/123456789",
+            "favorited_by": [
+              "101",
+              "66",
+              "1234567890"
+            ],
+            "user_id": "1234567890",
+            "group_id": "1234567890",
+            "name": "John",
+            "created_at": 1302623328,
+            "id": "1234567890",
+            "text": "Helloworld☃☃"
+          },
+          {
+            "source_guid": "GUID",
+            "system": true,
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "avatar_url": "https://i.groupme.com/123456789",
+            "favorited_by": [
+              "1",
+              "2"
+            ],
+            "user_id": "1234567890",
+            "group_id": "1234567890",
+            "name": "John",
+            "created_at": 1302623328,
+            "id": "1234567890",
+            "text": "Helloworld☃☃"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/bots/destroy",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/blocks",
+      "method": "DELETE",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/blocks",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "block": {
+          "blocked_user_id": "1234567890",
+          "user_id": "1234567890",
+          "created_at": 1302623328
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/blocks",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "blocks": [
+          {
+            "blocked_user_id": "1234567890",
+            "user_id": "1234567890",
+            "created_at": 1302623328
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:id/join/:share_token",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "group": {
+          "creator_user_id": "1234567890",
+          "updated_at": 1302623328,
+          "image_url": "https://i.groupme.com/123456789",
+          "share_url": "https://groupme.com/join_group/1234567890/SHARE_TOKEN",
+          "members": [
+            {
+              "user_id": "1234567890",
+              "image_url": "https://i.groupme.com/123456789",
+              "nickname": "Jane",
+              "muted": false
+            }
+          ],
+          "name": "Family",
+          "description": "CoolestFamilyEver",
+          "created_at": 1302623328,
+          "messages": {
+            "preview": {
+              "attachments": [
+                {
+                  "type": "image",
+                  "url": "https://i.groupme.com/123456789"
+                },
+                {
+                  "type": "image",
+                  "url": "https://i.groupme.com/123456789"
+                },
+                {
+                  "lng": "-73.993285",
+                  "name": "GroupMeHQ",
+                  "type": "location",
+                  "lat": "40.738206"
+                },
+                {
+                  "type": "split",
+                  "token": "SPLIT_TOKEN"
+                },
+                {
+                  "placeholder": "☃",
+                  "charmap": [
+                    [
+                      1,
+                      42
+                    ],
+                    [
+                      2,
+                      34
+                    ]
+                  ],
+                  "type": "emoji"
+                }
+              ],
+              "image_url": "https://i.groupme.com/123456789",
+              "nickname": "Jane",
+              "text": "Helloworld"
+            },
+            "last_message_id": "1234567890",
+            "count": 100,
+            "last_message_created_at": 1302623328
+          },
+          "id": "1234567890",
+          "type": "private"
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/users/me",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "updated_at": 1302623328,
+        "image_url": "https://i.groupme.com/123456789",
+        "name": "RonaldSwanson",
+        "sms": false,
+        "created_at": 1302623328,
+        "phone_number": "+12123001234",
+        "id": "1234567890",
+        "email": "me@example.com"
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/change_owners",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "results": [
+          {
+            "group_id": "1234567890",
+            "owner_id": "1234567890",
+            "status": "200"
+          },
+          {
+            "group_id": "1234567890",
+            "owner_id": "1234567890",
+            "status": "400"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/members/add",
+      "method": "POST",
+      "body": {
+        "members": [
+          {
+            "nickname": "Mom",
+            "user_id": "1234567890",
+            "guid": "GUID-1"
+          },
+          {
+            "nickname": "Dad",
+            "phone_number": "+1 2123001234",
+            "guid": "GUID-2"
+          },
+          {
+            "nickname": "Jane",
+            "email": "jane@example.com",
+            "guid": "GUID-3"
+          }
+        ]
+      }
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "results_id": "GUID"
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/members/results/:results_id",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "members": [
+          {
+            "app_installed": true,
+            "user_id": "10000",
+            "image_url": "http://i.groupme.com/AVATAR",
+            "autokicked": false,
+            "nickname": "John",
+            "guid": "GUID-1",
+            "id": "1000",
+            "muted": false
+          },
+          {
+            "app_installed": true,
+            "user_id": "20000",
+            "image_url": "http://i.groupme.com/AVATAR",
+            "autokicked": false,
+            "nickname": "Anne",
+            "guid": "GUID-2",
+            "id": "2000",
+            "muted": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/chats",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": [
+        {
+          "messages_count": 10,
+          "updated_at": 1352299338,
+          "created_at": 1352299338,
+          "last_message": {
+            "attachments": [],
+            "source_guid": "GUID",
+            "sender_type": "user",
+            "created_at": 1352299338,
+            "sender_id": "12345",
+            "avatar_url": "http://i.groupme.com/200x200.jpeg.abcdef",
+            "favorited_by": [],
+            "user_id": "12345",
+            "conversation_id": "12345+67890",
+            "name": "JohnDoe",
+            "id": "1234567890",
+            "text": "Helloworld",
+            "recipient_id": "67890"
+          },
+          "other_user": {
+            "avatar_url": "http://i.groupme.com/200x200.jpeg.abcdef",
+            "name": "JohnDoe",
+            "id": 12345
+          }
+        }
+      ]
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/join",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "creator_user_id": "1234567890",
+        "updated_at": 1302623328,
+        "image_url": "https://i.groupme.com/123456789",
+        "share_url": "https://groupme.com/join_group/1234567890/SHARE_TOKEN",
+        "members": [
+          {
+            "user_id": "1234567890",
+            "image_url": "https://i.groupme.com/123456789",
+            "nickname": "Jane",
+            "muted": false
+          }
+        ],
+        "name": "Family",
+        "description": "CoolestFamilyEver",
+        "created_at": 1302623328,
+        "messages": {
+          "preview": {
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "image_url": "https://i.groupme.com/123456789",
+            "nickname": "Jane",
+            "text": "Helloworld"
+          },
+          "last_message_id": "1234567890",
+          "count": 100,
+          "last_message_created_at": 1302623328
+        },
+        "id": "1234567890",
+        "type": "private"
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/bots/post",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/memberships/update",
+      "method": "POST",
+      "body": {
+        "membership": {
+          "nickname": "NEW NICKNAME"
+        }
+      }
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "app_installed": true,
+        "user_id": "USERID",
+        "image_url": "AVATARURL",
+        "autokicked": false,
+        "nickname": "NEWNICKNAME",
+        "id": "MEMBERSHIPID",
+        "muted": false
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/blocks/between",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "between": true
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/direct_messages",
+      "method": "POST",
+      "body": {
+        "direct_message": {
+          "source_guid": "GUID",
+          "recipient_id": "20",
+          "text": "Hello world ☃☃",
+          "attachments": [
+            {
+              "type": "image",
+              "url": "https://i.groupme.com/123456789"
+            },
+            {
+              "type": "image",
+              "url": "https://i.groupme.com/123456789"
+            },
+            {
+              "type": "location",
+              "lat": "40.738206",
+              "lng": "-73.993285",
+              "name": "GroupMe HQ"
+            },
+            {
+              "type": "emoji",
+              "placeholder": "☃",
+              "charmap": [
+                [
+                  1,
+                  42
+                ],
+                [
+                  2,
+                  34
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "message": {
+          "source_guid": "GUID",
+          "attachments": [
+            {
+              "type": "image",
+              "url": "https://i.groupme.com/123456789"
+            },
+            {
+              "type": "image",
+              "url": "https://i.groupme.com/123456789"
+            },
+            {
+              "lng": "-73.993285",
+              "name": "GroupMeHQ",
+              "type": "location",
+              "lat": "40.738206"
+            },
+            {
+              "placeholder": "☃",
+              "charmap": [
+                [
+                  1,
+                  42
+                ],
+                [
+                  2,
+                  34
+                ]
+              ],
+              "type": "emoji"
+            }
+          ],
+          "avatar_url": "https://i.groupme.com/123456789",
+          "favorited_by": [
+            "101"
+          ],
+          "user_id": "1234567890",
+          "name": "John",
+          "created_at": 1302623328,
+          "id": "1234567890",
+          "text": "Helloworld☃☃",
+          "recipient_id": "20"
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/direct_messages",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "count": 123,
+        "direct_messages": [
+          {
+            "source_guid": "GUID",
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "avatar_url": "https://i.groupme.com/123456789",
+            "favorited_by": [
+              "101"
+            ],
+            "user_id": "1234567890",
+            "name": "John",
+            "created_at": 1302623328,
+            "id": "1234567890",
+            "text": "Helloworld☃☃",
+            "recipient_id": "20"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/likes/for_me",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "messages": [
+          {
+            "source_guid": "GUID",
+            "system": true,
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "avatar_url": "https://i.groupme.com/123456789",
+            "favorited_by": [
+              "101",
+              "66",
+              "1234567890"
+            ],
+            "user_id": "1234567890",
+            "group_id": "1234567890",
+            "name": "John",
+            "created_at": 1302623328,
+            "id": "1234567890",
+            "text": "Helloworld☃☃"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:id/update",
+      "method": "POST",
+      "body": {
+        "name": "Family",
+        "share": true,
+        "image_url": "https://i.groupme.com/123456789",
+        "office_mode": true
+      }
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "creator_user_id": "1234567890",
+        "updated_at": 1302623328,
+        "image_url": "https://i.groupme.com/123456789",
+        "share_url": "https://groupme.com/join_group/1234567890/SHARE_TOKEN",
+        "members": [
+          {
+            "user_id": "1234567890",
+            "image_url": "https://i.groupme.com/123456789",
+            "nickname": "Jane",
+            "muted": false
+          }
+        ],
+        "name": "Family",
+        "description": "CoolestFamilyEver",
+        "created_at": 1302623328,
+        "messages": {
+          "preview": {
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "image_url": "https://i.groupme.com/123456789",
+            "nickname": "Jane",
+            "text": "Helloworld"
+          },
+          "last_message_id": "1234567890",
+          "count": 100,
+          "last_message_created_at": 1302623328
+        },
+        "id": "1234567890",
+        "type": "private"
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/members/:membership_id/remove",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:id",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "creator_user_id": "1234567890",
+        "updated_at": 1302623328,
+        "image_url": "https://i.groupme.com/123456789",
+        "share_url": "https://groupme.com/join_group/1234567890/SHARE_TOKEN",
+        "members": [
+          {
+            "user_id": "1234567890",
+            "image_url": "https://i.groupme.com/123456789",
+            "nickname": "Jane",
+            "muted": false
+          }
+        ],
+        "name": "Family",
+        "description": "CoolestFamilyEver",
+        "created_at": 1302623328,
+        "messages": {
+          "preview": {
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "image_url": "https://i.groupme.com/123456789",
+            "nickname": "Jane",
+            "text": "Helloworld"
+          },
+          "last_message_id": "1234567890",
+          "count": 100,
+          "last_message_created_at": 1302623328
+        },
+        "id": "1234567890",
+        "type": "private"
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/users/sms_mode/delete",
+      "method": "DELETE",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/messages/:conversation_id/:message_id/like",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": null
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/likes/mine",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "messages": [
+          {
+            "source_guid": "GUID",
+            "system": true,
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "avatar_url": "https://i.groupme.com/123456789",
+            "favorited_by": [
+              "101",
+              "66",
+              "1234567890"
+            ],
+            "liked_at": "2014-05-08T18:30:31.6617Z",
+            "user_id": "1234567890",
+            "group_id": "1234567890",
+            "name": "John",
+            "created_at": 1302623328,
+            "id": "1234567890",
+            "text": "Helloworld☃☃"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/messages",
+      "method": "POST",
+      "body": {
+        "message": {
+          "source_guid": "GUID",
+          "text": "Hello world ☃☃",
+          "attachments": [
+            {
+              "type": "image",
+              "url": "https://i.groupme.com/123456789"
+            },
+            {
+              "type": "image",
+              "url": "https://i.groupme.com/123456789"
+            },
+            {
+              "type": "location",
+              "lat": "40.738206",
+              "lng": "-73.993285",
+              "name": "GroupMe HQ"
+            },
+            {
+              "type": "split",
+              "token": "SPLIT_TOKEN"
+            },
+            {
+              "type": "emoji",
+              "placeholder": "☃",
+              "charmap": [
+                [
+                  1,
+                  42
+                ],
+                [
+                  2,
+                  34
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "message": {
+          "source_guid": "GUID",
+          "system": true,
+          "attachments": [
+            {
+              "type": "image",
+              "url": "https://i.groupme.com/123456789"
+            },
+            {
+              "type": "image",
+              "url": "https://i.groupme.com/123456789"
+            },
+            {
+              "lng": "-73.993285",
+              "name": "GroupMeHQ",
+              "type": "location",
+              "lat": "40.738206"
+            },
+            {
+              "type": "split",
+              "token": "SPLIT_TOKEN"
+            },
+            {
+              "placeholder": "☃",
+              "charmap": [
+                [
+                  1,
+                  42
+                ],
+                [
+                  2,
+                  34
+                ]
+              ],
+              "type": "emoji"
+            }
+          ],
+          "avatar_url": "https://i.groupme.com/123456789",
+          "favorited_by": [
+            "101",
+            "66",
+            "1234567890"
+          ],
+          "user_id": "1234567890",
+          "group_id": "1234567890",
+          "name": "John",
+          "created_at": 1302623328,
+          "id": "1234567890",
+          "text": "Helloworld☃☃"
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/:group_id/messages",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "count": 123,
+        "messages": [
+          {
+            "source_guid": "GUID",
+            "system": true,
+            "attachments": [
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "type": "image",
+                "url": "https://i.groupme.com/123456789"
+              },
+              {
+                "lng": "-73.993285",
+                "name": "GroupMeHQ",
+                "type": "location",
+                "lat": "40.738206"
+              },
+              {
+                "type": "split",
+                "token": "SPLIT_TOKEN"
+              },
+              {
+                "placeholder": "☃",
+                "charmap": [
+                  [
+                    1,
+                    42
+                  ],
+                  [
+                    2,
+                    34
+                  ]
+                ],
+                "type": "emoji"
+              }
+            ],
+            "avatar_url": "https://i.groupme.com/123456789",
+            "favorited_by": [
+              "101",
+              "66",
+              "1234567890"
+            ],
+            "user_id": "1234567890",
+            "group_id": "1234567890",
+            "name": "John",
+            "created_at": 1302623328,
+            "id": "1234567890",
+            "text": "Helloworld☃☃"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/groups/former",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": [
+        {
+          "creator_user_id": "1234567890",
+          "updated_at": 1302623328,
+          "image_url": "https://i.groupme.com/123456789",
+          "share_url": "https://groupme.com/join_group/1234567890/SHARE_TOKEN",
+          "members": [
+            {
+              "user_id": "1234567890",
+              "image_url": "https://i.groupme.com/123456789",
+              "nickname": "Jane",
+              "muted": false
+            }
+          ],
+          "name": "Family",
+          "description": "CoolestFamilyEver",
+          "created_at": 1302623328,
+          "messages": {
+            "preview": {
+              "attachments": [
+                {
+                  "type": "image",
+                  "url": "https://i.groupme.com/123456789"
+                },
+                {
+                  "type": "image",
+                  "url": "https://i.groupme.com/123456789"
+                },
+                {
+                  "lng": "-73.993285",
+                  "name": "GroupMeHQ",
+                  "type": "location",
+                  "lat": "40.738206"
+                },
+                {
+                  "type": "split",
+                  "token": "SPLIT_TOKEN"
+                },
+                {
+                  "placeholder": "☃",
+                  "charmap": [
+                    [
+                      1,
+                      42
+                    ],
+                    [
+                      2,
+                      34
+                    ]
+                  ],
+                  "type": "emoji"
+                }
+              ],
+              "image_url": "https://i.groupme.com/123456789",
+              "nickname": "Jane",
+              "text": "Helloworld"
+            },
+            "last_message_id": "1234567890",
+            "count": 100,
+            "last_message_created_at": 1302623328
+          },
+          "id": "1234567890",
+          "type": "private"
+        }
+      ]
+    }
+  },
+  {
+    "request": {
+      "url": "/bots",
+      "method": "POST",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": {
+        "callback_url": "http://example.com/bots/callback",
+        "avatar_url": "https://i.groupme.com/123456789",
+        "group_id": "1234567890",
+        "name": "hal9000",
+        "bot_id": "1234567890",
+        "dm_notification": false
+      }
+    }
+  },
+  {
+    "request": {
+      "url": "/bots",
+      "method": "GET",
+      "body": null
+    },
+    "response": {
+      "status": "200",
+      "body": [
+        {
+          "callback_url": "http://example.com/bots/callback",
+          "avatar_url": "https://i.groupme.com/123456789",
+          "group_id": "1234567890",
+          "name": "hal9000",
+          "bot_id": "1234567890",
+          "dm_notification": false
+        }
+      ]
+    }
+  }
+]
