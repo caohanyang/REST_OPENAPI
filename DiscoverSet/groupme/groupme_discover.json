@@ -1,7 +1,7 @@
 [
   {
     "request": {
-      "url": "/groups",
+      "url": "https://api.groupme.com/groups",
       "method": "POST",
       "body": {
         "name": "Family",
@@ -78,9 +78,9 @@
   },
   {
     "request": {
-      "url": "/groups",
+      "url": "https://api.groupme.com/groups",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -153,18 +153,18 @@
   },
   {
     "request": {
-      "url": "/messages/:conversation_id/:message_id/unlike",
+      "url": "https://api.groupme.com/messages/:conversation_id/:message_id/unlike",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/users/update",
+      "url": "https://api.groupme.com/users/update",
       "method": "POST",
       "body": {
         "avatar_url": "http://4.bp.blogspot.com/-GAeMYT8SZoI/TtBTK209xMI/AAAAAAAAWts/5nmvpmmvoWo/s1600/TopGun_059Pyxurz.jpg",
@@ -189,7 +189,7 @@
   },
   {
     "request": {
-      "url": "/users/sms_mode",
+      "url": "https://api.groupme.com/users/sms_mode",
       "method": "POST",
       "body": {
         "duration": 4,
@@ -198,36 +198,36 @@
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/groups/:id/destroy",
+      "url": "https://api.groupme.com/groups/:id/destroy",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/blocks/delete",
+      "url": "https://api.groupme.com/blocks/delete",
       "method": "DELETE",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/groups/:group_id/likes",
+      "url": "https://api.groupme.com/groups/:group_id/likes",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -338,31 +338,31 @@
   },
   {
     "request": {
-      "url": "/bots/destroy",
+      "url": "https://api.groupme.com/bots/destroy",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/blocks",
+      "url": "https://api.groupme.com/blocks",
       "method": "DELETE",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/blocks",
+      "url": "https://api.groupme.com/blocks",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -377,9 +377,9 @@
   },
   {
     "request": {
-      "url": "/blocks",
+      "url": "https://api.groupme.com/blocks",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -396,9 +396,9 @@
   },
   {
     "request": {
-      "url": "/groups/:id/join/:share_token",
+      "url": "https://api.groupme.com/groups/:id/join/:share_token",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -471,9 +471,9 @@
   },
   {
     "request": {
-      "url": "/users/me",
+      "url": "https://api.groupme.com/users/me",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -491,9 +491,9 @@
   },
   {
     "request": {
-      "url": "/groups/change_owners",
+      "url": "https://api.groupme.com/groups/change_owners",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -515,7 +515,7 @@
   },
   {
     "request": {
-      "url": "/groups/:group_id/members/add",
+      "url": "https://api.groupme.com/groups/:group_id/members/add",
       "method": "POST",
       "body": {
         "members": [
@@ -546,9 +546,9 @@
   },
   {
     "request": {
-      "url": "/groups/:group_id/members/results/:results_id",
+      "url": "https://api.groupme.com/groups/:group_id/members/results/:results_id",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -580,9 +580,9 @@
   },
   {
     "request": {
-      "url": "/chats",
+      "url": "https://api.groupme.com/chats",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -617,9 +617,9 @@
   },
   {
     "request": {
-      "url": "/groups/join",
+      "url": "https://api.groupme.com/groups/join",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -690,18 +690,18 @@
   },
   {
     "request": {
-      "url": "/bots/post",
+      "url": "https://api.groupme.com/bots/post",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/groups/:group_id/memberships/update",
+      "url": "https://api.groupme.com/groups/:group_id/memberships/update",
       "method": "POST",
       "body": {
         "membership": {
@@ -724,9 +724,9 @@
   },
   {
     "request": {
-      "url": "/blocks/between",
+      "url": "https://api.groupme.com/blocks/between",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -737,7 +737,7 @@
   },
   {
     "request": {
-      "url": "/direct_messages",
+      "url": "https://api.groupme.com/direct_messages",
       "method": "POST",
       "body": {
         "direct_message": {
@@ -828,9 +828,9 @@
   },
   {
     "request": {
-      "url": "/direct_messages",
+      "url": "https://api.groupme.com/direct_messages",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -886,9 +886,9 @@
   },
   {
     "request": {
-      "url": "/groups/:group_id/likes/for_me",
+      "url": "https://api.groupme.com/groups/:group_id/likes/for_me",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -950,7 +950,7 @@
   },
   {
     "request": {
-      "url": "/groups/:id/update",
+      "url": "https://api.groupme.com/groups/:id/update",
       "method": "POST",
       "body": {
         "name": "Family",
@@ -1028,20 +1028,20 @@
   },
   {
     "request": {
-      "url": "/groups/:group_id/members/:membership_id/remove",
+      "url": "https://api.groupme.com/groups/:group_id/members/:membership_id/remove",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/groups/:id",
+      "url": "https://api.groupme.com/groups/:id",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -1112,31 +1112,31 @@
   },
   {
     "request": {
-      "url": "/users/sms_mode/delete",
+      "url": "https://api.groupme.com/users/sms_mode/delete",
       "method": "DELETE",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/messages/:conversation_id/:message_id/like",
+      "url": "https://api.groupme.com/messages/:conversation_id/:message_id/like",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
-      "body": null
+      "body": ""
     }
   },
   {
     "request": {
-      "url": "/groups/:group_id/likes/mine",
+      "url": "https://api.groupme.com/groups/:group_id/likes/mine",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -1199,7 +1199,7 @@
   },
   {
     "request": {
-      "url": "/groups/:group_id/messages",
+      "url": "https://api.groupme.com/groups/:group_id/messages",
       "method": "POST",
       "body": {
         "message": {
@@ -1300,9 +1300,9 @@
   },
   {
     "request": {
-      "url": "/groups/:group_id/messages",
+      "url": "https://api.groupme.com/groups/:group_id/messages",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -1365,9 +1365,9 @@
   },
   {
     "request": {
-      "url": "/groups/former",
+      "url": "https://api.groupme.com/groups/former",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -1440,9 +1440,9 @@
   },
   {
     "request": {
-      "url": "/bots",
+      "url": "https://api.groupme.com/bots",
       "method": "POST",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -1458,9 +1458,9 @@
   },
   {
     "request": {
-      "url": "/bots",
+      "url": "https://api.groupme.com/bots",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",

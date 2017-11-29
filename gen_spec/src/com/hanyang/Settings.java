@@ -24,17 +24,17 @@ public class Settings {
 	public static boolean SEARCHBASE = false;
 		
 	// The things between Http verbs and Url:
-	// "\\s", "(.*?)"
-	public static String STUFFING = "\\s";	
+	// "\\s", "(.*?)" \\s.{0,60}
+	public static String STUFFING = "\\s.{0,60}";	
 	// for some url contains URL parameters
 	// It will present URL in different tags, which causes whitespace
 	// " " ""
-	public static String URLMIDDLE = " ";
+	public static String URLMIDDLE = "";
 	public static String URLAFTER = " ";
 	// "no", "yes"
 	public static String REVERSE = "no";
 	// "https", "http", "/"
-	public static String MODE ="/";
+	public static String MODE ="http";
 	// first URL then parameters
 	public static boolean U1P2 = true;
 	// "del", "delete"
@@ -51,7 +51,7 @@ public class Settings {
 	public static String REQMIDDLE = "\\s";
 	// The request exists or not 
 	// http \\{(.*?)\\} no
-	public static String REQEXAMPLE = "http";
+	public static String REQEXAMPLE = "no";
 	
 	
 	/*

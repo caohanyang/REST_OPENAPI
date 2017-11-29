@@ -53,6 +53,8 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 # https://developers.coinbase.com/api/v2
 # https://www.behance.net/dev/api/endpoints/
 # https://dev.groupme.com/
+# https://developer.accuweather.com/apis  https://developer.accuweather.com/
+# https://aiception.com/static/doc/index.html
 
 python ./rest_crawler/crawlAllPages.py $1 $2
 

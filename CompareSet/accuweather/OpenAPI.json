@@ -1,0 +1,209 @@
+{
+  "paths": {
+    "/indices/v1/daily/1day/{locationKey}/groups/{ID}": {
+      "GET": {}
+    },
+    "/locations/v1/poi/{countryCode}/search": {
+      "GET": {}
+    },
+    "/tropical/v1/storms/active/{basinId}": {
+      "GET": {}
+    },
+    "/locations/v1/regions": {
+      "GET": {}
+    },
+    "/indices/v1/daily/10day/{locationKey}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/15day/{locationKey}/groups/{ID}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/10day/{locationKey}/{ID}": {
+      "GET": {}
+    },
+    "/locations/v1/postalcodes/{countryCode}/search": {
+      "POST": {}
+    },
+    "/locations/v1/countries/{regionCode}": {
+      "GET": {}
+    },
+    "/locations/v1/cities/geoposition/search": {
+      "GET": {}
+    },
+    "/locations/v1/cities/{countryCode}/{adminCode}/search": {
+      "GET": {}
+    },
+    "/tropical/v1/storms/active/{basinId}/{depressionId}": {
+      "GET": {}
+    },
+    "/tropical/v1/storms/{yyyy}/{basinId}": {
+      "GET": {}
+    },
+    "/currentconditions/v1/{locationKey}": {
+      "GET": {}
+    },
+    "/translations/v1/languages": {
+      "GET": {}
+    },
+    "/forecasts/v1/daily/5day/{locationKey}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/1day/{locationKey}": {
+      "GET": {}
+    },
+    "/translations/v1/groups/{groupID}": {
+      "GET": {}
+    },
+    "/locations/v1/adminareas/{countryCode}": {
+      "GET": {}
+    },
+    "/currentconditions/v1/topcities/{group}": {
+      "GET": {}
+    },
+    "/forecasts/v1/hourly/12hour/{locationKey}": {
+      "GET": {}
+    },
+    "/tropical/v1/storms/active": {
+      "GET": {}
+    },
+    "/tropical/v1/storms/{yyyy}/{basinId}/{depressionId}/positions/current": {
+      "GET": {}
+    },
+    "/currentconditions/v1/{locationKey}/historical": {
+      "GET": {}
+    },
+    "/indices/v1/daily/5day/{locationKey}/{ID}": {
+      "GET": {}
+    },
+    "/locations/v1/poi/search": {
+      "GET": {}
+    },
+    "/forecasts/v1/hourly/72hour/{locationKey}": {
+      "GET": {}
+    },
+    "/locations/v1/{countryCode}/search": {
+      "GET": {}
+    },
+    "/currentconditions/v1/{locationKey}/historical/24": {
+      "GET": {}
+    },
+    "/alarms/v1/10day/{locationKey}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/groups": {
+      "GET": {}
+    },
+    "/indices/v1/daily/5day/{locationKey}/groups/{ID}": {
+      "GET": {}
+    },
+    "/locations/v1/poi/{countryCode}/{adminCode}/search": {
+      "GET": {}
+    },
+    "/locations/v1/search": {
+      "GET": {}
+    },
+    "/forecasts/v1/hourly/1hour/{locationKey}": {
+      "GET": {}
+    },
+    "/locations/v1/cities/ipaddress": {
+      "GET": {}
+    },
+    "/locations/v1/cities/neighbors/{locationKey}": {
+      "GET": {}
+    },
+    "/translations/v1/groups": {
+      "GET": {}
+    },
+    "/forecasts/v1/daily/1day/{locationKey}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/15day/{locationKey}": {
+      "GET": {}
+    },
+    "/alarms/v1/5day/{locationKey}": {
+      "GET": {}
+    },
+    "/locations/v1/postalcodes/search": {
+      "POST": {}
+    },
+    "/alarms/v1/1day/{locationKey}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/groups/{ID}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/15day/{locationKey}/{ID}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/10day/{locationKey}/groups/{ID}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/5day/{locationKey}": {
+      "GET": {}
+    },
+    "/locations/v1/cities/search": {
+      "GET": {}
+    },
+    "/alerts/v1/{locationKey}": {
+      "GET": {}
+    },
+    "/tropical/v1/storms/{yyyy}/{basinId}/{depressionId}/forecasts": {
+      "GET": {}
+    },
+    "/forecasts/v1/hourly/24hour/{locationKey}": {
+      "GET": {}
+    },
+    "/forecasts/v1/hourly/120hour/{locationKey}": {
+      "GET": {}
+    },
+    "/locations/v1/{countryCode}/{adminCode}/search": {
+      "GET": {}
+    },
+    "/tropical/v1/storms/{yyyy}/{basinId}/{depressionId}/positions": {
+      "GET": {}
+    },
+    "/forecasts/v1/daily/15day/{locationKey}": {
+      "GET": {}
+    },
+    "/forecasts/v1/daily/10day/{locationKey}": {
+      "GET": {}
+    },
+    "/locations/v1/cities/autocomplete": {
+      "GET": {}
+    },
+    "/locations/v1/topcities/{group}": {
+      "GET": {}
+    },
+    "/imagery/v1/maps/radsat/{resolution}/{locationKey}": {
+      "GET": {}
+    },
+    "/indices/v1/daily/1day/{locationKey}/{ID}": {
+      "GET": {}
+    },
+    "/indices/v1/daily": {
+      "GET": {}
+    },
+    "/alarms/v1/15day/{locationKey}": {
+      "GET": {}
+    },
+    "/tropical/v1/storms/{yyyy}/{basinId}/{depressionId}": {
+      "GET": {}
+    },
+    "/locations/v1/{locationKey}": {
+      "GET": {}
+    },
+    "/locations/v1/cities/{countryCode}/search": {
+      "GET": {}
+    },
+    "/indices/v1/daily/{ID}": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "dataservice.accuweather.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

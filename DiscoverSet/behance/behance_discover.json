@@ -3,7 +3,7 @@
     "request": {
       "url": "https://api.behance.net/v2/projects?q=motorcycle&client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -638,7 +638,7 @@
     "request": {
       "url": "https://api.behance.net/v2/fields?client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -1206,7 +1206,7 @@
     "request": {
       "url": "http://www.behance.net/v2/users/michaelklein548a/following?client_id=wcdrg12456dgf",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -1486,7 +1486,7 @@
     "request": {
       "url": "https://api.behance.net/v2/users/dtraytel/appreciations",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -2406,7 +2406,7 @@
     "request": {
       "url": "https://api.behance.net/v2/users?q=matias&client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -2740,7 +2740,7 @@
     "request": {
       "url": "https://api.behance.net/v2/projects/413699/comments?client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -3611,7 +3611,7 @@
     "request": {
       "url": "http://www.behance.net/v2/users/michaelklein548a/followers?client_id=abcdsdfsdf12312",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -3732,7 +3732,7 @@
     "request": {
       "url": "http://www.behance.net/v2/collections/9866?api_key=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -3788,7 +3788,7 @@
     "request": {
       "url": "https://api.behance.net/v2/users/cfaydi/stats?client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -3814,7 +3814,7 @@
     "request": {
       "url": "https://api.behance.net/v2/users/matiascorea/wips?client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -4428,7 +4428,7 @@
     "request": {
       "url": "https://www.behance.net/v2/users/matiascorea/work_experience?client_id=123456780",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -4467,7 +4467,7 @@
     "request": {
       "url": "https://api.behance.net/v2/users/matiascorea/projects?client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -4904,7 +4904,7 @@
     "request": {
       "url": "http://www.behance.net/v2/collections/9866/projects?api_key=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -5528,7 +5528,7 @@
     "request": {
       "url": "https://api.behance.net/v2/users/matiascorea?client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -5597,7 +5597,7 @@
     "request": {
       "url": "http://www.behance.net/v2/users/matiascorea/collections?api_key=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -5726,7 +5726,7 @@
     "request": {
       "url": "http://www.behance.net/v2/collections?q=candy&api_key=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -5905,7 +5905,7 @@
     "request": {
       "url": "https://api.behance.net/v2/creativestofollow?client_id=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",
@@ -6185,7 +6185,7 @@
     "request": {
       "url": "http://www.behance.net/v2/projects/4889175?api_key=1234567890",
       "method": "GET",
-      "body": null
+      "body": ""
     },
     "response": {
       "status": "200",

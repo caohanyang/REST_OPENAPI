@@ -1,0 +1,242 @@
+
+                            /-/administrative-areas
+                           |
+                           |--/api-flow-diagram
+                           |
+                           |--/api-flow-example
+                           |
+                           |--/apis
+                           |
+                           |--/autocomplete-information
+                           |
+                           |--/best-practices
+                           |
+                           |--/contact-us
+                           |
+                           |--/countries-by-region
+                           |
+                           |--/daily-index-categories-and-level-values
+                           |
+                           |--/data-display-formats
+                           |
+                           |--/documentation
+                           |
+                           |--/faq-page
+                           |
+                           |--/getting-started
+                           |
+                           |--/lastaction-values-and-definitions
+                           |
+                           |--/legal
+                           |
+                           |--/list-available-daily-indices
+                           |
+                           |--/localizations-by-language
+                           |
+                           |--/locations-information
+                           |
+                           |--/packages
+                           |
+                           |--/point-interest-poi-types
+                           |
+                           |--/postal-code-formats
+                           |
+                           |--/pricing-and-data-packages
+                           |
+                           |--/sitemap
+                           |
+                           |--/unit-types
+                           |
+                           |--/user
+                           |
+                           |--/weather-alarm-thresholds
+                           |
+                           |--/weather-icons
+                           |
+                           |                       /-/apis
+                           |-/accuweather-alerts-api
+                           |                       \/apis/get/alerts/v1-/%7BlocationKey%7D
+                           |
+                           |                                   /-/apis
+                           |                                  |
+                           |-/accuweather-current-conditions-api                             /-/%7BlocationKey%7D
+                           |                                  |                             |
+                           |                                  |                             |                  /-/historical
+                           |                                   \/apis/get/currentconditions/v1/%7BlocationKey%7D
+                           |                                                                |                  \/historical-/24
+                           |                                                                |
+                           |                                                                 \/topcities-/%7Bgroup%7D
+                           |
+                           |                         /-/apis
+                           |                        |
+                           |                        |                            //10day-/%7BlocationKey%7D
+                           |                        |                           |
+                           |-/accuweather-forecast-api                          |-/15day-/%7BlocationKey%7D
+                           |                        |                      //daily
+                           |                        |                     |     |-/1day-/%7BlocationKey%7D
+                           |                        |                     |     |
+                           |                        |                     |      \/5day-/%7BlocationKey%7D
+                           |                         \/apis/get/forecasts/v1
+                           |                                              |       //120hour-/%7BlocationKey%7D
+                           |                                              |      |
+                           |                                              |      |-/12hour-/%7BlocationKey%7D
+                           |                                              |      |
+                           |                                               \/hourly/1hour-/%7BlocationKey%7D
+                           |                                                     |
+                           |                                                     |-/24hour-/%7BlocationKey%7D
+                           |                                                     |
+                           |                                                      \/72hour-/%7BlocationKey%7D
+                           |
+                           |                        /-/apis
+                           |-/accuweather-imagery-api
+                           |                        \/apis/get/imagery/v1/maps/radsat/%7Bresolution%7D-/%7BlocationKey%7D
+                           |
+                           |                        /-/apis
+                           |                       |
+                           |                       |                    /-/daily
+                           |                       |                   |
+                           |                       |                   |      /-/%7BID%7D
+                           |-/accuweather-indices-api                  |     |
+                           |                       |                   |     |--/groups
+                           |                       |                   |     |
+                           |                       |                   |     |      /-/%7BlocationKey%7D
+                           |                       |                   |     |-/10day
+                           |                        \/apis/get/indices/v1    |     |                  /-/%7BID%7D
+                           |                                           |     |      \/%7BlocationKey%7D
+                           |                                           |     |                        \/groups-/%7BID%7D
+                           |                                           |     |
+                           |                                           |     |      /-/%7BlocationKey%7D
+                           |                                           |     |-/15day
+                           |                                           |     |     |                  /-/%7BID%7D
+                           |                                           |     |      \/%7BlocationKey%7D
+                           |                                            \/daily                       \/groups-/%7BID%7D
+                           |                                                 |
+                           |                                                 |     /-/%7BlocationKey%7D
+                           |                                                 |-/1day
+                           |                                                 |    |                  /-/%7BID%7D
+                           |                                                 |     \/%7BlocationKey%7D
+                           |                                                 |                       \/groups-/%7BID%7D
+                           |                                                 |
+                           |                                                 |     /-/%7BlocationKey%7D
+-- /developer.accuweather.com                                                |-/5day
+                           |                                                 |    |                  /-/%7BID%7D
+                           |                                                 |     \/%7BlocationKey%7D
+                           |                                                 |                       \/groups-/%7BID%7D
+                           |                                                 |
+                           |                                                  \/groups-/%7BID%7D
+                           |
+                           |                          /-/apis
+                           |                         |
+                           |                         |                      /-/%7BlocationKey%7D
+                           |                         |                     |
+                           |                         |                     |--/regions
+                           |                         |                     |
+                           |                         |                     |--/search
+                           |                         |                     |
+                           |                         |                     |                  /-/search
+                           |                         |                     |-/%7BcountryCode%7D
+                           |-/accuweather-locations-api                    |                  \/%7BadminCode%7D-/search
+                           |                         |                     |
+                           |                         |                     |-/adminareas-/%7BcountryCode%7D
+                           |                         |                     |
+                           |                         |                     |       /-/autocomplete
+                           |                         |                     |      |
+                           |                         |                     |      |--/ipaddress
+                           |                         |                     |      |
+                           |                         |                     |      |--/search
+                           |                         |                     |      |
+                           |                         |                     |-/cities                 /-/search
+                           |                          \/apis/get/locations/v1     |-/%7BcountryCode%7D
+                           |                                               |      |                  \/%7BadminCode%7D-/search
+                           |                                               |      |
+                           |                                               |      |-/geoposition-/search
+                           |                                               |      |
+                           |                                               |       \/neighbors-/%7BlocationKey%7D
+                           |                                               |
+                           |                                               |-/countries-/%7BregionCode%7D
+                           |                                               |
+                           |                                               |    /-/search
+                           |                                               |-/poi
+                           |                                               |   |                  /-/search
+                           |                                               |    \/%7BcountryCode%7D
+                           |                                               |                      \/%7BadminCode%7D-/search
+                           |                                               |
+                           |                                               |            /-/search
+                           |                                               |-/postalcodes
+                           |                                               |            \/%7BcountryCode%7D-/search
+                           |                                               |
+                           |                                                \/topcities-/%7Bgroup%7D
+                           |
+                           |                             /-/apis
+                           |                            |
+                           |-/accuweather-translations-api                        /-/groups
+                           |                            |                        |
+                           |                             \/apis/get/translations/v1-/languages
+                           |                                                     |
+                           |                                                      \/groups-/%7BgroupID%7D
+                           |
+                           |                         /-/apis
+                           |                        |
+                           |                        |                            /-/active
+                           |                        |                           |
+                           |-/accuweather-tropical-api                          |           /-/%7BbasinId%7D
+                           |                        |                           |          |
+                           |                        |                           |-/%7Byyyy%7D             /-/%7BdepressionId%7D
+                           |                        |                           |          |             |
+                           |                         \/apis/get/tropical/v1/storms          \/%7BbasinId%7D                  /-/forecasts
+                           |                                                    |                        |                  |
+                           |                                                    |                         \/%7BdepressionId%7D-/positions
+                           |                                                    |                                           |
+                           |                                                    |                                            \/positions-/current
+                           |                                                    |
+                           |                                                    |       /-/%7BbasinId%7D
+                           |                                                     \/active
+                           |                                                            \/%7BbasinId%7D-/%7BdepressionId%7D
+                           |
+                           |                               /-/apis
+                           |                              |
+                           |-/accuweather-weather-alarms-api                  //10day-/%7BlocationKey%7D
+                           |                              |                  |
+                           |                              |                  |-/15day-/%7BlocationKey%7D
+                           |                               \/apis/get/alarms/v1
+                           |                                                 |-/1day-/%7BlocationKey%7D
+                           |                                                 |
+                           |                                                  \/5day-/%7BlocationKey%7D
+                           |
+                           |                                    //elite_api_package-lie0-/elite_api_package-lie0_elite_rate_plan_v1
+                           |                                   |
+                           |                                   |-/free-/free
+                           |-/accuweather_custom/package/purchase
+                           |                                   |-/prime_api_package-msjh-/prime_api_package-msjh_prime_rate_plan_v1
+                           |                                   |
+                           |                                    \/standard_api_package-4vos-/standard_api_package-4vos_standard_rate_plan_v1
+                           |
+                           |-/files-/apirequestdemojpg
+                           |
+                           |-/glossary-terms-/verified-location
+                           |
+                           |        /-/africa
+                           |       |
+                           |       |--/antarctica
+                           |       |
+                           |       |--/arctic
+                           |       |
+                           |       |--/asia
+                           |       |
+                           |       |--/central-america
+                           |-/regions
+                           |       |--/europe
+                           |       |
+                           |       |--/middle-east
+                           |       |
+                           |       |--/north-america
+                           |       |
+                           |       |--/oceania
+                           |       |
+                           |        \-/south-america
+                           |
+                           |     /-/login
+                           |    |
+                            \/user-/password
+                                |
+                                 \-/register

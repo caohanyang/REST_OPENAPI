@@ -48,15 +48,16 @@ if (openAPI.host && openAPI.schemes && openAPI.paths) {
 				"request": {
 				  "url": null,
 				  "method": null,
-				  "body": null
+				  "body": ""
 				},
 				"response": {
 				  "status": "200",
-				  "body": null
+				  "body": ""
 				}
 			  };
 			
-			  discover.request['url'] = url;
+			  let urlString = handleUrl(url);
+			  discover.request['url'] = urlString;
 			  discover.request['method'] = verb;
 			  if (verbObject.hasOwnProperty('request')) {
 				 if (isJSON(verbObject.request)) {
@@ -92,3 +93,10 @@ if (openAPI.host && openAPI.schemes && openAPI.paths) {
 	fs.writeFileSync(API_PATH + "/discover.json", JSON.stringify(discoverAll, null, 2), 'utf8');
 }
 
+function handleUrl (url) {
+	if(url.startsWith("/")) {
+       return openAPI.schemes + "://" + openAPI.host + url
+	} else if (url.startsWith("http")){
+	   return url;
+	}
+}
