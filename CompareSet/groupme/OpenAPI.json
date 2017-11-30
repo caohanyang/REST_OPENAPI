@@ -104,6 +104,7 @@
         ]
       },
       "GET": {
+        "request": "[ { \"id\": \"1234567890\", \"name\": \"Family\", \"type\": \"private\", \"description\": \"Coolest Family Ever\", \"image_url\": \"https://i.groupme.com/123456789\", \"creator_user_id\": \"1234567890\", \"created_at\": 1302623328, \"updated_at\": 1302623328, \"members\": [ { \"user_id\": \"1234567890\", \"nickname\": \"Jane\", \"muted\": false, \"image_url\": \"https://i.groupme.com/123456789\" } ], \"share_url\": \"https://groupme.com/join_group/1234567890/SHARE_TOKEN\", \"messages\": { \"count\": 100, \"last_message_id\": \"1234567890\", \"last_message_created_at\": 1302623328, \"preview\": { \"nickname\": \"Jane\", \"text\": \"Hello world\", \"image_url\": \"https://i.groupme.com/123456789\", \"attachments\": [ { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"location\", \"lat\": \"40.738206\", \"lng\": \"-73.993285\", \"name\": \"GroupMe HQ\" }, { \"type\": \"split\", \"token\": \"SPLIT_TOKEN\" }, { \"type\": \"emoji\", \"placeholder\": \"☃\", \"charmap\": [ [ 1, 42 ], [ 2, 34 ] ] } ] } } } ]",
         "responses": {
           "200": {
             "description": "correct response",
@@ -176,14 +177,14 @@
         },
         "parameters": [
           {
-            "in": "query",
+            "in": "body",
             "name": "page",
             "description": "integer — Fetch a particular page of results. Defaults to 1.",
             "type": "integer",
             "required": true
           },
           {
-            "in": "query",
+            "in": "body",
             "name": "per_page",
             "description": "integer — Define page size. Defaults to 10.",
             "type": "integer",
@@ -439,6 +440,7 @@
         ]
       },
       "GET": {
+        "request": "{ \"blocks\": [ { \"user_id\": \"1234567890\", \"blocked_user_id\": \"1234567890\", \"created_at\": 1302623328 } ] }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -457,6 +459,7 @@
     },
     "/groups/:id/join/:share_token": {
       "POST": {
+        "request": "{ \"group\": { \"id\": \"1234567890\", \"name\": \"Family\", \"type\": \"private\", \"description\": \"Coolest Family Ever\", \"image_url\": \"https://i.groupme.com/123456789\", \"creator_user_id\": \"1234567890\", \"created_at\": 1302623328, \"updated_at\": 1302623328, \"members\": [ { \"user_id\": \"1234567890\", \"nickname\": \"Jane\", \"muted\": false, \"image_url\": \"https://i.groupme.com/123456789\" } ], \"share_url\": \"https://groupme.com/join_group/1234567890/SHARE_TOKEN\", \"messages\": { \"count\": 100, \"last_message_id\": \"1234567890\", \"last_message_created_at\": 1302623328, \"preview\": { \"nickname\": \"Jane\", \"text\": \"Hello world\", \"image_url\": \"https://i.groupme.com/123456789\", \"attachments\": [ { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"location\", \"lat\": \"40.738206\", \"lng\": \"-73.993285\", \"name\": \"GroupMe HQ\" }, { \"type\": \"split\", \"token\": \"SPLIT_TOKEN\" }, { \"type\": \"emoji\", \"placeholder\": \"☃\", \"charmap\": [ [ 1, 42 ], [ 2, 34 ] ] } ] } } } }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -531,6 +534,7 @@
     },
     "/users/me": {
       "GET": {
+        "request": "{ \"id\": \"1234567890\", \"phone_number\": \"+1 2123001234\", \"image_url\": \"https://i.groupme.com/123456789\", \"name\": \"Ronald Swanson\", \"created_at\": 1302623328, \"updated_at\": 1302623328, \"email\": \"me@example.com\", \"sms\": false }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -1000,6 +1004,7 @@
     },
     "/groups/:group_id/likes/for_me": {
       "GET": {
+        "request": "{ \"messages\": [ { \"id\": \"1234567890\", \"source_guid\": \"GUID\", \"created_at\": 1302623328, \"user_id\": \"1234567890\", \"group_id\": \"1234567890\", \"name\": \"John\", \"avatar_url\": \"https://i.groupme.com/123456789\", \"text\": \"Hello world ☃☃\", \"system\": true, \"favorited_by\": [ \"101\", \"66\", \"1234567890\" ], \"attachments\": [ { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"location\", \"lat\": \"40.738206\", \"lng\": \"-73.993285\", \"name\": \"GroupMe HQ\" }, { \"type\": \"split\", \"token\": \"SPLIT_TOKEN\" }, { \"type\": \"emoji\", \"placeholder\": \"☃\", \"charmap\": [ [ 1, 42 ], [ 2, 34 ] ] } ] } ] }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -1273,6 +1278,7 @@
     },
     "/groups/:group_id/likes/mine": {
       "GET": {
+        "request": "{ \"messages\": [ { \"id\": \"1234567890\", \"source_guid\": \"GUID\", \"created_at\": 1302623328, \"user_id\": \"1234567890\", \"group_id\": \"1234567890\", \"name\": \"John\", \"avatar_url\": \"https://i.groupme.com/123456789\", \"text\": \"Hello world ☃☃\", \"system\": true, \"favorited_by\": [ \"101\", \"66\", \"1234567890\" ], \"attachments\": [ { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"image\", \"url\": \"https://i.groupme.com/123456789\" }, { \"type\": \"location\", \"lat\": \"40.738206\", \"lng\": \"-73.993285\", \"name\": \"GroupMe HQ\" }, { \"type\": \"split\", \"token\": \"SPLIT_TOKEN\" }, { \"type\": \"emoji\", \"placeholder\": \"☃\", \"charmap\": [ [ 1, 42 ], [ 2, 34 ] ] } ], \"liked_at\": \"2014-05-08T18:30:31.6617Z\" } ] }",
         "responses": {
           "200": {
             "description": "correct response",
@@ -1640,6 +1646,7 @@
         ]
       },
       "GET": {
+        "request": "[ { \"bot_id\": \"1234567890\", \"group_id\": \"1234567890\", \"name\": \"hal9000\", \"avatar_url\": \"https://i.groupme.com/123456789\", \"callback_url\": \"http://example.com/bots/callback\", \"dm_notification\": false } ]",
         "responses": {
           "200": {
             "description": "correct response",

@@ -64,7 +64,11 @@ public class ProcessMethod {
 			}
 
 			if (url.contains(";") | url.contains("+") | url.contains("</") | url.contains(">")) {
-				return false;
+				// don't contain chars that in the path template
+				if (!url.contains(Settings.URLTEMPLATE)) {
+					return false;
+				}
+				
 			}
 
 			if (Settings.MODE.equals("http")) {

@@ -33,7 +33,7 @@
       <file leaf-file-name="crawlAllPages.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawlAllPages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
+            <state relative-caret-position="-151">
               <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="101" />
               <folding />
             </state>
@@ -325,7 +325,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="725" extended-state="1" />
+    <frame x="0" y="23" width="1280" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23907864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -508,7 +508,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlAllPages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
+        <state relative-caret-position="-151">
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="101" />
           <folding />
         </state>

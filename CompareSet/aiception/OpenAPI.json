@@ -1,0 +1,79 @@
+{
+  "paths": {
+    "/kittens/<ID>": {
+      "GET": {
+        "request": "curl \"http://example.com/api/kittens/2\" -H \"Authorization: meowmeowmeow\"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "fluffiness": 5,
+              "name": "Max",
+              "cuteness": 10,
+              "id": 2,
+              "breed": "unknown"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ID",
+            "description": "The ID of the kitten to retrieve",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/api/kittens": {
+      "GET": {
+        "request": "curl \"http://example.com/api/kittens\" -H \"Authorization: meowmeowmeow\"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "fluffiness": 6,
+                "name": "Fluffums",
+                "cuteness": 7,
+                "id": 1,
+                "breed": "calico"
+              },
+              {
+                "fluffiness": 5,
+                "name": "Max",
+                "cuteness": 10,
+                "id": 2,
+                "breed": "unknown"
+              }
+            ]
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "include_cats",
+            "description": "false If set to true, the result will also include cats.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "available",
+            "description": "true If set to false, the result will include kittens that have already been adopted.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "example.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

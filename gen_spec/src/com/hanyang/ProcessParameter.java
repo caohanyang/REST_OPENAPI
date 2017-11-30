@@ -24,11 +24,10 @@ import gate.util.Out;
 
 public class ProcessParameter {
 	public JSONObject generateParameter(JSONObject openAPI, String paraStr, String fullText, List<JSONObject> infoJson,
-			Annotation anno, Document doc, ProcessMethod processMe)
-			throws JSONException {
+			Annotation anno, Document doc, ProcessMethod processMe) throws JSONException {
 
-		JSONObject sectionJson = matchURL(paraStr, fullText, infoJson, anno.getStartNode().getOffset(),
-				doc, "parameter");
+		JSONObject sectionJson = matchURL(paraStr, fullText, infoJson, anno.getStartNode().getOffset(), doc,
+				"parameter");
 
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {
@@ -40,16 +39,16 @@ public class ProcessParameter {
 				// 1. we add url/action into openAPI now.
 				// because here we have known that each table have match one url
 				// some urls would not be used.
-//				processMe.addUrl(openAPI, url, action);
+				// processMe.addUrl(openAPI, url, action);
 
 				try {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
 					// 1. find the action
 					JSONObject actionObject = urlObject.getJSONObject(action);
-					
+
 					// parser the parameters
 					JSONArray paraArray = parseParameter(url, actionObject, paraStr, anno, doc);
-					
+
 					actionObject.put("parameters", paraArray);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -75,7 +74,8 @@ public class ProcessParameter {
 		return paraArray;
 	}
 
-	private JSONArray parseList(String url, JSONObject actionObject, String paraStr, Annotation anno, Document doc) throws JSONException {
+	private JSONArray parseList(String url, JSONObject actionObject, String paraStr, Annotation anno, Document doc)
+			throws JSONException {
 		JSONArray paraArray = new JSONArray();
 		Long startL = anno.getStartNode().getOffset();
 		Long endL = anno.getEndNode().getOffset();
@@ -108,10 +108,10 @@ public class ProcessParameter {
 					String ddStr = gate.Utils.stringFor(doc, ddElement);
 					// construct json
 					JSONObject keyObject = new JSONObject();
-					
+
 					String key = dtStr.split(" ")[0];
 					String value = ddStr;
-					
+
 					keyObject.put("name", key);
 					keyObject.put("description", value);
 					keyObject.put("in", findParaType(url, actionObject, key));
@@ -122,47 +122,45 @@ public class ProcessParameter {
 
 			}
 		} else {
-			
-			// we use the annotation directly
-			
-					Long startUl = anno.getStartNode().getOffset();
-					Long endUl = anno.getEndNode().getOffset();
 
-					String ulStr = gate.Utils.stringFor(doc, anno);
-					if (!ulStr.isEmpty()) {
-						// find value
-						AnnotationSet aSet = doc.getAnnotations("Original markups").getContained(startUl, endUl + 1).get("li");
-						// get dd list and sort
-						List aList = new ArrayList(aSet);
-						if (!aList.isEmpty()) {
-							
-							Collections.sort(aList, new OffsetComparator());
-							// each time get the first dd (nearest dd)
-							for (int i = 0 ; i < aList.size(); i++) {
-								
-								Annotation liElement = (Annotation) aList.get(i);
-								String liStr = gate.Utils.stringFor(doc, liElement);
-								// construct json
-								String[] pArray = liStr.split("\n");
-								JSONObject keyObject = new JSONObject();
-								
-								String key = pArray[0];
-								String value = pArray[1];
-								
-								keyObject.put("name", key);
-								keyObject.put("description", value);
-								keyObject.put("in", findParaType(url, actionObject, key));
-								keyObject.put("type", "integer");
-								keyObject.put("required", true);
-								paraArray.put(keyObject);
-							}
-							
-						}
-						
+			// we use the annotation directly
+
+			Long startUl = anno.getStartNode().getOffset();
+			Long endUl = anno.getEndNode().getOffset();
+
+			String ulStr = gate.Utils.stringFor(doc, anno);
+			if (!ulStr.isEmpty()) {
+				// find value
+				AnnotationSet aSet = doc.getAnnotations("Original markups").getContained(startUl, endUl + 1).get("li");
+				// get dd list and sort
+				List aList = new ArrayList(aSet);
+				if (!aList.isEmpty()) {
+
+					Collections.sort(aList, new OffsetComparator());
+					// each time get the first dd (nearest dd)
+					for (int i = 0; i < aList.size(); i++) {
+
+						Annotation liElement = (Annotation) aList.get(i);
+						String liStr = gate.Utils.stringFor(doc, liElement);
+						// construct json
+						String[] pArray = liStr.split("\n");
+						JSONObject keyObject = new JSONObject();
+
+						String key = pArray[0];
+						String value = pArray[1];
+
+						keyObject.put("name", key);
+						keyObject.put("description", value);
+						keyObject.put("in", findParaType(url, actionObject, key));
+						keyObject.put("type", "integer");
+						keyObject.put("required", true);
+						paraArray.put(keyObject);
 					}
 
-			
-			
+				}
+
+			}
+
 		}
 
 		return paraArray;
@@ -177,14 +175,15 @@ public class ProcessParameter {
 				return "body";
 			}
 		}
-		
+
 		if (url.contains(key)) {
 			return "path";
 		}
 		return Settings.PARAIN;
 	}
 
-	private JSONArray parseTable(String url, JSONObject actionObject, String paraStr, Annotation anno, Document doc) throws JSONException {
+	private JSONArray parseTable(String url, JSONObject actionObject, String paraStr, Annotation anno, Document doc)
+			throws JSONException {
 		// Here we need to get tbody, not the whole table annotation
 		List trList = getTbody(paraStr, anno, doc);
 
@@ -318,9 +317,8 @@ public class ProcessParameter {
 
 	}
 
-	public void handleParaTemplate(JSONObject openAPI, Document doc,
-			ProcessMethod processMe, String strAll, List<JSONObject> infoJson,
-			AnnotationSet annoOrigin) throws JSONException {
+	public void handleParaTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
 		if (Settings.TEMPLATE.equals("table")) {
 			// 1 get table annotation
 			AnnotationSet annoTable = annoOrigin.get("table");
@@ -335,9 +333,9 @@ public class ProcessParameter {
 			searchParameter(openAPI, doc, processMe, strAll, infoJson, annoList);
 		}
 	}
-	
-	public void searchParameter(JSONObject openAPI, Document doc,
-			ProcessMethod processMe, String strAll, List<JSONObject> infoJson, AnnotationSet annoTemplate) throws JSONException {
+
+	public void searchParameter(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoTemplate) throws JSONException {
 		// 5.3 for each page, set findParaTable = False
 		boolean findParaTemplate = false;
 		// 5.3.1 Test if the page contains multiple parameter table or not
@@ -360,16 +358,16 @@ public class ProcessParameter {
 		// 5.3.2 handle the template context
 		Iterator<Annotation> templateIter = annoTemplate.iterator();
 		ProcessParameter processPa = new ProcessParameter();
-		
-//		// put all the infoJson into openAPI first
-//		if (!infoJson.isEmpty()) {
-//			// In case of the method doesn't have parameter
-//			// add the noPara url
-//			// processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
-//			// add all the url/action pair
-//			processMe.addAllParaURL(openAPI, strAll, infoJson);
-//		}
-		
+
+		// // put all the infoJson into openAPI first
+		// if (!infoJson.isEmpty()) {
+		// // In case of the method doesn't have parameter
+		// // add the noPara url
+		// // processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
+		// // add all the url/action pair
+		// processMe.addAllParaURL(openAPI, strAll, infoJson);
+		// }
+
 		// add parameters to those urls
 		while (templateIter.hasNext()) {
 			Annotation anno = (Annotation) templateIter.next();
@@ -382,77 +380,80 @@ public class ProcessParameter {
 			}
 		}
 
-		
-		
 	}
-	
-	public JSONObject matchURL(String paraStr, String fullText, List<JSONObject> infoJson, Long paraLocation, Document doc, String mode) throws JSONException {
+
+	public JSONObject matchURL(String paraStr, String fullText, List<JSONObject> infoJson, Long paraLocation,
+			Document doc, String source) throws JSONException {
 		JSONObject sectionObject = new JSONObject();
 		int minimumDistance = Integer.MAX_VALUE;
 		Out.prln("---------para location-------");
 		Out.prln(paraLocation);
 		for (JSONObject it : infoJson) {
 
-//			// Rule 1: action that not far from "example..."
-//			JSONObject entryAction = it.getJSONObject("action");
-//			Iterator keysAction = entryAction.keys();
-//			if (keysAction.hasNext()) {
-//				Long standard = null;
-//				if (mode == "parameter") {
-//					// parameter
-//					standard = entryAction.getLong(keysAction.next().toString());
-//				} else {
-//					// example ???
-//					standard = entryAction.getLong(keysAction.next().toString());
-//
-//				}
-//
-//				Long head = standard;
-//				String headStr = gate.Utils.stringFor(doc, Math.max(head - 50, 0), head).toLowerCase();
-//				Long bottom = standard + paraStr.length();
-//
-//				if (bottom < fullText.length()) {
-//					// it should be less than the fullText length
-//					String bottomStr = gate.Utils.stringFor(doc, bottom, Math.min(bottom + 50, fullText.length()))
-//							.toLowerCase();
-//					if (headStr.contains("example") | bottomStr.contains("example")) {
-//						sectionObject.put("action", it.getJSONObject("action").keys().next());
-//						sectionObject.put("url", it.getJSONObject("url").keys().next());
-//						break;
-//					}
-//				}
-//			}
+			JSONObject entry = it.getJSONObject("url");
+			Iterator keys = entry.keys();
+			if (keys.hasNext()) {
+				String key = (String) keys.next();
 
-			if (Settings.U1P2) {
-				// Rule 2: search the nearest url
-				// first url then parameter
-				JSONObject entry = it.getJSONObject("url");
-				Iterator keys = entry.keys();
-				if (keys.hasNext()) {
-					String key = (String) keys.next();
-
-					if (Settings.NUMBER.matches("single")) {
-						// if it's a single page, search from all the text
-						if (Math.abs(paraLocation - entry.getInt(key)) < minimumDistance) {
-							minimumDistance = (int) Math.abs((paraLocation - entry.getInt(key)));
-							sectionObject.put("action", it.getJSONObject("action").keys().next());
-							sectionObject.put("url", key);
-						}
+				if (source.equals("request")) {
+					if (Settings.URL1REQ2) {
+						// url location < para location
+						minimumDistance = locationNormal(paraLocation, sectionObject, minimumDistance, it, entry, key);
 					} else {
-						// multiple table mode: search only in the previous context
-						if ((paraLocation - entry.getInt(key) < minimumDistance)
-								&& (paraLocation - entry.getInt(key) > 0)) {
-							minimumDistance = (int) (paraLocation - entry.getInt(key));
-							sectionObject.put("action", it.getJSONObject("action").keys().next());
-							sectionObject.put("url", key);
-						}
+						// url location > para location
+						minimumDistance = locationReverse(paraLocation, sectionObject, minimumDistance, it, entry, key);
 					}
-
+				} else if (source.equals("response")) {
+					if (Settings.URL1RES2) {
+						minimumDistance = locationNormal(paraLocation, sectionObject, minimumDistance, it, entry, key);
+					} else {
+						minimumDistance = locationReverse(paraLocation, sectionObject, minimumDistance, it, entry, key);
+					}
+				} else if (source.equals("parameter")) {
+					if (Settings.URL1PARA2) {
+						minimumDistance = locationNormal(paraLocation, sectionObject, minimumDistance, it, entry, key);
+					} else {
+						minimumDistance = locationReverse(paraLocation, sectionObject, minimumDistance, it, entry, key);
+					}
 				}
+				// if (Settings.NUMBER.matches("single")) {
+				// // if it's a single page, search from all the text
+				// if (Math.abs(paraLocation - entry.getInt(key)) <
+				// minimumDistance) {
+				// minimumDistance = (int) Math.abs((paraLocation -
+				// entry.getInt(key)));
+				// sectionObject.put("action",
+				// it.getJSONObject("action").keys().next());
+				// sectionObject.put("url", key);
+				// }
+				// } else {
+
+				// }
+
 			}
-			
+
 		}
 		return sectionObject;
+	}
+
+	private int locationReverse(Long paraLocation, JSONObject sectionObject, int minimumDistance, JSONObject it,
+			JSONObject entry, String key) throws JSONException {
+		if ((entry.getInt(key) - paraLocation < minimumDistance) && (entry.getInt(key) - paraLocation > 0)) {
+			minimumDistance = (int) (entry.getInt(key) - paraLocation);
+			sectionObject.put("action", it.getJSONObject("action").keys().next());
+			sectionObject.put("url", key);
+		}
+		return minimumDistance;
+	}
+
+	private int locationNormal(Long paraLocation, JSONObject sectionObject, int minimumDistance, JSONObject it,
+			JSONObject entry, String key) throws JSONException {
+		if ((paraLocation - entry.getInt(key) < minimumDistance) && (paraLocation - entry.getInt(key) > 0)) {
+			minimumDistance = (int) (paraLocation - entry.getInt(key));
+			sectionObject.put("action", it.getJSONObject("action").keys().next());
+			sectionObject.put("url", key);
+		}
+		return minimumDistance;
 	}
 
 	public boolean isParaTemplate(String txt, Annotation anno, String strAll) {
@@ -463,28 +464,33 @@ public class ProcessParameter {
 		// find previous text
 		int templateLocation = anno.getStartNode().getOffset().intValue();
 		String appendTemplateText;
-		//1. the "parameter" string must not far from the startNode
-//		if (anno.getEndNode().getOffset().intValue() - templateLocation > 100) {
-//			// if the table is to big, just check the 100 character
-//			// check the pre-text, if it contains parameter | argument
-//			if (templateLocation <= 50) {
-//				appendTemplateText = strAll.substring(templateLocation, templateLocation + 100);
-//			} else {
-//				appendTemplateText = strAll.substring(templateLocation - 50, templateLocation + 100);
-//			}
-//		} else {
-//			if (templateLocation <= 50) {
-//				appendTemplateText = strAll.substring(templateLocation, anno.getEndNode().getOffset().intValue());
-//			} else {
-//				appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
-//			}
-//		}
-		
+		// 1. the "parameter" string must not far from the startNode
+		// if (anno.getEndNode().getOffset().intValue() - templateLocation >
+		// 100) {
+		// // if the table is to big, just check the 100 character
+		// // check the pre-text, if it contains parameter | argument
+		// if (templateLocation <= 50) {
+		// appendTemplateText = strAll.substring(templateLocation,
+		// templateLocation + 100);
+		// } else {
+		// appendTemplateText = strAll.substring(templateLocation - 50,
+		// templateLocation + 100);
+		// }
+		// } else {
+		// if (templateLocation <= 50) {
+		// appendTemplateText = strAll.substring(templateLocation,
+		// anno.getEndNode().getOffset().intValue());
+		// } else {
+		// appendTemplateText = strAll.substring(templateLocation - 50,
+		// anno.getEndNode().getOffset().intValue());
+		// }
+		// }
+
 		// change new method
-		appendTemplateText = strAll.substring(templateLocation - 13, templateLocation + 13);
-		
-		if (Pattern.compile(Settings.PARAKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
-				.find()) {
+		appendTemplateText = strAll.substring(templateLocation - Settings.PARAKEY.length() - 10,
+				templateLocation + Settings.PARAKEY.length() + 13);
+
+		if (Pattern.compile(Settings.PARAKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
 			return true;
 		}
 		return false;

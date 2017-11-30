@@ -74,7 +74,7 @@ public class ProcessRequest {
 			
 			// if the text contain "response" skip this text
 			Out.prln(requestMatcher.toString());
-			if (Pattern.compile(Settings.RESKEY, Pattern.CASE_INSENSITIVE).matcher(requestMatcher.toString())
+			if (Settings.RESKEY.length()!= 0 && Pattern.compile(Settings.RESKEY, Pattern.CASE_INSENSITIVE).matcher(requestMatcher.toString())
 					.find()) {
 				continue;
 			}
@@ -88,7 +88,7 @@ public class ProcessRequest {
 				
 			} else if (Settings.REQEXAMPLE.equals("\\{(.*?)\\}")){
 				
-				AnnotationSet annoPre = annoOrigin.get("pre", new Long(requestMatcher.start()), new Long(requestMatcher.end() + 1));
+				AnnotationSet annoPre = annoOrigin.get(Settings.REQTEMPLATE, new Long(requestMatcher.start()), new Long(requestMatcher.end() + 1));
 				Iterator<Annotation> codeIter = annoPre.iterator();
 				
 				while (codeIter.hasNext()) {
@@ -99,18 +99,35 @@ public class ProcessRequest {
 					}
 					
 				}
-			}
+				
+			} else if (Settings.REQEXAMPLE.equals("curl")){
+				
+				AnnotationSet annoPre = annoOrigin.get(Settings.REQTEMPLATE, new Long(requestMatcher.start()), new Long(requestMatcher.end() + 1));
+				Iterator<Annotation> codeIter = annoPre.iterator();
+				
+				while (codeIter.hasNext()) {
+					Annotation anno = (Annotation) codeIter.next();
+					String codeText = gate.Utils.stringFor(doc, anno);		
+					if (codeText.contains("http")) {
+						matchStr = codeText;
+					}
+					
+				}
+			} 
 			
 			// handle url, make it short and clean
 			Out.prln(matchStr);
-			generateRequest(openAPI, matchStr, strAll, infoJson, doc, processMe);
+			if (matchStr != null) {
+				generateRequest(openAPI, matchStr, strAll, infoJson, doc, processMe);
+			}
+			
 		}
 	}
 	
 	public JSONObject generateRequest(JSONObject openAPI, String requestText, String strAll, List<JSONObject> infoJson,
 			 Document doc, ProcessMethod processMe) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();
-		JSONObject sectionJson = processPa.matchURL(requestText, strAll, infoJson, Long.valueOf(strAll.indexOf(requestText)), doc, "example");
+		JSONObject sectionJson = processPa.matchURL(requestText, strAll, infoJson, Long.valueOf(strAll.indexOf(requestText)), doc, "request");
 		
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {

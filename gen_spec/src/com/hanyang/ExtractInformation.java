@@ -57,6 +57,11 @@ public class ExtractInformation {
 			if (API_NAME.contains("google")) {
 				API_FOLDER = args[0].split("//")[1].split("/")[1];
 				API_NAME = args[0].split("//")[1].split("/")[1];
+			} else if (API_NAME.contains("/")) {
+				if (!args[0].split("//")[1].startsWith("www") && !args[0].split("//")[1].startsWith("api") ) {
+					API_NAME = args[0].split("//")[1].split("\\.")[0];
+				}
+					
 			}
 			FilteredSet_PATH = "../FilteredSet/" + API_FOLDER;
 			CompareSet_PATH = "../CompareSet/" + API_NAME;
@@ -64,7 +69,7 @@ public class ExtractInformation {
 
 		
 		// 0. get properties
-//		Settings.getPropertiesReader(CompareSet_PATH + "/"+ API_NAME);
+		Settings.getPropertiesReader(CompareSet_PATH + "/"+ API_NAME);
 		
 		// init gate
 		Gate.init();
@@ -105,7 +110,7 @@ public class ExtractInformation {
 		selectOpenAPI(compareSet);
 
 		// 4. write properties
-		Settings.writeProperties(CompareSet_PATH + "/"+ API_NAME);
+//		Settings.writeProperties(CompareSet_PATH + "/"+ API_NAME);
 		
 	}
 
@@ -268,10 +273,8 @@ public class ExtractInformation {
 		// 5. handle response template
 		ProcessResponse processRe = new ProcessResponse();
 		processRe.handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
-		
-		
-		
-		// 3 handle parameter
+			
+		// 6. handle parameter
 		ProcessParameter processPa = new ProcessParameter();
 		processPa.handleParaTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}

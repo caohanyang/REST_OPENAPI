@@ -1,0 +1,18 @@
+{
+  "basePath": "/api/kittens",
+  "paths": {
+    "/2": {
+      "GET": {}
+    },
+    "/": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "example.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

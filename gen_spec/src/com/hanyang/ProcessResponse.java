@@ -60,7 +60,7 @@ public class ProcessResponse {
 	public void handleResponseTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
 			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
 		// find code example in the code
-		AnnotationSet annoPre = annoOrigin.get("pre");
+		AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE);
 		searchCode(openAPI, doc, processMe, strAll, infoJson, annoPre);
 	}
 
@@ -85,7 +85,7 @@ public class ProcessResponse {
 	public JSONObject generateResponse(JSONObject openAPI, String codeText, String strAll, List<JSONObject> infoJson,
 			Annotation anno, Document doc, ProcessMethod processMe, AnnotationSet annoCode) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();
-		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, anno.getStartNode().getOffset(), doc, "example");
+		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, anno.getStartNode().getOffset(), doc, "response");
 		
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {
