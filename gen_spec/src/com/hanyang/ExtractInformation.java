@@ -359,7 +359,8 @@ public class ExtractInformation {
 					
 					// in some cases, you need to remove whitespace  /v2/projects/ project_id => /v2/projects/project_id
 					if (Settings.URLMIDDLE.length()!= 0) {
-						urlString = urlString.replace(Settings.URLMIDDLE, "");
+						// just remove one whitespace is enough
+						urlString = urlString.replaceFirst(Settings.URLMIDDLE, "");
 					}
 					
 				    //	/groups Parameters => /groups

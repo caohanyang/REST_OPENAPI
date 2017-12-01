@@ -115,7 +115,7 @@ public class ProcessParameter {
 					keyObject.put("name", key);
 					keyObject.put("description", value);
 					keyObject.put("in", findParaType(url, actionObject, key));
-					keyObject.put("type", "integer");
+					keyObject.put("type", findType(value));
 					keyObject.put("required", true);
 					paraArray.put(keyObject);
 				}
@@ -152,7 +152,7 @@ public class ProcessParameter {
 						keyObject.put("name", key);
 						keyObject.put("description", value);
 						keyObject.put("in", findParaType(url, actionObject, key));
-						keyObject.put("type", "integer");
+						keyObject.put("type", findType(value));
 						keyObject.put("required", true);
 						paraArray.put(keyObject);
 					}
@@ -166,6 +166,24 @@ public class ProcessParameter {
 		return paraArray;
 	}
 
+	private String findType(String value) {
+		if (value.toLowerCase().contains("string")) {
+			return "string";
+		} else if (value.toLowerCase().contains("boolean")) {
+			return "boolean";
+		}
+		return "integer";
+	}
+
+	public String extactType(String type) {
+		if (StringUtils.isNumeric(type)) {
+			return "integer";
+		} else if ("true".equalsIgnoreCase(type) || "false".equalsIgnoreCase(type)) {
+			return "boolean";
+		}
+		return "integer";
+	}
+	
 	private String findParaType(String url, JSONObject actionObject, String key) throws JSONException {
 		// find parameter type
 		// Possible values are "query", "header", "path", "formData" or "body".
@@ -244,7 +262,7 @@ public class ProcessParameter {
 				keyObject.put("name", key);
 				keyObject.put("description", value);
 				keyObject.put("in", findParaType(url, actionObject, key));
-				keyObject.put("type", "integer");
+				keyObject.put("type", findType(value));
 				keyObject.put("required", true);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -296,15 +314,6 @@ public class ProcessParameter {
 
 		return null;
 
-	}
-
-	public String extactType(String type) {
-		if (StringUtils.isNumeric(type)) {
-			return "integer";
-		} else if ("true".equalsIgnoreCase(type) || "false".equalsIgnoreCase(type)) {
-			return "boolean";
-		}
-		return "integer";
 	}
 
 	public Map<String, Integer> genUrlLocation(String fullText, List<String> urlList) {

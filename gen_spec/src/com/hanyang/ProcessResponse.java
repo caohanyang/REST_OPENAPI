@@ -47,11 +47,10 @@ public class ProcessResponse {
 				appendTemplateText = strAll.substring(templateLocation - 50, anno.getEndNode().getOffset().intValue());
 			}
 		}
-		
+
 		if (codeText.startsWith("{") | codeText.startsWith("[")) {
-			
-			if (Pattern.compile(Settings.RESKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText)
-					.find()) {
+
+			if (Pattern.compile(Settings.RESKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
 				return true;
 			}
 		}
@@ -60,62 +59,57 @@ public class ProcessResponse {
 
 	public void handleResponseTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
 			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
-		
-		String regexAll;
-		
-		regexAll = "(?si)" + Settings.RESKEY + Settings.RESMIDDLE + Settings.RESEXAMPLE;
 
-		Pattern p = Pattern.compile(regexAll);
-		Matcher responseMatcher = p.matcher(strAll);
-		
-		while (responseMatcher.find()) {
-			Out.prln("responseStart： " + responseMatcher.start());
-			
-			// if the text contain "response" skip this text
-//			Out.prln(responseMatcher.toString());
-//			if (Settings.RESKEY.length()!= 0 && Pattern.compile(Settings.RESKEY, Pattern.CASE_INSENSITIVE).matcher(responseMatcher.toString())
-//					.find()) {
-//				continue;
-//			}
-			
-			String matchStr = null;
-			if (Settings.REQEXAMPLE.equals("\\{(.*?)\\}")){
-				
-				AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE, new Long(responseMatcher.start()), new Long(responseMatcher.end() + 1));
-				Iterator<Annotation> codeIter = annoPre.iterator();
-				
-				while (codeIter.hasNext()) {
-					Annotation anno = (Annotation) codeIter.next();
-					String codeText = gate.Utils.stringFor(doc, anno);		
-					if (codeText.startsWith("{") | codeText.startsWith("[")) {				
-						// direct start from json
-						matchStr = codeText;
-					} else {
-						// not direct start from json
-					   if (codeText.contains("[")) {
-						   matchStr = codeText.substring(codeText.indexOf("["));
-					   } else {
-						   matchStr = codeText.substring(codeText.indexOf("{"));
-					   }
-					   
+		String regexAll;
+
+		if (!Settings.RESKEY.equals("no")) {
+			regexAll = "(?si)" + Settings.RESKEY + Settings.RESMIDDLE + Settings.RESEXAMPLE;
+
+			Pattern p = Pattern.compile(regexAll);
+			Matcher responseMatcher = p.matcher(strAll);
+
+			while (responseMatcher.find()) {
+				Out.prln("responseStart： " + responseMatcher.start());
+
+				String matchStr = null;
+				if (Settings.REQEXAMPLE.equals("\\{(.*?)\\}")) {
+
+					AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE, new Long(responseMatcher.start()),
+							new Long(responseMatcher.end() + 1));
+					Iterator<Annotation> codeIter = annoPre.iterator();
+
+					while (codeIter.hasNext()) {
+						Annotation anno = (Annotation) codeIter.next();
+						String codeText = gate.Utils.stringFor(doc, anno);
+						if (codeText.startsWith("{") | codeText.startsWith("[")) {
+							// direct start from json
+							matchStr = codeText;
+						} else {
+							// not direct start from json
+							if (codeText.contains("[")) {
+								matchStr = codeText.substring(codeText.indexOf("["));
+							} else {
+								matchStr = codeText.substring(codeText.indexOf("{"));
+							}
+
+						}
+
 					}
-					
+
 				}
-				
-			} 
-			// handle url, make it short and clean
-			Out.prln(matchStr);
-			if (matchStr != null) {
-				generateResponse(openAPI, matchStr, strAll, infoJson, doc, processMe);
+				// handle url, make it short and clean
+				Out.prln(matchStr);
+				if (matchStr != null) {
+					generateResponse(openAPI, matchStr, strAll, infoJson, doc, processMe);
+				}
+
 			}
-			
+
 		}
-			
-		
-		
-//		// find code example in the code
-//		AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE);
-//		searchCode(openAPI, doc, processMe, strAll, infoJson, annoPre);
+
+		// // find code example in the code
+		// AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE);
+		// searchCode(openAPI, doc, processMe, strAll, infoJson, annoPre);
 	}
 
 	public void searchCode(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
@@ -124,10 +118,10 @@ public class ProcessResponse {
 		boolean findCodeTemplate = false;
 		// 5.3.1 Test if the page contains multiple parameter table or not
 		Iterator<Annotation> codeIter = annoCode.iterator();
-		
+
 		while (codeIter.hasNext()) {
 			Annotation anno = (Annotation) codeIter.next();
-			String codeText = gate.Utils.stringFor(doc, anno);			
+			String codeText = gate.Utils.stringFor(doc, anno);
 			if (isResponseTemplate(codeText, anno, strAll)) {
 				findCodeTemplate = true;
 				generateResponse(openAPI, codeText, strAll, infoJson, doc, processMe);
@@ -135,56 +129,55 @@ public class ProcessResponse {
 		}
 
 	}
-	
+
 	public JSONObject generateResponse(JSONObject openAPI, String codeText, String strAll, List<JSONObject> infoJson,
 			Document doc, ProcessMethod processMe) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();
-		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, Long.valueOf(strAll.indexOf(codeText)), doc, "response");
-		
+		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, Long.valueOf(strAll.indexOf(codeText)),
+				doc, "response");
+
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {
 
 			String url = sectionJson.getString("url");
 			String action = sectionJson.getString("action");
-       
+
 			try {
-                //need to fix
-				//remove all the whitespace 
+				// need to fix
+				// remove all the whitespace
 				codeText = codeText.replaceAll(" ", "");
 				Out.prln(codeText);
-				
+
 				Object codeObj = null;
 				if (codeText.startsWith("{")) {
 					codeObj = new JSONObject(codeText);
 				} else if (codeText.startsWith("[")) {
 					codeObj = new JSONArray(codeText);
 				}
-				
-					
+
 				if (openAPI.getJSONObject("paths").has(url)) {
 					JSONObject urlObject = openAPI.getJSONObject("paths").getJSONObject(url);
 					JSONObject actionObject;
-					
+
 					if (urlObject.has(action)) {
 						actionObject = urlObject.getJSONObject(action);
 						JSONObject correctObject = new JSONObject();
 						correctObject.put("description", "correct response");
 						correctObject.put("example", codeObj);
-						
+
 						JSONObject resObject = new JSONObject();
 						resObject.put("200", correctObject);
-						
+
 						actionObject.put("responses", resObject);
 					}
-					
+
 				}
-								
-				
+
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
 		return openAPI;
 	}
-	
+
 }

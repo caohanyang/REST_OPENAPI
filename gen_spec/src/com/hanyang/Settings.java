@@ -48,8 +48,8 @@ public class Settings {
 	 * RQUEST
 	 */
 	// The key word before the request
-	// "EXAMPLE REQUEST"  ""
-	public static String REQKEY = "request:";
+	// "EXAMPLE REQUEST"  "" "no"
+	public static String REQKEY = "no";
 	// \\s \\s.{0,60} ""
 	public static String REQMIDDLE = "\\s.{0,100}";
 	// The request exists or not 
@@ -66,8 +66,8 @@ public class Settings {
 	 * RESPONSE 
 	 */
 	
-	// (example)|(response)
-	public static String RESKEY = "response:";
+	// (example)|(response)  ""  "no"
+	public static String RESKEY = "no";
 	// \\s \\s.{0,60} ""
 	// 1.
 	public static String RESMIDDLE = "\\s.{0,100}";
@@ -89,7 +89,8 @@ public class Settings {
 	// (parameter)|(argument)|(field)
 	// sometimes not common "Query Parameters" "url Parameters"
 	// choose the last common one
-	public static String PARAKEY = "(parameter)|(argument)|(field)";
+	// (parameter)|(argument)|(field)  or choose the first element Name
+	public static String PARAKEY = "Name";
 	// first URL then parameters
 	public static boolean URL1PARA2 = true;	
 	
