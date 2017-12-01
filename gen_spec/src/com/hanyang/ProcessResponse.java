@@ -2,6 +2,7 @@ package com.hanyang;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringEscapeUtils;
@@ -59,9 +60,62 @@ public class ProcessResponse {
 
 	public void handleResponseTemplate(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
 			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
-		// find code example in the code
-		AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE);
-		searchCode(openAPI, doc, processMe, strAll, infoJson, annoPre);
+		
+		String regexAll;
+		
+		regexAll = "(?si)" + Settings.RESKEY + Settings.RESMIDDLE + Settings.RESEXAMPLE;
+
+		Pattern p = Pattern.compile(regexAll);
+		Matcher responseMatcher = p.matcher(strAll);
+		
+		while (responseMatcher.find()) {
+			Out.prln("responseStart： " + responseMatcher.start());
+			
+			// if the text contain "response" skip this text
+//			Out.prln(responseMatcher.toString());
+//			if (Settings.RESKEY.length()!= 0 && Pattern.compile(Settings.RESKEY, Pattern.CASE_INSENSITIVE).matcher(responseMatcher.toString())
+//					.find()) {
+//				continue;
+//			}
+			
+			String matchStr = null;
+			if (Settings.REQEXAMPLE.equals("\\{(.*?)\\}")){
+				
+				AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE, new Long(responseMatcher.start()), new Long(responseMatcher.end() + 1));
+				Iterator<Annotation> codeIter = annoPre.iterator();
+				
+				while (codeIter.hasNext()) {
+					Annotation anno = (Annotation) codeIter.next();
+					String codeText = gate.Utils.stringFor(doc, anno);		
+					if (codeText.startsWith("{") | codeText.startsWith("[")) {				
+						// direct start from json
+						matchStr = codeText;
+					} else {
+						// not direct start from json
+					   if (codeText.contains("[")) {
+						   matchStr = codeText.substring(codeText.indexOf("["));
+					   } else {
+						   matchStr = codeText.substring(codeText.indexOf("{"));
+					   }
+					   
+					}
+					
+				}
+				
+			} 
+			// handle url, make it short and clean
+			Out.prln(matchStr);
+			if (matchStr != null) {
+				generateResponse(openAPI, matchStr, strAll, infoJson, doc, processMe);
+			}
+			
+		}
+			
+		
+		
+//		// find code example in the code
+//		AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE);
+//		searchCode(openAPI, doc, processMe, strAll, infoJson, annoPre);
 	}
 
 	public void searchCode(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
@@ -76,16 +130,16 @@ public class ProcessResponse {
 			String codeText = gate.Utils.stringFor(doc, anno);			
 			if (isResponseTemplate(codeText, anno, strAll)) {
 				findCodeTemplate = true;
-				generateResponse(openAPI, codeText, strAll, infoJson, anno, doc, processMe,annoCode);
+				generateResponse(openAPI, codeText, strAll, infoJson, doc, processMe);
 			}
 		}
 
 	}
 	
 	public JSONObject generateResponse(JSONObject openAPI, String codeText, String strAll, List<JSONObject> infoJson,
-			Annotation anno, Document doc, ProcessMethod processMe, AnnotationSet annoCode) throws JSONException {
+			Document doc, ProcessMethod processMe) throws JSONException {
 		ProcessParameter processPa = new ProcessParameter();
-		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, anno.getStartNode().getOffset(), doc, "response");
+		JSONObject sectionJson = processPa.matchURL(codeText, strAll, infoJson, Long.valueOf(strAll.indexOf(codeText)), doc, "response");
 		
 		// if the sectionJson is null, showing that it doesn't match
 		if (sectionJson.length() != 0) {

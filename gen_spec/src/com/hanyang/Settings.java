@@ -29,16 +29,16 @@ public class Settings {
 	// for some url contains URL parameters
 	// It will present URL in different tags, which causes whitespace
 	// " " ""
-	public static String URLMIDDLE = "";
+	public static String URLMIDDLE = " ";
 	public static String URLAFTER = " ";
 	// path template in the url
 	// :id  <id> {id} no
-	public static String URLTEMPLATE = "<";
+	public static String URLTEMPLATE = "{";
 	
 	// "no", "yes"
 	public static String REVERSE = "no";
 	// "https", "http", "/"
-	public static String MODE ="http";
+	public static String MODE ="https";
 	
 	// "del", "delete"
 	public static String ABBREV_DELETE = "delete";
@@ -49,15 +49,15 @@ public class Settings {
 	 */
 	// The key word before the request
 	// "EXAMPLE REQUEST"  ""
-	public static String REQKEY = "";
+	public static String REQKEY = "request:";
 	// \\s \\s.{0,60} ""
-	public static String REQMIDDLE = "";
+	public static String REQMIDDLE = "\\s.{0,100}";
 	// The request exists or not 
-	// http \\{(.*?)\\} no curl
-	public static String REQEXAMPLE = "curl";
+	// http \\{(.*?)\\} no curl  
+	public static String REQEXAMPLE = "\\{(.*?)\\}";
 	
 	// default true
-	public static Boolean URL1REQ2 = false;
+	public static Boolean URL1REQ2 = true;
 	
 	// pre code
 	public static String REQTEMPLATE = "code";
@@ -65,14 +65,21 @@ public class Settings {
 	/*
 	 * RESPONSE 
 	 */
-	// The response exists or not 
-	public static boolean RESEXAMPLE = true;
+	
 	// (example)|(response)
-	public static String RESKEY = "";
+	public static String RESKEY = "response:";
+	// \\s \\s.{0,60} ""
+	// 1.
+	public static String RESMIDDLE = "\\s.{0,100}";
 	// default true
-	public static Boolean URL1RES2 = false;
+	public static Boolean URL1RES2 = true;
 	//  pre
 	public static String RESTEMPLATE = "code";
+	
+	// The response exists or not 
+	// ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
+	public static String RESEXAMPLE = "((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}";
+	
 	
 	/*
 	 * PARAMETER 
@@ -119,9 +126,10 @@ public class Settings {
             properties.setProperty("REQEXAMPLE", REQEXAMPLE);
             properties.setProperty("REQTEMPLATE", REQTEMPLATE);
             
-            properties.setProperty("RESEXAMPLE", Boolean.toString(RESEXAMPLE));
+            properties.setProperty("RESEXAMPLE", RESEXAMPLE);
             properties.setProperty("RESKEY", RESKEY);
             properties.setProperty("RESTEMPLATE", RESTEMPLATE);
+            properties.setProperty("RESMIDDLE", RESMIDDLE);
             
             properties.setProperty("EXISTPARA", Boolean.toString(EXISTPARA));
             properties.setProperty("PARAKEY", PARAKEY);
@@ -164,9 +172,10 @@ public class Settings {
             setREQEXAMPLE(properties.getProperty("REQEXAMPLE"));
             setREQTEMPLATE(properties.getProperty("REQTEMPLATE"));
             
-            setRESEXAMPLE(Boolean.valueOf(properties.getProperty("RESEXAMPLE")));
+            setRESEXAMPLE(properties.getProperty("RESEXAMPLE"));
             setRESKEY(properties.getProperty("RESKEY"));
             setRESTEMPLATE(properties.getProperty("RESTEMPLATE"));
+            setRESMIDDLE(properties.getProperty("RESMIDDLE"));
             
             setEXISTPARA(Boolean.valueOf(properties.getProperty("EXISTPARA")));
             setPARAKEY(properties.getProperty("PARAKEY"));
@@ -259,14 +268,6 @@ public class Settings {
 		REQEXAMPLE = rEQEXAMPLE;
 	}
 
-	public static boolean isRESEXAMPLE() {
-		return RESEXAMPLE;
-	}
-
-	public static void setRESEXAMPLE(boolean rESEXAMPLE) {
-		RESEXAMPLE = rESEXAMPLE;
-	}
-
 	public static String getRESKEY() {
 		return RESKEY;
 	}
@@ -349,6 +350,22 @@ public class Settings {
 
 	public static String getRESTEMPLATE() {
 		return RESTEMPLATE;
+	}
+	
+	public static String getRESEXAMPLE() {
+		return RESEXAMPLE;
+	}
+
+	public static void setRESEXAMPLE(String rESEXAMPLE) {
+		RESEXAMPLE = rESEXAMPLE;
+	}
+
+	public static String getRESMIDDLE() {
+		return RESMIDDLE;
+	}
+
+	public static void setRESMIDDLE(String rESMIDDLE) {
+		RESMIDDLE = rESMIDDLE;
 	}
 
 	public static void setRESTEMPLATE(String rESTEMPLATE) {

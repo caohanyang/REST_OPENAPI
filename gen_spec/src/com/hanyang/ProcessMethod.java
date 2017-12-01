@@ -71,7 +71,7 @@ public class ProcessMethod {
 				
 			}
 
-			if (Settings.MODE.equals("http")) {
+			if (Settings.MODE.startsWith("http")) {
 				// url minimum length
 				if (url.length() > "http://".length()) {
 					return true;

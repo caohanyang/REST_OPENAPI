@@ -1,277 +1,1833 @@
 {
+  "basePath": "/api/v3.1",
   "paths": {
-    "/api/v3.1/transactional/classicEmail/groups": {
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/activate.{xml|json}": {
+    "/lists/{listid}/webhooks/{webhookid}/deactivate.{xml|json}": {
       "PUT": {}
     },
-    "/api/v3.1/lists/{listid}/deleted.{xml|json}": {
+    "/clients/{clientid}/templates.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "PreviewURL": "http://preview.createsend.com/templates/publicpreview/01AF532CD8889B33?d=r",
+                "TemplateID": "5cac213cf061dd4e008de5a82b7a3621",
+                "ScreenshotURL": "http://preview.createsend.com/ts/r/14/833/263/14833263.jpg?0318092541",
+                "Name": "TemplateOne"
+              },
+              {
+                "PreviewURL": "http://preview.createsend.com/templates/publicpreview/C8A180629495E798?d=r",
+                "TemplateID": "da645c271bc85fb6550acff937c2ab2e",
+                "ScreenshotURL": "http://preview.createsend.com/ts/r/18/7B3/552/187B3552.jpg?0705043527",
+                "Name": "TemplateTwo"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/lists/{listid}/bounced.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ReadsEmailWith": "",
+                "CustomFields": [],
+                "State": "Bounced",
+                "EmailAddress": "bouncedsubscriber@example.com",
+                "Date": "2010-10-2513:11:00",
+                "Name": "BouncedOne"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/admins.{xml|json}": {
+      "DELETE": {},
+      "POST": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "EmailAddress": "sally@sparrow.com"
+            }
+          }
+        }
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Status": "Active",
+              "EmailAddress": "john@jones.com",
+              "Name": "JohnJones"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "{ \"EmailAddress\": \"sam@sparrow.com\", \"Name\": \"Sam Sparrow\" }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "EmailAddress": "sam@sparrow.com"
+            }
+          }
+        }
+      }
+    },
+    "/clients/{clientid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "ApiKey": "639d8cc27198202f5fe6037a8b17a29a59984b86d3289bc9",
+              "BasicDetails": {
+                "CompanyName": "ClientOne",
+                "TimeZone": "(GMT+10:00)Canberra,Melbourne,Sydney",
+                "PrimaryContactName": "Sally",
+                "ClientID": "4a397ccaaa55eb4e6aa1221e1e2d7122",
+                "Country": "Australia",
+                "PrimaryContactEmail": "sally@me.com"
+              },
+              "BillingDetails": {
+                "BaseDesignSpamTestRate": 5,
+                "MarkupOnDelivery": 0,
+                "Credits": 500,
+                "MarkupOnDesignSpamTest": 0,
+                "ClientPays": true,
+                "BaseDeliveryRate": 5,
+                "CanPurchaseCredits": true,
+                "BaseRatePerRecipient": 1,
+                "Currency": "USD",
+                "MarkupPerRecipient": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "/clients/{clientid}/setpaygbilling.{xml|json}": {
+      "PUT": {
+        "request": "{ \"Currency\": \"AUD\", \"CanPurchaseCredits\": false, \"ClientPays\": true, \"MarkupPercentage\": 20, \"MarkupOnDelivery\": 5, \"MarkupPerRecipient\": 4, \"MarkupOnDesignSpamTest\": 3 }"
+      }
+    },
+    "/segments/{segmentid}/active.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "CustomFields": [
+                  {
+                    "Value": "http://example.com",
+                    "Key": "website"
+                  },
+                  {
+                    "Value": "24",
+                    "Key": "age"
+                  },
+                  {
+                    "Value": "2010-03-09",
+                    "Key": "subscriptiondate"
+                  }
+                ],
+                "State": "Active",
+                "EmailAddress": "subs+7t8787Y@example.com",
+                "Date": "2010-10-2510:28:00",
+                "Name": "PersonOne"
+              },
+              {
+                "CustomFields": [
+                  {
+                    "Value": "http://subdomain.example.com",
+                    "Key": "website"
+                  }
+                ],
+                "State": "Active",
+                "EmailAddress": "subs+7878787y8ggg@example.com",
+                "Date": "2010-10-2512:17:00",
+                "Name": "PersonTwo"
+              },
+              {
+                "CustomFields": [
+                  {
+                    "Value": "http://subdomain.example.com",
+                    "Key": "website"
+                  }
+                ],
+                "State": "Active",
+                "EmailAddress": "subs+7890909i0ggg@example.com",
+                "Date": "2010-10-2512:52:00",
+                "Name": "PersonThree"
+              },
+              {
+                "CustomFields": [],
+                "State": "Active",
+                "EmailAddress": "subs@example.com",
+                "Date": "2010-10-2713:13:00",
+                "Name": "PersonFour"
+              },
+              {
+                "CustomFields": [],
+                "State": "Active",
+                "EmailAddress": "joey@example.com",
+                "Date": "2010-10-2713:13:00",
+                "Name": "PersonFive"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/lists/{listid}/webhooks/{webhookid}/test.{xml|json}": {
+      "GET": {}
+    },
+    "/clients/{clientid}/suppress.{xml|json}": {
+      "POST": {
+        "request": "{ \"EmailAddresses\": [ \"one@example.com\", \"two@example.com\" ] }"
+      }
+    },
+    "/clients/{clientid}/primarycontact.{xml|json}": {
+      "GET": {},
+      "PUT": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "EmailAddress": "john@jones.com"
+            }
+          }
+        }
+      }
+    },
+    "/transactional/smartEmail/{:smartEmailID}/send": {
+      "POST": {
+        "request": "{ \"To\": [ \"Joe Smith <joesmith@example.com>\", \"jamesmith@example.com\" ], \"CC\": null, \"BCC\": [ \"joesmith@example.com\" ], \"Attachments\": [ { \"Content\": \"base64encoded\", \"Name\": \"https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\", \"Type\": \"application/pdf\" } ], \"Data\": { \"new_password_url\": \"https://mywebapp.com/newpwd?uid=jguf45h74gf\", \"username\": \"joesmith1\" }, \"AddRecipientsToList\": true }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Status": "Accepted",
+                "Recipient": "JoeSmith<joesmith@example.com>",
+                "MessageID": "ddc697c7-0788-4df3-a71a-a7cb935f00bd"
+              },
+              "..."
+            ]
+          }
+        }
+      }
+    },
+    "/transactional/messages/{:messageID}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Status": "Delivered",
+              "TotalClicks": 4,
+              "Message": {
+                "CC": [
+                  "JoeSmith<joesmith@example.com>"
+                ],
+                "ReplyTo": "support@webapp123.com",
+                "BCC": "joesmith@example.com",
+                "Data": {
+                  "new_password_url": "https://mywebapp.com/newpwd?uid=jguf45h74g"
+                },
+                "From": "TeamWebapp<team@webapp123.com>",
+                "To": [
+                  "JoeSmith<joesmith@example.com>",
+                  "jamesmith@example.com"
+                ],
+                "Attachments": [
+                  {
+                    "Type": "application/pdf",
+                    "Name": "https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/Invoice.pdf"
+                  }
+                ],
+                "Body": {
+                  "Html": "...",
+                  "Text": "..."
+                },
+                "Subject": "Thanksforsigninguptowebapp123"
+              },
+              "Opens": [
+                {
+                  "Geolocation": {
+                    "CountryName": "Australia",
+                    "Region": "NewSouthWales",
+                    "Latitude": -33.8683,
+                    "City": "Sydney",
+                    "CountryCode": "AU",
+                    "Longitude": 151.2086
+                  },
+                  "MailClient": {
+                    "Version": "AppleMail8",
+                    "Name": "AppleMail"
+                  },
+                  "IPAddress": "192.168.0.1",
+                  "EmailAddress": "jamesmith@example.com",
+                  "Date": "2009-05-1816:45:00"
+                },
+                "..."
+              ],
+              "CanBeResent": true,
+              "TotalOpens": 2,
+              "SmartEmailID": "c0da9c4c-e7e4-11e4-a74d-6c4008bc7468",
+              "Recipient": "JoeSmith<joesmith@example.com>",
+              "Clicks": [
+                {
+                  "Geolocation": {
+                    "CountryName": "Australia",
+                    "Region": "NewSouthWales",
+                    "Latitude": -33.8683,
+                    "City": "Sydney",
+                    "CountryCode": "AU",
+                    "Longitude": 151.2086
+                  },
+                  "IPAddress": "192.168.0.1",
+                  "EmailAddress": "jamesmith@example.com",
+                  "Date": "2009-05-1816:45:00",
+                  "URL": "http://www.myexammple.com/index.html"
+                },
+                "..."
+              ],
+              "SentAt": "2014-01-15T16:09:19-05:00",
+              "MessageID": "ddc697c7-0788-4df3-a71a-a7cb935f00bd"
+            }
+          }
+        }
+      }
+    },
+    "/campaigns/{campaignid}/recipients.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "EmailAddress": "example+1@example.com"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "EmailAddress": "example+2@example.com"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "EmailAddress": "example+3@example.com"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "EmailAddress": "example+4@example.com"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/clients/{clientid}/people.{xml|json}": {
+      "DELETE": {},
+      "POST": {
+        "request": "{ \"EmailAddress\": \"sally@sparrow.com\", \"Name\": \"Sally Sparrow\", \"AccessLevel\": 23, \"Password\": \"opensesame\" }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "EmailAddress": "sally@sparrow.com"
+            }
+          }
+        }
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Status": "Active",
+              "EmailAddress": "john@jones.com",
+              "AccessLevel": 23,
+              "Name": "JohnJones"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "{ \"EmailAddress\": \"sam@sparrow.com\", \"Name\": \"Sam Sparrow\", \"AccessLevel\": 31, \"Password\": \"opensesame\" }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "EmailAddress": "sam@sparrow.com"
+            }
+          }
+        }
+      }
+    },
+    "/templates/{clientid}.{xml|json}": {
+      "POST": {
+        "request": "{ \"Name\": \"Template Two\", \"HtmlPageURL\": \"http://example.com/index.html\", \"ZipFileURL\": \"http://example.com/files.zip\" }"
+      }
+    },
+    "/campaigns/{campaignid}/clicks.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "CountryName": "Australia",
+                "Region": "NewSouthWales",
+                "Latitude": -33.8683,
+                "City": "Sydney",
+                "IPAddress": "192.168.0.1",
+                "CountryCode": "AU",
+                "Longitude": 151.2086,
+                "EmailAddress": "example+1@example.com",
+                "URL": "http://www.myexammple.com/index.html",
+                "Date": "2009-05-1816:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "CountryName": "Australia",
+                "Region": "NewSouthWales",
+                "Latitude": -33.8683,
+                "City": "Sydney",
+                "IPAddress": "192.168.0.1",
+                "CountryCode": "AU",
+                "Longitude": 151.2086,
+                "EmailAddress": "example+1@example.com",
+                "URL": "http://www.myexammple.com/homepage.html",
+                "Date": "2009-05-1916:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "CountryName": "Australia",
+                "Region": "NewSouthWales",
+                "Latitude": -33.8683,
+                "City": "Sydney",
+                "IPAddress": "192.168.0.3",
+                "CountryCode": "AU",
+                "Longitude": 151.2086,
+                "EmailAddress": "example+2@example.com",
+                "URL": "http://www.myexammple.com/index.html",
+                "Date": "2009-05-2016:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "CountryName": "Australia",
+                "Region": "NewSouthWales",
+                "Latitude": -33.8683,
+                "City": "Sydney",
+                "IPAddress": "192.168.0.4",
+                "CountryCode": "AU",
+                "Longitude": 151.2086,
+                "EmailAddress": "example+3@example.com",
+                "URL": "http://www.myexammple.com/index.html",
+                "Date": "2009-05-2116:45:00"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/clients/{clientid}/campaigns.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ReplyTo": "myemail@example.com",
+                "FromName": "MyName",
+                "CampaignID": "fc0ce7105baeaf97f47c99be31d02a91",
+                "SentDate": "2010-10-1212:58:00",
+                "FromEmail": "myemail@example.com",
+                "WebVersionTextURL": "http://createsend.com/t/r-765E86829575EE2C/t",
+                "Subject": "CampaignOne",
+                "WebVersionURL": "http://createsend.com/t/r-765E86829575EE2C/",
+                "Name": "CampaignOne",
+                "TotalRecipients": 2245
+              },
+              {
+                "ReplyTo": "myemail@example.com",
+                "FromName": "MyName",
+                "CampaignID": "072472b88c853ae5dedaeaf549a8d607",
+                "SentDate": "2010-10-0616:20:00",
+                "FromEmail": "myemail@example.com",
+                "WebVersionTextURL": "http://createsend.com/t/r-DD543566A87C9B8B/t",
+                "Subject": "CampaignTwo",
+                "WebVersionURL": "http://createsend.com/t/r-DD543566A87C9B8B/",
+                "Name": "CampaignTwo",
+                "TotalRecipients": 11222
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/campaigns/{campaignid}/emailclientusage.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Version": "iPhone",
+                "Percentage": 19.83,
+                "Client": "iOSDevices",
+                "Subscribers": 7056
+              },
+              {
+                "Version": "AppleMail6",
+                "Percentage": 13.02,
+                "Client": "AppleMail",
+                "Subscribers": 4633
+              },
+              {
+                "Version": "AppleMail5",
+                "Percentage": 10.6,
+                "Client": "AppleMail",
+                "Subscribers": 3773
+              },
+              {
+                "Version": "Outlook2010",
+                "Percentage": 7.18,
+                "Client": "MicrosoftOutlook",
+                "Subscribers": 2556
+              },
+              {
+                "Version": "iPad",
+                "Percentage": 4.43,
+                "Client": "iOSDevices",
+                "Subscribers": 1577
+              },
+              {
+                "Version": "Undetectable",
+                "Percentage": 4.94,
+                "Client": "Undetectable",
+                "Subscribers": 1632
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/segments/{listid}.{xml|json}": {
+      "POST": {
+        "request": "{ \"Title\": \"My Segment\", \"RuleGroups\": [ { \"Rules\": [ { \"RuleType\": \"EmailAddress\", \"Clause\": \"CONTAINS @domain.com\" } ] }, { \"Rules\": [ { \"RuleType\": \"DateSubscribed\", \"Clause\": \"AFTER 2009-01-01\" }, { \"RuleType\": \"DateSubscribed\", \"Clause\": \"EQUALS 2009-01-01\" } ] }, { \"Rules\": [ { \"RuleType\": \"DateSubscribed\", \"Clause\": \"BEFORE 2010-01-01\" } ] } ] }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "ResultData": [
+                {
+                  "Message": "Thesuppliedclauseshavesomeproblems",
+                  "RuleType": "CampaignOpened",
+                  "Code": 2703,
+                  "ClauseResult": {
+                    "Message": "RulerequiresavalidAPICampaignID",
+                    "Clause": "AFTER2010-01-01",
+                    "Code": 2750
+                  }
+                },
+                {
+                  "Message": "Success",
+                  "RuleType": "FavouriteAnimal",
+                  "Code": 0,
+                  "ClauseResult": {
+                    "Message": "Success",
+                    "Clause": "EQUALSThree-ToedSloth",
+                    "Code": 0
+                  }
+                },
+                {
+                  "Message": "Success",
+                  "RuleType": "Name",
+                  "Code": 0,
+                  "ClauseResult": {
+                    "Message": "Success",
+                    "Clause": "EQUALSGertrudeGainforth",
+                    "Code": 0
+                  }
+                },
+                {
+                  "Message": "Thesuppliedclauseshavesomeproblems",
+                  "RuleType": "Name",
+                  "Code": 2703,
+                  "ClauseResult": {
+                    "Message": "VerbisillegalforName-basedrules",
+                    "Clause": "CONTAINSPresident",
+                    "Code": 2712
+                  }
+                },
+                {
+                  "Message": "RuleTypemustbeoneofName|EmailAddress|DateSubscribed|Campaign(Opened(NoClick)?|Clicked(Any|Specific)|NotOpened)oravalidcustomfieldpersonalisationtag",
+                  "RuleType": "BustedCustard",
+                  "Code": 2705,
+                  "ClauseResult": {
+                    "Message": "ClausenotparsedduetoinvalidRuleType",
+                    "Clause": "EQUALSyes",
+                    "Code": 2754
+                  }
+                }
+              ],
+              "Message": "Thesuppliedsegmentruleshavesomeproblems",
+              "Code": 277
+            }
+          }
+        }
+      }
+    },
+    "/subscribers/{listid}/history.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Type": "Campaign",
+                "Actions": [
+                  {
+                    "Event": "Open",
+                    "IPAddress": "192.168.126.87",
+                    "Date": "2010-10-1213:18:00",
+                    "Detail": ""
+                  },
+                  {
+                    "Event": "Click",
+                    "IPAddress": "192.168.126.87",
+                    "Date": "2010-10-1213:16:00",
+                    "Detail": "http://example.com/post/12323/"
+                  }
+                ],
+                "ID": "fc0ce7105baeaf97f47c99be31d02a91",
+                "Name": "CampaignOne"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/primarycontact.{xml|json}": {
+      "GET": {},
+      "PUT": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "EmailAddress": "john@jones.com"
+            }
+          }
+        }
+      }
+    },
+    "/clients.xml": {
+      "POST": {},
+      "GET": {}
+    },
+    "/timezones.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              "(GMT)Casablanca",
+              "(GMT)CoordinatedUniversalTime",
+              "(GMT)Dublin,Edinburgh,Lisbon,London",
+              "(GMT)Monrovia,Reykjavik",
+              "etc..."
+            ]
+          }
+        }
+      }
+    },
+    "/lists/{clientid}.{xml|json}": {
+      "POST": {
+        "request": "{ \"Title\": \"Website Subscribers\", \"UnsubscribePage\": \"http://www.example.com/unsubscribed.html\", \"UnsubscribeSetting\": \"AllClientLists\", \"ConfirmedOptIn\": false, \"ConfirmationSuccessPage\": \"http://www.example.com/joined.html\" }"
+      }
+    },
+    "/campaigns/{clientid}/fromtemplate.{xml|json}": {
+      "POST": {
+        "request": "{ \"Name\": \"My Campaign Name\", \"Subject\": \"My Subject\", \"FromName\": \"My Name\", \"FromEmail\": \"myemail@mydomain.com\", \"ReplyTo\": \"myemail@mydomain.com\", \"ListIDs\": [ \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\", \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\" ], \"SegmentIDs\": [ \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\", \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\" ], \"TemplateID\": \"89qw8du9q7y87yd8quw98udwqdqwd\", \"TemplateContent\": { \"Singlelines\": [ { \"Content\": \"This is a heading\", \"Href\": \"http://example.com/\" } ], \"Multilines\": [ { \"Content\": \"<p>This is example</p><p>multiline <a href=\"http://example.com\">content</a>...</p>\" } ], \"Images\": [ { \"Content\": \"http://example.com/image.png\", \"Alt\": \"This is alt text for an image\", \"Href\": \"http://example.com/\" } ], \"Repeaters\": [ { \"Items\": [ { \"Layout\": \"My layout\", \"Singlelines\": [ { \"Content\": \"This is a repeater heading\", \"Href\": \"http://example.com/\" } ], \"Multilines\": [ { \"Content\": \"<p>This is example</p><p>multiline <a href=\"http://example.com\">content</a>...</p>\" } ], \"Images\": [ { \"Content\": \"http://example.com/repeater-image.png\", \"Alt\": \"This is alt text for a repeater image\", \"Href\": \"http://example.com/\" } ] } ] } ] } }"
+      }
+    },
+    "/campaigns/{campaignid}/spam.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "EmailAddress": "example+1@example.com",
+                "Date": "2009-05-1816:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "EmailAddress": "example+1@example.com",
+                "Date": "2009-05-1916:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "EmailAddress": "example+2@example.com",
+                "Date": "2009-05-2016:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "EmailAddress": "example+3@example.com",
+                "Date": "2009-05-2116:45:00"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/subscribers/{listid}.{xml|json}": {
+      "DELETE": {},
+      "POST": {
+        "request": "{ \"EmailAddress\": \"subscriber@example.com\", \"Name\": \"New Subscriber\", \"CustomFields\": [ { \"Key\": \"website\", \"Value\": \"http://example.com\" }, { \"Key\": \"interests\", \"Value\": \"magic\" }, { \"Key\": \"interests\", \"Value\": \"romantic walks\" } ], \"Resubscribe\": true, \"RestartSubscriptionBasedAutoresponders\": true }"
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Value": "http://example.com",
+                "Key": "website"
+              },
+              {
+                "Value": "24",
+                "Key": "age"
+              },
+              {
+                "Value": "2010-03-09",
+                "Key": "subscriptiondate"
+              }
+            ]
+          }
+        }
+      },
+      "PUT": {
+        "request": "{ \"EmailAddress\": \"changed_address@example.com\", \"Name\": \"Changed Name\", \"CustomFields\": [ { \"Key\": \"website\", \"Value\": \"http://example.com\" }, { \"Key\": \"interests\", \"Value\": \"magic\" }, { \"Key\": \"interests\", \"Value\": \"dungeons and dragons\" }, { \"Key\": \"age\", \"Value\": \"\", \"Clear\": true } ], \"Resubscribe\": true, \"RestartSubscriptionBasedAutoresponders\": true }"
+      }
+    },
+    "/lists/{listid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+              "UnsubscribeSetting": "AllClientLists",
+              "UnsubscribePage": "http://www.example.com/unsubscribed.html",
+              "ConfirmationSuccessPage": "http://www.example.com/joined.html",
+              "ConfirmedOptIn": false,
+              "Title": "WebsiteSubscribers"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "{ \"Title\": \"Website Subscribers\", \"UnsubscribePage\": \"http://www.example.com/unsubscribed.html\", \"UnsubscribeSetting\": \"AllClientLists\", \"ConfirmedOptIn\": false, \"ConfirmationSuccessPage\": \"http://www.example.com/joined.html\", \"AddUnsubscribesToSuppList\": true, \"ScrubActiveWithSuppList\": true }"
+      }
+    },
+    "/subscribers/{listid}/unsubscribe.{xml|json}": {
+      "POST": {
+        "request": "{ \"EmailAddress\": \"subscriber@example.com\" }"
+      }
+    },
+    "/clients/{clientid}/unsuppress.{xml|json}": {
+      "PUT": {}
+    },
+    "/clients/{clientid}/setbasics.{xml|json}": {
+      "PUT": {}
+    },
+    "/clients/{clientid}/suppressionlist.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "State": "Suppressed",
+                "SuppressionReason": "Bounced",
+                "EmailAddress": "example+1@example.com",
+                "Date": "2010-10-2610:55:31"
+              },
+              {
+                "State": "Suppressed",
+                "SuppressionReason": "Unsubscribed",
+                "EmailAddress": "example+2@example.com",
+                "Date": "2010-10-2610:55:31"
+              },
+              {
+                "State": "Suppressed",
+                "SuppressionReason": "Unsubscribed",
+                "EmailAddress": "example+3@example.com",
+                "Date": "2010-10-2610:55:31"
+              },
+              {
+                "State": "Suppressed",
+                "SuppressionReason": "ReasonUnavailable",
+                "EmailAddress": "subscriber@example.com",
+                "Date": "2010-10-2513:11:04"
+              },
+              {
+                "State": "Suppressed",
+                "SuppressionReason": "ReasonUnavailable",
+                "EmailAddress": "subscriberone@example.com",
+                "Date": "2010-10-2513:04:15"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/clients/{clientid}/scheduled.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ReplyTo": "myemail@example.com",
+                "PreviewURL": "http://createsend.com/t/r-DD543521A87C9B8B/",
+                "FromName": "MyName",
+                "PreviewTextURL": "http://createsend.com/t/r-DD543521A87C9B8B/t",
+                "CampaignID": "827dbbd2161ea9989fa11ad562c66937",
+                "DateCreated": "2011-05-2410:37:00",
+                "DateScheduled": "2011-05-2510:40:00",
+                "ScheduledTimeZone": "(GMT+10:00)Canberra,Melbourne,Sydney",
+                "FromEmail": "myemail@example.com",
+                "Subject": "MagicIssueOne",
+                "Name": "MagicIssueOne"
+              },
+              {
+                "ReplyTo": "myemail@example.com",
+                "PreviewURL": "http://createsend.com/t/r-DD913521A87C9B8B/",
+                "FromName": "MyName",
+                "PreviewTextURL": "http://createsend.com/t/r-DD913521A87C9B8B/t",
+                "CampaignID": "4f54bbd2161e65789fa11ad562c66937",
+                "DateCreated": "2011-05-2410:39:00",
+                "DateScheduled": "2011-05-2911:20:00",
+                "ScheduledTimeZone": "(GMT+10:00)Canberra,Melbourne,Sydney",
+                "FromEmail": "myemail@example.com",
+                "Subject": "MagicIssueTwo",
+                "Name": "MagicIssueTwo"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/lists/{listid}/customfields/{customfieldkey}.{xml|json}": {
+      "DELETE": {},
+      "PUT": {
+        "request": "{ \"FieldName\": \"Newsletter Format Renamed\", \"VisibleInPreferenceCenter\": false }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              "NewsletterFormatRenamed"
+            ]
+          }
+        }
+      }
+    },
+    "/campaigns/{clientid}.{xml|json}": {
+      "POST": {
+        "request": "{ \"Name\": \"My Campaign Name\", \"Subject\": \"My Subject\", \"FromName\": \"My Name\", \"FromEmail\": \"myemail@mydomain.com\", \"ReplyTo\": \"myemail@mydomain.com\", \"HtmlUrl\": \"http://example.com/campaigncontent/index.html\", \"ListIDs\": [ \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\", \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\" ], \"SegmentIDs\": [ \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\", \"a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1\" ] }"
+      }
+    },
+    "/campaigns/{campaignid}/listsandsegments.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "Name": "MyList1"
+              },
+              {
+                "ListID": "b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2",
+                "Name": "MyList2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/clients/{clientid}/credits.{xml|json}": {
+      "POST": {
+        "request": "{ \"Credits\": 200, \"CanUseMyCreditsWhenTheyRunOut\": false }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "ClientCredits": 200,
+              "AccountCredits": 800
+            }
+          }
+        }
+      }
+    },
+    "/transactional/smartEmail": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Status": "Active",
+                "CreatedAt": "2014-01-15T16:09:19-05:00",
+                "ID": "fg84jd3vbask48fjh59dnfls",
+                "Name": "Welcomeemail"
+              },
+              "..."
+            ]
+          }
+        }
+      }
+    },
+    "/clients.{xml|json}": {
+      "POST": {
+        "request": "{ \"CompanyName\": \"My Company\", \"Country\": \"Australia\", \"TimeZone\": \"(GMT+10:00) Canberra, Melbourne, Sydney\" }"
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ClientID": "4a397ccaaa55eb4e6aa1221e1e2d7122",
+                "Name": "ClientOne"
+              },
+              {
+                "ClientID": "a206def0582eec7dae47d937a4109cb2",
+                "Name": "ClientTwo"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/lists/{listid}/deleted.{xml|json}": {
+      "DELETE": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ReadsEmailWith": "Gmail",
+                "CustomFields": [
+                  {
+                    "Value": "http://google.com",
+                    "Key": "[website]"
+                  }
+                ],
+                "State": "Deleted",
+                "EmailAddress": "deleted+1@example.com",
+                "Date": "2010-10-2513:04:00",
+                "Name": "DeletedSubscriber"
+              },
+              {
+                "ReadsEmailWith": "",
+                "CustomFields": [],
+                "State": "Deleted",
+                "EmailAddress": "deleted+2@example.com",
+                "Date": "2010-10-2610:56:00",
+                "Name": "ExampleTwo"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/segments/{segmentid}.{xml|json}": {
+      "DELETE": {},
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Rules": [
+                  {
+                    "RuleType": "Subject1_1",
+                    "Clause": "Clause1_1"
+                  },
+                  {
+                    "RuleType": "Subject1_2",
+                    "Clause": "Clause1_2"
+                  }
+                ]
+              },
+              {
+                "Rules": [
+                  {
+                    "RuleType": "Subject2_1",
+                    "Clause": "Clause2_1"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "PUT": {}
+    },
+    "/campaigns/{campaignid}/sendpreview.{xml|json}": {
+      "POST": {
+        "request": "{ \"PreviewRecipients\": [\"test1@example.com\", \"test2@example.com\"], \"Personalize\": \"Random\" }"
+      }
+    },
+    "/clients/{clientid}/setmonthlybilling.{xml|json}": {
+      "PUT": {
+        "request": "{ \"Currency\": \"AUD\", \"ClientPays\": true, \"MarkupPercentage\": 20, \"MonthlyScheme\": \"Basic\", }"
+      }
+    },
+    "/lists/{listid}/stats.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "TotalActiveSubscribers": 6,
+              "TotalUnsubscribes": 2,
+              "NewActiveSubscribersToday": 0,
+              "NewActiveSubscribersThisWeek": 8,
+              "UnsubscribesThisYear": 2,
+              "DeletedThisYear": 0,
+              "DeletedYesterday": 0,
+              "BouncesThisMonth": 0,
+              "NewActiveSubscribersThisMonth": 8,
+              "UnsubscribesThisWeek": 2,
+              "NewActiveSubscribersYesterday": 8,
+              "BouncesThisWeek": 0,
+              "DeletedThisMonth": 0,
+              "BouncesYesterday": 0,
+              "UnsubscribesYesterday": 2,
+              "DeletedToday": 0,
+              "NewActiveSubscribersThisYear": 8,
+              "TotalBounces": 0,
+              "UnsubscribesToday": 0,
+              "BouncesThisYear": 0,
+              "UnsubscribesThisMonth": 2,
+              "DeletedThisWeek": 0,
+              "TotalDeleted": 0,
+              "BouncesToday": 0
+            }
+          }
+        }
+      }
+    },
+    "/lists/{listid}/customfields.{xml|json}": {
+      "POST": {
+        "request": "{ \"FieldName\": \"Newsletter Format\", \"DataType\": \"MultiSelectOne\", \"Options\": [ \"HTML\", \"Text\" ], \"VisibleInPreferenceCenter\": true }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              "NewsletterFormat"
+            ]
+          }
+        }
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "VisibleInPreferenceCenter": true,
+                "DataType": "Text",
+                "FieldOptions": [],
+                "FieldName": "website",
+                "Key": "[website]"
+              },
+              {
+                "VisibleInPreferenceCenter": true,
+                "DataType": "Number",
+                "FieldOptions": [],
+                "FieldName": "age",
+                "Key": "[age]"
+              },
+              {
+                "VisibleInPreferenceCenter": false,
+                "DataType": "Date",
+                "FieldOptions": [],
+                "FieldName": "subscriptiondate",
+                "Key": "[subscriptiondate]"
+              },
+              {
+                "VisibleInPreferenceCenter": true,
+                "DataType": "MultiSelectOne",
+                "FieldOptions": [
+                  "HTML",
+                  "Text"
+                ],
+                "FieldName": "newsletterformat",
+                "Key": "[newsletterformat]"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/subscribers/{listid}/import.{xml|json}": {
+      "POST": {
+        "request": "{ \"Subscribers\": [ { \"EmailAddress\": \"subscriber1@example.com\", \"Name\": \"New Subscriber One\", \"CustomFields\": [ { \"Key\": \"website\", \"Value\": \"http://example.com\" }, { \"Key\": \"interests\", \"Value\": \"magic\" }, { \"Key\": \"interests\", \"Value\": \"romantic walks\" }, { \"Key\": \"age\", \"Value\": \"\", \"Clear\": true } ] }, { \"EmailAddress\": \"subscriber2@example.com\", \"Name\": \"New Subscriber Two\", }, { \"EmailAddress\": \"subscriber3@example.com\", \"Name\": \"New Subscriber Three\", } ], \"Resubscribe\": true, \"QueueSubscriptionBasedAutoResponders\": false, \"RestartSubscriptionBasedAutoresponders\": true }"
+      }
+    },
+    "/lists/{listid}/customfields/{customfieldkey}/options.{xml|json}": {
+      "PUT": {
+        "request": "{ \"KeepExistingOptions\": true, \"Options\": [ \"First Option\", \"Second Option\", \"Third Option\" ] }"
+      }
+    },
+    "/externalsession.{xml|json}": {
+      "PUT": {
+        "request": "{ \"Email\": \"example@example.com\", \"Chrome\": \"None\", \"Url\": \"/subscribers/search?search=belle@example.com\", \"IntegratorID\": \"a1b2c3d4e5f6\", \"ClientID\": \"aaa111bbb222ccc333\" }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "SessionUrl": "https://external1.createsend.com/cd/create/ABCDEF12/DEADBEEF?url=FEEDDAD1"
+            }
+          }
+        }
+      }
+    },
+    "/transactional/classicEmail/send": {
+      "POST": {
+        "request": "{ \"Subject\": \"Thanks for signing up to web app 123\", \"From\": \"Mike Smith <mike@webapp123.com>\", \"ReplyTo\": \"support@webapp123.com\", \"To\": [ \"Joe Smith <joesmith@example.com>\", \"jamesmith@example.com\" ], \"CC\": [ \"Joe Smith <joesmith@example.com>\" ], \"BCC\": null, \"Html\": \"\", \"Text\": \"\", \"Attachments\": [ { \"Type\": \"application/pdf\", \"Name\": \"https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/Invoice.pdf\", \"Content\": \"base64encoded\" } ], \"TrackOpens\": true, \"TrackClicks\": true, \"InlineCSS\": true, \"Group\": \"Password Reset\", \"AddRecipientsToListID\": \"62eaaa0338245ca68e5e93daa6f591e9\" }",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Status": "Accepted",
+                "Recipient": "JoeSmith<joesmith@example.com>",
+                "MessageID": "549f114b-aa76-11e4-8b24-2fa9fbbe36ff"
+              },
+              "..."
+            ]
+          }
+        }
+      }
+    },
+    "/campaigns/{campaignid}/bounces.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "BounceType": "Hard",
+                "EmailAddress": "example+1@example.com",
+                "Date": "2009-05-1816:45:00",
+                "Reason": "InvalidEmailAddress"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "BounceType": "Hard",
+                "EmailAddress": "example+2@example.com",
+                "Date": "2009-05-1916:45:00",
+                "Reason": "HardBounce"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "BounceType": "Soft",
+                "EmailAddress": "example+3@example.com",
+                "Date": "2009-05-2016:45:00",
+                "Reason": "SoftBounce-MailboxFull"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "BounceType": "Soft",
+                "EmailAddress": "example+4@example.com",
+                "Date": "2009-05-2116:45:00",
+                "Reason": "GeneralBounce"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/campaigns/{campaignid}/summary.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Recipients": 1000,
+              "UniqueOpened": 298,
+              "Forwards": 18,
+              "SpamComplaints": 23,
+              "TotalOpened": 345,
+              "WebVersionTextURL": "http://createsend.com/t/y-A1A1A1A1A1A1A1A1A1A1A1A1/t",
+              "WebVersionURL": "http://createsend.com/t/y-A1A1A1A1A1A1A1A1A1A1A1A1/",
+              "Mentions": 11,
+              "Bounced": 15,
+              "Clicks": 132,
+              "WorldviewURL": "http://myclient.createsend.com/reports/wv/y/8WY898U9U98U9U9",
+              "Likes": 25,
+              "Unsubscribed": 43
+            }
+          }
+        }
+      }
+    },
+    "/clients/{clientid}/drafts.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ReplyTo": "myemail@example.com",
+                "PreviewURL": "http://createsend.com/t/r-E97A7BB2E6983DA1/",
+                "FromName": "MyName",
+                "PreviewTextURL": "http://createsend.com/t/r-E97A7BB2E6983DA1/t",
+                "CampaignID": "7c7424792065d92627139208c8c01db1",
+                "DateCreated": "2010-08-1916:08:00",
+                "FromEmail": "myemail@example.com",
+                "Subject": "DraftOne",
+                "Name": "DraftOne"
+              },
+              {
+                "ReplyTo": "myemail@example.com",
+                "PreviewURL": "http://createsend.com/t/r-E97A7BB2E6983DA1/",
+                "FromName": "MyName",
+                "PreviewTextURL": "http://createsend.com/t/r-E97A7BB2E6983DA1/t",
+                "CampaignID": "2e928e982065d92627139208c8c01db1",
+                "DateCreated": "2010-08-1916:08:00",
+                "FromEmail": "myemail@example.com",
+                "Subject": "DraftTwo",
+                "Name": "DraftTwo"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/transactional/classicEmail/groups": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Group": "Welcomeemail",
+              "CreatedAt": "2014-01-15T16:09:19-05:00"
+            }
+          }
+        }
+      }
+    },
+    "/campaigns/{campaignid}/unsubscribes.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "IPAddress": "192.168.0.1",
+                "EmailAddress": "example+1@example.com",
+                "Date": "2009-05-1816:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "IPAddress": "192.168.0.1",
+                "EmailAddress": "example+1@example.com",
+                "Date": "2009-05-1916:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "IPAddress": "192.168.0.3",
+                "EmailAddress": "example+2@example.com",
+                "Date": "2009-05-2016:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "IPAddress": "192.168.0.4",
+                "EmailAddress": "example+3@example.com",
+                "Date": "2009-05-2116:45:00"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/lists/{listid}/webhooks/{webhookid}/activate.{xml|json}": {
+      "PUT": {}
+    },
+    "/transactional/messages": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Status": "Delivered",
+                "TotalClicks": 4,
+                "CanBeResent": true,
+                "TotalOpens": 2,
+                "Recipient": "JoeSmith<joesmith@example.com>",
+                "From": "Team<team@company.com>",
+                "SentAt": "2014-01-15T16:09:19-05:00",
+                "Subject": "Yourpasswordhasbeenreset",
+                "MessageID": "ddc697c7-0788-4df3-a71a-a7cb935f00bd"
+              },
+              {
+                "Status": "Delivered",
+                "TotalClicks": 4,
+                "Group": "PasswordReset",
+                "CanBeResent": true,
+                "TotalOpens": 2,
+                "Recipient": "JoeSmith<joesmith@example.com>",
+                "From": "Team<team@company.com>",
+                "SentAt": "2014-01-15T16:09:19-05:00",
+                "Subject": "Yourpasswordhasbeenreset",
+                "MessageID": "ddc697c7-0788-4df3-a71a-a7cb935f00bd"
+              },
+              {
+                "Status": "Delivered",
+                "TotalClicks": 4,
+                "CanBeResent": true,
+                "TotalOpens": 2,
+                "Recipient": "JoeSmith<joesmith@example.com>",
+                "SmartEmailID": "123123123123",
+                "From": "Team<team@company.com>",
+                "SentAt": "2014-01-15T16:09:19-05:00",
+                "Subject": "Yourpasswordhasbeenreset",
+                "MessageID": "ddc697c7-0788-4df3-a71a-a7cb935f00bd"
+              },
+              "..."
+            ]
+          }
+        }
+      }
+    },
+    "/lists/{listid}/active.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ReadsEmailWith": "Gmail",
+                "CustomFields": [
+                  {
+                    "Value": "http://example.com",
+                    "Key": "[website]"
+                  },
+                  {
+                    "Value": "24",
+                    "Key": "age"
+                  },
+                  {
+                    "Value": "2010-03-09",
+                    "Key": "[subscriptiondate]"
+                  }
+                ],
+                "State": "Active",
+                "EmailAddress": "subs+7t8787Y@example.com",
+                "Date": "2010-10-2510:28:00",
+                "Name": "PersonOne"
+              },
+              {
+                "ReadsEmailWith": "Gmail",
+                "CustomFields": [
+                  {
+                    "Value": "http://subdomain.example.com",
+                    "Key": "[website]"
+                  }
+                ],
+                "State": "Active",
+                "EmailAddress": "subs+7878787y8ggg@example.com",
+                "Date": "2010-10-2512:17:00",
+                "Name": "PersonTwo"
+              },
+              {
+                "ReadsEmailWith": "",
+                "CustomFields": [
+                  {
+                    "Value": "http://subdomain.example.com",
+                    "Key": "[website]"
+                  }
+                ],
+                "State": "Active",
+                "EmailAddress": "subs+7890909i0ggg@example.com",
+                "Date": "2010-10-2512:52:00",
+                "Name": "PersonThree"
+              },
+              {
+                "ReadsEmailWith": "",
+                "CustomFields": [],
+                "State": "Active",
+                "EmailAddress": "subs@example.com",
+                "Date": "2010-10-2713:13:00",
+                "Name": "PersonFour"
+              },
+              {
+                "ReadsEmailWith": "Gmail",
+                "CustomFields": [],
+                "State": "Active",
+                "EmailAddress": "joey@example.com",
+                "Date": "2010-10-2713:13:00",
+                "Name": "PersonFive"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/clients": {
+      "POST": {},
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Message": "NotallowedforaNon-agencyCustomer.",
+              "Code": 403
+            }
+          }
+        }
+      }
+    },
+    "/transactional/smartEmail/{:smartEmailID}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Status": "Active",
+              "CreatedAt": "2014-01-15T16:09:19-05:00",
+              "SmartEmailID": "123123123",
+              "Properties": {
+                "ReplyTo": "mike@webapp123.com",
+                "TextPreviewUrl": "http://siteaddress.createsend.com/path/text/preview",
+                "Content": {
+                  "InlineCss": true,
+                  "Html": "...",
+                  "Text": "...",
+                  "EmailVariables": [
+                    "username",
+                    "user_id"
+                  ]
+                },
+                "HtmlPreviewUrl": "http://siteaddress.createsend.com/path/html/preview",
+                "From": "Hello<team@webapp123.com>",
+                "Subject": "Thanksforsigninguptowebapp123"
+              },
+              "AddRecipientsToList": "62eaaa0338245ca68e5e93daa6f591e9",
+              "Name": "Welcomeemail"
+            }
+          }
+        }
+      }
+    },
+    "/campaigns/{campaignid}.{xml|json}": {
       "DELETE": {}
     },
-    "/api/v3.1/clients/{clientid}.{xml|json}": {
+    "/clients/{clientid}/listsforemail.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a58ee1d3039b8bec838e6d1482a8a965",
+                "ListName": "ListOne",
+                "DateSubscriberAdded": "2010-03-1911:15:00",
+                "SubscriberState": "Active"
+              },
+              {
+                "ListID": "99bc35084a5739127a8ab81eae5bd305",
+                "ListName": "ListTwo",
+                "DateSubscriberAdded": "2011-04-0101:27:00",
+                "SubscriberState": "Unsubscribed"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/segments/{segmentid}/rules.{xml|json}": {
       "DELETE": {},
-      "GET": {}
+      "POST": {
+        "request": "{ \"Rules\": [ { \"RuleType\": \"Name\", \"Clause\": \"NOT_PROVIDED\" }, { \"RuleType\": \"Name\", \"Clause\": \"EQUALS Subscriber Name\" }, ] }"
+      }
     },
-    "/api/v3.1/campaigns/{campaignid}/opens.{xml|json}": {
-      "GET": {}
+    "/systemdate.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "SystemDate": "2010-11-1614:18:00"
+            }
+          }
+        }
+      }
     },
-    "/api/v3.1/lists/{listid}.{xml|json}": {
-      "DELETE": {},
-      "GET": {},
-      "PUT": {}
+    "/lists/{listid}/unconfirmed.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ReadsEmailWith": "",
+                "CustomFields": [
+                  {
+                    "Value": "http://example.com",
+                    "Key": "[website]"
+                  }
+                ],
+                "State": "Unconfirmed",
+                "EmailAddress": "subs+7t8787Y@example.com",
+                "Date": "2010-10-2510:28:00",
+                "Name": "UnconfirmedOne"
+              },
+              {
+                "ReadsEmailWith": "",
+                "CustomFields": [
+                  {
+                    "Value": "http://subdomain.example.com",
+                    "Key": "[website]"
+                  }
+                ],
+                "State": "Unconfirmed",
+                "EmailAddress": "subs+7878787y8ggg@example.com",
+                "Date": "2010-10-2512:17:00",
+                "Name": "UnconfirmedTwo"
+              }
+            ]
+          }
+        }
+      }
     },
-    "/api/v3.1/subscribers/{listid}/history.{xml|json}": {
-      "GET": {}
+    "/campaigns/{campaignid}/opens.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "CountryName": "Australia",
+                "Region": "NewSouthWales",
+                "Latitude": -33.8683,
+                "City": "Sydney",
+                "IPAddress": "192.168.0.1",
+                "CountryCode": "AU",
+                "Longitude": 151.2086,
+                "EmailAddress": "example+1@example.com",
+                "Date": "2009-05-1816:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "CountryName": "Australia",
+                "Region": "NewSouthWales",
+                "Latitude": -33.8683,
+                "City": "Sydney",
+                "IPAddress": "192.168.0.2",
+                "CountryCode": "AU",
+                "Longitude": 151.2086,
+                "EmailAddress": "example+2@example.com",
+                "Date": "2009-05-1916:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "CountryName": "Australia",
+                "Region": "NewSouthWales",
+                "Latitude": -33.8683,
+                "City": "Sydney",
+                "IPAddress": "192.168.0.3",
+                "CountryCode": "AU",
+                "Longitude": 151.2086,
+                "EmailAddress": "example+3@example.com",
+                "Date": "2009-05-2016:45:00"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "CountryName": "Australia",
+                "Region": "NewSouthWales",
+                "Latitude": -33.8683,
+                "City": "Sydney",
+                "IPAddress": "192.168.0.4",
+                "CountryCode": "AU",
+                "Longitude": 151.2086,
+                "EmailAddress": "example+4@example.com",
+                "Date": "2009-05-2116:45:00"
+              }
+            ]
+          }
+        }
+      }
     },
-    "/api/v3.1/lists/{clientid}.{xml|json}": {
-      "POST": {}
+    "/countries.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              "Afghanistan",
+              "Albania",
+              "Algeria",
+              "AmericanSamoa",
+              "etc..."
+            ]
+          }
+        }
+      }
     },
-    "/api/v3.1/campaigns/{campaignid}/unsubscribes.{xml|json}": {
-      "GET": {}
+    "/campaigns/{campaignid}/send.{xml|json}": {
+      "POST": {
+        "request": "{ \"ConfirmationEmail\": \"confirmation@example.com, another@example.com\", \"SendDate\": \"YYYY-MM-DD HH:MM\" }"
+      }
     },
-    "/api/v3.1/clients/{clientid}/setbasics.{xml|json}": {
-      "PUT": {}
-    },
-    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/test.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/segments/{listid}.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/clients/{clientid}/people.{xml|json}": {
-      "DELETE": {},
-      "POST": {},
-      "GET": {},
-      "PUT": {}
-    },
-    "/api/v3.1/clients/{clientid}/scheduled.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/admins.{xml|json}": {
-      "DELETE": {},
-      "POST": {},
-      "GET": {},
-      "PUT": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/unschedule.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/bounces.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/customfields/{customfieldkey}.{xml|json}": {
-      "DELETE": {},
-      "PUT": {}
-    },
-    "/api/v3.1/segments/{segmentid}.{xml|json}": {
-      "DELETE": {},
-      "GET": {},
-      "PUT": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/summary.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/billingdetails.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/systemdate.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/sendpreview.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}.{xml|json}": {
+    "/lists/{listid}/webhooks/{webhookid}.{xml|json}": {
       "DELETE": {}
     },
-    "/api/v3.1/segments/{segmentid}/active.{xml|json}": {
-      "GET": {}
+    "/clients/{clientid}/lists.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a58ee1d3039b8bec838e6d1482a8a965",
+                "Name": "ListOne"
+              },
+              {
+                "ListID": "99bc35084a5739127a8ab81eae5bd305",
+                "Name": "ListTwo"
+              }
+            ]
+          }
+        }
+      }
     },
-    "/api/v3.1/transactional/classicEmail/send": {
+    "/lists/{listid}/segments.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "SegmentID": "b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1",
+                "Title": "SegmentOne"
+              },
+              {
+                "ListID": "a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1",
+                "SegmentID": "c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1",
+                "Title": "SegmentTwo"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/lists/{listid}/unsubscribed.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ReadsEmailWith": "Gmail",
+                "CustomFields": [],
+                "State": "Unsubscribed",
+                "EmailAddress": "subscriber@example.com",
+                "Date": "2010-10-2513:11:00",
+                "Name": "UnsubOne"
+              },
+              {
+                "ReadsEmailWith": "Gmail",
+                "CustomFields": [
+                  {
+                    "Value": "http://google.com",
+                    "Key": "[website]"
+                  }
+                ],
+                "State": "Unsubscribed",
+                "EmailAddress": "subscriberone@example.com",
+                "Date": "2010-10-2513:04:00",
+                "Name": "Subscriber"
+              },
+              {
+                "ReadsEmailWith": "",
+                "CustomFields": [],
+                "State": "Unsubscribed",
+                "EmailAddress": "example+1@example.com",
+                "Date": "2010-10-2610:56:00",
+                "Name": "ExampleOne"
+              },
+              {
+                "ReadsEmailWith": "",
+                "CustomFields": [],
+                "State": "Unsubscribed",
+                "EmailAddress": "example+2@example.com",
+                "Date": "2010-10-2610:56:00",
+                "Name": "ExampleTwo"
+              },
+              {
+                "ReadsEmailWith": "Gmail",
+                "CustomFields": [],
+                "State": "Unsubscribed",
+                "EmailAddress": "example+3@example.com",
+                "Date": "2010-10-2610:56:00",
+                "Name": "ExampleThree"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/transactional/statistics": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Opened": 300,
+              "Bounces": 8,
+              "Query": {
+                "Group": "PasswordReset",
+                "TimeZone": "(GMT+10:00)Canberra,Melbourne,Sydney",
+                "SmartEmailID": "fc123352-35a4-11e5-8538-6c4008bc7468",
+                "From": "2014-02-03",
+                "To": "2015-02-02"
+              },
+              "Delivered": 992,
+              "Clicked": 50,
+              "Sent": 1000
+            }
+          }
+        }
+      }
+    },
+    "/campaigns/{campaignid}/unschedule.{xml|json}": {
       "POST": {}
     },
-    "/api/v3.1/clients/{clientid}/suppress.{xml|json}": {
-      "POST": {}
+    "/lists/{listid}/webhooks.{xml|json}": {
+      "POST": {
+        "request": "{ \"Events\": [ \"Subscribe\" ], \"Url\": \"http://example.com/subscribe\", \"PayloadFormat\": \"json\" }"
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "Status": "Active",
+                "WebhookID": "ee1b3864e5ca61618q98su98qsu9q",
+                "Events": [
+                  "Subscribe"
+                ],
+                "PayloadFormat": "Json",
+                "Url": "http://example.com/subscribe"
+              },
+              {
+                "Status": "Active",
+                "WebhookID": "89d8quw98du9qw8ud9q8wud8u98u8",
+                "Events": [
+                  "Deactivate"
+                ],
+                "PayloadFormat": "Json",
+                "Url": "http://example.com/deactivate"
+              }
+            ]
+          }
+        }
+      }
     },
-    "/api/v3.1/transactional/smartEmail/{:smartEmailID}": {
-      "GET": {}
+    "/transactional/messages/{:messageID}/resend": {
+      "POST": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Status": "Accepted",
+              "Recipient": "JoeSmith<joesmith@example.com>",
+              "MessageID": "cfb5e081-ef66-4bc4-a1c0-48493b34e694"
+            }
+          }
+        }
+      }
     },
-    "/api/v3.1/clients": {
-      "POST": {},
-      "GET": {},
-      "PUT": {}
+    "/billingdetails.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "Credits": 3021
+            }
+          }
+        }
+      }
     },
-    "/api/v3.1/templates/{templateid}.{xml|json}": {
+    "/clients/{clientid}/segments.{xml|json}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              {
+                "ListID": "a58ee1d3039b8bec838e6d1482a8a965",
+                "SegmentID": "46aa5e01fd43381863d4e42cf277d3a9",
+                "Title": "SegmentOne"
+              },
+              {
+                "ListID": "8dffb94c60c5faa3d40f496f2aa58a8a",
+                "SegmentID": "dhw9q8jd9q8wd09quw0d909wid9i09iq",
+                "Title": "SegmentTwo"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "/templates/{templateid}.{xml|json}": {
       "DELETE": {},
-      "GET": {},
-      "PUT": {}
-    },
-    "/api/v3.1/clients/{clientid}/primarycontact.{xml|json}": {
-      "GET": {},
-      "PUT": {}
-    },
-    "/api/v3.1/transactional/smartEmail": {
-      "GET": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/spam.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/clients.xml": {
-      "POST": {},
-      "GET": {}
-    },
-    "/api/v3.1/clients/{clientid}/setmonthlybilling.{xml|json}": {
-      "PUT": {}
-    },
-    "/oauth": {
-      "POST": {},
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/webhooks/{webhookid}.{xml|json}": {
-      "DELETE": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/recipients.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/unconfirmed.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/transactional/messages/{:messageID}": {
-      "GET": {}
-    },
-    "/api/v3.1/subscribers/{listid}/unsubscribe.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/lists/{listid}/segments.{xml|json}": {
-      "GET": {}
-    },
-    "https://www.campaignmonitor.com/assets/uploads/https://www.campaignmonitor.com/assets/uploads/https://www": {
-      "GET": {}
-    },
-    "/api/v3.1/transactional/messages": {
-      "GET": {}
-    },
-    "/api/v3.1/templates/{clientid}.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/campaigns/{clientid}/fromtemplate.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/subscribers/{listid}/import.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/countries.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/clients/{clientid}/suppressionlist.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/primarycontact.{xml|json}": {
-      "GET": {},
-      "PUT": {}
-    },
-    "/api/v3.1/externalsession.{xml|json}": {
-      "PUT": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/clicks.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/segments/{segmentid}/rules.{xml|json}": {
-      "DELETE": {},
-      "POST": {}
-    },
-    "/api/v3.1/clients/{clientid}/campaigns.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/clients/{clientid}/drafts.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/bounced.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/transactional/smartEmail/{:smartEmailID}/send": {
-      "POST": {}
-    },
-    "/api/v3.1/clients/{clientid}/listsforemail.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/customfields.{xml|json}": {
-      "POST": {},
-      "GET": {}
-    },
-    "/oauth/token": {
-      "POST": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/listsandsegments.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/subscribers/{listid}.{xml|json}": {
-      "DELETE": {},
-      "POST": {},
-      "GET": {},
-      "PUT": {}
-    },
-    "/api/v3.1/lists/{listid}/customfields/{customfieldkey}/options.{xml|json}": {
-      "PUT": {}
-    },
-    "/api/v3.1/lists/{listid}/webhooks.{xml|json}": {
-      "POST": {},
-      "GET": {}
-    },
-    "https://external1.createsend.com/cd/create/ABCDEF12/DEADBEEF": {
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/webhooks/{webhookid}/deactivate.{xml|json}": {
-      "PUT": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/emailclientusage.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/clients/{clientid}/unsuppress.{xml|json}": {
-      "PUT": {}
-    },
-    "/api/v3.1/transactional/messages/{:messageID}/resend": {
-      "POST": {}
-    },
-    "/api/v3.1/clients/{clientid}/credits.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/clients/{clientid}/templates.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/clients/{clientid}/setpaygbilling.{xml|json}": {
-      "PUT": {}
-    },
-    "/api/v3.1/clients/{clientid}/lists.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/stats.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/transactional/statistics": {
-      "GET": {}
-    },
-    "/api/v3.1/clients/{clientid}/segments.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/clients.{xml|json}": {
-      "POST": {},
-      "GET": {}
-    },
-    "/api/v3.1/campaigns/{campaignid}/send.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/timezones.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/campaigns/{clientid}.{xml|json}": {
-      "POST": {}
-    },
-    "/api/v3.1/lists/{listid}/active.{xml|json}": {
-      "GET": {}
-    },
-    "/api/v3.1/lists/{listid}/unsubscribed.{xml|json}": {
-      "GET": {}
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "PreviewURL": "http://preview.createsend.com/templates/publicpreview/01AF532CD8889B33?d=r",
+              "TemplateID": "5cac213cf061dd4e008de5a82b7a3621",
+              "ScreenshotURL": "http://preview.createsend.com/ts/r/14/833/263/14833263.jpg?0318092600",
+              "Name": "TemplateOne"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "{ \"Name\": \"Renamed Template Two\", \"HtmlPageURL\": \"http://example.com/index.html\", \"ZipFileURL\": \"http://example.com/files.zip\" }"
+      }
     }
   },
   "produces": "application/json",

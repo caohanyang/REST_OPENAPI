@@ -69,7 +69,7 @@ public class ExtractInformation {
 
 		
 		// 0. get properties
-		Settings.getPropertiesReader(CompareSet_PATH + "/"+ API_NAME);
+//		Settings.getPropertiesReader(CompareSet_PATH + "/"+ API_NAME);
 		
 		// init gate
 		Gate.init();
@@ -110,7 +110,7 @@ public class ExtractInformation {
 		selectOpenAPI(compareSet);
 
 		// 4. write properties
-//		Settings.writeProperties(CompareSet_PATH + "/"+ API_NAME);
+		Settings.writeProperties(CompareSet_PATH + "/"+ API_NAME);
 		
 	}
 

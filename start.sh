@@ -55,6 +55,7 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 # https://dev.groupme.com/
 # https://developer.accuweather.com/apis  https://developer.accuweather.com/
 # https://aiception.com/static/doc/index.html
+# https://www.campaignmonitor.com/api/
 
 python ./rest_crawler/crawlAllPages.py $1 $2
 
