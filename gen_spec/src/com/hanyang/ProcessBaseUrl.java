@@ -87,9 +87,23 @@ public class ProcessBaseUrl {
 			// for a string , find the most frequence match common string
 			Map<String, Integer> tmpFrequency = new HashMap<String, Integer>();
 			String tmpUrl = urlList.get(i);
+			
+			if (Settings.URLBASE != "") {
+				if (!tmpUrl.toLowerCase().contains(Settings.URLBASE)) {
+					continue;
+				}
+			}
+			
 
 			for (int j = 0; j < urlList.size(); j++) {
 				String compareUrl = urlList.get(j);
+				
+				if (Settings.URLBASE != "") {
+					if (!compareUrl.toLowerCase().contains(Settings.URLBASE)) {
+						continue;
+					}
+				}
+				
 				if (tmpUrl.equals(compareUrl))
 					continue;
 				String tmpCommon = greatestCommonPrefix(tmpUrl, compareUrl);
@@ -218,6 +232,10 @@ public class ProcessBaseUrl {
 						if (reqObject.has("request")) {
 							str = reqObject.getString("request");
 							Out.prln(str);
+							if (str != null && !str.isEmpty() && !str.equalsIgnoreCase("http") && !str.equalsIgnoreCase("https")) {
+								urlList.add(str);
+							}
+						} else {
 							if (str != null && !str.isEmpty() && !str.equalsIgnoreCase("http") && !str.equalsIgnoreCase("https")) {
 								urlList.add(str);
 							}

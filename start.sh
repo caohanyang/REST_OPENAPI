@@ -57,8 +57,10 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 # https://aiception.com/static/doc/index.html
 # https://www.campaignmonitor.com/api/
 # https://www.layar.com/documentation/browser/api/
-# https://sites.google.com/site/picplzapi/   ????
+# https://sites.google.com/site/picplzapi/  
 # https://developer.vimeo.com/api/endpoints
+# https://developers.google.com/books/docs/v1/reference/
+# http://developer.active.com/docs/read/Home  http://developer.active.com/docs/read
 
 python ./rest_crawler/crawlAllPages.py $1 $2
 

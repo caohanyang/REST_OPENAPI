@@ -112,6 +112,11 @@ public class ProcessParameter {
 					String key = dtStr.split(" ")[0];
 					String value = ddStr;
 
+					//validate the key
+					if (!isValidParaKey(key)) {
+						continue;
+					}
+					
 					keyObject.put("name", key);
 					keyObject.put("description", value);
 					keyObject.put("in", findParaType(url, actionObject, key));
@@ -148,6 +153,11 @@ public class ProcessParameter {
 
 						String key = pArray[0];
 						String value = pArray[1];
+						
+						//validate the key
+						if (!isValidParaKey(key)) {
+							continue;
+						}
 
 						keyObject.put("name", key);
 						keyObject.put("description", value);
@@ -164,6 +174,13 @@ public class ProcessParameter {
 		}
 
 		return paraArray;
+	}
+
+	private boolean isValidParaKey(String key) {
+		if (key.toLowerCase().equals("require")| key.toLowerCase().equals("optional") | key.toLowerCase().equals("required")) {
+			return false;
+		}
+		return true;
 	}
 
 	private String findType(String value) {
@@ -259,6 +276,12 @@ public class ProcessParameter {
 			try {
 				String key = trStr.split(" ")[0];
 				String value = trStr.substring(trStr.indexOf(trStr.split(" ")[1]));
+				
+				//validate the key
+				if (!isValidParaKey(key)) {
+					continue;
+				}
+				
 				keyObject.put("name", key);
 				keyObject.put("description", value);
 				keyObject.put("in", findParaType(url, actionObject, key));
@@ -351,41 +374,19 @@ public class ProcessParameter {
 		Iterator<Annotation> testIter = annoTemplate.iterator();
 		String templateNumber = Settings.NUMBER;
 		// int numTemplate = 0;
-		// while (testIter.hasNext()) {
-		// Annotation anno = (Annotation) testIter.next();
-		// String templateText = gate.Utils.stringFor(doc, anno);
-		// ProcessParameter processPa = new ProcessParameter();
-		// if (processPa.isParaTemplate(templateText, anno, strAll)) {
-		// // numTemplate++;
-		// }
-		// }
-		// if (numTemplate > 1) {
-		// // more than one parameter template in the page
-		// multiTemplate = "multiple";
-		// }
 
 		// 5.3.2 handle the template context
 		Iterator<Annotation> templateIter = annoTemplate.iterator();
-		ProcessParameter processPa = new ProcessParameter();
-
-		// // put all the infoJson into openAPI first
-		// if (!infoJson.isEmpty()) {
-		// // In case of the method doesn't have parameter
-		// // add the noPara url
-		// // processMe.addNoParaUrl(openAPI, strAll, infoJson, reverse);
-		// // add all the url/action pair
-		// processMe.addAllParaURL(openAPI, strAll, infoJson);
-		// }
-
+		
 		// add parameters to those urls
 		while (templateIter.hasNext()) {
 			Annotation anno = (Annotation) templateIter.next();
 			String templateText = gate.Utils.stringFor(doc, anno);
-			if (processPa.isParaTemplate(templateText, anno, strAll)) {
+			if (isParaTemplate(templateText, anno, strAll)) {
 				findParaTemplate = true;
 				Out.prln("==========TABLE or LIST=================");
 				Out.prln(templateText);
-				processPa.generateParameter(openAPI, templateText, strAll, infoJson, anno, doc, processMe);
+				generateParameter(openAPI, templateText, strAll, infoJson, anno, doc, processMe);
 			}
 		}
 
@@ -425,20 +426,7 @@ public class ProcessParameter {
 						minimumDistance = locationReverse(paraLocation, sectionObject, minimumDistance, it, entry, key);
 					}
 				}
-				// if (Settings.NUMBER.matches("single")) {
-				// // if it's a single page, search from all the text
-				// if (Math.abs(paraLocation - entry.getInt(key)) <
-				// minimumDistance) {
-				// minimumDistance = (int) Math.abs((paraLocation -
-				// entry.getInt(key)));
-				// sectionObject.put("action",
-				// it.getJSONObject("action").keys().next());
-				// sectionObject.put("url", key);
-				// }
-				// } else {
-
-				// }
-
+	
 			}
 
 		}
@@ -473,35 +461,24 @@ public class ProcessParameter {
 		// find previous text
 		int templateLocation = anno.getStartNode().getOffset().intValue();
 		String appendTemplateText;
-		// 1. the "parameter" string must not far from the startNode
-		// if (anno.getEndNode().getOffset().intValue() - templateLocation >
-		// 100) {
-		// // if the table is to big, just check the 100 character
-		// // check the pre-text, if it contains parameter | argument
-		// if (templateLocation <= 50) {
-		// appendTemplateText = strAll.substring(templateLocation,
-		// templateLocation + 100);
-		// } else {
-		// appendTemplateText = strAll.substring(templateLocation - 50,
-		// templateLocation + 100);
-		// }
-		// } else {
-		// if (templateLocation <= 50) {
-		// appendTemplateText = strAll.substring(templateLocation,
-		// anno.getEndNode().getOffset().intValue());
-		// } else {
-		// appendTemplateText = strAll.substring(templateLocation - 50,
-		// anno.getEndNode().getOffset().intValue());
-		// }
-		// }
 
 		// change new method
-		appendTemplateText = strAll.substring(templateLocation - Settings.PARAKEY.length() - 10,
-				templateLocation + Settings.PARAKEY.length() + 13);
-
-		if (Pattern.compile(Settings.PARAKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
-			return true;
+		
+		try {
+			//define the max distance = 13
+			int distance = 13;
+			int start = (templateLocation - Settings.PARAKEY.length() - distance) > 0 ? (templateLocation - Settings.PARAKEY.length() - distance): 0;
+			int end = (templateLocation + Settings.PARAKEY.length() + distance)< strAll.length() ?(templateLocation + Settings.PARAKEY.length() + distance): strAll.length();
+			appendTemplateText = strAll.substring(start,end);
+			if (Pattern.compile(Settings.PARAKEY, Pattern.CASE_INSENSITIVE).matcher(appendTemplateText).find()) {
+				return true;
+			}
+		} catch (Exception e) {
+			
+			e.printStackTrace();
 		}
+
+		
 		return false;
 	}
 

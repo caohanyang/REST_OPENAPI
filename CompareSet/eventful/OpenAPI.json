@@ -1,0 +1,1749 @@
+{
+  "paths": {
+    "http://api.eventful.com/rest/images/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "image_file",
+            "description": "The image file upload, OR :",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "image_url",
+            "description": "A URL from which to retrieve the image file.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "caption",
+            "description": "A caption for this image. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/restore": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The id of the requested venue.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/locales/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires the usual authentication arguments.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The user's ID. If not specified, the authenticated user by default.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/rss": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The id of the venue to use as the feed source.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/links/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the event to which this link is being added.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "link",
+            "description": "The URL of the link. (e.g. \"http://foo.com\")",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "The title of the link. (e.g. \"Foo Laboratories\") (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "link_type_id",
+            "description": "The ID of the link type, as found in this list: ID Link Type\n15 Blog\n2 Box Office\n8 Chat\n23 Facebook\n1 Info\n21 Myspace\n3 News\n17 Official Site\n18 Podcast\n4 Review\n5 Sponsor\n6 Tickets\n14 Webcast\n19 Website\n20 Wiki\n16 Other\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/going/add": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "event_id",
+            "description": "The event ID.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "title",
+            "description": "The event title.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start_time",
+            "description": "The event start time in ISO 8601 format (e.g. \"2005-03-01T19:00:00\") or a readable alternative (e.g. \"2005-03-01 19:00:00\"). See the W3C Note on Date and Time formats for examples or RFC3339 for more detail. Note that if offset information is specified here (e.g. \"2005-03-01T19:00:00-04:00\"), the time will be converted to UTC. The preferred method of specifying the time zone is via the tz_olson_path parameter (below).",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "stop_time",
+            "description": "The event stop time, if any, in ISO 8601 format (see above). (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "tz_olson_path",
+            "description": "The event timezone, as listed in the Olson timezones database (e.g. \"America/New_York\") (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "all_day",
+            "description": "True (\"1\") if the event is an all-day event, false (\"0\") otherwise. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "The event description. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy",
+            "description": "The privacy setting for this event. (1 = public, 2 = private, 3 = semi-private) (optional, defaults to 1)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "tags",
+            "description": "A space-delimited list of tags. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "free",
+            "description": "True (\"1\") if the event is free, false (\"0\") otherwise. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "price",
+            "description": "A text string describing the event price. For example, this could indicate a price range (\"$15 - $35\"), free but donations requested (\"$10 donation suggested\"), or other special instructions (\"Adults $15, children under eight $5\"). Don't pass this parameter or leave it blank if there is no price information. (optional)",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "venue_id",
+            "description": "The ID of the venue where this event occurs. Use /venues/new or /venues/search retrieve an appropriate ID. required",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "parent_id",
+            "description": "The ID of this event's parent event. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/links/delete": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "link_id",
+            "description": "The ID of the link to be deleted.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/calendars/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires the usual authentication arguments.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "owner",
+            "description": "The Eventful username of the calendars' owner. (optional, defaults to authenticated user)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/performers/add": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The event ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "performer_id",
+            "description": "The performer ID. (See /performers/new to create a performer and retrieve the ID.)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/restore": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The id of the requested event.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/links/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the venue to which this link is being added.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "link",
+            "description": "The URL of the link. (e.g. \"http://foo.com\")",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "The title of the link. (e.g. \"Foo Laboratories\") (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "link_type_id",
+            "description": "The ID of the link type, as found in this list: ID Link Type\n15 Blog\n2 Box Office\n8 Chat\n1 Info\n3 News\n17 Official Site\n18 Podcast\n4 Review\n5 Sponsor\n6 Tickets\n14 Webcast\n19 Website\n16 Other\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/performers/remove": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The event ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "performer_id",
+            "description": "The performer ID. (See /events/get to list the performer IDs for an event.)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/calendars/get": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires the usual authentication arguments.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The calendar ID.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/properties/add": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The event ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "The property name.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "value",
+            "description": "The property value.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/properties/remove": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The venue ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "property_id",
+            "description": "The ID of the property to remove, OR :",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "The name of the property to remove. NOTE: if name is specified, any property with this name will be removed from this venue.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/venues/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The user ID. (defaults to the authenticated user)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/categories/remove": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The event ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "category_id",
+            "description": "The category ID. (See /events/get to list the category IDs for an event.)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/comments/modify": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "comment_id",
+            "description": "The ID of the comment to modify.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "comment",
+            "description": "The new, modified comment to save.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/locales/add": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The user ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "locale",
+            "description": "The locale to add to the user.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/performers/xids/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "source",
+            "description": "The source of the external ids (facebook ids should be fb_uid) for other providers please contact eventful to see if we support them.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/tags/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires the usual authentication arguments.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "tags",
+            "description": "A space-delimited list of tags. Tags with spaces should be enclosed in quotes (e.g. \"San Diego\").",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the event to which these tags are being added.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/search": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires the usual authentication arguments.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "keywords",
+            "description": "The search keywords.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort_order",
+            "description": "Orders sorting of results by \"relevance\" (default), \"username\", \"event_count\", \"venue_count\", or \"calendar_count\".",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "count_only",
+            "description": "If count_only is set, an abbreviated version of the output will be returned. Only total_items and search_time elements are included in the result.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "description": "The desired number of results per \"page\".",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page_number",
+            "description": "The desired \"page\" number.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/tags/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires the usual authentication arguments.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "tags",
+            "description": "A space-delimited list of tags. Tags with spaces should be enclosed in quotes (e.g. \"San Diego\").",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the venue to which these tags are being added.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/comments/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the venue to which this comment is being added.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "comment",
+            "description": "The body of the comment message.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/modify": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The venue ID to modify.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "The displayed name for this venue. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "address",
+            "description": "The street address of the venue. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "city",
+            "description": "The city name. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "region",
+            "description": "The name of the region (state, province, county) (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "postal_code",
+            "description": "The postal code or ZIP code. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "country",
+            "description": "The name of the country.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "The venue description. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy",
+            "description": "The privacy setting for this venue. (1 = public, 2 = private, 3 = semi-private) (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "venue_type",
+            "description": "The type of venue (e.g. Cinema, Arena). See the new venue page for a current list of options.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "parent_id",
+            "description": "The ID of this venue's parent venue. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/categories/add": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The event ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "category_id",
+            "description": "The category ID. (See /categories/list for a list of available categories.)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/comments/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the event to which this comment is being added.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "comment",
+            "description": "The body of the comment message.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/going/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the event.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/performers/links/add": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The performer ID. Required",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "link",
+            "description": "The link url being added. Required",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "Description of the link being added. Optional",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "link_type_id",
+            "description": "The type of link being added. Corresponds to one of the follow values. Required 1 Info\n2 Office\n3 News\n4 Review\n5 Sponsor\n6 Tickets\n8 Chat\n14 Webcast\n15 Blog\n16 Other\n17 Official Site\n18 Podcast\n19 Website\n20 Wiki\n21 MySpace\n22 Ringtone\n23 Facebook\n24 Official Tickets\n25 Twitter\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/comments/delete": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "comment_id",
+            "description": "The ID of the comment to be deleted.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/performers/event/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the performer.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "description": "The page_size (number of events) to be returned (defaults to 10).",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page_number",
+            "description": "The page number of events to be returned (defaults to 1) .",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/images/remove": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The event ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "image_id",
+            "description": "The image ID. (See /events/get to list the image IDs for an event.)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/performers/images/remove": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The performer ID.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "image_id",
+            "description": "The image ID. (See /performers/get to list the image IDs for an performer.)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/new": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "The displayed name for this venue.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "address",
+            "description": "The street address of the venue. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "city",
+            "description": "The city name. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "region",
+            "description": "The name of the region (state, province, county) (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "postal_code",
+            "description": "The postal code or ZIP code. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "country",
+            "description": "The name of the country.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "The venue description. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy",
+            "description": "The privacy setting for this venue. (1 = public, 2 = private, 3 = semi-private) (optional, defaults to 1)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "venue_type",
+            "description": "The type of venue (e.g. Cinema, Arena). See the new venue page for a current list of options.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "url",
+            "description": "A URI link to further information about this venue. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "url_type",
+            "description": "The type of the link provided in the url parameter (e.g. Blog, Review, Official Site). See the \"Add a link\" section of any event page for a current list. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "parent_id",
+            "description": "The ID of this venue's parent venue. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/tags/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method does not require authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the event.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/rss": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "keywords",
+            "description": "The search keywords. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "location",
+            "description": "A location name to use in filtering the search results. Locations in the form \"San Diego\", \"San Diego, TX\", \"London, United Kingdom\", and \"Calgary, Alberta, Canada\" are accepted, as are postal codes (\"92122\"). Full addresses (\"1 Infinite Loop, Cupertino, CA\") and common geocoordinate formats (\"32.746682, -117.162741\") are also accepted, but the \"within\" parameter is recommended in order to set a search radius. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "date",
+            "description": "Limit this list of results to the specified date range. Date ranges are specified by label. Currently supported labels include: \"All\", \"Future\", \"Past\", \"Today\", \"Last Week\", \"This Week\", \"Next week\", and months by name, e.g. \"October\". (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "within",
+            "description": "If within is set and the \"location\" parameter resolves to a specific geolocation, the search will be restricted to the specified radius. If the \"location\" parameter does not resolve to a specific location, this parameter is ignored. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "units",
+            "description": "One of \"mi\" or \"km\", the units of the \"within\" parameter. Defaults to \"mi\". (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort_order",
+            "description": "One of 'popularity', 'date', 'title', 'relevance', or 'venue_name'. Default is 'date'. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort_direction",
+            "description": "One of 'ascending' or 'descending'. Default varies by sort_order. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "description": "The desired number of results per page. Default: 50, Maximum: 50. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/search": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "keywords",
+            "description": "The search keywords. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "location",
+            "description": "A location name to use in filtering the search results. Locations in the form \"San Diego\", \"San Diego, TX\", \"London, United Kingdom\", and \"Calgary, Alberta, Canada\" are accepted. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "count_only",
+            "description": "If count_only is set, an abbreviated version of the output will be returned. Only total_items and search_time elements are included in the result. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "description": "The desired number of results per \"page\". (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page_number",
+            "description": "The desired \"page\" number. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "within",
+            "description": "If within is set and the \"location\" parameter resolves to a specific geolocation, the search will be restricted to the specified radius. If the \"location\" parameter does not resolve to a specific location, this parameter is ignored. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "units",
+            "description": "One of \"mi\" or \"km\", the units of the \"within\" parameter. Defaults to \"mi\". (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort_order",
+            "description": "One of 'popularity', 'relevance', or 'venue_name'. Default is 'relevance'. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort_direction",
+            "description": "One of 'ascending' or 'descending'. Default varies by sort_order. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/links/delete": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the requested event.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "link_id",
+            "description": "The ID of the link to be deleted.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/performers/withdraw": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The performer ID to withdraw.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "note",
+            "description": "A short reason why this performer was withdrawn.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/comments/modify": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "comment_id",
+            "description": "The ID of the comment to modify.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "comment",
+            "description": "The new, modified comment to save.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/ical": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The id of the venue to use as the feed source.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/locales/delete": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The user id from which to delete the locale.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "locale",
+            "description": "The name of the locale to delete.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/tags/remove": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires the usual authentication arguments.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "tags",
+            "description": "A space-delimited list of tags. Tags with spaces should be enclosed in quotes (e.g. \"San Diego\").",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the event from which these tags are being deleted.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/users/get": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the requested user.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "list-counts",
+            "description": "List counts of user activity. Set to 1 to display this data. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/reindex": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the event to index.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/ical": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method controls access via authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "keywords",
+            "description": "The search keywords. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "location",
+            "description": "A location name to use in filtering the search results. Locations in the form \"San Diego\", \"San Diego, TX\", \"London, United Kingdom\", and \"Calgary, Alberta, Canada\" are accepted, as are postal codes (\"92122\"). Full addresses (\"1 Infinite Loop, Cupertino, CA\") and common geocoordinate formats (\"32.746682, -117.162741\") are also accepted, but the \"within\" parameter is recommended in order to set a search radius. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "date",
+            "description": "Limit this list of results to the specified date range. Date ranges are specified by label. Currently supported labels include: \"All\", \"Future\", \"Past\", \"Today\", \"Last Week\", \"This Week\", \"Next week\", and months by name, e.g. \"October\". (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "within",
+            "description": "If within is set and the \"location\" parameter resolves to a specific geolocation, the search will be restricted to the specified radius. If the \"location\" parameter does not resolve to a specific location, this parameter is ignored. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "units",
+            "description": "One of \"mi\" or \"km\", the units of the \"within\" parameter. Defaults to \"mi\". (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort_order",
+            "description": "One of 'popularity', 'date', 'title', 'relevance', or 'venue_name'. Default is 'date'. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort_direction",
+            "description": "One of 'ascending' or 'descending'. Default varies by sort_order. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "description": "The desired number of results per page. Default: 50, Maximum: 50. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/categories/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method does require user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "subcategories",
+            "description": "Optional - set to 1 to get subcategory information back.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "aliases",
+            "description": "Optional - set to 1 to get category aliases back in the results.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/events/modify": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires user authentication .",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The event ID to modify.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "title",
+            "description": "The event title. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start_time",
+            "description": "The event start time, in ISO 8601 format (e.g. \"2005-03-01 19:00:00\"). (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "stop_time",
+            "description": "The event stop time, if any, in ISO 8601 format (e.g. \"2005-03-01 19:00:00\"). (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "tz_olson_path",
+            "description": "The event timezone, as listed in the Olson timezones database (e.g. \"America/New_York\") (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "all_day",
+            "description": "True (\"1\") if the event is an all-day event, false (\"0\") otherwise. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "The event description. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy",
+            "description": "The privacy setting for this event. (1 = public, 2 = private, 3 = semi-private) (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "tags",
+            "description": "A space-delimited list of tags. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "free",
+            "description": "True (\"1\") if the event is free, false (\"0\") otherwise. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "price",
+            "description": "A text string describing the event price. For example, this could indicate a price range (\"$15 - $35\"), free but donations requested (\"$10 donation suggested\"), or other special instructions (\"Adults $15, children under eight $5\"). Don't pass this parameter or leave it blank if there is no price information. (optional)",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "venue_id",
+            "description": "The ID of the venue where this event occurs. Use /venues/new or /venues/search retrieve an appropriate ID. (optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "parent_id",
+            "description": "The ID of this event's parent event. If empty, removes the parent event. (optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "http://api.eventful.com/rest/venues/tags/list": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "authentication",
+            "description": "This method requires the usual authentication arguments.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The ID of the venue.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

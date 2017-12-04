@@ -1,0 +1,3460 @@
+{
+  "paths": {
+    "/users/{user_id}/categories/{category}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/ondemand/pages/{ondemand_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "link",
+            "description": "string No\n\nThe custom string to use in this On Demand page's Vimeo URL.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "preorder.active",
+            "description": "boolean No\n\nIf set to true, you will enable pre-orders on the On Demand page.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "preorder.publish_time",
+            "description": "boolean No\n\nRequired if \"preorder.active\" is true. The time that the On Demand page will be published.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "publish.active",
+            "description": "boolean No\n\nIf set to true, you will publish the On Demand page.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "publish_when_ready",
+            "description": "boolean No\n\nThis On Demand page will be automatically published when all videos are finished transcoding.\n\n",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/followers": {
+      "GET": {}
+    },
+    "/users/{user_id}/channels": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string moderated\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nfollowers\nvideos\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/videos": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "link",
+            "description": "string Yes\n\nIf your upload type is pull, Vimeo will download the video hosted at this public URL. This URL must be valid for at least 24 hours.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "redirect_url",
+            "description": "string No\n\nThe app redirect URL. Required for POST upload types.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "string POST\npull\nstreaming\nYes\n\nUpload type\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string app_only\nembeddable\nplayable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_embeddable",
+            "description": "string false\ntrue\nNo\n\nRequired if filter=embeddable. Choose between only videos that are embeddable, and only videos that are not embeddable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_playable",
+            "description": "string false\ntrue\nNo\n\nDefault true. Choose between only videos that are playable, and only videos that are not playable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ncomments\ndate\ndefault\nduration\nlikes\nmodified_time\nplays\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "weak_search",
+            "description": "boolean No\n\nThis forces the query parameter to use a separate search service that includes private videos. It will only perform a partial text search on the video's name. In the future the standard search will include private videos, and this parameter won't be necessary.\n\n",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/tickets/{ticket}": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "signature",
+            "description": "string Yes\n\nThe crypto signature of the completed upload.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "video_file_id",
+            "description": "integer Yes\n\nThe ID of the uploaded file.\n\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      },
+      "GET": {}
+    },
+    "/me": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/users/{user_id}/channels/{channel_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/channels/{channel_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "description": "\n\nThe channel's new name\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy",
+            "description": "\n\nThe channel's new privacy level\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/channels/{channel_id}/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string embeddable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_embeddable",
+            "description": "string false\ntrue\nNo\n\nRequired if filter=embeddable. Choose between only videos that are embeddable, and only videos that are not embeddable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string added\nalphabetical\ncomments\ndate\ndefault\nduration\nlikes\nmanual\nmodified_time\nplays\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/channels": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "description": "\n\nThe name of the new channel\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy",
+            "description": "\n\nThe privacy level of the new channel\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string featured\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nfollowers\nvideos\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/tokens": {
+      "DELETE": {}
+    },
+    "/categories/{category}": {
+      "GET": {}
+    },
+    "/me/ondemand/pages": {
+      "POST": {},
+      "GET": {}
+    },
+    "/videos/{video_id}/pictures/{picture_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "active",
+            "description": "boolean No\n\nMake this picture the default picture.\n\n",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/albums/{album_id}/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string embeddable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_embeddable",
+            "description": "string false\ntrue\nNo\n\nRequired if filter=embeddable. Choose between only videos that are embeddable, and only videos that are not embeddable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ncomments\ndate\nduration\nlikes\nmanual\nmodified_time\nplays\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "videos",
+            "description": "string Yes\n\nComma-separated list of video URIs.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/albums/{album_id}/videos/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/videos/{video_id}/tags": {
+      "GET": {},
+      "PUT": {
+        "parameters": []
+      }
+    },
+    "/me/pictures/{portraitset_id}": {
+      "DELETE": {}
+    },
+    "/videos/{video_id}/texttracks": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "active",
+            "description": "boolean false\ntrue\nNo\n\nText tracks marked active will be visible to other users, and will show up in the player. Only one text track per language can be active.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "language",
+            "description": "string Yes\n\nText track language\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string Yes\n\nText track name\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "string captions\nchapters\ndescriptions\nmetadata\nsubtitles\nYes\n\nText track type\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {}
+    },
+    "/ondemand/pages/{ondemand_id}/genres/{genre_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/users/{user_id}/albums/{album_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "description": "\n\nThe album's new title\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy",
+            "description": "\n\nThe album's new privacy level\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "\n\nThe new default sort for the album\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/watched/videos/{video_id}": {
+      "DELETE": {}
+    },
+    "/me/groups": {
+      "GET": {}
+    },
+    "/videos/{video_id}/comments/{comment_id}/replies": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "text",
+            "description": "string Yes\n\nThe comment's new text.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/groups/{group_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/likes": {
+      "GET": {}
+    },
+    "/me/portfolios/{portfolio_id}/videos": {
+      "GET": {}
+    },
+    "/users/{user_id}/likes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string No\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string embeddable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_embeddable",
+            "description": "string false\ntrue\nNo\n\nRequired if filter=embeddable. Choose between only videos that are embeddable, and only videos that are not embeddable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ncomments\ndate\nduration\nlikes\nplays\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/groups/{group_id}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/me/channels": {
+      "GET": {}
+    },
+    "/users/{user_id}/feed": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "offset",
+            "description": "string Yes\n\nThis is necessary for proper pagination. Do not provide this value yourself, just use the pagination links provided in the feed response.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/pages/{ondemand_id}/seasons/{season_id}": {
+      "GET": {}
+    },
+    "/categories/{category}/videos/{video_id}": {
+      "GET": {}
+    },
+    "/groups": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "description": "\n\nThe name of the new group.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string featured\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nfollowers\nvideos\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/categories": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string No\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nname\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/videos/{video_id}": {
+      "GET": {}
+    },
+    "/categories/{category}/groups": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nmembers\nvideos\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/channels/{channel_id}/users": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string moderators\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string related\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/texttracks/{texttrack_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "active",
+            "description": "boolean No\n\nText tracks marked active will be visible to other users, and will show up in the player. Only one text track per language can be active.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "language",
+            "description": "string No\n\nText track language\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string No\n\nText track name\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "string captions\nchapters\ndescriptions\nmetadata\nsubtitles\nNo\n\nText track type\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/ondemand/purchases": {
+      "GET": {}
+    },
+    "/me/channels/{channel_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/ondemand/pages/{ondemand_id}/regions": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/tags/{word}/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string created_time\nduration\nname\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/users/{user_id}/groups/{group_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/albums/{album_id}/videos": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/users/{user_id}/presets/{preset_id}": {
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "outro",
+            "description": "string nothing\nNo\n\nDisable the outro. Currently we only support disabling outros, let us know if you need additional features!\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/videos/{video_id}": {
+      "GET": {}
+    },
+    "/videos/{video_id}/privacy/users/{user_id}": {
+      "DELETE": {},
+      "PUT": {}
+    },
+    "/me/appearances": {
+      "GET": {}
+    },
+    "/me/likes/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/watchlater/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/users/{user_id}/albums/{album_id}/videos/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/users/{user_id}/following/{follow_user_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/watchlater": {
+      "GET": {}
+    },
+    "/me/portfolios": {
+      "GET": {}
+    },
+    "/me/videos": {
+      "POST": {},
+      "GET": {}
+    },
+    "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/portfolios/{portfolio_id}/videos/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/following/{follow_user_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/users/{user_id}/presets": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/genres/{genre_id}/pages": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string country\nmy_region\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string name\npublish.time\nvideos\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/following": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "users",
+            "description": "string Yes\n\nArray of user URI's to follow.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string online\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/portfolios/{portfolio_id}/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string embeddable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_embeddable",
+            "description": "string false\ntrue\nNo\n\nRequired if filter=embeddable. Choose between only videos that are embeddable, and only videos that are not embeddable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ncomments\ndate\ndefault\nlikes\nmanual\nplays\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/likes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/categories": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/following": {
+      "POST": {},
+      "GET": {}
+    },
+    "/users/{user_id}/portfolios/{portfolio_id}": {
+      "GET": {}
+    },
+    "/ondemand/genres/{genre_id}": {
+      "GET": {}
+    },
+    "/me/albums": {
+      "POST": {},
+      "GET": {}
+    },
+    "/oauth/verify": {
+      "GET": {}
+    },
+    "/users/{user_id}/ondemand/pages": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "accepted_currencies",
+            "description": "string No\n\nList of accepted currencies.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.active",
+            "description": "boolean No\n\nRequired if rent.active is false.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.download",
+            "description": "boolean No\n\nIf download is available to purchasers who buy the film.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.AUD",
+            "description": "float No\n\nThe purchase price of this video in AUD.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.CAD",
+            "description": "float No\n\nThe purchase price of this video in CAD.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.CHF",
+            "description": "float No\n\nThe purchase price of this video in CHF.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.DKK",
+            "description": "float No\n\nThe purchase price of this video in DKK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.EUR",
+            "description": "float No\n\nThe purchase price of this video in EUR.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.GBP",
+            "description": "float No\n\nThe purchase price of this video in GBP.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.JPY",
+            "description": "float No\n\nThe purchase price of this video in JPY.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.KRW",
+            "description": "float No\n\nThe purchase price of this video in KRW.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.NOK",
+            "description": "float No\n\nThe purchase price of this video in NOK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.PLN",
+            "description": "float No\n\nThe purchase price of this video in PLN.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.SEK",
+            "description": "float No\n\nThe purchase price of this video in SEK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.USD",
+            "description": "float No\n\nRequired if buy.active is true. If this On Demand page is a film , this is the price to purchase the film. If series , this is the price to purchase the entire collection.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "content_rating",
+            "description": "string drugs\nlanguage\nnudity\nsafe\nunrated\nviolence\nYes\n\nOne or more ratings, comma separated or JSON array depending on your request format.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "string Yes\n\nThe On Demand page description.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "domain_link",
+            "description": "string No\n\nThe On Demand page's custom domain.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "episodes.buy.active",
+            "description": "boolean No\n\nWhether episodes can be bought\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "episodes.buy.download",
+            "description": "boolean No\n\nIf download is available to purchasers who buy the episode.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "episodes.buy.price.USD",
+            "description": "float No\n\nRequired if episodes.buy.active is true.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "episodes.rent.active",
+            "description": "boolean No\n\nWhether episodes can be rented\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "episodes.rent.period",
+            "description": "string No\n\nRequired if episodes.rent.active is true.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "episodes.rent.price.USD",
+            "description": "float No\n\nRequired if episodes.rent.active is true. Only applicable if this On Demand page is a series. This is the default price for each individual episode.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "link",
+            "description": "string No\n\nThe custom string to use in this On Demand page's Vimeo URL.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string Yes\n\nThe On Demand page name.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.active",
+            "description": "boolean No\n\nRequired if buy.active is false.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.period",
+            "description": "string No\n\nRequired if rent.active is true.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.AUD",
+            "description": "float No\n\nThe rental price of this video in AUD.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.CAD",
+            "description": "float No\n\nThe rental price of this video in CAD.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.CHF",
+            "description": "float No\n\nThe rental price of this video in CHF.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.DKK",
+            "description": "float No\n\nThe rental price of this video in DKK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.EUR",
+            "description": "float No\n\nThe rental price of this video in EUR.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.GBP",
+            "description": "float No\n\nThe rental price of this video in GBP.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.JPY",
+            "description": "float No\n\nThe rental price of this video in JPY.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.KRW",
+            "description": "float No\n\nThe rental price of this video in KRW.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.NOK",
+            "description": "float No\n\nThe rental price of this video in NOK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.PLN",
+            "description": "float No\n\nThe rental price of this video in PLN.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.SEK",
+            "description": "float No\n\nThe rental price of this video in SEK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.USD",
+            "description": "float No\n\nRequired if rent.active is true. If this On Demand page is a film , this is the price to rent the film. If series , this is the price to rent the entire collection.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "subscription.monthly.active",
+            "description": "boolean No\n\nRequired if rent.active and buy.active are false.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "subscription.monthly.price.USD",
+            "description": "float No\n\nRequired if subscription.active is true.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "string film\nseries\nYes\n\nThe On Demand page type.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string film\nseries\nNo\n\nFilter to apply to the results. Type of On Demand pages to display\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show. Page for paging\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100. How many On Demand pages to display at a time\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string added\nmodified_time\nname\npublish.time\nrating\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/groups/{group_id}/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string embeddable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_embeddable",
+            "description": "string false\ntrue\nNo\n\nRequired if filter=embeddable. Choose between only videos that are embeddable, and only videos that are not embeddable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ncomments\ndate\nduration\nlikes\nplays\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/groups/{group_id}/videos/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/oauth/authorize/vimeo_oauth1": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "grant_type",
+            "description": "enum vimeo_oauth1\nYes\n\nGrant type. Must be set to \"vimeo_oauth1\".\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "token",
+            "description": "string Yes\n\nOAuth 1 token\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "token_secret",
+            "description": "string Yes\n\nOAuth 1 token secret\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/presets/{preset_id}/videos": {
+      "GET": {}
+    },
+    "/tags/{word}": {
+      "GET": {}
+    },
+    "/channels/{channel_id}/videos/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/videos/{video_id}/files": {
+      "PUT": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "link",
+            "description": "string No\n\nIf your upload type is pull, Vimeo will download the video hosted at this public URL. This URL must be valid for at least 24 hours.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "redirect_url",
+            "description": "string No\n\nThe app redirect URL. Required for POST upload types.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "string POST\npull\nstreaming\nYes\n\nUpload type\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "active",
+            "description": "boolean No\n\nSet this background as the active background.\n\n",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/comments": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "text",
+            "description": "string Yes\n\nThe comment's text\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/presets/{preset_id}": {
+      "GET": {},
+      "PATCH": {}
+    },
+    "/oauth/authorize/client": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "grant_type",
+            "description": "enum client_credentials\nYes\n\nGrant type. Must be set to \"client_credentials\".\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "scope",
+            "description": "string Yes\n\nThis is a space-separated list of scopes you want to access. Defaults to \"public\".\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/categories/{category}/channels": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nfollowers\nvideos\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/groups": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string moderated\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nmembers\nvideos\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/likes/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/categories/{category}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/users/{user_id}/portfolios": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/pictures": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "active",
+            "description": "boolean No\n\nMake this picture the default picture if you have created a picture response from video at given time offset.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "time",
+            "description": "float No\n\nIf set will create a picture resource from video at given time offset.\n\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      },
+      "GET": {}
+    },
+    "/ondemand/pages/{ondemand_id}/videos/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "buy.price.AUD",
+            "description": "float No\n\nThe purchase price of this video in AUD.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.CAD",
+            "description": "float No\n\nThe purchase price of this video in CAD.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.CHF",
+            "description": "float No\n\nThe purchase price of this video in CHF.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.DKK",
+            "description": "float No\n\nThe purchase price of this video in DKK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.EUR",
+            "description": "float No\n\nThe purchase price of this video in EUR.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.GBP",
+            "description": "float No\n\nThe purchase price of this video in GBP.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.JPY",
+            "description": "float No\n\nThe purchase price of this video in JPY.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.KRW",
+            "description": "float No\n\nThe purchase price of this video in KRW.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.NOK",
+            "description": "float No\n\nThe purchase price of this video in NOK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.PLN",
+            "description": "float No\n\nThe purchase price of this video in PLN.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.SEK",
+            "description": "float No\n\nThe purchase price of this video in SEK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "buy.price.USD",
+            "description": "float No\n\nThe purchase price of this video. Required if buy.active is true.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "position",
+            "description": "number No\n\nThe position this video will appear in this On Demand's video collection.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "release_year",
+            "description": "integer No\n\nThe video release year.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.AUD",
+            "description": "float No\n\nThe rental price of this video in AUD.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.CAD",
+            "description": "float No\n\nThe rental price of this video in CAD.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.CHF",
+            "description": "float No\n\nThe rental price of this video in CHF.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.DKK",
+            "description": "float No\n\nThe rental price of this video in DKK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.EUR",
+            "description": "float No\n\nThe rental price of this video in EUR.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.GBP",
+            "description": "float No\n\nThe rental price of this video in GBP.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.JPY",
+            "description": "float No\n\nThe rental price of this video in JPY.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.KRW",
+            "description": "float No\n\nThe rental price of this video in KRW.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.NOK",
+            "description": "float No\n\nThe rental price of this video in NOK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.PLN",
+            "description": "float No\n\nThe rental price of this video in PLN.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.SEK",
+            "description": "float No\n\nThe rental price of this video in SEK.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "rent.price.USD",
+            "description": "float No\n\nThe rental price of this video in USD. Required if rent.active is true.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "string extra\nmain\ntrailer\nYes\n\nThe type of video you are associating with the On Demand page.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/groups/{group_id}/users": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string moderators\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/presets/{preset_id}/videos": {
+      "GET": {}
+    },
+    "/ondemand/regions": {
+      "GET": {}
+    },
+    "/me/ondemand/purchases": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string all\nexpiring_soon\nfilm\nimportant\npurchased\nrented\nseries\nsubscription\nunwatched\nwatched\nYes\n\nWhich type of On Demand videos to show.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string added\nalphabetical\ndate\nname\npurchase_time\nrating\nrelease_date\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/pages/{ondemand_id}/backgrounds": {
+      "POST": {},
+      "GET": {}
+    },
+    "/videos/{video_id}/credits": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "email",
+            "description": "string Yes\n\nThe email address of the person being credited.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string Yes\n\nThe name of the person being credited.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "role",
+            "description": "string Yes\n\nThe role of the person being credited.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "user_uri",
+            "description": "string Yes\n\nThe URI of the Vimeo user who should be given credit in this video.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/pictures/{portraitset_id}": {
+      "DELETE": {}
+    },
+    "/videos/{video_id}/credits/{credit_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "email",
+            "description": "string No\n\nThe email address of the person being credited.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string No\n\nThe name of the person being credited.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "role",
+            "description": "string No\n\nThe role of the person being credited.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/albums": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "description": "\n\nThe album title\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "password",
+            "description": "\n\nThe album's password. Required if privacy=password.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy",
+            "description": "\n\nThe album's privacy level.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "\n\nThe default sort order of an album's videos.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nduration\nvideos\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/ondemand/purchases/{ondemand_id}": {
+      "GET": {}
+    },
+    "/ondemand/regions/{country}": {
+      "GET": {}
+    },
+    "/users/{user_id}": {
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bio",
+            "description": "string No\n\nThe user's bio\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "location",
+            "description": "string No\n\nThe user's location\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string No\n\nThe user's display name\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "videos.privacy.add",
+            "description": "boolean No\n\nSets the default add setting for all future videos uploaded by this user. If true, anyone can add the video to an album, channel, or group.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "videos.privacy.comments",
+            "description": "string anybody\ncontacts\nnobody\nNo\n\nSets the default comment setting for all future videos uploaded by this user. It specifies who can comment on the video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "videos.privacy.download",
+            "description": "boolean No\n\nSets the default download setting for all future videos uploaded by this user. If true, the video can be downloaded by any user.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "videos.privacy.embed",
+            "description": "string private\npublic\nwhitelist\nNo\n\nSets the default embed setting for all future videos uploaded by this user. Whitelist allows you to define all valid embed domains. Check out our docs for adding and removing domains.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "videos.privacy.view",
+            "description": "string anybody\ncontacts\ndisable\nnobody\npassword\nunlisted\nusers\nNo\n\nSets the default view setting for all future videos uploaded by this user. It specifies who can view the video.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/presets": {
+      "GET": {}
+    },
+    "/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string viewable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string date\ndefault\nmanual\nname\npurchase_time\nrelease_date\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/pages/{ondemand_id}/promotions": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "access_type",
+            "description": "string default\nvip\nNo\n\nPromotion access type a purchase option that is not available on the container. \"vip\" promotions will always make the content free, and must be further defined with the download or stream_period fields.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "code",
+            "description": "string Yes\n\nIf you are only creating a single promotion code, you can provide the value here. This field will be rejected for batch promotions.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "discount_type",
+            "description": "string free\npercent\nNo\n\nDescribes the type of discount offered by this promo code. Note: When providing an access type of \"vip\", this field only accepts the \"free\" discount type.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "download",
+            "description": "boolean Yes\n\nWhether this promotion grants download access to vod content. This is only necessary when not defined on the On Demand Container, and creating promotions with the \"vip\" access type and \"buy\" product type\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "end_time",
+            "description": "timestamp No\n\nThe latest time this promotion is valid. If end_time is not specified, the promotion will never expire.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "label",
+            "description": "string Yes\n\nIf you are creating a batch promotion, you can describe it here. This field will be rejected for single promotions.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "percent_off",
+            "description": "integer Yes\n\nThe percentage saved by using this promo code. This field is required, and only applicable if the field discount_type is set to percent.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "product_type",
+            "description": "string any\nbuy\nbuy_episode\nrent\nrent_episode\nsubscribe\nNo\n\nRestricts the promotion to a particular type of transaction. Defaults to \"any\" when access type is \"default\", and to \"rent\" if the access type is \"vip\". Only \"buy\" and \"rent\" are valid if the access_type is \"vip\".\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start_time",
+            "description": "timestamp No\n\nThe earliest time this promotion is valid. If start_time is not specified, it will default to the time the promotion was created.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "stream_period",
+            "description": "string 1_week\n1_year\n24_hour\n30_day\n3_month\n48_hour\n6_month\n72_hour\nYes\n\nThe amount of time a user will have access to the vod content upon redeeming a promo code. This is only necessary when not defined on the On Demand Container, and creating promotions with the \"vip\" access type and \"rent\" product type.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "total",
+            "description": "integer Yes\n\nNumber of promotions to generate if type is batch. The amount of uses for the promotion if type is single.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "string batch\nsingle\nYes\n\nType of promotions to use. If the access type is \"vip\", the only possible value for this field is batch.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string batch\ndefault\nsingle\nvip\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/categories": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string No\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string last_video_featured_time\nname\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/genres/{genre_id}/pages/{ondemand_id}": {
+      "GET": {}
+    },
+    "/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string CC\nCC-BY\nCC-BY-NC\nCC-BY-NC-ND\nCC-BY-NC-SA\nCC-BY-ND\nCC-BY-SA\nCC0\ncategories\nduration\nin-progress\nminimum_likes\ntrending\nupload_date\nNo\n\nFilter to apply to the results. The CC filters will show only those videos with the applicable Creative Commons licenses. See our Creative Commons page for more.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string Yes\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ncomments\ndate\nduration\nlikes\nplays\nrelevant\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/tags/{word}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/videos/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "content_rating",
+            "description": "array No\n\nA list of values describing the content in this video. You can find the full list in the /contentrating endpoint. You must provide a list representation appropriate for your request body (comma separated for querystring, or array for JSON).\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "description",
+            "description": "string No\n\nThe new description for the video\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.buttons.embed",
+            "description": "boolean No\n\nShow or hide the embed button.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.buttons.fullscreen",
+            "description": "boolean No\n\nShow or hide the fullscreen button.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.buttons.hd",
+            "description": "boolean No\n\nShow or hide the HD button.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.buttons.like",
+            "description": "boolean No\n\nShow or hide the like button.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.buttons.scaling",
+            "description": "boolean No\n\nShow or hide the scaling button (shown only in fullscreen mode).\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.buttons.share",
+            "description": "boolean No\n\nShow or hide the share button.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.buttons.watchlater",
+            "description": "boolean No\n\nShow or hide the watch later button.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.color",
+            "description": "string No\n\nA primary color used by the embed player.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.logos.custom.active",
+            "description": "boolean No\n\nShow or hide your custom logo.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.logos.custom.link",
+            "description": "string No\n\nA url that your user will navigate to if they click your custom logo.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.logos.custom.sticky",
+            "description": "boolean No\n\nAlways show the custom logo, or hide it after time with the rest of the UI.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.logos.vimeo",
+            "description": "boolean No\n\nShow or hide the vimeo logo.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.playbar",
+            "description": "boolean No\n\nShow or hide the playbar.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.title.name",
+            "description": "string hide\nshow\nuser\nNo\n\nShow, hide, or let the user decide if the video title shows on the video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.title.owner",
+            "description": "string hide\nshow\nuser\nNo\n\nShow, hide, or let the user decide if the owners information shows on the video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.title.portrait",
+            "description": "string hide\nshow\nuser\nNo\n\nShow, hide, or let the user decide if the owners portrait shows on the video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "embed.volume",
+            "description": "boolean No\n\nShow or hide the volume selector.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "external_links.imdb",
+            "description": "string No\n\nExternal data from imdb\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "external_links.rotten_tomatoes",
+            "description": "string No\n\nExternal data from rotten_tomatoes\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "license",
+            "description": "string by\nby-nc\nby-nc-nd\nby-nc-sa\nby-nd\nby-sa\ncc0\nNo\n\nSet the Creative Commons license\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string No\n\nSet the default language for this video. For a full list of valid languages use the \"/languages?filter=texttracks\" endpoint.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "string No\n\nThe new title for the video\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "password",
+            "description": "string No\n\nWhen you set privacy.view to password, you must provide the password as an additional parameter.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy.add",
+            "description": "boolean No\n\nEnable or disable the ability for anyone to add the video to an album, channel, or group.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy.comments",
+            "description": "string anybody\ncontacts\nnobody\nNo\n\nThe privacy for who can comment on the video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy.download",
+            "description": "boolean No\n\nEnable or disable the ability for anyone to download video.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy.embed",
+            "description": "string private\npublic\nwhitelist\nNo\n\nThe videos new embed settings. Whitelist allows you to define all valid embed domains. Check out our docs for adding and removing domains.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "privacy.view",
+            "description": "string anybody\ncontacts\ndisable\nnobody\npassword\nunlisted\nusers\nNo\n\nThe new privacy setting for the video. Content-type application/json is the only valid type for type \"users\", basic users can not set privacy to unlisted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "ratings.mpaa.rating",
+            "description": "string g\nnc17\npg\npg13\nr\nx\nNo\n\nSet MPAA rating for a video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "ratings.mpaa.reason",
+            "description": "string at\nbn\nn\nsl\nss\nv\nNo\n\nSet MPAA rating reason for a video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "ratings.tv.rating",
+            "description": "string tv-14\ntv-g\ntv-ma\ntv-pg\ntv-y\ntv-y7\ntv-y7-fv\nNo\n\nSet TV rating for a video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "ratings.tv.reason",
+            "description": "string d\nfv\nl\nss\nv\nNo\n\nSet TV rating reason for a video.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "review_link",
+            "description": "boolean No\n\nEnable or disable the review page.\n\n",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "spatial.director_timeline",
+            "description": "array No\n\n360 director timeline. The arrays in this should include a \"time_code\", \"pitch\", \"yaw\", and optionally \"roll\". For pitch, the minimum allowed is -90, and the max of 90. For yaw, the minimum is 0, and a maximum of 360.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "spatial.field_of_view",
+            "description": "integer No\n\n360 field of view. Default 50, min 30, max 90.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "spatial.projection",
+            "description": "string cubical\ncylindrical\ndome\nequirectangular\npyramid\nNo\n\n360 spatial projection.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "spatial.stereo_format",
+            "description": "string left-right\nmono\ntop-bottom\nNo\n\n360 spatial stereo format.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/pages/{ondemand_id}/videos": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string all\nbuy\nexpiring_soon\nextra\nmain\nmain.viewable\nrent\ntrailer\nunwatched\nviewable\nwatched\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string date\ndefault\nepisode\nmanual\nname\npurchase_time\nrelease_date\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/watchlater": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string embeddable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_embeddable",
+            "description": "string false\ntrue\nNo\n\nRequired if filter=embeddable. Choose between only videos that are embeddable, and only videos that are not embeddable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ncomments\ndate\nduration\nlikes\nplays\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/oauth/access_token": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "code",
+            "description": "string Yes\n\nThe authorization code received from the authorization server.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "grant_type",
+            "description": "enum authorization_code\nYes\n\nGrant type. Must be \"authorization_code\".\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "redirect_uri",
+            "description": "string Yes\n\nURI to redirect the user to. Must match the redirect URI from /oauth/authorize .\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/portfolios/{portfolio_id}": {
+      "GET": {}
+    },
+    "/videos/{video_id}/presets/{preset_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/me/feed": {
+      "GET": {}
+    },
+    "/videos/{video_id}/privacy/domains": {
+      "GET": {}
+    },
+    "/me/albums/{album_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {}
+    },
+    "/ondemand/genres": {
+      "GET": {}
+    },
+    "/ondemand/pages/{ondemand_id}/regions/{country}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/ondemand/pages/{ondemand_id}/pictures": {
+      "POST": {},
+      "GET": {}
+    },
+    "/me/watched/videos": {
+      "DELETE": {},
+      "GET": {}
+    },
+    "/users": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string Yes\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nrelevant\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/privacy/domains/{domain}": {
+      "DELETE": {},
+      "PUT": {}
+    },
+    "/ondemand/pages/{ondemand_id}/pictures/{poster_id}": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "active",
+            "description": "boolean No\n\nSet this picture as the active picture.\n\n",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/videos/{video_id}/comments/{comment_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "text",
+            "description": "string No\n\nThe comment's new text\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/categories/{category}/videos": {
+      "GET": {}
+    },
+    "/users/{user_id}/followers": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/me/categories": {
+      "GET": {}
+    },
+    "/videos/{video_id}/privacy/users": {
+      "GET": {},
+      "PUT": {}
+    },
+    "/ondemand/pages/{ondemand_id}/likes": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string extra\nmain\ntrailer\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ndate\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/ondemand/pages/{ondemand_id}/seasons": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string viewable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string date\nmanual\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/users/{user_id}/watchlater/{video_id}": {
+      "DELETE": {},
+      "GET": {},
+      "PUT": {}
+    },
+    "/ondemand/pages/{ondemand_id}/genres": {
+      "GET": {}
+    },
+    "/users/{user_id}/appearances": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "direction",
+            "description": "string asc\ndesc\nNo\n\nThe direction that the results are sorted.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string embeddable\nNo\n\nFilter to apply to the results.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter_embeddable",
+            "description": "string false\ntrue\nNo\n\nRequired if filter=embeddable. Choose between only videos that are embeddable, and only videos that are not embeddable.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "integer No\n\nThe page number to show.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "description": "integer No\n\nNumber of items to show on each page. Max 100.\n\n",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "query",
+            "description": "string No\n\nSearch query.\n\n",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string alphabetical\ncomments\ndate\nduration\nlikes\nplays\nNo\n\nTechnique used to sort the results.\n\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "api.vimeo.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

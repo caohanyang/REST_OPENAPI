@@ -6,59 +6,45 @@
         "parameters": [
           {
             "in": "query",
-            "name": "Required",
-            "description": "Parameters",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
             "name": "shelf",
             "description": "string ID of bookshelf to retrieve volumes.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "userId",
             "description": "string ID of user for whom to retrieve bookshelf volumes.",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "Optional",
-            "description": "Parameters",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "maxResults",
             "description": "unsigned integer Maximum number of results to return",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "showPreorders",
             "description": "boolean Set to true to show pre-ordered books. Defaults to false.",
-            "type": "integer",
-            "required": "required"
+            "type": "boolean",
+            "required": true
           },
           {
             "in": "query",
             "name": "source",
             "description": "string String to identify the originator of this request.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "startIndex",
             "description": "unsigned integer Index of the first element to return (starts at 0)",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -68,108 +54,94 @@
         "parameters": [
           {
             "in": "query",
-            "name": "Required",
-            "description": "Parameters",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
             "name": "q",
             "description": "string Full-text search query string.",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "Optional",
-            "description": "Parameters",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "download",
             "description": "string Restrict to volumes by download availability.\n\nAcceptable values are: \" epub \" - All volumes with epub.\n",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "filter",
             "description": "string Filter search results.\n\nAcceptable values are: \" ebooks \" - All Google eBooks.\n\" free-ebooks \" - Google eBook with full volume text viewability.\n\" full \" - Public can view entire volume text.\n\" paid-ebooks \" - Google eBook with a price.\n\" partial \" - Public able to see parts of text.\n",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "langRestrict",
             "description": "string Restrict results to books with this language code.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "libraryRestrict",
             "description": "string Restrict search to this user's library.\n\nAcceptable values are: \" my-library \" - Restrict to the user's library, any shelf.\n\" no-restrict \" - Do not restrict based on user's library.\n",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "maxResults",
             "description": "unsigned integer Maximum number of results to return. Acceptable values are 0 to 40 , inclusive.",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "orderBy",
             "description": "string Sort search results.\n\nAcceptable values are: \" newest \" - Most recently published.\n\" relevance \" - Relevance to search terms.\n",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "partner",
             "description": "string Restrict and brand results for partner ID.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "printType",
             "description": "string Restrict to books or magazines.\n\nAcceptable values are: \" all \" - All volume content types.\n\" books \" - Just books.\n\" magazines \" - Just magazines.\n",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "projection",
             "description": "string Restrict information returned to a set of selected fields.\n\nAcceptable values are: \" full \" - Includes all volume data.\n\" lite \" - Includes a subset of fields in volumeInfo and accessInfo.\n",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "showPreorders",
             "description": "boolean Set to true to show books available for preorder. Defaults to false.",
-            "type": "integer",
-            "required": "required"
+            "type": "boolean",
+            "required": true
           },
           {
             "in": "query",
             "name": "source",
             "description": "string String to identify the originator of this request.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "startIndex",
             "description": "unsigned integer Index of the first result to return (starts at 0)",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
@@ -179,38 +151,24 @@
         "parameters": [
           {
             "in": "query",
-            "name": "Required",
-            "description": "Parameters",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
             "name": "shelf",
             "description": "string ID of bookshelf from which to remove a volume.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "volumeId",
             "description": "string ID of volume to remove.",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "Optional",
-            "description": "Parameters",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "source",
             "description": "string String to identify the originator of this request.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           }
         ]
       },
@@ -218,73 +176,55 @@
         "parameters": [
           {
             "in": "query",
-            "name": "Required",
-            "description": "Parameters",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
             "name": "shelf",
             "description": "string The bookshelf ID or name retrieve volumes for.",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "Optional",
-            "description": "Parameters",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "maxResults",
             "description": "unsigned integer Maximum number of results to return",
             "type": "integer",
-            "required": "required"
+            "required": true
           },
           {
             "in": "query",
             "name": "projection",
             "description": "string Restrict information returned to a set of selected fields.\n\nAcceptable values are: \" full \" - Includes all volume data.\n\" lite \" - Includes a subset of fields in volumeInfo and accessInfo.\n",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "q",
             "description": "string Full-text search query string in this bookshelf.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "showPreorders",
             "description": "boolean Set to true to show pre-ordered books. Defaults to false.",
-            "type": "integer",
-            "required": "required"
+            "type": "boolean",
+            "required": true
           },
           {
             "in": "query",
             "name": "source",
             "description": "string String to identify the originator of this request.",
-            "type": "integer",
-            "required": "required"
+            "type": "string",
+            "required": true
           },
           {
             "in": "query",
             "name": "startIndex",
             "description": "unsigned integer Index of the first element to return (starts at 0)",
             "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
-    },
-    "/": {
-      "POST": {},
-      "GET": {}
     }
   },
   "produces": "application/json",

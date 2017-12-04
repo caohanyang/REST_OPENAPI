@@ -72,10 +72,10 @@ public class ProcessResponse {
 				Out.prln("responseStart： " + responseMatcher.start());
 
 				String matchStr = null;
-				if (Settings.REQEXAMPLE.equals("\\{(.*?)\\}")) {
+				if (Settings.RESEXAMPLE.equals("((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}")) {
 
 					AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE, new Long(responseMatcher.start()),
-							new Long(responseMatcher.end() + 1));
+							new Long(responseMatcher.end() + 10));
 					Iterator<Annotation> codeIter = annoPre.iterator();
 
 					while (codeIter.hasNext()) {
@@ -88,7 +88,7 @@ public class ProcessResponse {
 							// not direct start from json
 							if (codeText.contains("[")) {
 								matchStr = codeText.substring(codeText.indexOf("["));
-							} else {
+							} else if (codeText.contains("{")) {
 								matchStr = codeText.substring(codeText.indexOf("{"));
 							}
 

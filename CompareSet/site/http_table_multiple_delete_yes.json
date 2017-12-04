@@ -1,78 +1,73 @@
 {
+  "basePath": "/api/v2",
   "paths": {
-    "https://api.picplz.com/api/v2/user/follow": {
-      "DELETE": {}
-    },
-    "https://api.picplz.com/api/v2/pic": {
-      "GET": {}
-    },
     "http://YOUR_REGISTERED_REDIRECT_URI/#access_token=ACCESS_TOKEN": {
+      "GET": {}
+    },
+    "/picplz.com/api/v2/feed": {
+      "GET": {}
+    },
+    "/collection/pic": {
       "POST": {}
     },
-    "m/api/v2/user/follow": {
+    "http://picplz.com/nPhc": {
+      "GET": {}
+    },
+    "/api/v2/feed": {
+      "GET": {}
+    },
+    "/api/v2/following": {
+      "GET": {}
+    },
+    "//picplz.com/oauth2/authenticate": {
+      "GET": {}
+    },
+    "/user/follow": {
       "DELETE": {}
     },
-    "http://api": {
+    "/api/v2/pic": {
+      "GET": {
+        "request": "curl -H 'X-Pretty-JSON: 1' 'http://api.picplz.com/api/v2/pic.json?id=153982'"
+      }
+    },
+    "/api/v2/followers": {
       "GET": {}
     },
-    "m/api/v2/city": {
-      "GET": {}
-    },
-    "http://picplz.com": {
-      "GET": {}
-    },
-    "m/api/v2/feed": {
-      "GET": {}
-    },
-    "https://api-upload.picplz.com/api/v2/upload_basic": {
+    "/pic/like": {
+      "DELETE": {},
       "POST": {}
     },
-    "https://YOUR_REGISTERED_REDIRECT_URI": {
+    "/api/v2/user/follow": {
+      "POST": {}
+    },
+    "/api/v2/filters": {
+      "POST": {},
       "GET": {}
     },
-    "m/api": {
-      "GET": {}
-    },
-    "https://api.picplz.com/api/v2/pic/like": {
+    "/pic/comment": {
       "DELETE": {},
-      "Post": {}
+      "POST": {}
     },
-    "https://api.picplz.com/api/v2/pic/comment": {
-      "DELETE": {},
-      "post": {}
-    },
-    "/": {
+    "/api/v2/user": {
       "GET": {}
     },
-    "m/api/v2/user": {
+    "/api/v2/place": {
       "GET": {}
     },
-    "m/api/v2/following": {
+    "/api/v2/upload_basic": {
+      "POST": {}
+    },
+    "/api/v2/collection": {
       "GET": {}
     },
-    "m/api/v2/place": {
-      "GET": {}
-    },
-    "m/api/v2/pic": {
-      "GET": {}
-    },
-    "https://api.picplz.com/api/v2/collection/pic": {
-      "DELETE": {}
-    },
-    "m/api/v2/collection": {
-      "DELETE": {}
-    },
-    "http://picplz.com/api/v2/feed": {
-      "GET": {}
-    },
-    "m/api/v2/followers": {
+    "/api/v2/city": {
       "GET": {}
     }
   },
   "produces": "application/json",
-  "host": "api.picplz.co",
+  "host": "api.picplz.com",
   "schemes": [
-    "http"
+    "https"
   ],
   "swagger": "2.0",
   "info": "This is the information of the API"

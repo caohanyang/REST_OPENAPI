@@ -1,34 +1,45 @@
 {
   "paths": {
+    "//localhost/campsiteSearch.do": {
+      "GET": {}
+    },
     "/camping/campgrounds": {
-      "GET": {}
+      "GET": {
+        "request": "http://api.amp.active.com/camping/campgrounds?pstate=CO&siteType=2001&expwith=1&amenity=4005&pets=3010&a"
+      }
     },
-    "http://localhost/campsiteSearch.do": {
-      "GET": {}
-    },
-    "http://countrycode.org": {
+    "//countrycode.org/may": {
       "POST": {}
     },
-    "/camping/campsites": {
+    "//www.tantracking.com/click.track": {
       "GET": {}
+    },
+    "/camping/campsites": {
+      "GET": {
+        "request": "http://api.amp.active.com/camping/campsites?contractCode=CO&parkId=50032&api_key=2chxq68efd4azrpygt5hh2q"
+      }
     },
     "/camping/campground/details": {
       "POST": {},
+      "GET": {
+        "request": "http://api.amp.active.com/camping/campground/details?contractCode=CO&parkId=50032&api_key=2chxq68efd4azr"
+      }
+    },
+    "//developer.active.com/affiliates.": {
       "GET": {}
     },
-    "http://www.tantracking.com/click.track": {
-      "GET": {}
+    "//unitedrunforthehungry.org\",": {
+      "POST": {}
     },
     "/v2/search": {
       "POST": {},
-      "GET": {},
+      "GET": {
+        "request": "http://api.amp.active.com/v2/search?query=running&category=event&start_date=2013-07-04..&near=San%20Dieg"
+      },
       "PUT": {}
     },
     "https://www.active.com/register/index.cfm": {
       "POST": {}
-    },
-    "http://developer.active.com/affiliates.": {
-      "GET": {}
     }
   },
   "produces": "application/json",

@@ -85,7 +85,7 @@ public class ProcessRequest {
 					// remove all the whitespace
 					matchStr = matchStr.replaceAll(" ", "");
 
-				} else if (Settings.REQEXAMPLE.equals("\\{(.*?)\\}")) {
+				} else if (Settings.REQEXAMPLE.equals("((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}")) {
 
 					AnnotationSet annoPre = annoOrigin.get(Settings.REQTEMPLATE, new Long(requestMatcher.start()),
 							new Long(requestMatcher.end() + 1));

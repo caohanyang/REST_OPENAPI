@@ -1,0 +1,666 @@
+{
+  "basePath": "/services/rest",
+  "paths": {
+    "?method=flickr.photos.getContactsPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.places.getInfoByUrl": {
+      "GET": {}
+    },
+    "?method=flickr.photos.suggestions.approveSuggestion": {
+      "GET": {}
+    },
+    "?method=flickr.tags.getListUser": {
+      "GET": {}
+    },
+    "?method=flickr.galleries.editMeta": {
+      "POST": {}
+    },
+    "?method=flickr.favorites.add": {
+      "POST": {}
+    },
+    "?method=flickr.photos.people.delete": {
+      "DELETE": {}
+    },
+    "?method=flickr.photos.geo.getPerms": {
+      "GET": {}
+    },
+    "?method=flickr.auth.getFrob": {
+      "GET": {}
+    },
+    "?method=flickr.photos.geo.setPerms": {
+      "POST": {}
+    },
+    "?method=flickr.photos.removeTag": {
+      "GET": {}
+    },
+    "?method=flickr.photos.setContentType": {
+      "POST": {}
+    },
+    "?method=flickr.photosets.setPrimaryPhoto": {
+      "POST": {}
+    },
+    "?method=flickr.photos.getContactsPublicPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getRecent": {
+      "GET": {}
+    },
+    "?method=flickr.collections.getTree": {
+      "GET": {}
+    },
+    "?method=flickr.photos.suggestions.removeSuggestion": {
+      "GET": {}
+    },
+    "?method=flickr.galleries.editPhoto": {
+      "POST": {}
+    },
+    "?method=flickr.photos.getCounts": {
+      "GET": {}
+    },
+    "?method=flickr.places.resolvePlaceId": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.getPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.places.placesForUser": {
+      "GET": {}
+    },
+    "?method=flickr.urls.lookupGallery": {
+      "GET": {}
+    },
+    "?method=flickr.photos.setTags": {
+      "POST": {}
+    },
+    "?method=flickr.photos.setMeta": {
+      "POST": {}
+    },
+    "?method=flickr.photos.geo.getLocation": {
+      "GET": {}
+    },
+    "?method=flickr.cameras.getBrandModels": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.comments.addComment": {
+      "POST": {}
+    },
+    "?method=flickr.tags.getRelated": {
+      "GET": {}
+    },
+    "?method=flickr.groups.discuss.topics.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.groups.browse": {
+      "GET": {}
+    },
+    "?method=flickr.contacts.getList": {
+      "GET": {}
+    },
+    "?method=flickr.photos.notes.delete": {
+      "DELETE": {}
+    },
+    "?method=flickr.places.resolvePlaceURL": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getSizes": {
+      "GET": {}
+    },
+    "?method=flickr.groups.pools.getContext": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.comments.editComment": {
+      "POST": {}
+    },
+    "?method=flickr.activity.userComments": {
+      "GET": {}
+    },
+    "?method=flickr.groups.discuss.topics.getList": {
+      "GET": {}
+    },
+    "?method=flickr.groups.leave": {
+      "DELETE": {}
+    },
+    "?method=flickr.tags.getHotList": {
+      "GET": {}
+    },
+    "?method=flickr.groups.pools.add": {
+      "POST": {}
+    },
+    "?method=flickr.test.null": {
+      "GET": {}
+    },
+    "?method=flickr.photos.transform.rotate": {
+      "GET": {}
+    },
+    "?method=flickr.profile.getProfile": {
+      "GET": {}
+    },
+    "?method=flickr.people.getPhotosOf": {
+      "GET": {}
+    },
+    "?method=flickr.groups.members.getList": {
+      "GET": {}
+    },
+    "?method=flickr.test.login": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getWithGeoData": {
+      "GET": {}
+    },
+    "?method=flickr.auth.getFullToken": {
+      "GET": {}
+    },
+    "?method=flickr.groups.join": {
+      "POST": {}
+    },
+    "?method=flickr.photos.geo.setLocation": {
+      "POST": {}
+    },
+    "?method=flickr.reflection.getMethods": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getPhotoReferrers": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.places.getChildrenWithPhotosPublic": {
+      "GET": {}
+    },
+    "?method=flickr.photos.licenses.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.commons.getInstitutions": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getCollectionDomains": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.removePhoto": {
+      "POST": {}
+    },
+    "?method=flickr.prefs.getContentType": {
+      "GET": {}
+    },
+    "?method=flickr.photos.comments.editComment": {
+      "POST": {}
+    },
+    "?method=flickr.stats.getPhotosetStats": {
+      "GET": {}
+    },
+    "?method=flickr.groups.discuss.replies.delete": {
+      "DELETE": {}
+    },
+    "?method=flickr.photos.comments.getRecentForContacts": {
+      "GET": {}
+    },
+    "?method=flickr.photos.geo.photosForLocation": {
+      "GET": {}
+    },
+    "?method=flickr.interestingness.getList": {
+      "GET": {}
+    },
+    "?method=flickr.groups.discuss.replies.edit": {
+      "POST": {}
+    },
+    "?method=flickr.groups.discuss.replies.add": {
+      "POST": {}
+    },
+    "?method=flickr.photos.notes.edit": {
+      "POST": {}
+    },
+    "?method=flickr.photos.geo.removeLocation": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getCollectionReferrers": {
+      "GET": {}
+    },
+    "?method=flickr.panda.getList": {
+      "GET": {}
+    },
+    "?method=flickr.auth.checkToken": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getCollectionStats": {
+      "GET": {}
+    },
+    "?method=flickr.push.getTopics": {
+      "GET": {}
+    },
+    "?method=flickr.photos.comments.addComment": {
+      "POST": {}
+    },
+    "?method=flickr.tags.getMostFrequentlyUsed": {
+      "GET": {}
+    },
+    "?method=flickr.places.getShapeHistory": {
+      "GET": {}
+    },
+    "?method=flickr.people.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.photos.geo.batchCorrectLocation": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.getContext": {
+      "GET": {}
+    },
+    "?method=flickr.test.echo": {
+      "GET": {}
+    },
+    "?method=flickr.machinetags.getValues": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.reorderPhotos": {
+      "POST": {}
+    },
+    "?method=flickr.push.getSubscriptions": {
+      "GET": {}
+    },
+    "?method=flickr.galleries.create": {
+      "POST": {}
+    },
+    "?method=flickr.favorites.getPublicList": {
+      "GET": {}
+    },
+    "?method=flickr.groups.joinRequest": {
+      "POST": {}
+    },
+    "?method=flickr.photos.geo.setContext": {
+      "POST": {}
+    },
+    "?method=flickr.tags.getListUserRaw": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getNotInSet": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.create": {
+      "POST": {}
+    },
+    "?method=flickr.activity.userPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getExif": {
+      "GET": {}
+    },
+    "?method=flickr.places.placesForTags": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.getPendingTestimonialsBy": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getAllContexts": {
+      "GET": {}
+    },
+    "?method=flickr.contacts.getPublicList": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getTotalViews": {
+      "GET": {}
+    },
+    "?method=flickr.photos.suggestions.rejectSuggestion": {
+      "GET": {}
+    },
+    "?method=flickr.photos.delete": {
+      "DELETE": {}
+    },
+    "?method=flickr.cameras.getBrands": {
+      "GET": {}
+    },
+    "?method=flickr.groups.pools.remove": {
+      "GET": {}
+    },
+    "?method=flickr.groups.pools.getPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.photos.comments.getList": {
+      "GET": {}
+    },
+    "?method=flickr.galleries.getPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getPhotoDomains": {
+      "GET": {}
+    },
+    "?method=flickr.places.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.groups.discuss.topics.add": {
+      "POST": {}
+    },
+    "?method=flickr.tags.getClusters": {
+      "GET": {}
+    },
+    "?method=flickr.auth.oauth.checkToken": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getPerms": {
+      "GET": {}
+    },
+    "?method=flickr.push.unsubscribe": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.delete": {
+      "POST": {}
+    },
+    "?method=flickr.galleries.getListForPhoto": {
+      "GET": {}
+    },
+    "?method=flickr.photos.upload.checkTickets": {
+      "GET": {}
+    },
+    "?method=flickr.people.getPublicGroups": {
+      "GET": {}
+    },
+    "?method=flickr.urls.getUserPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getPhotostreamReferrers": {
+      "GET": {}
+    },
+    "?method=flickr.people.getPublicPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.contacts.getTaggingSuggestions": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.deleteTestimonial": {
+      "DELETE": {}
+    },
+    "?method=flickr.auth.getToken": {
+      "GET": {}
+    },
+    "?method=flickr.photos.setPerms": {
+      "POST": {}
+    },
+    "?method=flickr.people.getPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.panda.getPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getWithoutGeoData": {
+      "GET": {}
+    },
+    "?method=flickr.photos.notes.add": {
+      "POST": {}
+    },
+    "?method=flickr.groups.search": {
+      "GET": {}
+    },
+    "?method=flickr.photos.people.add": {
+      "POST": {}
+    },
+    "?method=flickr.galleries.addPhoto": {
+      "POST": {}
+    },
+    "?method=flickr.places.getPlaceTypes": {
+      "GET": {}
+    },
+    "?method=flickr.photos.suggestions.suggestLocation": {
+      "GET": {}
+    },
+    "?method=flickr.photos.geo.correctLocation": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getPhotostreamDomains": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.addPhoto": {
+      "POST": {}
+    },
+    "?method=flickr.machinetags.getPredicates": {
+      "GET": {}
+    },
+    "?method=flickr.urls.getUserProfile": {
+      "GET": {}
+    },
+    "?method=flickr.photos.search": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getPhotoStats": {
+      "GET": {}
+    },
+    "?method=flickr.favorites.getContext": {
+      "GET": {}
+    },
+    "?method=flickr.tags.getListPhoto": {
+      "GET": {}
+    },
+    "?method=flickr.people.getGroups": {
+      "GET": {}
+    },
+    "?method=flickr.prefs.getPrivacy": {
+      "GET": {}
+    },
+    "?method=flickr.galleries.editPhotos": {
+      "POST": {}
+    },
+    "?method=flickr.stats.getPhotosetReferrers": {
+      "GET": {}
+    },
+    "?method=flickr.push.subscribe": {
+      "GET": {}
+    },
+    "?method=flickr.groups.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.tags.getClusterPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.machinetags.getPairs": {
+      "GET": {}
+    },
+    "?method=flickr.photos.people.editCoords": {
+      "POST": {}
+    },
+    "?method=flickr.tags.getListUserPopular": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.orderSets": {
+      "POST": {}
+    },
+    "?method=flickr.collections.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.photos.recentlyUpdated": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getPopular": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getPopularPhotos": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.getAllTestimonialsAbout": {
+      "GET": {}
+    },
+    "?method=flickr.reflection.getMethodInfo": {
+      "GET": {}
+    },
+    "?method=flickr.places.find": {
+      "GET": {}
+    },
+    "?method=flickr.places.findByLatLon": {
+      "GET": {}
+    },
+    "?method=flickr.blogs.getList": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.comments.deleteComment": {
+      "POST": {}
+    },
+    "?method=flickr.stats.getPhotosetDomains": {
+      "GET": {}
+    },
+    "?method=flickr.machinetags.getRecentValues": {
+      "GET": {}
+    },
+    "?method=flickr.groups.pools.getGroups": {
+      "GET": {}
+    },
+    "?method=flickr.photos.setDates": {
+      "POST": {}
+    },
+    "?method=flickr.people.findByUsername": {
+      "GET": {}
+    },
+    "?method=flickr.machinetags.getNamespaces": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getContext": {
+      "GET": {}
+    },
+    "?method=flickr.photos.people.getList": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.approveTestimonial": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.getTestimonialsAbout": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.getList": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.removePhotos": {
+      "POST": {}
+    },
+    "?method=flickr.groups.discuss.replies.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.getPendingTestimonialsAbout": {
+      "GET": {}
+    },
+    "?method=flickr.galleries.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.galleries.getList": {
+      "GET": {}
+    },
+    "?method=flickr.urls.lookupGroup": {
+      "GET": {}
+    },
+    "?method=flickr.photos.setSafetyLevel": {
+      "POST": {}
+    },
+    "?method=flickr.urls.getGroup": {
+      "GET": {}
+    },
+    "?method=flickr.favorites.getList": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.editTestimonial": {
+      "POST": {}
+    },
+    "?method=flickr.places.tagsForPlace": {
+      "GET": {}
+    },
+    "?method=flickr.prefs.getHidden": {
+      "GET": {}
+    },
+    "?method=flickr.prefs.getGeoPerms": {
+      "GET": {}
+    },
+    "?method=flickr.people.getUploadStatus": {
+      "GET": {}
+    },
+    "?method=flickr.favorites.remove": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.getInfo": {
+      "GET": {}
+    },
+    "?method=flickr.blogs.getServices": {
+      "GET": {}
+    },
+    "?method=flickr.photos.addTags": {
+      "POST": {}
+    },
+    "?method=flickr.groups.discuss.replies.getList": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.comments.getList": {
+      "GET": {}
+    },
+    "?method=flickr.places.placesForBoundingBox": {
+      "GET": {}
+    },
+    "?method=flickr.places.getTopPlacesList": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.getAllTestimonialsBy": {
+      "GET": {}
+    },
+    "?method=flickr.contacts.getListRecentlyUploaded": {
+      "GET": {}
+    },
+    "?method=flickr.photos.people.deleteCoords": {
+      "DELETE": {}
+    },
+    "?method=flickr.photos.getFavorites": {
+      "GET": {}
+    },
+    "?method=flickr.blogs.postPhoto": {
+      "POST": {}
+    },
+    "?method=flickr.photosets.editMeta": {
+      "POST": {}
+    },
+    "?method=flickr.testimonials.getTestimonialsBy": {
+      "GET": {}
+    },
+    "?method=flickr.photos.licenses.setLicense": {
+      "POST": {}
+    },
+    "?method=flickr.photos.suggestions.getList": {
+      "GET": {}
+    },
+    "?method=flickr.urls.lookupUser": {
+      "GET": {}
+    },
+    "?method=flickr.photosets.editPhotos": {
+      "POST": {}
+    },
+    "?method=flickr.photos.comments.deleteComment": {
+      "DELETE": {}
+    },
+    "?method=flickr.prefs.getSafetyLevel": {
+      "GET": {}
+    },
+    "?method=flickr.auth.oauth.getAccessToken": {
+      "GET": {}
+    },
+    "?method=flickr.photos.getUntagged": {
+      "GET": {}
+    },
+    "?method=flickr.places.placesForContacts": {
+      "GET": {}
+    },
+    "?method=flickr.stats.getCSVFiles": {
+      "GET": {}
+    },
+    "?method=flickr.testimonials.addTestimonial": {
+      "POST": {}
+    },
+    "?method=flickr.stats.getPhotostreamStats": {
+      "GET": {}
+    },
+    "?method=flickr.people.getLimits": {
+      "GET": {}
+    },
+    "?method=flickr.people.findByEmail": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "flickr.com",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

@@ -1,18 +1,11 @@
 package com.hanyang;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Properties;
-
 import gate.util.Out;
 
 public class Settings {
@@ -22,6 +15,9 @@ public class Settings {
 	 */
 	// in the case we don't have example http request, we need to globally search for the base url.
 	public static boolean SEARCHBASE = false;
+	// in case it may contain two different prefix, two different api.
+    //	api.twitter.com/1.1
+	public static String URLBASE = "";
 		
 	// The things between Http verbs and Url:
 	// "\\s", "(.*?)" \\s.{0,60}
@@ -29,16 +25,23 @@ public class Settings {
 	// for some url contains URL parameters
 	// It will present URL in different tags, which causes whitespace
 	// " " ""
-	public static String URLMIDDLE = " ";
+	public static String URLMIDDLE = "";
 	public static String URLAFTER = " ";
 	// path template in the url
 	// :id  <id> {id} no
-	public static String URLTEMPLATE = "{";
+	public static String URLTEMPLATE = "no";
 	
 	// "no", "yes"
 	public static String REVERSE = "no";
-	// "https", "http", "/"
-	public static String MODE ="https";
+	
+	// exist the verb or not
+	// no yes
+	public static String EXISTVERB = "no";
+	public static String URLKEY= "url:";
+	
+	public static String VERBKEY= "methods:";
+	// "https", "http", "/", "null"
+	public static String MODE ="http";
 	
 	// "del", "delete"
 	public static String ABBREV_DELETE = "delete";
@@ -49,32 +52,32 @@ public class Settings {
 	 */
 	// The key word before the request
 	// "EXAMPLE REQUEST"  "" "no"
-	public static String REQKEY = "no";
-	// \\s \\s.{0,60} ""
-	public static String REQMIDDLE = "\\s.{0,100}";
+	public static String REQKEY = "EXAMPLE REQUEST";
+	// \\s \\s.{0,60} "" (.*?)
+	public static String REQMIDDLE = "\\s.{0,60}";
 	// The request exists or not 
-	// http \\{(.*?)\\} no curl  
-	public static String REQEXAMPLE = "\\{(.*?)\\}";
+	// http \\{(.*?)\\} no curl  ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
+	public static String REQEXAMPLE = "http";
 	
 	// default true
 	public static Boolean URL1REQ2 = true;
 	
-	// pre code
-	public static String REQTEMPLATE = "code";
+	// pre code b a p
+	public static String REQTEMPLATE = "p";
 	
 	/*
 	 * RESPONSE 
 	 */
 	
 	// (example)|(response)  ""  "no"
-	public static String RESKEY = "no";
+	public static String RESKEY = "(example)|(response)";
 	// \\s \\s.{0,60} ""
 	// 1.
-	public static String RESMIDDLE = "\\s.{0,100}";
+	public static String RESMIDDLE = "\\s";
 	// default true
 	public static Boolean URL1RES2 = true;
-	//  pre
-	public static String RESTEMPLATE = "code";
+	//  pre code span
+	public static String RESTEMPLATE = "pre";
 	
 	// The response exists or not 
 	// ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
@@ -90,9 +93,9 @@ public class Settings {
 	// sometimes not common "Query Parameters" "url Parameters"
 	// choose the last common one
 	// (parameter)|(argument)|(field)  or choose the first element Name
-	public static String PARAKEY = "Name";
+	public static String PARAKEY = "(parameter)|(argument)|(field)|(parameters)|(arguments)";
 	// first URL then parameters
-	public static boolean URL1PARA2 = true;	
+	public static boolean URL1PARA2 = false;	
 	
 	// parameter types
 	// Required. The location of the parameter. 
@@ -100,7 +103,7 @@ public class Settings {
 	// for one api, the parameters can be "mix"
 	public static String PARAIN = "query";
 	// "table", "list"
-	public static String TEMPLATE = "table";
+	public static String TEMPLATE = "list";
 	// "single", "multiple"
 	public static String NUMBER = "multiple";
 
@@ -111,7 +114,8 @@ public class Settings {
         try {
             OutputStream outputStream=new FileOutputStream( api + ".config");
             properties.setProperty("SEARCHBASE", Boolean.toString(SEARCHBASE));
-            properties.setProperty("STUFFING", STUFFING);
+            properties.setProperty("STUFFING", STUFFING);    
+            properties.setProperty("URLBASE",URLBASE );
             properties.setProperty("URLMIDDLE",URLMIDDLE );
             properties.setProperty("URLAFTER", URLAFTER);
             properties.setProperty("URLTEMPLATE", URLTEMPLATE);
@@ -158,6 +162,7 @@ public class Settings {
             properties.load(fis);
             setSEARCHBASE(Boolean.valueOf(properties.getProperty("SEARCHBASE")));
             setSTUFFING(properties.getProperty("STUFFING"));
+            setURLBASE(properties.getProperty("URLBASE"));
             setURLMIDDLE(properties.getProperty("URLMIDDLE"));
             setURLAFTER(properties.getProperty("URLAFTER"));
             setURLTEMPLATE(properties.getProperty("URLTEMPLATE"));
@@ -380,4 +385,13 @@ public class Settings {
 	public static void setURL1PARA2(boolean uRL1PARA2) {
 		URL1PARA2 = uRL1PARA2;
 	}
+	
+	public static String getURLBASE() {
+		return URLBASE;
+	}
+
+	public static void setURLBASE(String uRLBASE) {
+		URLBASE = uRLBASE;
+	}
+
 }

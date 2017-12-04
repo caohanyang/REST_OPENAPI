@@ -31,7 +31,7 @@ public class ProcessMethod {
 		JSONObject actionObject = new JSONObject();
 		actionObject.put(action.toUpperCase(), new JSONObject());
 
-		if (isRealUrl(url) | Settings.MODE.equals("/")) {
+		if (isRealUrl(url) | Settings.MODE.equals("/") | Settings.MODE.equals("null")) {
 			if (urlObject.isNull(url)) {
 				// if url object is null, add directly for the first time
 				urlObject.put(url, actionObject);
@@ -55,7 +55,7 @@ public class ProcessMethod {
 			return false;
 		}
 
-		if (url.startsWith("http") | url.startsWith("/")) {
+		if (url.startsWith("http") | url.startsWith("/")| Settings.MODE.equals("null")) {
 
 			int spaces = url == null ? 0 : url.length() - url.replace(" ", "").length();
 			if (spaces > 2) {
@@ -78,7 +78,9 @@ public class ProcessMethod {
 				}
 			} else if (Settings.MODE.equals("/")) {
 				return true;
-			}
+			} else if (Settings.MODE.equals("null")) {
+				return true;
+			} 
 			
 		}
 
@@ -130,7 +132,7 @@ public class ProcessMethod {
 	public String cleanUrl(String urlString) {
 		// clean the url
 		// user/user-id?asdfsadf => user/user-id
-		if (urlString.contains("?")) {
+		if (urlString.contains("?") && !Settings.MODE.equals("null")) {
 			urlString = urlString.split("\\?")[0].trim();
 		}
 		// user/user-id authentication => user/user-id
@@ -198,7 +200,7 @@ public class ProcessMethod {
 		return sortedByValues;
 	}
 
-	public boolean isUrlPath(String urlText, Annotation anno, String strAll, String aPI_NAME, String abbrev) {
+	public boolean isUrlPath(String urlText, Annotation anno, String strAll, String aPI_NAME) {
 		// case 1: flickr.activity.userComments
 		if (anno.getType().equals("h1")) {
 			if (urlText.contains(aPI_NAME)) {
@@ -211,7 +213,7 @@ public class ProcessMethod {
 			return false;
 		} else if (anno.getType().equals("code")) {
 			// case 2: flickr.activity.userComments \s(\/.*\/)
-			String regexUrlPath = "(?i)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(\\/.*\\/)";
+			String regexUrlPath = "(?i)((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}\\s(\\/.*\\/)";
 			Pattern pUrl = Pattern.compile(regexUrlPath);
 			Matcher matcherUrl = pUrl.matcher(urlText);
 
@@ -243,11 +245,19 @@ public class ProcessMethod {
 	public void addAllParaURL(JSONObject openAPI, String strAll, List<JSONObject> infoJson) throws JSONException {
 		// choose the most proper url/action pair
 		for (int i = 0; i < infoJson.size(); i++) {
+			
 			JSONObject acObject = infoJson.get(i).getJSONObject("action");
 			JSONObject urObject = infoJson.get(i).getJSONObject("url");
 			String actionFinal = acObject.keys().next().toString();
 			String urlFinal = urObject.keys().next().toString();
 
+			//remove url that belongs to diffent api.
+			if (Settings.URLBASE != "") {
+				if (!urlFinal.toLowerCase().contains(Settings.URLBASE)) {
+					continue;
+				}
+			}
+			
 			addUrl(openAPI, urlFinal, actionFinal);
 		}
 

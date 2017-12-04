@@ -162,17 +162,16 @@ public class ExtractInformation {
 		ProcessMethod processMe = new ProcessMethod();
 		processMe.generateDefault(openAPI);
 
-//		if (mode == "null") {
-//			nullMode(openAPI, template, number, abbrev, doc, textAll, processMe, baseUrl, API_NAME, reverse, mode);
-//		} else {
+		if (Settings.MODE == "null") {
+			nullMode(openAPI, doc, textAll, processMe);
+		} else {
 			httpMode(openAPI, doc, textAll, processMe);
-//		}
+		}
 
 	}
 
-	private static void nullMode(JSONObject openAPI, String template, String number, String abbrev, Document doc,
-			DocumentContent textAll, ProcessMethod processMe, String baseUrl, String aPI_NAME, String reverse,
-			String scheme) throws JSONException {
+	private static void nullMode(JSONObject openAPI, Document doc,
+			DocumentContent textAll, ProcessMethod processMe) throws JSONException {
 		String strAll = textAll.toString();
 
 		List<JSONObject> infoJson = new ArrayList<JSONObject>();
@@ -184,28 +183,18 @@ public class ExtractInformation {
 		AnnotationSet annoCode = annoOrigin.get("code");
 
 		// 2.1 generate info json based on the h1 tag
-		genInfoJsonNull(doc, processMe, aPI_NAME, strAll, infoJson, annoH1, abbrev);
+		genInfoJsonNull(doc, processMe, strAll, infoJson, annoH1);
 		// 2.2 generate info json based on the code tag
-		genInfoJsonNull(doc, processMe, aPI_NAME, strAll, infoJson, annoCode, abbrev);
+		genInfoJsonNull(doc, processMe, strAll, infoJson, annoCode);
 
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
 
-		// 3. handle template to find parameter
-		ProcessParameter processPa = new ProcessParameter();
-		processPa.handleParaTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
-
-		// 4. handle code template
-		ProcessResponse processRe = new ProcessResponse();
-		processRe.handleResponseTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
-
-		// 5. handle request template/code
-		ProcessRequest processReq = new ProcessRequest();
-		processReq.handleRequestTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+		handleREQRESPARA(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
-	private static void genInfoJsonNull(Document doc, ProcessMethod processMe, String aPI_NAME, String strAll,
-			List<JSONObject> infoJson, AnnotationSet annoTag, String abbrev) throws JSONException {
+	private static void genInfoJsonNull(Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoTag) throws JSONException {
 		String actionStr = null;
 		String urlString = null;
 		Iterator<Annotation> urlIter = annoTag.iterator();
@@ -214,7 +203,7 @@ public class ExtractInformation {
 			String urlText = gate.Utils.stringFor(doc, anno);
 			JSONObject sectionJson = new JSONObject();
 
-			if (processMe.isUrlPath(urlText, anno, strAll, aPI_NAME, abbrev)) {
+			if (processMe.isUrlPath(urlText, anno, strAll, API_NAME)) {
 				if (anno.getType().equals("h1")) {
 
 					urlString = "?method=" + urlText;
@@ -260,6 +249,11 @@ public class ExtractInformation {
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
 
+		handleREQRESPARA(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
+	}
+
+	public static void handleREQRESPARA(JSONObject openAPI, Document doc, ProcessMethod processMe, String strAll,
+			List<JSONObject> infoJson, AnnotationSet annoOrigin) throws JSONException {
 		// 3. handle method url
 		if (!infoJson.isEmpty()) {
 			// add all the url/action pair
@@ -280,14 +274,17 @@ public class ExtractInformation {
 	}
 
 	private static void getInfoJsonHttp(ProcessMethod processMe, String strAll, List<JSONObject> infoJson) throws JSONException {
-		String regexAll;
-		if (Settings.REVERSE.equals("no")) {
-//			regexAll = "(?si)((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}\\s(.*?)" + scheme;
-			regexAll = "(?si)((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}"+ Settings.STUFFING + Settings.MODE;
+		String regexAll = null;
+		if (!Settings.EXISTVERB.equals("no")) {
+			if (Settings.REVERSE.equals("no")) {
+				regexAll = "(?si)((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}"+ Settings.STUFFING + Settings.MODE;
+			} else {
+				regexAll = "(?si)" +  Settings.MODE + Settings.STUFFING +"((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}";
+			}
 		} else {
-//			regexAll = "(?si)" + scheme + "(.*?)\\s((get)|(post)|(" + abbrev + ")|(put)|(patch)){1}";
-			regexAll = "(?si)" +  Settings.MODE + Settings.STUFFING +"((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}";
+			regexAll = "(?si)"+ Settings.URLKEY + Settings.STUFFING + Settings.MODE;
 		}
+		
 		Pattern p = Pattern.compile(regexAll);
 		Matcher matcher = p.matcher(strAll);
 		String actionStr = null, urlString = null;
@@ -329,7 +326,10 @@ public class ExtractInformation {
 				int acLocation = startIndex + acOffset;
 				// Out.prln(strAll.substring(acLocation, matcher.end()));
 				Out.prln("==========REST Action============");
+				
 				actionStr = new StringBuilder(matcherAction.group(1)).reverse().toString();
+				
+				
 				JSONObject acJson = new JSONObject();
 				acJson.put(actionStr.toUpperCase(), acLocation);
 				sectionJson.put("action", acJson);
@@ -347,11 +347,12 @@ public class ExtractInformation {
 			Pattern endpoint = Pattern.compile(regexHttp, Pattern.CASE_INSENSITIVE);
 
 			Matcher endpointMatcher;
+			int uLocation = 0;
 			if (Settings.REVERSE.equals("no")) {
 				endpointMatcher = endpoint.matcher(matchStr);
 				if (endpointMatcher.find()) {
 					Out.prln("urlStart： " + endpointMatcher.start());
-					int uLocation = startIndex + endpointMatcher.start();
+					uLocation = startIndex + endpointMatcher.start();
 					
 					// handle url
 					urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
@@ -382,7 +383,7 @@ public class ExtractInformation {
 					Out.prln("matchEnd： " + endpointMatcher.end());
 					// Out.prln("==========real Action============");
 					int urOffset = matchStr.length() - endpointMatcher.start() - Settings.MODE.length();
-					int urLocation = startIndex + urOffset;
+					uLocation = startIndex + urOffset;
 					// Out.prln(strAll.substring(urLocation,
 					// endpointMatcher.end()));
 					// .split("\n")[0].trim()
@@ -393,10 +394,16 @@ public class ExtractInformation {
 					urlString = matchStr.substring(urOffset).split("\n")[0].trim();
 
 					// writeUrl
-					sectionJson = writeUrl(processMe, urlString, sectionJson, urLocation);
+					sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
 				}
 			}
 
+			
+			// if it's the verb doesn't exist
+			if (Settings.EXISTVERB.equals("no")) {
+				sectionJson.put("action", new JSONObject().put("GET", uLocation));
+			} 
+			
 			// Write into openAPI
 			// After matching table, we write url/action into openAPI
 			infoJson.add(sectionJson);
