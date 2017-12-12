@@ -1,0 +1,27 @@
+{
+  "basePath": "/1.0.2",
+  "paths": {
+    "/symbols": {
+      "GET": {}
+    },
+    "/market_status": {
+      "GET": {}
+    },
+    "/quota": {
+      "GET": {}
+    },
+    "/quotes": {
+      "GET": {}
+    },
+    "/convert": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "forex.1forge.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

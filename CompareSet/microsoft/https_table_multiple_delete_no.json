@@ -1,57 +1,37 @@
 {
-  "basePath": "/bing/v5.0/search",
   "paths": {
-    "/": {
+    "/REST/v1/dataflows/geocode/e14b1d9bd65c4b9d99d267bbb8102ccf": {
+      "GET": {}
+    },
+    "/REST/v1/dataflows/geocode/e14b1d9bd65c4b9d99d267bbb8102ccf/output/failed": {
+      "GET": {}
+    },
+    "/REST/v1/dataflows/Geocode/5bf10c37df944083b1879fbb0556e67e/output/succeeded": {
+      "GET": {}
+    },
+    "//dev.virtualearth.net/REST/version/restApi/resourcePath": {
       "GET": {
         "parameters": [
+          {},
           {
             "in": "query",
-            "name": "200",
-            "description": "The call succeeded.",
+            "name": "\nAll",
+            "description": "parameters in the Bing Maps REST Services are not case-sensitive.\n",
             "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "400",
-            "description": "One of the query parameters is missing or not valid.",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "401",
-            "description": "The subscription key is missing or is not valid.",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "403",
-            "description": "The user is authenticated (for example, used a valid subscription key) but they don’t have permission to the requested resource.\n\nIf the caller exceeded their queries per month quota, Bing may also return this status.",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "410",
-            "description": "The request used HTTP instead of the HTTPS protocol. HTTPS is the only supported protocol.",
-            "type": "integer",
-            "required": "required"
-          },
-          {
-            "in": "query",
-            "name": "429",
-            "description": "The caller exceeded their queries per second quota.",
-            "type": "integer",
-            "required": "required"
+            "required": true
           }
         ]
       }
+    },
+    "/": {
+      "GET": {}
+    },
+    "/REST/v1/dataflows/geocode/e14b1d9bd65c4b9d99d267bbb8102ccf/output/succeeded": {
+      "GET": {}
     }
   },
   "produces": "application/json",
-  "host": "api.cognitive.microsoft.com",
+  "host": "spatial.virtualearth.net",
   "schemes": [
     "https"
   ],

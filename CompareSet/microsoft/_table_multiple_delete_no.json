@@ -1,10 +1,10 @@
 {
-  "basePath": "/bing/v5.0/search",
+  "basePath": "/2001/XMLSchema instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"http://schemas.microsoft.com/search/local/ws/rest/v1\"> <Copyright>Copyright Â© 2010 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.</Copyright> <BrandLogoUri>http://dev.virtualearth.net/Branding/logo_powered_by.png</BrandLogoUri> <StatusCode>200</StatusCode> <StatusDescription>OK</StatusDescription> <AuthenticationResultCode>ValidCredentials</AuthenticationResultCode> <TraceId>648b2fb028574e159a999015b3a83b87</TraceId> <ResourceSets> <ResourceSet> <EstimatedTotal>1</EstimatedTotal> <Resources> <ImageryMetadata> <ImageUrl>http://ecn.{subdomain}.tiles.virtualearth.net/tiles/r{quadkey}.jpeg",
   "paths": {},
   "produces": "application/json",
-  "host": "api.cognitive.microsoft.com",
+  "host": "www.w3.org",
   "schemes": [
-    "https"
+    "http"
   ],
   "swagger": "2.0",
   "info": "This is the information of the API"

@@ -149,11 +149,21 @@ public class ProcessParameter {
 						String liStr = gate.Utils.stringFor(doc, liElement);
 						// construct json
 						String[] pArray = liStr.split("\n");
-						JSONObject keyObject = new JSONObject();
-
-						String key = pArray[0];
-						String value = pArray[1];
+						if (pArray.length == 1) {
+							pArray = liStr.split(" ");
+						}
 						
+						JSONObject keyObject = new JSONObject();
+						
+						String key, value;
+						if (pArray.length == 1) {
+							key = pArray[0];
+							value = null;
+						} else {
+							key = pArray[0];
+							value = pArray[1];
+						}
+							
 						//validate the key
 						if (!isValidParaKey(key)) {
 							continue;
@@ -466,7 +476,12 @@ public class ProcessParameter {
 		
 		try {
 			//define the max distance = 13
-			int distance = 13;
+			int distance ;
+			if (!Settings.PARAMIDDLE.equals("0"))
+				distance = 13;
+			else
+				distance = Integer.parseInt(Settings.PARAMIDDLE);
+			
 			int start = (templateLocation - Settings.PARAKEY.length() - distance) > 0 ? (templateLocation - Settings.PARAKEY.length() - distance): 0;
 			int end = (templateLocation + Settings.PARAKEY.length() + distance)< strAll.length() ?(templateLocation + Settings.PARAKEY.length() + distance): strAll.length();
 			appendTemplateText = strAll.substring(start,end);

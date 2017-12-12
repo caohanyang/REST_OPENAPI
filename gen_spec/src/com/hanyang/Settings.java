@@ -14,13 +14,13 @@ public class Settings {
 	 * VERB AND URL 
 	 */
 	// in the case we don't have example http request, we need to globally search for the base url.
-	public static boolean SEARCHBASE = false;
+	public static boolean SEARCHBASE = true;
 	// in case it may contain two different prefix, two different api.
     //	api.twitter.com/1.1
 	public static String URLBASE = "";
 		
 	// The things between Http verbs and Url:
-	// "\\s", "(.*?)" \\s.{0,60}
+	// "\\s" \\s.{0,60} "(.*?)"
 	public static String STUFFING = "\\s";	
 	// for some url contains URL parameters
 	// It will present URL in different tags, which causes whitespace
@@ -37,11 +37,11 @@ public class Settings {
 	// exist the verb or not
 	// no yes
 	public static String EXISTVERB = "no";
-	public static String URLKEY= "url:";
+	public static String URLKEY= "";
+	public static String VERBKEY= "";
 	
-	public static String VERBKEY= "methods:";
-	// "https", "http", "/", "null"
-	public static String MODE ="http";
+	// "https://", "http://", "/", "null"
+	public static String MODE ="/";
 	
 	// "del", "delete"
 	public static String ABBREV_DELETE = "delete";
@@ -52,28 +52,28 @@ public class Settings {
 	 */
 	// The key word before the request
 	// "EXAMPLE REQUEST"  "" "no"
-	public static String REQKEY = "EXAMPLE REQUEST";
+	public static String REQKEY = "Example";
 	// \\s \\s.{0,60} "" (.*?)
 	public static String REQMIDDLE = "\\s.{0,60}";
 	// The request exists or not 
 	// http \\{(.*?)\\} no curl  ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
-	public static String REQEXAMPLE = "http";
+	public static String REQEXAMPLE = "curl";
 	
 	// default true
 	public static Boolean URL1REQ2 = true;
 	
 	// pre code b a p
-	public static String REQTEMPLATE = "p";
+	public static String REQTEMPLATE = "pre";
 	
 	/*
 	 * RESPONSE 
 	 */
 	
 	// (example)|(response)  ""  "no"
-	public static String RESKEY = "(example)|(response)";
-	// \\s \\s.{0,60} ""
+	public static String RESKEY = "Example Response";
+	// \\s \\s.{0,10} \\s.{0,100} ""
 	// 1.
-	public static String RESMIDDLE = "\\s";
+	public static String RESMIDDLE = "\\s.{0,30}";
 	// default true
 	public static Boolean URL1RES2 = true;
 	//  pre code span
@@ -81,7 +81,7 @@ public class Settings {
 	
 	// The response exists or not 
 	// ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
-	public static String RESEXAMPLE = "((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}";
+	public static String RESEXAMPLE = "(\\<)(.*?)(\\>)";
 	
 	
 	/*
@@ -93,10 +93,11 @@ public class Settings {
 	// sometimes not common "Query Parameters" "url Parameters"
 	// choose the last common one
 	// (parameter)|(argument)|(field)  or choose the first element Name
-	public static String PARAKEY = "(parameter)|(argument)|(field)|(parameters)|(arguments)";
+	public static String PARAKEY = "(parameter)|(argument)|(field)|(parameters)|(arguments)|(fields)";
 	// first URL then parameters
-	public static boolean URL1PARA2 = false;	
+	public static boolean URL1PARA2 = true;	
 	
+	public static String PARAMIDDLE= "13";
 	// parameter types
 	// Required. The location of the parameter. 
 	// Possible values are "query", "header", "path", "formData" or "body".     
@@ -126,6 +127,11 @@ public class Settings {
             properties.setProperty("URL1RES2", Boolean.toString(URL1RES2));
             properties.setProperty("ABBREV_DELETE", ABBREV_DELETE);
             
+            properties.setProperty("EXISTVERB", EXISTVERB);
+            properties.setProperty("URLKEY", URLKEY);
+            properties.setProperty("VERBKEY", VERBKEY);
+            
+            
             properties.setProperty("REQKEY", REQKEY);
             properties.setProperty("REQMIDDLE", REQMIDDLE);
             properties.setProperty("REQEXAMPLE", REQEXAMPLE);
@@ -138,6 +144,7 @@ public class Settings {
             
             properties.setProperty("EXISTPARA", Boolean.toString(EXISTPARA));
             properties.setProperty("PARAKEY", PARAKEY);
+            properties.setProperty("PARAMIDDLE", PARAMIDDLE);
             properties.setProperty("PARAIN", PARAIN);
             properties.setProperty("TEMPLATE", TEMPLATE);
             properties.setProperty("NUMBER", NUMBER);
@@ -173,6 +180,12 @@ public class Settings {
             setURL1RES2(Boolean.valueOf(properties.getProperty("URL1RES2")));
             setABBREV_DELETE(properties.getProperty("ABBREV_DELETE"));
             
+            
+            setEXISTVERB(properties.getProperty("EXISTVERB"));
+            setURLKEY(properties.getProperty("URLKEY"));
+            setVERBKEY(properties.getProperty("VERBKEY"));
+            
+            
             setREQKEY(properties.getProperty("REQKEY"));
             setREQMIDDLE(properties.getProperty("REQMIDDLE"));
             setREQEXAMPLE(properties.getProperty("REQEXAMPLE"));
@@ -184,11 +197,11 @@ public class Settings {
             setRESMIDDLE(properties.getProperty("RESMIDDLE"));
             
             setEXISTPARA(Boolean.valueOf(properties.getProperty("EXISTPARA")));
-            setPARAKEY(properties.getProperty("PARAKEY"));
+            setPARAMIDDLE(properties.getProperty("PARAMIDDLE"));
             setPARAIN(properties.getProperty("PARAIN"));
             setTEMPLATE(properties.getProperty("TEMPLATE"));
             setNUMBER(properties.getProperty("NUMBER"));
-            Out.prln(URL1PARA2);
+ 
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -394,4 +407,36 @@ public class Settings {
 		URLBASE = uRLBASE;
 	}
 
+	public static String getEXISTVERB() {
+		return EXISTVERB;
+	}
+
+	public static void setEXISTVERB(String eXISTVERB) {
+		EXISTVERB = eXISTVERB;
+	}
+
+	public static String getURLKEY() {
+		return URLKEY;
+	}
+
+	public static void setURLKEY(String uRLKEY) {
+		URLKEY = uRLKEY;
+	}
+
+	public static String getVERBKEY() {
+		return VERBKEY;
+	}
+
+	public static void setVERBKEY(String vERBKEY) {
+		VERBKEY = vERBKEY;
+	}
+
+	public static String getPARAMIDDLE() {
+		return PARAMIDDLE;
+	}
+
+	public static void setPARAMIDDLE(String pARAMIDDLE) {
+		PARAMIDDLE = pARAMIDDLE;
+	}
+	
 }

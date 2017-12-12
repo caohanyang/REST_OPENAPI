@@ -1,0 +1,20 @@
+{
+  "paths": {
+    "/forms": {
+      "GET": {}
+    },
+    "/me": {
+      "POST": {}
+    },
+    "/serviceV3": {
+      "POST": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "www.afterbanks.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

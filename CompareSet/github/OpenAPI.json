@@ -1,0 +1,437 @@
+{
+  "paths": {
+    "/v1/posts/suggest": {
+      "POST": {
+        "request": "$ curl https://user:passwd@api.delicious.com/v1/posts/suggest?url=http://yahoo.com",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&url={URL}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/tags/rename": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&old={TAG}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&new={TAG}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1": {
+      "GET": {}
+    },
+    "/v1/posts/delete": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&url={URL}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/oauth/token": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "client_id={app_key}",
+            "description": "(required).",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "client_secret={app_secret}",
+            "description": "(required).",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "grant_type={code|credentials}",
+            "description": "(required).",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "redirect_uri={www.example.com}",
+            "description": "(required).",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "code={request_token}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "username",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "password",
+            "description": "(opitional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/posts/add": {
+      "POST": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": "< result code = \" done \" />"
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&url={URL}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&description={...}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&extended={...}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&tags={...}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&dt={CCYY-MM-DDThh:mm:ssZ}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&replace=no",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&shared=no",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/posts/all": {
+      "POST": {
+        "request": "$ curl https://user:passwd@api.delicious.com/v1/posts/all ? hashes",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&tag_separator=comma",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&tag={TAG}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&start={xx}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&results={xx}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&fromdt={CCYY-MM-DDThh:mm:ssZ}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&todt={CCYY-MM-DDThh:mm:ssZ}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&meta=yes",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/>": {
+      "GET": {}
+    },
+    "/v1/posts/update": {
+      "POST": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": "< update code = \" 200 \" inboxnew = \" \" message = \" success \" time = \" 2015-01-15T17:35:48Z \" />"
+          }
+        }
+      }
+    },
+    "/v1/posts/dates": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&tag={TAG}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/tags/bundles/dele": {
+      "DELETE": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": "< result >done</ result >"
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&bundle={NAME}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/tags/delete": {
+      "DELETE": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": "< result >done</ result >"
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&tag={TAG}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/auth/authorize": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "client_id={app_key}",
+            "description": "(required).",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "redirect_uri={www.example.com}",
+            "description": "(required).",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/posts/get": {
+      "GET": {
+        "request": "$ curl https://user:passwd@api.delicious.com/v1/posts/get ? tag=webdev & meta=yes",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&tag={TAG}+{TAG}+...+{TAG}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&dt={CCYY-MM-DDThh:mm:ssZ}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&url={URL}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&hashes={MD5}+{MD5}+...+{MD5}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&meta=yes",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&tag_separator=comma",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/posts/recent": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&tag={TAG}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&count={1..100}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/tags/bundles/all": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": "< bundles > < bundle name = \" music \" tags = \" ipod mp3 music \" /> </ bundles >"
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&bundle={NAME}",
+            "description": "(optional)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/tags/bundles/set": {
+      "POST": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": "< result >ok</ result >"
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "&bundle={NAME}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "&tags={TAG}+{TAG}+...+{TAG}",
+            "description": "(required)",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/v1/tags/get": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": "< tags > < tag count = \" 1 \" tag = \" activedesktop \" /> < tag count = \" 1 \" tag = \" business \" /> < tag count = \" 3 \" tag = \" radio \" /> < tag count = \" 5 \" tag = \" xml \" /> < tag count = \" 1 \" tag = \" xp \" /> < tag count = \" 1 \" tag = \" xpi \" /> </ tags >"
+          }
+        }
+      }
+    }
+  },
+  "produces": "application/json",
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

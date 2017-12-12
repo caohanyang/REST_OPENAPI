@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Exchange Rate API, Currency Conversion API and Realtime Forex Quote API. Serving realtime tick data for over 500 forex currency pairs and commodities." name="description"/>
+  <title>
+   Forex Quote API Documentation - 1Forge
+  </title>
+  <link href="https://ja.1forge.com" hreflang="ja" rel="alternate"/>
+  <link href="https://zh.1forge.com" hreflang="zh" rel="alternate"/>
+  <link href="https://de.1forge.com" hreflang="de" rel="alternate"/>
+  <link href="https://es.1forge.com" hreflang="es" rel="alternate"/>
+  <link href="https://ko.1forge.com" hreflang="ko" rel="alternate"/>
+  <link href="https://1forge.com" hreflang="en" rel="alternate"/>
+  <link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+  <link href="/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
+  <link href="/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+  <link href="/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+  <link href="/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+  <link href="/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+  <link href="/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+  <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+  <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="#ffffff" name="msapplication-TileColor"/>
+  <meta content="/ms-icon-144x144.png" name="msapplication-TileImage"/>
+  <meta content="#ffffff" name="theme-color"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" rel=" stylesheet "/>
+  <link href="https://1forge.com/css/style.css?v=2" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <script src="https://1forge.com/js/app.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600" rel="stylesheet"/>
+  <script type="application/ld+json">
+   {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "url": "https://1forge.com",
+            "logo": "http://1forge.com/logo.png",
+            "contactPoint": [{
+                "@type": "ContactPoint",
+                "telephone": "+1-347-974-2995",
+                "contactType": "customer service"
+              }]
+        }
+  </script>
+  <script type="application/ld+json">
+   {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "1Forge",
+            "alternateName": "Realtime Forex Tick Data and Currency Conversion API",
+            "url": "https://1forge.com"
+        }
+  </script>
+  <script type="application/ld+json">
+   {
+              "@context": "http://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://1forge.com/forex-data-api",
+                  "name": "Forex Data API"
+                }
+              },{
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://1forge.com/forex-data-api/api-documentation",
+                  "name": "Documentation"
+                }
+              }]
+            }
+  </script>
+ </head>
+ <body>
+  <div id="topbar">
+   <div class="row">
+    <a href="https://1forge.com" title="1forge.com">
+     <img alt="1Forge Logo" id="logo" src="https://1forge.com/logo5.png"/>
+    </a>
+    <div class="float-right">
+     <span class="show-for-large">
+      <span class="top-bar-text">
+       Market Status:
+       <span style="font-weight: 400;">
+        Open
+       </span>
+      </span>
+      <span class="green server-status-icon">
+      </span>
+      <span class="top-bar-text">
+       Server Load:
+       <span style="font-weight: 400;">
+        10/100
+       </span>
+      </span>
+      <span class="green server-status-icon">
+      </span>
+      <span class="top-bar-text">
+       Response Time:
+       <span style="font-weight: 400;">
+        11.52 ms
+       </span>
+      </span>
+      <span class="green server-status-icon">
+      </span>
+     </span>
+     <a href="https://1forge.com/login">
+      <button class="button white">
+       Client Area
+      </button>
+     </a>
+    </div>
+   </div>
+  </div>
+  <div style="background:#1a1d21;color:#fff;border-top:solid 1px #333">
+   <div class="row" style="padding:0">
+    <div class="large-12 columns">
+     <span class=" sub-navigation-item">
+      <a href="https://1forge.com/forex-data-api">
+       <strong>
+        Forex Quote API
+       </strong>
+      </a>
+     </span>
+     <span class=" sub-navigation-item">
+      <a href="https://1forge.com/forex-data-api/pricing">
+       Packages &amp; Pricing
+      </a>
+     </span>
+     <span class="selected sub-navigation-item">
+      <a href="https://1forge.com/forex-data-api/api-documentation">
+       API Documentation
+      </a>
+     </span>
+     <span class=" sub-navigation-item">
+      <a href="https://1forge.com/forex-data-api/libraries">
+       Libraries
+      </a>
+     </span>
+     <span class=" sub-navigation-item">
+      <a href="https://1forge.com/forex-data-api/faq">
+       FAQ
+      </a>
+     </span>
+     <span class="sub-navigation-item">
+      <a href="https://1forge.com/account">
+       Customer Support
+      </a>
+     </span>
+    </div>
+   </div>
+  </div>
+  <div class="content">
+   <div class="row">
+    <div class="large-12 columns">
+     <div>
+      <h1 style="font-weight: 300;font-size:2.7rem">
+       Forex Quote API Documentation
+      </h1>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="large-12 columns">
+     <div class="table-of-contents" style="width:49%;">
+      <h3 style="color:#fff;">
+       API Calls
+      </h3>
+      <div>
+       <a href="#quotes">
+        <strong>
+         /quotes
+        </strong>
+        - Get quotes for specific currency pair(s)
+       </a>
+      </div>
+      <div>
+       <a href="#symbols">
+        <strong>
+         /symbols
+        </strong>
+        - Get a list of symbols
+       </a>
+      </div>
+      <div>
+       <a href="#convert">
+        <strong>
+         /convert
+        </strong>
+        - Convert from one currency to another
+       </a>
+      </div>
+      <div>
+       <a href="#market_status">
+        <strong>
+         /market_status
+        </strong>
+        - Check if the market is open
+       </a>
+      </div>
+      <div>
+       <a href="#quota">
+        <strong>
+         /quota
+        </strong>
+        - Check your current usage and remaining quota
+       </a>
+      </div>
+     </div>
+     <div class="table-of-contents" style="width:49%;float:right;vertical-align: top;">
+      <h3 style="color:#fff;">
+       Formatting
+      </h3>
+      <span style="color:#fff">
+       By default, all API calls are returned in JSON. To change this, append ‘&amp;format=FORMAT’ where format is either: csv, xml or json.
+      </span>
+     </div>
+     <div class="api-call" id="quotes">
+      <div class="title">
+       <strong>
+        /quotes
+       </strong>
+       - Get quotes for specific currency pair(s):
+      </div>
+      <div class="url">
+       <span class="request type">
+        Request
+       </span>
+       <span class="green request-method">
+        GET
+       </span>
+       <a href="https://forex.1forge.com/1.0.2/quotes?pairs=EURUSD,GBPJPY,AUDUSD&amp;api_key=YOUR_API_KEY" target="_BLANK" title="Get quotes for specific currency pair(s)">
+        https://forex.1forge.com/1.0.2/quotes?pairs=
+        <strong>
+         EURUSD,GBPJPY,AUDUSD
+        </strong>
+        &amp;api_key=
+        <strong>
+         YOUR_API_KEY
+        </strong>
+       </a>
+      </div>
+      <div class="url">
+       <span class="response type">
+        Response
+       </span>
+       <span class="pre" id="some_quotes_response">
+       </span>
+      </div>
+     </div>
+     <div class="api-call" id="symbols">
+      <div class="title">
+       <strong>
+        /symbols
+       </strong>
+       - Get a list of symbols:
+      </div>
+      <div class="url">
+       <span class="request type">
+        Request
+       </span>
+       <span class="green request-method">
+        GET
+       </span>
+       <a href="https://forex.1forge.com/1.0.2/symbols?api_key=YOUR_API_KEY" target="_BLANK" title="Get a list of symbols for which we provide real-time quotes">
+        https://forex.1forge.com/1.0.2/symbols?api_key=
+        <strong>
+         YOUR_API_KEY
+        </strong>
+       </a>
+      </div>
+      <div class="url">
+       <span class="response type">
+        Response
+       </span>
+       <span class="pre" id="symbols_response">
+       </span>
+      </div>
+     </div>
+     <div class="api-call" id="convert">
+      <div class="title">
+       <strong>
+        /convert
+       </strong>
+       - Convert from one currency to another:
+      </div>
+      <div class="url">
+       <span class="request type">
+        Request
+       </span>
+       <span class="green request-method">
+        GET
+       </span>
+       <a href="https://forex.1forge.com/1.0.2/convert?from=USD&amp;to=EUR&amp;quantity=100&amp;api_key=YOUR_API_KEY" target="_BLANK" title="Get a list of symbols for which we provide real-time quotes">
+        https://forex.1forge.com/1.0.2/convert?from=
+        <strong>
+         USD
+        </strong>
+        &amp;to=
+        <strong>
+         EUR
+        </strong>
+        &amp;quantity=
+        <strong>
+         100
+        </strong>
+        &amp;api_key=
+        <strong>
+         YOUR_API_KEY
+        </strong>
+       </a>
+      </div>
+      <div class="url">
+       <span class="response type">
+        Response
+       </span>
+       <span class="pre" id="conversion_response">
+       </span>
+      </div>
+     </div>
+     <div class="api-call" id="market_status">
+      <div class="title">
+       <strong>
+        /market_status
+       </strong>
+       - Check if the market is open:
+      </div>
+      <div class="url">
+       <span class="request type">
+        Request
+       </span>
+       <span class="green request-method">
+        GET
+       </span>
+       <a href="https://forex.1forge.com/1.0.2/market_status?api_key=YOUR_API_KEY" target="_BLANK" title="Check if the market is open">
+        https://forex.1forge.com/1.0.2/market_status?api_key=
+        <strong>
+         YOUR_API_KEY
+        </strong>
+       </a>
+      </div>
+      <div class="url">
+       <span class="response type">
+        Response
+       </span>
+       <span class="pre" id="market_status_response">
+       </span>
+      </div>
+     </div>
+     <div class="api-call" id="quota">
+      <div class="title">
+       <strong>
+        /quota
+       </strong>
+       - Check your current usage and remaining quota:
+      </div>
+      <div class="url">
+       <span class="request type">
+        Request
+       </span>
+       <span class="green request-method">
+        GET
+       </span>
+       <a href="https://forex.1forge.com/1.0.2/quota?api_key=YOUR_API_KEY" target="_BLANK" title="Check if the market is open">
+        https://forex.1forge.com/1.0.2/quota?api_key=
+        <strong>
+         YOUR_API_KEY
+        </strong>
+       </a>
+      </div>
+      <div class="url">
+       <span class="response type">
+        Response
+       </span>
+       <span class="pre" id="quota_response">
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <br/>
+   <br/>
+  </div>
+  <div style="background:#e6e6e6; border-top:1px solid #ccc;">
+   <div class="row">
+    <div class="large-12 columns">
+     <div style="font-size:0.95rem;float:right;font-weight:400;text-align:right">
+      <a href="mailto:contact@1forge.com" style="color:#333">
+       contact@1forge.com
+      </a>
+      <br/>
+      (347) 974-2995
+     </div>
+     <a class="float-left" href="https://www.mcafeesecure.com/verify?host=1forge.com" target="_BLANK">
+      <img class="company-logo" src="https://1forge.com/images/logos/mcafee.png" style="background:#fff;padding:5px;border-radius:5px;border:1px solid #999;"/>
+     </a>
+     <img class="hide-for-small-only company-logo" src="https://1forge.com/images/logos/stripe.png"/>
+     <img class="hide-for-small-only company-logo" src="https://1forge.com/images/logos/comodo.png"/>
+    </div>
+   </div>
+  </div>
+  <div class="footer" style="background:#24292e;color:#fff;">
+   <div class="row">
+    <div class="large-3 columns">
+     <strong>
+      Forex Quote API
+     </strong>
+     <ul>
+      <li>
+       <a href="https://1forge.com/forex-data-api/pricing">
+        Packages &amp; Pricing
+       </a>
+      </li>
+      <li>
+       <a href="https://1forge.com/forex-data-api/api-documentation">
+        API Documentation
+       </a>
+      </li>
+      <li>
+       <a href="https://1forge.com/forex-data-api/libraries">
+        Libraries
+       </a>
+      </li>
+      <li>
+       <a href="https://1forge.com/account">
+        Customer Support
+       </a>
+      </li>
+      <li>
+       <a href="https://1forge.com/forex-data-api/currency-pair-list">
+        Currency Pair List
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="large-3 columns end">
+     <strong>
+      1Forge
+     </strong>
+     <ul>
+      <li>
+       <a href="https://1forge.com/login">
+        Login
+       </a>
+      </li>
+      <li>
+       <a href="https://1forge.com/register">
+        Register
+       </a>
+      </li>
+      <li>
+       <a href="mailto:contact@1forge.com">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="large-3 end columns">
+     <strong>
+      Language
+     </strong>
+     <ul>
+      <li>
+       <a href="https://1forge.com/forex-data-api">
+        English
+       </a>
+      </li>
+      <li>
+       <a href="https://ko.1forge.com/forex-data-api">
+        한국어
+       </a>
+      </li>
+      <li>
+       <a href="https://es.1forge.com/forex-data-api">
+        Español
+       </a>
+      </li>
+      <li>
+       <a href="https://de.1forge.com/forex-data-api">
+        Deutsche
+       </a>
+      </li>
+      <li>
+       <a href="https://zh.1forge.com/forex-data-api">
+        中文
+       </a>
+      </li>
+      <li>
+       <a href="https://ja.1forge.com/forex-data-api">
+        日本語
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="large-3 end columns">
+     <strong>
+      Legal
+     </strong>
+     <ul>
+      <li>
+       <a href="https://1forge.com/privacy-policy">
+        Privacy Policy
+       </a>
+      </li>
+      <li>
+       <a href="https://1forge.com/forex-data-api/terms-of-use">
+        Terms of Use
+       </a>
+      </li>
+      <li>
+       <a href="https://1forge.com/forex-data-api/license-agreement">
+        License Agreement
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div style="background:#1A1D21;font-size:0.75rem;border-top:solid 1px #333">
+    <div class="row">
+     <div class="large-12 columns">
+      © 1Forge LLC. All rights reserved. Logos used are property of their respective owners.
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="https://1forge.com/js/google-analytics.js">
+  </script>
+  <script src="https://1forge.com/js/statcounter.js">
+  </script>
+  <script type="text/javascript">
+   window.__lc = window.__lc || {};
+        window.__lc.license = 8994655;
+        (function () {
+            var lc = document.createElement('script');
+            lc.type = 'text/javascript';
+            lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(lc, s);
+        })();
+  </script>
+ </body>
+</html>

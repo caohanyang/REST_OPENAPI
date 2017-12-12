@@ -5,15 +5,23 @@
   "main": "refine.js",
   "dependencies": {
     "async": "^2.5.0",
+    "chromedriver": "^2.33.2",
     "curlrequest": "^1.0.1",
     "fs": "0.0.1-security",
     "is-json": "^2.0.1",
+    "jsdom": "^11.5.1",
+    "nightmare": "^2.10.0",
     "path": "^0.12.7",
+    "phantom": "^4.0.11",
     "preq": "^0.5.2",
+    "prerender": "^5.2.0",
+    "selenium-standalone": "^6.12.0",
     "swagger-test": "^0.7.3",
     "yargs": "^10.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webdriverio": "^4.9.11"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

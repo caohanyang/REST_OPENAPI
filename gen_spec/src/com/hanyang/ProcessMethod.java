@@ -50,6 +50,9 @@ public class ProcessMethod {
 		url = cleanUrl(url);
 		url = cleanUrl(url);
 
+		if (url.length() == 0) {
+			return false;
+		}
 		if (url.contains(".jpg") | url.contains(".gif") | url.contains(".png") | url.contains(".txt")
 				| url.contains(".pdf")) {
 			return false;
@@ -228,15 +231,15 @@ public class ProcessMethod {
 	public String findAction(String urlString) {
 		if (urlString.contains("get")) {
 			return "GET";
-		} else if (urlString.contains("post") | urlString.contains("create") | urlString.contains("add")
-				| urlString.contains("edit") | urlString.contains("join") | urlString.contains("set")) {
-			return "POST";
 		} else if (urlString.contains("put")) {
 			return "PUT";
 		} else if (urlString.contains("patch")) {
 			return "PATCH";
-		} else if (urlString.contains("del") | urlString.contains("leave")) {
+		} else if (urlString.contains("del") | urlString.contains("delete") |urlString.contains("leave")) {
 			return "DELETE";
+		} else if (urlString.contains("post") | urlString.contains("create") | urlString.contains("add")
+				| urlString.contains("edit") | urlString.contains("join") | urlString.contains("set")) {
+			return "POST";
 		} else {
 			return "GET";
 		}

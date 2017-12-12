@@ -1,11 +1,6 @@
 {
   "basePath": "/gp/cart/aws-merge.html",
-  "paths": {
-    "//webservices.amazon.com/onca/xml": {
-      "GET": {},
-      "Get": {}
-    }
-  },
+  "paths": {},
   "produces": "application/json",
   "host": "www.amazon.com",
   "schemes": [

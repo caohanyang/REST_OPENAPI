@@ -26,6 +26,7 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 # https://go.developer.ebay.com/api-documentation   http://developer.ebay.com/devzone/rest
 # https://msdn.microsoft.com/en-us/library/ff701713.aspx  https://msdn.microsoft.com/en-us/library/ff
 # https://developer.box.com/reference
+# https://github.com/domainersuitedev/delicious-api https://github.com/domainersuitedev/delicious-api/blob/master/api
 
 # https://developers.google.com/maps/documentation/directions
 # https://developers.google.com/analytics/devguides/config/mgmt/v3/mgmtReference/
@@ -61,6 +62,11 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 # https://developer.vimeo.com/api/endpoints
 # https://developers.google.com/books/docs/v1/reference/
 # http://developer.active.com/docs/read/Home  http://developer.active.com/docs/read
+
+# 1.3 APIs.guru
+# https://1forge.com/forex-data-api/api-documentation
+# https://www.afterbanks.com/api/documentation/es/
+# https://rms.api.bbc.co.uk/docs/
 
 python ./rest_crawler/crawlAllPages.py $1 $2
 

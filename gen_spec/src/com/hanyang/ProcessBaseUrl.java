@@ -293,7 +293,7 @@ public class ProcessBaseUrl {
 			openAPI.put("schemes", scheArr);
 		} catch (MalformedURLException e) {
 			// the URL is not in a valid form
-			return openAPI;
+//			return openAPI;
 		}
 
 		// 2. short internal urls
@@ -307,6 +307,11 @@ public class ProcessBaseUrl {
 		for (int i = 0; i < pathObject.names().length(); i++) {
 
 			String keyUrl = (String) pathObject.names().get(i);
+			
+            if (keyUrl.length() == 0 ) {
+            	pathObject.remove(keyUrl);
+            }
+            
 			if (keyUrl.contains("?")) {
 				keyUrl = keyUrl.substring(0, keyUrl.indexOf("?")).trim();
 				if (keyUrl.endsWith("/")) {
@@ -346,7 +351,10 @@ public class ProcessBaseUrl {
 			Pair<String, JSONObject> replacedJson = Pair.of(retainStr, originValue);
 			// replacedJson.put(retainStr, originValue);
 
-			modiMap.put(originStr, replacedJson);
+			if (originStr.length()!=0){
+				modiMap.put(originStr, replacedJson);
+			}
+			
 		}
 
 		// remove and add new object
@@ -387,6 +395,13 @@ public class ProcessBaseUrl {
 		}
 		baseUrlList = searchUrlMode1(listFiles, API_NAME, baseUrlList, processMe,
 				"(?si)REST API along with.{1,100}((http)|(https)){1}://");
+		if (baseUrlList.size() != 0) {
+			// if matched, return directly
+			return baseUrlList.get(0);
+		}
+
+		baseUrlList = searchUrlMode1(listFiles, API_NAME, baseUrlList, processMe,
+				"(?si)curl.{1,200}((http)|(https)){1}://");
 		if (baseUrlList.size() != 0) {
 			// if matched, return directly
 			return baseUrlList.get(0);
@@ -506,10 +521,13 @@ public class ProcessBaseUrl {
 				Matcher matcherRoot = rRest.matcher(strAll);
 				while (matcherRoot.find()) {
 
-					// Fix 2: suppose the URL length < 40
+					// Fix 2: suppose the URL length < 40  
 					String matchStrNull = strAll.substring(matcherRoot.start()).split("\n")[0].trim();
 					// final API endpoint must contain API_NAME
-					matchStrNull = matchStrNull.substring(matchStrNull.indexOf("http"));
+					if (matchStrNull.contains("http")) {
+						matchStrNull = matchStrNull.substring(matchStrNull.indexOf("http"));
+					}
+					
 					if (matchStrNull != null) {
 						Out.prln(matchStrNull);
 						baseUrlList.add(matchStrNull);
@@ -584,6 +602,10 @@ public class ProcessBaseUrl {
 					// return the
 					return baseUrl.substring(0, baseUrl.indexOf(part) - 1);
 				}
+				
+				if (part.matches("(?i)v\\d")) {
+					return baseUrl.substring(0, baseUrl.indexOf(part) + part.length());
+				} 
 			}
 		}
 

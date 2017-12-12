@@ -51,8 +51,11 @@ public class ExtractInformation {
 		// System.out.close();
 
 		if (args.length > 0) {
+			
 			API_FOLDER = args[0].split("//")[1].split("/")[0];
 			API_NAME = args[0].split("//")[1].split("\\.")[1];
+			
+			
 			// google have several APIs
 			if (API_NAME.contains("google")) {
 				API_FOLDER = args[0].split("//")[1].split("/")[1];
@@ -297,9 +300,16 @@ public class ExtractInformation {
 			String matchStr;
 			try {
 				if (Settings.REVERSE.equals("no")) {
-					// Fix 2: suppose the URL length < 100
+					
 					// no reverse: get + url
-					matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+					if (Settings.MODE.startsWith("http")) {
+						// Fix 2: suppose the URL length < 100
+						matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+					} else {
+						// partial URL length < 20
+						matchStr = strAll.substring(matcher.start(), matcher.end() + 20);
+					}
+					
 				} else {
 					// reverse mode: url + get
 					matchStr = strAll.substring(matcher.start(), matcher.end());
@@ -401,7 +411,7 @@ public class ExtractInformation {
 			
 			// if it's the verb doesn't exist
 			if (Settings.EXISTVERB.equals("no")) {
-				sectionJson.put("action", new JSONObject().put("GET", uLocation));
+				sectionJson.put("action", new JSONObject().put(processMe.findAction(urlString), uLocation));
 			} 
 			
 			// Write into openAPI
@@ -432,7 +442,11 @@ public class ExtractInformation {
 	public static void writeOpenAPI(JSONObject openAPI) throws IOException {
 
 		// Print pretty openAPI
-		String fileName = Settings.MODE + "_" + Settings.TEMPLATE + "_" + Settings.NUMBER + "_" + Settings.ABBREV_DELETE + "_" + Settings.REVERSE + ".json";
+		String prefix = null;
+		if (Settings.MODE.startsWith("http")) {
+			prefix = Settings.MODE.split(":")[0];
+		}
+		String fileName = prefix + "_" + Settings.TEMPLATE + "_" + Settings.NUMBER + "_" + Settings.ABBREV_DELETE + "_" + Settings.REVERSE + ".json";
 		writeFile(openAPI.toString(), fileName);
 	}
 

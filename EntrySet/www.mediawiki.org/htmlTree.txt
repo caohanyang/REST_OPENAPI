@@ -1,4 +1,0 @@
-
-   /en.wikipedia.org/api/rest_v1-/
---|
-   \www.mediawiki.org/wiki-/REST_API

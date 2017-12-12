@@ -1,0 +1,273 @@
+{
+  "basePath": "/v3",
+  "paths": {
+    "/transactions/{transaction_type}/search": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "latitude",
+            "description": "decimal Required when location isn't provided. Latitude of the location you want to deliver to.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "longitude",
+            "description": "decimal Required when location isn't provided. Longitude of the location you want to deliver to.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "location",
+            "description": "string Required when latitude and longitude aren't provided. Address of the location you want to deliver to.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/businesses/north-india-restaurant-san-francisco": {
+      "GET": {}
+    },
+    "/businesses/{id}/reviews": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "total": 3,
+              "reviews": [
+                {
+                  "rating": 5,
+                  "time_created": "2016-08-2900:41:13",
+                  "text": "Wentbackagaintothisplacesincethelasttimeivisitedthebayarea5monthsago,andnothinghaschanged.StillthesketchyMission,Stillthecashier...",
+                  "user": {
+                    "image_url": "https://s3-media3.fl.yelpcdn.com/photo/iwoAD12zkONZxJ94ChAaMg/o.jpg",
+                    "name": "EllaA."
+                  },
+                  "url": "https://www.yelp.com/biz/la-palma-mexicatessen-san-francisco?hrid=hp8hAJ-AnlpqxCCu7kyCWA&adjust_creative=0sidDfoTIHle5vvHEBvF0w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=0sidDfoTIHle5vvHEBvF0w"
+                },
+                {
+                  "rating": 4,
+                  "time_created": "2016-09-2808:55:29",
+                  "text": "The\"restaurant\"isinsideasmalldelisothereisnositdownarea.Justgrabandgo.\n\nInside,theysellindividuallypackagedingredientssothatyoucan...",
+                  "user": {
+                    "name": "YanniL."
+                  },
+                  "url": "https://www.yelp.com/biz/la-palma-mexicatessen-san-francisco?hrid=fj87uymFDJbq0Cy5hXTHIA&adjust_creative=0sidDfoTIHle5vvHEBvF0w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=0sidDfoTIHle5vvHEBvF0w"
+                },
+                {
+                  "rating": 4,
+                  "time_created": "2016-08-1007:56:44",
+                  "text": "DearMissionDistrict,\n\nImissyouandyourmanydeliciouslatenightfoodestablishmentsandvibrantatmosphere.Imissthewayyousoundandsmellona...",
+                  "user": {
+                    "name": "SuavecitoM."
+                  },
+                  "url": "https://www.yelp.com/biz/la-palma-mexicatessen-san-francisco?hrid=m_tnQox9jqWeIrU87sN-IQ&adjust_creative=0sidDfoTIHle5vvHEBvF0w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=0sidDfoTIHle5vvHEBvF0w"
+                }
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string Optional. Specify the interface locale; this determines the language of reviews to return. See the list of supported locales .",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/businesses/{id}": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "hours": [
+                {
+                  "is_open_now": false,
+                  "hours_type": "REGULAR",
+                  "open": [
+                    {
+                      "is_overnight": false,
+                      "start": "1730",
+                      "end": "2200",
+                      "day": 0
+                    },
+                    {
+                      "is_overnight": false,
+                      "start": "1730",
+                      "end": "2200",
+                      "day": 1
+                    },
+                    {
+                      "is_overnight": false,
+                      "start": "1730",
+                      "end": "2200",
+                      "day": 2
+                    },
+                    {
+                      "is_overnight": false,
+                      "start": "1730",
+                      "end": "2200",
+                      "day": 3
+                    },
+                    {
+                      "is_overnight": false,
+                      "start": "1730",
+                      "end": "2200",
+                      "day": 4
+                    },
+                    {
+                      "is_overnight": false,
+                      "start": "1730",
+                      "end": "2200",
+                      "day": 5
+                    },
+                    {
+                      "is_overnight": false,
+                      "start": "1730",
+                      "end": "2200",
+                      "day": 6
+                    }
+                  ]
+                }
+              ],
+              "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/--8oiPVp0AsjoWHqaY1rDQ/o.jpg",
+              "rating": 4.5,
+              "coordinates": {
+                "latitude": 37.80587,
+                "longitude": -122.42058
+              },
+              "review_count": 4521,
+              "transactions": [
+                "restaurant_reservation"
+              ],
+              "photos": [
+                "http://s3-media3.fl.yelpcdn.com/bphoto/--8oiPVp0AsjoWHqaY1rDQ/o.jpg",
+                "http://s3-media2.fl.yelpcdn.com/bphoto/ybXbObsm7QGw3SGPA1_WXA/o.jpg",
+                "http://s3-media3.fl.yelpcdn.com/bphoto/7rZ061Wm4tRZ-iwAhkRSFA/o.jpg"
+              ],
+              "url": "https://www.yelp.com/biz/gary-danko-san-francisco",
+              "is_claimed": false,
+              "phone": "+14152520800",
+              "price": "$$$$",
+              "name": "GaryDanko",
+              "location": {
+                "country": "US",
+                "cross_streets": "HydeSt&LarkinSt",
+                "address3": "",
+                "address2": "",
+                "city": "SanFrancisco",
+                "address1": "800NPointSt",
+                "display_address": [
+                  "800NPointSt",
+                  "SanFrancisco,CA94109"
+                ],
+                "state": "CA",
+                "zip_code": "94109"
+              },
+              "id": "gary-danko-san-francisco",
+              "categories": [
+                {
+                  "alias": "newamerican",
+                  "title": "American(New)"
+                }
+              ],
+              "is_closed": false
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string Optional. Specify the locale to return the business information in. See the list of supported locales .",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/autocomplete": {
+      "GET": {}
+    },
+    "/transactions/delivery/search": {
+      "GET": {}
+    },
+    "/businesses/north-india-restaurant-san-francisco/reviews": {
+      "GET": {}
+    },
+    "/businesses/search/phone": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "total": 1,
+              "businesses": [
+                {
+                  "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/--8oiPVp0AsjoWHqaY1rDQ/o.jpg",
+                  "rating": 4.5,
+                  "coordinates": {
+                    "latitude": 37.80587,
+                    "longitude": -122.42058
+                  },
+                  "review_count": 4525,
+                  "transactions": [
+                    "restaurant_reservation"
+                  ],
+                  "url": "https://www.yelp.com/biz/gary-danko-san-francisco",
+                  "phone": "+14157492060",
+                  "price": "$$$$",
+                  "name": "GaryDanko",
+                  "location": {
+                    "country": "US",
+                    "address3": "",
+                    "city": "SanFrancisco",
+                    "address2": "",
+                    "address1": "800NPointSt",
+                    "state": "CA",
+                    "zip_code": "94109"
+                  },
+                  "id": "gary-danko-san-francisco",
+                  "categories": [
+                    {
+                      "alias": "newamerican",
+                      "title": "American(New)"
+                    }
+                  ],
+                  "is_closed": false
+                }
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "phone",
+            "description": "string Required. Phone number of the business you want to search for. It must start with + and include the country code, like +14159083801.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/businesses/search": {
+      "GET": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "api.yelp.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

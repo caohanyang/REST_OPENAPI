@@ -1,0 +1,42 @@
+{
+  "basePath": "/maps/api/directions/json",
+  "paths": {
+    "/New_York\".": {
+      "DEL": {}
+    },
+    "//maps.googleapis.com/maps/api/directions/outputFormat": {
+      "PUT": {}
+    },
+    "//developers.google.com/maps/documentation/timezone/get-api-key": {
+      "GET": {}
+    },
+    "//Fortestingpurposes,allowuserinputfortheURL.//If": {
+      "PUT": {}
+    },
+    "//maps.googleapis.com/maps/api/directions/json": {
+      "GET": {},
+      "DEL": {},
+      "PUT": {}
+    },
+    "//compute": {
+      "GET": {}
+    },
+    "//maps.googleapis.com/maps/api/timezone/json": {
+      "DEL": {}
+    },
+    "//maps.googleapis.com/maps/api/service/output": {
+      "PUT": {}
+    },
+    "/or its affiliates.": {
+      "GET": {},
+      "DEL": {}
+    }
+  },
+  "produces": "application/json",
+  "host": "maps.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

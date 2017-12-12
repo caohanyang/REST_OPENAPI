@@ -72,7 +72,7 @@ public class ProcessResponse {
 				Out.prln("responseStart： " + responseMatcher.start());
 
 				String matchStr = null;
-				if (Settings.RESEXAMPLE.equals("((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}")) {
+				if (Settings.RESEXAMPLE.equals("((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}") | Settings.RESEXAMPLE.equals("(\\<)(.*?)(\\>)")) {
 
 					AnnotationSet annoPre = annoOrigin.get(Settings.RESTEMPLATE, new Long(responseMatcher.start()),
 							new Long(responseMatcher.end() + 10));
@@ -81,18 +81,23 @@ public class ProcessResponse {
 					while (codeIter.hasNext()) {
 						Annotation anno = (Annotation) codeIter.next();
 						String codeText = gate.Utils.stringFor(doc, anno);
-						if (codeText.startsWith("{") | codeText.startsWith("[")) {
-							// direct start from json
-							matchStr = codeText;
-						} else {
-							// not direct start from json
-							if (codeText.contains("[")) {
-								matchStr = codeText.substring(codeText.indexOf("["));
-							} else if (codeText.contains("{")) {
-								matchStr = codeText.substring(codeText.indexOf("{"));
-							}
+						if (Settings.RESEXAMPLE.equals("((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}")) {
+							if (codeText.startsWith("{") | codeText.startsWith("[")) {
+								// direct start from json
+								matchStr = codeText;
+							} else {
+								// not direct start from json
+								if (codeText.contains("[")) {
+									matchStr = codeText.substring(codeText.indexOf("["));
+								} else if (codeText.contains("{")) {
+									matchStr = codeText.substring(codeText.indexOf("{"));
+								}
 
+							}
+						} else if (Settings.RESEXAMPLE.equals("(\\<)(.*?)(\\>)")) {
+							matchStr = codeText;
 						}
+						
 
 					}
 
@@ -145,7 +150,9 @@ public class ProcessResponse {
 			try {
 				// need to fix
 				// remove all the whitespace
-				codeText = codeText.replaceAll(" ", "");
+				if (!codeText.startsWith("<")) {					
+					codeText = codeText.replaceAll(" ", "");
+				}
 				Out.prln(codeText);
 
 				Object codeObj = null;
@@ -153,6 +160,8 @@ public class ProcessResponse {
 					codeObj = new JSONObject(codeText);
 				} else if (codeText.startsWith("[")) {
 					codeObj = new JSONArray(codeText);
+				} else if (codeText.startsWith("<")) {
+					codeObj = codeText;
 				}
 
 				if (openAPI.getJSONObject("paths").has(url)) {
