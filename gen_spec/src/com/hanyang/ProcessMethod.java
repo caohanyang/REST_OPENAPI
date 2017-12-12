@@ -31,7 +31,7 @@ public class ProcessMethod {
 		JSONObject actionObject = new JSONObject();
 		actionObject.put(action.toUpperCase(), new JSONObject());
 
-		if (isRealUrl(url) | Settings.MODE.equals("/") | Settings.MODE.equals("null")) {
+		if (isRealUrl(url) | Settings.MODE.equals("/") | Settings.MODE.equals("null") | Settings.MODE.equals("key")) {
 			if (urlObject.isNull(url)) {
 				// if url object is null, add directly for the first time
 				urlObject.put(url, actionObject);

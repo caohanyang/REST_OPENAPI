@@ -1,6 +1,128 @@
 {
-  "basePath": "/srtm3",
-  "paths": {},
+  "paths": {
+    "/countryInfo": {
+      "GET": {}
+    },
+    "/countryCode": {
+      "GET": {
+        "request": "http://api.geonames.org/countryCode?lat=47.03&lng=10.2&username=demo"
+      }
+    },
+    "/neighbourhood": {
+      "GET": {
+        "request": "http://api.geonames.org/neighbourhood?lat=40.78343&lng=-73.96625&username=demo"
+      }
+    },
+    "/findNearByWeatherJSON": {
+      "GET": {
+        "request": "http://api.geonames.org/findNearByWeatherXML?lat=43&lng=-2&username=demo"
+      }
+    },
+    "/astergdem": {
+      "GET": {
+        "request": "http://api.geonames.org/astergdem?lat=50.01&lng=10.2&username=demo"
+      }
+    },
+    "/get": {
+      "GET": {}
+    },
+    "/ocean": {
+      "GET": {
+        "request": "http://api.geonames.org/ocean?lat=40.78343&lng=-43.96625&username=demo"
+      }
+    },
+    "/gtopo30": {
+      "GET": {
+        "request": "http://api.geonames.org/gtopo30?lat=47.01&lng=10.2&username=demo"
+      }
+    },
+    "/extendedFindNearby": {
+      "GET": {}
+    },
+    "/findNearbyWikipedia": {
+      "GET": {}
+    },
+    "/citiesJSON": {
+      "GET": {}
+    },
+    "/findNearby": {
+      "GET": {}
+    },
+    "/findNearbyPlaceName": {
+      "GET": {}
+    },
+    "/siblings": {
+      "GET": {}
+    },
+    "/wikipediaBoundingBox": {
+      "GET": {
+        "request": "http://api.geonames.org/wikipediaBoundingBox?north=44.1&south=-9.9&east=-22.4&west=55.2&username=demo"
+      }
+    },
+    "/timezone": {
+      "GET": {
+        "request": "http://api.geonames.org/timezone?lat=47.01&lng=10.2&username=demo"
+      }
+    },
+    "/countrySubdivision": {
+      "GET": {
+        "request": "http://api.geonames.org/countrySubdivision?lat=47.03&lng=10.2&username=demo"
+      }
+    },
+    "/hierarchy": {
+      "GET": {}
+    },
+    "/wikipediaSearch": {
+      "GET": {
+        "request": "http://api.geonames.org/wikipediaSearch?q=london&maxRows=10&username=demo"
+      }
+    },
+    "/postalCodeLookupJSON": {
+      "POST": {}
+    },
+    "/weatherJSON": {
+      "GET": {
+        "request": "http://api.geonames.org/weatherJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&username=demo"
+      }
+    },
+    "/earthquakesJSON": {
+      "GET": {
+        "request": "http://api.geonames.org/earthquakesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&username=demo"
+      }
+    },
+    "/postalCodeCountryInfo": {
+      "POST": {}
+    },
+    "/srtm3": {
+      "GET": {
+        "request": "http://api.geonames.org/srtm3?lat=50.01&lng=10.2&username=demo"
+      }
+    },
+    "/postalCodeSearch": {
+      "POST": {
+        "request": "http://api.geonames.org/postalCodeSearch?postalcode=9011&maxRows=10&username=demo"
+      }
+    },
+    "/contains": {
+      "GET": {}
+    },
+    "/srtm1": {
+      "GET": {
+        "request": "http://api.geonames.org/srtm1?lat=50.01&lng=10.2&username=demo"
+      }
+    },
+    "/neighbours": {
+      "GET": {}
+    },
+    "/findNearbyPostalCodes": {
+      "GET": {}
+    },
+    "/weatherIcaoJSON": {
+      "GET": {
+        "request": "http://api.geonames.org/weatherIcaoJSON?ICAO=LSZH&username=demo"
+      }
+    }
+  },
   "produces": "application/json",
   "host": "api.geonames.org",
   "schemes": [

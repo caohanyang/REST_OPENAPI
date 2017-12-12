@@ -1,9 +1,11 @@
-<!--?xml version="1.0" encoding="UTF-8"?-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:lift="http://liftweb.net" xmlns:og="http://opengraphprotocol.org/schema/">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
  <head>
-  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-  <meta content="foursquare" name="description"/>
+  <title>
+   Foursquare Developer
+  </title>
+  <meta content="en" http-equiv="Content-Language"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
   <meta content="Foursquare" name="application-name"/>
   <meta content="#0ca9c9" name="msapplication-TileColor"/>
   <meta content="https://playfoursquare.s3.amazonaws.com/misc/foursquare-144-logo.png" name="msapplication-TileImage"/>
@@ -13,253 +15,40 @@
   <meta content="name=Recent Check-ins; action-uri=/; icon-uri=/favicon.ico" name="msapplication-task"/>
   <meta content="name=Profile;action-uri=/user;icon-uri=/favicon.ico" name="msapplication-task"/>
   <meta content="name=History;action-uri=/user/history;icon-uri=/favicon.ico" name="msapplication-task"/>
-  <meta content="name=Badges;action-uri=/user/badges;icon-uri=/favicon.ico" name="msapplication-task"/>
-  <title>
-   foursquare for Developers
-  </title>
-  <link href="https://ss1.4sqi.net/favicon-4483581c480563ff3dc5902b1a21cf0c.ico" rel="icon" type="image/x-icon"/>
-  <link href="https://ss1.4sqi.net/favicon-4483581c480563ff3dc5902b1a21cf0c.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://ss0.4sqi.net/styles/master-devsite-7bd6a20f3739dcf39af043427188a9ef.css" rel="stylesheet" type="text/css"/>
-  <script id="jquery" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript">
+  <meta content="Foursquare,foursq,4sq,check-in,badges,explore,recommendation,local,review,tip,restaurant,bar,coffee,park,New York,San Francisco,Chicago,London,sushi,pizza,cocktails,vacation,food,search,cities" name="keywords"/>
+  <link href="https://ss0.4sqi.net/styles/standalone-pages/developers/page-home-599acbb716fcf0d14b9170d35669bb70.css" rel="stylesheet" type="text/css"/>
+  <link href="https://ss1.4sqi.net/styles/third_party/slick-08d76b9671ce77f97a10ad799efc512a.css" rel="stylesheet" type="text/css"/>
+  <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/img/metaIcons/touch-icon-72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+  <link href="/img/metaIcons/touch-icon-76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+  <link href="/img/metaIcons/touch-icon-120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+  <link href="/img/metaIcons/touch-icon-144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+  <link href="/img/metaIcons/touch-icon-152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="/img/metaIcons/touch-icon-167.png" rel="apple-touch-icon-precomposed" sizes="167x167"/>
+  <link href="/img/metaIcons/touch-icon-180.png" rel="apple-touch-icon-precomposed" sizes="180x180"/>
+  <link href="https://playfoursquare.s3.amazonaws.com/press/logo/foursquare-logo.svg" rel="logo" type="image/svg"/>
+  <link href="/opensearch.xml" rel="search" title="foursquare"/>
+  <link color="#f94877" href="/img/metaIcons/foursquare.svg" rel="mask-icon" sizes="any"/>
+  <script type="text/javascript">
+   window.fourSq = window.fourSq || {}; fourSq.queue = [];
   </script>
   <script type="text/javascript">
-   (function() {window.fourSq = window.fourSq || {}; window.fourSq.config = {}; window.fourSq.config.pagedata = {}; window.fourSq.config.pagedata.cachedResponses = {}; window.fourSq.config.pagedata.embedded = {}; window.fourSq.config.signup = {}; window.fourSq.config.debugLevel = function() {return fourSq.debug.Level.OFF;}; window.fourSq.config.api = {API_BASE: 'https://api.foursquare.com/', API_TOKEN: 'QEJ4AQPTMMNB413HGNZ5YDMJSHTOHZHMLZCAQCCLXIX41OMP', API_IFRAME: 'https://api.foursquare.com/xdreceiver.html', CLIENT_VERSION: '20170612', EXPLICIT_LANG: false, SIG_PARAM_NAME: '', SIG_VALUE: '', RECAPTCHA_SITE_KEY: '6Ld7JBcUAAAAABp57KQtu0eJ8LUD3ZWJgKOFBPsE',}; window.fourSq.config.user = {USER_PROFILE: undefined, USER_LAT: 44.8558960, USER_LNG: -0.5184021, USER_CC: 'FR', LIST_COUNT: 0, IS_ADS_ADMIN: false, CAN_IMPERSONATE: false, IS_CONTENT_MODERATOR: false, HAS_DATA_VIZ: false, SUPERUSERLEVEL: 0, LOCALE: 'en_US', CANBULKEDITPHOTOS: false, CANVOTEONPHOTOS: false, SHOW_RECAPTCHA: false,}; window.fourSq.config.fb = {APP_ID: 86734274142, SCOPE: 'user_location,user_birthday,email,publish_actions,user_friends', API_VERSION: 'v2.3'}; window.fourSq.config.map = {MAX_ZOOM_LEVEL: 19}; window.fourSq.config.poll = {NOTIFICATIONS: false}; window.fourSq.config.enableFacebookAutologin = true; window.fourSq.config.displayGetTheAppBar = false; window.fourSq.config.showPhotoVisibility = false; window.fourSq.config.useBranchLinks = true; window.fourSq.config.customMap = false; window.fourSq.config.log = {"timeOnPage":{"enabled":false,"pages":["venue-detail","user","local-query-index","local-query-detail","venue-detail2"]}}; window.fourSq.config.env = 'developer';document.domain = 'foursquare.com';})();
+   (function() {window.fourSq = window.fourSq || {}; window.fourSq.config = {}; window.fourSq.config.pagedata = {}; window.fourSq.config.pagedata.cachedResponses = {}; window.fourSq.config.pagedata.embedded = {}; window.fourSq.config.signup = {}; window.fourSq.config.debugLevel = function() {return fourSq.debug.Level.OFF;}; window.fourSq.config.api = {API_BASE: 'https://api.foursquare.com/', API_TOKEN: 'QEJ4AQPTMMNB413HGNZ5YDMJSHTOHZHMLZCAQCCLXIX41OMP', API_IFRAME: 'https://api.foursquare.com/xdreceiver.html', CLIENT_VERSION: '20171211', EXPLICIT_LANG: false, SIG_PARAM_NAME: 'fs-request-signature', SIG_VALUE: '0ef7e8e436dc7409c8c50a2d12ef0cdefae521ec:1513087241387', RECAPTCHA_SITE_KEY: '6Ld7JBcUAAAAABp57KQtu0eJ8LUD3ZWJgKOFBPsE',}; window.fourSq.config.user = {USER_PROFILE: undefined, USER_LAT: 44.8047943, USER_LNG: -0.5953979, USER_CC: 'FR', LIST_COUNT: 0, IS_ADS_ADMIN: false, CAN_IMPERSONATE: false, IS_CONTENT_MODERATOR: false, HAS_DATA_VIZ: false, SUPERUSERLEVEL: 0, LOCALE: 'en_US', CANBULKEDITPHOTOS: false, CANVOTEONPHOTOS: false, SHOW_RECAPTCHA: false,}; window.fourSq.config.fb = {APP_ID: 86734274142, SCOPE: 'user_location,user_birthday,email,publish_actions,user_friends', API_VERSION: 'v2.3'}; window.fourSq.config.map = {MAX_ZOOM_LEVEL: 21}; window.fourSq.config.poll = {NOTIFICATIONS: false}; window.fourSq.config.enableFacebookAutologin = true; window.fourSq.config.displayGetTheAppBar = false; window.fourSq.config.showPhotoVisibility = false; window.fourSq.config.useBranchLinks = true; window.fourSq.config.customMap = true; window.fourSq.config.log = {"timeOnPage":{"enabled":false,"pages":["venue-detail","user","local-query-index","local-query-detail","venue-detail2"]}}; window.fourSq.config.env = 'haproxy-drag';document.domain = 'foursquare.com';})();
   </script>
-  <script src="https://ss1.4sqi.net/scripts/build/en/leaflet/root-769b42a8d1a484c702db4f44bfd715e0.js" type="text/javascript">
+  <script src="https://ss1.4sqi.net/scripts/third_party/jquery-1.7.2.min-b8d64d0bc142b3f670cc0611b0aebcae.js" type="text/javascript">
+  </script>
+  <script src="https://use.fontawesome.com/e95baca2fa.js" type="text/javascript">
   </script>
   <script src="https://ss1.4sqi.net/scripts/build/en/chrome/root-377269c47d053b2e83f047009ce9664b.js" type="text/javascript">
   </script>
-  <script src="https://ss1.4sqi.net/scripts/build/en/foursquare/root-bbd2a580ba042186468dc32c89796e13.js" type="text/javascript">
+  <script src="https://ss0.4sqi.net/scripts/build/en/developers/root-e880712e9a47acf13a11808483540b15.js" type="text/javascript">
   </script>
-  <script src="https://ss0.4sqi.net/scripts/build/en/foursquare/map-support-f8e8458bd8fd63240fa21331a6a242b4.js" type="text/javascript">
+  <script src="https://ss1.4sqi.net/scripts/build/en/developers/home-page-23d658a83c232459ea7e3989c104b6ce.js" type="text/javascript">
   </script>
   <script type="text/javascript">
-   $(function() {
-      $('a[rel*=facebox]').facebox();
-
-      $('#search input').placeholder();
-    })
+   fourSq.config.i18n = {}; fourSq.config.i18n.langs = [{"lang":"en","name":"English"},{"lang":"fr","name":"Français","host":"fr"},{"lang":"de","name":"Deutsch","host":"de"},{"lang":"id","name":"Bahasa Indonesia","host":"id"},{"lang":"it","name":"Italiano","host":"it"},{"lang":"ja","name":"日本語","host":"ja"},{"lang":"ko","name":"한국어","host":"ko"},{"lang":"pt","name":"Português","host":"pt"},{"lang":"ru","name":"Русский","host":"ru"},{"lang":"es","name":"Español","host":"es"},{"lang":"th","name":"ภาษาไทย","host":"th"},{"lang":"tr","name":"Türkçe","host":"tr"}];
   </script>
- </head>
- <body>
-  <div id="wrapper">
-   <div id="desktopHeader">
-    <div class="wrap">
-     <div class="leftSide">
-      <div class="logoArea">
-       <a href="/" id="logo">
-        Foursquare
-       </a>
-       <a class="logoDeveloperText" href="/">
-        For developers
-       </a>
-      </div>
-     </div>
-     <div class="rightSide">
-      <ul class="links">
-       <li>
-        <a href="https://foursquare.com/developers/apps">
-         My Apps
-        </a>
-       </li>
-       <li>
-        <a href="/overview/">
-         Overview
-        </a>
-       </li>
-       <li>
-        <a href="/docs/">
-         Endpoints
-        </a>
-       </li>
-       <li>
-        <a href="https://stackoverflow.com/questions/tagged/foursquare" target="_blank">
-         Forum
-        </a>
-       </li>
-       <li>
-        <a href="https://twitter.com/foursquareapi" target="_blank">
-         Twitter
-        </a>
-       </li>
-       <li>
-        <a href="https://medium.com/foursquare-developers" target="_blank">
-         Blog
-        </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-   </div>
-   <div class="wrap" id="container">
-    <div id="devSite">
-     <div class="frontPg">
-      <div>
-       <div class="banner" style="display: inline;float:left;margin: 60px 20px;padding: 0;width: 45%;">
-        <div class="bannerLeft" style="padding-right:30px;">
-         <h1>
-          Foursquare API
-         </h1>
-         <p>
-          The Foursquare API gives you access to our world-class places database and the ability
-              to interact with Foursquare users and merchants. Start using the only location API
-              you'll ever need.
-         </p>
-         <div class="bannerSection">
-          <a class="greenButton" href="/docs/">
-           Get Started
-          </a>
-          <a class="blueButton" href="https://foursquare.com/developers/register">
-           Create New App
-          </a>
-         </div>
-        </div>
-       </div>
-       <div class="banner" style="display: inline;float:left;margin: 60px 20px;padding: 0;width: 45%;">
-        <div class="bannerLeft" style="padding-right:30px;">
-         <h1>
-          Pilgrim SDK
-         </h1>
-         <p>
-          Add persistent location awareness to your app so that you can know more about who your
-              customers are and can engage them with context-aware content at the right place &amp;
-              right time. Available to select partners, learn more about the Pilgrim SDK today.
-         </p>
-         <div class="bannerSection">
-          <a class="greenButton" href="https://goo.gl/WBh5JY">
-           Learn More
-          </a>
-         </div>
-        </div>
-       </div>
-      </div>
-      <table style="margin:0px;">
-       <tbody>
-        <tr>
-         <td class="noBorder" id="start-callout">
-          <h3>
-           What Can You Do With Foursquare?
-          </h3>
-          <ul id="mini-start-grid">
-           <li>
-            <img class="start-grid-icon" src="https://ss1.4sqi.net/img/devsite/start_search-88bfd39181d3b547214e006ad73975e9.png"/>
-            <p class="start-grid-title">
-             <a href="/start/search">
-              Search for Places in an Area
-             </a>
-            </p>
-           </li>
-           <li>
-            <img class="start-grid-icon" src="https://ss0.4sqi.net/img/devsite/start_interact-91ffad52952c1a9656660d43cc46fcb3.png"/>
-            <p class="start-grid-title">
-             <a href="/start/interact">
-              Connect With Foursquare Users
-             </a>
-            </p>
-           </li>
-           <li>
-            <img class="start-grid-icon" src="https://ss0.4sqi.net/img/devsite/start_realtime-fb2119acc12476e90f82d1c3daec86ee.png"/>
-            <p class="start-grid-title">
-             <a href="/start/realtime">
-              Know When Somebody Checks In
-             </a>
-            </p>
-           </li>
-           <li>
-            <img class="start-grid-icon" src="https://ss0.4sqi.net/img/devsite/start_streaming-77d2c00f4236fb8dbb60856b0f82ab31.png"/>
-            <p class="start-grid-title">
-             <a href="/start/streaming">
-              Get Global Streaming Check-In Data
-             </a>
-            </p>
-           </li>
-          </ul>
-          <p>
-           Take a look at our
-           <a href="/docs/">
-            API Endpoints
-           </a>
-           that gives a broad
-              overview of the API's capabilities and how to get started with the most popular features
-              of the Foursquare platform.
-          </p>
-         </td>
-         <td class="featuredCell">
-          <div class="featuredBanner">
-           <div class="images">
-            <img src="https://ss1.4sqi.net/img/places/pins/food-3913f7c9241c98644d322488810c5179.png" style="left: 21px; top: 34px;"/>
-            <img src="https://ss1.4sqi.net/img/places/pins/bar-3a6dcf6baaef597124eebd4817293c51.png" style="left: -38px; top: -108px;"/>
-            <img src="https://ss1.4sqi.net/img/places/pins/shopping-49290333fc94a5f0a44a5e0786b71c20.png" style="left: -22px; top: -54px;"/>
-           </div>
-           <div class="text">
-            <h3>
-             Learn about our
-             <a href="https://enterprise.foursquare.com">
-              Enterprise Products
-             </a>
-             .
-            </h3>
-           </div>
-          </div>
-         </td>
-        </tr>
-       </tbody>
-      </table>
-     </div>
-    </div>
-    <script src="https://ss1.4sqi.net/scripts/build/en/foursquare/inline-slides-6621e8283916f9358a5c6c7c8404a888.js" type="text/javascript">
-    </script>
-    <script type="text/javascript">
-     //<![CDATA[
-  var slides = new fourSq.views.InlineSlides({ el: $('#featuredApps').get(0), animation: 'slide',
-                                               autoIntervalSeconds: 5, buttonStyle: 'insideHover'});
-  //]]>
-    </script>
-    <div id="containerFooter" style="background:white;">
-     <div class="wideColumn" style="width:615px; border-right:1px solid #F0F1F2;">
-      <ul>
-       <li>
-        <a href="https://developer.foursquare.com/">
-         Home
-        </a>
-       </li>
-       <li>
-        <a href="https://developer.foursquare.com/overview/">
-         Overview
-        </a>
-       </li>
-       <li>
-        <a href="https://developer.foursquare.com/docs/">
-         Docs
-        </a>
-       </li>
-       <li>
-        <a href="https://developer.foursquare.com/resources/">
-         Resources
-        </a>
-       </li>
-       <li>
-        <a href="https://developer.foursquare.com/overview/attribution">
-         Attribution
-        </a>
-       </li>
-       <li>
-        <a href="https://developer.foursquare.com/overview/community">
-         Policies
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div class="narrowColumn" style="padding:0px;">
-      <img class="footerLogo" src="https://ss0.4sqi.net/img/poweredByFoursquare/poweredby-one-color-cdf070cc7ae72b3f482cf2d075a74c8c.png" style="width:220px;padding-top: 7px;"/>
-     </div>
-    </div>
-   </div>
-  </div>
-  <div id="footer">
-   <div class="wrap">
-   </div>
-  </div>
   <script type="text/javascript">
    var _gaq = _gaq || [];
   
@@ -286,16 +75,2029 @@
         _sf_async_config.domain = 'foursquare.com';
       }
   </script>
-  <div style="position:absolute;top:-1000px;left:-1000px;height:1px;width:1px;">
-   <img height="1" src="/private/wtrack?event=pltp-dep&amp;p=%2F&amp;ref=&amp;ts=1497888344&amp;u=-1&amp;sig=G3%2BogiUxjbk9nd%2BAudqxBoOwnLk%3D" width="1"/>
-  </div>
-  <script src="/ajax_request/liftAjax.js" type="text/javascript">
+  <script>
+   try{Typekit.load({ async: true });}catch(e){}
   </script>
+  <meta content="width=device-width, initial-scale=1, user-scalable=0" name="viewport"/>
+ </head>
+ <body class="fsc-devBody">
+  <div style="position:absolute;top:-1000px;left:-1000px;height:1px;width:1px;">
+   <img height="1" src="/private/wtrack?event=pltp-dep&amp;p=%2Fdev%2F&amp;ref=&amp;ts=1513087241&amp;u=-1&amp;sig=h9a6pfYBaR3pq8lId93YUpkU8ro%3D" width="1"/>
+  </div>
+  <main>
+   <div class="fsc-developerHeader">
+    <div class="fsc-developerHeader-col1">
+     <a class="fsc-developerHeader-logo" href="https://developer.foursquare.com/">
+      <img class="dark" src="https://ss1.4sqi.net/img/developers/logo-dark-65def5b9b798f56c47082d398d57de49.svg"/>
+      <img class="light" src="https://ss1.4sqi.net/img/developers/logo-light-ec3c5421772b0a5ae7a98d2b0e827f9a.svg"/>
+     </a>
+    </div>
+    <div class="fsc-developerHeader-menuToggle">
+     <input class="fsc-developerHeader-menuToggleCheckBox" id="fsc-m-toggle" type="checkbox"/>
+     <label class="fsc-developerHeader-menuToggleText open" for="fsc-m-toggle">
+      menu
+     </label>
+     <label class="fsc-developerHeader-menuToggleText close" for="fsc-m-toggle">
+      close
+     </label>
+     <div class="fsc-developerHeader-mobileMenuOverlay">
+     </div>
+     <div class="fsc-developerHeader-mobileMenu">
+      <div class="fsc-developerHeader-mobileMenu-container">
+       <input class="fsc-developerHeader-mobileMenu-toggle" id="fsc-mmp" type="checkbox"/>
+       <label class="fsc-developerHeader-mobileMenu-item" for="fsc-mmp">
+        Products
+        <i class="caret">
+        </i>
+       </label>
+       <div class="fsc-developerHeader-mobileMenu-products">
+        <div class="fsc-developerHeader-mobileMenu-productItem">
+         <div class="icon">
+         </div>
+         <a href="https://developer.foursquare.com/places-api">
+          Places API
+         </a>
+        </div>
+        <div class="fsc-developerHeader-mobileMenu-productItem">
+         <div class="icon">
+         </div>
+         <a href="https://enterprise.foursquare.com/pilgrim" target="_blank">
+          Pilgrim SDK
+          <i class="i-light-hyperlink-external-regular">
+          </i>
+         </a>
+        </div>
+        <div class="fsc-developerHeader-mobileMenu-productItem">
+         <div class="icon">
+         </div>
+         <a href="https://enterprise.foursquare.com/places-database" target="_blank">
+          Places Database
+          <i class="i-light-hyperlink-external-regular">
+          </i>
+         </a>
+        </div>
+        <div class="fsc-developerHeader-mobileMenu-productItem">
+         <div class="icon">
+         </div>
+         <a href="https://developer.foursquare.com/comparison">
+          Compare Developer
+          <br/>
+          <span>
+           Products
+          </span>
+         </a>
+        </div>
+        <div class="fsc-developerHeader-mobileMenu-productItem">
+         <div class="icon">
+         </div>
+         <a href="https://enterprise.foursquare.com/" target="_blank">
+          Foursquare For
+          <br/>
+          <span>
+           Enterprise
+           <i class="i-light-hyperlink-external-regular">
+           </i>
+          </span>
+         </a>
+        </div>
+       </div>
+       <a class="fsc-developerHeader-mobileMenu-itemLink" href="https://developer.foursquare.com/docs">
+        Docs
+       </a>
+       <a class="fsc-developerHeader-mobileMenu-itemLink" href="https://foursquare.com/developers/apps">
+        Log-in
+       </a>
+       <hr class="fsc-developerHeader-mobileMenu-divider"/>
+       <div class="fsc-developerHeader-mobileMenu-button">
+        <a href="https://foursquare.com/login?continue=%2Fdevelopers%2Fapps">
+         Create Account
+         <i class="icon">
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <nav class="fsc-developerHeader-nav">
+     <div class="fsc-developerHeader-productToggle">
+      Products
+      <i class="fsc-developerHeader-productToggleCaret">
+      </i>
+      <div class="fsc-developerHeader-productMenu">
+       <div class="fsc-developerHeader-productMenu-arrow">
+       </div>
+       <div class="fsc-developerHeader-productMenu-content">
+        <div class="fsc-developerHeader-productMenu-item">
+         <div class="fsc-developerHeader-productMenu-itemIcon">
+         </div>
+         <a href="https://developer.foursquare.com/places-api">
+          Places API
+         </a>
+        </div>
+        <div class="fsc-developerHeader-productMenu-item">
+         <div class="fsc-developerHeader-productMenu-itemIcon">
+         </div>
+         <a href="https://enterprise.foursquare.com/pilgrim" target="_blank">
+          Pilgrim SDK
+          <i class="i-hyperlink-external-regular">
+          </i>
+         </a>
+        </div>
+        <div class="fsc-developerHeader-productMenu-item">
+         <div class="fsc-developerHeader-productMenu-itemIcon">
+         </div>
+         <a href="https://enterprise.foursquare.com/places-database" target="_blank">
+          Places Database
+          <i class="i-hyperlink-external-regular">
+          </i>
+         </a>
+        </div>
+        <hr class="fsc-developerHeader-productMenu-divider"/>
+        <div class="fsc-developerHeader-productMenu-item">
+         <div class="fsc-developerHeader-productMenu-itemIcon">
+         </div>
+         <a href="https://developer.foursquare.com/comparison">
+          Compare Developer Products
+         </a>
+        </div>
+       </div>
+       <a class="fsc-developerHeader-productMenu-enterprise" href="https://enterprise.foursquare.com/" target="_blank">
+        Foursquare For Enterprise
+        <i class="i-hyperlink-external-regular">
+        </i>
+       </a>
+      </div>
+     </div>
+     <a class="fsc-developerHeader-navLink" href="https://developer.foursquare.com/docs">
+      Docs
+     </a>
+     <a class="fsc-developerHeader-navLink" href="https://foursquare.com/developers/apps">
+      Log-in
+     </a>
+     <a class="fsc-developerHeader-navButton" href="https://foursquare.com/login?continue=%2Fdevelopers%2Fapps">
+      Create Account
+      <i class="icon">
+      </i>
+     </a>
+    </nav>
+   </div>
+   <div class="fsc-devContent" id="wrapper container">
+    <div class="fsc-developerHomePage">
+     <div class="fsc-developerHero">
+      <div class="fsc-developerHero-headline">
+       <div class="fsc-developerHero-headlineText">
+        Create Magical
+        <span>
+        </span>
+        Real-World Moments
+        <span>
+        </span>
+        for Your Users
+       </div>
+       <div class="fsc-developerHero-headlineMessage">
+        Join over 125,000 developers building location-aware experiences with Foursquare technology and data.
+       </div>
+      </div>
+      <div class="fsc-devProductOverview">
+       <div class="fsc-devProductOverview-headline">
+        <div class="fsc-devProductOverview-headlineDots">
+         <svg height="114px" version="1.1" viewBox="0 0 186 114" width="186px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+           <g fill="#FAD948" id="D-Case-Study" transform="translate(-596.000000, -86.000000)">
+            <g id="dots" transform="translate(596.000000, 86.000000)">
+             <g id="DOTS">
+              <g id="Group-7" transform="translate(0.000000, 12.000000)">
+               <circle cx="3" cy="3" id="Oval-2" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+               </circle>
+              </g>
+              <g id="Group-7-Copy">
+               <circle cx="3" cy="3" id="Oval-2" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+               </circle>
+              </g>
+              <g id="Group-2" opacity="0.800000012" transform="translate(0.000000, 24.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-37" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-38" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-39" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-40" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-41" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-42" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-43" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-44" r="3">
+               </circle>
+              </g>
+              <g id="Group-4" opacity="0.600000024" transform="translate(0.000000, 36.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-45" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-46" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-47" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-48" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-49" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-50" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-51" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-52" r="3">
+               </circle>
+              </g>
+              <g id="Group-5" opacity="0.600000024" transform="translate(0.000000, 48.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-53" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-54" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-55" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-56" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-57" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-58" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-59" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-60" r="3">
+               </circle>
+              </g>
+              <g id="Group-6" opacity="0.400000006" transform="translate(0.000000, 60.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-61" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-62" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-63" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-64" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-65" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-66" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-67" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-68" r="3">
+               </circle>
+              </g>
+              <g id="Group-3" opacity="0.400000006" transform="translate(0.000000, 72.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+               </circle>
+              </g>
+              <g id="Group-3-Copy-2" opacity="0.200000003" transform="translate(0.000000, 84.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+               </circle>
+              </g>
+              <g id="Group-3-Copy-3" opacity="0.200000003" transform="translate(0.000000, 96.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+               </circle>
+              </g>
+              <g id="Group-3-Copy-4" opacity="0.100000001" transform="translate(0.000000, 108.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+               </circle>
+              </g>
+             </g>
+             <g id="DOTS-Copy-2" transform="translate(96.000000, 0.000000)">
+              <g id="Group-7" transform="translate(0.000000, 12.000000)">
+               <circle cx="3" cy="3" id="Oval-2" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+               </circle>
+              </g>
+              <g id="Group-7-Copy">
+               <circle cx="3" cy="3" id="Oval-2" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+               </circle>
+              </g>
+              <g id="Group-2" opacity="0.800000012" transform="translate(0.000000, 24.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-37" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-38" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-39" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-40" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-41" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-42" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-43" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-44" r="3">
+               </circle>
+              </g>
+              <g id="Group-4" opacity="0.600000024" transform="translate(0.000000, 36.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-45" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-46" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-47" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-48" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-49" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-50" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-51" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-52" r="3">
+               </circle>
+              </g>
+              <g id="Group-5" opacity="0.600000024" transform="translate(0.000000, 48.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-53" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-54" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-55" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-56" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-57" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-58" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-59" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-60" r="3">
+               </circle>
+              </g>
+              <g id="Group-6" opacity="0.400000006" transform="translate(0.000000, 60.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-61" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-62" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-63" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-64" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-65" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-66" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-67" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-68" r="3">
+               </circle>
+              </g>
+              <g id="Group-3" opacity="0.400000006" transform="translate(0.000000, 72.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+               </circle>
+              </g>
+              <g id="Group-3-Copy-2" opacity="0.200000003" transform="translate(0.000000, 84.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+               </circle>
+              </g>
+              <g id="Group-3-Copy-3" opacity="0.200000003" transform="translate(0.000000, 96.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+               </circle>
+              </g>
+              <g id="Group-3-Copy-4" opacity="0.100000001" transform="translate(0.000000, 108.000000)">
+               <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+               </circle>
+               <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+               </circle>
+               <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+               </circle>
+               <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+               </circle>
+               <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+               </circle>
+               <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+               </circle>
+               <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+               </circle>
+               <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+               </circle>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </svg>
+        </div>
+        <div class="fsc-devProductOverview-headlineText">
+         Explore Foursquare Developers
+        </div>
+       </div>
+       <div class="fsc-devProductOverview-content">
+        <div class="fsc-devProductOverview-contentCol1">
+         <div class="fsc-devProductOverview-contentCol1container">
+          <div class="fsc-devProductOverview-productContent">
+           <div class="content visible">
+            <div class="title">
+             <span>
+              01.
+             </span>
+             Places API
+            </div>
+            <div class="description">
+             Take users here, there and everywhere in between by enabling location discovery, destination sharing and more in your app or website.
+            </div>
+            <a class="link" href="/places-api">
+             Learn more
+             <i class="icon">
+             </i>
+            </a>
+           </div>
+           <div class="content">
+            <div class="title">
+             <span>
+              02.
+             </span>
+             Pilgrim SDK
+            </div>
+            <div class="description">
+             Know who your app users are based on where they go in the real world, and engage them with precise, context-aware content — in real-time.
+            </div>
+            <a class="externalLink" href="https://enterprise.foursquare.com/pilgrim" target="_blank">
+             Learn more
+             <i class="icon">
+             </i>
+            </a>
+           </div>
+           <div class="content">
+            <div class="title">
+             <span>
+              03.
+             </span>
+             Places Database
+            </div>
+            <div class="description">
+             Download dozens of place attributes around millions of points-of-interest around the world.
+            </div>
+            <a class="externalLink" href="https://enterprise.foursquare.com/places-database" target="_blank">
+             Learn more
+             <i class="icon">
+             </i>
+            </a>
+           </div>
+          </div>
+          <div class="fsc-devProductOverview-productList">
+           <div class="fsc-devProductOverview-productItem">
+            <label for="fsc-po1">
+             <input checked="" class="fsc-devProductOverview-productToggle" id="fsc-po1" name="fsc-po" type="radio" value="1"/>
+             <span>
+              Places API
+             </span>
+            </label>
+           </div>
+           <div class="fsc-devProductOverview-productItem">
+            <label for="fsc-po2">
+             <input class="fsc-devProductOverview-productToggle" id="fsc-po2" name="fsc-po" type="radio" value="2"/>
+             <span>
+              Pilgrim SDK
+             </span>
+            </label>
+           </div>
+           <div class="fsc-devProductOverview-productItem">
+            <label for="fsc-po3">
+             <input class="fsc-devProductOverview-productToggle" id="fsc-po3" name="fsc-po" type="radio" value="3"/>
+             <span>
+              Places Database
+             </span>
+            </label>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="fsc-devProductOverview-contentCol2">
+         <div class="fsc-devProductOverview-windows">
+          <div class="fsc-devProductOverview-windowsRow1" id="fsc-row-a">
+           <div class="item">
+            <img src="https://ss0.4sqi.net/img/developers/overview/places-api-01-6c51ab4160627c002d1fafd322d3cbe1.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+           <div class="item">
+            <img src="https://ss1.4sqi.net/img/developers/overview/places-api-02-99f3467d4cfbdc065e3cc83c4204c944.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+           <div class="item">
+            <img src="https://ss0.4sqi.net/img/developers/overview/places-api-03-813aa3dcb8ebb3d68593c179ab8f97d2.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+          </div>
+          <div class="fsc-devProductOverview-windowsRow2" id="fsc-row-b">
+           <div class="item">
+            <img src="https://ss0.4sqi.net/img/developers/overview/pilgrim-sdk-01-a073a042da8cf6686171962c5ab25402.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+           <div class="item">
+            <img src="https://ss1.4sqi.net/img/developers/overview/pilgrim-sdk-02-66e92196b84e201578d4b46e478e5450.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+           <div class="item">
+            <img src="https://ss1.4sqi.net/img/developers/overview/pilgrim-sdk-03-e9c57dcc40a8989a94a415e9bd4e99c8.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+          </div>
+          <div class="fsc-devProductOverview-windowsRow3" id="fsc-row-c">
+           <div class="item">
+            <img src="https://ss1.4sqi.net/img/developers/overview/places-db-01-fe3e4dc442fc6a08564c5e22963a221c.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+           <div class="item">
+            <img src="https://ss1.4sqi.net/img/developers/overview/places-db-02-ce91139e19a2aa82e0452be3a2077a33.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+           <div class="item">
+            <img src="https://ss0.4sqi.net/img/developers/overview/places-db-03-acec4d5621a0e41f4733f53929a51ff7.png"/>
+            <div class="frame">
+             <svg height="356px" version="1.1" viewBox="0 0 312 356" width="312px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+               <path d="M1,7.97714096 L1,285.568656 C1,290.395173 5.02080193,295.165569 9.89809876,296.098211 L302.486553,354.841377 C307.212128,355.744965 311,352.699105 311,348.022859 L311,70.4313445 C311,65.6048273 306.979198,60.8344314 302.101901,59.9017894 L9.51344663,1.15862253 C4.78787198,0.255034847 1,3.30089487 1,7.97714096 Z M361,248.977141 L361,526.568656 C361,531.395173 365.020802,536.165569 369.898099,537.098211 L662.486553,595.841377 C667.212128,596.744965 671,593.699105 671,589.022859 L671,311.431344 C671,306.604827 666.979198,301.834431 662.101901,300.901789 L369.513447,242.158623 C364.787872,241.255035 361,244.300895 361,248.977141 Z M697,315.977141 L697,593.568656 C697,598.395173 701.020802,603.165569 705.898099,604.098211 L998.486553,662.841377 C1003.21213,663.744965 1007,660.699105 1007,656.022859 L1007,378.431344 C1007,373.604827 1002.9792,368.834431 998.101901,367.901789 L705.513447,309.158623 C700.787872,308.255035 697,311.300895 697,315.977141 Z" id="outline" stroke="#14E6DD" stroke-width="2">
+               </path>
+              </g>
+             </svg>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="fsc-devComparison">
+      <div class="fsc-devComparison-Col1">
+       <div class="fsc-devComparison-question">
+        Land on the
+        <br/>
+        Right Product
+       </div>
+      </div>
+      <div class="fsc-devComparison-Col2">
+       <div class="fsc-devComparison-message">
+        Check out our feature-by-feature product comparison of our developer tools.
+       </div>
+       <a class="fsc-devComparison-link" href="/comparison">
+        Compare Products
+        <i class="icon">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="fsc-devCaseStudy-topDivider">
+     </div>
+     <div class="fsc-developerCaseStudy">
+      <div class="fsc-developerCaseStudy-headline">
+       <div class="fsc-developerCaseStudy-headlineDots">
+        <svg height="114px" version="1.1" viewBox="0 0 186 114" width="186px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+          <g fill="#FAD948" id="D-Case-Study" transform="translate(-596.000000, -86.000000)">
+           <g id="dots" transform="translate(596.000000, 86.000000)">
+            <g id="DOTS">
+             <g id="Group-7" transform="translate(0.000000, 12.000000)">
+              <circle cx="3" cy="3" id="Oval-2" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+              </circle>
+             </g>
+             <g id="Group-7-Copy">
+              <circle cx="3" cy="3" id="Oval-2" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+              </circle>
+             </g>
+             <g id="Group-2" opacity="0.800000012" transform="translate(0.000000, 24.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-37" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-38" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-39" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-40" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-41" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-42" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-43" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-44" r="3">
+              </circle>
+             </g>
+             <g id="Group-4" opacity="0.600000024" transform="translate(0.000000, 36.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-45" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-46" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-47" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-48" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-49" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-50" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-51" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-52" r="3">
+              </circle>
+             </g>
+             <g id="Group-5" opacity="0.600000024" transform="translate(0.000000, 48.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-53" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-54" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-55" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-56" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-57" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-58" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-59" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-60" r="3">
+              </circle>
+             </g>
+             <g id="Group-6" opacity="0.400000006" transform="translate(0.000000, 60.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-61" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-62" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-63" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-64" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-65" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-66" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-67" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-68" r="3">
+              </circle>
+             </g>
+             <g id="Group-3" opacity="0.400000006" transform="translate(0.000000, 72.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-2" opacity="0.200000003" transform="translate(0.000000, 84.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-3" opacity="0.200000003" transform="translate(0.000000, 96.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-4" opacity="0.100000001" transform="translate(0.000000, 108.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+            </g>
+            <g id="DOTS-Copy-2" transform="translate(96.000000, 0.000000)">
+             <g id="Group-7" transform="translate(0.000000, 12.000000)">
+              <circle cx="3" cy="3" id="Oval-2" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+              </circle>
+             </g>
+             <g id="Group-7-Copy">
+              <circle cx="3" cy="3" id="Oval-2" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+              </circle>
+             </g>
+             <g id="Group-2" opacity="0.800000012" transform="translate(0.000000, 24.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-37" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-38" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-39" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-40" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-41" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-42" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-43" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-44" r="3">
+              </circle>
+             </g>
+             <g id="Group-4" opacity="0.600000024" transform="translate(0.000000, 36.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-45" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-46" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-47" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-48" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-49" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-50" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-51" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-52" r="3">
+              </circle>
+             </g>
+             <g id="Group-5" opacity="0.600000024" transform="translate(0.000000, 48.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-53" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-54" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-55" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-56" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-57" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-58" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-59" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-60" r="3">
+              </circle>
+             </g>
+             <g id="Group-6" opacity="0.400000006" transform="translate(0.000000, 60.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-61" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-62" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-63" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-64" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-65" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-66" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-67" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-68" r="3">
+              </circle>
+             </g>
+             <g id="Group-3" opacity="0.400000006" transform="translate(0.000000, 72.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-2" opacity="0.200000003" transform="translate(0.000000, 84.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-3" opacity="0.200000003" transform="translate(0.000000, 96.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-4" opacity="0.100000001" transform="translate(0.000000, 108.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </svg>
+       </div>
+       <div class="fsc-developerCaseStudy-headlineText">
+        Foursquare Takes
+        <br/>
+        Our Partners to
+        <br/>
+        New Places
+       </div>
+      </div>
+      <div class="fsc-developerCaseStudy-content">
+       <div class="fsc-developerCaseStudy-contentDevice">
+        <svg height="743px" version="1.1" viewBox="0 0 360 743" width="360px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <defs>
+          <rect height="550.057334" id="path-1" rx="2" width="301.894591" x="0.522567072" y="0.378749243">
+          </rect>
+         </defs>
+         <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+          <g id="D-Case-Study" transform="translate(-148.000000, -474.000000)">
+           <g id="iPhone" transform="translate(148.000000, 474.000000)">
+            <rect height="741" id="Rectangle-2" rx="64" stroke="#0732A2" stroke-width="2" width="358" x="1" y="1">
+            </rect>
+            <rect height="719" id="Rectangle-2" rx="56" stroke="#0732A2" stroke-width="2" width="336" x="12" y="12">
+            </rect>
+            <rect height="14" id="Rectangle-7" rx="7" stroke="#0732A2" stroke-width="2" width="63" x="149" y="46">
+            </rect>
+           </g>
+          </g>
+         </g>
+        </svg>
+        <div class="fsc-developerCaseStudy-contentControls">
+         <img class="playButton" src="https://ss0.4sqi.net/img/developers/icon/play-button-f2bd1ba3d0446874b97c9c53c0f5c69a.svg"/>
+        </div>
+        <div class="fsc-developerCaseStudy-contentScreens">
+         <div class="fsc-developerCaseStudy-contentVideo">
+          <video class="vid" poster="https://ss0.4sqi.net/img/developers/video-covers/samsung-8d53878a8070a882cb9fec52266ddc68.jpg" src="https://d2lbzhv6cw95k2.cloudfront.net/developers/usecase_samsung_a9dff0.mp4">
+          </video>
+         </div>
+         <div class="fsc-developerCaseStudy-contentVideo">
+          <video class="vid" poster="https://ss0.4sqi.net/img/developers/video-covers/touchtunes-e8a5a5e837fc391aa4f6315abf7c35b8.jpg" src="https://d2lbzhv6cw95k2.cloudfront.net/developers/usecase_touchtunes_07a92c.mp4">
+          </video>
+         </div>
+         <div class="fsc-developerCaseStudy-contentVideo">
+          <video class="vid" poster="https://ss1.4sqi.net/img/developers/video-covers/airbnb-b4c10c61edc95b671bb63bb949e74158.jpg" src="https://d2lbzhv6cw95k2.cloudfront.net/developers/usecase_airbnb_144f82.mp4">
+          </video>
+         </div>
+         <div class="fsc-developerCaseStudy-contentVideo">
+          <video class="vid" poster="https://ss1.4sqi.net/img/developers/video-covers/uber-151d9aba3455030a9aa8971ac121d3d9.jpg" src="https://d2lbzhv6cw95k2.cloudfront.net/developers/usecase_uber_dfe62b.mp4">
+          </video>
+         </div>
+         <div class="fsc-developerCaseStudy-contentVideo">
+          <video class="vid" poster="https://ss0.4sqi.net/img/developers/video-covers/samsung-8d53878a8070a882cb9fec52266ddc68.jpg" src="https://d2lbzhv6cw95k2.cloudfront.net/developers/usecase_samsung_a9dff0.mp4">
+          </video>
+         </div>
+         <div class="fsc-developerCaseStudy-contentVideo">
+          <video class="vid" poster="https://ss0.4sqi.net/img/developers/video-covers/touchtunes-e8a5a5e837fc391aa4f6315abf7c35b8.jpg" src="https://d2lbzhv6cw95k2.cloudfront.net/developers/usecase_touchtunes_07a92c.mp4">
+          </video>
+         </div>
+         <div class="fsc-developerCaseStudy-contentVideo">
+          <video class="vid" poster="https://ss1.4sqi.net/img/developers/video-covers/airbnb-b4c10c61edc95b671bb63bb949e74158.jpg" src="https://d2lbzhv6cw95k2.cloudfront.net/developers/usecase_airbnb_144f82.mp4">
+          </video>
+         </div>
+         <div class="fsc-developerCaseStudy-contentVideo">
+          <video class="vid" poster="https://ss1.4sqi.net/img/developers/video-covers/uber-151d9aba3455030a9aa8971ac121d3d9.jpg" src="https://d2lbzhv6cw95k2.cloudfront.net/developers/usecase_uber_dfe62b.mp4">
+          </video>
+         </div>
+        </div>
+       </div>
+       <div class="fsc-developerCaseStudy-contentLogoCarousel">
+        <div class="fsc-developerCaseStudy-contentLogoCarouselItem">
+         <img src="https://ss0.4sqi.net/img/developers/logo/samsung-c9b60293c06609fc36242dc6d1f652de.png"/>
+        </div>
+        <div class="fsc-developerCaseStudy-contentLogoCarouselItem">
+         <img src="https://ss0.4sqi.net/img/developers/logo/touchtunes-d76323c7bc43c9d265fb4c7df43e526a.png"/>
+        </div>
+        <div class="fsc-developerCaseStudy-contentLogoCarouselItem">
+         <img src="https://ss1.4sqi.net/img/developers/logo/airbnb-566a87e08f54557c3f970f8a4212e4db.png"/>
+        </div>
+        <div class="fsc-developerCaseStudy-contentLogoCarouselItem">
+         <img src="https://ss0.4sqi.net/img/developers/logo/uber-966c3ca1341f844663307f5b27e8f499.png"/>
+        </div>
+        <div class="fsc-developerCaseStudy-contentLogoCarouselItem">
+         <img src="https://ss0.4sqi.net/img/developers/logo/samsung-c9b60293c06609fc36242dc6d1f652de.png"/>
+        </div>
+        <div class="fsc-developerCaseStudy-contentLogoCarouselItem">
+         <img src="https://ss0.4sqi.net/img/developers/logo/touchtunes-d76323c7bc43c9d265fb4c7df43e526a.png"/>
+        </div>
+        <div class="fsc-developerCaseStudy-contentLogoCarouselItem">
+         <img src="https://ss1.4sqi.net/img/developers/logo/airbnb-566a87e08f54557c3f970f8a4212e4db.png"/>
+        </div>
+        <div class="fsc-developerCaseStudy-contentLogoCarouselItem">
+         <img src="https://ss0.4sqi.net/img/developers/logo/uber-966c3ca1341f844663307f5b27e8f499.png"/>
+        </div>
+       </div>
+       <div class="fsc-developerCaseStudy-contentTextList">
+        <div class="fsc-developerCaseStudy-contentText">
+         <div class="fsc-developerCaseStudy-contentTitle">
+          Samsung
+         </div>
+         <div class="fsc-developerCaseStudy-contentMessage">
+          Using Foursquare’s database of more than 105 million places, Samsung allows users to geo-tag their photos with detailed info about a destination, while also serving up contextually relevant locations for those who are searching for a place to eat, drink or explore.
+         </div>
+         <div class="fsc-developerCaseStudy-contentTools">
+          Tools Used
+         </div>
+         <div class="fsc-developerCaseStudy-contentToolsLinkGroup">
+          <a class="fsc-developerCaseStudy-contentToolsLink" href="/places-api">
+           <i class="icon">
+           </i>
+           Places API
+          </a>
+         </div>
+        </div>
+        <div class="fsc-developerCaseStudy-contentText">
+         <div class="fsc-developerCaseStudy-contentTitle">
+          TouchTunes
+         </div>
+         <div class="fsc-developerCaseStudy-contentMessage">
+          TouchTunes relies on the Pilgrim SDK by Foursquare to deliver precise, proximity-based, song recommendations to its customers across their network of 65,000 digital jukeboxes in the US.
+         </div>
+         <div class="fsc-developerCaseStudy-contentTools">
+          Tools Used
+         </div>
+         <div class="fsc-developerCaseStudy-contentToolsLinkGroup">
+          <a class="fsc-developerCaseStudy-contentToolsLink" href="https://enterprise.foursquare.com/pilgrim">
+           <div>
+            <i class="fa fa-chevron-right">
+            </i>
+           </div>
+           Pilgrim SDK
+          </a>
+         </div>
+        </div>
+        <div class="fsc-developerCaseStudy-contentText">
+         <div class="fsc-developerCaseStudy-contentTitle">
+          Airbnb
+         </div>
+         <div class="fsc-developerCaseStudy-contentMessage">
+          The world’s largest community-driven hospitality company relies on the Places API to surface curated photos and other place-related content in users’ guidebooks.
+         </div>
+         <div class="fsc-developerCaseStudy-contentTools">
+          Tools Used
+         </div>
+         <div class="fsc-developerCaseStudy-contentToolsLinkGroup">
+          <a class="fsc-developerCaseStudy-contentToolsLink" href="/places-api">
+           <i class="icon">
+           </i>
+           Places API
+          </a>
+         </div>
+        </div>
+        <div class="fsc-developerCaseStudy-contentText">
+         <div class="fsc-developerCaseStudy-contentTitle">
+          Uber
+         </div>
+         <div class="fsc-developerCaseStudy-contentMessage">
+          The global ride-hailing giant enables users to search and find the destinations they want to go using our database of 105 million places around the world.
+         </div>
+         <div class="fsc-developerCaseStudy-contentTools">
+          Tools Used
+         </div>
+         <div class="fsc-developerCaseStudy-contentToolsLinkGroup">
+          <a class="fsc-developerCaseStudy-contentToolsLink" href="https://enterprise.foursquare.com/places-database">
+           <div>
+            <i class="fa fa-chevron-right">
+            </i>
+           </div>
+           Places Database
+          </a>
+         </div>
+        </div>
+        <div class="fsc-developerCaseStudy-contentText">
+         <div class="fsc-developerCaseStudy-contentTitle">
+          Samsung
+         </div>
+         <div class="fsc-developerCaseStudy-contentMessage">
+          Using Foursquare’s database of more than 105 million places, Samsung allows users to geo-tag their photos with detailed info about a destination, while also serving up contextually relevant locations for those who are searching for a place to eat, drink or explore.
+         </div>
+         <div class="fsc-developerCaseStudy-contentTools">
+          Tools Used
+         </div>
+         <div class="fsc-developerCaseStudy-contentToolsLinkGroup">
+          <a class="fsc-developerCaseStudy-contentToolsLink" href="/places-api">
+           <i class="icon">
+           </i>
+           Places API
+          </a>
+         </div>
+        </div>
+        <div class="fsc-developerCaseStudy-contentText">
+         <div class="fsc-developerCaseStudy-contentTitle">
+          TouchTunes
+         </div>
+         <div class="fsc-developerCaseStudy-contentMessage">
+          TouchTunes relies on the Pilgrim SDK by Foursquare to deliver precise, proximity-based, song recommendations to its customers across their network of 65,000 digital jukeboxes in the US.
+         </div>
+         <div class="fsc-developerCaseStudy-contentTools">
+          Tools Used
+         </div>
+         <div class="fsc-developerCaseStudy-contentToolsLinkGroup">
+          <a class="fsc-developerCaseStudy-contentToolsLink" href="https://enterprise.foursquare.com/pilgrim">
+           <div>
+            <i class="fa fa-chevron-right">
+            </i>
+           </div>
+           Pilgrim SDK
+          </a>
+         </div>
+        </div>
+        <div class="fsc-developerCaseStudy-contentText">
+         <div class="fsc-developerCaseStudy-contentTitle">
+          Airbnb
+         </div>
+         <div class="fsc-developerCaseStudy-contentMessage">
+          The world’s largest community-driven hospitality company relies on the Places API to surface curated photos and other place-related content in users’ guidebooks.
+         </div>
+         <div class="fsc-developerCaseStudy-contentTools">
+          Tools Used
+         </div>
+         <div class="fsc-developerCaseStudy-contentToolsLinkGroup">
+          <a class="fsc-developerCaseStudy-contentToolsLink" href="/places-api">
+           <i class="icon">
+           </i>
+           Places API
+          </a>
+         </div>
+        </div>
+        <div class="fsc-developerCaseStudy-contentText">
+         <div class="fsc-developerCaseStudy-contentTitle">
+          Uber
+         </div>
+         <div class="fsc-developerCaseStudy-contentMessage">
+          The global ride-hailing giant enables users to search and find the destinations they want to go using our database of 105 million places around the world.
+         </div>
+         <div class="fsc-developerCaseStudy-contentTools">
+          Tools Used
+         </div>
+         <div class="fsc-developerCaseStudy-contentToolsLinkGroup">
+          <a class="fsc-developerCaseStudy-contentToolsLink" href="https://enterprise.foursquare.com/places-database">
+           <div>
+            <i class="fa fa-chevron-right">
+            </i>
+           </div>
+           Places Database
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="fsc-developerCaseStudy-contentBackground">
+       </div>
+      </div>
+     </div>
+     <div class="fsc-devCaseStudy-bottomDivider">
+      <div>
+      </div>
+     </div>
+     <div class="fsc-devNewsletter">
+      <div class="fsc-devNewsletter-title">
+       Subscribe to Our Newsletter
+      </div>
+      <ul class="fsc-devNewsletter-featureList">
+       <li>
+        <span>
+         Get tips on how to get the most out of our products
+        </span>
+       </li>
+       <li>
+        <span>
+         Hear about product improvements and new releases
+        </span>
+       </li>
+       <li>
+        <span>
+         Read articles, blog posts and more
+        </span>
+       </li>
+      </ul>
+      <form action="https://go.pardot.com/l/310041/2017-08-03/xdpq" class="fsc-devNewsletter-form" method="post" rel="noreferrer noopener" target="_blank">
+       <input class="fsc-devNewsletter-formInput" name="email" placeholder="Enter your email here" required=""/>
+       <button class="fsc-devNewsletter-formButton">
+        <div class="fsc-devNewsletter-formButtonText">
+         <span>
+          Submit
+         </span>
+         <i class="icon">
+         </i>
+        </div>
+       </button>
+      </form>
+     </div>
+     <div class="fsc-devCommunity">
+      <div class="fsc-devCommunity-headline">
+       <div class="fsc-devCommunity-headlineDots">
+        <svg height="114px" version="1.1" viewBox="0 0 186 114" width="186px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+          <g fill="#FAD948" id="D-Case-Study" transform="translate(-596.000000, -86.000000)">
+           <g id="dots" transform="translate(596.000000, 86.000000)">
+            <g id="DOTS">
+             <g id="Group-7" transform="translate(0.000000, 12.000000)">
+              <circle cx="3" cy="3" id="Oval-2" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+              </circle>
+             </g>
+             <g id="Group-7-Copy">
+              <circle cx="3" cy="3" id="Oval-2" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+              </circle>
+             </g>
+             <g id="Group-2" opacity="0.800000012" transform="translate(0.000000, 24.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-37" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-38" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-39" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-40" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-41" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-42" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-43" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-44" r="3">
+              </circle>
+             </g>
+             <g id="Group-4" opacity="0.600000024" transform="translate(0.000000, 36.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-45" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-46" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-47" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-48" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-49" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-50" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-51" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-52" r="3">
+              </circle>
+             </g>
+             <g id="Group-5" opacity="0.600000024" transform="translate(0.000000, 48.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-53" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-54" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-55" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-56" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-57" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-58" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-59" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-60" r="3">
+              </circle>
+             </g>
+             <g id="Group-6" opacity="0.400000006" transform="translate(0.000000, 60.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-61" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-62" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-63" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-64" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-65" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-66" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-67" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-68" r="3">
+              </circle>
+             </g>
+             <g id="Group-3" opacity="0.400000006" transform="translate(0.000000, 72.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-2" opacity="0.200000003" transform="translate(0.000000, 84.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-3" opacity="0.200000003" transform="translate(0.000000, 96.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-4" opacity="0.100000001" transform="translate(0.000000, 108.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+            </g>
+            <g id="DOTS-Copy-2" transform="translate(96.000000, 0.000000)">
+             <g id="Group-7" transform="translate(0.000000, 12.000000)">
+              <circle cx="3" cy="3" id="Oval-2" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+              </circle>
+             </g>
+             <g id="Group-7-Copy">
+              <circle cx="3" cy="3" id="Oval-2" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-32" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-30" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-33" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-31" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-34" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-35" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-36" r="3">
+              </circle>
+             </g>
+             <g id="Group-2" opacity="0.800000012" transform="translate(0.000000, 24.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-37" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-38" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-39" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-40" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-41" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-42" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-43" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-44" r="3">
+              </circle>
+             </g>
+             <g id="Group-4" opacity="0.600000024" transform="translate(0.000000, 36.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-45" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-46" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-47" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-48" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-49" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-50" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-51" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-52" r="3">
+              </circle>
+             </g>
+             <g id="Group-5" opacity="0.600000024" transform="translate(0.000000, 48.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-53" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-54" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-55" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-56" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-57" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-58" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-59" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-60" r="3">
+              </circle>
+             </g>
+             <g id="Group-6" opacity="0.400000006" transform="translate(0.000000, 60.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-61" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-62" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-63" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-64" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-65" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-66" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-67" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-68" r="3">
+              </circle>
+             </g>
+             <g id="Group-3" opacity="0.400000006" transform="translate(0.000000, 72.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-2" opacity="0.200000003" transform="translate(0.000000, 84.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-3" opacity="0.200000003" transform="translate(0.000000, 96.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+             <g id="Group-3-Copy-4" opacity="0.100000001" transform="translate(0.000000, 108.000000)">
+              <circle cx="3" cy="3" id="Oval-2-Copy-69" r="3">
+              </circle>
+              <circle cx="39" cy="3" id="Oval-2-Copy-70" r="3">
+              </circle>
+              <circle cx="15" cy="3" id="Oval-2-Copy-71" r="3">
+              </circle>
+              <circle cx="51" cy="3" id="Oval-2-Copy-72" r="3">
+              </circle>
+              <circle cx="27" cy="3" id="Oval-2-Copy-73" r="3">
+              </circle>
+              <circle cx="63" cy="3" id="Oval-2-Copy-74" r="3">
+              </circle>
+              <circle cx="75" cy="3" id="Oval-2-Copy-75" r="3">
+              </circle>
+              <circle cx="87" cy="3" id="Oval-2-Copy-76" r="3">
+              </circle>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </svg>
+       </div>
+       <div class="fsc-devCommunity-headlineText">
+        Join our developer
+        <br/>
+        community
+       </div>
+      </div>
+      <div class="fsc-devCommunity-list">
+       <div class="fsc-devCommunity-listItem">
+        <div class="item-icon">
+         <i class="fa fa-stack-overflow fa-lg">
+         </i>
+        </div>
+        <div class="text">
+         Join the conversation on
+         <br/>
+         <a href="https://stackoverflow.com/questions/ask?tags=foursquare" rel="noopener noreferrer" target="_blank">
+          Stack Overflow
+         </a>
+        </div>
+       </div>
+       <div class="fsc-devCommunity-listItem">
+        <div class="item-icon">
+         <i class="fa fa-twitter fa-lg">
+         </i>
+        </div>
+        <div class="text">
+         Receive news and alerts about our
+         <br/>
+         <a href="https://twitter.com/foursquareapi" rel="noopener noreferrer" target="_blank">
+          Foursquare API
+         </a>
+         on Twitter
+        </div>
+       </div>
+       <div class="fsc-devCommunity-listItem">
+        <div class="item-icon">
+         <i class="fa fa-medium fa-lg">
+         </i>
+        </div>
+        <div class="text">
+         Check out the
+         <a href="https://medium.com/foursquare-developers" rel="noopener noreferrer" target="_blank">
+          Foursquare Developer
+         </a>
+         blog
+         <br/>
+         for product updates and tech details
+        </div>
+       </div>
+       <div class="fsc-devCommunity-listItem">
+        <div class="item-icon">
+         <i class="fa fa-hand-peace-o fa-lg">
+         </i>
+        </div>
+        <div class="text">
+         <a href="https://foursquare.com/jobs" rel="noopener noreferrer" target="_blank">
+          Join our team
+         </a>
+         and build cool products
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     fourSq.developers.HomePage.init({});
+    </script>
+   </div>
+  </main>
+  <footer>
+   <div class="fsc-developerFooterContainer">
+    <div class="fsc-developerFooterContainer-newsletter">
+     <div class="fsc-developerFooterContainer-title">
+      Newsletter
+     </div>
+     <div class="fsc-developerFooterContainer-newsletterMsg">
+      Sign up for updates and more by filling in your email address below. We promise we won't send you spam. Only good stuff.
+     </div>
+     <form action="https://go.pardot.com/l/310041/2017-08-03/xdpq" class="fsc-developerFooterContainer-newsletterForm" method="post" rel="noreferrer noopener" target="_blank">
+      <input class="fsc-developerFooterContainer-newsletterInput" name="email" placeholder="Enter your email here" required=""/>
+      <button class="fsc-developerFooterContainer-newsletterSubmit">
+       <i class="icon">
+       </i>
+      </button>
+     </form>
+    </div>
+    <div class="fsc-developerFooterContainer-table">
+     <div class="fsc-developerFooterContainer-column">
+      <input class="fsc-developerFooterContainer-listToggle" id="fsc-col1" type="checkbox"/>
+      <label class="fsc-developerFooterContainer-collapsibleTitle" for="fsc-col1">
+       Developers
+      </label>
+      <ul class="fsc-developerFooterContainer-list">
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://developer.foursquare.com/places-api">
+         Places API
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://enterprise.foursquare.com/places-database">
+         Places Database
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://enterprise.foursquare.com/pilgrim">
+         Pilgrim SDK
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://developer.foursquare.com/docs">
+         Docs
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://medium.com/foursquare-developers">
+         Blog
+        </a>
+       </li>
+      </ul>
+      <hr/>
+     </div>
+     <div class="fsc-developerFooterContainer-column">
+      <input class="fsc-developerFooterContainer-listToggle" id="fsc-col2" type="checkbox"/>
+      <label class="fsc-developerFooterContainer-collapsibleTitle" for="fsc-col2">
+       Other Solutions
+      </label>
+      <ul class="fsc-developerFooterContainer-list">
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://enterprise.foursquare.com/solutions/media">
+         Media
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://enterprise.foursquare.com/solutions/measurement">
+         Measurement
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://enterprise.foursquare.com/solutions/analytics">
+         Analytics
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://business.foursquare.com">
+         Small Business
+        </a>
+       </li>
+      </ul>
+      <hr/>
+     </div>
+     <div class="fsc-developerFooterContainer-column">
+      <input class="fsc-developerFooterContainer-listToggle" id="fsc-col3" type="checkbox"/>
+      <label class="fsc-developerFooterContainer-collapsibleTitle" for="fsc-col3">
+       Corporate
+      </label>
+      <ul class="fsc-developerFooterContainer-list">
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://foursquare.com/about">
+         About Us
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://foursquare.com/download">
+         Foursquare City Guide
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://www.swarmapp.com/">
+         Swarm
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://foursquare.com/jobs/">
+         Jobs
+        </a>
+       </li>
+      </ul>
+      <hr/>
+     </div>
+     <div class="fsc-developerFooterContainer-column">
+      <input class="fsc-developerFooterContainer-listToggle" id="fsc-col4" type="checkbox"/>
+      <label class="fsc-developerFooterContainer-collapsibleTitle" for="fsc-col4">
+       More
+      </label>
+      <ul class="fsc-developerFooterContainer-list">
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://developer.foursquare.com/docs/terms-of-use/overview">
+         Terms of Use
+        </a>
+       </li>
+       <li class="fsc-developerFooterContainer-item">
+        <a href="https://developer.foursquare.com/contact-us">
+         Contact Us
+        </a>
+       </li>
+      </ul>
+      <hr/>
+     </div>
+    </div>
+    <div class="fsc-developerFooterContainer-copyright">
+     Ⓒ 2017 Lovingly made in NYC &amp; SF
+    </div>
+   </div>
+  </footer>
   <script type="text/javascript">
-   // <![CDATA[
-
-var lift_page = "F14521249791471F2UI2";
-// ]]>
+   $(function() {fourSq.chrome.init();});
   </script>
  </body>
 </html>

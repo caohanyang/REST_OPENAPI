@@ -1,639 +1,2772 @@
 {
-  "basePath": "/2.0 /files/ file_id",
+  "basePath": "/2.0",
   "paths": {
-    "/comments \\ -H \"Authorization: Bearer \" \\ package com . box . sdk public class BoxFile public List < BoxComment . Info > get": {
-      "GET": {}
-    },
-    "/groups \\ -H \"Authorization: Bearer ": {
-      "DELETE": {}
-    },
-    "/json\" \\ -d '[{\"op\":\"editField\",\"fieldKey\":\"category\",\"data\":{\"displayName\":\"Customer Group\"} }]' \\ -X PUT": {
+    "/retention_policies/policy_id": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "retention_length": 365,
+              "policy_type": "finite",
+              "disposition_action": "remove_retention",
+              "policy_name": "TaxDocuments",
+              "created_at": "2015-05-01T11:12:54-07:00",
+              "id": "123456789",
+              "type": "retention_policy",
+              "modified_at": "2015-06-08T11:11:50-07:00",
+              "created_by": {
+                "name": "Sean",
+                "id": "11993747",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "status": "active"
+            }
+          }
+        }
+      },
       "PUT": {}
     },
-    "/ template": {
-      "DELETE": {}
-    },
-    "/watermark \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/events endpoint.": {
-      "PUT": {}
-    },
-    "/{id} or GET": {
+    "/files/file_id/thumbnail.extension": {
       "GET": {}
     },
-    "/email_aliases \\ -H \"Authorization: Bearer \" \\ -d '{\"email\": \"dglover2@box.com\"}' -X POST": {
+    "/files/file_id": {
+      "DELETE": {},
+      "GET": {
+        "request": "curl https://api.box.com/2.0/files/FILE_ID -H \"Authorization: Bearer ”",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "etag": "1",
+              "id": "34122832467",
+              "expiring_embed_link": {
+                "url": "https://app.box.com/preview/expiring_embed/gvoct6FE!Qz2rDeyxCiHsYpvlnR7JJ0SCfFM2M4YiX9cIwrSo4LOYQgxyP3rzoYuMmXg96mTAidqjPuRH7HFXMWgXEEm5LTi1EDlfBocS-iRfHpc5ZeYrAZpA5B8C0Obzkr4bUoF6wGq8BZ1noN_txyZUU1nLDNuL_u0rsImWhPAZlvgt7662F9lZSQ8nw6zKaRWGyqmj06PnxewCx0EQD3padm6VYkfHE2N20gb5rw1D0a7aaRJZzEijb2ICLItqfMlZ5vBe7zGdEn3agDzZP7JlID3FYdPTITsegB10gKLgSp_AJJ9QAfDv8mzi0bGv1ZmAU1FoVLpGC0XI0UKy3N795rZBtjLlTNcuxapbHkUCoKcgdfmHEn5NRQ3tmw7hiBfnX8o-Au34ttW9ntPspdAQHL6xPzQC4OutWZDozsA5P9sGlI-sC3VC2-WXsbXSedemubVd5vWzpVZtKRlb0gpuXsnDPXnMxSH7_jT4KSLhC8b5kEMPNo33FjEJl5pwS_o_6K0awUdRpEQIxM9CC3pBUZK5ooAc5X5zxo_2FBr1xq1p_kSbt4TVnNeohiLIu38TQysSb7CMR7JRhDDZhMMwAUc0wdSszELgL053lJlPeoiaLA49rAGP_B3BVuwFAFEl696w7UMx5NKu1mA0IOn9pDebzbhTl5HuUvBAHROc1Ocjb28Svyotik1IkPIw_1R33ZyAMvEFyzIygqBj8WedQeSK38iXvF2UXvkAf9kevOdnpwsKYiJtcxeJhFm7LUVKDTufuzuGRw-T7cPtbg.."
+              },
+              "type": "file"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "parent": {
+                "sequence_id": "1",
+                "name": "Pictures",
+                "etag": "1",
+                "id": "11446498",
+                "type": "folder"
+              },
+              "description": "apictureoftigers",
+              "created_at": "2012-12-12T10:55:30-08:00",
+              "owned_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "type": "file",
+              "item_status": "active",
+              "created_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "sha1": "134b65991ed521fcfe4724b7d814ab8ded5185dc",
+              "size": 629644,
+              "sequence_id": "3",
+              "name": "newname.jpg",
+              "modified_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "shared_link": {
+                "is_password_enabled": false,
+                "access": "open",
+                "permissions": {
+                  "can_preview": true,
+                  "can_download": true
+                },
+                "download_url": "https://www.box.com/shared/static/rh935iit6ewrmw0unyul.jpeg",
+                "preview_count": 0,
+                "url": "https://www.box.com/s/rh935iit6ewrmw0unyul",
+                "download_count": 0
+              },
+              "etag": "3",
+              "id": "5000948880",
+              "modified_at": "2012-12-12T11:04:26-08:00",
+              "path_collection": {
+                "entries": [
+                  {
+                    "name": "AllFiles",
+                    "id": "0",
+                    "type": "folder"
+                  },
+                  {
+                    "sequence_id": "1",
+                    "name": "Pictures",
+                    "etag": "1",
+                    "id": "11446498",
+                    "type": "folder"
+                  }
+                ],
+                "total_count": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "/groups/group_id/collaborations": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/groups/ID/collaborations \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "accessible_by": {
+                "name": "sean",
+                "id": "18203124",
+                "type": "user",
+                "login": "sean+test@box.com"
+              },
+              "item": {
+                "sequence_id": "0",
+                "name": "SharedPictures",
+                "etag": "0",
+                "id": "11446500",
+                "type": "folder"
+              },
+              "role": "editor",
+              "created_at": "2012-12-12T10:54:37-08:00",
+              "id": "791293",
+              "type": "collaboration",
+              "modified_at": "2012-12-12T11:30:43-08:00",
+              "created_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "acknowledged_at": "2012-12-12T11:30:43-08:00",
+              "status": "accepted"
+            }
+          }
+        }
+      }
+    },
+    "/comments": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/comments \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -d '{\"item\": {\"type\": \"file\", \"id\": \"FILE_ID\"}, \"message\": \"YOUR_MESSAGE\"}' \\ -X POST"
+      }
+    },
+    "/metadata_templates/scope/template/schema": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/metadata_templates/enterprise/productInfo/schema \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "hidden": false,
+              "displayName": "ProductInfo",
+              "scope": "enterprise_12345",
+              "fields": [
+                {
+                  "hidden": false,
+                  "displayName": "SKUNumber",
+                  "type": "float",
+                  "key": "skuNumber"
+                },
+                {
+                  "hidden": false,
+                  "displayName": "Description",
+                  "type": "string",
+                  "key": "description"
+                },
+                {
+                  "hidden": false,
+                  "displayName": "Department",
+                  "options": [
+                    {
+                      "key": "Beauty"
+                    },
+                    {
+                      "key": "Shoes"
+                    },
+                    {
+                      "key": "Accessories"
+                    },
+                    {
+                      "key": "Clothing"
+                    },
+                    {
+                      "key": "Handbags"
+                    },
+                    {
+                      "key": "Bedding"
+                    },
+                    {
+                      "key": "Watches"
+                    }
+                  ],
+                  "type": "enum",
+                  "key": "department"
+                },
+                {
+                  "hidden": false,
+                  "displayName": "DisplayDate",
+                  "type": "date",
+                  "key": "displayDate"
+                }
+              ],
+              "templateKey": "productInfo"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/metadata_templates/enterprise/customer/schema \\ -H \"Authorization: Bearer \" -H \"Content-Type: application/json\" \\ -d '[{\"op\":\"editField\",\"fieldKey\":\"category\",\"data\":{\"displayName\":\"Customer Group\"} }]' \\ -X PUT"
+      }
+    },
+    "/tasks/task_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/tasks/TASK_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/tasks/TASK_ID \\ -H \"Authorization: Bearer \""
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/tasks/TASK_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"message\": \"REVIEW PLZ K THX\"}' \\ -X PUT"
+      }
+    },
+    "/files/file_id/versions": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "sha1": "359c6c1ed98081b9a69eb3513b9deced59c957f9",
+                  "size": 92556,
+                  "name": "Dragons.js",
+                  "modified_by": {
+                    "name": "seanrose",
+                    "id": "183732129",
+                    "type": "user",
+                    "login": "sean+apitest@box.com"
+                  },
+                  "created_at": "2012-08-20T10:20:30-07:00",
+                  "id": "672259576",
+                  "type": "file_version",
+                  "modified_at": "2012-11-28T13:14:58-08:00"
+                }
+              ],
+              "total_count": 1
+            }
+          }
+        }
+      }
+    },
+    "/comments/comment_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/comments/COMMENT_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/comments/COMMENT_ID -H \"Authorization: Bearer ACCESS_TOKEN\""
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/comments/COMMENT_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -d '{\"message\":\"My New Message\"}' \\ -X PUT"
+      }
+    },
+    "/metadata_templates/schema": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/metadata_templates/schema \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: application/json\" \\ -d '{ \"templateKey\" : \"customer\" , \"scope\" : \"enterprise\" , \"displayName\" : \"Customer\" , \"fields\" : [ { \"type\" : \"string\" , \"key\" : \"customerTeam\" , \"displayName\" : \"Customer team\" }, { \"type\" : \"string\" , \"key\" : \"category\" , \"displayName\" : \"Category\" }, { \"type\" : \"string\" , \"key\" : \"brand\" , \"displayName\" : \"Brand\" }, { \"type\" : \"enum\" , \"key\" : \"fy\" , \"displayName\" : \"FY\" , \"options\" : [ { \"key\" : \"FY11\" }, { \"key\" : \"FY12\" }, { \"key\" : \"FY13\" }, { \"key\" : \"FY14\" }, { \"key\" : \"FY15\" } ]}, { \"type\" : \"enum\" , \"key\" : \"qtr\" , \"displayName\" : \"Qtr\" , \"options\" : [ { \"key\" : \"First\" }, { \"key\" : \"Second\" }, { \"key\" : \"Third\" }, { \"key\" : \"Fourth\" } ]} ]} ' \\ -X POST"
+      }
+    },
+    "/users/user_id/email_aliases/email_alias_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/users/USER_ID/email_aliases/EMAIL_ALIAS_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "name": "friends",
+                  "id": "1786931",
+                  "type": "group"
+                }
+              ],
+              "offset": 0,
+              "total_count": 1,
+              "limit": 100
+            }
+          }
+        }
+      }
+    },
+    "/files/FILE_ID\\-H\"Authorization:BearerACCESS_TOKEN\"\\-d'{\"lock\":null}'\\-XP": {
+      "PUT": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "lock": {
+                "is_download_prevented": false,
+                "created_at": "2017-03-06T22:00:53-08:00",
+                "id": "2126286840",
+                "type": "lock",
+                "created_by": {
+                  "name": "SanjayPadval",
+                  "id": "277699565",
+                  "type": "user",
+                  "login": "spadval+integration@box.com"
+                }
+              },
+              "etag": "2",
+              "id": "76017730626",
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/users/me": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/users/me -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "space_used": 2377016,
+              "max_upload_size": 262144000,
+              "address": "555OfficeDrive",
+              "created_at": "2012-03-26T15:43:07-07:00",
+              "language": "en",
+              "type": "user",
+              "login": "sean@box.com",
+              "avatar_url": "https://app.box.com/api/avatar/large/17738362",
+              "phone": "5555555555",
+              "space_amount": 5368709120,
+              "name": "seanrose",
+              "id": "17738362",
+              "modified_at": "2012-12-12T11:34:29-08:00",
+              "job_title": "Employee",
+              "status": "active"
+            }
+          }
+        }
+      }
+    },
+    "/files/file_id/versions/file_version_id": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/files/FILE_ID/versions/FILE_VERSION_ID \\ -H \"Authorization: Bearer \" \\",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "sha1": "632eeeb98b4267752637d95bf6e2562e39708454",
+              "size": 631,
+              "modified_by": {
+                "name": "BillGrizzle",
+                "id": "193977422",
+                "login": "bgrizzle@box.com",
+                "type": "user"
+              },
+              "name": "vacation.png",
+              "created_at": "2017-05-02T11:28:41-07:00",
+              "id": "176880312614",
+              "modified_at": "2017-05-02T11:28:41-07:00",
+              "type": "file_version"
+            }
+          }
+        }
+      }
+    },
+    "/upload.box.com/api/2.0/files/upload_sessions\\-H'authorization:BearerfEw9FPUVT3SJGaSBu4Q07VFyqdY": {
       "POST": {}
     },
-    "/part2 # Part 1: curl -X PUT": {
+    "/collections": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/collections/ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "name": "Favorites",
+                  "id": "405151",
+                  "type": "collection",
+                  "collection_type": "favorites"
+                }
+              ],
+              "offset": 0,
+              "total_count": 1,
+              "limit": 100
+            }
+          }
+        }
+      }
+    },
+    "/folders/folder_id/metadata": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/folders/998951261/metadata \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "maximumDaysAllowedInCurrentStage": 5,
+              "currentDocumentStage": "prioritization",
+              "$scope": "enterprise_12345",
+              "needsApprovalFrom": "planningteam",
+              "$template": "documentFlow",
+              "$parent": "folder_998951261",
+              "$version": 1,
+              "$typeVersion": 2,
+              "$type": "documentFlow-452b4c9d-c3ad-4ac7-b1ad-9d5192f2fc5f",
+              "$id": "e57f90ff-0044-48c2-807d-06b908765baf"
+            }
+          }
+        }
+      }
+    },
+    "/users/user_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/users/USER_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/users/USER_ID -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "space_used": 558732,
+              "max_upload_size": 5368709120,
+              "address": "",
+              "timezone": "America/Los_Angeles",
+              "created_at": "2011-01-07T12:37:09-08:00",
+              "language": "en",
+              "type": "user",
+              "login": "ariellefrey@box.com",
+              "avatar_url": "https://blosserdemoaccount.app.box.com/api/avatar/large/10543465",
+              "phone": "",
+              "space_amount": 10737418240,
+              "name": "ArielleFrey",
+              "id": "10543463",
+              "modified_at": "2014-05-30T10:39:47-07:00",
+              "job_title": "",
+              "status": "active"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/users/USER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"login\": \"dglover2@box.com\"}' ] -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "see_managed_users": false,
+              "space_used": 0,
+              "role": "user",
+              "max_upload_size": 1073741824,
+              "address": "",
+              "created_at": "2012-09-13T10:19:51-07:00",
+              "language": "en",
+              "type": "user",
+              "login": "dglover2@box.com",
+              "avatar_url": "",
+              "phone": "",
+              "space_amount": 5368709120,
+              "sync_enabled": false,
+              "name": "DanGlover",
+              "id": "18180156",
+              "modified_at": "2012-09-21T10:24:51-07:00",
+              "tracking_codes": [],
+              "job_title": "",
+              "status": "active"
+            }
+          }
+        }
+      }
+    },
+    "/enterprises/enterprise_id/device_pinners": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/enterprises/490683/device_pinners \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "owned_by": {
+                    "name": "TedBlosser",
+                    "id": "222276603",
+                    "type": "user",
+                    "login": "ted+boxworks2@box.com"
+                  },
+                  "id": "788804",
+                  "type": "device_pinner",
+                  "product_name": "iPad"
+                },
+                {
+                  "owned_by": {
+                    "name": "TedBlosser",
+                    "id": "222276603",
+                    "type": "user",
+                    "login": "ted+boxworks2@box.com"
+                  },
+                  "id": "1003086",
+                  "type": "device_pinner",
+                  "product_name": "iPhone"
+                }
+              ],
+              "limit": 100,
+              "order": [
+                {
+                  "by": "id",
+                  "direction": "ASC"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/folders/trash/items": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "sha1": "9d976863fc849f6061ecf9736710bd9c2bce488c",
+                  "sequence_id": "1",
+                  "name": "fileTueJul241454362012KWPX5S.csv",
+                  "etag": "1",
+                  "id": "2701979016",
+                  "type": "file"
+                },
+                {
+                  "sha1": "09b0e2e9760caf7448c702db34ea001f356f1197",
+                  "sequence_id": "1",
+                  "name": "fileTueJul2401005520129Z6GS3.csv",
+                  "etag": "1",
+                  "id": "2698211586",
+                  "type": "file"
+                }
+              ],
+              "offset": 0,
+              "total_count": 49542,
+              "limit": 2
+            }
+          }
+        }
+      }
+    },
+    "/upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD\\-H'authorization:B": {
+      "DELETE": {},
+      "GET": {},
       "PUT": {}
     },
-    "/body deliveryTimestamp (str): Value of header Box-Delivery-Timestamp \"\"\" messageBytes = bytes ( payload , 'utf-8' ) + bytes ( deliveryTimestamp , 'utf-8' ) hmacSHA256 = hmac . new ( signatureKey , messageBytes , hashlib . sha256 ). digest () return base64 . b64encode ( hmacSHA256 )": {
-      "DELETE": {}
+    "/group_memberships": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/group_memberships \\ -H \"Authorization: Bearer \" \\ -d '{ \"user\": { \"id\": \"1992432\"}, \"group\": { \"id\": \"1992432\" }, \"configurable_permissions : {\"can_run_reports\": true} }' \\ -X POST"
+      }
     },
-    "/recent_items -H \"Authorization: Bearer ": {
-      "GET": {}
+    "/files/file_id/collaborations": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/files/FILE_ID/collaborations \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "next_marker": "ZmlQZS0xLTE%3D",
+              "entries": [
+                {
+                  "accessible_by": {
+                    "name": "SimonTan",
+                    "id": "755492",
+                    "type": "user",
+                    "login": "simon@box.net"
+                  },
+                  "role": "editor",
+                  "created_at": "2011-11-29T12:56:35-08:00",
+                  "id": "14176246",
+                  "type": "collaboration",
+                  "modified_at": "2012-09-11T15:12:32-07:00",
+                  "created_by": {
+                    "name": "DavidLee",
+                    "id": "4276790",
+                    "type": "user",
+                    "login": "david@box.com"
+                  },
+                  "acknowledged_at": "2011-11-29T12:59:40-08:00",
+                  "status": "accepted"
+                }
+              ]
+            }
+          }
+        }
+      }
     },
-    "/events endpoint and repeat the long poll process.": {
-      "GET": {}
+    "/folders/folder_id/collaborations": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "accessible_by": {
+                    "name": "SimonTan",
+                    "id": "755492",
+                    "type": "user",
+                    "login": "simon@box.net"
+                  },
+                  "role": "editor",
+                  "created_at": "2011-11-29T12:56:35-08:00",
+                  "id": "14176246",
+                  "type": "collaboration",
+                  "modified_at": "2012-09-11T15:12:32-07:00",
+                  "created_by": {
+                    "name": "DavidLee",
+                    "id": "4276790",
+                    "type": "user",
+                    "login": "david@box.com"
+                  },
+                  "acknowledged_at": "2011-11-29T12:59:40-08:00",
+                  "status": "accepted"
+                }
+              ],
+              "total_count": 1
+            }
+          }
+        }
+      }
     },
-    "/marketingCollateral \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/events endpoint": {
-      "DELETE": {}
-    },
-    "/gvoct6FE!Qz2rDeyxCiHsYpvlnR7JJ0SCfFM2M4YiX9cIwrSo4LOYQgxyP3rzoYuMmXg96mTAidqjPuRH7HFXMWgXEEm5LTi1EDlfBocS-iRfHpc5ZeYrAZpA5B8C0Obzkr4bUoF6wGq8BZ1noN_txyZUU1nLDNuL_u0rsImWhPAZlvgt7662F9lZSQ8nw6zKaRWGyqmj06PnxewCx0EQD3padm6VYkfHE2N20gb5rw1D0a7aaRJZzEijb2ICLItqfMlZ5vBe7zGdEn3agDzZP7JlID3FYdPTITsegB10gKLgSp_AJJ9QAfDv8mzi0bGv1ZmAU1FoVLpGC0XI0UKy3N795rZBtjLlTNcuxapbHkUCoKcgdfmHEn5NRQ3tmw7hiBfnX8o-Au34ttW9ntPspdAQHL6xPzQC4OutWZDozsA5P9sGlI-sC3VC2-WXsbXSedemubVd5vWzpVZtKRlb0gpuXsnDPXnMxSH7_jT4KSLhC8b5kEMPNo33FjEJl5pwS_o_6K0awUdRpEQIxM9CC3pBUZK5ooAc5X5zxo_2FBr1xq1p_kSbt4TVnNeohiLIu38TQysSb7CMR7JRhDDZhMMwAUc0wdSszELgL053lJlPeoiaLA49rAGP_B3BVuwFAFEl696w7UMx5NKu1mA0IOn9pDebzbhTl5HuUvBAHROc1Ocjb28Svyotik1IkPIw_1R33ZyAMvEFyzIygqBj8WedQeSK38iXvF2UXvkAf9kevOdnpwsKYiJtcxeJhFm7LUVKDTufuzuGRw-T7cPtbg..\" } }": {
-      "GET": {}
-    },
-    "/788804 \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
+    "/search": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "parent": {
+                    "sequence_id": "1",
+                    "name": "MarketingActiveWork",
+                    "etag": "1",
+                    "id": "2150506",
+                    "type": "folder"
+                  },
+                  "description": "Thisisoldandneedstobeupdated-butgeneralthemesstillapply",
+                  "created_at": "2014-05-17T12:59:45-07:00",
+                  "content_created_at": "2014-05-17T12:58:58-07:00",
+                  "owned_by": {
+                    "name": "TedBlosser",
+                    "id": "19551097",
+                    "type": "user",
+                    "login": "ted@box.com"
+                  },
+                  "type": "file",
+                  "item_status": "active",
+                  "created_by": {
+                    "name": "TedBlosser",
+                    "id": "19551097",
+                    "type": "user",
+                    "login": "ted@box.com"
+                  },
+                  "sha1": "f89d97c5eea0a68e2cec911s932eca34a52355d2",
+                  "size": 408979,
+                  "sequence_id": "1",
+                  "name": "BoxforSales-EmpoweringYourMobileWorkerWhitepaper2pg(External).pdf",
+                  "modified_by": {
+                    "name": "TedBlosser",
+                    "id": "19551097",
+                    "type": "user",
+                    "login": "ted@box.com"
+                  },
+                  "etag": "1",
+                  "content_modified_at": "2014-05-17T12:58:58-07:00",
+                  "id": "172245607",
+                  "modified_at": "2014-05-17T13:00:20-07:00",
+                  "path_collection": {
+                    "entries": [
+                      {
+                        "name": "AllFiles",
+                        "id": "0",
+                        "type": "folder"
+                      },
+                      {
+                        "sequence_id": "1",
+                        "name": "MarketingActiveWork",
+                        "etag": "1",
+                        "id": "2150506",
+                        "type": "folder"
+                      }
+                    ],
+                    "total_count": 2
+                  }
+                }
+              ],
+              "offset": 0,
+              "total_count": 1,
+              "limit": 30
+            }
+          }
+        }
+      }
     },
     "/legal_hold_policy_assignments": {
-      "GET": {}
+      "POST": {
+        "request": "curl https://api.box.net/2.0/legal_hold_policy_assignments -H \"Authorization: Bearer \" \\ -d '{ \"policy_id\" : \"166757\" , \"assign_to\" : { \"type\" : \"file\" , \"id\" : \"5025127885\" } } ' \\ -X POST",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "legal_hold_policy": {
+                "policy_name": "BugBash5-12Policy3updated",
+                "id": "166757",
+                "type": "legal_hold_policy"
+              },
+              "assigned_at": "2016-05-18T17:38:03-07:00",
+              "id": "255613",
+              "assigned_by": {
+                "name": "SteveBoxuser",
+                "id": "2030388321",
+                "type": "user",
+                "login": "sboxuser@box.com"
+              },
+              "type": "legal_hold_policy_assignment",
+              "assigned_to": {
+                "id": "5025127885",
+                "type": "file"
+              }
+            }
+          }
+        }
+      }
     },
-    "/#errors\" , \"message\" : \"Item with the same name already exists\" , \"request_id\" : \"170397861659135cc65a65\" }": {
-      "DELETE": {}
+    "/files/file_id/metadata/scope/template": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/files/5010739061/metadata/enterprise/marketingCollateral \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "POST": {
+        "request": "curl https://api.box.com/2.0/files/5010739061/metadata/enterprise/marketingCollateral \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: application/json\" \\ -d '{ \"audience1\": \"internal\", \"documentType\": \"Q1 plans\", \"competitiveDocument\": \"no\", \"status\": \"active\", \"author\": \"Jones\", \"currentState\": \"proposal\"}' \\ -X POST"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/files/5010739061/metadata/enterprise/bandInfo \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "$scope": "enterprise_12345",
+              "$template": "marketingCollateral",
+              "documentType": "Q1plans",
+              "$parent": "file_5010739061",
+              "author": "Jones",
+              "$version": 0,
+              "$type": "marketingCollateral-d086c908-2498-4d3e-8a1f-01e82bfc2abe",
+              "audience1": "internal",
+              "currentState": "proposal",
+              "$typeVersion": 0,
+              "competitiveDocument": "no",
+              "status": "active",
+              "$id": "2094c584-68e1-475c-a581-534a4609594e"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/files/5010739061/metadata/enterprise/marketingCollateral \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: application/json-patch+json\" \\ -d '[{\"op\": \"test\", \"path\": \"/competitiveDocument\", \"value\": \"no\"}, { \"op\" : \"remove\" , \"path\" : \"/competitiveDocument\" }, { \"op\" : \"test\" , \"path\" : \"/status\" , \"value\" : \"active\" }, { \"op\" : \"replace\" , \"path\" : \"/status\" , \"value\" : \"inactive\" }, { \"op\" : \"test\" , \"path\" : \"/author\" , \"value\" : \"Jones\" }, { \"op\" : \"copy\" , \"from\" : \"/author\" , \"path\" : \"/editor\" }, { \"op\" : \"test\" , \"path\" : \"/currentState\" , \"value\" : \"proposal\" }, { \"op\" : \"move\" , \"from\" : \"/currentState\" , \"path\" : \"/previousState\" }, { \"op\" : \"add\" , \"path\" : \"/currentState\" , \"value\" : \"reviewed\" }] ' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "editor": "Jones",
+              "$scope": "enterprise_12345",
+              "$template": "marketingCollateral",
+              "documentType": "Q1plans",
+              "$parent": "file_5010739061",
+              "author": "Jones",
+              "$version": 1,
+              "$type": "marketingCollateral-d086c908-2498-4d3e-8a1f-01e82bfc2abe",
+              "previousState": "proposal",
+              "audience1": "internal",
+              "currentState": "reviewed",
+              "$typeVersion": 0,
+              "status": "inactive",
+              "$id": "2094c584-68e1-475c-a581-534a4609594e"
+            }
+          }
+        }
+      }
     },
-    "/thumbnail. extension": {
-      "GET": {}
-    },
-    "/content -H \"Authorization: Bearer \" package com . box . sdk public class BoxFile public URL get": {
-      "GET": {}
-    },
-    "/webhooks": {
-      "POST": {},
-      "GET": {}
-    },
-    "/COLLAB_ID \\ -H \"Authorization: Bearer ": {
+    "/folders": {
       "POST": {}
     },
-    "/255473 \\ -H \"Authorization: Bearer \" ": {
+    "/upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/commit\\-H'authoriza": {
       "POST": {}
     },
-    "/events \\ -H \"Authorization: Bearer ": {
-      "GET": {}
-    },
-    "/legal_hold_policies": {
-      "GET": {},
-      "PUT": {}
-    },
-    "/FOLDER_ID": {
-      "DELETE": {}
-    },
-    "/collaborations \\ -H \"Authorization: Bearer \" \\ -d '{\"item\": { \"id\": \"FOLDER_ID\", \"type\": \"folder\"}, \"accessible_by\": { \"id\": \"USER_ID\", \"type\": \"user\" }, \"role\": \"editor\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/content). If the call returns a 200, then you can proceed with a standard upload call. Preflight checks verify all permissions as if the file was actually uploaded including:": {
-      "GET": {}
-    },
-    "/FILE_ID \\ -H \"Authorization: Bearer \" \\ -H \"If-Match: a_unique_value\" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/181216415\" } ] }": {
-      "POST": {}
-    },
-    "/content \\ -H \"Authorization: Bearer \" -X POST": {
-      "POST": {}
-    },
-    "/ comment_id": {
-      "DELETE": {}
-    },
-    "/comments ).": {
-      "GET": {}
-    },
-    "/TASK_ASSIGNMENT_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/ json ; charset = UTF - 8 Date : Tue , 11 Apr 2017 03 : 10 : 43 GMT { \"type\" : \"file\" , \"id\" : \"158056092206\" , \"file_version\" : { \"type\" : \"file_version\" , \"id\" : \"168026296366\" , \"sha1\" : \"0e121ca5deb51dcb4c2064ccbbbb72639e036b65\" }, \"sequence_id\" : \"0\" , \"etag\" : \"0\" , \"sha1\" : \"0e121ca5deb51dcb4c2064ccbbbb72639e036b65\" , \"name\" : \" upload session API example \" , \"description\" : \"\" , \"size\" : 10000000 , \"path_collection\" : { \"total_count\" : 1 , \"entries\" : [ { \"type\" : \"folder\" , \"id\" : \"0\" , \"sequence_id\" : null , \"etag\" : null , \"name\" : \"All Files\" } ] }, \"created_at\" : \"2017-04-10T20:10:44-07:00\" , \"modified_at\" : \"2017-04-10T20:10:44-07:00\" , \"trashed_at\" : null , \"purged_at\" : null , \"content_created_at\" : \"2017-04-07T17:58:08-07:00\" , \"content_modified_at\" : \"2017-04-07T17:58:08-07:00\" , \"created_by\" : { \"type\" : \"user\" , \"id\" : \"2313123123\" , \"name\" : \"testuser@box.com\" , \"login\" : \"testuser@box.com\" }, \"modified_by\" : { \"type\" : \"user\" , \"id\" : \"2313123123\" , \"name\" : \"testuser@box.com\" , \"login\" : \"testuser@box.com\" }, \"owned_by\" : { \"type\" : \"user\" , \"id\" : \"2313123123\" , \"name\" : \"testuser@box.com\" , \"login\" : \"testuser@box.com\" }, \"shared_link\" : null , \"parent\" : { \"type\" : \"folder\" , \"id\" : \"0\" , \"sequence_id\" : null , \"etag\" : null , \"name\" : \"All Files\" }, \"item_status\" : \"active\" }": {
-      "DELETE": {}
-    },
-    "/USER_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/or new name will need to be included in the request.": {
-      "DELETE": {}
-    },
-    "/invites": {
-      "GET": {}
-    },
-    "/copy \\ -H \"Authorization: Bearer \" \\ -d '{\"parent\": {\"id\" : DESTINATION_FOLDER_ID} }' \\ -X POST": {
-      "POST": {}
-    },
-    "/file_version_legal_holds": {
+    "/folders/folder_id": {
       "DELETE": {},
-      "GET": {}
-    },
-    "/166921 \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/www.box.com\" , \"created_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" }, \"created_at\" : \"2015-05-07T14:31:16-07:00\" , \"modified_at\" : \"2015-05-07T15:45:04-07:00\" , \"parent\" : { \"type\" : \"folder\" , \"id\" : \"848123342\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Documentation\" }, \"description\" : \"Cloud Content Management\" , \"item_status\" : \"active\" , \"trashed_at\" : null , \"purged_at\" : null , \"shared_link\" : null , \"path_collection\" : { \"total_count\" : 2 , \"entries\" : [ { \"type\" : \"folder\" , \"id\" : \"0\" , \"sequence_id\" : null , \"etag\" : null , \"name\" : \"All Files\" }, { \"type\" : \"folder\" , \"id\" : \"848123342\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Documentation\" } ] }, \"modified_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" }, \"owned_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" } }": {
-      "DELETE": {}
-    },
-    "/TASK_ID \\ -H \"Authorization: Bearer ": {
-      "POST": {}
-    },
-    "/json\" \\ -d '{ \"audience1\": \"internal\", \"documentType\": \"Q1 plans\", \"competitiveDocument\": \"no\", \"status\": \"active\", \"author\": \"Jones\", \"currentState\": \"proposal\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/255613 \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/json\" \\ -d '{\"currentDocumentStage\": \"initial vetting\", \"needsApprovalFrom\": \"vetting team\", \"nextDocumentStage\": \"prioritization\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/assignments \\ -H \"Authorization: Bearer ": {
-      "DELETE": {}
-    },
-    "/versions \\ -H \"Authorization: Bearer \" \\ package com . box . sdk public class BoxFile public Collection < BoxFileVersion > get": {
-      "GET": {}
-    },
-    "/10543465\" }": {
-      "POST": {}
-    },
-    "/retention_policies \\ -H \"Authorization: Bearer \" ": {
-      "GET": {}
-    },
-    "/ file_id": {
-      "DELETE": {},
-      "GET": {}
-    },
-    "/vspke7y05sb214wjokpk\" , \"download_url\" : null , \"vanity_url\" : null , \"is_password_enabled\" : false , \"unshared_at\" : null , \"download_count\" : 0 , \"preview_count\" : 0 , \"access\" : \"open\" , \"permissions\" : { \"can_download\" : true , \"can_preview\" : true } }, \"folder_upload_email\" : { \"access\" : \"open\" , \"email\" : \"upload.Picture.k13sdz1@u.box.com\" }, \"parent\" : { \"type\" : \"folder\" , \"id\" : \"0\" , \"sequence_id\" : null , \"etag\" : null , \"name\" : \"All Files\" }, \"item_status\" : \"active\" , \"item_collection\" : { \"total_count\" : 0 , \"entries\" : [], \"offset\" : 0 , \"limit\" : 100 } }": {
-      "PUT": {}
-    },
-    "/tasks \\ -H \"Authorization: Bearer \" \\ -d '{\"item\": {\"type\": \"file\", \"id\": \"FILE_ID\"}, \"action\": \"review\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/17738362\" }": {
-      "GET": {}
-    },
-    "/content , and POST": {
-      "POST": {}
-    },
-    "/www.box.com\" , \"created_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" }, \"created_at\" : \"2015-05-07T15:00:01-07:00\" , \"modified_at\" : \"2015-05-07T15:00:01-07:00\" , \"parent\" : { \"type\" : \"folder\" , \"id\" : \"848123342\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Documentation\" }, \"description\" : \"Cloud Content Management\" , \"item_status\" : \"active\" , \"trashed_at\" : null , \"purged_at\" : null , \"shared_link\" : null , \"path_collection\" : { \"total_count\" : 2 , \"entries\" : [ { \"type\" : \"folder\" , \"id\" : \"0\" , \"sequence_id\" : null , \"etag\" : null , \"name\" : \"All Files\" }, { \"type\" : \"folder\" , \"id\" : \"848123342\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Documentation\" } ] }, \"modified_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" }, \"owned_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" } }": {
-      "PUT": {}
-    },
-    "/groups \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Box Employees\", \"provenance\": \"Google\", \"external_sync_identifier\": \"Google-Box-Users\", \"description\": \"All box Users\", \"invitability_level\": \"admins_and_members\", \"member_viewability_level\": \"admins_only\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/#errors\" , \"message\" : \"Access denied - insufficient permission\" , \"request_id\" : \"3017045825893a6564995b\" }": {
-      "GET": {}
-    },
-    "/F971964745A5CD0C001BBE4E58196BFD\" }, \"session_expires_at\" : \"2017-04-18T01:45:15Z\" , \"id\" : \"F971964745A5CD0C001BBE4E58196BFD\" , \"type\" : \"upload_session\" , \"num_parts_processed\" : 2 }": {
-      "POST": {}
-    },
-    "/Los_Angeles\" , \"space_amount\" : 5368709120 , \"space_used\" : 0 , \"max_upload_size\" : 16106127360 , \"status\" : \"active\" , \"job_title\" : \"\" , \"phone\" : \"\" , \"address\" : \"\" , \"avatar_url\" : \"\" }": {
-      "PUT": {}
-    },
-    "/788804 \\ -H \"Authorization: Bearer ": {
-      "DELETE": {}
-    },
-    "/watermark \\ -H \"Authorization: Bearer ": {
-      "PUT": {}
-    },
-    "/email_aliases \\ -H \"Authorization: Bearer ": {
-      "POST": {}
-    },
-    "/166921 \\ -H \"Authorization: Bearer \" \\ -d '{ \"policy_name\" : \"New Policy 3\" , \"description\" : \"Policy 3 New Description\" } ' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/trash \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/{id} or PUT": {
-      "PUT": {}
-    },
-    "/ }, \"request_id\" : \"abcdef\" }": {
-      "POST": {}
-    },
-    "/181216415\" , \"is_exempt_from_device_limits\" : false , \"is_exempt_from_login_verification\" : false , \"enterprise\" : { \"type\" : \"enterprise\" , \"id\" : \"17077211\" , \"name\" : \"seanrose enterprise\" }, \"my_tags\" : [ \"important\" , \"needs review\" ] }": {
-      "GET": {}
-    },
-    "/notification.example.net\", \"triggers\": [\"FILE.PREVIEWED\", \"FILE.DOWNLOADED\"]}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/{RETENTION_POLICY_ASSIGNMENT_ID} \\ -H \"Authorization: Bearer \" ": {
-      "POST": {}
-    },
-    "/reference#preflight-check . Any error response from the preflight check will be proxied directly as the response of the create session request, and not result in the creation of a new session.": {
-      "POST": {}
-    },
-    "/currentState\" , \"value\" : \"reviewed\" }] ' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/GROUP_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"framily\"}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/{FILE_ID} .": {
-      "GET": {}
-    },
-    "/ webhook_id": {
-      "DELETE": {}
-    },
-    "/events endpoint to retrieve the long poll URL. Next, make a GET": {
-      "GET": {}
-    },
-    "/FOLDER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"name\":\"New Folder Name!\"}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/ -H \"Authorization: Bearer ": {
-      "GET": {}
-    },
-    "/ sessionId": {
-      "DELETE": {},
-      "GET": {}
-    },
-    "/retention_policy_assignments \\ -H \"Authorization: Bearer \" \\ -d '{\"policy_id\": \"POLICY_ID\", \"assign_to\": {\"type\": \"folder\", \"id\": \"FOLDER_ID\"} }' \\ -X POST": {
-      "POST": {}
-    },
-    "/FILE_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -d '{\"lock\": null}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/#errors\" , \"message\" : \"Forbidden\" , \"request_id\" : \"616776114571858dc4ab8f\" }": {
-      "GET": {},
-      "PUT": {}
-    },
-    "/content \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Wolves owners.ppt\", \"parent\": {\"id\": \"1523432\"}, \"size\": 15243}' \\ -X OPTIONS package com . box . sdk public class BoxFolder public void canUpload ( String name , long fileSize ) public class BoxFile public void canUploadVersion ( String name , long fileSize , String parentID ) Files . prototype . preflightUploadFile = function ( parentFolderID , fileData , qs , callback ) Files . prototype . preflightUploadNewFileVersion = function ( fileID , fileData , qs , callback ) namespace Box . V2 . Managers class BoxFilesManager public async Task < BoxPreflightCheck > PreflightCheck ( BoxPreflightCheckRequest preflightCheckRequest ) public async Task < BoxPreflightCheck > PreflightCheckNewVersion ( string fileId , BoxPreflightCheckRequest preflightCheckRequest )": {
-      "DELETE": {}
-    },
-    "/revoke \\ -d 'client_id=MY_CLIENT_ID' \\ -d 'client_secret=MY_CLIENT_SECRET' \\ -d 'token=MY_TOKEN' \\ -X POST": {
-      "POST": {}
-    },
-    "/memberships \\ -H \"Authorization: Bearer ": {
-      "GET": {}
-    },
-    "/shared_items": {
-      "GET": {}
-    },
-    "/events endpoint with the last known stream_position. After the server sends this response it closes the connection. You must now repeat the long poll process to begin listening for events again.": {
-      "GET": {}
-    },
-    "/{id} GET": {
-      "GET": {}
-    },
-    "/vspke7y05sb214wjokpk\" , \"download_url\" : null , \"vanity_url\" : null , \"is_password_enabled\" : false , \"unshared_at\" : null , \"download_count\" : 0 , \"preview_count\" : 0 , \"access\" : \"open\" , \"permissions\" : { \"can_download\" : true , \"can_preview\" : true } }": {
-      "GET": {}
-    },
-    "/{id} API.": {
-      "GET": {}
-    },
-    "/ collab_id": {
-      "DELETE": {},
-      "GET": {}
-    },
-    "/comments \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -d '{\"item\": {\"type\": \"file\", \"id\": \"FILE_ID\"}, \"message\": \"YOUR_MESSAGE\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/notification.example.net\" , \"triggers\" : [ \"FILE.PREVIEWED\" , \"FILE.DOWNLOADED\" ] }": {
-      "DELETE": {}
-    },
-    "/COLLAB_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/ user_id": {
-      "DELETE": {},
-      "GET": {}
-    },
-    "/{id} and pass the new shared link object as the value of the shared_link field. If you pass an empty object for the shared link ( shared_link = {} ), then the shared link will be created with the default access level and settings for shared links configured by the enterprise admin.": {
-      "DELETE": {}
-    },
-    "/VERSION_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/task_assignments \\ -H \"Authorization: Bearer \" \\ -d '{ \"message\": \"hello!!!\" }' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/error response, exponential back-off should be used in retries. Server disconnects should be handled as 5XX and get": {
-      "GET": {}
-    },
-    "/items to get": {
-      "GET": {}
-    },
-    "/USER_ID to retrieve the login email address.": {
-      "GET": {}
-    },
-    "/x-www-form-urlencoded; charset=UTF-8' } })": {
-      "GET": {}
-    },
-    "/collaborations \\ -H \"Authorization: Bearer ": {
-      "GET": {}
-    },
-    "/nextDocumentStage\" }] ' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/collaborations \\ -H \"Authorization: Bearer \" package com . box . sdk public class BoxFolder public Collection < BoxCollaboration . Info > get": {
-      "GET": {}
-    },
-    "/GROUP_ID \\ -H \"Authorization: Bearer ": {
-      "POST": {}
-    },
-    "/legal_hold_policy_assignments -H \"Authorization: Bearer \" \\ -d '{ \"policy_id\" : \"166757\" , \"assign_to\" : { \"type\" : \"file\" , \"id\" : \"5025127885\" } } ' \\ -X POST": {
-      "POST": {}
-    },
-    "/metadata \\ -H \"Authorization: Bearer ": {
-      "GET": {}
-    },
-    "/POLICY_ID \\ -H \"Authorization: Bearer \" ": {
-      "POST": {}
-    },
-    "/F971964745A5CD0C001BBE4E58196BFD\" }, \"session_expires_at\" : \"2017-04-18T01:45:15Z\" , \"id\" : \"F971964745A5CD0C001BBE4E58196BFD\" , \"type\" : \"upload_session\" , \"num_parts_processed\" : 0 }": {
-      "PUT": {}
-    },
-    "/EMAIL_ALIAS_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/assignments \\ -H \"Authorization: Bearer \" ": {
-      "GET": {}
-    },
-    "/reference#offset-based-paging )": {
-      "GET": {}
-    },
-    "/removal operations. If any collection IDs are malformed or do not exist in the user’s account, the API call will throw a 400. Only if all of the collection IDs are valid will the adds and removals be carried out.": {
-      "PUT": {}
-    },
-    "/USER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"sean\"}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/USER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"login\": \"dglover2@box.com\"}' ] -X PUT": {
-      "PUT": {}
-    },
-    "/TASK_ASSIGNMENT_ID \\ -H \"Authorization: Bearer ": {
-      "POST": {}
-    },
-    "/device_pinners \\ -H \"Authorization: Bearer ": {
-      "GET": {}
-    },
-    "/{id} PUT": {
-      "PUT": {}
-    },
-    "/ policy_id": {
-      "DELETE": {}
-    },
-    "/copy \\ -H \"Authorization: Bearer \" \\ -d '{\"parent\": {\"id\" : FOLDER_ID} }' \\ -X POST": {
-      "POST": {}
-    },
-    "/group_memberships \\ -H \"Authorization: Bearer \" \\ -d '{ \"user\": { \"id\": \"1992432\"}, \"group\": { \"id\": \"1992432\" }, \"configurable_permissions : {\"can_run_reports\": true} }' \\ -X POST": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "parent": {
+                "name": "AllFiles",
+                "id": "0",
+                "type": "folder"
+              },
+              "created_at": "2012-12-12T10:53:43-08:00",
+              "description": "SomepicturesItook",
+              "owned_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "type": "folder",
+              "item_status": "active",
+              "item_collection": {
+                "entries": [
+                  {
+                    "sha1": "134b65991ed521fcfe4724b7d814ab8ded5185dc",
+                    "sequence_id": "3",
+                    "name": "tigers.jpeg",
+                    "etag": "3",
+                    "id": "5000948880",
+                    "type": "file"
+                  }
+                ],
+                "offset": 0,
+                "total_count": 1,
+                "limit": 100
+              },
+              "created_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "folder_upload_email": {
+                "access": "open",
+                "email": "upload.Picture.k13sdz1@u.box.com"
+              },
+              "size": 629644,
+              "sequence_id": "1",
+              "name": "Pictures",
+              "modified_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "shared_link": {
+                "is_password_enabled": false,
+                "access": "open",
+                "permissions": {
+                  "can_preview": true,
+                  "can_download": true
+                },
+                "preview_count": 0,
+                "url": "https://www.box.com/s/vspke7y05sb214wjokpk",
+                "download_count": 0
+              },
+              "etag": "1",
+              "id": "11446498",
+              "modified_at": "2012-12-12T11:15:04-08:00",
+              "path_collection": {
+                "entries": [
+                  {
+                    "name": "AllFiles",
+                    "id": "0",
+                    "type": "folder"
+                  }
+                ],
+                "total_count": 1
+              }
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/folders/FOLDER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"collections\": [{\"id\":\"123\"}]}' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "parent": {
+                "name": "AllFiles",
+                "id": "0",
+                "type": "folder"
+              },
+              "created_at": "2012-12-12T10:53:43-08:00",
+              "description": "SomepicturesItook",
+              "owned_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "type": "folder",
+              "item_status": "active",
+              "item_collection": {
+                "entries": [
+                  {
+                    "sha1": "134b65991ed521fcfe4724b7d814ab8ded5185dc",
+                    "sequence_id": "3",
+                    "name": "tigers.jpeg",
+                    "etag": "3",
+                    "id": "5000948880",
+                    "type": "file"
+                  }
+                ],
+                "offset": 0,
+                "total_count": 1,
+                "limit": 100
+              },
+              "created_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "folder_upload_email": {
+                "access": "open",
+                "email": "upload.Picture.k13sdz1@u.box.com"
+              },
+              "size": 629644,
+              "sequence_id": "1",
+              "name": "NewFolderName!",
+              "modified_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "shared_link": {
+                "is_password_enabled": false,
+                "access": "open",
+                "permissions": {
+                  "can_preview": true,
+                  "can_download": true
+                },
+                "preview_count": 0,
+                "url": "https://www.box.com/s/vspke7y05sb214wjokpk",
+                "download_count": 0
+              },
+              "etag": "1",
+              "id": "11446498",
+              "modified_at": "2012-12-12T11:15:04-08:00",
+              "path_collection": {
+                "entries": [
+                  {
+                    "name": "AllFiles",
+                    "id": "0",
+                    "type": "folder"
+                  }
+                ],
+                "total_count": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "/web_links/web_link_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/web_links/WEB_LINK_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/web_links/WEB_LINK_ID \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "parent": {
+                "sequence_id": "1",
+                "name": "Documentation",
+                "etag": "1",
+                "id": "848123342",
+                "type": "folder"
+              },
+              "created_at": "2015-05-07T14:31:16-07:00",
+              "description": "CloudContentManagement",
+              "owned_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "type": "web_link",
+              "item_status": "active",
+              "created_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "url": "https://www.box.com",
+              "sequence_id": "0",
+              "name": "BoxWebsite",
+              "modified_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "etag": "0",
+              "id": "6742981",
+              "modified_at": "2015-05-07T14:31:16-07:00",
+              "path_collection": {
+                "entries": [
+                  {
+                    "name": "AllFiles",
+                    "id": "0",
+                    "type": "folder"
+                  },
+                  {
+                    "sequence_id": "1",
+                    "name": "Documentation",
+                    "etag": "1",
+                    "id": "848123342",
+                    "type": "folder"
+                  }
+                ],
+                "total_count": 2
+              }
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/web_links/web_link_id \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Box Marketing Web Page\"}' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "parent": {
+                "sequence_id": "1",
+                "name": "Documentation",
+                "etag": "1",
+                "id": "848123342",
+                "type": "folder"
+              },
+              "created_at": "2015-05-07T14:31:16-07:00",
+              "description": "CloudContentManagement",
+              "owned_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "type": "web_link",
+              "item_status": "active",
+              "created_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "url": "https://www.box.com",
+              "sequence_id": "2",
+              "name": "BoxMarketingWebPage",
+              "modified_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "etag": "2",
+              "id": "6742981",
+              "modified_at": "2015-05-07T15:45:04-07:00",
+              "path_collection": {
+                "entries": [
+                  {
+                    "name": "AllFiles",
+                    "id": "0",
+                    "type": "folder"
+                  },
+                  {
+                    "sequence_id": "1",
+                    "name": "Documentation",
+                    "etag": "1",
+                    "id": "848123342",
+                    "type": "folder"
+                  }
+                ],
+                "total_count": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "/files/file_id/versions/current": {
       "POST": {}
     },
     "/collaborations": {
-      "GET": {}
+      "POST": {
+        "request": "curl https://api.box.com/2.0/collaborations \\ -H \"Authorization: Bearer \" \\ -d '{\"item\": { \"id\": \"FOLDER_ID\", \"type\": \"folder\"}, \"accessible_by\": { \"id\": \"USER_ID\", \"type\": \"user\" }, \"role\": \"editor\"}' \\ -X POST"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/collaborations ?status = pending \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "accessible_by": {
+                    "name": "seanrose",
+                    "id": "181216415",
+                    "type": "user",
+                    "login": "sean+awesome@box.com"
+                  },
+                  "role": "Editor",
+                  "created_at": "2012-10-17T23:14:42-07:00",
+                  "id": "27513888",
+                  "type": "collaboration",
+                  "modified_at": "2012-10-17T23:14:42-07:00",
+                  "created_by": {
+                    "name": "sean",
+                    "id": "11993747",
+                    "type": "user",
+                    "login": "sean@box.com"
+                  },
+                  "status": "Pending"
+                }
+              ],
+              "total_count": 1
+            }
+          }
+        }
+      }
     },
-    "/events , POST": {
-      "POST": {}
-    },
-    "/GROUP_MEMBERSHIP_ID \\ -H \"Authorization: Bearer \" \\ -d '{ \"role\": \"admin\" }, { \"configurable_permissions\":{\"can_run_reports\": false} }' \\ -X PUT": {
+    "/endpoint/id": {
+      "POST": {},
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "shared_link": {
+                "is_password_enabled": true,
+                "access": "open",
+                "permissions": {
+                  "can_preview": true,
+                  "can_download": true
+                },
+                "download_url": "https://blosserdemoaccount.box.com/shared/static/7mcmdlavtye5o5i0ue8xmtwh2sx5bv8p.png",
+                "effective_access": "open",
+                "preview_count": 0,
+                "url": "https://blosserdemoaccount.box.com/s/7mcmdlavtye5o5i0ue8xmtwh2sx5bv8p",
+                "download_count": 0
+              },
+              "etag": "1",
+              "id": "10559150999",
+              "type": "file"
+            }
+          }
+        }
+      },
       "PUT": {}
     },
-    "/ json ; charset = UTF - 8 Content - Length : 107 Connection : keep - alive { \"part\" : { \"part_id\" : \"E8A3ED8E\" , \"offset\" : 8388608 , \"size\" : 1611392 , \"sha1\" : \"3a3d125491299b1bc16ab3b3b3d86452e3c8a0e3\" } }": {
-      "POST": {}
-    },
-    "/current \\ -H \"Authorization: Bearer \" \\ -d '{\"type\": \"file_version\", \"id\" : \"FILE_VERSION_ID\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/GROUP_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/FILE_VERSION_RETENTION_ID \\ -H \"Authorization: Bearer \" ": {
+    "/files/file_id/content": {
       "GET": {}
+    },
+    "/webhooks": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/webhooks \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: application/json\" -X POST \\ -d '{\"target\": {\"id\": \"<TARGET_ID>\", \"type\": \"folder\"}, \"address\": \"<NOTIFICATION_URL>\", \"triggers\": [\"FILE.UPLOADED\",\"FILE.DOWNLOADED\"]}'",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "next_marker": "ZmlQZS0xLTE%3D",
+              "entries": [
+                {
+                  "id": "4161",
+                  "type": "webhook",
+                  "target": {
+                    "id": "5018326685",
+                    "type": "folder"
+                  }
+                },
+                {
+                  "id": "4165",
+                  "type": "webhook",
+                  "target": {
+                    "id": "5016243669",
+                    "type": "file"
+                  }
+                }
+              ],
+              "limit": 2
+            }
+          }
+        }
+      }
+    },
+    "/legal_hold_policies/policy_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/legal_hold_policies/166921 \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/legal_hold_policies/166757 \\ -H \"Authorization: Bearer \" \\",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "assignment_counts": {
+                "file_version": 0,
+                "folder": 0,
+                "file": 0,
+                "user": 1
+              },
+              "policy_name": "Policy4",
+              "description": "Postmancreatedpolicy",
+              "created_at": "2016-05-18T10:28:45-07:00",
+              "id": "166757",
+              "filter_ended_at": "2016-05-21T01:00:00-07:00",
+              "type": "legal_hold_policy",
+              "modified_at": "2016-05-18T11:25:59-07:00",
+              "created_by": {
+                "name": "SteveBoxuser",
+                "id": "2030388321",
+                "type": "user",
+                "login": "steve@box.com"
+              },
+              "status": "active",
+              "filter_started_at": "2016-05-17T01:00:00-07:00"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/legal_hold_policies/166921 \\ -H \"Authorization: Bearer \" \\ -d '{ \"policy_name\" : \"New Policy 3\" , \"description\" : \"Policy 3 New Description\" } ' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "policy_name": "NewPolicy3",
+              "description": "Policy3NewDescription",
+              "created_at": "2016-05-18T16:18:49-07:00",
+              "id": "166921",
+              "filter_ended_at": "2016-05-13T01:00:00-07:00",
+              "type": "legal_hold_policy",
+              "modified_at": "2016-05-18T16:20:47-07:00",
+              "created_by": {
+                "name": "RyanChurchill",
+                "id": "2030388321",
+                "type": "user",
+                "login": "rchurchill+deventerprise@box.com"
+              },
+              "filter_started_at": "2016-05-11T01:00:00-07:00"
+            }
+          }
+        }
+      }
     },
     "/legal_hold_policies_assignments": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/legal_hold_policy_assignments ?policy_id = 166757 \\ -H \"Authorization: Bearer \" \\",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "id": "255473",
+                  "type": "legal_hold_policy_assignment"
+                }
+              ],
+              "limit": 100,
+              "order": [
+                {
+                  "by": "retention_policy_id,retention_policy_object_id",
+                  "direction": "ASC"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/legal_hold_policies": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/legal_hold_policies \\ -H \"Authorization: Bearer \" \\ -d '{ \"policy_name\" : \"Policy 3\" , \"description\" : \"postman created policy\" , \"filter_started_at\" : \"2016-05-11T00:00:00-08:00\" , \"filter_ended_at\" : \"2016-05-13T00:00:00-08:00\" } ' \\ -X POST",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "assignment_counts": {
+                "file_version": 0,
+                "folder": 0,
+                "file": 0,
+                "user": 0
+              },
+              "policy_name": "Policy",
+              "description": "postmancreatedpolicy",
+              "created_at": "2017-01-24T16:57:22-08:00",
+              "type": "legal_hold_policy",
+              "created_by": {
+                "name": "JohnSmith",
+                "id": "2030388321",
+                "type": "user",
+                "login": "jsmith@box.com"
+              },
+              "is_ongoing": true,
+              "id": "281105",
+              "modified_at": "2017-01-24T16:57:22-08:00",
+              "status": "active"
+            }
+          }
+        }
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/legal_hold_policies ?policy_name = pol \\ -H \"Authorization: Bearer \" \\",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "policy_name": "Policy1",
+                  "id": "166877",
+                  "type": "legal_hold_policy"
+                },
+                {
+                  "policy_name": "Policy2",
+                  "id": "166881",
+                  "type": "legal_hold_policy"
+                }
+              ],
+              "limit": 3,
+              "order": [
+                {
+                  "by": "policy_name",
+                  "direction": "ASC"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/endpoint/id/trash": {
+      "DELETE": {},
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "parent": {
+                "name": "AllFiles",
+                "id": "0",
+                "type": "folder"
+              },
+              "description": "",
+              "created_at": "2013-01-30T18:43:56-08:00",
+              "content_created_at": "2013-01-30T18:43:56-08:00",
+              "owned_by": {
+                "name": "seantest",
+                "id": "181757341",
+                "type": "user",
+                "login": "sean+test@box.com"
+              },
+              "type": "file",
+              "item_status": "trashed",
+              "created_by": {
+                "name": "seantest",
+                "id": "181757341",
+                "type": "user",
+                "login": "sean+test@box.com"
+              },
+              "trashed_at": "2013-02-07T10:49:34-08:00",
+              "sha1": "4bd9e98652799fc57cf9423e13629c151152ce6c",
+              "size": 163265,
+              "sequence_id": "2",
+              "name": "Screenshot_1_30_13_6_37_PM.png",
+              "purged_at": "2013-03-09T10:49:34-08:00",
+              "modified_by": {
+                "name": "seantest",
+                "id": "181757341",
+                "type": "user",
+                "login": "sean+test@box.com"
+              },
+              "shared_link": {
+                "is_password_enabled": false,
+                "access": "open",
+                "permissions": {
+                  "can_preview": true,
+                  "can_download": true
+                },
+                "preview_count": 0,
+                "download_count": 0
+              },
+              "etag": "2",
+              "content_modified_at": "2013-01-30T18:44:00-08:00",
+              "id": "5859258256",
+              "modified_at": "2013-01-30T18:44:00-08:00",
+              "path_collection": {
+                "entries": [
+                  {
+                    "name": "Trash",
+                    "id": "1",
+                    "type": "folder"
+                  }
+                ],
+                "total_count": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "/groups/group_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/groups/GROUP_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/groups/GROUP_ID \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "name": "Everyone",
+              "created_at": "2014-09-15T13:15:35-07:00",
+              "id": "255224",
+              "type": "group",
+              "modified_at": "2014-09-15T13:15:35-07:00"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/groups/GROUP_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"framily\"}' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "name": "framily",
+              "created_at": "2013-05-16T15:27:57-07:00",
+              "id": "119720",
+              "type": "group",
+              "modified_at": "2013-05-16T15:27:57-07:00"
+            }
+          }
+        }
+      }
+    },
+    "/files/file_id/metadata": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/files/5010739061/metadata \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "currentDocumentStage": "Init",
+                  "$scope": "enterprise_12345",
+                  "needsApprovalFrom": "Smith",
+                  "$template": "documentFlow",
+                  "$parent": "file_5010739061",
+                  "$version": 4,
+                  "$typeVersion": 2,
+                  "$type": "documentFlow-452b4c9d-c3ad-4ac7-b1ad-9d5192f2fc5f",
+                  "$id": "50ba0dba-0f89-4395-b867-3e057c1f6ed9"
+                },
+                {
+                  "$scope": "enterprise_12345",
+                  "skuNumber": 45334223,
+                  "$template": "productInfo",
+                  "$parent": "file_5010739061",
+                  "description": "Watch",
+                  "$version": 2,
+                  "$typeVersion": 1,
+                  "$type": "productInfo-9d7b6993-b09e-4e52-b197-e42f0ea995b9",
+                  "$id": "15d1014a-06c2-47ad-9916-014eab456194"
+                },
+                {
+                  "$scope": "global",
+                  "$template": "properties",
+                  "$parent": "file_5010739061",
+                  "Popularity": "25",
+                  "$version": 0,
+                  "$typeVersion": 2,
+                  "$type": "properties",
+                  "$id": "b6f36cbc-fc7a-4eda-8889-130f350cc057"
+                }
+              ],
+              "limit": 100
+            }
+          }
+        }
+      }
+    },
+    "/task_assignments": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/task_assignments \\ -H \"Authorization: Bearer \" \\ -d '{ \"task\": { \"id\": \"1992432\", \"type\": \"task\" }, \"assign_to\": { \"id\": \"1992432\" } }' \\ -X POST"
+      }
+    },
+    "/folders/folder_id/items": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "sequence_id": "1",
+                  "name": "StephenCurryThreePointers",
+                  "etag": "1",
+                  "id": "192429928",
+                  "type": "folder"
+                },
+                {
+                  "sequence_id": "0",
+                  "name": "Warriors.jpg",
+                  "etag": "0",
+                  "id": "818853862",
+                  "type": "file"
+                }
+              ],
+              "offset": 0,
+              "total_count": 24,
+              "limit": 2,
+              "order": [
+                {
+                  "by": "type",
+                  "direction": "ASC"
+                },
+                {
+                  "by": "name",
+                  "direction": "ASC"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/web_links": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/web_links \\ -H \"Authorization: Bearer \" \\ -d '{\"url\":\"https://www.box.com\", \"parent\": {\"id\": \"848123342\"}, \"name\": \"Box Website!\", \"description\": \"Cloud Content Management\"}' \\ -X POST",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "parent": {
+                "sequence_id": "1",
+                "name": "Documentation",
+                "etag": "1",
+                "id": "848123342",
+                "type": "folder"
+              },
+              "created_at": "2015-05-07T15:00:01-07:00",
+              "description": "CloudContentManagement",
+              "owned_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "type": "web_link",
+              "item_status": "active",
+              "created_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "url": "https://www.box.com",
+              "sequence_id": "0",
+              "name": "BoxWebsite!",
+              "modified_by": {
+                "name": "TedBlosser",
+                "id": "10523870",
+                "type": "user",
+                "login": "ted+demo@box.com"
+              },
+              "etag": "0",
+              "id": "6743065",
+              "modified_at": "2015-05-07T15:00:01-07:00",
+              "path_collection": {
+                "entries": [
+                  {
+                    "name": "AllFiles",
+                    "id": "0",
+                    "type": "folder"
+                  },
+                  {
+                    "sequence_id": "1",
+                    "name": "Documentation",
+                    "etag": "1",
+                    "id": "848123342",
+                    "type": "folder"
+                  }
+                ],
+                "total_count": 2
+              }
+            }
+          }
+        }
+      }
+    },
+    "/folders/folder_id/metadata/scope/template": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/folders/998951261/metadata/enterprise/documentFlow \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "POST": {
+        "request": "curl https://api.box.com/2.0/folders/998951261/metadata/enterprise/documentFlow \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: application/json\" \\ -d '{\"currentDocumentStage\": \"initial vetting\", \"needsApprovalFrom\": \"vetting team\", \"nextDocumentStage\": \"prioritization\"}' \\ -X POST"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/folders/998951261/metadata/enterprise/documentFlow \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "currentDocumentStage": "initialvetting",
+              "$scope": "enterprise_12345",
+              "needsApprovalFrom": "vettingteam",
+              "$template": "documentFlow",
+              "$parent": "folder_998951261",
+              "nextDocumentStage": "prioritization",
+              "$version": 0,
+              "$typeVersion": 2,
+              "$type": "documentFlow-452b4c9d-c3ad-4ac7-b1ad-9d5192f2fc5f",
+              "$id": "e57f90ff-0044-48c2-807d-06b908765baf"
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/folders/998951261/metadata/enterprise/documentFlow \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: application/json-patch+json\" \\ -d '[{\"op\": \"test\", \"path\":\"/currentDocumentStage\", \"value\": \"initial vetting\" }, { \"op\" : \"replace\" , \"path\" : \"/currentDocumentStage\" , \"value\" : \"prioritization\" }, { \"op\" : \"test\" , \"path\" : \"/needsApprovalFrom\" , \"value\" : \"vetting team\" }, { \"op\" : \"replace\" , \"path\" : \"/needsApprovalFrom\" , \"value\" : \"planning team\" }, { \"op\" : \"add\" , \"path\" : \"/maximumDaysAllowedInCurrentStage\" , \"value\" : 5 }, { \"op\" : \"test\" , \"path\" : \"/nextDocumentStage\" , \"value\" : \"prioritization\" }, { \"op\" : \"remove\" , \"path\" : \"/nextDocumentStage\" }] ' \\ -X PUT"
+      }
+    },
+    "/files/file_id/tasks": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "item": {
+                    "sha1": "81cc829fb8366fcfc108aa6c5a9bde01a6a10c16",
+                    "sequence_id": "6",
+                    "name": "API-PersistOn-Behalf-Ofinformation.docx",
+                    "etag": "6",
+                    "id": "7026335894",
+                    "type": "file"
+                  },
+                  "id": "1786931",
+                  "type": "task"
+                }
+              ],
+              "total_count": 1
+            }
+          }
+        }
+      }
+    },
+    "/groups": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/groups \\ -H \"Authorization: Bearer \""
+      },
       "GET": {}
     },
-    "/file_changed\" , \"triggers\" : [ \"FILE.DOWNLOADED\" , \"FILE.UPLOADED\" ] }": {
+    "/upload.box.com/api/2.0/files/upload_sessions/sessionId/commit": {
+      "POST": {
+        "request": "curl -X POST \\ https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/commit \\ -H 'authorization: Bearer spSSvCEepjG4PX3fO5IkcZe5h1nQYXfn' \\ -H 'content-type: application/json' \\ -H 'digest: sha=DhIcpd61HctMIGTMu7tyY54Da2U=' \\ -d '{ \"parts\" :[ { \"part_id\" : \"BFDF5379\" , \"offset\" : 0 , \"size\" : 8388608 , \"sha1\" : \"7e94728397954257ad759a8429a165ab00572733\" }, { \"part_id\" : \"E8A3ED8E\" , \"offset\" : 8388608 , \"size\" : 1611392 , \"sha1\" : \"3a3d125491299b1bc16ab3b3b3d86452e3c8a0e3\" } ], \"attributes\" :{ \"content_modified_at\" : \"2017-04-08T00:58:08Z\" } } '"
+      }
+    },
+    "/upload.box.com/api/2.0/files/upload_sessions/sessionId/parts": {
+      "GET": {
+        "request": "curl -X GET \\ https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/parts \\ -H 'authorization: Bearer fEw9FPUVT3SJGaSBu4Q07VFyqdYd3ODc'"
+      }
+    },
+    "/events": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/events \\ -H \"Authorization: Bearer \" \\ -X OPTIONS",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "chunk_size": 1,
+              "entries": [
+                {
+                  "retry_timeout": 610,
+                  "max_retries": "10",
+                  "type": "realtime_server",
+                  "ttl": "10",
+                  "url": "http://2.realtime.services.box.net/subscribe?channel=cc807c9c4869ffb1c81a&stream_type=all"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/users/user_id/email_aliases": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/users/USER_ID/email_aliases \\ -H \"Authorization: Bearer \" \\ -d '{\"email\": \"dglover2@box.com\"}' -X POST"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/users/USER_ID/email_aliases \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "is_confirmed": true,
+                  "id": "1234",
+                  "type": "email_alias",
+                  "email": "dglover2@box.com"
+                },
+                {
+                  "is_confirmed": true,
+                  "id": "1235",
+                  "type": "email_alias",
+                  "email": "dglover3@box.com"
+                }
+              ],
+              "total_count": 1
+            }
+          }
+        }
+      }
+    },
+    "/legal_hold_policy_assignments/assignment_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/legal_hold_policy_assignments/255613 \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/legal_hold_policy_assignments/255473 \\ -H \"Authorization: Bearer \" \\",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "legal_hold_policy": {
+                "policy_name": "BugBash5-12Policy3updated",
+                "id": "166757",
+                "type": "legal_hold_policy"
+              },
+              "assigned_at": "2016-05-18T10:32:19-07:00",
+              "id": "255473",
+              "assigned_by": {
+                "name": "SteveBoxuser",
+                "id": "2030388321",
+                "type": "user",
+                "login": "sboxuser@box.com"
+              },
+              "type": "legal_hold_policy_assignment",
+              "assigned_to": {
+                "id": "2030388321",
+                "type": "user"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/groups/group_id/memberships": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/groups/GROUP_ID/memberships \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "role": "member",
+                  "id": "1560354",
+                  "type": "group_membership",
+                  "user": {
+                    "name": "Alice",
+                    "id": "13130906",
+                    "type": "user",
+                    "login": "alice@gmail.com"
+                  },
+                  "group": {
+                    "name": "family",
+                    "id": "119720",
+                    "type": "group"
+                  }
+                },
+                {
+                  "role": "member",
+                  "id": "1560356",
+                  "type": "group_membership",
+                  "user": {
+                    "name": "rabbit",
+                    "id": "192633962",
+                    "type": "user",
+                    "login": "rabbit@gmail.com"
+                  },
+                  "group": {
+                    "name": "family",
+                    "id": "119720",
+                    "type": "group"
+                  }
+                }
+              ],
+              "offset": 0,
+              "total_count": 2,
+              "limit": 100
+            }
+          }
+        }
+      }
+    },
+    "/upload.box.com/api/2.0/files/file_id/content": {
+      "POST": {
+        "request": "curl https://upload.box.com/api/2.0/files/FILE_ID/content \\ -H \"Authorization: Bearer \" \\ -H \"If-Match: ETAG_OF_ORIGINAL\" \\ -F file = @FILE_NAME",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "parent": {
+                    "sequence_id": "1",
+                    "name": "Pictures",
+                    "etag": "1",
+                    "id": "11446498",
+                    "type": "folder"
+                  },
+                  "description": "apictureoftigers",
+                  "created_at": "2012-12-12T10:55:30-08:00",
+                  "content_created_at": "2013-02-04T16:57:52-08:00",
+                  "owned_by": {
+                    "name": "seanrose",
+                    "id": "17738362",
+                    "type": "user",
+                    "login": "sean@box.com"
+                  },
+                  "type": "file",
+                  "item_status": "active",
+                  "created_by": {
+                    "name": "seanrose",
+                    "id": "17738362",
+                    "type": "user",
+                    "login": "sean@box.com"
+                  },
+                  "sha1": "134b65991ed521fcfe4724b7d814ab8ded5185dc",
+                  "size": 629644,
+                  "sequence_id": "3",
+                  "name": "tigers.jpeg",
+                  "modified_by": {
+                    "name": "seanrose",
+                    "id": "17738362",
+                    "type": "user",
+                    "login": "sean@box.com"
+                  },
+                  "shared_link": {
+                    "is_password_enabled": false,
+                    "access": "open",
+                    "permissions": {
+                      "can_preview": true,
+                      "can_download": true
+                    },
+                    "download_url": "https://www.box.com/shared/static/rh935iit6ewrmw0unyul.jpeg",
+                    "preview_count": 0,
+                    "url": "https://www.box.com/s/rh935iit6ewrmw0unyul",
+                    "download_count": 0
+                  },
+                  "etag": "3",
+                  "content_modified_at": "2013-02-04T16:57:52-08:00",
+                  "id": "5000948880",
+                  "modified_at": "2012-12-12T11:04:26-08:00",
+                  "path_collection": {
+                    "entries": [
+                      {
+                        "name": "AllFiles",
+                        "id": "0",
+                        "type": "folder"
+                      },
+                      {
+                        "sequence_id": "1",
+                        "name": "Pictures",
+                        "etag": "1",
+                        "id": "11446498",
+                        "type": "folder"
+                      }
+                    ],
+                    "total_count": 2
+                  }
+                }
+              ],
+              "total_count": 1
+            }
+          }
+        }
+      }
+    },
+    "/group_memberships/group_membership_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/group_memberships/GROUP_MEMBERSHIP_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/group_memberships/GROUP_MEMBERSHIP_ID \\ -H \"Authorization: Bearer \""
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/group_memberships/GROUP_MEMBERSHIP_ID \\ -H \"Authorization: Bearer \" \\ -d '{ \"role\": \"admin\" }, { \"configurable_permissions\":{\"can_run_reports\": false} }' \\ -X PUT"
+      }
+    },
+    "/upload.box.com/api/2.0/files/upload_sessions/sessionId": {
+      "DELETE": {
+        "request": "curl -X DELETE \\ https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD \\ -H 'authorization: Bearer fEw9FPUVT3SJGaSBu4Q07VFyqdYd3ODc'"
+      },
+      "GET": {
+        "request": "curl -X GET \\ https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD \\ -H 'authorization: Bearer spSSvCEepjG4PX3fO5IkcZe5h1nQYXfn'"
+      },
       "PUT": {}
     },
-    "/FOLDER_ID \\ -H \"Authorization: Bearer \" \\ package com . box . sdk public class BoxFolder public BoxFolder . Info get": {
+    "/folders/folder_id/copy": {
+      "POST": {}
+    },
+    "/tasks/task_id/assignments": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/tasks/TASK_ID/assignments \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "item": {
+                    "sha1": "0bbd79a105c504f99573e3799756debba4c760cd",
+                    "sequence_id": "0",
+                    "name": "box-logo.png",
+                    "etag": "0",
+                    "id": "7287087200",
+                    "type": "file"
+                  },
+                  "id": "2485961",
+                  "type": "task_assignment",
+                  "assigned_to": {
+                    "name": "RhaegarTargaryen",
+                    "id": "193425559",
+                    "type": "user",
+                    "login": "rhaegar@box.com"
+                  }
+                }
+              ],
+              "total_count": 1
+            }
+          }
+        }
+      }
+    },
+    "/invites": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/invites \\ -H \"Authorization: Bearer \" \\ -d '{ \"enterprise\" : { \"id\" : \"42500\" } , \"actionable_by\" : { \"login\" : \"freeuser@box.com\" } }' \\ -X POST"
+      }
+    },
+    "/task_assignments/task_assignment_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/task_assignments/TASK_ASSIGNMENT_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/task_assignments/TASK_ASSIGNMENT_ID \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "resolution_state": "incomplete",
+              "item": {
+                "sha1": "7840095ee096ee8297676a138d4e316eabb3ec96",
+                "sequence_id": "0",
+                "name": "scrumworksToTrello.js",
+                "etag": "0",
+                "id": "8018809384",
+                "type": "file"
+              },
+              "assigned_at": "2013-05-10T11:43:41-07:00",
+              "id": "2698512",
+              "assigned_by": {
+                "name": "☁sean☁",
+                "id": "11993747",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "type": "task_assignment",
+              "assigned_to": {
+                "name": "rhaegar@box.com",
+                "id": "1992432",
+                "type": "user",
+                "login": "rhaegar@box.com"
+              }
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/task_assignments \\ -H \"Authorization: Bearer \" \\ -d '{ \"message\": \"hello!!!\" }' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "resolution_state": "incomplete",
+              "item": {
+                "sha1": "7840095ee096ee8297676a138d4e316eabb3ec96",
+                "sequence_id": "0",
+                "name": "scrumworksToTrello.js",
+                "etag": "0",
+                "id": "8018809384",
+                "type": "file"
+              },
+              "assigned_at": "2013-05-10T11:43:41-07:00",
+              "id": "2698512",
+              "assigned_by": {
+                "name": "☁sean☁",
+                "id": "11993747",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "type": "task_assignment",
+              "message": "hello!!!",
+              "assigned_to": {
+                "name": "rhaegar@box.com",
+                "id": "1992432",
+                "type": "user",
+                "login": "rhaegar@box.com"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/collection_id/items": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/collections/COLLECTION_ID/items ?limit = 2 &offset = 0 \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "sequence_id": "1",
+                  "name": "StephenCurryThreePointers",
+                  "etag": "1",
+                  "id": "192429928",
+                  "type": "folder"
+                },
+                {
+                  "sequence_id": "0",
+                  "name": "Warriors.jpg",
+                  "etag": "0",
+                  "id": "818853862",
+                  "type": "file"
+                }
+              ],
+              "offset": 0,
+              "total_count": 24,
+              "limit": 2
+            }
+          }
+        }
+      }
+    },
+    "/webhooks/webhook_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/webhooks/{ID} \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/webhooks/{ID} \\ -H \"Authorization: Bearer \" \\ -d '{ \"address\": \"https://notification.example.net\", \"triggers\": [\"FILE.PREVIEWED\", \"FILE.DOWNLOADED\"]}' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "address": "https://notification.example.net",
+              "created_at": "2016-05-04T18:51:17-07:00",
+              "id": "4133",
+              "type": "webhook",
+              "triggers": [
+                "FILE.PREVIEWED",
+                "FILE.DOWNLOADED"
+              ],
+              "created_by": {
+                "name": "JohnQ.Developer",
+                "id": "2030392653",
+                "type": "user",
+                "login": "john2@example.net"
+              },
+              "target": {
+                "id": "1000605797",
+                "type": "folder"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collaborations/collab_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/collaborations/COLLAB_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/collaborations/COLLAB_ID \\ -H \"Authorization: Bearer \""
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/collaborations/COLLAB_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"role\": \"viewer\"} ' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "accessible_by": {
+                "name": "sean",
+                "id": "18203124",
+                "type": "user",
+                "login": "sean+test@box.com"
+              },
+              "item": {
+                "sequence_id": "0",
+                "name": "SharedPictures",
+                "etag": "0",
+                "id": "11446500",
+                "type": "folder"
+              },
+              "role": "viewer",
+              "created_at": "2012-12-12T10:54:37-08:00",
+              "id": "791293",
+              "type": "collaboration",
+              "modified_at": "2012-12-12T11:30:43-08:00",
+              "created_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "acknowledged_at": "2012-12-12T11:30:43-08:00",
+              "status": "accepted"
+            }
+          }
+        }
+      }
+    },
+    "/file_version_legal_holds": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/file_version_legal_holds ?policy_id = 166757 \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "id": "241001",
+                  "type": "legal_hold"
+                },
+                {
+                  "id": "241005",
+                  "type": "legal_hold"
+                },
+                {
+                  "id": "241009",
+                  "type": "legal_hold"
+                }
+              ],
+              "limit": 100,
+              "order": [
+                {
+                  "by": "retention_policy_set_id,file_version_id",
+                  "direction": "ASC"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/retention_policies/policy_id/assignments": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "id": "12345678",
+                  "type": "retention_policy_assignment"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/file_version_retentions/file_version_retention_id": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "file_version": {
+                "sha1": "4262d6250b0e6f440dca43a2337bd4621bad9136",
+                "id": "124887629",
+                "type": "file_version"
+              },
+              "applied_at": "2015-08-06T22:02:24-07:00",
+              "file": {
+                "etag": "2",
+                "id": "5011706273",
+                "type": "file_version"
+              },
+              "disposition_at": "2016-08-06T21:45:28-07:00",
+              "winning_retention_policy": {
+                "policy_name": "TaxDocuments",
+                "id": "41173",
+                "type": "retention_policy"
+              },
+              "id": "112729",
+              "type": "file_version_retention"
+            }
+          }
+        }
+      }
+    },
+    "/retention_policy_assignments/retention_policy_assignment_id": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "retention_policy": {
+                "policy_name": "TaxDocuments",
+                "id": "32131",
+                "type": "retention_policy"
+              },
+              "assigned_at": "2015-07-20T14:28:09-07:00",
+              "id": "3233225",
+              "assigned_by": {
+                "name": "Sean",
+                "id": "123456789",
+                "type": "user",
+                "login": "sean@box.com"
+              },
+              "type": "retention_policy_assignment",
+              "assigned_to": {
+                "id": "99922219",
+                "type": "folder"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/metadata_templates/scope": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/metadata_templates/enterprise \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "hidden": false,
+                  "displayName": "DocumentFlow",
+                  "scope": "enterprise_12345",
+                  "fields": [
+                    {
+                      "hidden": false,
+                      "displayName": "CurrentDocumentStage",
+                      "description": "Whatstageintheprocessthedocumentisin",
+                      "type": "string",
+                      "key": "currentDocumentStage"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "NeedsApprovalFrom",
+                      "type": "string",
+                      "key": "needsApprovalFrom"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "NextDocumentStage",
+                      "description": "Nextdocumentstageafterapprovalisgiven",
+                      "type": "string",
+                      "key": "nextDocumentStage"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "MaximumDaysAllowedInCurrentStage",
+                      "description": "Maximumnumberofdaysthatthedocumentisallowedtobeinthisstage.",
+                      "type": "float",
+                      "key": "maximumDaysAllowedInCurrentStage"
+                    }
+                  ],
+                  "templateKey": "documentFlow"
+                },
+                {
+                  "hidden": false,
+                  "displayName": "MarketingCollateral",
+                  "scope": "enterprise_12345",
+                  "fields": [
+                    {
+                      "hidden": false,
+                      "displayName": "Audience",
+                      "type": "string",
+                      "key": "audience1"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "DocumentType",
+                      "type": "string",
+                      "key": "documentType"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "CompetitiveDocument",
+                      "type": "string",
+                      "key": "competitiveDocument"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "Status",
+                      "type": "string",
+                      "key": "status"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "Author",
+                      "type": "string",
+                      "key": "author"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "Editor",
+                      "type": "string",
+                      "key": "editor"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "CurrentState",
+                      "type": "string",
+                      "key": "currentState"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "PreviousState",
+                      "type": "string",
+                      "key": "previousState"
+                    }
+                  ],
+                  "templateKey": "marketingCollateral"
+                },
+                {
+                  "hidden": false,
+                  "displayName": "ProductInfo",
+                  "scope": "enterprise_12345",
+                  "fields": [
+                    {
+                      "hidden": false,
+                      "displayName": "SKUNumber",
+                      "type": "float",
+                      "key": "skuNumber"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "Description",
+                      "type": "string",
+                      "key": "description"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "Department",
+                      "options": [
+                        {
+                          "key": "Beauty"
+                        },
+                        {
+                          "key": "Shoes"
+                        },
+                        {
+                          "key": "Accessories"
+                        },
+                        {
+                          "key": "Clothing"
+                        },
+                        {
+                          "key": "Handbags"
+                        },
+                        {
+                          "key": "Bedding"
+                        },
+                        {
+                          "key": "Watches"
+                        }
+                      ],
+                      "type": "enum",
+                      "key": "department"
+                    },
+                    {
+                      "hidden": false,
+                      "displayName": "DisplayDate",
+                      "type": "date",
+                      "key": "displayDate"
+                    }
+                  ],
+                  "templateKey": "productInfo"
+                }
+              ],
+              "limit": 100
+            }
+          }
+        }
+      }
+    },
+    "/users/user_id/memberships": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/users/USER_ID/memberships \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "role": "member",
+                  "id": "1560354",
+                  "type": "group_membership",
+                  "user": {
+                    "name": "AlisonWonderland",
+                    "id": "13130406",
+                    "type": "user",
+                    "login": "alice@gmail.com"
+                  },
+                  "group": {
+                    "name": "family",
+                    "id": "119720",
+                    "type": "group"
+                  }
+                }
+              ],
+              "offset": 0,
+              "total_count": 1,
+              "limit": 100
+            }
+          }
+        }
+      }
+    },
+    "/users/user_id/folders/folder_id": {
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/users/USER_ID/folders/FOLDER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"owned_by\": {\"id\": \"USER_ID\"} }' \\ -X PUT"
+      }
+    },
+    "/users": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/users \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Ned Stark\", \"is_platform_access_only\": true}' \\ -X POST"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/users -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "space_used": 52947,
+                  "max_upload_size": 104857600,
+                  "address": "10CloudWayLosAltosCA",
+                  "created_at": "2012-05-03T21:39:11-07:00",
+                  "language": "en",
+                  "type": "user",
+                  "login": "sean+awesome@box.com",
+                  "avatar_url": "https://app.box.com/api/avatar/large/181216415",
+                  "phone": "5555551374",
+                  "space_amount": 5368709120,
+                  "name": "seanrose",
+                  "id": "181216415",
+                  "modified_at": "2012-08-23T14:57:48-07:00",
+                  "job_title": "",
+                  "status": "active"
+                }
+              ],
+              "total_count": 1
+            }
+          }
+        }
+      }
+    },
+    "/upload.box.com/api/2.0/files/content": {
+      "POST": {}
+    },
+    "/shared_items": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/shared_items ?fields = type,id -H \"Authorization: Bearer \" -H \"BoxApi: shared_link=SHARED_LINK_URL&shared_link_password=PASSWORD\"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "id": "11446498",
+              "type": "folder"
+            }
+          }
+        }
+      }
+    },
+    "/files/file_id/comments": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "item": {
+                "id": "5000948880",
+                "type": "file"
+              },
+              "created_at": "2012-12-12T11:25:01-08:00",
+              "id": "191969",
+              "type": "comment",
+              "is_reply_comment": false,
+              "message": "Thesetigersarecool!",
+              "modified_at": "2012-12-12T11:25:01-08:00",
+              "created_by": {
+                "name": "seanrose",
+                "id": "17738362",
+                "type": "user",
+                "login": "sean@box.com"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/folders/folder_id/watermark": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/folders/5010739069/watermark \\ -H \"Authorization: Bearer \" \\ -X DELETE",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "created_at": "2014-09-23T22:56:18-07:00",
+              "owned_by": {
+                "name": "TedBlosser",
+                "id": "222276603",
+                "type": "user",
+                "login": "ted+boxworks2@box.com"
+              },
+              "id": "788804",
+              "type": "device_pinner",
+              "modified_at": "2014-09-23T22:56:18-07:00",
+              "product_name": "iPad"
+            }
+          }
+        }
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/folders/5010739069/watermark \\ -H \"Authorization: Bearer \""
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/folders/5010739069/watermark \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: application/json\" \\ -d '{\"watermark\": {\"imprint\": \"default\"} }' \\ -X PUT",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "watermark": {
+                "created_at": "2016-10-31T15:33:33-07:00",
+                "modified_at": "2016-10-31T15:50:25-07:00"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/retention_policy_assignments": {
+      "POST": {}
+    },
+    "/retention_policies": {
+      "POST": {},
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "name": "TaxDocuments",
+                  "id": "123456789",
+                  "type": "retention_policy"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/upload.box.com/api/2.0/files/upload_sessions": {
+      "POST": {
+        "request": "curl -X POST \\ https://upload.box.com/api/2.0/files/upload_sessions \\ -H 'authorization: Bearer fEw9FPUVT3SJGaSBu4Q07VFyqdYd3ODc \\ -d ' { \"folder_id\" : \"0\" , \"file_size\" : 100000000 , \"file_name\" : \"Upload Session API example\" } '"
+      }
+    },
+    "/file_version_legal_holds/id": {
+      "GET": {
+        "request": "curl https://api.box.com/2.0/file_version_legal_holds/240997 -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "file_version": {
+                "id": "141649417",
+                "type": "file_version"
+              },
+              "file": {
+                "etag": "1",
+                "id": "5025122933",
+                "type": "file"
+              },
+              "legal_hold_policy_assignments": [
+                {
+                  "id": "255473",
+                  "type": "legal_hold_policy_assignment"
+                },
+                {
+                  "id": "255617",
+                  "type": "legal_hold_policy_assignment"
+                }
+              ],
+              "id": "240997",
+              "type": "legal_hold"
+            }
+          }
+        }
+      }
+    },
+    "/files/file_id/watermark": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/files/5010739069/watermark \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/files/5010739069/watermark \\ -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "watermark": {
+                "created_at": "2016-10-31T15:33:33-07:00",
+                "modified_at": "2016-10-31T15:33:33-07:00"
+              }
+            }
+          }
+        }
+      },
+      "PUT": {
+        "request": "curl https://api.box.com/2.0/files/5010739069/watermark \\ -H \"Authorization: Bearer \" \\ -H \"Content-Type: application/json\" \\ -d '{\"watermark\": {\"imprint\": \"default\"} }' \\ -X PUT"
+      }
+    },
+    "/upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/parts\\-H'authorizat": {
       "GET": {}
-    },
-    "/240997 -H \"Authorization: Bearer ": {
-      "GET": {}
-    },
-    "/ folder_id": {
-      "DELETE": {}
-    },
-    "/166757 \\ -H \"Authorization: Bearer \" ": {
-      "POST": {}
-    },
-    "/web_link_id \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Box Marketing Web Page\"}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/folders on Box if you have the current version; similarly, If-None-Match headers ensure that you don’t retrieve unnecessary data if you already have the most current version on-hand.": {
-      "POST": {}
-    },
-    "/187273718\" }": {
-      "POST": {}
-    },
-    "/FOLDER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"owned_by\": {\"id\": \"USER_ID\"} }' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/schema \\ -H \"Authorization: Bearer ": {
-      "POST": {}
-    },
-    "/COMMENT_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/invites \\ -H \"Authorization: Bearer \" \\ -d '{ \"enterprise\" : { \"id\" : \"42500\" } , \"actionable_by\" : { \"login\" : \"freeuser@box.com\" } }' \\ -X POST": {
-      "POST": {}
-    },
-    "/folders \\ -H \"Authorization: Bearer \" \\ -d '{\"name\":\"New Folder\", \"parent\": {\"id\": \"0\"} }' \\ -X POST": {
-      "POST": {}
-    },
-    "/FILE_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"lock\": { \"type\": \"lock\",\"expires_at\": \"2015-12-12T10:55:30-08:00\",\"is_download_prevented\": false} }' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/task_assignments \\ -H \"Authorization: Bearer \" \\ -d '{ \"task\": { \"id\": \"1992432\", \"type\": \"task\" }, \"assign_to\": { \"id\": \"1992432\" } }' \\ -X POST": {
-      "POST": {}
-    },
-    "/FILE_VERSION_ID \\ -H \"Authorization: Bearer \" ": {
-      "PUT": {}
-    },
-    "/json\" -X POST": {
-      "POST": {}
-    },
-    "/WEB_LINK_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/content PUT": {
-      "PUT": {}
-    },
-    "/memberships endpoint.": {
-      "GET": {}
-    },
-    "/file_changed\", \"triggers\": [\"FILE.DOWNLOADED\", \"FILE.PREVIEWED\"] }": {
-      "DELETE": {}
-    },
-    "/{ID} \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
     },
     "/file_version_retentions": {
-      "DELETE": {}
-    },
-    "/documentFlow \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "entries": [
+                {
+                  "id": "112725",
+                  "type": "file_version_retention"
+                },
+                {
+                  "id": "112729",
+                  "type": "file_version_retention"
+                },
+                {
+                  "id": "112733",
+                  "type": "file_version_retention"
+                }
+              ],
+              "limit": 100,
+              "order": [
+                {
+                  "by": "file_version_id",
+                  "direction": "ASC"
+                }
+              ]
+            }
+          }
+        }
+      }
     },
     "/recent_items": {
-      "DELETE": {}
+      "GET": {
+        "request": "curl https://api.box.com/2.0/recent_items -H \"Authorization: Bearer \"",
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "item": {
+                "sha1": "0bbd79a105c504f99573e3799756debba4c760cd",
+                "sequence_id": "0",
+                "name": "box-logo.png",
+                "etag": "0",
+                "id": "7287087200",
+                "type": "file"
+              },
+              "action": "review",
+              "task_assignment_collection": {
+                "entries": [],
+                "total_count": 0
+              },
+              "created_at": "2013-04-03T11:12:54-07:00",
+              "due_at": "2014-04-03T11:09:43-07:00",
+              "id": "1839355",
+              "type": "task",
+              "message": "REVIEWPLZKTHX",
+              "is_completed": false,
+              "created_by": {
+                "name": "☁sean☁",
+                "id": "11993747",
+                "type": "user",
+                "login": "sean@box.com"
+              }
+            }
+          }
+        }
+      }
     },
-    "/POLICY_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"policy_name\": \"NEW_POLICY_NAME\", \"disposition_action\": \"remove_retention\", \"status\": null}' \\ -X PUT": {
-      "PUT": {}
+    "/files/file_id/versions/id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/files/FILE_ID/versions/VERSION_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      }
     },
-    "/trash \\ -H \"Authorization: Bearer \" package com . box . sdk public class BoxTrash public BoxFile . Info get": {
-      "GET": {}
+    "/tasks": {
+      "POST": {
+        "request": "curl https://api.box.com/2.0/tasks \\ -H \"Authorization: Bearer \" \\ -d '{\"item\": {\"type\": \"file\", \"id\": \"FILE_ID\"}, \"action\": \"review\"}' \\ -X POST"
+      }
     },
-    "/rh935iit6ewrmw0unyul.jpeg\" , \"vanity_url\" : null , \"is_password_enabled\" : false , \"unshared_at\" : null , \"download_count\" : 0 , \"preview_count\" : 0 , \"access\" : \"open\" , \"permissions\" : { \"can_download\" : true , \"can_preview\" : true } }, \"parent\" : { \"type\" : \"folder\" , \"id\" : \"11446498\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Pictures\" }, \"item_status\" : \"active\" }": {
-      "GET": {},
-      "PUT": {}
-    },
-    "/collaborations or GET": {
-      "GET": {}
-    },
-    "/FILE_ID": {
-      "GET": {},
-      "PUT": {}
-    },
-    "/events endpoint with no stream_position parameter": {
-      "DELETE": {}
-    },
-    "/documentFlow \\ -H \"Authorization: Bearer ": {
+    "/files/file_id/copy": {
       "POST": {}
     },
-    "/COMMENT_ID \\ -H \"Authorization: Bearer ACCESS_TOKEN\" \\ -d '{\"message\":\"My New Message\"}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/GROUP_MEMBERSHIP_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/properties .": {
-      "GET": {}
-    },
-    "/from a file, you can first get": {
-      "GET": {}
-    },
-    "/etag, and the same name as the original. Other properties such as comments do not get": {
-      "GET": {}
-    },
-    "/#errors\" , \"message\" : \"Bad Request\" , \"request_id\" : \"1459093015893a912bcaa3\" }": {
-      "GET": {}
-    },
-    "/or folders contained within this collection. Collection item lists behave a lot like get": {
-      "GET": {}
-    },
-    "/content , handles uploads. This API uses the multipart post": {
-      "POST": {}
-    },
-    "/json\" \\ -d '{ \"templateKey\" : \"customer\" , \"scope\" : \"enterprise\" , \"displayName\" : \"Customer\" , \"fields\" : [ { \"type\" : \"string\" , \"key\" : \"customerTeam\" , \"displayName\" : \"Customer team\" }, { \"type\" : \"string\" , \"key\" : \"category\" , \"displayName\" : \"Category\" }, { \"type\" : \"string\" , \"key\" : \"brand\" , \"displayName\" : \"Brand\" }, { \"type\" : \"enum\" , \"key\" : \"fy\" , \"displayName\" : \"FY\" , \"options\" : [ { \"key\" : \"FY11\" }, { \"key\" : \"FY12\" }, { \"key\" : \"FY13\" }, { \"key\" : \"FY14\" }, { \"key\" : \"FY15\" } ]}, { \"type\" : \"enum\" , \"key\" : \"qtr\" , \"displayName\" : \"Qtr\" , \"options\" : [ { \"key\" : \"First\" }, { \"key\" : \"Second\" }, { \"key\" : \"Third\" }, { \"key\" : \"Fourth\" } ]} ]} ' \\ -X POST": {
-      "POST": {}
-    },
-    "/rh935iit6ewrmw0unyul.jpeg\" , \"vanity_url\" : null , \"is_password_enabled\" : false , \"unshared_at\" : null , \"download_count\" : 0 , \"preview_count\" : 0 , \"access\" : \"open\" , \"permissions\" : { \"can_download\" : true , \"can_preview\" : true } }, \"parent\" : { \"type\" : \"folder\" , \"id\" : \"11446498\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Pictures\" }, \"item_status\" : \"active\" , \"tags\" : [ \"cropped\" , \"color corrected\" ], \"lock\" : { \"type\" : \"lock\" , \"id\" : \"112429\" , \"created_by\" : { \"type\" : \"user\" , \"id\" : \"18212074\" , \"name\" : \"Obi Wan\" , \"login\" : \"obiwan@box.com\" }, \"created_at\" : \"2013-12-04T10:28:36-08:00\" , \"expires_at\" : \"2012-12-12T10:55:30-08:00\" , \"is_download_prevented\" : false } }": {
-      "GET": {}
-    },
-    "/{id} ).": {
-      "GET": {}
-    },
-    "/181216415\" , \"is_exempt_from_device_limits\" : false , \"is_exempt_from_login_verification\" : false }": {
-      "DELETE": {}
-    },
-    "/file_changed\" , \"triggers\" : [ \"FILE.PREVIEWED\" ] }": {
-      "POST": {}
-    },
-    "/TASK_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"message\": \"REVIEW PLZ K THX\"}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/deleted for an existing metadata template instance associated with a file or folder": {
-      "DELETE": {}
-    },
-    "/token \\ -d 'grant_type=authorization_code' \\ -d 'code=<MY_AUTH_CODE>' \\ -d 'client_id=<MY_CLIENT_ID>' \\ -d 'client_secret=<MY_CLIENT_SECRET>' \\ -X POST": {
-      "POST": {}
-    },
-    "/GROUP_MEMBERSHIP_ID \\ -H \"Authorization: Bearer ": {
-      "POST": {}
-    },
-    "/users \\ -H \"Authorization: Bearer \" \\ -d '{\"name\": \"Ned Stark\", \"is_platform_access_only\": true}' \\ -X POST": {
-      "POST": {}
-    },
-    "/enterprise \\ -H \"Authorization: Bearer ": {
-      "GET": {}
-    },
-    "/json\" \\ -d '{\"watermark\": {\"imprint\": \"default\"} }' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/COMMENT_ID -H \"Authorization: Bearer ACCESS_TOKEN": {
-      "POST": {}
-    },
-    "/part1 # Part 2: curl -X PUT": {
-      "PUT": {}
-    },
-    "/retention_policies \\ -H \"Authorization: Bearer \" \\ -d '{\"policy_name\": \"POLICY_NAME\", \"policy_type\": \"finite\", \"retention_length\": 365, \"disposition_action\": \"remove_retention\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/rh935iit6ewrmw0unyul.jpeg\" , \"vanity_url\" : null , \"is_password_enabled\" : false , \"unshared_at\" : null , \"download_count\" : 0 , \"preview_count\" : 0 , \"access\" : \"open\" , \"permissions\" : { \"can_download\" : true , \"can_preview\" : true } }, \"parent\" : { \"type\" : \"folder\" , \"id\" : \"11446498\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Pictures\" }, \"item_status\" : \"active\" } ] }": {
-      "PUT": {}
-    },
-    "/subscribe": {
-      "GET": {}
-    },
-    "/Output Format": {
-      "GET": {}
-    },
-    "/tasks \\ -H \"Authorization: Bearer \" package com . box . sdk public class BoxFile public List < BoxTask . Info > get": {
-      "GET": {}
-    },
-    "/users \\ -H \"Authorization: Bearer \" \\ -d '{\"login\": \"eddard@box.com\", \"name\": \"Ned Stark\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/TASK_ID \\ -H \"Authorization: Bearer \" \\ -X DELETE": {
-      "DELETE": {}
-    },
-    "/www.box.com\", \"parent\": {\"id\": \"848123342\"}, \"name\": \"Box Website!\", \"description\": \"Cloud Content Management\"}' \\ -X POST": {
-      "POST": {}
-    },
-    "/from a folder, you can first get": {
-      "GET": {}
-    },
-    "/events endpoint to retrieve Box events, Box sends you a JSON object that contains an array of event objects. This section describes these results.": {
-      "GET": {}
-    },
-    "/bandInfo \\ -H \"Authorization: Bearer ": {
-      "POST": {}
-    },
-    "/vspke7y05sb214wjokpk\" , \"download_url\" : null , \"vanity_url\" : null , \"is_password_enabled\" : false , \"unshared_at\" : null , \"download_count\" : 0 , \"preview_count\" : 0 , \"access\" : \"open\" , \"permissions\" : { \"can_download\" : true , \"can_preview\" : true } }, \"folder_upload_email\" : { \"access\" : \"open\" , \"email\" : \"upload.Picture.k13sdz1@u.box.com\" }, \"parent\" : { \"type\" : \"folder\" , \"id\" : \"0\" , \"sequence_id\" : null , \"etag\" : null , \"name\" : \"All Files\" }, \"item_status\" : \"active\" , \"item_collection\" : { \"total_count\" : 1 , \"entries\" : [ { \"type\" : \"file\" , \"id\" : \"5000948880\" , \"sequence_id\" : \"3\" , \"etag\" : \"3\" , \"sha1\" : \"134b65991ed521fcfe4724b7d814ab8ded5185dc\" , \"name\" : \"tigers.jpeg\" } ], \"offset\" : 0 , \"limit\" : 100 } }": {
-      "DELETE": {},
-      "GET": {},
-      "PUT": {}
-    },
-    "/legal_hold_policies \\ -H \"Authorization: Bearer \" \\ -d '{ \"policy_name\" : \"Policy 3\" , \"description\" : \"postman created policy\" , \"filter_started_at\" : \"2016-05-11T00:00:00-08:00\" , \"filter_ended_at\" : \"2016-05-13T00:00:00-08:00\" } ' \\ -X POST": {
-      "POST": {}
-    },
-    "/http-dig-alg.xhtml .": {
-      "POST": {}
-    },
-    "/www.box.com\" , \"created_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" }, \"created_at\" : \"2015-05-07T14:31:16-07:00\" , \"modified_at\" : \"2015-05-07T14:31:16-07:00\" , \"parent\" : { \"type\" : \"folder\" , \"id\" : \"848123342\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Documentation\" }, \"description\" : \"Cloud Content Management\" , \"item_status\" : \"active\" , \"trashed_at\" : null , \"purged_at\" : null , \"shared_link\" : null , \"path_collection\" : { \"total_count\" : 2 , \"entries\" : [ { \"type\" : \"folder\" , \"id\" : \"0\" , \"sequence_id\" : null , \"etag\" : null , \"name\" : \"All Files\" }, { \"type\" : \"folder\" , \"id\" : \"848123342\" , \"sequence_id\" : \"1\" , \"etag\" : \"1\" , \"name\" : \"Documentation\" } ] }, \"modified_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" }, \"owned_by\" : { \"type\" : \"user\" , \"id\" : \"10523870\" , \"name\" : \"Ted Blosser\" , \"login\" : \"ted+demo@box.com\" } }": {
-      "POST": {}
-    },
-    "/authorize": {
-      "GET": {}
-    },
-    "/FOLDER_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"collections\": [{\"id\":\"123\"}]}' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/ json ; charset = UTF - 8 Content - Length : 300 { \"entries\" : [ { \"part_id\" : \"BFDF5379\" , \"offset\" : 0 , \"size\" : 8388608 , \"sha1\" : \"7e94728397954257ad759a8429a165ab00572733\" }, { \"part_id\" : \"E8A3ED8E\" , \"offset\" : 8388608 , \"size\" : 1611392 , \"sha1\" : \"3a3d125491299b1bc16ab3b3b3d86452e3c8a0e3\" } ] }": {
-      "GET": {}
-    },
-    "/{id} DELETE": {
-      "DELETE": {}
-    },
-    "/COLLAB_ID \\ -H \"Authorization: Bearer \" \\ -d '{\"role\": \"viewer\"} ' \\ -X PUT": {
-      "PUT": {}
-    },
-    "/vspke7y05sb214wjokpk\" , \"download_url\" : null , \"vanity_url\" : null , \"is_password_enabled\" : false , \"unshared_at\" : null , \"download_count\" : 0 , \"preview_count\" : 0 , \"access\" : \"open\" , \"permissions\" : { \"can_download\" : true , \"can_preview\" : true } }, \"folder_upload_email\" : { \"access\" : \"open\" , \"email\" : \"upload.Picture.k13sdz1@u.box.com\" }, \"parent\" : { \"type\" : \"folder\" , \"id\" : \"0\" , \"sequence_id\" : null , \"etag\" : null , \"name\" : \"All Files\" }, \"item_status\" : \"active\" , \"item_collection\" : { \"total_count\" : 1 , \"entries\" : [ { \"type\" : \"file\" , \"id\" : \"5000948880\" , \"sequence_id\" : \"3\" , \"etag\" : \"3\" , \"sha1\" : \"134b65991ed521fcfe4724b7d814ab8ded5185dc\" , \"name\" : \"tigers.jpeg\" } ], \"offset\" : 0 , \"limit\" : 100 }, \"tags\" : [ \"approved\" , \"ready to publish\" ] }": {
-      "GET": {}
-    },
-    "/ web_link_id": {
-      "DELETE": {}
+    "/device_pinners/device_pin_id": {
+      "DELETE": {
+        "request": "curl https://api.box.com/2.0/device_pinners/788804 \\ -H \"Authorization: Bearer \" \\ -X DELETE"
+      },
+      "GET": {
+        "request": "curl https://api.box.com/2.0/device_pinners/788804 \\ -H \"Authorization: Bearer \""
+      }
     }
   },
   "produces": "application/json",
-  "host": " api.box.com",
+  "host": "api.box.com",
   "schemes": [
     "https"
   ],

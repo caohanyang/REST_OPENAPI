@@ -166,14 +166,14 @@ public class ExtractInformation {
 		processMe.generateDefault(openAPI);
 
 		if (Settings.MODE == "null") {
-			nullMode(openAPI, doc, textAll, processMe);
+			tagMode(openAPI, doc, textAll, processMe);
 		} else {
-			httpMode(openAPI, doc, textAll, processMe);
+			regexMode(openAPI, doc, textAll, processMe);
 		}
 
 	}
 
-	private static void nullMode(JSONObject openAPI, Document doc,
+	private static void tagMode(JSONObject openAPI, Document doc,
 			DocumentContent textAll, ProcessMethod processMe) throws JSONException {
 		String strAll = textAll.toString();
 
@@ -186,9 +186,9 @@ public class ExtractInformation {
 		AnnotationSet annoCode = annoOrigin.get("code");
 
 		// 2.1 generate info json based on the h1 tag
-		genInfoJsonNull(doc, processMe, strAll, infoJson, annoH1);
+		genInfoJsonTag(doc, processMe, strAll, infoJson, annoH1);
 		// 2.2 generate info json based on the code tag
-		genInfoJsonNull(doc, processMe, strAll, infoJson, annoCode);
+		genInfoJsonTag(doc, processMe, strAll, infoJson, annoCode);
 
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
@@ -196,7 +196,7 @@ public class ExtractInformation {
 		handleREQRESPARA(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
-	private static void genInfoJsonNull(Document doc, ProcessMethod processMe, String strAll,
+	private static void genInfoJsonTag(Document doc, ProcessMethod processMe, String strAll,
 			List<JSONObject> infoJson, AnnotationSet annoTag) throws JSONException {
 		String actionStr = null;
 		String urlString = null;
@@ -237,7 +237,7 @@ public class ExtractInformation {
 		}
 	}
 
-	private static void httpMode(JSONObject openAPI,  Document doc, DocumentContent textAll, ProcessMethod processMe) throws JSONException {
+	private static void regexMode(JSONObject openAPI,  Document doc, DocumentContent textAll, ProcessMethod processMe) throws JSONException {
 		// 4.1 search for the GET https
 		String strAll = textAll.toString();
 		List<JSONObject> infoJson = new ArrayList<JSONObject>();
@@ -247,7 +247,7 @@ public class ExtractInformation {
 		AnnotationSet annoOrigin = doc.getAnnotations("Original markups");
 
 		// 2. generate info json
-		getInfoJsonHttp(processMe, strAll, infoJson);
+		getInfoJsonRegex(processMe, strAll, infoJson);
 
 		Out.prln("---------INFO JSON-------");
 		Out.prln(infoJson.toString());
@@ -276,7 +276,7 @@ public class ExtractInformation {
 		processPa.handleParaTemplate(openAPI, doc, processMe, strAll, infoJson, annoOrigin);
 	}
 
-	private static void getInfoJsonHttp(ProcessMethod processMe, String strAll, List<JSONObject> infoJson) throws JSONException {
+	private static void getInfoJsonRegex(ProcessMethod processMe, String strAll, List<JSONObject> infoJson) throws JSONException {
 		String regexAll = null;
 		if (!Settings.EXISTVERB.equals("no")) {
 			if (Settings.REVERSE.equals("no")) {
@@ -285,12 +285,16 @@ public class ExtractInformation {
 				regexAll = "(?si)" +  Settings.MODE + Settings.STUFFING +"((get)|(post)|(" + Settings.ABBREV_DELETE + ")|(put)|(patch)){1}";
 			}
 		} else {
-			regexAll = "(?si)"+ Settings.URLKEY + Settings.STUFFING + Settings.MODE;
+			if (Settings.MODE.equals("key")) {
+				regexAll = "(?si)"+ Settings.URLKEY + Settings.STUFFING;
+			}
+			
 		}
 		
 		Pattern p = Pattern.compile(regexAll);
 		Matcher matcher = p.matcher(strAll);
 		String actionStr = null, urlString = null;
+		int uLocation = 0;
 
 		while (matcher.find()) {
 			JSONObject sectionJson = new JSONObject();
@@ -305,9 +309,14 @@ public class ExtractInformation {
 					if (Settings.MODE.startsWith("http")) {
 						// Fix 2: suppose the URL length < 100
 						matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
-					} else {
+					} else if (Settings.MODE.equals("/")){
 						// partial URL length < 20
 						matchStr = strAll.substring(matcher.start(), matcher.end() + 20);
+					} else if (Settings.MODE.equals("key")){
+						// key url
+						matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+					} else {
+						matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
 					}
 					
 				} else {
@@ -321,93 +330,125 @@ public class ExtractInformation {
 			Out.prln("========matchSTR==============");
 			Out.prln(matchStr);
 
-			// match reversed action
-			String actionRegex = "((teg)|(tsop)|(" + new StringBuilder(Settings.ABBREV_DELETE).reverse().toString()
-					+ ")|(tup)|(hctap))";
-			Pattern action = Pattern.compile(actionRegex, Pattern.CASE_INSENSITIVE);
-			// match the reversed string, from right to left
-			Matcher matcherAction = action.matcher(new StringBuilder(matchStr).reverse());
-			// find the first match
-			if (matcherAction.find()) {
-				// find the action which is nearest to http
-				Out.prln("matchStart： " + matcherAction.start());
-				// Out.prln("==========real Action============");
-				int acOffset = matchStr.length() - matcherAction.start() - Settings.MODE.length();
-				int acLocation = startIndex + acOffset;
-				// Out.prln(strAll.substring(acLocation, matcher.end()));
-				Out.prln("==========REST Action============");
-				
-				actionStr = new StringBuilder(matcherAction.group(1)).reverse().toString();
-				
-				
-				JSONObject acJson = new JSONObject();
-				acJson.put(actionStr.toUpperCase(), acLocation);
-				sectionJson.put("action", acJson);
-
-				Out.prln(actionStr);
-			}
-			// match endpoint
-			String regexHttp;
-			if (Settings.REVERSE.equals("no")) {
-				regexHttp = Settings.MODE;
-			} else {
-				regexHttp = new StringBuilder(Settings.MODE).reverse().toString();
-			}
-
-			Pattern endpoint = Pattern.compile(regexHttp, Pattern.CASE_INSENSITIVE);
-
-			Matcher endpointMatcher;
-			int uLocation = 0;
-			if (Settings.REVERSE.equals("no")) {
-				endpointMatcher = endpoint.matcher(matchStr);
-				if (endpointMatcher.find()) {
-					Out.prln("urlStart： " + endpointMatcher.start());
-					uLocation = startIndex + endpointMatcher.start();
-					
-					// handle url
-					urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
-                    Out.prln("raw url: " + urlString);
-					
-					// in some cases, you need to remove whitespace  /v2/projects/ project_id => /v2/projects/project_id
-					if (Settings.URLMIDDLE.length()!= 0) {
-						// just remove one whitespace is enough
-						urlString = urlString.replaceFirst(Settings.URLMIDDLE, "");
-					}
-					
-				    //	/groups Parameters => /groups
-					if (Settings.URLAFTER.length()!= 0) {
-						urlString = urlString.split(Settings.URLAFTER)[0];
-					}
-					
-					Out.prln("refine url: " + urlString);
-					
-					// handle url, make it short and clean
-					sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
-				}
-			} else {
-				endpointMatcher = endpoint.matcher(new StringBuilder(matchStr).reverse().toString());
-				// find the first match
-				if (endpointMatcher.find()) {
-					// find the action which is nearest to http
-					Out.prln("matchStart： " + endpointMatcher.start());
-					Out.prln("matchEnd： " + endpointMatcher.end());
-					// Out.prln("==========real Action============");
-					int urOffset = matchStr.length() - endpointMatcher.start() - Settings.MODE.length();
-					uLocation = startIndex + urOffset;
-					// Out.prln(strAll.substring(urLocation,
-					// endpointMatcher.end()));
-					// .split("\n")[0].trim()
-					Out.prln("matchLength: " + matchStr.length());
-					// if offset < 0, next run
-					if (urOffset < 0)
+			if (Settings.MODE.equals("key")) {
+				if (matchStr.contains("http")) {
+					urlString = matchStr.substring(matchStr.indexOf("http")).split("\n")[0];
+				} else if (matchStr.contains("/")) {
+					matchStr = matchStr.split("\n")[0].trim();
+					int begin = matchStr.lastIndexOf(" ");
+					int end = matchStr.indexOf("/");
+					if (begin<end){
+						urlString = matchStr.substring(begin);
+					} else {
+						//ignore the url
 						continue;
-					urlString = matchStr.substring(urOffset).split("\n")[0].trim();
-
-					// writeUrl
-					sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
+					}
+				} else {
+					continue;
+				}
+				
+				// handle url, make it short and clean
+				uLocation = matcher.start();
+				sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
+			} else {
+				
+				// match reversed action
+				String actionRegex = "((teg)|(tsop)|(" + new StringBuilder(Settings.ABBREV_DELETE).reverse().toString()
+						+ ")|(tup)|(hctap))";
+				Pattern action = Pattern.compile(actionRegex, Pattern.CASE_INSENSITIVE);
+				// match the reversed string, from right to left
+				Matcher matcherAction = action.matcher(new StringBuilder(matchStr).reverse());
+				// find the first match
+				if (matcherAction.find()) {
+					// find the action which is nearest to http
+					Out.prln("matchStart： " + matcherAction.start());
+					// Out.prln("==========real Action============");
+					int acOffset = matchStr.length() - matcherAction.start() - Settings.MODE.length();
+					int acLocation = startIndex + acOffset;
+					// Out.prln(strAll.substring(acLocation, matcher.end()));
+					Out.prln("==========REST Action============");
+					
+					actionStr = new StringBuilder(matcherAction.group(1)).reverse().toString();
+					
+					JSONObject acJson = new JSONObject();
+					acJson.put(actionStr.toUpperCase(), acLocation);
+					sectionJson.put("action", acJson);
+					
+					Out.prln(actionStr);
+				}
+				// match endpoint
+				String regexHttp = null;
+				if (Settings.REVERSE.equals("no")) {
+					
+					if (!Settings.MODE.equals("key")) {
+						regexHttp = Settings.MODE;
+					}
+				} else {
+					regexHttp = new StringBuilder(Settings.MODE).reverse().toString();
+				}
+				
+				Pattern endpoint = Pattern.compile(regexHttp, Pattern.CASE_INSENSITIVE);
+				
+				Matcher endpointMatcher;
+				
+				if (Settings.REVERSE.equals("no")) {
+					endpointMatcher = endpoint.matcher(matchStr);
+					if (endpointMatcher.find()) {
+						Out.prln("urlStart： " + endpointMatcher.start());
+						uLocation = startIndex + endpointMatcher.start();
+						
+						// handle url
+						urlString = matchStr.substring(endpointMatcher.start()).split("\n")[0].trim();
+						Out.prln("raw url: " + urlString);
+						
+						// in some cases, you need to remove whitespace  /v2/projects/ project_id => /v2/projects/project_id
+						if (Settings.URLMIDDLE.length()!= 0) {
+							// just remove one whitespace is enough?
+							if (!Settings.URLAFTER.equals(" ")) {
+								urlString = urlString.replaceAll(Settings.URLMIDDLE, "");
+							} else {
+								urlString = urlString.replaceFirst(Settings.URLMIDDLE, "");
+							}
+							
+						}
+						
+						//	/groups Parameters => /groups
+						if (Settings.URLAFTER.length()!= 0) {
+							urlString = urlString.split(Settings.URLAFTER)[0];
+						}
+						
+						Out.prln("refine url: " + urlString);
+						
+						// handle url, make it short and clean
+						sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
+					}
+				} else {
+					endpointMatcher = endpoint.matcher(new StringBuilder(matchStr).reverse().toString());
+					// find the first match
+					if (endpointMatcher.find()) {
+						// find the action which is nearest to http
+						Out.prln("matchStart： " + endpointMatcher.start());
+						Out.prln("matchEnd： " + endpointMatcher.end());
+						// Out.prln("==========real Action============");
+						int urOffset = matchStr.length() - endpointMatcher.start() - Settings.MODE.length();
+						uLocation = startIndex + urOffset;
+						// Out.prln(strAll.substring(urLocation,
+						// endpointMatcher.end()));
+						// .split("\n")[0].trim()
+						Out.prln("matchLength: " + matchStr.length());
+						// if offset < 0, next run
+						if (urOffset < 0)
+							continue;
+						urlString = matchStr.substring(urOffset).split("\n")[0].trim();
+						
+						// writeUrl
+						sectionJson = writeUrl(processMe, urlString, sectionJson, uLocation);
+					}
 				}
 			}
+			
 
+			
 			
 			// if it's the verb doesn't exist
 			if (Settings.EXISTVERB.equals("no")) {

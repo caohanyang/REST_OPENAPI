@@ -14,19 +14,19 @@ public class Settings {
 	 * VERB AND URL 
 	 */
 	// in the case we don't have example http request, we need to globally search for the base url.
-	public static boolean SEARCHBASE = true;
+	public static boolean SEARCHBASE = false;
 	// in case it may contain two different prefix, two different api.
     //	api.twitter.com/1.1
 	public static String URLBASE = "";
 		
 	// The things between Http verbs and Url:
-	// "\\s" \\s.{0,60} "(.*?)"
-	public static String STUFFING = "\\s";	
+	// "\\s" \\s.{0,60} "(.*?)" .{0,10} 
+	public static String STUFFING = ".{0,10}";	
 	// for some url contains URL parameters
 	// It will present URL in different tags, which causes whitespace
 	// " " ""
-	public static String URLMIDDLE = "";
-	public static String URLAFTER = " ";
+	public static String URLMIDDLE = " ";
+	public static String URLAFTER = "\n";
 	// path template in the url
 	// :id  <id> {id} no
 	public static String URLTEMPLATE = "no";
@@ -36,12 +36,13 @@ public class Settings {
 	
 	// exist the verb or not
 	// no yes
-	public static String EXISTVERB = "no";
+	public static String EXISTVERB = "yes";
+	// Url :
 	public static String URLKEY= "";
 	public static String VERBKEY= "";
 	
-	// "https://", "http://", "/", "null"
-	public static String MODE ="/";
+	// "https://", "http://", "/",   "null" "key'
+	public static String MODE ="https://";
 	
 	// "del", "delete"
 	public static String ABBREV_DELETE = "delete";
@@ -52,9 +53,9 @@ public class Settings {
 	 */
 	// The key word before the request
 	// "EXAMPLE REQUEST"  "" "no"
-	public static String REQKEY = "Example";
+	public static String REQKEY = "cURL";
 	// \\s \\s.{0,60} "" (.*?)
-	public static String REQMIDDLE = "\\s.{0,60}";
+	public static String REQMIDDLE = ".{0,10}";
 	// The request exists or not 
 	// http \\{(.*?)\\} no curl  ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
 	public static String REQEXAMPLE = "curl";
@@ -70,10 +71,10 @@ public class Settings {
 	 */
 	
 	// (example)|(response)  ""  "no"
-	public static String RESKEY = "Example Response";
+	public static String RESKEY = "200";
 	// \\s \\s.{0,10} \\s.{0,100} ""
 	// 1.
-	public static String RESMIDDLE = "\\s.{0,30}";
+	public static String RESMIDDLE = "\\s.{0,10}";
 	// default true
 	public static Boolean URL1RES2 = true;
 	//  pre code span
@@ -81,7 +82,7 @@ public class Settings {
 	
 	// The response exists or not 
 	// ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
-	public static String RESEXAMPLE = "(\\<)(.*?)(\\>)";
+	public static String RESEXAMPLE = "((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}";
 	
 	
 	/*
@@ -92,8 +93,8 @@ public class Settings {
 	// (parameter)|(argument)|(field)
 	// sometimes not common "Query Parameters" "url Parameters"
 	// choose the last common one
-	// (parameter)|(argument)|(field)  or choose the first element Name
-	public static String PARAKEY = "(parameter)|(argument)|(field)|(parameters)|(arguments)|(fields)";
+	// (parameter)|(argument)|(field)|(parameters)|(arguments)|(fields)  or choose the first element Name
+	public static String PARAKEY = "QUERY PARAMS";
 	// first URL then parameters
 	public static boolean URL1PARA2 = true;	
 	
@@ -104,7 +105,7 @@ public class Settings {
 	// for one api, the parameters can be "mix"
 	public static String PARAIN = "query";
 	// "table", "list"
-	public static String TEMPLATE = "list";
+	public static String TEMPLATE = "table";
 	// "single", "multiple"
 	public static String NUMBER = "multiple";
 

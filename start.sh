@@ -19,7 +19,7 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 # https://en.wikipedia.org/api/rest_v1/
 # https://developers.google.com/maps/documentation/
 # http://www.last.fm/api
-# https://developer.foursquare.com     https://developer.foursquare.com/docs
+# https://developer.foursquare.com/docs https://developer.foursquare.com/docs/api
 # https://www.mediawiki.org/wiki/REST_API https://en.wikipedia.org/api/rest_v1/
 # http://www.geonames.org/export/ws-overview.html   http://www.geonames.org/export
 # https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-web-api-v5-reference
