@@ -30,6 +30,7 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 
 # https://developers.google.com/maps/documentation/directions
 # https://developers.google.com/analytics/devguides/config/mgmt/v3/mgmtReference/
+# https://developers.google.com/adsense/management/v1.4/reference/
 
 # python ./predict_page/predictExternalTest.py $1
 
@@ -68,10 +69,10 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 # https://www.afterbanks.com/api/documentation/es/
 # https://rms.api.bbc.co.uk/docs/
 
-python ./rest_crawler/crawlAllPages.py $1 $2
+# python ./rest_crawler/crawlAllPages.py $1 $2
 
 # 2. predict html page
-python ./predict_page/predictExternal.py $1
+# python ./predict_page/predictExternal.py $1
 
 
 # 3. run java to build the OPENAPI documentation

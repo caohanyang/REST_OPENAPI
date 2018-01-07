@@ -187,7 +187,7 @@ public class ProcessParameter {
 	}
 
 	private boolean isValidParaKey(String key) {
-		if (key.toLowerCase().equals("require")| key.toLowerCase().equals("optional") | key.toLowerCase().equals("required")) {
+		if (key.toLowerCase().equals("path") |key.toLowerCase().equals("require")| key.toLowerCase().equals("optional") | key.toLowerCase().equals("required")) {
 			return false;
 		}
 		return true;
@@ -287,6 +287,9 @@ public class ProcessParameter {
 				String key = trStr.split(" ")[0];
 				String value = trStr.substring(trStr.indexOf(trStr.split(" ")[1]));
 				
+				if (key.contains("\n")) {
+					key = key.split("\n")[0];
+				}
 				//validate the key
 				if (!isValidParaKey(key)) {
 					continue;

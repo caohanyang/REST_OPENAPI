@@ -1,0 +1,1374 @@
+{
+  "basePath": "/adsense/v1.4",
+  "paths": {
+    "/metadata/metrics": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "kind": "adsense#metadata",
+              "items": [
+                {
+                  "requiredMetrics": [
+                    "string"
+                  ],
+                  "compatibleMetrics": [
+                    "string"
+                  ],
+                  "supportedProducts": [
+                    "string"
+                  ],
+                  "kind": "adsense#reportingMetadataEntry",
+                  "compatibleDimensions": [
+                    "string"
+                  ],
+                  "requiredDimensions": [
+                    "string"
+                  ],
+                  "id": "string"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/accounts/accountId/adclients/adClientId/customchannels/customCh": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to which the ad client belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client which contains the custom channel.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "customChannelId",
+            "description": "string Custom channel to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/auth/adsense": {
+      "DELETE": {},
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "kind": "adsense#urlChannels",
+              "nextPageToken": "string",
+              "etag": "etag",
+              "items": [
+                "urlchannelsResource"
+              ]
+            }
+          }
+        }
+      },
+      "PUT": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "headers": [
+                {
+                  "name": "string",
+                  "currency": "string",
+                  "type": "string"
+                }
+              ],
+              "endDate": "string",
+              "kind": "adsense#report",
+              "warnings": [
+                "string"
+              ],
+              "averages": [
+                "string"
+              ],
+              "totalMatchedRows": "long",
+              "totals": [
+                "string"
+              ],
+              "rows": [
+                [
+                  "string"
+                ]
+              ],
+              "startDate": "string"
+            }
+          }
+        }
+      }
+    },
+    "/accounts/accountId/savedadstyles": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account for which to list saved ad styles.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of saved ad styles to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients/adClientId/urlchannels": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client for which to list URL channels.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of URL channels to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "//\".Example:www.example.com/home": {
+      "GET": {}
+    },
+    "/accounts/accountId/adclients/adClientId/adunits": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to which the ad client belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client for which to list ad units.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "includeInactive",
+            "description": "boolean Whether to include inactive ad units. Default: true.",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of ad units to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients/adClientId/customchannels/customChannelId/adunitsPara": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client which contains the custom channel.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customChannelId",
+            "description": "string Custom channel for which to list ad units.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "includeInactive",
+            "description": "boolean Whether to include inactive ad units. Default: true.",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of ad units to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/reports/savedReportId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to which the saved reports belong.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "savedReportId",
+            "description": "string The saved report to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string Optional locale to use for translating report output to a local language. Defaults to \"en_US\" if not specified.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of rows of report data to return. If startIndex is either unset or zero, the API will return as many rows as specified by the value of maxResults. If maxResults is not set the API will return as many rows as possible, up to 50,000.\n\nIf startIndex is set to a non-zero value, the sum of startIndex and maxResults cannot be greater than 5000, or an error will be returned: paging past row 5000 is unsupported.\nAcceptable values are 0 to 50000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "startIndex",
+            "description": "integer Index of the first row of report data to return. If startIndex is either unset or zero, the API will return as many rows as specified by the value of maxResults. If maxResults is not set the API will return as many rows as possible, up to 50,000.\n\nIf startIndex is set to a non-zero value, the sum of startIndex and maxResults cannot be greater than 5000, or an error will be returned: paging past row 5000 is unsupported.\nAcceptable values are 0 to 5000 , inclusive.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients/adClientId/adunits/adUnitId/adcode": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client with contains the ad unit.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adUnitId",
+            "description": "string Ad unit to get the code for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/reports/saved": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to which the saved reports belong.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of saved reports to include in the response, used for paging. Acceptable values are 0 to 100 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/savedadstyles/savedAdStyleId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account for which to get the saved ad style.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "savedAdStyleId",
+            "description": "string Saved ad style to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/reports/saved": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of saved reports to include in the response, used for paging. Acceptable values are 0 to 100 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/payments": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account for which to retrieve the payments.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of ad clients to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/adclients/adClientId/adunits/adUnitId/custo": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to which the ad client belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client which contains the ad unit.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adUnitId",
+            "description": "string Ad unit for which to list custom channels.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of custom channels to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/alerts/alertId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "alertId",
+            "description": "string Alert to delete.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/adclients/adClientId/customchannelsParameter": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to which the ad client belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client for which to list custom channels.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of custom channels to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/savedadstyles": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of saved ad styles to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/adclients": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account for which to list ad clients.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of ad clients to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/savedadstyles/savedAdStyleId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "savedAdStyleId",
+            "description": "string Saved ad style to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/reports": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "endDate",
+            "description": "string End of the date range to report on in \"YYYY-MM-DD\" format, inclusive.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "description": "string Start of the date range to report on in \"YYYY-MM-DD\" format, inclusive.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "accountId",
+            "description": "string Accounts upon which to report.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "currency",
+            "description": "string Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "dimension",
+            "description": "string The dimensions on which to base the report. Available dimensions are described in Metrics and Dimensions . For more detail on each of the dimensions, check the AdSense Glossary .",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string Filters to be applied to the report.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string Optional locale to use for translating report output to a local language. Defaults to \"en_US\" if not specified.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of rows of report data to return. If startIndex is either unset or zero, the API will return as many rows as specified by the value of maxResults. If maxResults is not set the API will return as many rows as possible, up to 50,000. If startIndex is set to a non-zero value, the sum of startIndex and maxResults cannot be greater than 5000, or an error will be returned: paging past row 5000 is unsupported. Acceptable values are 0 to 50000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "metric",
+            "description": "string The numeric columns to include in the report. Available metrics are described in Metrics and Dimensions . For more information on each of the metrics, check the AdSense Glossary .",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string The name of a dimension or metric on which to sort the resulting report. Optionally prefixed with \"+\" to sort ascending or \"-\" to sort descending. If no prefix is specified, the column is sorted ascending.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "startIndex",
+            "description": "integer Index of the first row of report data to return. If startIndex is either unset or zero, the API will return as many rows as specified by the value of maxResults. If maxResults is not set the API will return as many rows as possible, up to 50,000. If startIndex is set to a non-zero value, the sum of startIndex and maxResults cannot be greater than 5000, or an error will be returned: paging past row 5000 is unsupported. Acceptable values are 0 to 5000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "useTimezoneReporting",
+            "description": "boolean Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/payments": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "kind": "adsense#payments",
+              "items": [
+                {
+                  "kind": "adsense#payment",
+                  "id": "string",
+                  "paymentDate": "string",
+                  "paymentAmount": "string",
+                  "paymentAmountCurrencyCode": "string"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/accounts/accountId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to get information about.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "tree",
+            "description": "boolean Whether the tree of sub accounts should be returned.",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients/adClientId/adunits/adUnitId/customchannels": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client which contains the ad unit.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adUnitId",
+            "description": "string Ad unit for which to list custom channels.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of custom channels to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/adclients/adClientId/adunits/adUnitId/adcod": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account which contains the ad client.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client with contains the ad unit.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adUnitId",
+            "description": "string Ad unit to get the code for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/alerts": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "kind": "adsense#alerts",
+              "items": [
+                "alertsResource"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/adclients/adClientId/urlchannels": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to which the ad client belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client for which to list URL channels.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of URL channels to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients/adClientId/adunits": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client for which to list ad units.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "includeInactive",
+            "description": "boolean Whether to include inactive ad units. Default: true.",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of ad units to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients/adClientId/customchannels": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client for which to list custom channels.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of custom channels to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/reports/savedReportId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "savedReportId",
+            "description": "string The saved report to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string Optional locale to use for translating report output to a local language. Defaults to \"en_US\" if not specified.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of rows of report data to return. Acceptable values are 0 to 50000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "startIndex",
+            "description": "integer Index of the first row of report data to return. Acceptable values are 0 to 5000 , inclusive.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients/adClientId/customchannels/customChannelId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client which contains the custom channel.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customChannelId",
+            "description": "string Custom channel to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/metadata/dimensions": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "kind": "adsense#metadata",
+              "items": [
+                {
+                  "requiredMetrics": [
+                    "string"
+                  ],
+                  "compatibleMetrics": [
+                    "string"
+                  ],
+                  "supportedProducts": [
+                    "string"
+                  ],
+                  "kind": "adsense#reportingMetadataEntry",
+                  "compatibleDimensions": [
+                    "string"
+                  ],
+                  "requiredDimensions": [
+                    "string"
+                  ],
+                  "id": "string"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/accounts/accountId/alerts": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "kind": "adsense#alerts",
+              "items": [
+                "alertsResource"
+              ]
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account for which to retrieve the alerts.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/reports": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account upon which to report.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "description": "string End of the date range to report on in \"YYYY-MM-DD\" format, inclusive.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "description": "string Start of the date range to report on in \"YYYY-MM-DD\" format, inclusive.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "currency",
+            "description": "string Currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "dimension",
+            "description": "string The dimensions on which to base the report. Available dimensions are described in Metrics and Dimensions . For more detail on each of the dimensions, check the AdSense Glossary .",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "string Filters to be applied to the report.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "locale",
+            "description": "string Locale to use for translating report output to a local language. Defaults to \"en_US\" if not specified.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of rows of report data to return. If startIndex is either unset or zero, the API will return as many rows as specified by the value of maxResults. If maxResults is not set the API will return as many rows as possible, up to 50,000.\n\nIf startIndex is set to a non-zero value, the sum of startIndex and maxResults cannot be greater than 5000, or an error will be returned: paging past row 5000 is unsupported.\nAcceptable values are 0 to 50000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "metric",
+            "description": "string The numeric columns to include in the report. Available metrics are described in Metrics and Dimensions . For more information on each of the metrics, check the AdSense Glossary .",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "description": "string The name of a dimension or metric on which to sort the resulting report. Optionally prefixed with \"+\" to sort ascending or \"-\" to sort descending. If no prefix is specified, the column is sorted ascending.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "startIndex",
+            "description": "integer Index of the first row of report data to return. If startIndex is either unset or zero, the API will return as many rows as specified by the value of maxResults. If maxResults is not set the API will return as many rows as possible, up to 50,000.\n\nIf startIndex is set to a non-zero value, the sum of startIndex and maxResults cannot be greater than 5000, or an error will be returned: paging past row 5000 is unsupported.  Acceptable values are 0 to 5000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "useTimezoneReporting",
+            "description": "boolean Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/adclients/adClientId/adunits/adUnitId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client for which to get the ad unit.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adUnitId",
+            "description": "string Ad unit to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "maxResults",
+            "description": "integer The maximum number of accounts to include in the response, used for paging. Acceptable values are 0 to 10000 , inclusive.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "description": "string A continuation token, used to page through accounts. To retrieve the next page, set this parameter to the value of \"nextPageToken\" from the previous response.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/adclients/adClientId/adunits/adUnitIdParame": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account to which the ad client belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adClientId",
+            "description": "string Ad client for which to get the ad unit.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "adUnitId",
+            "description": "string Ad unit to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/accounts/accountId/alerts/alertId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Path",
+            "description": "parameters",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account which contains the ad unit.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "alertId",
+            "description": "string Alert to delete.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

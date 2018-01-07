@@ -1,0 +1,2523 @@
+{
+  "basePath": "/analytics/v3",
+  "paths": {
+    "/analytics/v3/management/accounts/accountId/webproperties/webPropertyId/customDataSources/customDataSourceId/uploadsUploaddata": {
+      "POST": {}
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/entityUserLinks/linkId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string Link ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web Property ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to update the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string Link ID to update the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile ID) to update the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web Property ID to update the user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/customDataSources": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#customDataSources",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.customDataSourcesResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account Id for the custom data sources to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id for the custom data sources to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of custom data sources to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer A 1-based index of the first custom data source to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/entityUserLinks/linkId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string Link ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to update the account-user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string Link ID to update the account-user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/customDataSources/customDataSourceId/deleteUploadData": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account Id for the uploads to be deleted.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customDataSourceId",
+            "description": "string Custom data source Id for the uploads to be deleted.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id for the uploads to be deleted.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/experiments/experimentId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the experiment belongs",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "experimentId",
+            "description": "string ID of the experiment to delete",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to which the experiment belongs",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to which the experiment belongs",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve the experiment for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "experimentId",
+            "description": "string Experiment ID to retrieve the experiment for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to retrieve the experiment for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve the experiment for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID of the experiment to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "experimentId",
+            "description": "string Experiment ID of the experiment to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID of the experiment to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID of the experiment to update.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID of the experiment to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "experimentId",
+            "description": "string Experiment ID of the experiment to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID of the experiment to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID of the experiment to update.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/customDimensions": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom dimension to create.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom dimension to create.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#customDimensions",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.customDimensionsResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom dimensions to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom dimensions to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of custom dimensions to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#accounts",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.accountsResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of accounts to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first account to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/goals/goalId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve the goal for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "goalId",
+            "description": "string Goal ID to retrieve the goal for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to retrieve the goal for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve the goal for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to update the goal.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "goalId",
+            "description": "string Index of the goal to be updated.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to update the goal.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to update the goal.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to update the goal.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "goalId",
+            "description": "string Index of the goal to be updated.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to update the goal.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to update the goal.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/entityUserLinks/linkId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string Link ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web Property ID to delete the user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to update the account-user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string Link ID to update the account-user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to update the account-user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/profileFilterLinks/linkId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the profile filter link belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string ID of the profile filter link to delete.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string Profile ID to which the filter link belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id to which the profile filter link belongs.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve profile filter link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string ID of the profile filter link.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string Profile ID to retrieve filter link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id to retrieve profile filter link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which profile filter link belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string ID of the profile filter link to be updated.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string Profile ID to which filter link belongs",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id to which profile filter link belongs",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which profile filter link belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "linkId",
+            "description": "string ID of the profile filter link to be updated.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string Profile ID to which filter link belongs",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id to which profile filter link belongs",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/goals": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create the goal for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to create the goal for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to create the goal for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#goals",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.goalsResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve goals for. Can either be a specific account ID or ' ~all ', which refers to all the accounts that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to retrieve goals for. Can either be a specific view (profile) ID or '~all', which refers to all the views (profiles) that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve goals for. Can either be a specific web property ID or ' ~all ', which refers to all the web properties that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of goals to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first goal to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/entityAdWordsLinks/webPropertyAdWordsLinkId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string ID of the account which the given web property belongs to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyAdWordsLinkId",
+            "description": "string Web property AdWords link ID.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to delete the AdWords link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string ID of the account which the given web property belongs to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyAdWordsLinkId",
+            "description": "string Web property-AdWords link ID.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve the AdWords link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string ID of the account which the given web property belongs to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyAdWordsLinkId",
+            "description": "string Web property-AdWords link ID.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve the AdWords link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string ID of the account which the given web property belongs to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyAdWordsLinkId",
+            "description": "string Web property-AdWords link ID.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve the AdWords link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/customDataSources/customDataSourceId/uploads/uploadIdParameter": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account Id for the upload to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customDataSourceId",
+            "description": "string Custom data source Id for upload to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "uploadId",
+            "description": "string Upload Id to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id for the upload to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/experiments": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create the experiment for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to create the experiment for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to create the experiment for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#experiments",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.experimentsResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve experiments for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to retrieve experiments for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve experiments for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of experiments to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first experiment to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/entityUserLinks": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create the user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#entityUserLinks",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.accountUserLinksResource"
+              ],
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve the user links for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of account-user links to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first account-user link to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/segments": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#segments",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.segmentsResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of segments to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first segment to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create the view (profile) for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to create the view (profile) for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#profiles",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.profilesResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the view (profiles) to retrieve. Can either be a specific account ID or '~all', which refers to all the accounts to which the user has access.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the views (profiles) to retrieve. Can either be a specific web property ID or '~all', which refers to all the web properties to which the user has access.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of views (profiles) to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/remarketingAudiences/remarketingAudienceId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the remarketing audience belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "remarketingAudienceId",
+            "description": "string The ID of the remarketing audience to delete.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to which the remarketing audience belongs.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string The account ID of the remarketing audience to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "remarketingAudienceId",
+            "description": "string The ID of the remarketing audience to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string The web property ID of the remarketing audience to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string The account ID of the remarketing audience to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "remarketingAudienceId",
+            "description": "string The ID of the remarketing audience to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string The web property ID of the remarketing audience to update.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string The account ID of the remarketing audience to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "remarketingAudienceId",
+            "description": "string The ID of the remarketing audience to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string The web property ID of the remarketing audience to update.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/remarketingAudiences": {
+      "POST": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              "viewId"
+            ]
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string The account ID for which to create the remarketing audience.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for which to create the remarketing audience.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#remarketingAudiences",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.remarketingAudienceResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string The account ID of the remarketing audiences to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string The web property ID of the remarketing audiences to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of remarketing audiences to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "description": "string",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create the web property for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#webproperties",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.webpropertiesResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve web properties for. Can either be a specific account ID or ' ~all ', which refers to all the accounts that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of web properties to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/profileFilterLinks": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create profile filter link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string Profile ID to create filter link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id to create profile filter link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#profileFilterLinks",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.profileFilterLinksResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve profile filter links for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string Profile ID to retrieve filter links for. Can either be a specific profile ID or '~all', which refers to all the profiles that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id for profile filter links for. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of profile filter links to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/entityUserLinks": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web Property ID to create the user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#entityUserLinks",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.webpropertyUserLinksResource"
+              ],
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID which the given web property belongs to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web Property ID for the webProperty-user links to retrieve. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of webProperty-user Links to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first webProperty-user link to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to delete the view (profile) for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string ID of the view (profile) to be deleted.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to delete the view (profile) for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve the view (profile) for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to retrieve the view (profile) for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve the view (profile) for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the view (profile) belongs",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string ID of the view (profile) to be updated.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to which the view (profile) belongs",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the view (profile) belongs",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string ID of the view (profile) to be updated.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to which the view (profile) belongs",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve the web property for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string ID to retrieve the web property for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the web property belongs",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the web property belongs",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/customMetrics/customMetricId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom metric to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customMetricId",
+            "description": "string The ID of the custom metric to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom metric to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom metric to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customMetricId",
+            "description": "string Custom metric ID for the custom metric to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom metric to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "ignoreCustomDataSourceLinks",
+            "description": "boolean Force the update and ignore any warnings related to the custom metric being linked to a custom data source / data set. (Default: false )",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom metric to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customMetricId",
+            "description": "string Custom metric ID for the custom metric to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom metric to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "ignoreCustomDataSourceLinks",
+            "description": "boolean Force the update and ignore any warnings related to the custom metric being linked to a custom data source / data set. (Default: false )",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/customMetrics": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom metric to create.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom dimension to create.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#customMetrics",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.customMetricsResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom metrics to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom metrics to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of custom metrics to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/entityUserLinks": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to create the user link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web Property ID to create the user link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#entityUserLinks",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.profileUserLinksResource"
+              ],
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID which the given view (profile) belongs to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to retrieve the profile-user links for. Can either be a specific profile ID or '~all', which refers to all the profiles that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web Property ID which the given view (profile) belongs to. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of profile-user links to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first profile-user link to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/unsampledReports": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create the unsampled report for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to create the unsampled report for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to create the unsampled report for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#unsampledReports",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.unsampledReportsResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve unsampled reports for. Must be a specific account ID, ~all is not supported.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to retrieve unsampled reports for. Must be a specific view (profile) ID, ~all is not supported.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve unsampled reports for. Must be a specific web property ID, ~all is not supported.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of unsampled reports to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first unsampled report to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accountSummaries": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": [
+              "i"
+            ]
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of account summaries to include in this response, where the largest acceptable value is 1000.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/filters": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to create filter for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#filters",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.filtersResource"
+              ],
+              "username": "string",
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve filters for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of filters to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/analytics/v3/management/accounts/accountId/webproperties/webPropertyId/customDataSources/customDataSourceId/uploads": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account Id associated with the upload.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customDataSourceId",
+            "description": "string Custom data source Id to which the data being uploaded belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property UA-string associated with the upload.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "uploadType",
+            "description": "string The type of upload request to the /upload URI. Acceptable values are: media - Simple upload . Upload the media data.\nresumable - Resumable upload . Upload the file in a resumable fashion, using a series of at least two requests.\n",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/filters/filterId": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to delete the filter for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "filterId",
+            "description": "string ID of the filter to be deleted.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve filters for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "filterId",
+            "description": "string Filter ID to retrieve filters for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the filter belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "filterId",
+            "description": "string ID of the filter to be updated.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to which the filter belongs.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "filterId",
+            "description": "string ID of the filter to be updated.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/customDataSources/customDataSourceId/uploads": {
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#uploads",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.uploadsResource"
+              ],
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account Id for the uploads to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customDataSourceId",
+            "description": "string Custom data source Id for uploads to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property Id for the uploads to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of uploads to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer A 1-based index of the first upload to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/profiles/profileId/unsampledReports/unsampledReportIdParameter": {
+      "DELETE": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to delete the unsampled report for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to delete the unsampled report for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "unsampledReportId",
+            "description": "string ID of the unsampled report to be deleted.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to delete the unsampled reports for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID to retrieve unsampled report for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "profileId",
+            "description": "string View (Profile) ID to retrieve unsampled report for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "unsampledReportId",
+            "description": "string ID of the unsampled report to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve unsampled reports for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/customDimensions/customDimensionId": {
+      "GET": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom dimension to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customDimensionId",
+            "description": "string The ID of the custom dimension to retrieve.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom dimension to retrieve.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "PATCH": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom dimension to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customDimensionId",
+            "description": "string Custom dimension ID for the custom dimension to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom dimension to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "ignoreCustomDataSourceLinks",
+            "description": "boolean Force the update and ignore any warnings related to the custom dimension being linked to a custom data source / data set. (Default: false )",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      },
+      "PUT": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string Account ID for the custom dimension to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "customDimensionId",
+            "description": "string Custom dimension ID for the custom dimension to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID for the custom dimension to update.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "ignoreCustomDataSourceLinks",
+            "description": "boolean Force the update and ignore any warnings related to the custom dimension being linked to a custom data source / data set. (Default: false )",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    },
+    "/management/accounts/accountId/webproperties/webPropertyId/entityAdWordsLinks": {
+      "POST": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string ID of the Google Analytics account to create the link for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to create the link for.",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "GET": {
+        "responses": {
+          "200": {
+            "description": "correct response",
+            "example": {
+              "totalResults": "integer",
+              "startIndex": "integer",
+              "previousLink": "string",
+              "kind": "analytics#entityAdWordsLinks",
+              "itemsPerPage": "integer",
+              "items": [
+                "management.webPropertyAdWordsLinksResource"
+              ],
+              "nextLink": "string"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "accountId",
+            "description": "string ID of the account which the given web property belongs to.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "webPropertyId",
+            "description": "string Web property ID to retrieve the AdWords links for.",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "max-results",
+            "description": "integer The maximum number of webProperty-AdWords links to include in this response.",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "start-index",
+            "description": "integer An index of the first webProperty-AdWords link to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.",
+            "type": "integer",
+            "required": true
+          }
+        ]
+      }
+    }
+  },
+  "produces": "application/json",
+  "host": "www.googleapis.com",
+  "schemes": [
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": "This is the information of the API"
+}

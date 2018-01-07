@@ -241,7 +241,7 @@ class Crawler(object):
     # Start to print the url address tree
     tree = list2tree.group_urls(self.visited_links)
     # Create directory
-    self.dataset_name = "EntrySet/"
+    self.dataset_name = "../EntrySet/"
     if "google" in self.doc_page:
         self.api_foler = self.doc_page.split('://')[-1].split('/')[1];
     else:

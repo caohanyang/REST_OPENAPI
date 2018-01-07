@@ -1,0 +1,460 @@
+<button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+
+<mat-horizontal-stepper [linear]="isLinear">
+
+  <!-- First form -->
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>General Information</ng-template>
+
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>General Information</mat-card-title>
+          <mat-card-subtitle>This is the global information about the API</mat-card-subtitle>
+        </mat-card-header>
+
+        <h5 align="left">
+          <strong>Input the name of the target API</strong>
+        </h5>
+        <div class="example-container">
+          <mat-form-field>
+            <mat-label>API Name</mat-label>
+            <input matInput placeholder="Instragram, Twitter, ..." formControlName="apiName" required>
+          </mat-form-field>
+        </div>
+        <br>
+
+
+        <h5 align="left">
+          <strong>Find the Root URL of the API documentation</strong>
+        </h5>
+        <div class="example-container">
+          <mat-form-field>
+            <mat-label>Documentation Main Entry</mat-label>
+            <input matInput placeholder="https://www.instagram.com/developer/" formControlName="docUrl" required>
+          </mat-form-field>
+          <p align="left">
+            A REST API HTML Documentation is composed of a set of web pages. Among the set of pages, one page is called the Root Page,
+            and is linked directly or indirectly to all the pages of the set.
+            <br> As an example, the Root Page of the Instagram API HTML Documentation is <i>https://www.instagram.com/developer/</i>.
+          </p>
+        </div>
+        <img src="../assets/img/mainUrl.png" alt="documentation details" align="center" width=100%>
+        <br>
+        <br>
+
+        <h5 align="left">
+          <strong>Find the Filter URL of the API documentation (optional)</strong>
+        </h5>
+        <div class="example-container">
+          <mat-form-field>
+            <mat-label>Documentation Filter Url</mat-label>
+            <input matInput placeholder="https://www.instagram.com/developer/endpoints" formControlName="filterUrl">
+          </mat-form-field>
+          <p align="left">
+            This is a optional parameter. If the developer can conclude the common URL for pages that describe the endpoints.
+            <br> As an example, if the Instagram endpoints Urls are:
+            <br>
+            <i>https://www.instagram.com/developer/endpoints/users/</i>
+            <br>
+            <i>https://www.instagram.com/developer/endpoints/comments/</i>
+            <br>
+            <i>https://www.instagram.com/developer/endpoints/likes/</i>
+            <br> The Filter Url could be <i>https://www.instagram.com/developer/endpoints</i>.
+          </p>
+        </div>
+        <br>
+
+      </mat-card>
+
+      <div style="text-align:center">
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!--Second form -->
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>URL & Verb</ng-template>
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Url & Verb</mat-card-title>
+          <mat-card-subtitle>This is the Url and Verb information about API endpoints</mat-card-subtitle>
+        </mat-card-header>
+
+
+        <h5 align="left">
+          <strong>Choose the endpoint Url and Http Verb pattern</strong>
+        </h5>
+        <mat-radio-group formControlName="mode" [(ngModel)]="modeType">
+
+          <div class="example-margin" align="left">
+            <mat-radio-button class="example-radio" value="https://">Both URL and Verb exist, Url begins with https</mat-radio-button>
+            <img src="../assets/img/https.png" alt="documentation details" align="center" width=100%>
+          </div>
+          <br>
+
+          <div class="example-margin">
+            <mat-radio-button class="example-radio" value="http://">Both URL and Verb exist, Url begins with http</mat-radio-button>
+            <img src="../assets/img/http.png" alt="documentation details" align="center" width=100%>
+          </div>
+          <br>
+
+          <div class="example-margin">
+            <mat-radio-button class="example-radio" value="/">Both URL and Verb exist, Url begins with /</mat-radio-button>
+            <img src="../assets/img/relative.png" alt="documentation details" align="center" width=100%>
+          </div>
+          <br>
+
+          <div class="example-margin">
+            <mat-radio-button class="example-radio" value="key">Verb doesn't exist, common keyword exist before Url</mat-radio-button>
+            <img src="../assets/img/noverbkey.png" alt="documentation details" align="center" width=100%>
+          </div>
+          <br>
+
+          <div class="example-margin">
+            <mat-radio-button class="example-radio" value="null">Verb doesn't exist, can't find common keyword before Url</mat-radio-button>
+            <img src="../assets/img/noverbnull.png" alt="documentation details" align="center" width=100%>
+          </div>
+          <br>
+
+        </mat-radio-group>
+        <br>
+
+
+        <h5 align="left">
+          <strong>URL details</strong>
+        </h5>
+        <div class="example-container" *ngIf="!(modeType=='key' || modeType=='null')">
+
+          <p> Stuffing between Verb and Url: {{stuffing}} </p>
+          <mat-form-field>
+            <mat-select placeholder="stuffing" formControlName="stuffing" required>
+              <mat-option>None</mat-option>
+              <mat-option value="\\s">Whitespace</mat-option>
+              <mat-option value=".{0,10}">1 or 2 words</mat-option>
+              <mat-option value="\\s.{0,60}">3 or 10 words</mat-option>
+              <mat-option value="(.*?)">more than 10 words</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p>Check the location order of Url and Verb: </p>
+          <mat-form-field>
+            <mat-select placeholder="order of url and verb" [(value)]="reverse" formControlName="reverse" required>
+              <mat-option value="no">Url first</mat-option>
+              <mat-option value="yes">Verb first</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="example-container" *ngIf="modeType=='key'">
+          <p>The common keyword before Url</p>
+          <mat-form-field>
+            <mat-label>Keyword before Url</mat-label>
+            <input matInput placeholder="Url :" formControlName="urlKey">
+          </mat-form-field>
+        </div>
+
+        <div class="example-container">
+          <p> Check if the Url contains whitespace: {{urlMiddle}} </p>
+          <mat-form-field>
+            <mat-select placeholder="urlMiddle" formControlName="urlMiddle" required>
+              <mat-option>None</mat-option>
+              <mat-option value=" ">Yes</mat-option>
+              <mat-option value="">No</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p> Character after the Url: {{urlAfter}} </p>
+          <mat-form-field>
+            <mat-select placeholder="urlAfter" [(value)]="urlAfter" formControlName="urlAfter" required>
+              <mat-option>None</mat-option>
+              <mat-option value=" ">Space Bar</mat-option>
+              <mat-option value="\n">New Line</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p> Path templating refers to the usage of curly braces (&#123;&#125;) to mark a section of a URL path as replaceable
+            using path parameters: {{urlTemplate}} </p>
+          <mat-form-field>
+            <mat-select placeholder="urlTemplate" [(value)]="urlTemplate" formControlName="urlTemplate" required>
+              <mat-option value="no">No</mat-option>
+              <mat-option value=":id">:id</mat-option>
+              <mat-option value="{id}">&#123;id&#125;</mat-option>
+              <mat-option value="<id>">&lt;id&gt;</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+        <br>
+
+
+        <h5 align="left">
+          <strong>Http Verb details</strong>
+        </h5>
+        <div class="example-container">
+          <p>The abbreviation for the Http Verb Delete: {{delete}}</p>
+          <mat-form-field>
+            <mat-select placeholder="abbreviation for delete" [(value)]="delete" formControlName="abbrevDelete" required>
+              <mat-option value="del">Del</mat-option>
+              <mat-option value="delete">Delete</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+
+      </mat-card>
+
+      <div style="text-align:center">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- Three form -->
+  <mat-step [stepControl]="threeFormGroup">
+    <form [formGroup]="threeFormGroup">
+      <ng-template matStepLabel>Request & Response Example</ng-template>
+
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Request & Response Example</mat-card-title>
+          <mat-card-subtitle>This is the Request and Response information about API endpoints</mat-card-subtitle>
+        </mat-card-header>
+
+        <!-- request details-->
+        <h5 align="left">
+          <strong>Request details</strong>
+        </h5>
+        <div class="example-container">
+          <p>Check if the API contain request examples</p>
+          <mat-form-field>
+            <mat-select placeholder="exist request example?" [(value)]="request" required>
+              <mat-option value="yes">Yes</mat-option>
+              <mat-option value="no">No</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="example-container" *ngIf="request=='yes'">
+            
+            <p>Type of request example</p>
+            <!-- <img src="../assets/img/noverbnull.png" alt="documentation details" align="center" width=100%> -->
+            <mat-form-field>
+              <mat-select placeholder="the type of the request example" formControlName="reqExample" required>
+                <mat-option value="http">HTTP</mat-option>
+                <mat-option value="curl">CURL</mat-option>
+                <mat-option value="((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}">JSON</mat-option>
+                <!-- <mat-option value="xml">XML</mat-option> -->
+              </mat-select>
+            </mat-form-field>
+
+
+            <p>The key word before the request</p>
+            <mat-form-field>
+              <mat-label>keyword before request example</mat-label>
+              <input matInput placeholder="example request, request example" formControlName="reqKey" required>
+            </mat-form-field>
+
+
+            <p> Filling between keyword and request example: {{reqmiddle}} </p>
+            <mat-form-field>
+              <mat-select placeholder="filling between keyword and example" formControlName="reqMiddle" required>
+                <mat-option>None</mat-option>
+                <mat-option value="\\s">Whitespace</mat-option>
+                <mat-option value=".{0,10}">1 or 2 words</mat-option>
+                <mat-option value="\\s.{0,60}">3 or 10 words</mat-option>
+                <mat-option value="(.*?)">more than 10 words</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <p>HTML tags for the request example: {{reqtemplate}} </p>
+            <mat-form-field>
+              <mat-select placeholder="html tag for the request example" formControlName="reqTemplate" required>
+                <mat-option>None</mat-option>
+                <mat-option value="pre">pre</mat-option>
+                <mat-option value="code">code</mat-option>
+                <mat-option value="a">a</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <p>Check the location order of Url and request example: </p>
+            <mat-form-field>
+              <mat-select placeholder="order of url and request example" formControlName="url1req2" required>
+                <mat-option value="yes">Url first</mat-option>
+                <mat-option value="no">Request example first</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+        </div>
+        <br>
+
+        <!-- response details-->
+        <h5 align="left">
+            <strong>Response details</strong>
+          </h5>
+          <div class="example-container">
+            <p>Check if the API contain response examples</p>
+            <mat-form-field>
+              <mat-select placeholder="exist response example?" [(value)]="response" required>
+                <mat-option value="yes">Yes</mat-option>
+                <mat-option value="no">No</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+  
+          <div class="example-container" *ngIf="response=='yes'">
+              <p>The key word before the response</p>
+              <mat-form-field>
+                <mat-label>keyword before response example</mat-label>
+                <input matInput placeholder="example, response, JSON representation..." formControlName="resKey" required>
+              </mat-form-field>
+  
+              <p>Type of response example</p>
+              <mat-form-field>
+                <mat-select placeholder="the type of the response example" formControlName="resExample" required>
+                  <mat-option value="((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}">JSON</mat-option>
+                  <!-- <mat-option value="xml">XML</mat-option> -->
+                </mat-select>
+              </mat-form-field>
+  
+              <p> Stuffing between keyword and response example: {{reqmiddle}} </p>
+              <mat-form-field>
+                <mat-select placeholder="stuffing between keyword and example" formControlName="resMiddle" required>
+                    <mat-option>None</mat-option>
+                    <mat-option value="\\s">Whitespace</mat-option>
+                    <mat-option value=".{0,10}">1 or 2 words</mat-option>
+                    <mat-option value="\\s.{0,60}">3 or 10 words</mat-option>
+                    <mat-option value="(.*?)">more than 10 words</mat-option>
+                </mat-select>
+              </mat-form-field>
+  
+              <p>HTML tags for the response example: {{restemplate}} </p>
+              <mat-form-field>
+                <mat-select placeholder="html tag for the response example" formControlName="resTemplate" required>
+                  <mat-option>None</mat-option>
+                  <mat-option value="pre">pre</mat-option>
+                  <mat-option value="code">code</mat-option>
+                  <mat-option value="span">span</mat-option>
+                </mat-select>
+              </mat-form-field>
+  
+              <p>Check the location order of Url and response example: </p>
+              <mat-form-field>
+                <mat-select placeholder="order of url and response example" formControlName="url1res2" required>
+                  <mat-option value="yes">Url first</mat-option>
+                  <mat-option value="no">Response example first</mat-option>
+                </mat-select>
+              </mat-form-field>
+  
+          </div>
+
+      </mat-card>
+
+      <div style="text-align:center">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- Four form -->
+  <mat-step [stepControl]="fourFormGroup">
+    <form [formGroup]="fourFormGroup">
+      <ng-template matStepLabel>Parameter</ng-template>
+ 
+
+      <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Parameter</mat-card-title>
+            <mat-card-subtitle>This is the Parameter information about API endpoints</mat-card-subtitle>
+          </mat-card-header>
+  
+  
+          <!-- Parameter details-->
+          <h5 align="left">
+            <strong>Parameter details</strong>
+          </h5>
+
+          <div class="example-container">
+            <p>Check if the API contain parameter details</p>
+            <mat-form-field>
+              <mat-select placeholder="exist parameter information?" [(value)]="existpara" required>
+                <mat-option value="yes">Yes</mat-option>
+                <mat-option value="no">No</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        
+          <div class="example-container" *ngIf="existpara=='yes'">
+          <p>Type of parameter template: {{template}} </p>
+          <mat-form-field>
+            <mat-select placeholder="the type of the parameter template" formControlName="template" required>
+              
+              <mat-option value="table">table</mat-option>
+              <mat-option value="list">list</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p>The key word before the parameter template</p>
+          <mat-form-field>
+            <mat-label>keyword before parameter template</mat-label>
+            <input matInput placeholder="parameter, argument, field, parameters..." formControlName="paraKey" required>
+          </mat-form-field>
+
+          <p> Stuffing between keyword and parameter template: {{paramiddle}} </p>
+          <mat-form-field>
+            <mat-select placeholder="stuffing between keyword and parameter template" formControlName="paraMiddle" required>
+              <mat-option value="whitespace">Whitespace</mat-option>
+              <mat-option value="1 or 2 words">1 or 2 words</mat-option>
+              <mat-option value="3 or 10 words">3 or 10 words</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p>Check the location order of Url and parameter template: </p>
+          <mat-form-field>
+            <mat-select placeholder="order of url and parameter template" formControlName="url1para2" required>
+              <mat-option value="yes">Url first</mat-option>
+              <mat-option value="no">Parameter template first</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+
+      </mat-card>
+      
+
+      <div style="text-align:center">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+
+    <div style="text-align:center">
+        <button mat-button matStepperPrevious>Back</button>
+        <button type="submit" mat-raised-button color="primary" (click)="create()" >Done</button>
+    </div>
+
+    <!-- <button type="submit" class="btn btn-primary" (click)="create()">Done</button> -->
+  </mat-step>
+</mat-horizontal-stepper>
+
+
+<!-- Copyright 2017 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

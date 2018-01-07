@@ -167,10 +167,14 @@ public class ProcessBaseUrl {
 				// case 3 : rank 1 2 contain api
 				// check rank2 last segment contain "v" or not
 				String[] segment = rank2.split("/");
-				// https://api.yelp.com/v3/businesses/
-				// check the segment, if it contians v?
+				// https://api.yelp.com/v3/businesses/    https://www.googleapis.com/adsense/v1.4
+				// check the segment, if it contians v? v?.?
 				for (int i = 0; i < segment.length; i++) {
 					if (segment[i].matches("(?i)v\\d")) {
+						basePath = rank2.substring(0, rank2.indexOf(segment[i]) + segment[i].length());
+						break;
+					}
+					if (segment[i].matches("(?i)v\\d.\\d")) {
 						basePath = rank2.substring(0, rank2.indexOf(segment[i]) + segment[i].length());
 						break;
 					}
@@ -180,6 +184,8 @@ public class ProcessBaseUrl {
 					basePath = rank2;
 				} else if (segment[segment.length - 1].matches("(?i)rest")) {
 					// check rank2 last segment contain "/rest" or not
+					basePath = rank2;
+				} else if (segment[segment.length - 1].matches("(?i)v\\d.\\d")) {
 					basePath = rank2;
 				}
 			}

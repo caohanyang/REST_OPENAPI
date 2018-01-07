@@ -11,16 +11,28 @@
   <title>
    Instagram Developer Documentation
   </title>
-  <meta content="noimageindex" name="robots"/>
+  <meta content="noimageindex, noarchive" name="robots"/>
   <meta content="yes" name="mobile-web-app-capable"/>
   <meta content="#000000" name="theme-color"/>
   <meta content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" id="viewport" name="viewport"/>
+  <link href="/data/manifest.json" rel="manifest"/>
   <script type="text/javascript">
    (function() {
             var docElement = document.documentElement;
             var classRE = new RegExp('(^|\\s)no-js(\\s|$)');
             var className = docElement.className;
             docElement.className = className.replace(classRE, '$1js$2');
+        })();
+  </script>
+  <script type="text/javascript">
+   (function() {
+          if ('PerformanceObserver' in window && 'PerformancePaintTiming' in window) {
+            window.__bufferedPerformance = [];
+            var ob = new PerformanceObserver(function(e) {
+              window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());
+            });
+            ob.observe({entryTypes:['paint']});
+          }
         })();
   </script>
   <link href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/932e4d9af891.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
@@ -31,12 +43,12 @@
   <link href="/static/images/ico/favicon-192.png/b407fa101800.png" rel="icon" sizes="192x192"/>
   <link color="#262626" href="/static/images/ico/favicon.svg/9d8680ab8a3c.svg" rel="mask-icon"/>
   <link href="/static/images/ico/favicon.ico/dfa85bb1fd63.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="/static/styles/developer/developer-main.css/fd60bf86a0b6.css" rel="stylesheet" type="text/css"/>
-  <script src="/static/scripts/jquery.js/213ba890e802.js" type="text/javascript">
+  <link href="/static/styles/developer/developer-main.css/6308000523f7.css" rel="stylesheet" type="text/css"/>
+  <script crossorigin="anonymous" src="/static/scripts/jquery.js/213ba890e802.js" type="text/javascript">
   </script>
-  <script src="/static/scripts/bluebar.js/57733d51aed5.js" type="text/javascript">
+  <script crossorigin="anonymous" src="/static/scripts/bluebar.js/57733d51aed5.js" type="text/javascript">
   </script>
-  <script src="/static/scripts/navigation.js/a98ac49433f4.js" type="text/javascript">
+  <script crossorigin="anonymous" src="/static/scripts/navigation.js/a98ac49433f4.js" type="text/javascript">
   </script>
   <script>
    $(document).ready(function() {
@@ -348,7 +360,7 @@
         </div>
         <div class="card-info-more ep-response" id="get_media_comments_response">
          <div class="codehilite">
-          <pre><code><span class="p">{</span>
+          <pre><code><span></span><span class="p">{</span>
     <span class="nt">"data"</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">"created_time"</span><span class="p">:</span> <span class="s2">"1280780324"</span><span class="p">,</span>
@@ -456,7 +468,7 @@
         </div>
         <div class="card-info-more ep-response" id="post_media_comments_response">
          <div class="codehilite">
-          <pre><code><span class="p">{</span>
+          <pre><code><span></span><span class="p">{</span>
     <span class="nt">"meta"</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">"code"</span><span class="p">:</span> <span class="mi">200</span>
     <span class="p">},</span> 
@@ -578,7 +590,7 @@
         </div>
         <div class="card-info-more ep-response" id="delete_media_comments_response">
          <div class="codehilite">
-          <pre><code><span class="p">{</span>
+          <pre><code><span></span><span class="p">{</span>
     <span class="nt">"meta"</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">"code"</span><span class="p">:</span> <span class="mi">200</span>
     <span class="p">},</span> 
@@ -695,7 +707,7 @@
       </ul>
      </nav>
      <p class="copyright -cx-PRIVATE-Footer__copyright">
-      © 2017 Instagram
+      © 2018 Instagram
      </p>
     </div>
    </footer>
@@ -703,12 +715,17 @@
    </div>
   </div>
   <!-- .root -->
-  <script src="/static/scripts/polyfills/es5-shim.min.js/6514c5e08593.js">
+  <script type="text/javascript">
+   window._sharedData = {"activity_counts": null, "config": {"csrf_token": "A9kFDS3K6Ghc2GspT0vKPjZ8VWf7Ny50", "viewer": null}, "country_code": "FR", "language_code": "en", "locale": "en_US", "entry_data": {}, "gatekeepers": {"ld": true, "nr": true, "pl": true}, "qe": {"dash_for_vod": {"g": "", "p": {}}, "bc3l": {"g": "", "p": {}}, "aysf": {"g": "", "p": {}}, "notif": {"g": "", "p": {}}, "follow_button": {"g": "", "p": {}}, "login_via_signup_page": {"g": "launch", "p": {"is_enabled": "true"}}, "loggedout": {"g": "control", "p": {"new_cta": "false", "remove_upsell_banner": "false", "update_nav": "false"}}, "stories": {"g": "", "p": {}}, "exit_story_creation": {"g": "", "p": {}}, "su_universe": {"g": "control_msisdn_prefill_12_18", "p": {"has_msisdn_prefill": "false"}}, "us_li": {"g": "", "p": {}}, "sidecar": {"g": "", "p": {}}, "video": {"g": "", "p": {}}, "filters": {"g": "", "p": {}}, "appsell": {"g": "", "p": {}}, "collections": {"g": "", "p": {}}, "save": {"g": "", "p": {}}, "stale": {"g": "", "p": {}}, "reg": {"g": "", "p": {}}, "reg_vp": {"g": "test_group_2", "p": {"hide_value_prop": "true"}}, "prof_pic_upsell": {"g": "", "p": {}}, "prof_pic_creation": {"g": "", "p": {}}, "onetaplogin": {"g": "control", "p": {"enabled": "false"}}, "feed_vp": {"g": "", "p": {}}, "push_notifications": {"g": "", "p": {}}, "login_poe": {"g": "", "p": {}}, "prefetch": {"g": "", "p": {}}, "report_haf": {"g": "", "p": {}}, "reporting": {"g": "", "p": {}}, "a2hs": {"g": "", "p": {}}, "bg_sync": {"g": "", "p": {}}, "disc_ppl": {"g": "", "p": {}}, "ebdsim_li": {"g": "", "p": {}}, "embeds": {"g": "", "p": {}}, "prvcy_tggl": {"g": "", "p": {}}, "v_grid": {"g": "", "p": {}}, "tp_pblshr": {"g": "", "p": {}}}, "hostname": "www.instagram.com", "display_properties_server_guess": {"pixel_ratio": 1.5, "viewport_width": 360, "viewport_height": 480, "orientation": ""}, "environment_switcher_visible_server_guess": true, "platform": "web", "nonce": "TCnnTK6GV2fSnf8TKbyQmw==", "zero_data": {}, "rollout_hash": "92d6c369637a", "probably_has_app": false, "show_app_install": true};
   </script>
-  <script src="/static/scripts/polyfills/es5-sham.min.js/fc3c22cf2d67.js">
+  <script crossorigin="anonymous" src="/static/bundles/Polyfills.js/eba549db6e08.js" type="text/javascript">
+  </script>
+  <script crossorigin="anonymous" src="/static/bundles/Vendor.js/c79ab33255d8.js" type="text/javascript">
   </script>
   <script type="text/javascript">
-   window._sharedData = {"activity_counts": null, "config": {"csrf_token": "Teqltsh5yfijA3ov6RrMwWObZGg38Ssi", "viewer": null}, "country_code": "FR", "language_code": "en", "entry_data": {}, "gatekeepers": {"bn": true, "ld": true, "pl": true}, "qe": {"ebd": {"g": "", "p": {}}, "create": {"g": "", "p": {}}, "disc": {"g": "", "p": {}}, "feed": {"g": "", "p": {}}, "gql": {"g": "", "p": {}}, "su_universe": {"g": "", "p": {}}, "us": {"g": "", "p": {}}, "us_li": {"g": "", "p": {}}, "nav": {"g": "", "p": {}}, "nav_lo": {"g": "", "p": {}}, "poe": {"g": "try_email_and_phone_login_test_05", "p": {"show_phone_or_email_text": "false", "try_email_and_phone_login": "true"}}, "pm": {"g": "", "p": {}}, "profile": {"g": "", "p": {}}, "deact": {"g": "", "p": {}}, "sidecar": {"g": "", "p": {}}, "ufi": {"g": "", "p": {}}, "ufi_loggedout": {"g": "control_20170411", "p": {"is_enabled": "false"}}, "video": {"g": "", "p": {}}}, "hostname": "www.instagram.com", "display_properties_server_guess": {"pixel_ratio": 1.5, "viewport_width": 360}, "environment_switcher_visible_server_guess": true, "platform": "web", "probably_has_app": false, "show_app_install": true};
+   !function(e){function n(o){if(a[o])return a[o].exports;var t=a[o]={i:o,l:!1,exports:{}};return e[o].call(t.exports,t,t.exports,n),t.l=!0,t.exports}var o=window.webpackJsonp;window.webpackJsonp=function(a,r,i){for(var c,f,d,s=0,u=[];s<a.length;s++)f=a[s],t[f]&&u.push(t[f][0]),t[f]=0;for(c in r)Object.prototype.hasOwnProperty.call(r,c)&&(e[c]=r[c]);for(o&&o(a,r,i);u.length;)u.shift()();if(i)for(s=0;s<i.length;s++)d=n(n.s=i[s]);return d};var a={},t={41:0};n.e=function(e){function o(){c.onerror=c.onload=null,clearTimeout(f);var n=t[e];0!==n&&(n&&n[1](new Error("Loading chunk "+e+" failed.")),t[e]=void 0)}var a=t[e];if(0===a)return new Promise(function(e){e()});if(a)return a[2];var r=new Promise(function(n,o){a=t[e]=[n,o]});a[2]=r;var i=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.charset="utf-8",c.async=!0,c.timeout=12e4,c.crossOrigin="anonymous",n.nc&&c.setAttribute("nonce",n.nc),c.src=n.p+""+({0:"SettingsModules",1:"ProfilePageContainer",2:"LikedByListContainer",3:"FollowListContainer",4:"CreationModules",5:"LocationPageContainer",6:"DiscoverMediaPageContainer",7:"TagPageContainer",8:"DebugInfoNub",9:"FeedPageContainer",10:"PostPageContainer",11:"LandingPage",12:"LoginAndSignupPage",13:"ResetPasswordPageContainer",14:"UserCollectionsPageContainer",15:"DiscoverPeoplePageContainer",16:"MobileStoriesPage",17:"DesktopStoriesPage",18:"ContactHistoryPage",19:"LocationsDirectoryLandingPage",20:"LocationsDirectoryCountryPage",21:"LocationsDirectoryCityPage",22:"DirectoryPage",23:"ActivityFeedPage",24:"CameraPage",25:"StoryCreationPage",26:"NewUserInterstitial",27:"FBSignupPage",28:"Report",29:"Copyright",30:"Community",31:"SupportInfo",32:"GenericSurvey",33:"Challenge",34:"EmailSnoozePage",35:"EmailUnsubscribePage",36:"ConfirmFollowDialog",37:"Consumer",38:"NotificationLandingPage"}[e]||e)+".js/"+{0:"e7259d76fb06",1:"4e3d3f2e4ed5",2:"50c5e6e224a4",3:"05a1909f3f5d",4:"a5d977d0b9c8",5:"f73ef40aee6e",6:"80f46c9a3024",7:"44680843bd16",8:"ed5fb5634f1a",9:"1520be495e70",10:"8728c7d53030",11:"27e3363a1699",12:"754f6d3b422c",13:"781ccbff3924",14:"285fd8a40cf9",15:"bb73269266f5",16:"8f76889f8e44",17:"845305a4ad94",18:"0da8ab734065",19:"23e935f7c238",20:"736b32816576",21:"0b2edacb03fb",22:"aecd0714fac8",23:"393c5f4b1a34",24:"661bb2efb525",25:"1084865314f4",26:"3621b805d876",27:"65bee66962e3",28:"14887d60e3df",29:"73da609f91bf",30:"a94fbdcb61ed",31:"019a47b45c16",32:"1107b1b2a405",33:"c546529d0ec2",34:"986d2aa6fe7a",35:"928ced973bcc",36:"9834776e1713",37:"1def874adee1",38:"0d60ba78fff4"}[e]+".js";var f=setTimeout(o,12e4);return c.onerror=c.onload=o,i.appendChild(c),r},n.m=e,n.c=a,n.d=function(e,o,a){n.o(e,o)||Object.defineProperty(e,o,{configurable:!1,enumerable:!0,get:a})},n.n=function(e){var o=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(o,"a",o),o},n.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},n.p="/static/bundles/",n.oe=function(e){throw console.error(e),e}}([]);
+  </script>
+  <script crossorigin="anonymous" src="/static/bundles/en_US.js/14510dcfdac8.js" type="text/javascript">
   </script>
   <script>
    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?

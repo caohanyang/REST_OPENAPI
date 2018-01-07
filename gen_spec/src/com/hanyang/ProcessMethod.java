@@ -66,11 +66,16 @@ public class ProcessMethod {
 				return false;
 			}
 
-			if (url.contains(";") | url.contains("+") | url.contains("</") | url.contains(">")) {
+			if (url.contains(";") | url.contains(",") | url.contains("+") | url.contains("</") | url.contains(">")) {
 				// don't contain chars that in the path template
-				if (!url.contains(Settings.URLTEMPLATE)) {
+				if (Settings.URLTEMPLATE.equals("no")) {
 					return false;
+				} else {
+					if (!url.contains(Settings.URLTEMPLATE)) {
+						return false;
+					}
 				}
+				
 				
 			}
 

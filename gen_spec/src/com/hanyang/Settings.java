@@ -20,8 +20,8 @@ public class Settings {
 	public static String URLBASE = "";
 		
 	// The things between Http verbs and Url:
-	// "\\s" \\s.{0,60} "(.*?)" .{0,10} 
-	public static String STUFFING = ".{0,10}";	
+	// \\s \\s.{0,60} (.*?) .{0,10} 
+	public static String STUFFING = "\\s";	
 	// for some url contains URL parameters
 	// It will present URL in different tags, which causes whitespace
 	// " " ""
@@ -53,12 +53,12 @@ public class Settings {
 	 */
 	// The key word before the request
 	// "EXAMPLE REQUEST"  "" "no"
-	public static String REQKEY = "cURL";
+	public static String REQKEY = "no";
 	// \\s \\s.{0,60} "" (.*?)
 	public static String REQMIDDLE = ".{0,10}";
 	// The request exists or not 
-	// http \\{(.*?)\\} no curl  ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
-	public static String REQEXAMPLE = "curl";
+	// http no curl  ((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}
+	public static String REQEXAMPLE = "((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}";
 	
 	// default true
 	public static Boolean URL1REQ2 = true;
@@ -71,10 +71,10 @@ public class Settings {
 	 */
 	
 	// (example)|(response)  ""  "no"
-	public static String RESKEY = "200";
+	public static String RESKEY = "JSON representation";
 	// \\s \\s.{0,10} \\s.{0,100} ""
 	// 1.
-	public static String RESMIDDLE = "\\s.{0,10}";
+	public static String RESMIDDLE = "\\s.{0,120}";
 	// default true
 	public static Boolean URL1RES2 = true;
 	//  pre code span
@@ -94,7 +94,7 @@ public class Settings {
 	// sometimes not common "Query Parameters" "url Parameters"
 	// choose the last common one
 	// (parameter)|(argument)|(field)|(parameters)|(arguments)|(fields)  or choose the first element Name
-	public static String PARAKEY = "QUERY PARAMS";
+	public static String PARAKEY = "parameters";
 	// first URL then parameters
 	public static boolean URL1PARA2 = true;	
 	

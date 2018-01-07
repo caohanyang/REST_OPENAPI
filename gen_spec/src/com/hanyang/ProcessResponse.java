@@ -156,11 +156,15 @@ public class ProcessResponse {
 				Out.prln(codeText);
 
 				Object codeObj = null;
-				if (codeText.startsWith("{")) {
-					codeObj = new JSONObject(codeText);
-				} else if (codeText.startsWith("[")) {
-					codeObj = new JSONArray(codeText);
-				} else if (codeText.startsWith("<")) {
+				try {
+					if (codeText.startsWith("{")) {
+						codeObj = new JSONObject(codeText);
+					} else if (codeText.startsWith("[")) {
+						codeObj = new JSONArray(codeText);
+					} else if (codeText.startsWith("<")) {
+						codeObj = codeText;
+					}
+				} catch (Exception e) {
 					codeObj = codeText;
 				}
 

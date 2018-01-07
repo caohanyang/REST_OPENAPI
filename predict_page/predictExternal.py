@@ -45,18 +45,18 @@ if __name__ == "__main__":
         exit(0)
 
     elif len(sys.argv) == 2:
-        balence_data_folder = "predict_page/dataset/bal_dataset"
+        balence_data_folder = "../predict_page/dataset/bal_dataset"
         API_NAME = sys.argv[1].split('://')[-1].split('/')[0]
         if "google" in API_NAME:
             API_NAME = sys.argv[1].split('://')[-1].split('/')[1]
-        external_data_folder = "EntrySet/" + API_NAME
+        external_data_folder = "../EntrySet/" + API_NAME
 
     elif len(sys.argv) == 3:
         print "only two parameters"
         exit(0)
 
     # Create folder for FilteredSet
-    filteredSet = "FilteredSet/" + API_NAME
+    filteredSet = "../FilteredSet/" + API_NAME
 
 
     # set shuffle = True

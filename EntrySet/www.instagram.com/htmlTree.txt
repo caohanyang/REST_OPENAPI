@@ -1,11 +1,11 @@
 
-                    /-/developer
-                   |
-                   |          /-/endpoints
--- /www.instagram.com        |
-                   |         |          /-/comments
-                   |         |         |
-                    \/developer        |--/likes
+                              /-/
+                             |
+                             |--/endpoints
+                             |
+                             |          /-/comments
+-- /www.instagram.com/developer        |
+                             |         |--/likes
                              |         |
                              |         |--/locations
                              |         |

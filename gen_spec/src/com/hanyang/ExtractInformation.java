@@ -77,6 +77,9 @@ public class ExtractInformation {
 		// init gate
 		Gate.init();
 
+		Out.prln(System.getProperty("user.dir"));
+		Out.prln(FilteredSet_PATH);
+		
 		// 1. create corpus
 		File folder = new File(FilteredSet_PATH);
 		File[] listFiles = folder.listFiles();
@@ -130,7 +133,7 @@ public class ExtractInformation {
 			baseUrl = processBa.cleanBaseUrl(baseUrl);
 			Out.prln(baseUrl);
 		}
-
+		
 		// 2.3. check each html file
 		for (int i = 0; i < listFiles.length; i++) {
 			// print the file name
@@ -307,16 +310,16 @@ public class ExtractInformation {
 					
 					// no reverse: get + url
 					if (Settings.MODE.startsWith("http")) {
-						// Fix 2: suppose the URL length < 100
-						matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+						// Fix 2: suppose the URL length < 160
+						matchStr = strAll.substring(matcher.start(), matcher.end() + 160);
 					} else if (Settings.MODE.equals("/")){
 						// partial URL length < 20
 						matchStr = strAll.substring(matcher.start(), matcher.end() + 20);
 					} else if (Settings.MODE.equals("key")){
 						// key url
-						matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+						matchStr = strAll.substring(matcher.start(), matcher.end() + 160);
 					} else {
-						matchStr = strAll.substring(matcher.start(), matcher.end() + 100);
+						matchStr = strAll.substring(matcher.start(), matcher.end() + 160);
 					}
 					
 				} else {
@@ -405,6 +408,11 @@ public class ExtractInformation {
 						if (Settings.URLMIDDLE.length()!= 0) {
 							// just remove one whitespace is enough?
 							if (!Settings.URLAFTER.equals(" ")) {
+								Matcher urlMatcher = Pattern.compile(Settings.PARAKEY, Pattern.CASE_INSENSITIVE).matcher(urlString);
+								if (urlMatcher.find()) {
+									// remove the parameter key 
+									urlString = urlString.substring(0, urlMatcher.start());
+								}
 								urlString = urlString.replaceAll(Settings.URLMIDDLE, "");
 							} else {
 								urlString = urlString.replaceFirst(Settings.URLMIDDLE, "");

@@ -15,15 +15,15 @@
         "parameters": [
           {
             "in": "query",
-            "name": "language\nstring\n\nSupported",
-            "description": "language\nstring\n\nSupported language code, generally consisting of its ISO 639-1 identifier. (E.g. 'en', 'ja'). In certain cases, BCP-47 codes including language + region identifiers are returned (e.g. 'zh-TW' and 'zh-CH')\n",
-            "type": "string",
+            "name": "\nstring\n\nThe translation model of the supported languages. Can be either base to return languages supported by the Phrase-Based Machine Translation (PBMT) model, or nmt to return languages supported by the Neural Machine Translation (NMT) model. If omitted, then all supported languages are returned.\n\nLanguages supported by the NMT model can only be translated to or from English (en).\n",
+            "description": "translation model of the supported languages. Can be either base to return languages supported by the Phrase-Based Machine Translation (PBMT) model, or nmt to return languages supported by the Neural Machine Translation (NMT) model. If omitted, then all supported languages are returned.\n\nLanguages supported by the NMT model can only be translated to or from English (en).\n",
+            "type": "integer",
             "required": true
           },
           {
             "in": "query",
-            "name": "name\nstring\n\nHuman",
-            "description": "readable name of the language localized to the target language.\n",
+            "name": "\nstring\n\nA valid API key to handle requests for this API. If you are using OAuth 2.0 service account credentials (recommended), do not supply this parameter.\n",
+            "description": "valid API key to handle requests for this API. If you are using OAuth 2.0 service account credentials (recommended), do not supply this parameter.\n",
             "type": "integer",
             "required": true
           }
@@ -35,22 +35,11 @@
         "responses": {
           "200": {
             "description": "correct response",
-            "example": [
-              [
-                {
-                  "isReliable": false,
-                  "confidence": 0.9882,
-                  "language": "en"
-                }
-              ],
-              [
-                {
-                  "isReliable": false,
-                  "confidence": 0.5683,
-                  "language": "pl"
-                }
+            "example": {
+              "detections": [
+                "array"
               ]
-            ]
+            }
           }
         },
         "parameters": [
@@ -63,7 +52,7 @@
           },
           {
             "in": "query",
-            "name": "key\nstring\n\nA",
+            "name": "key",
             "description": "valid API key to handle requests for this API. If you are using OAuth 2.0 service account credentials (recommended), do not supply this parameter.\n",
             "type": "integer",
             "required": true
@@ -72,14 +61,13 @@
       }
     },
     "/": {
-      "POST": {
+      "PUT": {
         "responses": {
           "200": {
             "description": "correct response",
             "example": {
-              "translations": [
-                "array"
-              ]
+              "translatedText": "string",
+              "detectedSourceLanguage": "string"
             }
           }
         },
@@ -93,35 +81,35 @@
           },
           {
             "in": "query",
-            "name": "target\nstring\n\nRequired",
+            "name": "target",
             "description": "The language to use for translation of the input text, set to one of the language codes listed in Language Support .\n",
             "type": "integer",
             "required": true
           },
           {
             "in": "query",
-            "name": "format\nstring\n\nThe",
+            "name": "format",
             "description": "format\nstring\n\nThe format of the source text, in either HTML (default) or plain-text. A value of html indicates HTML and a value of text indicates plain-text.\n",
             "type": "string",
             "required": true
           },
           {
             "in": "query",
-            "name": "source\nstring\n\nThe",
+            "name": "source",
             "description": "language of the source text, set to one of the language codes listed in Language Support . If the source language is not specified, the API will attempt to detect the source language automatically and return it within the response.\n",
             "type": "integer",
             "required": true
           },
           {
             "in": "query",
-            "name": "model\nstring\n\nThe",
+            "name": "model",
             "description": "translation model. Can be either base to use the Phrase-Based Machine Translation (PBMT) model, or nmt to use the Neural Machine Translation (NMT) model. If omitted, then nmt is used.\n\nIf the model is nmt , and the requested language translation pair is not supported for the NMT model, then the request is translated using the base model.\n",
             "type": "integer",
             "required": true
           },
           {
             "in": "query",
-            "name": "key\nstring\n\nA",
+            "name": "key",
             "description": "valid API key to handle requests for this API. If you are using OAuth 2.0 service account credentials (recommended), do not supply this parameter.\n",
             "type": "integer",
             "required": true

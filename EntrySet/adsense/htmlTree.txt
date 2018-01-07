@@ -1,0 +1,132 @@
+
+                                                          /-/
+                                                         |
+                                                         |--/accounts
+                                                         |
+                                                         |--/adclients
+                                                         |
+                                                         |--/adunits
+                                                         |
+                                                         |--/alerts
+                                                         |
+                                                         |--/customchannels
+                                                         |
+                                                         |--/index
+                                                         |
+                                                         |--/payments
+                                                         |
+                                                         |--/reports
+                                                         |
+                                                         |--/savedadstyles
+                                                         |
+                                                         |--/urlchannels
+                                                         |
+                                                         |         /-/adclients
+                                                         |        |
+                                                         |        |--/adunits
+                                                         |        |
+                                                         |        |--/alerts
+                                                         |        |
+                                                         |        |--/customchannels
+                                                         |        |
+                                                         |        |--/get
+                                                         |        |
+                                                         |        |--/list
+                                                         |        |
+                                                         |        |--/payments
+                                                         |        |
+                                                         |        |--/payments.html
+                                                         |        |
+                                                         |        |--/reports
+                                                         |        |
+                                                         |        |--/savedadstyles
+                                                         |        |
+                                                         |        |--/urlchannels
+                                                         |        |
+                                                         |        |-/adclients-/list
+                                                         |        |
+                                                         |        |        /-/customchannels
+                                                         |        |       |
+                                                         |        |       |--/get
+                                                         |        |       |
+                                                         |        |-/adunits-/getAdCode
+                                                         |        |       |
+                                                         |-/accounts      |--/list
+                                                         |        |       |
+                                                         |        |        \/customchannels-/list
+                                                         |        |
+                                                         |        |       /-/delete
+                                                         |        |-/alerts
+                                                         |        |       \-/list
+                                                         |        |
+                                                         |        |               /-/adunits
+                                                         |        |              |
+                                                         |        |              |--/get
+                                                         |        |-/customchannels
+                                                         |        |              |--/list
+-- /developers.google.com/adsense/management/v1.4/reference       |              |
+                                                         |        |               \/adunits-/list
+                                                         |        |
+                                                         |        |-/payments-/list
+                                                         |        |
+                                                         |        |        /-/generate
+                                                         |        |       |
+                                                         |        |-/reports-/saved
+                                                         |        |       |
+                                                         |        |       |      /-/generate
+                                                         |        |        \/saved
+                                                         |        |              \-/list
+                                                         |        |
+                                                         |        |              /-/get
+                                                         |        |-/savedadstyles
+                                                         |        |              \-/list
+                                                         |        |
+                                                         |         \/urlchannels-/list
+                                                         |
+                                                         |-/adclients-/list
+                                                         |
+                                                         |        /-/customchannels
+                                                         |       |
+                                                         |       |--/get
+                                                         |       |
+                                                         |-/adunits-/getAdCode
+                                                         |       |
+                                                         |       |--/list
+                                                         |       |
+                                                         |        \/customchannels-/list
+                                                         |
+                                                         |       /-/delete
+                                                         |-/alerts
+                                                         |       \-/list
+                                                         |
+                                                         |               /-/adunits
+                                                         |              |
+                                                         |              |--/get
+                                                         |-/customchannels
+                                                         |              |--/list
+                                                         |              |
+                                                         |               \/adunits-/list
+                                                         |
+                                                         |         /-/dimensions
+                                                         |        |
+                                                         |        |--/metrics
+                                                         |-/metadata
+                                                         |        |-/dimensions-/list
+                                                         |        |
+                                                         |         \/metrics-/list
+                                                         |
+                                                         |-/payments-/list
+                                                         |
+                                                         |        /-/generate
+                                                         |       |
+                                                         |-/reports-/saved
+                                                         |       |
+                                                         |       |      /-/generate
+                                                         |        \/saved
+                                                         |              \-/list
+                                                         |
+                                                         |              /-/get
+                                                         |-/savedadstyles
+                                                         |              \-/list
+                                                         |
+                                                          \/urlchannels-/list
