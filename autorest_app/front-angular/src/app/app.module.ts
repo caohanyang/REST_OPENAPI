@@ -53,13 +53,17 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { CardComponent } from './card/card.component';
 import { StepComponent } from './step/step.component';
+import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    StepComponent
+    StepComponent,
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
