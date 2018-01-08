@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ConfigService} from '../services/config.service';
 import Config from '../models/config.model';
+import { TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-step',
@@ -20,11 +22,12 @@ export class StepComponent implements OnInit {
   request = 'no';
   response = 'no';
   existpara = 'no';
-
+  public modalRef: BsModalRef; // {1}
 
   constructor(
     private _formBuilder: FormBuilder,
-    private configService: ConfigService
+    private configService: ConfigService,
+    private modalService: BsModalService
     ) { }
 
   //Declaring the new confige object and initilizing it
@@ -70,6 +73,12 @@ export class StepComponent implements OnInit {
       template: ['', Validators.required],
 
     });
+  }
+
+  public openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template); 
+
+    // this.create();
   }
 
   create(): void {

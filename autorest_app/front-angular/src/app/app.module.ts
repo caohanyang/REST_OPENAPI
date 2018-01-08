@@ -12,6 +12,12 @@ import {ConfigService} from './services/config.service';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+import { ModalModule } from 'ngx-bootstrap/modal';
+
+import {RouterRoutingModule} from './router/router-routing.module'
+
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -55,6 +61,7 @@ import { CardComponent } from './card/card.component';
 import { StepComponent } from './step/step.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { EditorComponent } from './editor/editor.component';
 
 
 @NgModule({
@@ -63,7 +70,8 @@ import { FooterComponent } from './footer/footer.component';
     CardComponent,
     StepComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
@@ -108,6 +116,9 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    NgbModule,
+    ModalModule.forRoot(),
+    RouterRoutingModule,
   ],
   providers: [
     ConfigService

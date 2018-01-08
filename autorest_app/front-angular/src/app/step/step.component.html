@@ -245,117 +245,117 @@
         </div>
 
         <div class="example-container" *ngIf="request=='yes'">
-            
-            <p>Type of request example</p>
-            <!-- <img src="../assets/img/noverbnull.png" alt="documentation details" align="center" width=100%> -->
-            <mat-form-field>
-              <mat-select placeholder="the type of the request example" formControlName="reqExample" required>
-                <mat-option value="http">HTTP</mat-option>
-                <mat-option value="curl">CURL</mat-option>
-                <mat-option value="((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}">JSON</mat-option>
-                <!-- <mat-option value="xml">XML</mat-option> -->
-              </mat-select>
-            </mat-form-field>
+
+          <p>Type of request example</p>
+          <!-- <img src="../assets/img/noverbnull.png" alt="documentation details" align="center" width=100%> -->
+          <mat-form-field>
+            <mat-select placeholder="the type of the request example" formControlName="reqExample" required>
+              <mat-option value="http">HTTP</mat-option>
+              <mat-option value="curl">CURL</mat-option>
+              <mat-option value="((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}">JSON</mat-option>
+              <!-- <mat-option value="xml">XML</mat-option> -->
+            </mat-select>
+          </mat-form-field>
 
 
-            <p>The key word before the request</p>
-            <mat-form-field>
-              <mat-label>keyword before request example</mat-label>
-              <input matInput placeholder="example request, request example" formControlName="reqKey" required>
-            </mat-form-field>
+          <p>The key word before the request</p>
+          <mat-form-field>
+            <mat-label>keyword before request example</mat-label>
+            <input matInput placeholder="example request, request example" formControlName="reqKey" required>
+          </mat-form-field>
 
 
-            <p> Filling between keyword and request example: {{reqmiddle}} </p>
-            <mat-form-field>
-              <mat-select placeholder="filling between keyword and example" formControlName="reqMiddle" required>
-                <mat-option>None</mat-option>
-                <mat-option value="\\s">Whitespace</mat-option>
-                <mat-option value=".{0,10}">1 or 2 words</mat-option>
-                <mat-option value="\\s.{0,60}">3 or 10 words</mat-option>
-                <mat-option value="(.*?)">more than 10 words</mat-option>
-              </mat-select>
-            </mat-form-field>
+          <p> Filling between keyword and request example: {{reqmiddle}} </p>
+          <mat-form-field>
+            <mat-select placeholder="filling between keyword and example" formControlName="reqMiddle" required>
+              <mat-option>None</mat-option>
+              <mat-option value="\\s">Whitespace</mat-option>
+              <mat-option value=".{0,10}">1 or 2 words</mat-option>
+              <mat-option value="\\s.{0,60}">3 or 10 words</mat-option>
+              <mat-option value="(.*?)">more than 10 words</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-            <p>HTML tags for the request example: {{reqtemplate}} </p>
-            <mat-form-field>
-              <mat-select placeholder="html tag for the request example" formControlName="reqTemplate" required>
-                <mat-option>None</mat-option>
-                <mat-option value="pre">pre</mat-option>
-                <mat-option value="code">code</mat-option>
-                <mat-option value="a">a</mat-option>
-              </mat-select>
-            </mat-form-field>
+          <p>HTML tags for the request example: {{reqtemplate}} </p>
+          <mat-form-field>
+            <mat-select placeholder="html tag for the request example" formControlName="reqTemplate" required>
+              <mat-option>None</mat-option>
+              <mat-option value="pre">pre</mat-option>
+              <mat-option value="code">code</mat-option>
+              <mat-option value="a">a</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-            <p>Check the location order of Url and request example: </p>
-            <mat-form-field>
-              <mat-select placeholder="order of url and request example" formControlName="url1req2" required>
-                <mat-option value="yes">Url first</mat-option>
-                <mat-option value="no">Request example first</mat-option>
-              </mat-select>
-            </mat-form-field>
+          <p>Check the location order of Url and request example: </p>
+          <mat-form-field>
+            <mat-select placeholder="order of url and request example" formControlName="url1req2" required>
+              <mat-option value="yes">Url first</mat-option>
+              <mat-option value="no">Request example first</mat-option>
+            </mat-select>
+          </mat-form-field>
 
         </div>
         <br>
 
         <!-- response details-->
         <h5 align="left">
-            <strong>Response details</strong>
-          </h5>
-          <div class="example-container">
-            <p>Check if the API contain response examples</p>
-            <mat-form-field>
-              <mat-select placeholder="exist response example?" [(value)]="response" required>
-                <mat-option value="yes">Yes</mat-option>
-                <mat-option value="no">No</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-  
-          <div class="example-container" *ngIf="response=='yes'">
-              <p>The key word before the response</p>
-              <mat-form-field>
-                <mat-label>keyword before response example</mat-label>
-                <input matInput placeholder="example, response, JSON representation..." formControlName="resKey" required>
-              </mat-form-field>
-  
-              <p>Type of response example</p>
-              <mat-form-field>
-                <mat-select placeholder="the type of the response example" formControlName="resExample" required>
-                  <mat-option value="((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}">JSON</mat-option>
-                  <!-- <mat-option value="xml">XML</mat-option> -->
-                </mat-select>
-              </mat-form-field>
-  
-              <p> Stuffing between keyword and response example: {{reqmiddle}} </p>
-              <mat-form-field>
-                <mat-select placeholder="stuffing between keyword and example" formControlName="resMiddle" required>
-                    <mat-option>None</mat-option>
-                    <mat-option value="\\s">Whitespace</mat-option>
-                    <mat-option value=".{0,10}">1 or 2 words</mat-option>
-                    <mat-option value="\\s.{0,60}">3 or 10 words</mat-option>
-                    <mat-option value="(.*?)">more than 10 words</mat-option>
-                </mat-select>
-              </mat-form-field>
-  
-              <p>HTML tags for the response example: {{restemplate}} </p>
-              <mat-form-field>
-                <mat-select placeholder="html tag for the response example" formControlName="resTemplate" required>
-                  <mat-option>None</mat-option>
-                  <mat-option value="pre">pre</mat-option>
-                  <mat-option value="code">code</mat-option>
-                  <mat-option value="span">span</mat-option>
-                </mat-select>
-              </mat-form-field>
-  
-              <p>Check the location order of Url and response example: </p>
-              <mat-form-field>
-                <mat-select placeholder="order of url and response example" formControlName="url1res2" required>
-                  <mat-option value="yes">Url first</mat-option>
-                  <mat-option value="no">Response example first</mat-option>
-                </mat-select>
-              </mat-form-field>
-  
-          </div>
+          <strong>Response details</strong>
+        </h5>
+        <div class="example-container">
+          <p>Check if the API contain response examples</p>
+          <mat-form-field>
+            <mat-select placeholder="exist response example?" [(value)]="response" required>
+              <mat-option value="yes">Yes</mat-option>
+              <mat-option value="no">No</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="example-container" *ngIf="response=='yes'">
+          <p>The key word before the response</p>
+          <mat-form-field>
+            <mat-label>keyword before response example</mat-label>
+            <input matInput placeholder="example, response, JSON representation..." formControlName="resKey" required>
+          </mat-form-field>
+
+          <p>Type of response example</p>
+          <mat-form-field>
+            <mat-select placeholder="the type of the response example" formControlName="resExample" required>
+              <mat-option value="((\\{)|(\\[)){1}(.*?)((\\})|(\\])){1}">JSON</mat-option>
+              <!-- <mat-option value="xml">XML</mat-option> -->
+            </mat-select>
+          </mat-form-field>
+
+          <p> Stuffing between keyword and response example: {{reqmiddle}} </p>
+          <mat-form-field>
+            <mat-select placeholder="stuffing between keyword and example" formControlName="resMiddle" required>
+              <mat-option>None</mat-option>
+              <mat-option value="\\s">Whitespace</mat-option>
+              <mat-option value=".{0,10}">1 or 2 words</mat-option>
+              <mat-option value="\\s.{0,60}">3 or 10 words</mat-option>
+              <mat-option value="(.*?)">more than 10 words</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p>HTML tags for the response example: {{restemplate}} </p>
+          <mat-form-field>
+            <mat-select placeholder="html tag for the response example" formControlName="resTemplate" required>
+              <mat-option>None</mat-option>
+              <mat-option value="pre">pre</mat-option>
+              <mat-option value="code">code</mat-option>
+              <mat-option value="span">span</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p>Check the location order of Url and response example: </p>
+          <mat-form-field>
+            <mat-select placeholder="order of url and response example" formControlName="url1res2" required>
+              <mat-option value="yes">Url first</mat-option>
+              <mat-option value="no">Response example first</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
 
       </mat-card>
 
@@ -370,36 +370,36 @@
   <mat-step [stepControl]="fourFormGroup">
     <form [formGroup]="fourFormGroup">
       <ng-template matStepLabel>Parameter</ng-template>
- 
+
 
       <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Parameter</mat-card-title>
-            <mat-card-subtitle>This is the Parameter information about API endpoints</mat-card-subtitle>
-          </mat-card-header>
-  
-  
-          <!-- Parameter details-->
-          <h5 align="left">
-            <strong>Parameter details</strong>
-          </h5>
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Parameter</mat-card-title>
+          <mat-card-subtitle>This is the Parameter information about API endpoints</mat-card-subtitle>
+        </mat-card-header>
 
-          <div class="example-container">
-            <p>Check if the API contain parameter details</p>
-            <mat-form-field>
-              <mat-select placeholder="exist parameter information?" [(value)]="existpara" required>
-                <mat-option value="yes">Yes</mat-option>
-                <mat-option value="no">No</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-        
-          <div class="example-container" *ngIf="existpara=='yes'">
+
+        <!-- Parameter details-->
+        <h5 align="left">
+          <strong>Parameter details</strong>
+        </h5>
+
+        <div class="example-container">
+          <p>Check if the API contain parameter details</p>
+          <mat-form-field>
+            <mat-select placeholder="exist parameter information?" [(value)]="existpara" required>
+              <mat-option value="yes">Yes</mat-option>
+              <mat-option value="no">No</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="example-container" *ngIf="existpara=='yes'">
           <p>Type of parameter template: {{template}} </p>
           <mat-form-field>
             <mat-select placeholder="the type of the parameter template" formControlName="template" required>
-              
+
               <mat-option value="table">table</mat-option>
               <mat-option value="list">list</mat-option>
             </mat-select>
@@ -432,7 +432,7 @@
 
 
       </mat-card>
-      
+
 
       <div style="text-align:center">
         <button mat-button matStepperPrevious>Back</button>
@@ -443,14 +443,48 @@
 
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
-    You are now done.
+    
+   
+
+
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Generation</mat-card-title>
+          <mat-card-subtitle>You are now done. Ready to have the OpenAPI? </mat-card-subtitle>
+        </mat-card-header>
+
+      </mat-card>
 
     <div style="text-align:center">
-        <button mat-button matStepperPrevious>Back</button>
-        <button type="submit" mat-raised-button color="primary" (click)="create()" >Done</button>
+      <button mat-button matStepperPrevious>Back</button>
+      <button type="submit" mat-button (click)="openModal(template)">Done</button>
+      <!-- <button type="submit" mat-raised-button color="primary" class="btn btn-primary" (click)="openModal(template)">Done</button> -->
     </div>
 
-    <!-- <button type="submit" class="btn btn-primary" (click)="create()">Done</button> -->
+    <!-- Modal -->
+    <ng-template #template>
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">OpenAPI Will Be Generated</h5>
+          <button type="button" class="close" (click)="modalRef.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+        </div>
+        <div class="modal-body">
+          <p>The OpenAPI has been requested to be generated.</p>
+          <p> Wait several minutes and then, look at your OpenAPI page.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modalRef.hide()">Close</button>
+          <button type="button" class="btn btn-primary" onclick="window.location.href='/openapi'">Go</button>
+        </div>
+      </div>
+
+
+    </ng-template>
+
   </mat-step>
 </mat-horizontal-stepper>
 
